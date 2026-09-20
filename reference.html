@@ -551,7 +551,8 @@
     border-radius:.5rem;background:#FFFFFF;color:#14312A}
   header.ds-top button.ds-ghost{cursor:pointer}
   header.ds-top nav.ds-tabs{display:flex;gap:.25rem;margin-left:auto;flex-wrap:wrap}
-  header.ds-top nav.ds-tabs a{padding:.4rem .7rem;border-radius:.5rem;text-decoration:none;color:#5C6B68;font-size:.85rem;font-weight:600}
+  header.ds-top nav.ds-tabs a{padding:.4rem .7rem;border-radius:.5rem;text-decoration:none;color:#5C6B68;font-size:.85rem;font-weight:600;transition:background .15s,color .15s}
+  header.ds-top nav.ds-tabs a:hover{background:var(--surface-list-hover,#F4FBF8);color:var(--brand-p700,#007549)}
   header.ds-top nav.ds-tabs a.on{background:var(--brand-p100,#E2F3EB);color:var(--brand-p700,#007549)}
   /* colour chips beside every #hex / --token / rgb() in the spec — big enough
      to actually read the colour (the 12px square read as a bullet) */
@@ -603,7 +604,7 @@
 </head>
 <body class="ds-has-top">
 <header class="ds-top">
-  <div class="ds-brandmark"><span class="ds-dot"></span> MIH Design System <span class="ds-pill">3e7f5c56</span></div>
+  <div class="ds-brandmark"><span class="ds-dot"></span> MIH Design System <span class="ds-pill">2f9c1a04</span></div>
   <label>Brand
     <select id="ds-brand" aria-label="Brand"></select>
   </label>
