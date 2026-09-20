@@ -1,0 +1,2756 @@
+/* ─────────────────────────────────────────────────────────────
+ * GENERATED FILE — DO NOT EDIT BY HAND
+ *
+ * Mirror ของ @mih/design-tokens/tokens.css (namonlims/mih-design →
+ * packages/design-tokens). แก้ token ที่ repo mih-design แล้วรัน
+ * `npm run tokens:pull` ที่นี่เพื่ออัปเดตไฟล์นี้ + design.md แล้ว commit
+ *
+ * ที่ commit ไฟล์ generate ไว้ในรีโปเพราะ build ต้องทำงานได้บนเครื่องที่
+ * ไม่มีสิทธิ์อ่าน mih-design (office-202 cron, GitHub runner, dev ใหม่)
+ * ───────────────────────────────────────────────────────────── */
+/*
+ * @mih/design-tokens — MIH PHCIS design tokens (CSS custom properties)
+ * Source of truth extracted from bma.health src/index.css + design.md
+ * Do not put app/component chrome here — tokens only.
+ */
+
+/* ─────────────────────────────────────────────────────────────
+   DESIGN TOKENS · MIH PHCIS
+   Two-layer system per design.md:
+     1. Brand primitives  (var(--brand-p50..950)) — switch per mode
+     2. Semantic tokens   — alias the primitives
+   Switch brand by setting <html data-brand="..."> (10 modes).
+   All semantic tokens that reference --brand-p* update atomically.
+   ───────────────────────────────────────────────────────────── */
+
+/* ── 1. Brand primitives — DEFAULT (emerald + forest) ──────── */
+/* Values match design.md §1a "emerald" palette (rows 28-40).
+   Do NOT diverge: many semantic tokens (border/brandPrimary/tertiary,
+   border/brandPrimaryButton/tertiary, surface/steps/hover, brandTag …)
+   resolve through these primitives. */
+:root {
+  --brand-p50:  #F4FBF8;
+  --brand-p100: #E2F3EB;
+  --brand-p200: #C5EDDA;   /* emerald/200 — Selected radio/border tint */
+  --brand-p300: #91DFBB;   /* emerald/300 */
+  --brand-p400: #6AD6A5;
+  --brand-p500: #54CF97;
+  --brand-p600: #08A768;
+  --brand-p700: #007549;
+  --brand-p800: #004C31;
+  --brand-p900: #003322;
+  --brand-p950: #002318;
+  --sky-cyan-50: #F4F9FD;
+  --sky-cyan-950: #081E40;
+
+  --brand-s100: #EFF5EF;
+  --brand-s200: #E1F0E0;
+  --brand-s700: #366233;
+
+  /* RGB triplets (space-separated for rgb() modern syntax) */
+  --brand-p400-rgb: 106 214 165;
+  --brand-p500-rgb:  84 207 151;
+  --brand-p600-rgb:   8 167 104;
+  --brand-p700-rgb:   0 117  73;
+  --brand-p800-rgb:   0  76  49;
+
+  /* PatientCard defaults (keep original default visual) */
+  --patient-card-grad-start: rgb(0 164 172);
+  --patient-card-grad-end: rgb(31 160 145);
+  --patient-card-avatar-bg: #6EBBD0;
+}
+
+/* Non-default themed modes should follow active brand tokens */
+[data-brand]:not([data-brand="default"]) {
+  --patient-card-grad-start: var(--brand-p700);
+  --patient-card-grad-end: var(--brand-p600);
+  --patient-card-avatar-bg: var(--brand-p400);
+}
+
+
+/* ── Brand mode overrides (per design.md §2) ─────────── */
+[data-brand="blue-serenity"] {
+  --brand-p50:  #F0F2FF; --brand-p100: #E4E8FF; --brand-p200: #D0D7FF;
+  --brand-p300: #BBC6FE; --brand-p400: #A5B3FC; --brand-p500: #8EA0F8;
+  --brand-p600: #7A8CF0; --brand-p700: #6676E0; --brand-p800: #5060C8;
+  --brand-p900: #3A4AAA; --brand-p950: #2A3488;
+  --brand-s100: #E4E8FF; --brand-s200: #D0D7FF; --brand-s700: #6676E0;
+  --brand-p400-rgb: 165 179 252; --brand-p500-rgb: 142 160 248;
+  --brand-p600-rgb: 122 140 240; --brand-p700-rgb: 102 118 224;
+  --brand-p800-rgb:  80  96 200;
+}
+[data-brand="soft-lavender"] {
+  --brand-p50:  #FAF7FF; --brand-p100: #F2ECFF; --brand-p200: #E5D9FF;
+  --brand-p300: #D6C6FA; --brand-p400: #C5B2F5; --brand-p500: #B49EEE;
+  --brand-p600: #9D87D8; --brand-p700: #836FC0; --brand-p800: #6655A0;
+  --brand-p900: #4A3D7A; --brand-p950: #302754;
+  --brand-s100: #F2ECFF; --brand-s200: #E5D9FF; --brand-s700: #836FC0;
+  --brand-p400-rgb: 197 178 245; --brand-p500-rgb: 180 158 238;
+  --brand-p600-rgb: 157 135 216; --brand-p700-rgb: 131 111 192;
+  --brand-p800-rgb: 102  85 160;
+}
+[data-brand="dusty-mauve"] {
+  --brand-p50:  #F9F4F5; --brand-p100: #F2E6E8; --brand-p200: #E4CDD0;
+  --brand-p300: #D0ADB2; --brand-p400: #B58E94; --brand-p500: #977177;
+  --brand-p600: #7E5A60; --brand-p700: #664750; --brand-p800: #503840;
+  --brand-p900: #3C2A30; --brand-p950: #281C21;
+  --brand-s100: #F2E6E8; --brand-s200: #E4CDD0; --brand-s700: #664750;
+  --brand-p400-rgb: 181 142 148; --brand-p500-rgb: 151 113 119;
+  --brand-p600-rgb: 126  90  96; --brand-p700-rgb: 102  71  80;
+  --brand-p800-rgb:  80  56  64;
+}
+[data-brand="muted-teal"] {
+  --brand-p50:  #F0F8F7; --brand-p100: #DAEEED; --brand-p200: #B5DBD9;
+  --brand-p300: #8DC3C0; --brand-p400: #7AABA8; --brand-p500: #6F9693;
+  --brand-p600: #5A7D7A; --brand-p700: #486462; --brand-p800: #374E4C;
+  --brand-p900: #283A38; --brand-p950: #1A2726;
+  --brand-s100: #DAEEED; --brand-s200: #B5DBD9; --brand-s700: #486462;
+  --brand-p400-rgb: 122 171 168; --brand-p500-rgb: 111 150 147;
+  --brand-p600-rgb:  90 125 122; --brand-p700-rgb:  72 100  98;
+  --brand-p800-rgb:  55  78  76;
+}
+[data-brand="sakura"] {
+  --brand-p50:  #FFF8FA; --brand-p100: #FFEDF3; --brand-p200: #FFE0EC;
+  --brand-p300: #FFCFDF; --brand-p400: #FFC0D4; --brand-p500: #F5AFCA;
+  --brand-p600: #E89DBA; --brand-p700: #D687A8; --brand-p800: #C07494;
+  --brand-p900: #A35C7C; --brand-p950: #8A4665;
+  --brand-s100: #FFEDF3; --brand-s200: #FFE0EC; --brand-s700: #D687A8;
+  --brand-p400-rgb: 255 192 212; --brand-p500-rgb: 245 175 202;
+  --brand-p600-rgb: 232 157 186; --brand-p700-rgb: 214 135 168;
+  --brand-p800-rgb: 192 116 148;
+}
+[data-brand="rose-mist"] {
+  --brand-p50:  #FFF9F9; --brand-p100: #FCEEED; --brand-p200: #F8E0DF;
+  --brand-p300: #F4D0CF; --brand-p400: #EEBFBE; --brand-p500: #E5ADAC;
+  --brand-p600: #D49A99; --brand-p700: #BC8584; --brand-p800: #A06F6E;
+  --brand-p900: #7E5554; --brand-p950: #5E3C3C;
+  --brand-s100: #FCEEED; --brand-s200: #F8E0DF; --brand-s700: #BC8584;
+  --brand-p400-rgb: 238 191 190; --brand-p500-rgb: 229 173 172;
+  --brand-p600-rgb: 212 154 153; --brand-p700-rgb: 188 133 132;
+  --brand-p800-rgb: 160 111 110;
+}
+[data-brand="soft-sky"] {
+  --brand-p50:  #F5FBFF; --brand-p100: #E8F5FD; --brand-p200: #D6ECFA;
+  --brand-p300: #D6ECFA; --brand-p400: #A8D3EE; --brand-p500: #8EC4E5;
+  --brand-p600: #8EC4E5; --brand-p700: #5594C4; --brand-p800: #3D78A8;
+  --brand-p900: #285A82; --brand-p950: #183D5C;
+  --brand-s100: #E8F5FD; --brand-s200: #D6ECFA; --brand-s700: #5594C4;
+  --brand-p400-rgb: 168 211 238; --brand-p500-rgb: 142 196 229;
+  --brand-p600-rgb: 142 196 229; --brand-p700-rgb:  85 148 196;
+  --brand-p800-rgb:  61 120 168;
+}
+[data-brand="soft-peach"] {
+  --brand-p50:  #FFFAF7; --brand-p100: #FEF0E8; --brand-p200: #FDE2D0;
+  --brand-p300: #FCD1B8; --brand-p400: #FBBEA0; --brand-p500: #FAA381;
+  --brand-p600: #E88A66; --brand-p700: #D0714D; --brand-p800: #B05A38;
+  --brand-p900: #844026; --brand-p950: #562814;
+  --brand-s100: #FEF0E8; --brand-s200: #FDE2D0; --brand-s700: #D0714D;
+  --brand-p400-rgb: 251 190 160; --brand-p500-rgb: 250 163 129;
+  --brand-p600-rgb: 232 138 102; --brand-p700-rgb: 208 113  77;
+  --brand-p800-rgb: 176  90  56;
+}
+[data-brand="warm-gray"] {
+  --brand-p50:  #F5F3F1; --brand-p100: #EBE7E4; --brand-p200: #D5CEC9;
+  --brand-p300: #BDB5AF; --brand-p400: #A39A94; --brand-p500: #8A8078;
+  --brand-p600: #726760; --brand-p700: #5C504A; --brand-p800: #463C37;
+  --brand-p900: #312B26; --brand-p950: #211D19;
+  --brand-s100: #EBE7E4; --brand-s200: #D5CEC9; --brand-s700: #5C504A;
+  --brand-p400-rgb: 163 154 148; --brand-p500-rgb: 138 128 120;
+  --brand-p600-rgb: 114 103  96; --brand-p700-rgb:  92  80  74;
+  --brand-p800-rgb:  70  60  55;
+}
+
+/* ── 2. Semantic tokens — alias primitives + neutrals ──────── */
+:root {
+  /* — Surface · brand-aware — */
+  --surface-brandPrimary-default:        var(--brand-p700);
+  --surface-brandPrimary-default-hover:  var(--brand-p800);
+  --surface-brandPrimary-secondary:      var(--brand-p200);
+  --surface-brandPrimary-tertiary:       var(--brand-p100);
+  --surface-brandPrimary-quaternary:     var(--brand-p50);
+
+  --surface-brandPrimaryButton-default:  var(--brand-p700);
+  --surface-brandPrimaryButton-hover:    var(--brand-p800);
+  --surface-brandPrimaryButton-tertiary: var(--brand-p100);
+
+  /* Danger Button — Figma 2024:3590, design.md §4.5 */
+  --surface-dangerButton-default:        #B91C1C;            /* red/700 */
+  --surface-dangerButton-default-hover:  #991B1B;            /* red/800 */
+  --surface-dangerButton-secondary:      #FECACA;            /* red/200 */
+  --surface-dangerButton-secondary-hover:#FCA5A5;            /* red/300 */
+  --surface-dangerButton-tertiary:       #FEE2E2;            /* red/100 */
+  --surface-dangerButton-tertiary-hover: #FECACA;            /* red/200 */
+  --surface-dangerButton-quaternary:     #FFF0F0;            /* red/50  */
+  --surface-dangerButton-quaternary-hover:#FEE2E2;           /* red/100 */
+  --surface-dangerButton-quinary:        #FFFFFF;
+  --surface-dangerButton-quinary-hover:  #FFF0F0;            /* red/50  */
+  --border-dangerButton-default:         #DC2626;            /* red/600 — Figma `border/dangerbutton/default` (Outline border is one step lighter than the red/700 fill)   */
+  --border-dangerButton-default-hover:   #B91C1C;            /* red/700 */
+  --border-dangerButton-secondary:       #F87171;            /* red/400 — Subdue Outline hover border (Figma 2024:4434) */
+  --border-dangerButton-secondary-hover: #EF4444;            /* red/500 */
+  --border-dangerButton-tertiary:        #FECACA;            /* red/200 — Focus ring (4px) Figma 2024:3701 */
+  --border-dangerButton-quaternary:      #FEE2E2;            /* red/100 — Active state border Figma 2024:3701 */
+  --border-dangerButton-quaternary-hover:#FECACA;            /* red/200 — Active+hover border (Danger Circle Subdue, Figma 3853:1298) */
+  --text-dangerButton-default:           #B91C1C;            /* red/700 */
+  --text-dangerButton-default-hover:     #991B1B;
+  --text-dangerButton-on-danger:         #FFFFFF;
+  --text-danger-default:                 #B91C1C;            /* text/danger/default — elevated vitals (Figma 184:17588) */
+  --text-warning-default:                #C2410C;            /* text/warning/default — orange/700 */
+  --text-info-default:                   #1D4ED8;            /* text/info/default — blue/700 (design.md §4.2) */
+  --text-info-emphasis:                  #3B82F6;            /* text/info/emphasis — blue/500 (health BMI value) */
+  --text-info-secondary:                 #2563EB;            /* text/info/secondary — blue/600 */
+  --text-info-tertiary:                  #60A5FA;            /* text/info/tertiary — blue/400 */
+  /* Status-tertiary surfaces — soft tonal tile fills for Status Summary
+     Cards (Figma PHCIS | Consent 297:83830). design.md §4.5. */
+  --surface-danger-tertiary:             #FEE2E2;            /* red/100  */
+  --surface-info-tertiary:               #DBEAFE;            /* blue/100 */
+  --surface-neutral-tertiary:            #F4F5F5;            /* neutral/100 */
+  --icon-dangerButton-default:           #B91C1C;
+  --icon-dangerButton-default-hover:     #991B1B;
+  --icon-dangerButton-on-danger:         #FFFFFF;
+
+  /* Neutral Button — Figma 2024:3591, design.md §4.5 */
+  --surface-neutralButton-default:       #4D5358;            /* neutral/700 */
+  --surface-neutralButton-default-hover: #363B3F;            /* neutral/800 */
+  --surface-neutralButton-secondary:     #E2E4E6;            /* neutral/200 */
+  --surface-neutralButton-secondary-hover:#C9CDD0;           /* neutral/300 */
+  --surface-neutralButton-tertiary:      #F4F5F5;            /* neutral/100 */
+  --surface-neutralButton-tertiary-hover:#E2E4E6;            /* neutral/200 */
+  --surface-neutralButton-quaternary:    #F9FBFB;            /* neutral/50  */
+  --surface-neutralButton-quaternary-hover:#F4F5F5;          /* neutral/100 */
+  --surface-neutralButton-quinary:       #FFFFFF;
+  --surface-neutralButton-quinary-hover: #F9FBFB;
+  --border-neutralButton-default:        #4D5358;
+  --border-neutralButton-default-hover:  #363B3F;
+  --border-neutralButton-secondary:      #ADB2B7;            /* neutral/400 — Focus ring (4px) for Fill Neutral (Figma 2024:4189) */
+  --border-neutralButton-tertiary:       #E2E4E6;            /* neutral/200 — Outline default border + Focus ring for Outline/Ghost */
+  --border-neutralButton-quaternary:     #F4F5F5;            /* neutral/100 — Active state border (Figma 2024:4189) */
+  --text-neutralButton-default:          #4D5358;
+  --text-neutralButton-default-hover:    #363B3F;
+  --text-neutralButton-on-neutral:       #FFFFFF;
+  --icon-neutralButton-default:          #4D5358;
+  --icon-neutralButton-default-hover:    #363B3F;
+  --icon-neutralButton-on-neutral:       #FFFFFF;
+  /* design.md row 3979 · icon/neutral/default → neutral/700.
+     Used as the inline-icon color for RadioButton (Figma node 2831:6734)
+     and any caller asking for the canonical neutral icon shade.        */
+  --icon-neutral-default:                #4D5358;
+  --icon-neutral-secondary:              #636B72;            /* icon/neutral/secondary → neutral/500   */
+  --icon-neutral-tertiary:               #ADB2B7;            /* icon/neutral/tertiary  → neutral/400   */
+
+  --surface-steps-default:        var(--brand-p100);  /* surface/steps/default → primary/100 */
+  --surface-steps-hover:          var(--brand-p200);  /* surface/steps/hover → primary/200 */
+  --surface-steps-selected:       var(--brand-p700);  /* surface/steps/selected → primary/700 */
+  --surface-steps-success:        #24A899;            /* surface/steps/success → teal/500 (fixed) */
+  --surface-steps-success-hover:  #1B867D;            /* surface/steps/success-hover → teal/600 (fixed) */
+  /* legacy aliases — keep until callers migrate */
+  --surface-steps-default-hover:  var(--surface-steps-hover);
+  --surface-steps-selected-hover: var(--brand-p800);
+
+  --surface-card-100:        #FFFFFF;
+  --surface-camera-viewport: #111827;
+  --surface-card-200:        #FDFDFD;            /* surface/card/200 → grey/100 (light) */
+  --surface-card-skycyan-100: var(--sky-cyan-50); /* surface/card/skycyan-100 → sky-cyan/50 */
+  /* surface/card/brand-100 → brand-p50 (Figma 2498:6269, 133:1031 Selected-Hover).
+     Despite the "100" in the name, the Figma primitive is primary/50.
+     Brand-aware via --brand-p50, so retints with <html data-brand="…">.  */
+  --surface-card-brand100:   var(--brand-p50);
+  --surface-card-sakura-200: #FFEDF3;            /* surface/card/sakura-200 → color/sakura/100 (light) · color/sakura/900 #A35C7C (dark) */
+  --surface-input-default:   #FFFFFF;
+  --surface-table-default:   #FFFFFF; /* surface.table.default */
+
+  /* — TabPill / TabBar (Figma MIH Design System Foundation 2514:7929, 370:30;
+     design.md §6 rows 1297–1300, 1662–1665, 1965–1969).
+     Light values below — override under `[data-mode="dark"]` for dark mode. */
+  --surface-tabpill-background:  var(--brand-p100);          /* surface/tabpill/background  emerald/100 ↔ emerald/900 */
+  --surface-tabpill-default:     #FFFFFF;                    /* surface/tabpill/default     grey/50 ↔ neutral/800 */
+  --surface-tabpill-selected:    var(--surface-tabpill-default); /* alias of default */
+  --surface-tabpill-hover:       var(--brand-p200);          /* surface/tabpill/hover       primary/200 ↔ primary/800 */
+  --surface-tabpill-disabled:    var(--surface-tabpill-default); /* alias of default */
+  --text-tabpill-default:        var(--brand-p700);          /* text/tabpill/default        primary/700 ↔ primary/300 */
+  --text-tabpill-hover:          var(--brand-p700);          /* text/tabpill/hover */
+  --text-tabpill-selected:       var(--brand-p700);          /* text/tabpill/selected */
+  --text-tabpill-disabled:       var(--brand-p500);          /* text/tabpill/disabled       primary/500 (both modes) */
+  --icon-tabpill-default:        var(--brand-p700);          /* icon/tabpill/default        primary/700 ↔ primary/300 */
+  --icon-tabpill-hover:          var(--brand-p700);          /* icon/tabpill/hover */
+  --icon-tabpill-selected:       var(--brand-p700);          /* icon/tabpill/selected */
+  --icon-tabpill-disabled:       var(--brand-p500);          /* icon/tabpill/disabled       primary/500 (both modes) */
+  --text-neutral-default:        var(--text-neutralbutton-default); /* text/neutral/default — alias used by Selected label in Figma */
+
+  /* — Timeslot (Figma 2302:11293) — outline-style Selected swap, not
+     the older filled chip. Light mode aliases the brand-p600 token;
+     dark mode swaps to brand-p400 inside the matching @media block
+     below. Surface + border tokens move in lockstep so the chip reads
+     as a 2 px brand outline on a white pill. */
+  --text-timeslot-selected:      var(--brand-p600);
+  --border-timeslot-selected:    var(--brand-p600);
+  --surface-timeslot-selected:   var(--surface-timeslot-default, #FFFFFF);
+  /* Default-state border for the pill AND the surrounding slot tray.
+     Aliases brand-quaternary so the chip's idle outline picks up the
+     same soft mint hairline the Figma 2302:11293 / 4025:14538 panels
+     use — retints via [data-brand] so non-green themes follow suit. */
+  --border-timeslot-default:     var(--border-brandPrimary-quaternary);
+
+  /* — Calendar slot (design.md text/surface/border.calendar slot.* · Appointment) */
+  --text-calendar-slot-date-default:   #4D5358;
+  /* Today's pill — white on bright brand-p600 green per Figma 134:20117. */
+  --text-calendar-slot-date-current:   #FFFFFF;
+  --text-calendar-slot-date-hover:     var(--brand-p700);
+  --text-calendar-slot-date-selected:  #FFFFFF;
+  --text-calendar-slot-date-disabled:  #CBD5E1;
+  --text-calendar-slot-slot-default:   var(--brand-p500);
+  --text-calendar-slot-slot-hover:     var(--brand-p700);
+  --text-calendar-slot-slot-selected:  #FFFFFF;
+  --text-calendar-slot-slot-disabled:  #CBD5E1;
+  --text-calendar-slot-cta-default:    var(--brand-p600);
+  --text-calendar-slot-cta-hover:      var(--brand-p700);
+  --text-calendar-slot-cta-disabled:   #CBD5E1;
+  --text-calendar-slot-month:          #4D5358;
+  --text-calendar-slot-text:           var(--brand-p700);
+  --border-calendar-slot-slot-default:   var(--brand-p100);
+  --border-calendar-slot-slot-hover:     var(--brand-p200);
+  --border-calendar-slot-slot-selected:  #24A899;
+  --border-calendar-slot-slot-disabled:  #F5F7F9;
+  --surface-calendar-slot-date-default:    #FFFFFF;
+  /* Today's pill — bright brand-p600 (#08A768) per Figma 134:20117.
+     Distinct from brand-p700 (selected) and brand-p100 (hover) so the
+     user can tell "today" apart from interaction states. */
+  --surface-calendar-slot-date-current:    var(--brand-p600);
+  --surface-calendar-slot-date-hover:      var(--brand-p100);
+  --surface-calendar-slot-date-selected:   var(--brand-p700);
+  --surface-calendar-slot-date-disabled:   #FFFFFF;
+  --surface-calendar-slot-slot-default:    #FFFFFF;
+  --surface-calendar-slot-slot-hover:      var(--brand-p50);
+  --surface-calendar-slot-slot-selected:   #24A899;
+  --surface-calendar-slot-slot-disabled:   #FFFFFF;
+  --surface-calendar-slot-cta-default:     #FFFFFF;
+  --surface-calendar-slot-cta-hover:       var(--brand-p50);
+  --surface-calendar-slot-cta-disabled:    #FFFFFF;
+  --icon-calendar-slot-selected:           #FFFFFF;
+
+  /* — Profile avatar surfaces (Figma Appointment 1:38622 DoctorG · design.md §6.11) — */
+  --surface-profile-avatar-default:   #CFE6F7;
+  --surface-profile-avatar-secondary: #E7F1F8;
+
+  /* — Vital sign chart-area (Figma PHCIS-ALL 2418:69815) — */
+  --surface-chart-area:          #FEFEFE;                    /* chart-area fill */
+  --text-chart-axis-label:       #A3ACB4;                    /* axis + date ticks */
+  --stroke-chart-grid:           var(--border-neutral-quaternary);
+  --stroke-chart-series-sbp:     #2575EF;                    /* SBP / informational blue */
+  --stroke-chart-series-dbp:     #F49A1F;                    /* DBP / orange */
+  --dim-radius-chart-area:       10px;                       /* Figma chart-area r=10 */
+
+  /* — Border · brand-aware — */
+  --border-brandPrimary-default:       var(--brand-p700);
+  --border-brandPrimary-tertiary:      var(--brand-p200);
+  --border-brandPrimary-quaternary:    var(--brand-p100);  /* Brand/primary/100 per design.md */
+  --border-input-hover:                var(--brand-p600);
+  --border-steps-default:              var(--brand-p200);
+
+  --border-card-default:               #E2E4E6;
+  --border-card-sakura-100:            #FFE0EC;   /* border/card/sakura-100 → color/sakura/200 (light) · color/sakura/700 #D687A8 (dark) */
+  --border-input-default:              #E2E4E6;
+  --border-neutral-quat:               #F4F5F5;
+
+  /* — Text · brand-aware — */
+  --text-brandPrimary-default:         var(--brand-p700);
+  --text-brandPrimary-secondary:       var(--brand-p600);
+  --text-brandPrimary-on-brand:        #FFFFFF;
+  --text-brandPrimaryButton-default:   var(--brand-p700);
+  --text-brandPrimaryButton-on-brand:  #FFFFFF;
+  --text-payment-total:                #24A899;                            /* Pharmacy payment total → teal/500 */
+  --text-steps-default:                var(--brand-p700);                 /* text/steps/default */
+  --text-steps-select:                 #FFFFFF;                            /* text/steps/select */
+  --text-steps-title:                  rgb(var(--brand-p700-rgb) / 0.5);   /* text/steps/title */
+  --text-steps-title-select:           var(--brand-p700);                  /* text/steps/title-select */
+  --text-steps-title-hover:            var(--brand-p700);                  /* text/steps/title-hover */
+  --text-steps-title-success:          #196c65;                            /* text/steps/title-success → teal/700 (fixed) */
+  --text-steps-subtitle:               #858C92;                            /* text/steps/subtitle → neutral/500 (fixed) */
+  --icon-steps-success-on:             #FFFFFF;                            /* icon/step/success-on */
+
+  /* Step DS aliases (design.md naming) */
+  --surface-step-default:              var(--surface-steps-default);           /* surface.steps.default */
+  --surface-step-selected:             var(--surface-steps-selected);          /* surface.steps.selected */
+  --surface-step-selected-hover:       var(--surface-steps-selected-hover);
+  --surface-step-default-hover:        var(--surface-steps-default-hover);
+  --surface-step-success:              #24A899;                                /* surface.steps.success */
+  --focus-ring-step-current:           var(--primaryBorder-600);              /* ring glow primary/600 @15% */
+  --border-step-default:               var(--border-steps-default);            /* border.steps.default */
+  --text-step-default:                 var(--text-steps-default);              /* text.steps.default */
+  --text-step-selected:                var(--text-steps-select);               /* text.steps.select */
+  --text-step-title:                   var(--text-steps-title);                /* text.steps.title/subtitle */
+  --text-step-title-hover:             var(--text-steps-title-hover);          /* text.steps.title-hover */
+  --text-step-title-selected:          var(--text-steps-title-select);         /* text.steps.title-select */
+  --icon-step-success-on:              #FFFFFF;                                /* icon.step.success-on */
+  --text-navigation-title:             var(--brand-p700);
+  --text-topic-primary-title:          var(--brand-p700);
+  /* text/topic/secondary-title — Figma Telemed headers (Mitr 16 / #007549) */
+  --text-topic-secondary-title:        var(--brand-p700);
+  /* text/topic/tertiary-subtext — Session ID / off-surface caption */
+  --text-topic-tertiary-subtext:       #ADB2B7;
+  --text-topic-tertiary-subtext-on:    #858C92;
+  --icon-topic-default:                var(--brand-p700);  /* icon/topic/default → Brand/primary/700 */
+  --icon-topic-hover:                  var(--brand-p700);  /* icon/topic/hover → Brand/primary/700 */
+
+  /* — Text · neutral / static — */
+  --text-content-default:    #363B3F;
+  --text-content-secondary:  #636B72;
+  --text-content-tertiary:   #858C92;
+  --text-content-quaternary: #ADB2B7;
+  --text-content-on-content: #FFFFFF;
+  --labels-primary:          #000000; /* iOS home indicator / system label */
+  --text-neutralbutton-default: #4D5358;
+  --text-breadcrumb-current:    #363B3F;
+  --text-breadcrumb-pagename:   #858C92;
+  --text-input-require:         #DC2626;
+
+  /* — Form Input · alias per design.md §6.4 ───────────
+     trigger field used by Dropdown / DatePicker / TextInput. */
+  /* surface.positive.* — teal ramp (design.md §4). The register/OTP stepper
+     paints the CURRENT segment with positive/default. */
+  --surface-positive-default:   #196C65;             /* teal/700 */
+  --surface-positive-tertiary:  #D1F6EE;             /* teal/100 */
+
+  --surface-input-disabled:     #F4F5F5;
+  --border-input-filled:        #E2E4E6;
+  --border-input-error:         #DC2626;
+  --border-input-disabled:      #E2E4E6;
+  --border-input-typing:        var(--brand-p600);   /* brand-aware */
+  --text-input-default:         #ADB2B7;             /* placeholder */
+  --text-input-hover:           #ADB2B7;
+  --text-input-typing:          #4D5358;
+  --text-input-filled:          #4D5358;             /* selected value */
+  --text-input-disabled:        #ADB2B7;
+  /* Disabled ink for the Input Field label + helper (Figma DS "Input Field"
+     opz7X9AAKGQf5prHhsPDGn 267:25 → text/disabled/secondary · -tertiary). */
+  --text-disabled-secondary:    #636B72;             /* neutral/600 */
+  --text-disabled-tertiary:     #ADB2B7;             /* neutral/400 */
+  --icon-input-default:         #ADB2B7;             /* placeholder/idle/error/disabled */
+  --icon-input-filled:          #4D5358;             /* open / value-selected — n700 */
+  --icon-input-hover:           var(--brand-p600);   /* brand-aware (reserved) */
+  --primaryBorder-600:          rgb(var(--brand-p600-rgb) / 0.15); /* effect/input/100 */
+  --focus-ring-input-hover:     rgb(var(--brand-p600-rgb) / 0.15);
+  --focus-ring-input-typing:    var(--primaryBorder-600);
+  --focus-ring-input-error:     rgb(220 38 38 / 0.12);
+  /* Input state aliases — Figma states keep placeholder/icon gray; only the
+     border + focus ring move. Adding the missing names so components can
+     use one canonical token per state. */
+  --text-input-error:           #ADB2B7;             /* placeholder stays gray in Error */
+  --icon-input-error:           #ADB2B7;             /* icon stays gray in Error      */
+  --icon-input-disabled:        #ADB2B7;             /* icon stays gray when disabled */
+  --text-danger-secondary:      #DC2626;             /* helper text in Error state    */
+  /* Select-specific aliases (Figma 268:55) */
+  --text-input-label:           #4D5358;             /* Field label color (neutral/700) */
+  --text-input-helper:          #ADB2B7;             /* Helper text under select (neutral/400) */
+  --text-input-errorHelper:     var(--text-danger-secondary);  /* Error helper (#DC2626) */
+  --icon-input-typing:          #4D5358;             /* Leading icon in Open/Filled state */
+  --surface-disabled-tertiary:  var(--surface-input-disabled);  /* alias for Figma "surface/disabled/tertiary" */
+
+  /* — Dropdown panel · alias per design.md §6.14 ────── */
+  --surface-dropdown-default:   #FFFFFF;
+  --border-dropdown-default:    #EBEBEB;
+  /* Figma "Drop Shadow Bottom/400" — neutral slate-500 (#64748B), two-layer
+     (blur 4 + 32, y-offset 4 + 16, alpha 10% + 15%) per design.md row 762.
+     Canonical shadow for the popup-container family: <Popup>, <AlertDialog>,
+     <ScreeningConfirmPopup>, and any future popup-shaped surface. */
+  --shadow-drop-bottom-400:
+    0 4px 4px   rgb(100 116 139 / 0.10),
+    0 16px 32px rgb(100 116 139 / 0.15);
+  /* Back-compat alias — `--shadow-dropdown` predates the explicit
+     drop-bottom-400 name. Both resolve to the same value so existing
+     callers keep working; new code should reference the spec-named token. */
+  --shadow-dropdown: var(--shadow-drop-bottom-400);
+
+  /* Popup backdrop overlay — slate-500 @ 40% so the tint family stays
+     aligned with --shadow-drop-bottom-400. Replaces the hardcoded
+     rgba(15,23,42,0.4) (slate-900) that drifted across Popup, AlertDialog,
+     and CameraCapturePopup. */
+  --surface-overlay-default: rgb(100 116 139 / 0.40);
+  /* background/overlay/default — Figma Telemed dimmers (#64748B80) */
+  --background-overlay-default: #64748B80;
+
+  /* — Modal text (per design.md §4.2) ───────────────── */
+  --text-modal-text:    #4D5358;   /* Primitive/color/neutral/700 */
+  --text-modal-subtext: #ADB2B7;   /* Primitive/color/neutral/400 */
+  /* — Modal borders (multi-select checkbox list rows, Figma 271:12592 · design.md §4.3) — */
+  --border-modal-cardBorder: #F5F6FA;  /* Primitive/color/slate/50 — resting card outline */
+  --border-modal-default:    var(--border-brandPrimary-default);  /* #007549 — hover/active outline (brand-aware) */
+
+  /* — Colorful badge · Figma App 2076:8413 (design.md §4 / §5.11) — */
+  --surface-colorfulBadge-blue: #DBEAFE;  /* Primitive/color/blue/100 */
+  --text-colorfulBadge-blue:    #1D4ED8;  /* Primitive/color/blue/700 */
+  --surface-colorfulbadge-blue: #DBEAFE;
+  --text-colorfulbadge-blue:    #1D4ED8;
+  --surface-colorfulbadge-blue-bold: #3B82F6; /* blue/500 */
+  --surface-colorfulbadge-teal:   #D1F6EE; /* teal/100 */
+  --text-colorfulbadge-teal:      #196C65; /* teal/700 */
+  --surface-colorfulbadge-teal-bold: #24A899; /* teal/500 */
+  --surface-colorfulbadge-orange: #FFEDD5; /* orange/100 */
+  --text-colorfulbadge-orange:    #C2410C; /* orange/700 */
+  --surface-colorfulbadge-orange-bold: #F97316; /* orange/500 */
+  --surface-colorfulbadge-grey:   #F5F7F9; /* slate/100 */
+  --text-colorfulbadge-grey:      #4D5358; /* neutral/700 */
+  --surface-colorfulbadge-grey-bold: #858C92; /* neutral/500 */
+  --surface-colorfulbadge-red:    #FEE2E2; /* red/100 */
+  --text-colorfulbadge-red:       #B91C1C; /* red/700 */
+  --surface-colorfulbadge-red-bold: #EF4444; /* red/500 */
+  /* PHCIS brand emerald — Distinct from teal; do not alias green → teal. */
+  --surface-colorfulbadge-green:   var(--brand-p100); /* #E2F3EB */
+  --text-colorfulbadge-green:      var(--brand-p700); /* #007549 */
+  --surface-colorfulbadge-green-bold: #54CF97; /* brand/primary/500 */
+  --surface-colorfulbadge-yellow:  #FEF9C3; /* yellow/100 */
+  --text-colorfulbadge-yellow:     #A16207; /* yellow/700 */
+  --surface-colorfulbadge-yellow-bold: #EAB308; /* yellow/500 */
+  --surface-colorfulbadge-indigo:      #EEF2FF; /* indigo/50–100 · Figma Colorful Badge */
+  --text-colorfulbadge-indigo:         #4F46E5; /* indigo/600 · design.md + Archive 367:41054 */
+  --surface-colorfulbadge-indigo-bold: #818CF8; /* indigo/400–500 */
+  --surface-colorfulbadge-pink:    #FCE7F3; /* pink/100 */
+  --text-colorfulbadge-pink:       #BE185D; /* pink/700 */
+  --surface-colorfulbadge-pink-bold: #EC4899; /* pink/500 */
+  --surface-colorfulbadge-magenta: #FAE8FF; /* fuchsia/100 — Figma Magenta */
+  --text-colorfulbadge-magenta:    #A21CAF; /* fuchsia/700 */
+  --surface-colorfulbadge-magenta-bold: #C926E0; /* magenta/500 */
+  --surface-colorfulbadge-purple:  #F3E8FF; /* purple/100 */
+  --text-colorfulbadge-purple:     #7E22CE; /* purple/700 */
+  --surface-colorfulbadge-purple-bold: #A855F7; /* purple/500 */
+  --text-colorfulbadge-badge-on: #FFFFFF; /* Primary hierarchy label / icon / dot */
+  /* Outline borders — Figma border/colorfulbadge/* (Grey→neutral, Green→brand) */
+  --border-colorfulbadge-neutral: #E2E4E6; /* neutral/200 */
+  --border-colorfulbadge-brand:   #C5EDDA; /* brand/primary/200 */
+  --border-colorfulbadge-info:    #BFDBFE; /* blue/200 */
+  --border-colorfulbadge-success: #A2EDDE; /* teal/200 */
+  --border-colorfulbadge-warning: #FEF08A; /* yellow/200 */
+  --border-colorfulbadge-warning2:#FED7AA; /* orange/200 */
+  --border-colorfulbadge-error:   #FECACA; /* red/200 */
+  /* Telemed queue badge blink rings — Figma PHCIS | Telemed 78:16496 / 78:16478 */
+  --border-telemed-queue-teal-blink: rgba(209, 246, 238, 0.4);   /* teal/100 @ 40% */
+  --border-telemed-queue-orange-blink: rgba(254, 215, 170, 0.4); /* orange/200 @ 40% */
+  /* Quick Action press — Archive Figma 519:54747 (100 → 200, one level darker) */
+  --surface-quickaction-purple-pressed: #E9D5FF; /* purple/200 */
+  --surface-quickaction-blue-pressed:   #BFDBFE; /* blue/200 */
+  --surface-quickaction-green-pressed:  var(--brand-p200); /* brand/200 #C5EDDA */
+  --surface-quickaction-pink-pressed:   #FBCFE8; /* pink/200 */
+  --surface-quickaction-indigo-pressed: #C7D2FE; /* indigo/300 (light scale step) */
+  --surface-quickaction-teal-pressed:   #A2EDDE; /* teal/200 */
+  --surface-quickaction-orange-pressed: #FED7AA; /* orange/200 */
+  --surface-quickaction-yellow-pressed: #FEF08A; /* yellow/200 */
+  /* Turquoise alias for ColorfulIconBadge — same palette as teal. */
+  --surface-colorfulbadge-turquoise: var(--surface-colorfulbadge-teal);
+  --text-colorfulbadge-turquoise:    var(--text-colorfulbadge-teal);
+  --surface-colorfulbadge-turquoise-bold: var(--surface-colorfulbadge-teal-bold);
+
+  /* — Topic surface · per design.md §6.28 (surface.topic.*) ─ */
+  --surface-topic-default:       #FFFFFF; /* Primitive/color/grey/50 */
+  --surface-topic-hover:         var(--brand-p50, #F4FBF8);
+  --surface-topic-disabled:      #F9FBFB;
+
+  /* — Neutral quaternary panel surface (Vitals right column) ── */
+  --surface-neutral-quaternary:  #F9FBFB; /* Primitive/color/neutral/50 — surface/neutral/quaternary */
+
+  /* — Border alias mirroring design.md naming ───────── */
+  --border-neutral-quaternary:  var(--border-neutral-quat); /* #F4F5F5 */
+  --border-neutral-tertiary:    #E2E4E6;                    /* design.md §6 border/neutral/tertiary — vertical dividers */
+
+  /* — Dropdown list items (brand-aware on hover) ────────────── */
+  --surface-list-default:               #FFFFFF;
+  --surface-list-selected:              #FFFFFF;
+  --surface-list-hover:                 var(--brand-p50);    /* brand-aware */
+  --surface-list-selected-hover:        var(--brand-p50);    /* brand-aware */
+  --text-list-default:                  #4D5358;
+  --text-list-selected:                 #4D5358;
+  --text-list-hover:                    var(--brand-p700);   /* brand-aware */
+  --text-list-selected-hover:           var(--brand-p700);   /* brand-aware */
+  /* Subtext rows (Figma List · `Show Subtext` true) — tertiary neutral
+     resting, retints to brand-p500 on hover. Both states inherit from
+     the parent row state, so subtext follows the same tone as the label. */
+  --text-list-subtext:                  #858C92;             /* neutral/500 */
+  --text-list-subtext-hover:            var(--brand-p500);   /* brand-aware (brand/500) */
+  --icon-list-secondary-default:        #858C92;
+  --icon-list-primary-selected-hover:   var(--brand-p700);   /* brand-aware */
+  --icon-brandSecondary-quaternary:     var(--brand-p300);         /* alias from primary/300 */
+  /* design.md §6 row 1504 — icon/brandPrimary/default aliases Brand/primary/700.
+     Brand-aware so switching <html data-brand="..."> retints all callers. */
+  --icon-brandPrimary-default:          var(--brand-p700);
+  /* Figma icon/brandPrimary/quaternary | secondary — e.g. SuggestList add (335:64463). */
+  --icon-brandPrimary-quaternary:       var(--brand-p300);
+  --icon-brandPrimary-secondary:       var(--brand-p600);
+  --icon-list-check:                    var(--icon-brandPrimary-default);  /* alias */
+  --icon-step-accent:                   #FD879F;  /* coral accent in two-tone care-journey step glyphs (Figma 371:45332) */
+
+  /* — Brand drop shadow primitives (PHCIS · design.md) ─
+     PrimaryShadow/600 = brand-p600 @ 8%
+     PrimaryShadow/601 = brand-p600 @ 10%
+     PrimaryShadow/602 = brand-p600 @ 12%
+     Brand Drop Shadow Bottom/100 = single-layer 4px blur @ /600. */
+  --PrimaryShadow-600: rgb(var(--brand-p600-rgb) / 0.08);
+  --PrimaryShadow-601: rgb(var(--brand-p600-rgb) / 0.10);
+  --PrimaryShadow-602: rgb(var(--brand-p600-rgb) / 0.12);
+
+  /* — Indigo shadow primitives — `Primitive/color/shadow/indigo-{050,100,400}`.
+     Aliased from the indigo/400 swatch (#818CF8 — same color as
+     `--surface-colorfulbadge-indigo-bold`) at three opacity tiers
+     (050 = 10%, 100 = 15%, 400 = 25%). The `-rgb` triplet is exposed
+     so future shadow composites can use `rgb(var(--indigo-400-rgb) / 0.x)`
+     directly without redefining the same swatch. */
+  --indigo-400-rgb: 129 140 248;
+  --color-shadow-indigo-050: rgb(var(--indigo-400-rgb) / 0.10);
+  --color-shadow-indigo-100: rgb(var(--indigo-400-rgb) / 0.15);
+  --color-shadow-indigo-400: rgb(var(--indigo-400-rgb) / 0.25);
+
+  /* — Background tint primitives — Figma Primitive/color/bg/*
+     Alpha-baked at 20%. Semantic: background.bg.teal-400 / blue-400 (§4).
+     Used as ambient radial washes (e.g. Welcome illustration glow). */
+  --color-bg-teal-400-rgb: 62 195 178;       /* #3EC3B2 */
+  --color-bg-teal-600-rgb: 27 134 125;       /* #1B867D */
+  --color-bg-sky-cyan-400-rgb: 64 170 242;   /* #40AAF2 */
+  --color-bg-sky-cyan-600-rgb: 10 115 203;   /* #0A73CB */
+  /* Solid sky-cyan/700 — Clinic Card number-badge text (Figma DS Card 39:197) */
+  --color-sky-cyan-700: #0859A8;
+  --color-bg-teal-400: rgb(var(--color-bg-teal-400-rgb) / 0.20);
+  --color-bg-teal-600: rgb(var(--color-bg-teal-600-rgb) / 0.20);
+  --color-bg-sky-cyan-400: rgb(var(--color-bg-sky-cyan-400-rgb) / 0.20);
+  --color-bg-sky-cyan-600: rgb(var(--color-bg-sky-cyan-600-rgb) / 0.20);
+  --background-bg-teal-400: var(--color-bg-teal-400);
+  --background-bg-blue-400: var(--color-bg-sky-cyan-400);
+
+  /* — Indigo color primitives (Figma Primitive/color/indigo/*) ─
+     Tailwind-equivalent stops 100 / 300 / 400 / 600 / 700. Reused by
+     the aiSearch semantic group below (Doctor-AI search panel — Figma
+     156:27359 / 3396:1598) and any future indigo-themed AI surface. */
+  --color-indigo-100: #EEF2FF;   /* indigo/100 — AISearch X-clear chip bg (Figma 3396:3243) */
+  --color-indigo-200: #E0E7FF;   /* indigo/200 — AISearch X-clear chip bg on hover (Figma 3396:3245) */
+  --color-indigo-300: #A5B4FC;   /* indigo/300 — dark-mode hover/typing border + icon */
+  --color-indigo-400: #818CF8;   /* indigo/400 — dark-mode default/filled + light-mode shadow primitive */
+  --color-indigo-500: #6F82FF;   /* indigo/500 — Doctor AI panel container border (Figma 156:27359) + border/aiSearch/default (both modes) */
+  --color-indigo-600: #4F46E5;   /* indigo/600 — light-mode default/filled border + icon (same as --text-colorfulbadge-indigo) */
+  --color-indigo-700: #4338CA;   /* indigo/700 — light-mode hover/typing border + icon */
+
+  /* Indigo-tinted card surface (Figma `surface/card/indigo-100`).
+     Used by the Doctor AI ICD search panel (156:27359) — a soft violet
+     fill so the AI surface reads as distinct from the plain white
+     section cards around it without overpowering the page palette. */
+  --surface-card-indigo-100: #F3F5FC;
+  --border-doctor-ai-panel:  var(--color-indigo-500);   /* alias to keep ICD-panel callers off the raw color name */
+
+  /* TabBar sliding indicator · TabPill selected (animated=false) —
+     Brand Drop Shadow Bottom/200 — matches --shadow-card; retints with [data-brand] via --brand-p600-rgb. */
+  --shadow-tabpill-selected:
+    0px 1px 4px var(--PrimaryShadow-600),
+    0px 1px 8px var(--PrimaryShadow-601);
+
+  /* — Dimension + Typography aliases (Figma token names) —─────
+     Used by MIH Design System components (Select/TabPill/etc).
+     Keep these as simple pixel/weight aliases so the app can
+     mirror Figma specs without hard-coding magic numbers. */
+  --dimension-space-050: 2px;
+  --dimension-space-100: 4px;
+  --dimension-space-150: 6px;
+  --dimension-space-200: 8px;
+  --dimension-space-300: 12px;
+  --dimension-space-400: 16px;
+
+  --dimension-radius-100:  4px;
+  --dimension-radius-200:  8px;
+  --dimension-radius-500:  16px;
+  --dimension-radius-full: 9999px;
+
+  --dimension-size-300:   16px;  /* icon */
+  --dimension-size-500:   24px;  /* badge height */
+  --dimension-size-800:   40px;  /* avatar */
+  --dimension-size-1000:  48px;  /* list row min-h */
+
+  --dimension-stroke-100: 1px;
+  --dimension-stroke-200: 2px;
+
+  /* ── Dash-aliased mirrors of the slash-named tokens above.
+        CSS spec requires custom-property names to be <dashed-ident>
+        (no `/` allowed). Some browsers parse slash-named vars leniently;
+        these aliases guarantee resolution everywhere. ───────────────── */
+  --dim-space-0:    0px;
+  --dim-space-100:  4px;
+  --dim-space-150:  6px;
+  --dim-space-200:  8px;
+  --dim-space-300:  12px;
+  --dim-space-400:  16px;
+
+  --dim-radius-100:  4px;
+  --dim-radius-150:  6px;
+  --dim-radius-200:  8px;
+  --dim-radius-300:  10px;
+  --dim-radius-400:  12px;
+  --dim-radius-450:  14px;  /* kiosk card / header chip / queue-number box (Figma PHCIS|KIOSK 4002:928) */
+  --dim-radius-500:  16px;
+  --dim-radius-550:  22px;  /* camera viewport (Archive 301:31530) */
+  --dim-radius-600:  24px;  /* dimension.radius.600 — pill / circle-icon button */
+  --dim-radius-700:  38px;  /* full-screen mobile sheet top corners (Archive 253:26766) */
+  --dim-radius-1000: 100px; /* dimension.radius.1000 — success card top arch (Archive 178:122765) */
+  --dim-radius-full: 9999px;
+
+  --dim-size-100:   8px;   /* dimension.size.100 — XSmall trailing chevron (Brand Radius Subdue Icon Button 3871:4851) */
+  --dim-size-200:   12px;  /* dimension.size.200 — small select icon */
+  --dim-size-250:   14px;  /* dimension.size.250 — xs circle-icon glyph */
+  --dim-size-300:   16px;
+  --dim-size-500:   24px;
+  --dim-size-600:   32px;
+  --dim-size-700:   36px;  /* Button Small  / dimension.size.700 */
+  --dim-size-800:   40px;  /* Button Medium / dimension.size.800 */
+  --dim-size-900:   44px;  /* Button Large  / dimension.size.900 */
+  --dim-size-1000:  48px;
+  --dim-size-1050:  50px;  /* iPhone status bar (Archive 151:42896) */
+  --dim-size-1100:  52px;  /* dimension.size.1100 — OTP cell width (PHCIS-Signin 55:8422) */
+  --dim-size-1200:  56px;  /* dimension.size.1200 — HistoryListForm dashed add (Figma 3360:2711) */
+  --dim-size-1300:  60px;  /* dimension.size.1300 — OTP cell height (PHCIS-Signin 55:8422) */
+  --dim-size-1400:  64px;
+  --dim-size-1500:  68px;  /* dimension.size.1500 — mobile focused-search header (Archive 253:32666) */
+  --dim-size-1600:  72px;  /* dimension.size.1600 — PIN keypad key (Mobile 2042:27780) */
+  --dim-size-1700:  80px;  /* dimension.size.1700 — hub card illustration tile (Figma 21:1875) */
+  --dim-size-1750:  82px;  /* dimension.size.1750 — splash logo disc (Mobile 2042:28041) */
+  --dim-size-1800:  96px;  /* dimension.size.1800 — popup illustration */
+  --dim-size-1900:  112px; /* dimension.size.1900 — empty-search illustration (Archive 253:34862) */
+  --dim-size-2000:  128px; /* dimension.size.2000 — Input Field min-width (Figma DS 267:50) */
+  --dim-size-2050:  144px; /* iPhone home indicator width (Archive 175:94673) */
+  --dim-size-2100:  160px; /* dimension.size.2100 — Primary Search compact min-width (Figma 2056:4246) */
+  --dim-size-2170:  177px; /* pharmacy preparing home button width (Archive 284:36737) */
+  --dim-size-2190:  190px; /* add delivery details button width (Archive 371:51292) */
+  --dim-size-2200:  192px; /* dimension.size.2200 — receipt success buttons */
+  --dim-size-2280:  218px; /* success payment button width (Archive 176:105793) */
+  --dim-size-2450:  280px; /* dimension.size.2450 — OTP channel select card width (PHCIS-Signin 42:8722) */
+  --dim-size-2470:  298px; /* dimension.size.2470 — auth primary button width (PHCIS-Signin 112:10776) */
+  --dim-size-2500:  320px; /* dimension.size.2500 — input field min-width / sign-in form column */
+  --dim-size-2600:  384px; /* dimension.size.2600 — sign-in card content / button max-width */
+  --dim-size-2610:  402px; /* dimension.size.2610 — iPhone 17 mobile sheet width */
+  --dim-size-2700:  448px; /* dimension.size.2700 — sign-in card max-width (Figma 40:10656) */
+  --dim-size-2800:  512px; /* dimension.size.2800 */
+  --dim-size-2900:  640px;  /* primary search w / max-w */
+
+  --dim-stroke-100: 1px;
+  --dim-stroke-150: 1.5px;
+
+  --type-family-body:             'Sarabun', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --type-family-heading-content:  'Sarabun', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --type-family-ui:               'Sarabun', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  /* Brand display families — used only by typography.display.graphic*
+     (heading-graphic = Thai-led, heading-graphic2 = Latin-led with broader weights).
+     Both fall back to Sarabun → system if the brand font hasn't loaded yet. */
+  --type-family-heading-graphic:  'Sao Chingcha', 'Sarabun', system-ui, sans-serif;
+  --type-family-heading-graphic2: 'Mitr', 'Sarabun', system-ui, sans-serif;
+  --type-size-xxs:       10px;      /* typography.size.xxs */
+  --type-size-xs:        12px;
+  --type-size-sm:        14px;
+  --type-size-base:      16px;
+  --type-size-lg:        18px;      /* typography.size.lg */
+  --type-size-xl:        20px;      /* typography.size.xl */
+  --type-size-2xl:       24px;      /* typography.size.2xl — Sign-in card heading (h3 · Mitr) */
+  --type-size-3xl:       30px;      /* typography.size.3xl */
+  --type-size-4xl:       36px;      /* typography.size.4xl */
+  --type-size-5xl:       48px;      /* typography.size.5xl */
+  --type-size-6xl:       60px;      /* typography.size.6xl */
+  --type-weight-regular: 400;
+  --type-weight-medium:  500;
+  --type-weight-bold:    700;
+
+  /* Composite text styles (Figma text styles → CSS). Use as classes below. */
+  /* typography.h5-emphasis — Archive Payment Banner title 284:39953 */
+  --type-h5-emphasis-family: var(--type-family-heading-graphic2);
+  --type-h5-emphasis-size:   var(--type-size-lg, 18px);
+  --type-h5-emphasis-weight: var(--type-weight-medium, 500);
+  --type-h5-emphasis-leading: 1.5;
+  /* typography.label1 — Payment Banner subtitle 284:39954 */
+  --type-label1-family: var(--type-family-body);
+  --type-label1-size:   var(--type-size-sm, 14px);
+  --type-label1-weight: var(--type-weight-medium, 500);
+  --type-label1-leading: 1.5;
+
+  /* extra spacing/sizing/stroke aliases used by the Settings modal */
+  --dim-space-050: 2px;
+  --dim-space-500: 20px;            /* dimension.space.500 — Figma scale */
+  --dim-space-600: 24px;
+  --dim-space-800: 32px;            /* dimension.space.800 */
+  --dim-space-1200: 48px;           /* dimension.space.1200 — large column gap (Figma Step 7 patient/diagnosis row) */
+  --dim-space-2400: 96px;           /* dimension.space.2400 — sign-in screen padding (PHCIS-Signin 79:15268) */
+  --dim-size-400:  20px;
+  --dim-stroke-200: 2px;
+  --dim-stroke-400: 4px;
+  --dim-stroke-500: 5px; /* dimension.stroke.500 — appointment card top accent */
+  --dim-stroke-800: 8px; /* dimension.stroke.800 — framed QR/image border */
+
+  /* Queue Page tokens — OPD Queue (Figma 115:35757)
+     Status Summary Cards (info / positive / inprogress / brand / destructive) */
+  --surface-statussummarycard-info:        #DBEAFE;  /* blue-100  */
+  --surface-statussummarycard-positive:    #D1F6EE;  /* teal-100  */
+  --surface-statussummarycard-inprogress:  #FFEDD5;  /* orange-100 */
+  --surface-statussummarycard-destructive: #FEE2E2;  /* red-100   */
+  --surface-statussummarycard-brand:       var(--brand-p100);
+  --text-statussummarycard-info-number:        #1D4ED8;
+  --text-statussummarycard-positive-number:    #196C65;
+  --text-statussummarycard-inprogress-number:  #C2410C;
+  --text-statussummarycard-destructive-number: #B91C1C;
+  --text-statussummarycard-brand-number:       var(--brand-p700);
+  --text-statussummarycard-subtext:    #858C92;
+  --text-statussummarycard-increase:   #636B72;
+
+  /* Tab underline — design.md §6.15 / 1301-1305, 1473-1476, 1666-1670.
+     hover           = primary/600 (light) · primary/400 (dark)
+     selected-hover  = primary/800 (light) · primary/200 (dark) */
+  --surface-tabunderline-hover:        var(--brand-p50);  /* surface.brandPrimaryButton.quinary-hover */
+  --text-tabunderline-default:         #4D5358;
+  --text-tabunderline-hover:           var(--brand-p600); /* text.tabUnderline.hover */
+  --text-tabunderline-selected:        var(--brand-p700); /* text.tabUnderline.selected */
+  --text-tabunderline-selected-hover:  var(--brand-p800); /* text.tabUnderline.selected-hover */
+  --icon-tabunderline-default:         #4D5358;
+  --icon-tabunderline-hover:           var(--brand-p600); /* icon.tabUnderline.hover */
+  --icon-tabunderline-selected:        var(--brand-p700); /* icon.tabUnderline.selected */
+  --icon-tabunderline-selected-hover:  var(--brand-p800); /* icon.tabUnderline.selected-hover */
+  --border-tab-hover:                  var(--brand-p600); /* border.tab.hover */
+  --border-tab-selected:               var(--brand-p700); /* border.tab.selected */
+  --border-tab-selected-hover:         var(--brand-p800); /* border.tab.selected-hover */
+  --text-tabunderline-disabled:        #C9CDD0;           /* neutral/300 — Tab Underline disabled state (Figma 371:30) */
+  --icon-tabunderline-disabled:        #C9CDD0;
+
+  /* Tab Capsule — Figma 2612:7791. Capsule-shaped tab with leading indicator.
+     3 types (default · in-progress · success) × 4 states. */
+  --surface-tabcapsule-default:        #FFFFFF;             /* white capsule */
+  --surface-tabcapsule-hover:          var(--brand-p50);    /* primary/50 tint */
+  --surface-tabcapsule-selected:       var(--brand-p50);    /* selected (Active) bg */
+  --surface-tabcapsule-success:        #FFFFFF;             /* in-progress / success default bg */
+  --surface-tabcapsule-disabled:       #FFFFFF;
+  --border-tabcapsule-default:         #E2E4E6;             /* neutral/200 */
+  --border-tabcapsule-hover:           var(--brand-p200);   /* primary/200 — hover/active border */
+  --border-tabcapsule-selected:        var(--brand-p200);
+  --border-tabcapsule-inprogress:      #E2E4E6;             /* same as default — in-progress shares neutral border */
+  --border-tabcapsule-success:         #E2E4E6;
+  --border-tabcapsule-disabled:        #E2E4E6;
+  --text-tabcapsule-default:           #4D5358;             /* neutral/700 */
+  --text-tabcapsule-hover:             var(--brand-p700);
+  --text-tabcapsule-selected:          var(--brand-p700);
+  --text-tabcapsule-inprogress:        #4D5358;
+  --text-tabcapsule-success:           #4D5358;
+  --text-tabcapsule-disabled:          #C9CDD0;             /* neutral/300 */
+  --icon-tabcapsule-default:           #4D5358;
+  --icon-tabcapsule-hover:             var(--brand-p700);
+  --icon-tabcapsule-selected:          var(--brand-p700);
+  --icon-tabcapsule-success:           var(--brand-p700);   /* check icon tint */
+  --icon-tabcapsule-inprogress:        #F08C29;             /* orange dot (Figma) */
+  --icon-tabcapsule-disabled:          #C9CDD0;
+
+  /* Brand Tag (filter chips) */
+  --surface-brandtag-default:   #FFFFFF;
+  --surface-brandtag-hover:     var(--brand-p50);  /* surface.brandTag.default-hover */
+  --surface-brandtag-selected:  var(--brand-p50);
+  --surface-brandtag-selected-hover: var(--brand-p100); /* surface.brandTag.selected-hover */
+  --text-brandtag-default:      #4D5358;
+  --text-brandtag-hover:        var(--brand-p700); /* text.brandTag.hover */
+  --text-brandtag-selected:     var(--brand-p700);
+  --text-brandtag-selected-hover: var(--brand-p700); /* text.brandTag.selected-hover */
+  --text-brandtag-title:        #858C92;
+  --border-brandtag-default:    #E2E4E6;
+  --border-brandtag-hover:      var(--brand-p200); /* border.brandTag.default-hover */
+  --border-brandtag-selected:   var(--brand-p200);
+  --border-brandtag-selected-hover: var(--brand-p200); /* border.brandTag.selected (hover) */
+  /* Leading icon in FilterTag — primary/700 across all states (design.md §6 brandTag rows 6665-6680) */
+  --icon-brandtag-default:        var(--brand-p700);
+  --icon-brandtag-hover:          var(--brand-p700);
+  --icon-brandtag-selected:       var(--brand-p700);
+  --icon-brandtag-selected-hover: var(--brand-p700);
+  --icon-brandtag-tailing:        #C9CDD0;             /* neutral/300 — chevron in brandTag (Figma "icon/brandTag/tailing") */
+  --surface-danger-quaternary:    var(--surface-dangerButton-quaternary);  /* alias for VoiceTextarea error-toolbar bg */
+
+  /* Neutral Tag — Figma 2056:4263 "Tag" with Style=Neutral.
+     All shades are neutral grays (not brand-tinted), so this variant
+     does NOT retint with [data-brand]. */
+  --surface-neutraltag-default:        #FFFFFF;             /* neutral surface */
+  --surface-neutraltag-hover:          #F9FBFB;             /* neutral/50  — surface/neutralTag/default-hover */
+  --surface-neutraltag-selected:       #F4F5F5;             /* neutral/100 */
+  --surface-neutraltag-selected-hover: #E2E4E6;             /* neutral/200 */
+  --border-neutraltag-default:         #E2E4E6;             /* neutral/200 — same border for all states */
+  --border-neutraltag-hover:           #E2E4E6;
+  --border-neutraltag-selected:        #E2E4E6;
+  --border-neutraltag-selected-hover:  #E2E4E6;
+  --text-neutraltag-default:           #4D5358;             /* neutral/700 — text/neutralTag/default */
+  --text-neutraltag-hover:             #4D5358;
+  --text-neutraltag-selected:          #4D5358;
+  --text-neutraltag-selected-hover:    #4D5358;
+  --icon-neutraltag-default:           #4D5358;             /* icon/tag/default (neutral) */
+  --icon-neutraltag-hover:             #4D5358;
+  --icon-neutraltag-selected:          #4D5358;
+  --icon-neutraltag-selected-hover:    #4D5358;
+  --icon-neutraltag-tailing:           #C9CDD0;             /* shared chevron color */
+
+  /* Table */
+  --surface-table-header:           var(--brand-p50);
+  --surface-table-hover:            var(--brand-p50);   /* surface.table.hover — design.md row 1973 */
+  --surface-table-footer:           var(--brand-p100);  /* surface.table.footer — design.md row 1971 */
+  --surface-table-selected:         var(--brand-p50);   /* surface.table.selected — design.md row 1974 */
+  --surface-table-selected-hover:   var(--brand-p100);  /* surface.table.selected-hover — design.md row 1975 */
+  --border-table-default:           var(--brand-p100);
+  --border-table-line:              var(--brand-p50);   /* border.table.line */
+  --text-table-title:               var(--brand-p800);
+
+  /* Pagination — design.md §6.19 (Figma 328:4734).
+     Hover state aliases the brand palette (Figma node 306:1808):
+       light: surface→brand/p50,  text→brand/p700
+       dark:  surface→brand/p950, text→brand/p300
+     Both flip automatically when --brand-p* primitives swap per
+     [data-brand]/[data-theme] without changing this rule. */
+  --surface-pagination-default:  #FFFFFF;
+  --surface-pagination-hover:    var(--brand-p50);    /* #F4FBF8 */
+  --surface-pagination-selected: var(--brand-p100);   /* #E2F3EB */
+  --text-pagination-default:     #4D5358;
+  --text-pagination-hover:       var(--brand-p700);   /* #007549 */
+  --text-pagination-selected:    var(--brand-p700);   /* #007549 */
+  --text-neutral-tertiary:       #ADB2B7;             /* ellipsis */
+
+  /* Calendar — Figma DS "Calendar" 152:46901 · day-cell states 143:23705.
+     Day/month text slate #4D5358, disabled #CBD5E1, current-day = brand/100
+     tint + brand/700 text (matches the inline booking date picker 140:9464). */
+  --surface-calendar-default:    #FFFFFF;
+  --surface-calendar-disabled:   #FFFFFF;
+  --surface-calendar-current:    var(--brand-p100);   /* #E2F3EB */
+  --surface-calendar-selected:   var(--brand-p700);   /* #007549 · web deep-green (mobile uses brighter p600 — design.md §12889) */
+  --surface-calendar-selected-mobile: var(--brand-p600);   /* #08A768 · mobile brighter emerald (Figma 173:82996) */
+  --text-calendar-month:         #4D5358;
+  --text-calendar-default:       #4D5358;
+  --text-calendar-disabled:      #CBD5E1;              /* slate/300 */
+  --text-calendar-current:       var(--brand-p700);   /* #007549 */
+  --text-calendar-selected:      #FFFFFF;              /* text/calendar/selected */
+
+  /* Switch (off-state primitives used by the toggle inside ActionList).
+     Full switch token set is documented in design.md §4.2/4.5.            */
+  --surface-switch-off:          #E2E4E6;             /* neutral/200 */
+  --surface-switch-on:           var(--brand-p600);   /* brand/p600  */
+  --surface-switch-icon:         #FFFFFF;             /* thumb       */
+
+  /* Checkbox primitives — Figma "Checkbox" 306:1099 / 269:28.
+     surface/switch/* names mirror Figma's data-name on the box element. */
+  --surface-switch-default:                  #FFFFFF;             /* unchecked bg                            */
+  --surface-switch-hover:                    #3EC3B2;             /* surface/switch/hover → teal/300         */
+  --surface-switch-on-hover:                 #196C65;             /* surface/switch/on-hover → teal/700      */
+  --surface-switch-checkbox:                 var(--brand-p600);   /* legacy alias → brand/p600 #08A768       */
+  --surface-switch-checkbox-hover:           var(--brand-p700);   /* legacy alias → brand/p700 #007549       */
+  --surface-switch-checkbox-default-hover:   var(--brand-p500);   /* Unchecked Hover preview (brand/p500)    */
+  --border-switch-default:                   #C9CDD0;             /* unchecked border (neutral/300)          */
+  --border-switch-disabled:                  #E2E4E6;             /* disabled border (neutral/200)           */
+  --surface-disabled-secondary-hover:        #C9CDD0;             /* Disabled-Checked fill (neutral/300)     */
+  --icon-switch-checkbox-tick:               #FFFFFF;             /* tick stroke colour                      */
+
+  /* Form Builder — Figma "Content" 2210:7837, "Signature" 2451:13969,
+     "Drag and Drop" 2451:13908. Brand-aware drop-zone palette: tokens
+     alias --brand-p* primitives so retinting via [data-brand] works.
+     Error variant uses fixed danger tokens (non-brand-responsive).        */
+  --surface-formbuilder-default:    var(--brand-p50);    /* dashed-border idle bg                 */
+  --surface-formbuilder-hover:      var(--brand-p50);    /* hover bg (border darkens, bg holds)   */
+  --surface-formbuilder-card:       #FFFFFF;             /* Filled state — uploaded-file card     */
+  --surface-formbuilder-error:      var(--surface-dangerButton-quaternary);  /* danger/quaternary (#FFF0F0)  */
+  --border-formbuilder-default:     var(--brand-p200);                       /* dashed border idle (#C5EDDA) */
+  --border-formbuilder-hover:       var(--brand-p600);                       /* dashed border hover (#08A768)*/
+  --border-formbuilder-filled:      var(--brand-p100);                       /* solid 1px on Filled card     */
+  --border-formbuilder-error:       var(--border-dangerButton-default);      /* dangerbutton/default (#DC2626) */
+  --icon-formbuilder-iconbox-default: var(--brand-p100); /* Content's left iconbox bg (#E2F3EB)   */
+  --icon-formbuilder-iconbox-hover:   var(--brand-p100); /* Same — only outer state changes       */
+  --icon-formbuilder-error:         var(--border-dangerButton-default);      /* file-up icon stroke in Error state (#DC2626) — Figma `icon/formBuilder/error` */
+  --text-formbuilder-text:          var(--brand-p700);                       /* Title default (#007549)      */
+  --text-formbuilder-error:         var(--border-dangerButton-default);      /* Title in Error state (#DC2626) — Figma `text/formbuilder/error` */
+  --text-formbuilder-subtext:       #858C92;             /* Subtitle / helper (neutral/500)       */
+
+  /* Figma "Brand Drop Shadow Bottom/100" — single-layer PrimaryShadow/600
+     (offset 0,1px · blur 4). Brand-aware via `--PrimaryShadow-*`.
+     Use on subtle brand-tinted lifts (map popovers, tool markers, dropdowns). */
+  --shadow-brand-drop-bottom-100:
+    0 1px 4px var(--PrimaryShadow-600);
+  /* Figma "Brand Drop Shadow Top/100" — subtle upward footer lift. */
+  --shadow-brand-drop-top-100:
+    0 -1px 4px var(--PrimaryShadow-600);
+
+  /* Figma "Brand Drop Shadow Bottom/200" — stacked PrimaryShadow/600 + /601
+     (offset 0,1px · blur 4 + 8). Brand-aware via `--PrimaryShadow-*`.
+     Shared by Form Builder chrome, Small Alert success, copy toast, etc.   */
+  --shadow-brand-drop-bottom-200:
+    0 1px 4px var(--PrimaryShadow-600),
+    0 1px 8px var(--PrimaryShadow-601);
+  /* Twin for `filter:` — use on animated toast wrapper so shadow follows the pill. */
+  --filter-brand-drop-bottom-200:
+    drop-shadow(0 1px 4px var(--PrimaryShadow-600)) drop-shadow(0 1px 8px var(--PrimaryShadow-601));
+
+  /* Figma "Brand Drop Shadow Bottom/400" — stacked PrimaryShadow/600 + /601
+     (offset 0,4 blur 4 spread -4 · offset 0,16 blur 32 spread -4).
+     Large brand-tinted lift for floating auth cards (PHCIS-Signin 42:8722). */
+  --shadow-brand-drop-bottom-400:
+    0 4px 4px -4px var(--PrimaryShadow-600),
+    0 16px 32px -4px var(--PrimaryShadow-601);
+
+  /* Figma "Indigo Drop Shadow Bottom/200" — stacked indigo-050 + indigo-100
+     (offset 0,1px · blur 4 + 8). The /200 spec is the canonical AISearch
+     drop — same shape as Brand Drop Shadow Bottom/200 but with the indigo
+     shadow primitives so the violet glow stays consistent across every
+     brand mode. NOT brand-aware. */
+  --shadow-indigo-drop-bottom-200:
+    0 1px 4px 0 var(--color-shadow-indigo-050),
+    0 1px 8px 0 var(--color-shadow-indigo-100);
+  /* Twin for `filter:` — use on animated wrappers where the shadow must
+     follow non-rectangular content. */
+  --filter-indigo-drop-bottom-200:
+    drop-shadow(0 1px 4px var(--color-shadow-indigo-050))
+    drop-shadow(0 1px 8px var(--color-shadow-indigo-100));
+  /* Legacy single-layer alias — kept for callers that landed before the
+     two-layer /200 token was published. Points at the canonical /200 so
+     existing usages auto-upgrade. New code should reference /200 directly. */
+  --shadow-indigo-drop-bottom:   var(--shadow-indigo-drop-bottom-200);
+  --filter-indigo-drop-bottom:   var(--filter-indigo-drop-bottom-200);
+
+  /* Form Builder / floating form chrome — neutral slate drop shadow.
+     Not brand-tinted (--shadow-brand-drop-bottom-* / --shadow-card).
+     Used by form-builder tiles, exam floating toolbars, registration cards. */
+  --shadow-formbuilder:
+    0 1px 4px rgba(100, 116, 139, 0.10);
+
+  /* SuccessIcon (TickOnCircle) — Figma node 2798:5280.
+     `icon/positive/success` = teal/500 (fixed, non-brand-responsive).
+     White tick stays white in both light + dark modes.                    */
+  --icon-positive-success:       #24A899;             /* teal/500    */
+  --text-positive-success-tick:  #FFFFFF;             /* tick stroke */
+
+  /* Small Alert — Figma 3355:3149 (MIH Design System Foundation).
+     Solid fills + white label/icon; success uses Brand Drop Shadow Bottom/200;
+     error uses neutral slate shadow (Figma Drop Shadow Bottom/200). */
+  --surface-smallalert-success: #24A899;             /* Primitive/color/teal/500  — surface/smallalert/success */
+  --surface-smallalert-error:   #EF4444;             /* Primitive/color/red/500   — surface/smallalert/error   */
+  --text-smallalert-on-success: #FFFFFF;             /* grey/50 on teal/500 — Figma text/positive/on-positive */
+  --text-smallalert-on-error:   var(--text-danger-on-default);  /* #FFFFFF — Figma text/danger/on-default */
+  --shadow-smallalert-success: var(--shadow-brand-drop-bottom-200);
+  --shadow-smallalert-error:
+    0 1px 4px rgba(100, 116, 139, 0.15),
+    0 1px 2px rgba(100, 116, 139, 0.10);
+  --shadow-drop-bottom-200: var(--shadow-smallalert-error);
+
+  /* Status Badge — Figma 302:73, design.md §4.1/4.2.
+     Surface (filled bg) + text per style. Outline variant uses neutral
+     border instead of filled bg.                                          */
+  --surface-statusbadge-neutral: #F5F7F9;             /* slate/100   */
+  --surface-statusbadge-info:    #DBEAFE;             /* blue/100    */
+  --surface-statusbadge-success: #D1F6EE;             /* teal/100    */
+  --surface-statusbadge-warning: #FFEDD5;             /* orange/100  */
+  --surface-statusbadge-error:   #FEE2E2;             /* red/100     */
+  --text-statusbadge-neutral:    #4D5358;             /* neutral/700 */
+  --text-statusbadge-info:       #1D4ED8;             /* blue/700    */
+  --text-statusbadge-success:    #196C65;             /* teal/700    */
+  --text-statusbadge-warning:    #C2410C;             /* orange/700 — Figma calls this `text/statuslBadge/in-progress` */
+  --text-statusbadge-error:      #B91C1C;             /* red/700     */
+  --border-statusbadge-neutral:  #E2E4E6;             /* neutral/200 — outline */
+  --surface-statusbadge-yellow:  var(--surface-pill-yellow);  /* extended status — used for "in progress" queue rows */
+  --text-statusbadge-yellow:     var(--text-pill-yellow);
+
+  /* Alert — design.md §4.1/4.2/4.3 (Figma 325:2623 LargeAlert).
+     4 tones (info/success/warning/error) × 3 properties (surface/border/text). */
+  --surface-alert-info:          #F0F6FF;             /* blue/50    */
+  --surface-alert-success:       #F4FBFA;             /* teal/50    */
+  --surface-alert-warning:       #FFF9F0;             /* orange/50  */
+  --surface-alert-error:         #FFF0F0;             /* red/50     */
+  --border-alert-info:            #DBEAFE;            /* blue/100   */
+  --border-alert-success:         #D1F6EE;            /* teal/100   */
+  --border-alert-warning:         #FFEDD5;            /* orange/100 */
+  --border-alert-error:           #FEE2E2;            /* red/100    */
+  --text-alert-info:              #1D4ED8;            /* blue/700   */
+  --text-alert-success:           #196C65;            /* teal/700   */
+  --text-alert-warning:           #C2410C;            /* orange/700 */
+  --text-alert-error:             #B91C1C;            /* red/700    */
+  --surface-alertdialog-default:  var(--surface-card-100);    /* white card */
+  --border-alertdialog-default:   #E2E4E6;                    /* neutral/200 — Figma `border/alertdialog/default` (AlertDialog 1:1159) */
+  --text-alertdialog-text:        #4D5358;                    /* neutral/700 — title color (h5/h6) */
+  --text-alertdialog-subtext:     #636B72;                    /* neutral/600 — description body */
+  /* AlertDialog tone icons — Figma node 1:1162 ("Info") uses brand/primary/700.
+     Brand-aware so it follows setBrandTheme() automatically. Success/Warning/
+     Destructive icons reuse Alert banner tones (fixed semantic colors). */
+  --icon-alertdialog-info:        var(--brand-p700);          /* icon/alertDialog/info → primary/700 (brand-aware) */
+  --icon-alertdialog-success:     var(--text-alert-success);  /* icon/alert/success → teal/700 (#196C65) */
+  --icon-alertdialog-warning:     var(--text-alert-warning);  /* icon/alert/warning → orange/700 (#C2410C) */
+  --icon-alertdialog-destructive: var(--text-alert-error);    /* icon/alert/error → red/700 (#B91C1C) */
+
+  /* Background tertiary-hover (X close button hover bg per tone)
+     design.md §4.0 / Figma 3064:4984. */
+  --background-info-tertiary-hover:     #BFDBFE;             /* blue/200      */
+  --background-positive-tertiary-hover: var(--brand-p200);   /* brand/p200    */
+  --background-warning-tertiary-hover:  #FED7AA;             /* orange/200    */
+  --background-danger-tertiary-hover:   #FECACA;             /* red/200       */
+
+  /* Alert scrollbar — design.md "Alert · Scrollbar" table.
+     Bar = same as alert border (100-shade), Pill thumb = 300-shade.   */
+  --surface-scrollbar-info-bar:    #DBEAFE;                  /* blue/100      */
+  --surface-scrollbar-info-pill:   #93C5FD;                  /* blue/300      */
+  --surface-scrollbar-success-bar: #D1F6EE;                  /* teal/100      */
+  --surface-scrollbar-success-pill:#6CDCCA;                  /* teal/300      */
+  --surface-scrollbar-warning-bar: #FFEDD5;                  /* orange/100    */
+  --surface-scrollbar-warning-pill:#FDBA74;                  /* orange/300    */
+  --surface-scrollbar-error-bar:   #FEE2E2;                  /* red/100       */
+  --surface-scrollbar-error-pill:  #FCA5A5;                  /* red/300       */
+
+  /* Primary Search — 5 states per Figma MIH DS Foundation 2056:4246.
+     Default/Focus/Filled use brand-p600; Hover/Typing use brand-p700. */
+  --surface-primarysearch-default:    #FFFFFF; /* alias of surface/search/default */
+  --border-primarysearch-default:     var(--brand-p600);
+  --border-primarysearch-hover:       var(--brand-p700);
+  /* Focus state — Figma 2056:4246 property panel adds a 5th state between
+     Hover and Typing: the input is focused with an empty value (dropdown
+     shows recent searches). Per Figma the border stays on `default` and
+     text stays on the placeholder tone. */
+  --border-primarysearch-focus:       var(--border-primarysearch-default);
+  --border-primarysearch-typing:      var(--brand-p700);
+  --border-primarysearch-filled:      var(--brand-p600);
+  --text-primarysearch-default:       #ADB2B7;   /* placeholder */
+  --text-primarysearch-hover:         #4D5358;
+  --text-primarysearch-focus:         var(--text-primarysearch-default);  /* placeholder grey */
+  --text-primarysearch-typing:        #4D5358;
+  --text-primarysearch-filled:        #4D5358;
+  --icon-primarysearch-default:       var(--brand-p600);
+  --icon-primarysearch-hover:         var(--brand-p700);
+  --icon-primarysearch-focus:         var(--brand-p600);
+  --icon-primarysearch-typing:        var(--brand-p700);
+  --icon-primarysearch-filled:        var(--brand-p600);
+
+  /* Brand drop shadow Bottom/200 (used by Primary Search) */
+  --shadow-primarysearch:
+    0 1px 4px var(--PrimaryShadow-600),
+    0 1px 8px var(--PrimaryShadow-601);
+
+  /* — AI Search (Doctor-AI ICD panel — Figma 156:27359 / Variables panel
+     border/aiSearch + icon/aiSearch). 4 states share the indigo palette
+     used by the AI surface chrome:
+       default  → indigo/500  (same in light + dark — no theme swap)
+       hover    → indigo/700  (light) / indigo/300 (dark)
+       typing   → indigo/700  (light) / indigo/300 (dark)  — same as hover, per Figma
+       filled   → indigo/600  (light) / indigo/400 (dark)  — matches resting tint
+     Dark-mode swap (below in @media block) flips 600→400 / 700→300.
+     `border/aiSearch/default` deliberately skips the swap — indigo/500
+     reads as the "resting AI border" identically on both surfaces. */
+  --border-aiSearch-default: var(--color-indigo-500);
+  --border-aiSearch-hover:   var(--color-indigo-700);
+  --border-aiSearch-typing:  var(--color-indigo-700);
+  --border-aiSearch-filled:  var(--color-indigo-600);
+  --icon-aiSearch-default:   var(--color-indigo-600);
+  --icon-aiSearch-hover:     var(--color-indigo-700);
+  --icon-aiSearch-typing:    var(--color-indigo-700);
+  --icon-aiSearch-filled:    var(--color-indigo-600);
+
+  /* Secondary Search (per Figma MIH DS Foundation 305:43) */
+  --surface-search-default:           #FFFFFF;
+  --border-secondarysearch-default:   #C9CDD0;
+  --border-secondarysearch-filled:    #C9CDD0;
+  --border-secondarysearch-hover:     var(--brand-p700);  /* brand-aware */
+  --border-secondarysearch-typing:    var(--brand-p700);
+  --text-secondarysearch-default:     #ADB2B7;            /* placeholder */
+  --text-secondarysearch-hover:       #4D5358;
+  --text-secondarysearch-typing:      #4D5358;
+  --text-secondarysearch-filled:      #4D5358;
+  --ring-secondarysearch:             rgb(var(--brand-p600-rgb) / 0.15); /* effect/input/100 = primaryborder/600 */
+
+  /* Settings modal — surfaces, borders, text, mode-icon backdrops */
+  --surface-modal-default:           #FFFFFF;
+  --border-popover-grey:             #E2E4E6;
+  --surface-neutralbutton-quinary:        #FFFFFF;
+  --surface-neutralbutton-quinary-hover:  #F9FBFB;          /* design.md row 1876 */
+  --surface-neutralbutton-quaternary:      #F9FBFB;         /* design.md §7d row 3054 — Ghost button Default bg (= background/neutral/quinary) */
+  --surface-neutralbutton-quaternary-hover: #F4F5F5;        /* design.md row 1874 — Ghost button hover bg (= background/neutral/tertiary) */
+  /* Neutral Subdue (Icon) Button — design.md §7f row 3088/3089/3091 (node 2024-4516).
+     Fill Default uses neutral/200, Fill Hover steps to neutral/300; Selected
+     reuses the Ghost-tier quaternary surface + border. */
+  --surface-neutralbutton-secondary:        #E2E4E6;        /* neutral/200 — Subdue Fill default bg */
+  --surface-neutralbutton-secondary-hover:  #C9CDD0;        /* neutral/300 — Subdue Fill hover bg */
+  --border-neutralbutton-tertiary:        #E2E4E6;
+  --border-neutralbutton-tertiary-hover:  #C9CDD0;          /* design.md row 1435 */
+  --border-neutralbutton-quaternary:      #F4F5F5;          /* neutral/100 — Subdue Selected border */
+  --icon-neutralbutton-default:           #4D5358;          /* design.md row 1609 — Ghost icon Default */
+  --icon-neutralbutton-secondary:         #636B72;          /* design.md row 1612 — Ghost icon Hover (e.g. Popup close X 104:5369) */
+  --border-brandprimarybutton-tertiary: var(--brand-p200);   /* #C5EDDA on default */
+  --text-topic-tertiary-title:       #363B3F;
+  --surface-pink-quaternary:         #FBF4F8;
+  --surface-pink-default:            #BE185D;  /* Figma 217:27084 mark dot */
+  --surface-pink-default-hover:      #9D174D;  /* Figma 220:27777 Hover */
+  --border-image-default:            #FFFFFF;
+  --border-popover-grey:             #E2E4E6;
+  --text-modal-subtext:              #ADB2B7;
+  --surface-navy-quaternary:         #F3F5FC;
+
+  --typography-family-body: 'Sarabun', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --typography-size-xs: 12px;
+  --typography-size-sm: 14px;
+  --typography-size-base: 16px;
+  --typography-weight-regular: 400;
+  --typography-weight-medium: 500;
+
+  /* — Sidemenu (brand-aware) — */
+  --surface-navigation-default: #FFFFFF;
+  --surface-sidemenu-hover:     var(--brand-p50);  /* surface/sidemenu/hover */
+  --surface-sidemenu-active:    var(--brand-p50);
+  --border-sidemenu-active:     var(--brand-p700);
+  /* Shell right edge — Figma Design Template Urt0JAQES9364u2ud3XtpY · node 1:2447:
+     border/brandprimary/quaternary @ dimension/stroke/100 */
+  --border-sidemenu-shell:      var(--border-brandPrimary-quaternary);
+  --text-sidemenu-default:      #4D5358;
+  --text-sidemenu-hover:        var(--brand-p700);
+  --text-sidemenu-selected:     var(--brand-p700);
+  --text-sidemenu-disabled:     #ADB2B7;
+  --text-sidemenu-tertiary:     #858C92;
+  --text-brand-name: #383B3D;
+  --text-brand-sub:  #565D6C;
+
+  /* — Patient banner gradient — */
+  --gradient-patient-banner:
+    linear-gradient(94.93deg, #00A4AC 0.67%, #1FA091 100.76%);
+
+  /* — Notifications — */
+  --surface-notification-default: #DB2777;
+  --text-danger-on-default: #FFFFFF;
+
+  /* — Severity / status badges (Triage levels — STATIC, not brand) — */
+  --surface-triage-level1: #FEE2E2; --text-triage-level1: #B91C1C; /* Resuscitation — red */
+  --surface-triage-level2: #FFEDD5; --text-triage-level2: #C2410C; /* Emergency — orange */
+  --surface-triage-level3: #FEF9C3; --text-triage-level3: #A16207; /* Urgent — yellow */
+  --surface-triage-level4: var(--surface-colorfulbadge-teal); --text-triage-level4: var(--text-colorfulbadge-teal); /* Semi-urgent — teal */
+  --surface-triage-level5: #DBEAFE; --text-triage-level5: #1D4ED8; /* Non-urgent — blue */
+
+  /* — Severity badges (allergy/disease) — */
+  --surface-severity-high:   #FEE2E2; --text-severity-high:   #B91C1C;
+  --surface-severity-medium: #FFEDD5; --text-severity-medium: #C2410C;
+  --surface-severity-low:    #FEF9C3; --text-severity-low:    #A16207;
+  --surface-severity-mild:   #D1F6EE; --text-severity-mild:   #196C65;
+
+  /* — Colorful status pills — */
+  --surface-pill-green:  #DFF2E9; --text-pill-green:  #007549;
+  --surface-pill-red:    #FEE2E2; --text-pill-red:    #B91C1C;
+  --surface-pill-orange: #FFEDD5; --text-pill-orange: #C2410C;
+  --surface-pill-blue:   #DBEAFE; --text-pill-blue:   #1D4ED8;
+  --surface-pill-teal:   #D1F6EE; --text-pill-teal:   #196C65;
+  --surface-pill-yellow: #FEF9C3; --text-pill-yellow: #A16207;
+  --surface-pill-purple: #F3E8FF; --text-pill-purple: #7E22CE;
+
+  /* — Sidemenu dimensions — */
+  --sm-width-closed: 64px;
+  --sm-width-open:   320px;
+  --sm-stroke-400:    4px;
+  --sm-radius-100:    6px;
+  --sm-space-300:    12px;
+  --sm-space-600:    24px;
+  --sm-z-overlay:    1300; /* sidebar — above Topbar (z=1200) and Leaflet (z≤1000) */
+  --sm-z-modal:      1400; /* full-screen modal (Popup): above sidebar + app header */
+  /* Portaled menus from inside a modal (e.g. OverflowFlexRow "More" in DateFilterPopup). */
+  --sm-z-modal-popover: 1450;
+  /* Tooltips must sit above EVERY UI layer — including modals + their
+     portal'd popovers — since they explain controls inside those
+     layers. Anything lower means hovering a tool inside a popup
+     surfaces no tooltip (the popup paints over the bubble). */
+  --sm-z-tooltip:    1500;
+  --sm-z-dropdown:   1196; /* dropdown trigger layer: near header, still below it */
+  --sm-z-popover:    1199; /* dropdown popover: almost header level, but lower */
+  /* Portaled lists (e.g. FilterDropdown): above Topbar (1200) and above mobile
+     sidemenu (--sm-z-overlay 1300) so the menu is not hidden behind the drawer. */
+  --sm-z-popover-nested: calc(var(--sm-z-overlay) + 2);
+  --sm-shadow-overlay:
+    0 8px 24px rgb(var(--brand-p600-rgb) / 0.12),
+    0 2px 6px  rgb(var(--brand-p600-rgb) / 0.08);
+
+  /* — Figma "Brand Drop Shadow Top/200" — used by SideMenu shell.
+     Two stacked DROP_SHADOWs per Figma Design Template node 1:2447:
+       layer 1 — color PrimaryShadow/600  · offset (0, −1) · blur 4 · spread 0
+       layer 2 — color PrimaryShadow/601  · offset (0, −1) · blur 8 · spread 0
+     Both colors are tied to var(--brand-p600-rgb) → the shadow tint
+     follows whichever brand mode is active (mode-independent). */
+  --shadow-brand-top-200:
+    0px -1px 4px var(--PrimaryShadow-600),
+    0px -1px 8px var(--PrimaryShadow-601);
+  --shadow-sidemenu: var(--shadow-brand-top-200);
+
+  --icon-sidemenu-hover-filter:
+    brightness(0) invert(27%) sepia(100%) saturate(600%) hue-rotate(148deg) brightness(89%) contrast(99%);
+
+  /* — Shadows · Brand Drop Shadow Bottom (PHCIS Figma) ──────
+     Bottom/200 = 2 layers (4px @ /600) + (8px @ /601) → cards
+     Bottom/100 = 1 layer  (4px @ /600)                → header bar
+                                                         (--shadow-header) */
+  --shadow-card:
+    0px 1px 4px var(--PrimaryShadow-600),
+    0px 1px 8px var(--PrimaryShadow-601);
+  /* Queue / table card shell: same two layers as --shadow-card, each layer
+     alpha +10% vs PrimaryShadow-600/601 (0.08→0.088, 0.10→0.11). */
+  --shadow-card-strong:
+    0px 1px 4px rgb(var(--brand-p600-rgb) / 0.088),
+    0px 1px 8px rgb(var(--brand-p600-rgb) / 0.11);
+  --shadow-card-hover:
+    0px 1px 4px var(--PrimaryShadow-600),
+    0px 1px 8px var(--PrimaryShadow-601);
+  /* Header / SubHeader bar — Figma "Brand Drop Shadow Bottom/100"
+     (effect.brand-drop-shadow-bottom.100 · design.md §6.19.3). Aliased, not
+     restated: the old literal used PrimaryShadow/602 (0.12 alpha), which no
+     Figma effect defines, so the bar sat a shade heavier than every other
+     brand-tinted lift on the page. */
+  --shadow-header: var(--shadow-brand-drop-bottom-100);
+  /* Telemed floating CTA — purple→magenta glow on hover, matching its
+     gradient (#7A4CE5 / #D833A1). Decorative elevation for the FAB only. */
+  --shadow-telemed-fab-hover:
+    0px 10px 28px -4px rgba(122, 76, 229, 0.50),
+    0px 4px 12px rgba(216, 51, 161, 0.32);
+
+  /* ── Motion (enter/exit) — design.md §1d Motion tokens */
+  --motion-duration-modal: 220ms;
+  --motion-duration-popover: 160ms;
+  --motion-duration-calendar: 320ms;
+  --motion-easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --motion-easing-popover: ease-out;
+  --motion-easing-enter: cubic-bezier(0.16, 1, 0.3, 1);
+  --motion-panel-offset-y: var(--dim-space-200, 8px);
+  --motion-panel-scale-from: 0.98;
+  --motion-offset-calendar-x: var(--dim-space-600, 24px);
+
+  /* ── Brand Primary Button — full token set per design.md §7a (Brand Icon Button)
+        Surface levels (semantic, brand-aware via brand-pXXX): default-hover,
+        secondary (#C5EDDA — selected/subdue fill), quaternary (#F4FBF8),
+        quaternary-hover (#E2F3EB), quinary (#FFFFFF), quinary-hover (#F4FBF8). */
+  --surface-brandPrimaryButton-default-hover:     var(--brand-p800);
+  --surface-brandPrimaryButton-secondary:         var(--brand-p200);
+  --surface-brandPrimaryButton-tertiary-hover:    var(--brand-p200);  /* Subdue Fill hover · design.md row 1714 */
+  --surface-brandPrimaryButton-quaternary:        var(--brand-p50);
+  --surface-brandPrimaryButton-quaternary-hover:  var(--brand-p100);
+  --surface-brandPrimaryButton-quinary:           #FFFFFF;
+  --surface-brandPrimaryButton-quinary-hover:     var(--brand-p50);
+
+  --border-brandPrimaryButton-default:            var(--brand-p700);
+  --border-brandPrimaryButton-default-hover:      var(--brand-p800);
+  --border-brandPrimaryButton-tertiary:           var(--brand-p200);  /* Focus ring (4px) — Figma 377:11596 */
+  /* Dashed "add row" hover (HistoryListForm · Figma 3360:2711) — brand/primary/300 */
+  --border-brandPrimaryButton-tertiary-hover:     var(--brand-p300);
+  --border-brandPrimaryButton-quaternary:         var(--brand-p100);  /* Active state border — Figma 377:11596 */
+  --border-brandPrimaryButton-quaternary-hover:   var(--brand-p200);
+
+  --icon-brandPrimaryButton-default:              var(--brand-p700);
+  --icon-brandPrimaryButton-default-hover:        var(--brand-p800);
+  --icon-brandPrimaryButton-on-brand:             #FFFFFF;
+  --icon-brandPrimaryButton-secondary:            var(--brand-p600);
+
+  /* lowercase aliases — match Figma data-name "brandprimarybutton".
+     RadioButton/SelectableCardButton selected state aliases the
+     border colour from `border/brandPrimaryButton/Default` (Figma
+     node 2250:8270) → brand-p700. Routing the lowercase variant
+     through the camelCase token keeps brand-aware tinting intact
+     when `<html data-brand="…">` switches palettes. */
+  --surface-brandprimarybutton-tertiary:          var(--surface-brandPrimaryButton-tertiary);
+  --surface-brandprimarybutton-tertiary-hover:    var(--surface-brandPrimaryButton-tertiary-hover);
+  --border-brandprimarybutton-default:            var(--border-brandPrimaryButton-default);
+  --border-brandprimarybutton-default-hover:      var(--border-brandPrimaryButton-default-hover);
+  --border-brandprimarybutton-tertiary-hover:     var(--border-brandPrimaryButton-tertiary-hover);
+  --icon-brandprimarybutton-default:              var(--icon-brandPrimaryButton-default);
+  --icon-brandprimarybutton-default-hover:        var(--icon-brandPrimaryButton-default-hover);
+
+  /* ── Disabled Button — design.md §7 disabled state (neutral, brand-agnostic) */
+  --surface-disabledButton-default:               #4D5358;  /* neutral/700 */
+  --surface-disabledButton-tertiary:              #F4F5F5;  /* neutral/100 — Subdue/Ghost disabled bg */
+  --surface-disabledButton-quinary:               #FFFFFF;  /* Outline disabled */
+  --border-disabledButton-default:                #636B72;  /* neutral/600 */
+  --border-disabledButton-tertiary:               #E2E4E6;  /* neutral/200 — Subdue Outline disabled border (design.md §7f row 3094) */
+  --icon-disabledButton-default:                  #4D5358;  /* neutral/700 */
+  --icon-disabledButton-tertiary:                 #ADB2B7;  /* neutral/400 — Subdue Disabled icon (design.md §7f row 3090/3094) */
+  --icon-disabledButton-on-disabled:              #FFFFFF;
+  --text-disabledButton-tertiary:                 #ADB2B7;  /* text.disabledButton.tertiary — matches icon-disabledButton-tertiary (design.md §5.2a / §7f) */
+  --text-disabledbutton-tertiary:                 var(--text-disabledButton-tertiary); /* legacy lowercase alias */
+
+  /* Brand Primary Button drop shadow — primaryshadow/600 + /601 (Figma effect). */
+  --shadow-brandPrimaryButton-default:
+    0 1px 2px var(--PrimaryShadow-600),
+    0 1px 3px var(--PrimaryShadow-601);
+
+  /* — Backward-compat aliases (lowercase, for legacy components) — */
+  --surface-brandprimary-default:    var(--surface-brandPrimary-default);
+  --surface-brandprimary-secondary:  var(--brand-p600);
+  --surface-brandprimary-tertiary:   var(--surface-brandPrimary-tertiary);
+  --surface-brandprimary-quaternary: var(--surface-brandPrimary-quaternary);
+  --surface-brandprimary-quinary:    var(--brand-p100);
+  --background-screen-brand-100:     var(--brand-p50);
+
+  /* — Popup quick-options sidebar — Figma MIH DS Popup node 74:7041
+     Both surface + border are brand-aware (resolved via brand primitives)
+     so the panel retints automatically across brand/mode switches.       */
+  --surface-popup-quickoptions:      var(--background-screen-brand-100);
+  --border-popup-quickoptions:       var(--border-brandPrimary-quaternary);
+
+  /* — Popup quick-options list item · hover — Figma MIH DS Popup
+     node 111:5394 specifies a stronger hover than the generic list hover:
+       surface/brandPrimary/quaternary-hover  = brand-p100  (#E2F3EB)
+       text/list/hover                        = brand-p700  (#007549)
+     Aliased separately from --surface-list-hover (= brand-p50) so other
+     list components keep their existing softer hover. Mode-independent
+     because both resolve through brand primitives. */
+  --surface-brandPrimary-quaternary-hover: var(--brand-p100);
+  --surface-popup-listitem-hover:    var(--surface-brandPrimary-quaternary-hover);
+  --text-popup-listitem-hover:       var(--text-list-hover);
+  --text-brandprimarybutton-default:   var(--text-brandPrimary-default);
+  --text-brandprimarybutton-secondary: var(--text-brandPrimary-secondary);
+  --text-brandprimarybutton-on-brand:  var(--text-brandPrimary-on-brand);
+  --border-brandprimary-default:     var(--border-brandPrimary-default);
+  --border-brandprimary-tertiary:    var(--border-brandPrimary-tertiary);
+  --border-brandprimary-quaternary:  var(--border-brandPrimary-quaternary);
+  --icon-brandprimary-quaternary:    var(--icon-brandPrimary-quaternary);
+  --icon-brandprimary-secondary:     var(--icon-brandPrimary-secondary);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Dark-mode token overrides (Figma Variables panel — dark column).
+   Triggered by either the OS-level preference or an explicit
+   `data-theme="dark"` attribute on `<html>` so consumers can pin the
+   theme manually when needed. Today only the aiSearch tokens publish
+   dark-mode values; broader dark-mode coverage will follow as more
+   Figma variables ship.
+   ───────────────────────────────────────────────────────────── */
+:root[data-theme="dark"],
+:root[data-theme="dark"] [data-brand] {
+  --border-aiSearch-default: var(--color-indigo-500); /* same alias as light — no swap */
+  --border-aiSearch-hover:   var(--color-indigo-300);
+  --border-aiSearch-typing:  var(--color-indigo-300);
+  --border-aiSearch-filled:  var(--color-indigo-400);
+  --icon-aiSearch-default:   var(--color-indigo-400);
+  --icon-aiSearch-hover:     var(--color-indigo-300);
+  --icon-aiSearch-typing:    var(--color-indigo-300);
+  --icon-aiSearch-filled:    var(--color-indigo-400);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --border-aiSearch-default: var(--color-indigo-500); /* same alias as light — no swap */
+    --border-aiSearch-hover:   var(--color-indigo-300);
+    --border-aiSearch-typing:  var(--color-indigo-300);
+    --border-aiSearch-filled:  var(--color-indigo-400);
+    --icon-aiSearch-default:   var(--color-indigo-400);
+    --icon-aiSearch-hover:     var(--color-indigo-300);
+    --icon-aiSearch-typing:    var(--color-indigo-300);
+    --icon-aiSearch-filled:    var(--color-indigo-400);
+
+    /* Timeslot Selected — dark mode swaps the brand-p600 alias for
+       brand-p400 so the outline + label stay visible against a deeper
+       surface backdrop. Border tracks the text colour for consistency. */
+    --text-timeslot-selected:   var(--brand-p400);
+    --border-timeslot-selected: var(--brand-p400);
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   PLATFORM TOKENS · MOBILE APP (see design.md §7)
+   These are component-level overrides for the /m/* and /kiosk/*
+   surfaces only. They do NOT shadow primitive tokens — color,
+   typography family, and icon size still come from the shared
+   layer. Only shape, height, and density differ.
+
+   ❗ Web components MUST NOT consume `--mobile-*`. If a value
+   makes sense on both platforms, it belongs in `--dim-*` /
+   `--type-*` instead.
+   ───────────────────────────────────────────────────────────── */
+:root {
+  /* Button — pill · Figma App Brand Button 231:29
+     Small 40 / Medium 48 / Large 56 · padding-x 24 · graphic2 regular */
+  --mobile-button-radius:        var(--dim-radius-full, 9999px);
+  --mobile-button-height-sm:     40px; /* dimension/size/800 */
+  --mobile-button-height-md:     48px; /* dimension/size/1000 */
+  --mobile-button-height-lg:     56px; /* dimension/size/1200 */
+  --mobile-button-padding-x:     var(--dim-space-600, 24px);
+  --mobile-button-gap:           var(--dim-space-200, 8px);
+  --mobile-button-gap-sm:        var(--dim-space-150, 6px);
+  --mobile-button-type-size:     var(--type-size-base, 16px);
+  --mobile-button-type-size-lg:  var(--type-size-lg, 18px);
+  --mobile-button-type-weight:   var(--type-weight-regular, 400);
+  /* Brand Drop Shadow Bottom/300 — Fill default (Figma Brand Button) */
+  --mobile-button-shadow-fill:
+    0 var(--dim-space-100, 4px) var(--dim-space-100, 4px) -1px var(--PrimaryShadow-600),
+    0 var(--dim-space-100, 4px) var(--dim-space-100, 4px) -1px var(--PrimaryShadow-601);
+
+  /* Input — 16px font keeps iOS Safari from auto-zooming on focus */
+  --mobile-input-radius:         var(--dim-radius-400, 12px);
+  --mobile-input-height:         48px;
+  --mobile-input-padding-x:      var(--dim-space-400, 16px);
+  --mobile-input-type-size:      var(--type-size-base, 16px);
+
+  /* Card — chunkier radius than web to read as a tap target */
+  --mobile-card-radius:          var(--dim-radius-500, 16px);
+  --mobile-card-padding:         var(--dim-space-400, 16px);
+
+  /* Badge — always pill, sized small for 390-wide layouts */
+  --mobile-badge-radius:         var(--dim-radius-full, 9999px);
+  --mobile-badge-padding-x:      var(--dim-space-200, 8px);
+  --mobile-badge-padding-y:      2px;
+  --mobile-badge-type-size:      var(--type-size-xs, 12px);
+
+  /* Shell — header / status bar / bottom-nav heights */
+  --mobile-header-height:        56px;
+  --mobile-status-bar-height:    44px;
+  --mobile-bottom-nav-height:    80px;
+
+  /* Web form sticky action-bar height (Footer.jsx: lg button 44px +
+     2× --dim-space-400 padding + 1px border). Used to offset floating
+     CTAs so they clear the bar. */
+  --form-action-bar-height:      77px;
+
+  /* Touch target floor (iOS HIG / Material 3 minimum) */
+  --mobile-touch-target-min:     44px;
+
+  /* KeypadButton Pressed fill — Archive 314:43835 · white @ 20% over teal PIN bg */
+  --mobile-surface-keypadButton-pressed: color-mix(
+    in srgb,
+    var(--text-content-on-content, #FFFFFF) 20%,
+    transparent
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MOBILE SEMANTIC COLOR TOKENS — LIGHT (default)
+   Source: Figma file opz7X9AAKGQf5prHhsPDGn, light.tokens.json.
+   Mobile color tokens are NAMESPACED separately from desktop
+   (`--surface-*`, `--text-*`, etc.) so the two systems can drift
+   without affecting each other. See design.md §7.2.
+
+   Coverage: button family (5 tones × surface/text/border/icon ×
+   state variants). Other mobile components (Card / Input / Badge
+   / Header) still alias the shared `--surface-*` tokens — they'll
+   migrate to `--mobile-*` in a follow-up.
+   ───────────────────────────────────────────────────────────── */
+:root {
+  /* ── surface.* (button fill backgrounds) ────────────────────── */
+  /* brandPrimaryButton — Figma App Brand Button 377:12081 / 231:29
+     Fill Default = surface/brandPrimaryButton/default → brand/p700 #007549
+     Fill Hover   = surface/brandPrimaryButton/default-hover → brand/p800 #004C31 */
+  --mobile-surface-brandPrimaryButton-default:        var(--brand-p700);
+  --mobile-surface-brandPrimaryButton-default-hover:  var(--brand-p800);
+  --mobile-surface-brandPrimaryButton-secondary:      var(--brand-p200);
+  --mobile-surface-brandPrimaryButton-secondary-hover:var(--brand-p300);
+  --mobile-surface-brandPrimaryButton-tertiary:       var(--brand-p100);
+  --mobile-surface-brandPrimaryButton-tertiary-hover: var(--brand-p200);
+  --mobile-surface-brandPrimaryButton-quaternary:     var(--brand-p50);
+  --mobile-surface-brandPrimaryButton-quaternary-hover:var(--brand-p100);
+  --mobile-surface-brandPrimaryButton-quinary:        #FFFFFF;
+  --mobile-surface-brandPrimaryButton-quinary-hover:  var(--brand-p50);
+
+  /* brandSecondaryButton */
+  --mobile-surface-brandSecondaryButton-default:       #427C3D;
+  --mobile-surface-brandSecondaryButton-default-hover: #366233;
+  --mobile-surface-brandSecondaryButton-secondary:     #E1F0E0;
+  --mobile-surface-brandSecondaryButton-secondary-hover:#A7D2A3;
+  --mobile-surface-brandSecondaryButton-tertiary:      #EFF5EF;
+  --mobile-surface-brandSecondaryButton-tertiary-hover:#E1F0E0;
+  --mobile-surface-brandSecondaryButton-quaternary:    #FAFCFA;
+  --mobile-surface-brandSecondaryButton-quaternary-hover:#EFF5EF;
+  --mobile-surface-brandSecondaryButton-quinary:       #FFFFFF;
+  --mobile-surface-brandSecondaryButton-quinary-hover: #FAFCFA;
+
+  /* dangerButton */
+  --mobile-surface-dangerButton-default:        #B91C1C;
+  --mobile-surface-dangerButton-default-hover:  #991B1B;
+  --mobile-surface-dangerButton-secondary:      #FECACA;
+  --mobile-surface-dangerButton-secondary-hover:#FCA5A5;
+  --mobile-surface-dangerButton-tertiary:       #FEE2E2;
+  --mobile-surface-dangerButton-tertiary-hover: #FECACA;
+  --mobile-surface-dangerButton-quaternary:     #FFF0F0;
+  --mobile-surface-dangerButton-quaternary-hover:#FEE2E2;
+  --mobile-surface-dangerButton-quinary:        #FFFFFF;
+  --mobile-surface-dangerButton-quinary-hover:  #FFF0F0;
+
+  /* neutralButton */
+  --mobile-surface-neutralButton-default:        #4D5358;
+  --mobile-surface-neutralButton-default-hover:  #363B3F;
+  --mobile-surface-neutralButton-secondary:      #E2E4E6;
+  --mobile-surface-neutralButton-secondary-hover:#C9CDD0;
+  --mobile-surface-neutralButton-tertiary:       #F4F5F5;
+  --mobile-surface-neutralButton-tertiary-hover: #E2E4E6;
+  --mobile-surface-neutralButton-quaternary:     #F9FBFB;
+  --mobile-surface-neutralButton-quaternary-hover:#F4F5F5;
+  --mobile-surface-neutralButton-quinary:        #FFFFFF;
+  --mobile-surface-neutralButton-quinary-hover:  #F9FBFB;
+
+  /* disabledButton */
+  --mobile-surface-disabledButton-default:        #4D5358;
+  --mobile-surface-disabledButton-default-hover:  #363B3F;
+  --mobile-surface-disabledButton-secondary:      #E2E4E6;
+  --mobile-surface-disabledButton-secondary-hover:#C9CDD0;
+  --mobile-surface-disabledButton-tertiary:       #F4F5F5;
+  --mobile-surface-disabledButton-tertiary-hover: #E2E4E6;
+  --mobile-surface-disabledButton-quaternary:     #F9FBFB;
+  --mobile-surface-disabledButton-quaternary-hover:#F4F5F5;
+
+  /* ── text.* (button labels) ─────────────────────────────────── */
+  --mobile-text-brandPrimaryButton-default:    var(--brand-p700);
+  --mobile-text-brandPrimaryButton-secondary:  var(--brand-p500);
+  --mobile-text-brandPrimaryButton-tertiary:   var(--brand-p400);
+  --mobile-text-brandPrimaryButton-quaternary: var(--brand-p300);
+  --mobile-text-brandPrimaryButton-on-brand:   #FFFFFF;
+
+  --mobile-text-brandSecondaryButton-default:   #366233;
+  --mobile-text-brandSecondaryButton-secondary: #427C3D;
+  --mobile-text-brandSecondaryButton-tertiary:  #78B573;
+  --mobile-text-brandSecondaryButton-quaternary:#A7D2A3;
+  --mobile-text-brandSecondaryButton-on-default:#FFFFFF;
+
+  --mobile-text-dangerButton-default:    #B91C1C;
+  --mobile-text-dangerButton-secondary:  #DC2626;
+  --mobile-text-dangerButton-tertiary:   #F87171;
+  --mobile-text-dangerButton-quaternary: #FCA5A5;
+  --mobile-text-dangerButton-on-default: #FFFFFF;
+
+  --mobile-text-neutralButton-default:    #4D5358;
+  --mobile-text-neutralButton-secondary:  #636B72;
+  --mobile-text-neutralButton-tertiary:   #ADB2B7;
+  --mobile-text-neutralButton-quaternary: #C9CDD0;
+  --mobile-text-neutralButton-on-neutral: #FFFFFF;
+
+  --mobile-text-disabledButton-default:    #4D5358;
+  --mobile-text-disabledButton-secondary:  #636B72;
+  --mobile-text-disabledButton-tertiary:   #ADB2B7;
+  --mobile-text-disabledButton-quaternary: #C9CDD0;
+  --mobile-text-disabledButton-on-disabled:#FFFFFF;
+
+  /* ── border.* (button borders / outline) ────────────────────── */
+  --mobile-border-brandPrimaryButton-default:        var(--brand-p700);
+  --mobile-border-brandPrimaryButton-default-hover:  var(--brand-p800);
+  --mobile-border-brandPrimaryButton-secondary:      #6AD6A5;
+  --mobile-border-brandPrimaryButton-secondary-hover:#54CF97;
+  --mobile-border-brandPrimaryButton-tertiary:       #C5EDDA;
+  --mobile-border-brandPrimaryButton-tertiary-hover: #91DFBB;
+  --mobile-border-brandPrimaryButton-quaternary:     #E2F3EB;
+  --mobile-border-brandPrimaryButton-quaternary-hover:#C5EDDA;
+
+  --mobile-border-brandSecondaryButton-default:        #427C3D;
+  --mobile-border-brandSecondaryButton-default-hover:  #366233;
+  --mobile-border-brandSecondaryButton-secondary:      #78B573;
+  --mobile-border-brandSecondaryButton-secondary-hover:#53954E;
+  --mobile-border-brandSecondaryButton-tertiary:       #E1F0E0;
+  --mobile-border-brandSecondaryButton-tertiary-hover: #A7D2A3;
+  --mobile-border-brandSecondaryButton-quaternary:     #EFF5EF;
+  --mobile-border-brandSecondaryButton-quaternary-hover:#E1F0E0;
+
+  --mobile-border-dangerButton-default:        #DC2626;
+  --mobile-border-dangerButton-default-hover:  #B91C1C;
+  --mobile-border-dangerButton-secondary:      #F87171;
+  --mobile-border-dangerButton-secondary-hover:#EF4444;
+  --mobile-border-dangerButton-tertiary:       #FECACA;
+  --mobile-border-dangerButton-tertiary-hover: #FCA5A5;
+  --mobile-border-dangerButton-quaternary:     #FEE2E2;
+  --mobile-border-dangerButton-quaternary-hover:#FECACA;
+
+  --mobile-border-neutralButton-default:        #636B72;
+  --mobile-border-neutralButton-default-hover:  #4D5358;
+  --mobile-border-neutralButton-secondary:      #ADB2B7;
+  --mobile-border-neutralButton-secondary-hover:#858C92;
+  --mobile-border-neutralButton-tertiary:       #E2E4E6;
+  --mobile-border-neutralButton-tertiary-hover: #C9CDD0;
+  --mobile-border-neutralButton-quaternary:     #F4F5F5;
+  --mobile-border-neutralButton-quaternary-hover:#E2E4E6;
+
+  --mobile-border-disabledButton-default:    #636B72;
+  --mobile-border-disabledButton-secondary:  #ADB2B7;
+  --mobile-border-disabledButton-tertiary:   #E2E4E6;
+  --mobile-border-disabledButton-quaternary: #F4F5F5;
+
+  /* ── icon.* (icon-button fills) ─────────────────────────────── */
+  --mobile-icon-brandPrimaryButton-default:    var(--brand-p700);
+  --mobile-icon-brandPrimaryButton-secondary:  var(--brand-p500);
+  --mobile-icon-brandPrimaryButton-tertiary:   var(--brand-p400);
+  --mobile-icon-brandPrimaryButton-quaternary: var(--brand-p300);
+  --mobile-icon-brandPrimaryButton-on-brand:   #FFFFFF;
+
+  --mobile-icon-brandSecondaryButton-default:    #366233;
+  --mobile-icon-brandSecondaryButton-secondary:  #427C3D;
+  --mobile-icon-brandSecondaryButton-tertiary:   #78B573;
+  --mobile-icon-brandSecondaryButton-quaternary: #A7D2A3;
+  --mobile-icon-brandSecondaryButton-on-default: #FFFFFF;
+
+  --mobile-icon-dangerButton-default:    #B91C1C;
+  --mobile-icon-dangerButton-secondary:  #DC2626;
+  --mobile-icon-dangerButton-tertiary:   #F87171;
+  --mobile-icon-dangerButton-quaternary: #FCA5A5;
+  --mobile-icon-dangerButton-on-default: #FFFFFF;
+
+  --mobile-icon-neutralButton-default:    #4D5358;
+  --mobile-icon-neutralButton-secondary:  #636B72;
+  --mobile-icon-neutralButton-tertiary:   #ADB2B7;
+  --mobile-icon-neutralButton-quaternary: #C9CDD0;
+  --mobile-icon-neutralButton-on-neutral: #FFFFFF;
+
+  --mobile-icon-disabledButton-default:    #4D5358;
+  --mobile-icon-disabledButton-secondary:  #636B72;
+  --mobile-icon-disabledButton-tertiary:   #ADB2B7;
+  --mobile-icon-disabledButton-quaternary: #C9CDD0;
+  --mobile-icon-disabledButton-on-disabled:#FFFFFF;
+
+  /* ── Focus ring stroke (shared by all button states) ────────── */
+  --mobile-focus-ring-width:  4px;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MOBILE SEMANTIC COLOR TOKENS — DARK overrides
+   Applied via [data-mobile-theme="dark"] on any container — the
+   MobileShell sets this attribute when dark mode is active.
+   Source: dark.tokens.json (same Figma file).
+   ───────────────────────────────────────────────────────────── */
+[data-mobile-theme="dark"] {
+  /* surface */
+  --surface-card-skycyan-100: var(--sky-cyan-950);
+  --labels-primary: #FFFFFF;
+  --mobile-surface-brandPrimaryButton-default:        #91DFBB;
+  --mobile-surface-brandPrimaryButton-default-hover:  #C5EDDA;
+  --mobile-surface-brandPrimaryButton-secondary:      #004C31;
+  --mobile-surface-brandPrimaryButton-secondary-hover:#007549;
+  --mobile-surface-brandPrimaryButton-tertiary:       #003322;
+  --mobile-surface-brandPrimaryButton-tertiary-hover: #004C31;
+  --mobile-surface-brandPrimaryButton-quaternary:     #002318;
+  --mobile-surface-brandPrimaryButton-quaternary-hover:#003322;
+  --mobile-surface-brandPrimaryButton-quinary:        #020617;
+  --mobile-surface-brandPrimaryButton-quinary-hover:  #002318;
+
+  --mobile-surface-brandSecondaryButton-default:       #78B573;
+  --mobile-surface-brandSecondaryButton-default-hover: #A7D2A3;
+  --mobile-surface-brandSecondaryButton-secondary:     #2E4F2C;
+  --mobile-surface-brandSecondaryButton-secondary-hover:#366233;
+  --mobile-surface-brandSecondaryButton-tertiary:      #274126;
+  --mobile-surface-brandSecondaryButton-tertiary-hover:#2E4F2C;
+  --mobile-surface-brandSecondaryButton-quaternary:    #102310;
+  --mobile-surface-brandSecondaryButton-quaternary-hover:#274126;
+  --mobile-surface-brandSecondaryButton-quinary:       #020617;
+  --mobile-surface-brandSecondaryButton-quinary-hover: #102310;
+
+  --mobile-surface-dangerButton-default:        #FCA5A5;
+  --mobile-surface-dangerButton-default-hover:  #FCA5A5;
+  --mobile-surface-dangerButton-secondary:      #DC2626;
+  --mobile-surface-dangerButton-secondary-hover:#EF4444;
+  --mobile-surface-dangerButton-tertiary:       #7F1D1D;
+  --mobile-surface-dangerButton-tertiary-hover: #991B1B;
+  --mobile-surface-dangerButton-quaternary:     #450A0A;
+  --mobile-surface-dangerButton-quaternary-hover:#7F1D1D;
+  --mobile-surface-dangerButton-quinary:        #DADADA;
+  --mobile-surface-dangerButton-quinary-hover:  #450A0A;
+
+  --mobile-surface-neutralButton-default:        #C9CDD0;
+  --mobile-surface-neutralButton-default-hover:  #E2E4E6;
+  --mobile-surface-neutralButton-secondary:      #363B3F;
+  --mobile-surface-neutralButton-secondary-hover:#4D5358;
+  --mobile-surface-neutralButton-tertiary:       #222629;
+  --mobile-surface-neutralButton-tertiary-hover: #363B3F;
+  --mobile-surface-neutralButton-quaternary:     #111314;
+  --mobile-surface-neutralButton-quaternary-hover:#222629;
+  --mobile-surface-neutralButton-quinary:        #111314;
+  --mobile-surface-neutralButton-quinary-hover:  #111314;
+
+  --mobile-surface-disabledButton-default:        #C9CDD0;
+  --mobile-surface-disabledButton-default-hover:  #E2E4E6;
+  --mobile-surface-disabledButton-secondary:      #363B3F;
+  --mobile-surface-disabledButton-secondary-hover:#4D5358;
+  --mobile-surface-disabledButton-tertiary:       #363B3F;
+  --mobile-surface-disabledButton-tertiary-hover: #4D5358;
+  --mobile-surface-disabledButton-quaternary:     #111314;
+  --mobile-surface-disabledButton-quaternary-hover:#222629;
+
+  /* text */
+  --mobile-text-brandPrimaryButton-default:    #91DFBB;
+  --mobile-text-brandPrimaryButton-secondary:  #6AD6A5;
+  --mobile-text-brandPrimaryButton-tertiary:   #54CF97;
+  --mobile-text-brandPrimaryButton-quaternary: #007549;
+  --mobile-text-brandPrimaryButton-on-brand:   #002318;
+
+  --mobile-text-brandSecondaryButton-default:   #A7D2A3;
+  --mobile-text-brandSecondaryButton-secondary: #78B573;
+  --mobile-text-brandSecondaryButton-tertiary:  #427C3D;
+  --mobile-text-brandSecondaryButton-quaternary:#366233;
+  --mobile-text-brandSecondaryButton-on-default:#102310;
+
+  --mobile-text-dangerButton-default:    #FCA5A5;
+  --mobile-text-dangerButton-secondary:  #F87171;
+  --mobile-text-dangerButton-tertiary:   #DC2626;
+  --mobile-text-dangerButton-quaternary: #B91C1C;
+  --mobile-text-dangerButton-on-default: #020617;
+
+  --mobile-text-neutralButton-default:    #C9CDD0;
+  --mobile-text-neutralButton-secondary:  #ADB2B7;
+  --mobile-text-neutralButton-tertiary:   #636B72;
+  --mobile-text-neutralButton-quaternary: #4D5358;
+  --mobile-text-neutralButton-on-neutral: #111314;
+
+  --mobile-text-disabledButton-default:    #C9CDD0;
+  --mobile-text-disabledButton-secondary:  #ADB2B7;
+  --mobile-text-disabledButton-tertiary:   #636B72;
+  --mobile-text-disabledButton-quaternary: #4D5358;
+  --mobile-text-disabledButton-on-disabled:#111314;
+
+  /* border */
+  --mobile-border-brandPrimaryButton-default:        #91DFBB;
+  --mobile-border-brandPrimaryButton-default-hover:  #C5EDDA;
+  --mobile-border-brandPrimaryButton-secondary:      #08A768;
+  --mobile-border-brandPrimaryButton-secondary-hover:#54CF97;
+  --mobile-border-brandPrimaryButton-tertiary:       #004C31;
+  --mobile-border-brandPrimaryButton-tertiary-hover: #007549;
+  --mobile-border-brandPrimaryButton-quaternary:     #003322;
+  --mobile-border-brandPrimaryButton-quaternary-hover:#004C31;
+
+  --mobile-border-brandSecondaryButton-default:        #78B573;
+  --mobile-border-brandSecondaryButton-default-hover:  #A7D2A3;
+  --mobile-border-brandSecondaryButton-secondary:      #427C3D;
+  --mobile-border-brandSecondaryButton-secondary-hover:#53954E;
+  --mobile-border-brandSecondaryButton-tertiary:       #2E4F2C;
+  --mobile-border-brandSecondaryButton-tertiary-hover: #366233;
+  --mobile-border-brandSecondaryButton-quaternary:     #274126;
+  --mobile-border-brandSecondaryButton-quaternary-hover:#2E4F2C;
+
+  --mobile-border-dangerButton-default:        #F87171;
+  --mobile-border-dangerButton-default-hover:  #FCA5A5;
+  --mobile-border-dangerButton-secondary:      #DC2626;
+  --mobile-border-dangerButton-secondary-hover:#EF4444;
+  --mobile-border-dangerButton-tertiary:       #991B1B;
+  --mobile-border-dangerButton-tertiary-hover: #B91C1C;
+  --mobile-border-dangerButton-quaternary:     #7F1D1D;
+  --mobile-border-dangerButton-quaternary-hover:#991B1B;
+
+  --mobile-border-neutralButton-default:        #ADB2B7;
+  --mobile-border-neutralButton-default-hover:  #C9CDD0;
+  --mobile-border-neutralButton-secondary:      #636B72;
+  --mobile-border-neutralButton-secondary-hover:#858C92;
+  --mobile-border-neutralButton-tertiary:       #363B3F;
+  --mobile-border-neutralButton-tertiary-hover: #4D5358;
+  --mobile-border-neutralButton-quaternary:     #222629;
+  --mobile-border-neutralButton-quaternary-hover:#363B3F;
+
+  --mobile-border-disabledButton-default:    #ADB2B7;
+  --mobile-border-disabledButton-secondary:  #636B72;
+  --mobile-border-disabledButton-tertiary:   #363B3F;
+  --mobile-border-disabledButton-quaternary: #222629;
+
+  /* icon */
+  --mobile-icon-brandPrimaryButton-default:    #91DFBB;
+  --mobile-icon-brandPrimaryButton-secondary:  #6AD6A5;
+  --mobile-icon-brandPrimaryButton-tertiary:   #54CF97;
+  --mobile-icon-brandPrimaryButton-quaternary: #007549;
+  --mobile-icon-brandPrimaryButton-on-brand:   #002318;
+
+  --mobile-icon-brandSecondaryButton-default:    #A7D2A3;
+  --mobile-icon-brandSecondaryButton-secondary:  #78B573;
+  --mobile-icon-brandSecondaryButton-tertiary:   #427C3D;
+  --mobile-icon-brandSecondaryButton-quaternary: #366233;
+  --mobile-icon-brandSecondaryButton-on-default: #FFFFFF;
+
+  --mobile-icon-dangerButton-default:    #FCA5A5;
+  --mobile-icon-dangerButton-secondary:  #F87171;
+  --mobile-icon-dangerButton-tertiary:   #DC2626;
+  --mobile-icon-dangerButton-quaternary: #B91C1C;
+  --mobile-icon-dangerButton-on-default: #020617;
+
+  --mobile-icon-neutralButton-default:    #C9CDD0;
+  --mobile-icon-neutralButton-secondary:  #ADB2B7;
+  --mobile-icon-neutralButton-tertiary:   #636B72;
+  --mobile-icon-neutralButton-quaternary: #4D5358;
+  --mobile-icon-neutralButton-on-neutral: #111314;
+
+  --mobile-icon-disabledButton-default:    #C9CDD0;
+  --mobile-icon-disabledButton-secondary:  #ADB2B7;
+  --mobile-icon-disabledButton-tertiary:   #636B72;
+  --mobile-icon-disabledButton-quaternary: #4D5358;
+  --mobile-icon-disabledButton-on-disabled:#111314;
+
+  /* ── Shared semantic tokens remapped for mobile only ──────────
+     These mirror the PHCIS [data-mode="dark"] ramp but stay scoped
+     to the phone frame. Changing mobile theme must NOT set
+     <html data-mode> (PHCIS web keeps its own appearance).
+     Ramp = design.md neutral steps (same as --d-* in data-mode). */
+  --d-bg:        #111314;   /* neutral/950 */
+  --d-surface-1: #222629;   /* neutral/900 */
+  --d-surface-2: #363B3F;   /* neutral/800 */
+  --d-border-1:  #363B3F;
+  --d-border-2:  #4D5358;   /* neutral/700 */
+  --d-text-1:    #F4F5F5;   /* neutral/100 */
+  --d-text-2:    #ADB2B7;   /* neutral/400 */
+  --d-text-3:    #858C92;   /* neutral/500 */
+
+  --background-screen-brand-100: var(--d-bg);
+  --background-bg-teal-400:      var(--color-bg-teal-600);
+  --background-bg-blue-400:      var(--color-bg-sky-cyan-600);
+  --surface-card-100:            var(--d-surface-1);
+  --surface-card-200:            var(--d-surface-2);
+  --surface-content-default:     var(--d-surface-1);
+  --surface-content-secondary:   var(--d-bg);
+  --surface-navigation-default:  var(--d-surface-1);
+  --surface-input-default:       var(--d-surface-2);
+  --surface-list-default:        var(--d-surface-2);
+  --surface-brandPrimary-quaternary: var(--brand-p950);
+  --surface-brandPrimary-tertiary:   var(--brand-p900);
+
+  --text-content-default:        var(--d-text-1);
+  --text-content-secondary:      var(--d-text-2);
+  --text-content-tertiary:       var(--d-text-3);
+  --text-content-primary:        var(--d-text-1);
+  --text-brandPrimary-default:   var(--brand-p400);
+  --text-list-default:           var(--d-text-1);
+  --text-neutral-on-neutral:     #FFFFFF;
+
+  --border-content-tertiary:           var(--d-border-2);
+  --border-neutral-quaternary:         var(--d-border-1);
+  --border-brandPrimary-quaternary:    var(--brand-p800);
+  --border-brandPrimary-tertiary:      var(--brand-p700);
+  --border-input-default:              var(--d-border-2);
+}
+
+/* ───────────────────────────────────────────────────────────────
+   Dark mode — active when Settings → Mode = Dark (or System resolves
+   to dark). <html data-mode="dark"> is set by SidebarProfileMenu.
+   Overrides the neutral surface / text / border / icon families with
+   a cool-dark ramp and remaps brand tints to deep-green via the
+   active brand's --brand-p* scale, so every [data-brand] theme stays
+   on-brand in dark. Appended last so it wins the token cascade.
+   ─────────────────────────────────────────────────────────────── */
+
+/* ───────────────────────────────────────────────────────────────
+   Dark mode — แรมป์สีเทาที่ทุก override ด้านล่างอ้างถึง
+   ───────────────────────────────────────────────────────────────
+   ⚠️ ต้องนิยามใน `[data-mode="dark"]` เท่านั้น — เคยมีบั๊กที่ตัวแปรชุดนี้
+   ถูกนิยามไว้ใต้ `[data-mobile-theme="dark"]` อย่างเดียว (สโคปกรอบมือถือ)
+   ทำให้ override ที่อ้าง var(--d-*) กว่า 140 จุดคำนวณค่าไม่ได้ แล้ว
+   fallback กลับไปใช้ค่าสว่าง → เปิด dark mode แล้วสีไม่เปลี่ยนเลยทั้งเว็บ
+
+   ค่าทั้งหมดคือ step ของ palette `neutral` ใน design.md §1a
+   ─────────────────────────────────────────────────────────────── */
+
+[data-mode="dark"] {
+  --d-bg:        #111314;  /* neutral/950 — พื้นจอ */
+  --d-surface-1: #222629;  /* neutral/900 — การ์ด / แถบนำทาง */
+  --d-surface-2: #363B3F;  /* neutral/800 — ช่องกรอก / modal */
+  --d-surface-3: #4D5358;  /* neutral/700 — พื้นที่ยกระดับ / active */
+  --d-hover:     #363B3F;  /* neutral/800 — hover ของแถว/รายการ */
+  --d-border-1:  #363B3F;  /* neutral/800 — เส้นคั่นบาง / gridline */
+  --d-border-2:  #4D5358;  /* neutral/700 — ขอบช่องกรอก */
+  --d-text-1:    #F4F5F5;  /* neutral/100 — ตัวอักษรหลัก */
+  --d-text-2:    #ADB2B7;  /* neutral/400 — ตัวอักษรรอง */
+  --d-text-3:    #858C92;  /* neutral/500 — ตัวอักษรลำดับสาม / placeholder */
+  --d-icon:      #C9CDD0;  /* neutral/300 — ไอคอนปกติ */
+
+  color-scheme: dark;
+  background-color: var(--d-bg);
+}
+
+/* ───────────────────────────────────────────────────────────────
+   Dark mode — สลับ token ตาม design.md (generate 10 ส.ค. 2569)
+   ───────────────────────────────────────────────────────────────
+   กติกา: dark = สลับ step ของ palette กลับด้าน — 50↔950 · 100↔900 ·
+   200↔800 · 300↔700 · 400↔600 ส่วน 500 อยู่กลางจึงคงเดิม
+   (เช่น neutral/100 #F4F5F5 → neutral/900 #222629,
+    red/100 #FEE2E2 → red/900 #7F1D1D, blue/200 #BFDBFE → blue/800 #1E40AF)
+
+   ที่มาของค่าแต่ละตัว เรียงตามลำดับความน่าเชื่อถือ:
+     1. ตารางความหมายใน design.md ที่มีคอลัมน์ dark อยู่แล้ว (ชื่อ token ตรงกัน)
+     2. ตารางเดียวกันแต่จับคู่จากค่า light ที่ตรงกัน
+     3. สลับ step จาก palette ใน design.md §1a โดยตรง
+     4. พื้นขาว/เทาโครงสร้าง (#FFFFFF, #F9FBFB, #F5F7F9) → แรมป์ --d-surface-*
+   ไม่มีสีไหนถูกกะเอง ทุกค่ามาจาก design.md
+
+   ครอบเฉพาะ 5 ตระกูลสีของเว็บ: background · surface · border · text · icon
+   ไม่แตะ --mobile-* (สโคปกรอบมือถือ ห้ามผูกกับ html data-mode),
+   --brand-p* / --color-* (primitive) และ --d-* (แรมป์เอง)
+
+   ⚠️ ไฟล์นี้เป็น mirror ที่ generate จาก @mih/design-tokens —
+      ต้องยกบล็อกนี้ขึ้น mih-design ไม่งั้น `npm run tokens:pull` ครั้งหน้าจะลบทิ้ง
+   ─────────────────────────────────────────────────────────────── */
+
+[data-mode="dark"] {
+  /* — พื้นหลัง (3) — */
+  --background-danger-tertiary-hover:     #991B1B;
+  --background-info-tertiary-hover:       #1E40AF;
+  --background-warning-tertiary-hover:    #9A3412;
+
+  /* — พื้นผิว (135) — */
+  --surface-alert-error:                       #450A0A;
+  --surface-alert-info:                        #172554;
+  --surface-alert-success:                     #082B2A;
+  --surface-alert-warning:                     #431407;
+  --surface-brandPrimaryButton-quinary:        var(--d-surface-1);
+  --surface-brandtag-default:                  var(--d-surface-1);
+  --surface-calendar-default:                  var(--d-surface-1);
+  --surface-calendar-disabled:                 var(--d-surface-1);
+  --surface-calendar-slot-cta-default:         var(--d-surface-1);
+  --surface-calendar-slot-cta-disabled:        var(--d-surface-1);
+  --surface-calendar-slot-date-default:        var(--d-surface-1);
+  --surface-calendar-slot-date-disabled:       var(--d-surface-1);
+  --surface-calendar-slot-slot-default:        var(--d-surface-1);
+  --surface-calendar-slot-slot-disabled:       var(--d-surface-1);
+  --surface-card-100:                          var(--d-surface-1);
+  --surface-card-200:                          #363B3F;
+  --surface-card-indigo-100:                   #1E1B4B;
+  --surface-card-sakura-200:                   #A35C7C;
+  --surface-colorfulBadge-blue:                #1E3A8A;
+  --surface-colorfulbadge-blue:                #1E3A8A;
+  --surface-colorfulbadge-grey:                var(--d-surface-2);
+  --surface-colorfulbadge-indigo:              #3730A3;
+  --surface-colorfulbadge-orange:              #7C2D12;
+  --surface-colorfulbadge-pink:                #831843;
+  --surface-colorfulbadge-purple:              #581C87;
+  --surface-colorfulbadge-red:                 #7F1D1D;
+  --surface-colorfulbadge-teal:                #194845;
+  --surface-colorfulbadge-yellow:              #713F12;
+  --surface-danger-tertiary:                   #7F1D1D;
+  --surface-dangerButton-default:              #FCA5A5;
+  --surface-dangerButton-default-hover:        #FECACA;
+  --surface-dangerButton-quaternary:           #450A0A;
+  --surface-dangerButton-quaternary-hover:     #7F1D1D;
+  --surface-dangerButton-quinary:              var(--d-surface-1);
+  --surface-dangerButton-quinary-hover:        #450A0A;
+  --surface-dangerButton-secondary:            #991B1B;
+  --surface-dangerButton-secondary-hover:      #B91C1C;
+  --surface-dangerButton-tertiary:             #7F1D1D;
+  --surface-dangerButton-tertiary-hover:       #991B1B;
+  --surface-disabled-secondary-hover:          #4D5358;
+  --surface-disabledButton-default:            #C9CDD0;
+  --surface-disabledButton-quinary:            var(--d-surface-1);
+  --surface-disabledButton-tertiary:           #363B3F;
+  --surface-dropdown-default:                  var(--d-surface-1);
+  --surface-formbuilder-card:                  var(--d-surface-1);
+  --surface-info-tertiary:                     #1E3A8A;
+  --surface-input-default:                     var(--d-surface-1);
+  --surface-input-disabled:                    #363B3F;
+  --surface-list-default:                      var(--d-surface-1);
+  --surface-list-selected:                     var(--d-surface-1);
+  --surface-modal-default:                     var(--d-surface-1);
+  --surface-navigation-default:                var(--d-surface-1);
+  --surface-navy-quaternary:                   #1E1B4B;
+  --surface-neutral-quaternary:                var(--d-surface-1);
+  --surface-neutral-tertiary:                  #222629;
+  --surface-neutralButton-default:             #C9CDD0;
+  --surface-neutralButton-default-hover:       #E2E4E6;
+  --surface-neutralButton-quaternary:          var(--d-surface-1);
+  --surface-neutralButton-quaternary-hover:    #222629;
+  --surface-neutralButton-quinary:             var(--d-surface-1);
+  --surface-neutralButton-quinary-hover:       var(--d-surface-1);
+  --surface-neutralButton-secondary:           #363B3F;
+  --surface-neutralButton-secondary-hover:     #4D5358;
+  --surface-neutralButton-tertiary:            #222629;
+  --surface-neutralButton-tertiary-hover:      #363B3F;
+  --surface-neutralbutton-quaternary:          var(--d-surface-1);
+  --surface-neutralbutton-quaternary-hover:    #222629;
+  --surface-neutralbutton-quinary:             var(--d-surface-1);
+  --surface-neutralbutton-quinary-hover:       var(--d-surface-1);
+  --surface-neutralbutton-secondary:           #363B3F;
+  --surface-neutralbutton-secondary-hover:     #4D5358;
+  --surface-neutraltag-default:                var(--d-surface-1);
+  --surface-neutraltag-hover:                  var(--d-surface-1);
+  --surface-neutraltag-selected:               #222629;
+  --surface-neutraltag-selected-hover:         #363B3F;
+  --surface-notification-default:              #F472B6;
+  --surface-pagination-default:                var(--d-surface-1);
+  --surface-pill-blue:                         #1E3A8A;
+  --surface-pill-orange:                       #7C2D12;
+  --surface-pill-purple:                       #581C87;
+  --surface-pill-red:                          #7F1D1D;
+  --surface-pill-teal:                         #194845;
+  --surface-pill-yellow:                       #713F12;
+  --surface-pink-default:                      #F9A8D4;
+  --surface-pink-default-hover:                #FBCFE8;
+  --surface-pink-quaternary:                   #500724;
+  --surface-positive-default:                  #6CDCCA;
+  --surface-positive-tertiary:                 #194845;
+  --surface-primarysearch-default:             var(--d-surface-1);
+  --surface-quickaction-blue-pressed:          #1E40AF;
+  --surface-quickaction-indigo-pressed:        #4F46E5;
+  --surface-quickaction-orange-pressed:        #9A3412;
+  --surface-quickaction-pink-pressed:          #9D174D;
+  --surface-quickaction-purple-pressed:        #6B21A8;
+  --surface-quickaction-teal-pressed:          #195652;
+  --surface-quickaction-yellow-pressed:        #854D0E;
+  --surface-scrollbar-error-bar:               #7F1D1D;
+  --surface-scrollbar-error-pill:              #B91C1C;
+  --surface-scrollbar-info-bar:                #1E3A8A;
+  --surface-scrollbar-info-pill:               #1D4ED8;
+  --surface-scrollbar-success-bar:             #194845;
+  --surface-scrollbar-success-pill:            #196C65;
+  --surface-scrollbar-warning-bar:             #7C2D12;
+  --surface-scrollbar-warning-pill:            #C2410C;
+  --surface-search-default:                    var(--d-surface-1);
+  --surface-severity-high:                     #7F1D1D;
+  --surface-severity-low:                      #713F12;
+  --surface-severity-medium:                   #7C2D12;
+  --surface-severity-mild:                     #194845;
+  --surface-statusbadge-error:                 #7F1D1D;
+  --surface-statusbadge-info:                  #1E3A8A;
+  --surface-statusbadge-neutral:               var(--d-surface-2);
+  --surface-statusbadge-success:               #194845;
+  --surface-statusbadge-warning:               #7C2D12;
+  --surface-statussummarycard-destructive:     #7F1D1D;
+  --surface-statussummarycard-info:            #1E3A8A;
+  --surface-statussummarycard-inprogress:      #7C2D12;
+  --surface-statussummarycard-positive:        #194845;
+  --surface-steps-success-hover:               #3EC3B2;
+  --surface-switch-default:                    var(--d-surface-1);
+  --surface-switch-hover:                      #1B867D;
+  --surface-switch-icon:                       var(--d-surface-1);
+  --surface-switch-off:                        #4D5358;
+  --surface-switch-on-hover:                   #6CDCCA;
+  --surface-tabcapsule-default:                var(--d-surface-1);
+  --surface-tabcapsule-disabled:               var(--d-surface-1);
+  --surface-tabcapsule-success:                var(--d-surface-1);
+  --surface-table-default:                     var(--d-surface-1);
+  --surface-tabpill-default:                   var(--d-surface-1);
+  --surface-topic-default:                     var(--d-surface-1);
+  --surface-topic-disabled:                    var(--d-surface-1);
+  --surface-triage-level1:                     #7F1D1D;
+  --surface-triage-level2:                     #7C2D12;
+  --surface-triage-level3:                     #713F12;
+  --surface-triage-level5:                     #1E3A8A;
+
+  /* — เส้นขอบ (55) — */
+  --border-alert-error:                      #7F1D1D;
+  --border-alert-info:                       #1E3A8A;
+  --border-alert-success:                    #194845;
+  --border-alert-warning:                    #7C2D12;
+  --border-alertdialog-default:              #363B3F;
+  --border-brandtag-default:                 #363B3F;
+  --border-calendar-slot-slot-disabled:      var(--d-surface-2);
+  --border-card-default:                     #4D5358;
+  --border-card-sakura-100:                  #D687A8;
+  --border-colorfulbadge-brand:              #004C31;
+  --border-colorfulbadge-error:              #991B1B;
+  --border-colorfulbadge-info:               #1E40AF;
+  --border-colorfulbadge-neutral:            #363B3F;
+  --border-colorfulbadge-success:            #195652;
+  --border-colorfulbadge-warning:            #854D0E;
+  --border-colorfulbadge-warning2:           #9A3412;
+  --border-dangerButton-default:             #FCA5A5;
+  --border-dangerButton-default-hover:       #FCA5A5;
+  --border-dangerButton-quaternary:          #7F1D1D;
+  --border-dangerButton-quaternary-hover:    #991B1B;
+  --border-dangerButton-secondary:           #DC2626;
+  --border-dangerButton-tertiary:            #7F1D1D;
+  --border-disabledButton-default:           #ADB2B7;
+  --border-disabledButton-tertiary:          #363B3F;
+  --border-dropdown-default:                 #F4F4F4;
+  --border-image-default:                    var(--d-surface-1);
+  --border-input-default:                    #4D5358;
+  --border-input-disabled:                   #363B3F;
+  --border-input-error:                      #F87171;
+  --border-input-filled:                     #363B3F;
+  --border-modal-cardBorder:                 #004C31;
+  --border-neutral-quat:                     #222629;
+  --border-neutral-tertiary:                 #363B3F;
+  --border-neutralButton-default:            #ADB2B7;
+  --border-neutralButton-default-hover:      #E2E4E6;
+  --border-neutralButton-quaternary:         #222629;
+  --border-neutralButton-secondary:          #636B72;
+  --border-neutralButton-tertiary:           #4D5358;
+  --border-neutralbutton-quaternary:         #222629;
+  --border-neutralbutton-tertiary:           #363B3F;
+  --border-neutralbutton-tertiary-hover:     #4D5358;
+  --border-neutraltag-default:               #363B3F;
+  --border-neutraltag-hover:                 #363B3F;
+  --border-neutraltag-selected:              #363B3F;
+  --border-neutraltag-selected-hover:        #363B3F;
+  --border-popover-grey:                     #363B3F;
+  --border-secondarysearch-default:          #4D5358;
+  --border-secondarysearch-filled:           #4D5358;
+  --border-statusbadge-neutral:              #363B3F;
+  --border-switch-default:                   #4D5358;
+  --border-switch-disabled:                  #363B3F;
+  --border-tabcapsule-default:               #363B3F;
+  --border-tabcapsule-disabled:              #363B3F;
+  --border-tabcapsule-inprogress:            #363B3F;
+  --border-tabcapsule-success:               #363B3F;
+
+  /* — ตัวอักษร (105) — */
+  --text-alert-error:                             #FCA5A5;
+  --text-alert-info:                              #93C5FD;
+  --text-alert-success:                           #6CDCCA;
+  --text-alert-warning:                           #FDBA74;
+  --text-alertdialog-subtext:                     #ADB2B7;
+  --text-alertdialog-text:                        #C9CDD0;
+  --text-brandPrimary-on-brand:                   #111314;
+  --text-brandPrimaryButton-on-brand:             #111314;
+  --text-brandtag-default:                        #C9CDD0;
+  --text-breadcrumb-current:                      #E2E4E6;
+  --text-calendar-default:                        #C9CDD0;
+  --text-calendar-disabled:                       #334155;
+  --text-calendar-month:                          #C9CDD0;
+  --text-calendar-selected:                       #111314;
+  --text-calendar-slot-cta-disabled:              #334155;
+  --text-calendar-slot-date-current:              #111314;
+  --text-calendar-slot-date-default:              #C9CDD0;
+  --text-calendar-slot-date-disabled:             #334155;
+  --text-calendar-slot-date-selected:             #111314;
+  --text-calendar-slot-month:                     #C9CDD0;
+  --text-calendar-slot-slot-disabled:             #334155;
+  --text-calendar-slot-slot-selected:             #111314;
+  --text-colorfulBadge-blue:                      #93C5FD;
+  --text-colorfulbadge-badge-on:                  #111314;
+  --text-colorfulbadge-blue:                      #93C5FD;
+  --text-colorfulbadge-grey:                      #C9CDD0;
+  --text-colorfulbadge-indigo:                    #C7D2FE;
+  --text-colorfulbadge-orange:                    #FDBA74;
+  --text-colorfulbadge-pink:                      #F9A8D4;
+  --text-colorfulbadge-purple:                    #D8B4FE;
+  --text-colorfulbadge-red:                       #FCA5A5;
+  --text-colorfulbadge-teal:                      #6CDCCA;
+  --text-colorfulbadge-yellow:                    #FDE047;
+  --text-content-default:                         #E2E4E6;
+  --text-content-on-content:                      #111314;
+  --text-content-quaternary:                      #636B72;
+  --text-content-secondary:                       #ADB2B7;
+  --text-danger-default:                          #FCA5A5;
+  --text-danger-on-default:                       #111314;
+  --text-danger-secondary:                        #F87171;
+  --text-dangerButton-default:                    #FCA5A5;
+  --text-dangerButton-default-hover:              #FECACA;
+  --text-dangerButton-on-danger:                  #111314;
+  --text-disabled-secondary:                      #ADB2B7;
+  --text-disabled-tertiary:                       #636B72;
+  --text-disabledButton-tertiary:                 #858C92;
+  --text-info-default:                            #93C5FD;
+  --text-info-secondary:                          #60A5FA;
+  --text-info-tertiary:                           #2563EB;
+  --text-input-default:                           #636B72;
+  --text-input-disabled:                          #636B72;
+  --text-input-error:                             #636B72;
+  --text-input-filled:                            #C9CDD0;
+  --text-input-helper:                            #636B72;
+  --text-input-hover:                             #C9CDD0;
+  --text-input-label:                             #C9CDD0;
+  --text-input-require:                           #F87171;
+  --text-input-typing:                            #C9CDD0;
+  --text-list-default:                            #C9CDD0;
+  --text-list-selected:                           #C9CDD0;
+  --text-modal-text:                              #C9CDD0;
+  --text-neutral-on-neutral:                      #111314;
+  --text-neutral-tertiary:                        #636B72;
+  --text-neutralButton-default:                   #C9CDD0;
+  --text-neutralButton-default-hover:             #E2E4E6;
+  --text-neutralButton-on-neutral:                #111314;
+  --text-neutralbutton-default:                   #C9CDD0;
+  --text-neutraltag-default:                      #C9CDD0;
+  --text-neutraltag-hover:                        #C9CDD0;
+  --text-neutraltag-selected:                     #C9CDD0;
+  --text-neutraltag-selected-hover:               #C9CDD0;
+  --text-pagination-default:                      #E2E4E6;
+  --text-positive-success-tick:                   #111314;
+  --text-primarysearch-default:                   #636B72;
+  --text-primarysearch-filled:                    #C9CDD0;
+  --text-primarysearch-hover:                     #C9CDD0;
+  --text-primarysearch-typing:                    #C9CDD0;
+  --text-secondarysearch-default:                 #636B72;
+  --text-secondarysearch-filled:                  #C9CDD0;
+  --text-secondarysearch-hover:                   #C9CDD0;
+  --text-secondarysearch-typing:                  #C9CDD0;
+  --text-sidemenu-default:                        #C9CDD0;
+  --text-sidemenu-disabled:                       #636B72;
+  --text-smallalert-on-success:                   #111314;
+  --text-statusbadge-error:                       #FCA5A5;
+  --text-statusbadge-info:                        #93C5FD;
+  --text-statusbadge-neutral:                     #C9CDD0;
+  --text-statusbadge-success:                     #6CDCCA;
+  --text-statusbadge-warning:                     #FDBA74;
+  --text-statussummarycard-destructive-number:    #FCA5A5;
+  --text-statussummarycard-increase:              #ADB2B7;
+  --text-statussummarycard-info-number:           #93C5FD;
+  --text-statussummarycard-inprogress-number:     #FDBA74;
+  --text-statussummarycard-positive-number:       #6CDCCA;
+  --text-steps-select:                            #111314;
+  --text-steps-title-success:                     #6CDCCA;
+  --text-tabcapsule-default:                      #C9CDD0;
+  --text-tabcapsule-disabled:                     #4D5358;
+  --text-tabcapsule-inprogress:                   #C9CDD0;
+  --text-tabcapsule-success:                      #C9CDD0;
+  --text-tabunderline-default:                    #C9CDD0;
+  --text-tabunderline-disabled:                   #4D5358;
+  --text-topic-tertiary-subtext:                  #636B72;
+  --text-topic-tertiary-title:                    #E2E4E6;
+  --text-warning-default:                         #FDBA74;
+
+  /* — ไอคอน (34) — */
+  --icon-brandPrimaryButton-on-brand:    #111314;
+  --icon-brandtag-tailing:               #4D5358;
+  --icon-calendar-slot-selected:         #111314;
+  --icon-dangerButton-default:           #FCA5A5;
+  --icon-dangerButton-default-hover:     #FECACA;
+  --icon-dangerButton-on-danger:         #111314;
+  --icon-disabledButton-default:         #C9CDD0;
+  --icon-disabledButton-on-disabled:     #111314;
+  --icon-disabledButton-tertiary:        #636B72;
+  --icon-input-default:                  #636B72;
+  --icon-input-disabled:                 #636B72;
+  --icon-input-error:                    #636B72;
+  --icon-input-filled:                   #636B72;
+  --icon-input-typing:                   #C9CDD0;
+  --icon-neutral-default:                #C9CDD0;
+  --icon-neutral-secondary:              #ADB2B7;
+  --icon-neutral-tertiary:               #636B72;
+  --icon-neutralButton-default:          #C9CDD0;
+  --icon-neutralButton-default-hover:    #E2E4E6;
+  --icon-neutralButton-on-neutral:       #111314;
+  --icon-neutralbutton-default:          #C9CDD0;
+  --icon-neutralbutton-secondary:        #ADB2B7;
+  --icon-neutraltag-default:             #C9CDD0;
+  --icon-neutraltag-hover:               #C9CDD0;
+  --icon-neutraltag-selected:            #C9CDD0;
+  --icon-neutraltag-selected-hover:      #C9CDD0;
+  --icon-neutraltag-tailing:             #4D5358;
+  --icon-step-success-on:                #111314;
+  --icon-steps-success-on:               #111314;
+  --icon-switch-checkbox-tick:           #111314;
+  --icon-tabcapsule-default:             #C9CDD0;
+  --icon-tabcapsule-disabled:            #4D5358;
+  --icon-tabunderline-default:           #C9CDD0;
+  --icon-tabunderline-disabled:          #4D5358;
+  /* ── token ที่ "ใช้ในโค้ดแต่ไม่เคยนิยามใน :root" ─────────────────
+     component เรียก var(--x, #FALLBACK) โดยที่ --x ไม่มีอยู่จริง ค่าจึงตก
+     ไปที่ fallback สว่างเสมอ ไม่ว่าจะโหมดไหน — ต้องนิยามในบล็อก dark เอง
+     ค่ามาจากการสลับ step ของ fallback ตาม palette design.md
+     (--text-pill-* ไม่มี fallback ในโค้ด จึงจับคู่กับ --surface-pill-*
+      ของสีเดียวกันแล้วเลือกขั้นสว่าง เพื่อให้อ่านออกบนพื้นเข้ม) */
+
+  /* — พื้นหลัง (2) — */
+  --background-neutral-tertiary:    #222629;
+  --background-screen-default:      var(--d-surface-1);
+
+  /* — เส้นขอบ (8) — */
+  --border-brandPrimary-secondary:    #08A768;
+  --border-brandTag-default:          #363B3F;
+  --border-card-brand-100:            #004C31;
+  --border-info-quaternary:           #1E3A8A;
+  --border-info-tertiary:             #1E40AF;
+  --border-modal-cardborder:          var(--d-surface-2);
+  --border-statusbadge-error:         #FCA5A5;
+  --border-statusbadge-warning:       #FDBA74;
+
+  /* — ไอคอน (8) — */
+  --icon-content-secondary:             #ADB2B7;
+  --icon-disablediconButton-default:    #C9CDD0;
+  --icon-info-default:                  #93C5FD;
+  --icon-info-tertiary:                 #2563EB;
+  --icon-positive-default:              #6CDCCA;
+  --icon-positive-tertiary:             #1B867D;
+  --icon-topic-primary-disabled:        #4D5358;
+  --icon-warning-tertiary:              #EA580C;
+
+  /* — พื้นผิว (23) — */
+  --surface-actionlist-default:           var(--d-surface-1);
+  --surface-brandTag-default:             var(--d-surface-1);
+  --surface-card-quaternary:              var(--d-surface-1);
+  --surface-danger-default:               #F87171;
+  --surface-indicator-indigo:             #A5B4FC;
+  --surface-neutral-default:              var(--d-surface-1);
+  --surface-neutral-primary:              var(--d-surface-1);
+  --surface-page-default:                 var(--d-surface-1);
+  --surface-positive-primary:             #6AD6A5;
+  --surface-positive-quaternary:          #082B2A;
+  --surface-positive-secondary:           #195652;
+  --surface-progress-quaternary:          #422006;
+  --surface-slider-indigo-bar:            #3730A3;
+  --surface-slider-lavender-bar:          #4E3490;
+  --surface-slider-sakura-bar:            #A35C7C;
+  --surface-switch-knob-disabled:         var(--d-surface-1);
+  --surface-switch-unchecked-default:     #363B3F;
+  --surface-switch-unchecked-disabled:    #222629;
+  --surface-switch-unchecked-hover:       #4D5358;
+  --surface-timeslot-box:                 #102310;
+  --surface-timeslot-default:             var(--d-surface-1);
+  --surface-timeslot-disabled:            #102310;
+  --surface-warning-quaternary:           #431407;
+
+  /* — ตัวอักษร (19) — */
+  --text-brandPrimaryButton-onBrand:           #111314;
+  --text-brandTag-default:                     #C9CDD0;
+  --text-brandprimary-default:                 #91DFBB;
+  --text-input-placeholder:                    #636B72;
+  --text-negative-primary:                     #FCA5A5;
+  --text-neutral-disabled:                     #334155;
+  --text-pill-blue:                            #BFDBFE;
+  --text-pill-orange:                          #FED7AA;
+  --text-pill-purple:                          #E9D5FF;
+  --text-pill-red:                             #FECACA;
+  --text-pill-teal:                            #A2EDDE;
+  --text-pill-yellow:                          #FEF08A;
+  --text-positive-on-positive:                 #111314;
+  --text-positive-secondary:                   #3EC3B2;
+  --text-statussummarycard-lavender-number:    #D0BEFF;
+  --text-timeslot-default:                     #C9CDD0;
+  --text-tooltip-default:                      #111314;
+  --text-topic-primary-disabled:               #636B72;
+  --text-topic-primary-subtext-disabled:       #4D5358;
+
+  /* ── token ที่ alias ไปที่ --brand-p* (สแกนจากค่า hex ไม่เจอ) ──
+     tint p50/p100 → p900/p950 · เส้น selected p200 → p600 ·
+     ตัวอักษร/ไอคอน p600-p800 → p400 ตามตารางของ skill light-to-dark-mode */
+  /* — พื้นผิวโทนแบรนด์ — */
+  --surface-brandPrimary-quaternary:                var(--brand-p900);
+  --surface-brandPrimary-quaternary-hover:          var(--brand-p950);
+  --surface-brandPrimary-tertiary:                  var(--brand-p950);
+  --surface-brandPrimaryButton-quaternary:          var(--brand-p900);
+  --surface-brandPrimaryButton-quaternary-hover:    var(--brand-p950);
+  --surface-brandPrimaryButton-quinary-hover:       var(--brand-p900);
+  --surface-brandPrimaryButton-tertiary:            var(--brand-p950);
+  --surface-brandprimary-quinary:                   var(--brand-p950);
+  --surface-calendar-current:                       var(--brand-p950);
+  --surface-calendar-slot-cta-hover:                var(--brand-p900);
+  --surface-calendar-slot-date-hover:               var(--brand-p950);
+  --surface-calendar-slot-slot-hover:               var(--brand-p900);
+  --surface-card-brand100:                          var(--brand-p900);
+  --surface-colorfulbadge-green:                    var(--brand-p950);
+  --surface-formbuilder-default:                    var(--brand-p900);
+  --surface-formbuilder-hover:                      var(--brand-p900);
+  --surface-sidemenu-active:                        var(--brand-p900);
+  --surface-sidemenu-hover:                         var(--brand-p900);
+  --surface-statussummarycard-brand:                var(--brand-p950);
+  --surface-steps-default:                          var(--brand-p950);
+  --surface-table-footer:                           var(--brand-p950);
+  --surface-table-header:                           var(--brand-p900);
+  --surface-table-hover:                            var(--brand-p900);
+  --surface-table-selected:                         var(--brand-p900);
+  --surface-table-selected-hover:                   var(--brand-p950);
+  --surface-tabunderline-hover:                     var(--brand-p900);
+
+  /* — ตัวอักษรโทนแบรนด์ — */
+  --text-brandPrimary-default:              var(--brand-p400);
+  --text-brandPrimary-secondary:            var(--brand-p400);
+  --text-brandPrimaryButton-default:        var(--brand-p400);
+  --text-calendar-current:                  var(--brand-p400);
+  --text-calendar-slot-cta-default:         var(--brand-p400);
+  --text-calendar-slot-cta-hover:           var(--brand-p400);
+  --text-calendar-slot-date-hover:          var(--brand-p400);
+  --text-calendar-slot-slot-hover:          var(--brand-p400);
+  --text-calendar-slot-text:                var(--brand-p400);
+  --text-colorfulbadge-green:               var(--brand-p400);
+  --text-formbuilder-text:                  var(--brand-p400);
+  --text-navigation-title:                  var(--brand-p400);
+  --text-sidemenu-hover:                    var(--brand-p400);
+  --text-sidemenu-selected:                 var(--brand-p400);
+  --text-statussummarycard-brand-number:    var(--brand-p400);
+  --text-steps-default:                     var(--brand-p400);
+  --text-steps-title-hover:                 var(--brand-p400);
+  --text-steps-title-select:                var(--brand-p400);
+  --text-tabcapsule-hover:                  var(--brand-p400);
+  --text-tabcapsule-selected:               var(--brand-p400);
+  --text-table-title:                       var(--brand-p400);
+  --text-tabpill-default:                   var(--brand-p400);
+  --text-tabpill-hover:                     var(--brand-p400);
+  --text-tabpill-selected:                  var(--brand-p400);
+  --text-tabunderline-hover:                var(--brand-p400);
+  --text-tabunderline-selected:             var(--brand-p400);
+  --text-tabunderline-selected-hover:       var(--brand-p400);
+  --text-timeslot-selected:                 var(--brand-p400);
+  --text-topic-primary-title:               var(--brand-p400);
+  --text-topic-secondary-title:             var(--brand-p400);
+
+  /* — ไอคอนโทนแบรนด์ — */
+  --icon-alertdialog-info:                    var(--brand-p400);
+  --icon-brandPrimary-default:                var(--brand-p400);
+  --icon-brandPrimary-secondary:              var(--brand-p400);
+  --icon-brandPrimaryButton-default:          var(--brand-p400);
+  --icon-brandPrimaryButton-default-hover:    var(--brand-p400);
+  --icon-brandPrimaryButton-secondary:        var(--brand-p400);
+  --icon-input-hover:                         var(--brand-p400);
+  --icon-tabcapsule-hover:                    var(--brand-p400);
+  --icon-tabcapsule-selected:                 var(--brand-p400);
+  --icon-tabcapsule-success:                  var(--brand-p400);
+  --icon-tabpill-default:                     var(--brand-p400);
+  --icon-tabpill-hover:                       var(--brand-p400);
+  --icon-tabpill-selected:                    var(--brand-p400);
+  --icon-tabunderline-hover:                  var(--brand-p400);
+  --icon-tabunderline-selected:               var(--brand-p400);
+  --icon-tabunderline-selected-hover:         var(--brand-p400);
+  --icon-topic-default:                       var(--brand-p400);
+  --icon-topic-hover:                         var(--brand-p400);
+  /* ── รอบเก็บตก: token ที่ยังคำนวณออกมาเป็นสีสว่างในโหมดมืด ──────────
+     ตรวจจากค่าที่ browser คำนวณจริง (ไล่ตาม alias จนสุดสาย) ไม่ใช่สแกนไฟล์
+     จึงจับตัวที่ alias ซ้อนหลายชั้นได้ครบ เช่น --border-dropdown-default
+     (เส้นขอบ dropdown ที่ยังขาว) และ --background-screen-brand-100
+     (พื้นหลังทั้งหน้าที่ยังเป็นเขียวอ่อน)
+     โทนแบรนด์อ่อน p100/p200 → p900/p950 · เทาโครงสร้าง → แรมป์ --d-* */
+  --background-positive-tertiary-hover:           var(--brand-p900);
+  --background-screen-brand-100:                  var(--d-bg);
+  --border-dropdown-default:                      var(--d-border-1);
+  --border-neutralButton-default-hover:           var(--d-border-2);
+  --surface-brandPrimary-secondary:               var(--brand-p900);
+  --surface-brandPrimaryButton-secondary:         var(--brand-p900);
+  --surface-brandPrimaryButton-tertiary-hover:    var(--brand-p900);
+  --surface-brandprimarybutton-tertiary-hover:    var(--brand-p900);
+  --surface-card-skycyan-100:                     #081E40;
+  --surface-chart-area:                           var(--d-surface-1);
+  --surface-dangerButton-default-hover:           #991B1B;
+  --surface-disabledButton-default:               var(--d-surface-3);
+  --surface-neutralButton-default:                var(--d-surface-3);
+  --surface-neutralButton-default-hover:          var(--d-border-2);
+  --surface-pill-green:                           var(--brand-p900);
+  --surface-pink-default:                         #BE185D;
+  --surface-pink-default-hover:                   #9D174D;
+  --surface-popup-quickoptions:                   var(--brand-p950);
+  --surface-quickaction-green-pressed:            var(--brand-p900);
+  --surface-step-default-hover:                   var(--brand-p900);
+  --surface-steps-default-hover:                  var(--brand-p900);
+  --surface-steps-hover:                          var(--brand-p900);
+  --surface-topic-hover:                          var(--brand-p950);
+}
+
+[data-mode="dark"] {
+  /* ลำดับชั้นพื้นของ dropdown/list ในโหมดมืด — เดิมสลับกัน:
+     แถว (--d-surface-2 #363B3F) สว่างกว่าตัวแผง (--d-surface-1 #222629)
+     แล้ว hover ก็ใช้ #363B3F เท่าแถวปกติเป๊ะ → ชี้เมาส์แล้วไม่มีอะไรเปลี่ยน
+     ที่ถูกคือ แถว = สีเดียวกับแผง · hover สว่างขึ้นหนึ่งขั้น · selected โทนแบรนด์ */
+  --surface-list-default:             var(--d-surface-1);
+  --surface-list-selected:            var(--brand-p900);
+  --surface-list-hover:               var(--d-hover);
+  --surface-list-selected-hover:      var(--brand-p800);
+  --text-list-default:                var(--d-text-1);
+  /* แถวที่เลือกอยู่ใช้ตัวอักษรโทนแบรนด์ให้เข้าชุดกับเครื่องหมายถูก */
+  --text-list-selected:               var(--brand-p400);
+  --text-list-hover:                  var(--brand-p400);
+  --text-list-selected-hover:         var(--brand-p400);
+  --text-list-subtext:                var(--d-text-3);
+  --text-list-subtext-hover:          var(--brand-p400);
+  --icon-list-secondary-default:      var(--d-icon);
+  --icon-list-primary-selected-hover: var(--brand-p400);
+
+  /* token ของ dropdown/popover ที่ component เรียกแต่ไม่เคยนิยาม — ให้ตามชุด list */
+  --surface-dropdown-hover:           var(--d-hover);
+  --surface-dropdown-selected:        var(--brand-p900);
+  --surface-popover-default:          var(--d-surface-1);
+  --border-popover-default:           var(--d-border-1);
+}
+
+[data-mode="dark"] {
+  /* — Search boxes — */
+  --surface-primarysearch-default: var(--d-surface-2);
+  --surface-search-default:        var(--d-surface-2);
+
+  /* — Tab pill — */
+  --surface-tabpill-default:    var(--d-surface-2);
+  --surface-tabpill-selected:   var(--d-surface-2);
+  --surface-tabpill-disabled:   var(--d-surface-1);
+  --surface-tabpill-background: var(--brand-p900);
+  --surface-tabpill-hover:      var(--brand-p800);
+
+  /* — Tab capsule — */
+  --surface-tabcapsule-default:  var(--d-surface-2);
+  --surface-tabcapsule-success:  var(--d-surface-2);
+  --surface-tabcapsule-disabled: var(--d-surface-1);
+  --surface-tabcapsule-hover:    var(--brand-p900);
+  --surface-tabcapsule-selected: var(--brand-p900);
+  --border-tabcapsule-default:    var(--d-border-2);
+  --border-tabcapsule-inprogress: var(--d-border-2);
+  --border-tabcapsule-success:    var(--d-border-2);
+  --border-tabcapsule-disabled:   var(--d-border-1);
+
+  /* — Filter tag · Brand — */
+  --surface-brandtag-default:        var(--d-surface-2);
+  --surface-brandtag-hover:          var(--d-hover);
+  --surface-brandtag-selected:       var(--brand-p900);
+  --surface-brandtag-selected-hover: var(--brand-p800);
+  --border-brandtag-default:         var(--d-border-2);
+
+  /* — Filter tag · Neutral — */
+  --surface-neutraltag-default:        var(--d-surface-2);
+  --surface-neutraltag-hover:          var(--d-hover);
+  --surface-neutraltag-selected:       var(--d-surface-3);
+  --surface-neutraltag-selected-hover: var(--d-hover);
+
+  /* — Status badge — deep-tinted bg, lighter ink — */
+  --surface-statusbadge-neutral: var(--d-surface-3);
+  --surface-statusbadge-info:    #14263D;
+  --surface-statusbadge-success: #0F2E2C;
+  --surface-statusbadge-warning: #33220F;
+  --surface-statusbadge-error:   #3A1C1C;
+  --border-statusbadge-neutral:  var(--d-border-2);
+  --text-statusbadge-neutral: var(--d-text-2);
+  --text-statusbadge-info:    #6BA5F5;
+  --text-statusbadge-success: #3FCE93;
+  --text-statusbadge-warning: #F5A76B;
+  --text-statusbadge-error:   #F58B8B;
+
+  /* — Triage levels — deep-tinted bg, lighter ink — */
+  --surface-triage-level1: #3A1C1C; --text-triage-level1: #F58B8B;
+  --surface-triage-level2: #33220F; --text-triage-level2: #F5A76B;
+  --surface-triage-level3: #2E2A0F; --text-triage-level3: #E8CF6A;
+  --surface-triage-level4: #0F2E2C; --text-triage-level4: #5AD6C4;
+  --surface-triage-level5: #14263D; --text-triage-level5: #6BA5F5;
+
+  /* — Scrollbar tracks — */
+  --surface-scrollbar-info-bar:    #14263D;
+  --surface-scrollbar-success-bar: #0F2E2C;
+  --surface-scrollbar-warning-bar: #33220F;
+  --surface-scrollbar-error-bar:   #3A1C1C;
+}
+
+[data-mode="dark"] {
+  --border-table-default: var(--d-border-2);
+  --border-table-line:    var(--d-border-1);
+}
+
+[data-mode="dark"] {
+  --border-neutralButton-tertiary: var(--d-border-2);
+  --text-neutralButton-default: var(--d-text-1);
+  --text-neutralButton-default-hover: var(--d-text-1);
+  --text-calendar-slot-date-default: var(--d-text-1);
+  --text-calendar-slot-month: var(--d-text-1);
+  --border-calendar-slot-slot-disabled: var(--d-border-1);
+  --border-card-default: var(--d-border-2);
+  --border-input-default: var(--d-border-2);
+  --border-neutral-quat: var(--d-border-1);
+  --text-steps-subtitle: var(--d-text-3);
+  --text-content-default: var(--d-text-1);
+  --text-content-secondary: var(--d-text-2);
+  --text-content-tertiary: var(--d-text-3);
+  --text-content-quaternary: var(--d-text-3);
+  --text-neutralbutton-default: var(--d-text-1);
+  --text-breadcrumb-current: var(--d-text-1);
+  --text-breadcrumb-pagename: var(--d-text-3);
+  --border-input-filled: var(--d-border-2);
+  --border-input-disabled: var(--d-border-2);
+  --text-input-default: var(--d-text-3);
+  --text-input-hover: var(--d-text-3);
+  --text-input-typing: var(--d-text-1);
+  --text-input-filled: var(--d-text-1);
+  --text-input-disabled: var(--d-text-3);
+  --text-input-error: var(--d-text-3);
+  --text-input-label: var(--d-text-1);
+  --text-input-helper: var(--d-text-3);
+  --text-modal-text: var(--d-text-1);
+  --text-modal-subtext: var(--d-text-3);
+  --border-neutral-tertiary: var(--d-border-2);
+  --text-list-default: var(--d-text-1);
+  /* ให้ตรงกับบล็อก list ด้านบน (บล็อกนี้อยู่ท้ายไฟล์จึงชนะ cascade) */
+  --text-list-selected: var(--brand-p400);
+  --text-list-subtext: var(--d-text-3);
+  --text-statussummarycard-subtext: var(--d-text-3);
+  --text-statussummarycard-increase: var(--d-text-2);
+  --text-tabunderline-default: var(--d-text-1);
+  --border-tabcapsule-default: var(--d-border-2);
+  --border-tabcapsule-inprogress: var(--d-border-2);
+  --border-tabcapsule-success: var(--d-border-2);
+  --border-tabcapsule-disabled: var(--d-border-2);
+  --text-tabcapsule-default: var(--d-text-1);
+  --text-tabcapsule-inprogress: var(--d-text-1);
+  --text-tabcapsule-success: var(--d-text-1);
+  --text-brandtag-default: var(--d-text-1);
+  --text-brandtag-title: var(--d-text-3);
+  --border-brandtag-default: var(--d-border-2);
+  --border-neutraltag-default: var(--d-border-2);
+  --border-neutraltag-hover: var(--d-border-2);
+  --border-neutraltag-selected: var(--d-border-2);
+  --border-neutraltag-selected-hover: var(--d-border-2);
+  --text-neutraltag-default: var(--d-text-1);
+  --text-neutraltag-hover: var(--d-text-1);
+  --text-neutraltag-selected: var(--d-text-1);
+  --text-neutraltag-selected-hover: var(--d-text-1);
+  --text-pagination-default: var(--d-text-1);
+  --text-neutral-tertiary: var(--d-text-3);
+  --border-switch-default: var(--d-border-2);
+  --border-switch-disabled: var(--d-border-2);
+  --text-formbuilder-subtext: var(--d-text-3);
+  --text-statusbadge-neutral: var(--d-text-1);
+  --border-statusbadge-neutral: var(--d-border-2);
+  --text-alertdialog-text: var(--d-text-1);
+  --text-alertdialog-subtext: var(--d-text-2);
+  --text-primarysearch-default: var(--d-text-3);
+  --text-primarysearch-focus: var(--d-text-3);
+  --text-primarysearch-hover: var(--d-text-1);
+  --text-primarysearch-typing: var(--d-text-1);
+  --text-primarysearch-filled: var(--d-text-1);
+  --icon-primarysearch-default: var(--brand-p400);
+  --icon-primarysearch-hover: var(--brand-p300);
+  --icon-primarysearch-focus: var(--brand-p400);
+  --icon-primarysearch-typing: var(--brand-p300);
+  --icon-primarysearch-filled: var(--brand-p400);
+  --border-secondarysearch-default: var(--d-border-2);
+  --border-secondarysearch-filled: var(--d-border-2);
+  --text-secondarysearch-default: var(--d-text-3);
+  --text-secondarysearch-hover: var(--d-text-1);
+  --text-secondarysearch-typing: var(--d-text-1);
+  --text-secondarysearch-filled: var(--d-text-1);
+  --border-popover-grey: var(--d-border-2);
+  --border-neutralbutton-tertiary: var(--d-border-2);
+  --border-neutralbutton-tertiary-hover: var(--d-border-2);
+  --border-neutralbutton-quaternary: var(--d-border-1);
+  --text-topic-tertiary-title: var(--d-text-1);
+  --border-popover-grey: var(--d-border-2);
+  --text-modal-subtext: var(--d-text-3);
+  --text-sidemenu-default: var(--d-text-1);
+  --text-sidemenu-disabled: var(--d-text-3);
+  --text-sidemenu-tertiary: var(--d-text-3);
+  --border-disabledButton-tertiary: var(--d-border-2);
+  --text-disabledButton-tertiary: var(--d-text-3);
+  /* Paired surface for the remapped disabled-button label. */
+  --surface-disabledButton-tertiary: var(--d-surface-3);
+}
+
+[data-mode="dark"] {
+  /* SideSubMenu flyout (collapsed-sidebar sub items) */
+  --surface-card-brand-100:           var(--d-surface-1);   /* panel shell bg */
+  --surface-sidesubmenu-hover:        var(--d-hover);
+  --surface-sidesubmenu-selected:     var(--brand-p900);
+  --text-sidesubmenu-default:         var(--brand-p400);
+  --text-sidesubmenu-selected:        var(--brand-p400);
+  --text-sidesubmenu-disabled:        var(--d-text-3);
+
+  /* QueueSubMenu (queue side panel) */
+  --surface-card-default:             var(--d-surface-1);
+  --surface-neutralbutton-default:    var(--d-surface-3);
+  --border-brandsecondary-quaternary: var(--d-border-1);
+}
+
+[data-mode="dark"] {
+  --border-brandPrimary-quaternary: var(--d-border-2);
+  --border-brandPrimary-tertiary: var(--brand-p600);
+  --border-brandPrimaryButton-quaternary-hover: var(--brand-p600);
+  --border-brandPrimaryButton-quaternary: var(--d-border-2);
+  --border-brandPrimaryButton-tertiary: var(--brand-p600);
+  --border-brandprimarybutton-tertiary: var(--brand-p600);
+  --border-brandtag-hover: var(--brand-p600);
+  --border-brandtag-selected-hover: var(--brand-p600);
+  --border-brandtag-selected: var(--brand-p600);
+  --border-calendar-slot-slot-default: var(--d-border-2);
+  --border-calendar-slot-slot-hover: var(--brand-p600);
+  --border-formbuilder-default: var(--brand-p600);
+  --border-formbuilder-filled: var(--d-border-2);
+  --border-steps-default: var(--brand-p600);
+  --border-tabcapsule-hover: var(--brand-p600);
+  --border-tabcapsule-selected: var(--brand-p600);
+  --border-table-default: var(--d-border-2);
+  --border-table-line: var(--d-border-1);
+}
+
+[data-mode="dark"] {
+  --ink-line:      var(--d-border-1);   /* chart gridlines */
+  --ink-neutral:   var(--d-surface-3);  /* gauge / donut unfilled track */
+  --ink-secondary: var(--d-text-2);
+  --ink-tertiary:  var(--d-text-3);
+  --ink:           var(--d-text-1);
+}
+
+[data-mode="dark"] {
+  /* Brand tag chip (FilterDropdown variant='brand') */
+  --surface-brandtag-selected:       var(--d-surface-3);
+  --surface-brandtag-selected-hover: var(--d-hover);
+  --text-brandtag-hover:             var(--brand-p400);
+  --text-brandtag-selected:          var(--brand-p400);
+  --text-brandtag-selected-hover:    var(--brand-p400);
+  --icon-brandtag-default:           var(--brand-p400);
+  --icon-brandtag-hover:             var(--brand-p400);
+  --icon-brandtag-selected:          var(--brand-p400);
+  --icon-brandtag-selected-hover:    var(--brand-p400);
+  --icon-brandtag-tailing:           var(--d-text-3);
+
+  /* Pagination page buttons */
+  --surface-pagination-default:  var(--d-surface-2);
+  --surface-pagination-hover:    var(--d-hover);
+  --surface-pagination-selected: var(--brand-p900);
+  --text-pagination-hover:       var(--brand-p400);
+  --text-pagination-selected:    var(--brand-p400);
+}
+
+[data-mode="dark"] {
+  --border-brandPrimary-quaternary: var(--d-border-1);
+}
+
+[data-mode="dark"] {
+  --text-brand-name: var(--d-text-1);
+  --text-brand-sub:  var(--d-text-2);
+
+  --text-danger-default:             #F87171;  /* design.md red/400 */
+  --text-danger-secondary:           #FCA5A5;  /* red/300 */
+  --text-dangerButton-default:       #F87171;  /* red/400 */
+  --text-dangerButton-default-hover: #FCA5A5;  /* red/300 */
+  --text-input-require:              #F87171;  /* red/400 — the * marker */
+  --text-warning-default:            #FDBA74;  /* orange/300 */
+  --text-info-default:               #93C5FD;  /* blue/300 */
+  --text-info-emphasis:              #BFDBFE;  /* blue/200 */
+  --text-info-secondary:             #60A5FA;  /* blue/400 */
+  --text-info-tertiary:              #2563EB;  /* blue/600 */
+  --text-steps-title-success:        #6CDCCA;  /* teal/300 */
+}
+
