@@ -714,6 +714,7 @@
   --dim-size-2190:  190px; /* add delivery details button width (Archive 371:51292) */
   --dim-size-2200:  192px; /* dimension.size.2200 — receipt success buttons */
   --dim-size-2280:  218px; /* success payment button width (Archive 176:105793) */
+  --dim-size-2350:  240px; /* dimension.size.2350 — full-page loading animation (Heart Care Lottie) */
   --dim-size-2450:  280px; /* dimension.size.2450 — OTP channel select card width (PHCIS-Signin 42:8722) */
   --dim-size-2470:  298px; /* dimension.size.2470 — auth primary button width (PHCIS-Signin 112:10776) */
   --dim-size-2500:  320px; /* dimension.size.2500 — input field min-width / sign-in form column */

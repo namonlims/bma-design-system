@@ -8265,6 +8265,7 @@ Two-layer drop stacked the same way as Brand Drop Shadow Bottom/200, but with th
 | `dimension/size/800` | `40px` | Secondary Default height |
 | `dimension/size/1000` | `48px` | Dropdown list item min-height |
 | `dimension/size/2300` | `224px` | Secondary min-width |
+| `dimension/size/2350` | `240px` | Full-page loading animation — Heart Care Lottie (FullPageLoader) |
 | `dimension/size/2450` | `280px` | OTP channel select card width (PHCIS-Signin 42:8722) |
 | `dimension/size/2470` | `298px` | Auth primary button width (PHCIS-Signin 112:10776) |
 | `dimension/size/2500` | `320px` | Primary min-width |
