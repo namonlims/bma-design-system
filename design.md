@@ -7127,6 +7127,7 @@ Full chrome modal — header (title · subtitle · close) · scrollable body · 
 | `default` | **448 px** | `min(448px, 100vw − 48px)` | Confirmations, short forms |
 | `large` | **640 px** | `min(640px, 100vw − 48px)` | Medium forms, pickers |
 | `extraLarge` | **1440 px** | Width **and** height fill viewport up to caps below | Body map, vitals graph, settings |
+| `fullscreen` | viewport | `calc(100vw − 48px)` × `calc(100vh − 48px)` — no 1440×1024 cap | EMR full-screen view (ข้อมูลทางการแพทย์ EMR) |
 
 ##### `extraLarge` — fluid viewport box
 
