@@ -13611,6 +13611,156 @@ Props: `open` · `onOpenChange` · `title` · `subtitle` · `disabled` · `trigg
 
 ---
 
+### 6.38 Product Components ชุด 2 (ลงทะเบียน 3 ต.ค. 69)
+
+Component ชั้น product ที่ใช้ซ้ำหลายหน้าแต่ยังไม่อยู่ใน Components Library / เว็บ design system
+(ตรวจเทียบ REGISTRY · CATALOG · design.md เมื่อ 3 ต.ค. 69) ทุกตัว **alias token ของ Foundation ไม่มีค่าใหม่**
+และมี demo ที่ `/components/<slug>` · ตัวเลข "ใช้ใน" = จำนวนไฟล์ใน `src/` ที่อ้างถึง ณ วันที่ลงทะเบียน
+
+| # | Component | slug | ไฟล์ | ใช้ใน (ไฟล์) | ประกอบจาก |
+|---|---|---|---|---:|---|
+| 6.38.1 | QueueCallActions | `queue-call-actions` | `src/components/queue/QueueCallActions.jsx` | 29 | BrandButton · ColorfulBadge · RowActionMenu |
+| 6.38.2 | WaitDurationCell | `wait-duration-cell` | `src/components/queue/WaitDurationCell.jsx` | 28 | text tokens |
+| 6.38.3 | DashboardHeaderFilters | `dashboard-header-filters` | `src/components/dashboard/DashboardPageHeader.jsx` | 23 | DashboardTemplateSwitcher · FilterDateTag · ClearFiltersTag |
+| 6.38.4 | SelectWithOther | `select-with-other` | `src/components/forms/SelectWithOther.jsx` | 21 | Select (§6.25) + InputField |
+| 6.38.5 | FileUploadField | `file-upload-field` | `src/components/forms/FileUploadField.jsx` | 15 | BrandSubdueButton + text tokens |
+| 6.38.6 | FolderTabsCard | `folder-tabs-card` | `src/components/card/FolderTabsCard.jsx` | 11 | Card + Popover |
+| 6.38.7 | TabCountBadge | `tab-count-badge` | `src/components/tab/TabCountBadge.jsx` | 11 | brandtag surface/text tokens |
+| 6.38.8 | PrivacyRevealPopup | `privacy-reveal-popup` | `src/components/popup/PrivacyRevealPopup.jsx` | 10 | Popup + NestedPopupPanel + PIN fields |
+| 6.38.9 | ESignatureField | `e-signature-field` | `src/components/form-builder/ESignatureField.jsx` | 9 | Canvas + TabPill |
+| 6.38.10 | ApprovalIconButtons | `approval-icon-buttons` | `src/components/button/ApprovalIconButtons.jsx` | 8 | BrandIconButton + DangerSubdueIconButton + Tooltip (light) |
+| 6.38.11 | ResultReadPopup | `result-read-popup` | `src/components/dashboard/ResultReadPopup.jsx` | 6 | Popup large + Table compact + ColorfulBadge |
+| 6.38.12 | ScrollToTopButton | `scroll-to-top-button` | `src/components/layout/ScrollToTopButton.jsx` | ทั้งแอป | brand-p800 · `--shadow-brand-drop-bottom-400` |
+
+ไม่ลงทะเบียน: `HeaderClinicContext` (โมดูลข้อมูล/context ของศูนย์บริการ ไม่ใช่ UI) และ `BrandPrimaryButton`
+(alias เก่าของ BrandButton §5.1 — ผู้เรียกใหม่ import `BrandButton` ตรง)
+
+#### 6.38.1 QueueCallActions (queue-call-actions)
+
+ชุดปุ่ม เรียกคิว · พักคิว · ยกเลิกคิว ในคอลัมน์การดำเนินการของตารางคิวทุกโมดูล เรียกแล้วเปลี่ยนเป็น "เรียกแล้ว"
+แต่ยังกดเรียกซ้ำได้ (ผู้รับบริการไม่มาตามเรียกเป็นเรื่องปกติ) · แถวที่กำลังทำอยู่แสดงสถานะจริง (`statusLabel`)
+และใช้ `statusAsBadge` ให้เป็นป้ายแทนปุ่มกันกดเรียกซ้ำโดยไม่ตั้งใจ · `cancelInMenu` ย้าย "ยกเลิกคิว" เข้าเมนู ⋮
+
+Props: `called` · `statusLabel` · `statusAsBadge` · `paused` · `disabled` · `disabledReason` · `callVariant` (fill · quaternary) · `size` · `onCall` · `onPause` · `onCancel` · `cancelInMenu` · `menuItems`
+ไฟล์: `src/components/queue/QueueCallActions.jsx` · demo: `/components/queue-call-actions`
+
+#### 6.38.2 WaitDurationCell (wait-duration-cell)
+
+เซลล์ "รอนาน" — `N นาที` · ตั้งแต่ `LONG_WAIT_MINUTES` (50) เป็น `--text-danger-default` + `--type-weight-medium`
+· ไม่รอแล้ว/ไม่มีค่า = "—" ห้ามคำนวณสีเวลารอเองในหน้า
+
+Props: `minutes` · `waiting`
+ไฟล์: `src/components/queue/WaitDurationCell.jsx` · demo: `/components/wait-duration-cell`
+
+#### 6.38.3 DashboardHeaderFilters (dashboard-header-filters)
+
+แถบใต้หัวหน้าแดชบอร์ด/รายงาน (ใส่ใน `QueuePageShell belowTitle`) — ชิป Template (สลับหน้าจอ · สร้างเทมเพลต)
++ ช่วงวันที่ + ปีงบประมาณ + ล้างตัวกรอง ตัวเลือก Template กรองตามบทบาท (`OWN_REPORT_TEMPLATES` · `TODO_ONLY_ROLES`)
+ในกรอบแดชบอร์ดที่ยืมหน้าระบบอื่น ชิป Template เป็นชุดของ PHCIS อัตโนมัติ
+
+Props หลัก: `dateFilter` · `onDateFilterChange` · `templateValue` · `onClearFilters` · `clearActive` · `showDateFilter`
+ไฟล์: `src/components/dashboard/DashboardPageHeader.jsx` · demo: `/components/dashboard-header-filters`
+
+#### 6.38.4 SelectWithOther (select-with-other)
+
+Dropdown + ตัวเลือก "อื่นๆ" ที่เปิดช่องพิมพ์เอง — **ใช้แทนชิปคำแนะนำทุกฟิลด์ free text ที่มีคำตอบแนะนำ**
+ในแถวตาราง `onChange` กับ `onOtherChange` ยิงติดกัน ผู้เรียกต้องใช้ functional update · ใน AlertDialog ส่ง
+`popoverZIndex` สูงกว่า `--sm-z-alertdialog` (1500) · `dropdownWidth='trigger'` = ลิสต์กว้างเท่าช่อง
+
+Props: `value` · `onChange` · `otherValue` · `onOtherChange` · `options` · `otherOption` · `placeholder` · `otherPlaceholder` · `otherLabel` · `size` · `disabled` · `error` · `dropdownWidth` · `popoverZIndex`
+ไฟล์: `src/components/forms/SelectWithOther.jsx` · demo: `/components/select-with-other`
+
+#### 6.38.5 FileUploadField (file-upload-field)
+
+ช่องแนบไฟล์ — ปุ่มเลือกไฟล์ + ชื่อไฟล์ที่เลือก + ล้าง ไม่อัปโหลดเอง (ส่งไฟล์ให้ผู้เรียกผ่าน `onFile`)
+บอกชนิด/ขนาดไฟล์ใน `helperText` · ไอคอนนำเข้าไฟล์ใช้ `file_save` ตามกติกา UI นำเข้าไฟล์
+
+Props: `label` · `helperText` · `accept` · `buttonLabel` · `fileName` · `onFile` · `onClear` · `disabled`
+ไฟล์: `src/components/forms/FileUploadField.jsx` · demo: `/components/file-upload-field`
+
+#### 6.38.6 FolderTabsCard (folder-tabs-card)
+
+การ์ดแท็บแฟ้ม — หัวแฟ้มต่อแผ่นการ์ด แท็บที่ล้นยุบเข้าเมนู ⌄ (วัดความกว้างจริงด้วยแถวเงา) เพิ่ม/ปิดแท็บได้
+ใช้แยกหมวดข้อมูลระดับเดียวกันในแฟ้มเดียว (ตรวจร่างกาย · วินิจฉัย ในหน้าตรวจรักษา) ไม่ใช้แทน StepProgress
+
+Props: `tabs` ([{ key, label, content }]) · `onAdd` · `onRemove` · `addLabel` · `activeKey` · `onActiveChange` · `bodyStyle` · `tint` (multi · brand)
+ไฟล์: `src/components/card/FolderTabsCard.jsx` · demo: `/components/folder-tabs-card`
+
+#### 6.38.7 TabCountBadge (tab-count-badge)
+
+ตัวเลขนับบนแท็บ สีตามสถานะ `selected` / `hovered` ของแท็บ ใช้คู่ TabPill / TabUnderline · ห้ามใช้ ColorfulBadge แทน
+
+Props: `count` · `selected` · `hovered` · `tone` (ค่าเริ่มต้น brandtag)
+ไฟล์: `src/components/tab/TabCountBadge.jsx` · demo: `/components/tab-count-badge`
+
+#### 6.38.8 PrivacyRevealPopup (privacy-reveal-popup)
+
+ป๊อปอัปยืนยันตัวตนด้วย PIN 6 หลักก่อนเปิดข้อมูลลับ (ชื่อเต็ม · เลขบัตร · ประตูคลินิกข้อมูลลับ) คำอธิบาย =
+"กรุณากรอก PIN 6 หลักเพื่อแสดง" + `fieldLabel` · "ลืม PIN?" เปิดแผงซ้อน · ปิดแล้วล้าง PIN · ยืนยันแล้วผู้เรียก
+บันทึกผู้เปิด + เวลา · **ไม่ใส่เลขข้อกำหนด TOR ใน `fieldLabel`** (ผู้ใช้สั่งลบ "(ข้อมูลลับ §1.4.2)" 3 ต.ค. 69)
+
+Props: `open` · `fieldLabel` · `onClose` · `onConfirm`
+ไฟล์: `src/components/popup/PrivacyRevealPopup.jsx` · demo: `/components/privacy-reveal-popup`
+
+#### 6.38.9 ESignatureField (e-signature-field)
+
+ช่องลงลายมือชื่ออิเล็กทรอนิกส์ — วาดลายเซ็น หรือเลือกลายเซ็นที่บันทึกไว้ (แท็บลายเซ็นของฉัน) คืนค่าเป็น data URL
+ใช้ในแบบฟอร์มความยินยอมและสายอนุมัติ e-signature
+
+Props: `value` · `onChange` · `signerName` · `height` (120) · `showSavedTab`
+ไฟล์: `src/components/form-builder/ESignatureField.jsx` · demo: `/components/e-signature-field`
+
+#### 6.38.10 ApprovalIconButtons (approval-icon-buttons)
+
+ปุ่มไอคอน ✓ อนุมัติ (Brand fill) / ✗ ไม่อนุมัติ (Danger subdue outline) ในคอลัมน์การดำเนินการ + ทูลทิปขาว
+ใช้ทุกตารางที่มีงานอนุมัติ ผู้เรียกเปิดป๊อปอัปยืนยันแล้วขึ้น SuccessPopup · ห้ามใช้ปุ่มข้อความคู่กันในตาราง
+
+Props: `onApprove` · `onReject` · `approveLabel` · `rejectLabel` · `approveDisabled` · `rejectDisabled` · `subject`
+ไฟล์: `src/components/button/ApprovalIconButtons.jsx` · demo: `/components/approval-icon-buttons`
+
+#### 6.38.11 ResultReadPopup (result-read-popup)
+
+ป๊อปอัปเปิดอ่านผลแล็บ/รังสีแบบแสดงอย่างเดียว กว้าง 960 (`--dim-size-2900` × 1.5 · จอแคบหดตามจอ) — ป้ายระดับ
+(ปกติ/ผิดปกติ/วิกฤต) + สรุปผล · ข้อมูลคำสั่ง · ฟิล์ม (เลือกภาพย่อยได้) · ตารางผลรายค่า (`detail.rows` · Table compact) ·
+หัวข้อข้อความ (`detail.sections`) เปิดอ่านในหน้าเดิม ผู้เรียกประทับผู้อ่าน + เวลา (`acknowledgeResult`)
+
+Props: `open` · `result` ({ key, kind lab · xray, kindLabel, itemLabel, patientName, hn, reportedAt, resultSummary, critical, abnormal, detail: { kind, meta, rows, films, sections } }) · `onClose`
+ไฟล์: `src/components/dashboard/ResultReadPopup.jsx` · demo: `/components/result-read-popup`
+
+#### 6.38.12 ScrollToTopButton (scroll-to-top-button)
+
+ปุ่มลอย "กลับขึ้นด้านบน" มุมขวาล่างของจอ ติดตั้งครั้งเดียวที่ Routes — โผล่เมื่อเลื่อนลงเกินครึ่งจอ ·
+48px (`--dim-size-1000`) ห่างขอบ `--dim-space-600` · `--brand-p800` (hover `--brand-p900`) + `--shadow-brand-drop-bottom-400`
+· hover ขยาย 1.1 · **ยกตัวพ้นแถบล่างที่กว้าง ≥ 40% ของจอเท่านั้น** (ฟุตเตอร์ปุ่ม ถัดไป · แถบ ©) — คอลัมน์ sticky แคบของ
+ตารางไม่นับ ไม่อย่างนั้นปุ่มลอยกลางจอ (แก้ 3 ต.ค. 69) · ห้ามทับปุ่ม · ไม่มีทูลทิป · ไม่มี props
+
+ไฟล์: `src/components/layout/ScrollToTopButton.jsx` · demo: `/components/scroll-to-top-button`
+
+### 6.39 รูปแบบหน้าแดชบอร์ดตามบทบาท (3 ต.ค. 69)
+
+#### 6.39.1 ตาราง "สิ่งที่ต้องดำเนินการ" (To-do list)
+
+หน้าแรกแดชบอร์ดของแพทย์ · พยาบาล · Exit Nurse · เภสัชกร · สหวิชาชีพ — **รายการงานที่บทบาทต้องทำ ไม่ใช่คิว**
+(คิวดูที่หน้าคิวของแต่ละระบบ) ประกอบจาก SummaryBannerCard 4 ใบ + Table กลาง
+
+- การ์ด: สิ่งที่ต้องดำเนินการ (ด่วน · ผลวิกฤต) · ผลตรวจรอเปิดอ่าน หรือ รออนุมัติ/ลงนาม/ยืนยัน · กลุ่มงานของบทบาท 2 ใบ
+- คอลัมน์: วันที่ (วันที่/เวลาแยกบรรทัด) · สิ่งที่ต้องทำ (หัวข้อ + บรรทัดรายละเอียด) · ผู้รับบริการ (ชื่อ + HN · คลินิกข้อมูลลับใช้ชื่อย่อ + UIC) · ประเภท (ColorfulBadge) · คลินิก/แผนก · สิ่งที่ต้องดำเนินการ (ปุ่ม · sticky ขวา)
+- เรียง: ผลวิกฤต → ผลผิดปกติ → งานด่วน → อื่น ๆ · ปุ่มงานด่วน = BrandButton · อื่น ๆ = BrandSubdueButton outline
+- ปุ่ม 3 แบบ: **เปิดอ่าน** (ResultReadPopup §6.38.11) · **อนุมัติ/ลงนาม/ยืนยัน/รับทราบ** (AlertDialog ยืนยันพร้อมรายละเอียด → แถวขึ้นป้ายเขียว "…แล้ว") · **ไปหน้างาน** (บันทึกต่อ · ประเมิน · โทรติดตาม)
+- ข้อมูล: `src/data/roleTaskLists.js` (ชุดงานต่อบทบาท) · ตัวสร้าง `buildTaskListTodo` ใน `src/data/roleTodo.js` · หน้า `RoleTodoPage`
+
+#### 6.39.2 หน้ารายงานงานของบทบาท
+
+Template "รายงานงาน…ของ[บทบาท]" ในแดชบอร์ด — บทบาทที่มีรายงานของตัวเองเห็นเฉพาะ «สิ่งที่ต้องดำเนินการ» + รายงานนี้
+(ถอดเทมเพลตกลาง) โครง: SummaryBannerCard 4 ใบ → ภาระงานรายเดือน (VBars ซ้อน) → ตัวชี้วัดคุณภาพ (Gauge ผ่าน/ไม่ผ่านเกณฑ์ ·
+`lower` = ยิ่งต่ำยิ่งดี) → กลุ่มตามขั้นงาน (DonutWithLegend · HBarList) · ทุกค่าเป็นยอดรวม ไม่มีชื่อ/HN
+
+- ชื่อ/เส้นทาง/key ต่อบทบาท: `src/data/clinicDoctorReportMeta.js` (nav · route · สิทธิ์ต่อสายอัตโนมัติ)
+- ข้อมูล: `dashboardClinicDoctors.js` · `dashboardNurseReports.js` · `dashboardStaffReports.js` · หน้า `ClinicDoctorReportPage.jsx`
+- **path ห้ามขึ้นต้นด้วย path รายงานกลาง** (`/dashboard/reports/finance` · `/pharmacy` · `/anc` …) — activeKey และ guard ใช้ `startsWith`
+
+---
+
 ## 7. Mobile Application Design System
 
 The mobile citizen app (`/m/*` routes, see [src/pages/mobile/](src/pages/mobile/)) reuses the **foundation** tokens — colour, typography family, icon size, motion — verbatim from §1–§4. Only **shape, height, and density** differ, because thumb reach and one-handed use are the dominant constraints on a 390-wide viewport.
