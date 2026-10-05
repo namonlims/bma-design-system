@@ -7366,7 +7366,7 @@ Below the interactive demo, a **state grid** (same format as Button) presents al
 | Height — Large | `dimension/size/900` | **44 px** | `.tu-lg` |
 | Height — Medium | `dimension/size/800` | **40 px** | `.tu-md` |
 | Height — Small | `dimension/size/700` | **36 px** | `.tu-sm` |
-| Padding X | `dimension/space/600` | **24 px** | Left/right inner spacing |
+| Padding X | `dimension/space/500` | **20 px** | Left/right inner spacing (ลดจาก 24 px · 5 ต.ค. 69) |
 | Active border — Large/Medium | `dimension/stroke/400` | **4 px** | Bottom underline bar |
 | Active border — Small | `dimension/stroke/200` | **2 px** | Bottom underline bar |
 | Icon size — Large/Medium | `dimension/size/400` | **16 px** | Leading icon |
