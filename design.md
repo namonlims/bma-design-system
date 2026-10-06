@@ -13026,8 +13026,8 @@ Top10Short) ยังอยู่ในกลุ่ม graph ตามเดิ�
 | StatTile · StatTileRow | `stat-tile` | ตัวเลข KPI + ป้าย (+ หน่วย โทน hint) กริด 2/3/4 · ตัวเลขใช้ `--type-family-heading-content` ไม่ใช่ Mitr (เลข 0 มีขีดทับ 25 ส.ค. 69) | `label` `value` `unit` `tone` (default/info/warning/danger) `hint` · Row: `columns` `framed` |
 | ChartPanel · ChartsRow · EmptyChartNote | `chart-panel` | กล่องกราฟหนึ่งใบ (deep-link `#id` + กะพริบ) · แถวกล่องเท่ากัน · สถานะว่างมาตรฐาน | `id` `title` `hint` `actions` `alignContent` (center/start) `framed` · Empty: `text` `hint` `icon` |
 | SummaryBannerCard | `summary-banner-card` | การ์ดสรุปแถวแรกใต้หัวหน้าจอ = WidgetCard + `SummaryCardsBar variant=banner` (14 ก.ย. 69) | `cards` (รูปแบบ SummaryCardsBar) `columns` |
-| ReportGroupCard · SectionTopic | `report-group-card` | หนึ่งกลุ่ม = หนึ่งข้อ TOR · ไม่มีการ์ดขาวรอง ไม่มีหัวกลุ่ม/ปุ่มนำส่งออกรายกลุ่ม (14 ก.ย. 69) แถวหัวโผล่เฉพาะเมื่อมี `extraActions` · ลูก `selfCarded` ไม่ถูกห่อซ้ำ | `title` `subtitle` `extraActions` · Topic: `title` `subtitle` `trailing` |
-| ReportToolbar | `report-toolbar` | แถบเครื่องมือตรึงใต้ SubNav ด้วย `--mih-queue-sticky-under-tabs` (ห้ามเขียน px) | `children` `trailing` |
+| ReportGroupCard · SectionTopic | `report-group-card` | หนึ่งกลุ่ม = หนึ่งข้อ TOR · ไม่มีการ์ดขาวรอง ไม่มีหัวกลุ่ม/ปุ่มนำส่งออกรายกลุ่ม (14 ก.ย. 69) แถวหัวโผล่เฉพาะเมื่อมี `extraActions` · ลูก `selfCarded` ไม่ถูกห่อซ้ำ | `title` `subtitle` `extraActions` `gap` (ระยะระหว่างลูก · ค่าเริ่มต้น `--dim-space-400`) · Topic: `title` `subtitle` `trailing` |
+| ReportToolbar | `report-toolbar` | แถบเครื่องมือตรึงใต้ SubNav ด้วย `--mih-queue-sticky-under-tabs` (ห้ามเขียน px) | `children` `trailing` `framed` (false เมื่ออยู่ในการ์ดอื่นแล้ว) |
 
 | Token (shell) | ค่า | ใช้ที่ |
 |---|---|---|
@@ -13545,7 +13545,7 @@ Props: `scopeLabel`
 
 #### 6.37.71 ReportToolbar (report-toolbar)
 
-แถบเครื่องมือของหน้ารายงาน (ชิปช่วง/ตัวกรอง ซ้าย · ปุ่ม ขวา) เป็นการ์ดบางที่ตรึงใต้ SubNav ด้วยค่า sticky เดียวกับหัวตารางของ QueuePageShell — ห้ามเขียน px เอง children · trailing.
+แถบเครื่องมือของหน้ารายงาน (ชิปช่วง/ตัวกรอง ซ้าย · ปุ่ม ขวา) เป็นการ์ดบางที่ตรึงใต้ SubNav ด้วยค่า sticky เดียวกับหัวตารางของ QueuePageShell — ห้ามเขียน px เอง children · trailing · framed (false เมื่ออยู่ในการ์ดอื่นแล้ว — ถอดขอบ/เงา/ระยะข้าง).
 
 ไฟล์: `src/pages/dashboard/dashboardReportKit.jsx` · demo: `/components/report-toolbar`
 
