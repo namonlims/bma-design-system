@@ -3895,7 +3895,7 @@ Subtle colorful badges use a light tinted surface with a matching icon dot. No b
 |------|--------|-------|-----------|-----------|-----|------|--------|
 | `default` | 32px (`dimension.size.600`) | `typography.size.sm` 14 Medium | 12px (`space.300`) | 4px (`space.100`) | 8 | 16 | Figma DS |
 | `small` | 24px (`dimension.size.500`) | `typography.size.xs` 12 Medium | 8px (`space.200`) | 4px (`space.100`) | 6 | 16 | Figma DS |
-| `xsmall` | 20px (`dimension.size.400`) | `typography.size.xxs` 10 Medium | 6px (`space.150`) | 2px (`space.050`) | 4 | 12 | Code-side (not in Figma DS) — inline tag next to body text, e.g. the "ใหม่" new-patient tag after a worklist name (20 ก.ย. 69) |
+| `xsmall` | 20px (`dimension.size.400`) | `typography.size.xxs` 10 Medium | 6px (`space.150`) | 2px (`space.050`) | 4 | 12 | Code-side (not in Figma DS) — inline tag next to body text, e.g. the "ใหม่" new-patient tag after a worklist name (20 ก.ย. 69) — shared as `NewPatientTag` (`src/components/badge/NewPatientTag.jsx`), replaces every worklist "ประเภท รายใหม่/รายเก่า" column (8 ต.ค. 69) |
 
 **Token Mapping — Colorful Badge Subtle**
 
