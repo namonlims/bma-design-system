@@ -5778,6 +5778,45 @@ Shadow:
     └─ color/shadow/050 → rgba(100,116,139,.10)  [0 4px 4px]
 ```
 
+#### 6.8.8 Content Rule — Hierarchy + Grouping + Alignment (บังคับทุก tooltip)
+
+> ทุก tooltip / hover popover ที่สร้างหรือแก้ **ต้องจัด hierarchy และ alignment เสมอ** — ห้ามเป็นข้อความเรียงยาวบรรทัดเดียว
+> (ผู้ใช้สั่ง 7 ต.ค. 69 · ย้ำ 8 ต.ค. 69 "ในทุกๆ tooltip จะต้องจัด Alignment และ Hierarchy เสมอ")
+> Component: [`TooltipGroups`](src/components/tooltip/TooltipGroups.jsx) — ใช้ตัวนี้เป็นเนื้อหาของ `<Tooltip variant='light'>`
+
+| ระดับ | สไตล์ (token) | กติกา |
+|---|---|---|
+| 1. Title | `--type-size-sm` · `--type-weight-medium` · `--text-content-default` | ชื่อสิ่งที่ hover — สั้น เป็นคำนาม |
+| 2. Summary | `--type-size-xs` · `--text-content-secondary` | ≤ 1 บรรทัด |
+| 3. Group heading | `--type-size-xs` · `--type-weight-medium` · `--text-content-tertiary` | คั่นกลุ่มด้วยเส้น 1px `--border-neutral-quaternary` |
+| 4. Label / Value rows | grid `max-content minmax(0,1fr)` · label tertiary · value default · `--type-size-xs` | ป้ายทุกแถวตรงคอลัมน์เดียวกัน (ข้ามกลุ่มด้วย) · ค่าเป็นวลี ไม่ใช่ประโยค |
+
+- **Alignment:** ชิดซ้ายทั้งหมด · คอลัมน์ป้ายกว้างเท่าป้ายที่ยาวที่สุดของทั้งก้อน → ค่าทุกแถวตรงแนวเดียวกัน
+- **สั้น:** หลายค่าในแถวเดียวคั่นด้วย ` · ` · ตัดสิ่งที่ไม่จำเป็นต่อการเข้าใจสิ่งที่ hover
+- **Chrome:** `variant='light'` (ขาว) เสมอ
+- **ใน `Table`:** `content` ต้องคงที่ — สร้าง element ระดับโมดูล หรือ `useMemo` (ไม่สร้าง JSX ใหม่ทุก render)
+
+```
+❌  COPD — โรคถุงลมโป่งพอง · J44.9 — COPD, unspecified
+
+✅  COPD                       ← title
+    ผู้ป่วยโรคถุงลมโป่งพอง         ← summary
+    ───────────────
+    รหัสวินิจฉัย                  ← group heading
+    ICD-10     J44.9           ← label / value (ตรงแนว)
+    ชื่อรหัส     COPD, unspecified
+```
+
+```jsx
+<Tooltip variant='light' content={
+  <TooltipGroups
+    title='COPD'
+    summary='ผู้ป่วยโรคถุงลมโป่งพอง'
+    groups={[{ title: 'รหัสวินิจฉัย', rows: [['ICD-10', 'J44.9'], ['ชื่อรหัส', 'COPD, unspecified']] }]}
+  />
+}>…</Tooltip>
+```
+
 ---
 
 ### 6.9 Accordion
