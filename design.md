@@ -6,6 +6,43 @@
 >
 > Auto-generated from Figma Variable exports. Last updated: July 2026 (§1–§4 synced from tokens/figma/ (primitive · brand · breakpoint · semantic))
 
+## 0. Working Rules (บังคับทุกงาน UI — ไม่ต้องสั่งซ้ำ)
+
+### 0.1 Component + Hierarchy — ทุกงานที่สร้างออกมา
+
+> ทุกหน้า / ป๊อปอัป / การ์ด / ฟอร์ม / ตาราง ที่สร้างหรือแก้ **ต้องประกอบจาก component กลาง และจัด hierarchy ให้ชัดเสมอ**
+> (ผู้ใช้สั่ง 8 ต.ค. 69 "ทุกการสร้างงานออกมา จะต้องมีการจัด component และ hierarchy")
+
+**Component**
+
+| กติกา | รายละเอียด |
+|---|---|
+| ใช้ของกลางก่อน | ค้นใน `src/components` + §5–§6 + `ComponentsLibraryPage` ก่อนเขียนใหม่ — `Table` · `Popup` · `TabBar` · `PrimarySearch` · `FilterDropdown` · `Select` · `InputField` · `ColorfulBadge` / `StatusBadge` · `Brand*Button` · `CollapsibleCard` · `Tooltip` (`TooltipGroups`) ฯลฯ |
+| ไม่วาดซ้ำ | ห้ามสร้างปุ่ม / แท็บ / ป้าย / ช่องกรอก / ตารางเองด้วย `<div>` + style เมื่อมีตัวกลางอยู่แล้ว |
+| ซ้ำ ≥ 2 ที่ = แยก component | ชิ้นที่ใช้มากกว่าหนึ่งหน้า แยกเป็น component (ไม่ copy-paste) แล้วลงทะเบียนใน design.md §6 + `ComponentsLibraryPage` |
+| ค่าทุกตัวมาจาก token | สี / ระยะ / ขนาดตัวอักษร / มุม / เงา — §1–§4 (ดู `CLAUDE.md`) |
+
+**Hierarchy**
+
+| ระดับ | ใช้ทำอะไร | Token |
+|---|---|---|
+| 1. หัวข้อ (การ์ด / หัวข้อหลัก) | บอกว่าส่วนนี้คืออะไร | `--type-size-base` · `--type-weight-bold` · `--text-brandPrimary-default` |
+| 2. คำอธิบาย / สรุป 1 บรรทัด | บริบทสั้น ๆ ใต้หัวข้อ | `--type-size-xs`–`sm` · `--text-content-secondary` / `tertiary` |
+| 3. กลุ่มย่อย | รวมข้อมูลที่เกี่ยวกัน มีหัวกลุ่มเล็ก + เส้นคั่น | หัวกลุ่ม `--type-size-sm` medium · เส้น `--border-neutral-quaternary` |
+| 4. ป้าย / ค่า | label ซ้าย (เทา) — value ขวา (เข้ม) เรียงคอลัมน์ตรงกัน | label `--text-input-label` / `tertiary` · value `--text-content-default` |
+
+- **ระยะห่างบอกลำดับ:** ระหว่างกลุ่ม `--dim-space-600` (24) > ในกลุ่ม `--dim-space-400` (16) > ป้าย↔ค่า `--dim-space-200` (8)
+- **ปุ่มบอกลำดับ:** การกระทำหลัก 1 ปุ่ม = Fill · รอง = Outline · ที่เหลือ = Ghost / ⋮ (§5.10)
+- **ข้อความยาว:** แยกเป็นรายการ / ตาราง / label-value — ไม่เขียนเป็นประโยคยาวต่อกัน (ทูลทิปดู §6.8.8)
+- **ข้อมูลอ่านอย่างเดียว vs ช่องกรอก:** แยกให้เห็นชัด (ข้อความบนพื้นอ่อน vs ช่อง input)
+- **ชิดซ้าย · คอลัมน์ตรง:** ป้ายในกลุ่มเดียวกันเริ่มที่แนวเดียวกัน · แถวเดียวกันสูงเท่ากัน
+
+### 0.2 Collapse / Expand — กางได้ทีละอัน
+
+ดู §6.9.0 — ทุกการพับ-กางในกลุ่มเดียวกัน กางอันใหม่ อันเดิมหุบ (`useAccordionItem`)
+
+---
+
 ## 1. Primitive Tokens
 
 Primitive tokens are the raw, mode-independent values. They are the source of truth referenced by all other layers.
@@ -5823,6 +5860,35 @@ Shadow:
 
 **Figma node:** `292-21` · Library: **MIH Design System Foundation**  
 **CSS prefix:** `acc-` · **Behavior reference:** Tailwind UI Disclosure (click-to-toggle, single-open per group)
+
+---
+
+#### 6.9.0 Behavior Rule — กางได้ทีละอัน (บังคับทุกการพับ-กาง)
+
+> ทุกการ์ด / หัวข้อ / แถวตาราง / รายการที่พับ-กางได้ **ในกลุ่มเดียวกันกางได้ทีละอัน** — กางอันใหม่ อันที่กางอยู่ก่อนหุบเอง
+> (ผู้ใช้สั่ง 8 ต.ค. 69 "ถ้าหาก list อื่น expand แล้ว อันที่เปิดไว้ก่อนหน้าต้อง hide")
+
+| กติกา | รายละเอียด |
+|---|---|
+| ทีละอัน | กางอันใหม่ → อันเดิมในกลุ่มหุบ · กดอันที่กางอยู่ → หุบ (ไม่มีอันไหนกางก็ได้) |
+| เปิดหน้าครั้งแรก | กางเฉพาะอันแรกที่ขอ `defaultOpen` อันอื่นหุบ · หน้าที่ตั้งต้นหุบ (`defaultOpen={false}`) หุบทุกอัน |
+| กลุ่ม | การ์ดชนิดเดียวกันบนหน้าเป็นกลุ่มเดียวกันอัตโนมัติ · ชนิดต่างกัน / ซ้อนกันคนละชั้น = คนละกลุ่ม |
+| แยกกลุ่ม | `<AccordionGroup>` ครอบ — เช่นการ์ดในป๊อปอัปไม่ไปหุบการ์ดบนหน้าหลัง |
+| ข้อยกเว้น | `<AccordionGroup multiple>` กางพร้อมกันได้ — ใช้เฉพาะเมื่อผู้ใช้ขอ |
+| กดได้ทั้งแถว | กดที่ใดก็ได้บนแถวหัวข้อเพื่อพับ-กาง · ลูกศร `expand_more` / `expand_less` คงไว้ให้คีย์บอร์ด/โปรแกรมอ่านจอ (`aria-expanded`) |
+| ค่าไม่หาย | หุบแล้วค่าที่กรอกในฟอร์มยังอยู่ (ซ่อน ไม่ล้าง state) |
+
+**Implementation** — ห้ามเขียน `useState(open)` เองในการ์ดพับ-กางใหม่ ใช้ hook กลาง
+[`src/components/util/useAccordionItem.js`](src/components/util/useAccordionItem.js):
+
+```jsx
+import useAccordionItem, { AccordionGroup } from '@/components/util/useAccordionItem';
+const [open, toggle, setOpen] = useAccordionItem('MyCollapsibleCard', defaultOpen);
+```
+
+ต่อแล้วใน: `CollapsibleCard` · `CareStepCard` · `AssessmentSection` · `PharmacyCollapsibleCard` · `TableExp` (แถวกาง)
+· แถวกางของ `Table` ที่ผู้เรียกคุม state เอง (`isRowExpanded`) ใช้ key เดียว — `prev === k ? null : k` หรือ
+`prev.has(k) ? new Set() : new Set([k])` (แบบ `useVisitHistoryExpand`) ห้าม `next.add(k)` สะสมหลายแถว
 
 ---
 
