@@ -6844,6 +6844,7 @@ top           = max(8, contentBottom + 4)
 | `minChars` | `number` | `3` | Use `1` for digit-led phrase pools (`DURATION_SUGGESTIONS`). |
 | `rows` | `number` | `3` | Forwarded to the underlying `Textarea`. |
 | `voice` | `boolean` | `false` | Swap inner field for `VoiceTextarea`; `height` / `minHeight` become forwarded. |
+| `expandable` | `boolean` | `false` | With `voice`: toolbar button ขยายกล่อง / ย่อกล่อง (unfold_more ↔ unfold_less) toggles height × 2.5 — see §6.37.26. |
 | `popoverWidth` | `number` | `591` | Clamped to viewport; widens with the screen. |
 | `popoverAriaLabel` | `string` | `'คำแนะนำ'` | Used as the listbox label for screen readers. |
 
@@ -13332,6 +13333,9 @@ Input with trailing mic button (Figma 3026:23094). Click the mic to dictate — 
 
 Multiline input (Figma 268:26). 5 states (default · hover · filled · error · disabled); min-height 96px. Vertical resize handle by default. Tables below mirror the Figma variant matrix.
 
+**ขยายกล่อง / ย่อกล่อง (`expandable`, 11 ต.ค. 69).** ปุ่ม `NeutralSubdueIconButton` ghost sm ชิดขวาสุดของแถบเครื่องมือ — `unfold_more` "ขยายกล่อง" ↔ `unfold_less` "ย่อกล่อง" (Tooltip light · `aria-expanded`) · ความสูงตอนขยาย = `expandedHeight` หรือ 2.5 × `height` · ใช้กับช่องข้อความยาว เช่น "คำสั่งแพทย์เพิ่มเติม (Doctor Order)" · `SuggestibleTextarea voice expandable` ส่งต่อให้เอง
+
+Props (เพิ่ม): `expandable` (default `false`) · `expandedHeight`  
 ไฟล์: `src/components/forms/VoiceTextarea.jsx` · demo: `/components/voice-textarea`
 
 **examination**
