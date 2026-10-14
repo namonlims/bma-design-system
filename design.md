@@ -4625,6 +4625,8 @@ Row buttons set `className='flex-1 min-w-0'` and `style={{ minWidth: 0, maxWidth
 
 **Nodes:** `325-3609` (day cell states) · `308-3` (Default calendar) · Figma library: **MIH Design System Foundation / Semantic**
 
+**Day marker (2026-10-14):** optional prop `dayMarker={(date) => color | null}` draws an 8px dot (`--dim-size-100`) under the day number for days that have items (white on the selected day). Used by ปฏิทินติดตาม (งานสุขภาพจิตทั่วไป) — color = status token (warning · success · brand).
+
 #### 6.2.1 Color Tokens
 
 | CSS Variable | Figma Semantic Token | Primitive | Hex | Usage |
@@ -13867,6 +13869,60 @@ Template "รายงานงาน…ของ[บทบาท]" ในแด
 - ชื่อ/เส้นทาง/key ต่อบทบาท: `src/data/clinicDoctorReportMeta.js` (nav · route · สิทธิ์ต่อสายอัตโนมัติ)
 - ข้อมูล: `dashboardClinicDoctors.js` · `dashboardNurseReports.js` · `dashboardStaffReports.js` · หน้า `ClinicDoctorReportPage.jsx`
 - **path ห้ามขึ้นต้นด้วย path รายงานกลาง** (`/dashboard/reports/finance` · `/pharmacy` · `/anc` …) — activeKey และ guard ใช้ `startsWith`
+
+### 6.40 DocumentBookViewer — ป๊อปอัปอ่านเอกสาร/คู่มือ/สมุด (ลงทะเบียน 14 ต.ค. 69)
+
+ป๊อปอัปกลางสำหรับ **ทุกเอกสารที่เปิดอ่านในระบบ** (สมุดบันทึกสุขภาพแม่และเด็ก · คู่มือ DSPM/TEDA4I/DAIM · แผนผัง/โปสเตอร์)
+หน้าตาตั้งต้นจากสมุดบันทึกสุขภาพแม่และเด็ก (`/treat/anc/record`) — เอกสารใหม่ห้ามทำป๊อปอัปอ่าน PDF เอง
+ไฟล์: `src/components/document/DocumentBookViewer.jsx` · demo: `/components/document-book-viewer` · ไม่มี token ใหม่
+
+```
+┌──────────────────────────────────────────────────────────────────────┐
+│ ชื่อเอกสาร (Popup title)                                          ✕ │
+│ หน้า 1 จาก 68 หน้า · กดปุ่ม ‹ › หรือลูกศรซ้าย/ขวาบนคีย์บอร์ดเพื่อพลิกหน้า │
+│                                                                      │
+│  (‹)            ┌──────────── หน้าเอกสาร ────────────┐          (›)  │
+│                 └────────────────────────────────────┘               │
+├──────────────────────────────────────────────────────────────────────┤
+│              ‹  หน้า [ 1 ] / 68  ›      [ส่งอีเมล] [ดาวน์โหลด PDF] [ปิด] │
+└──────────────────────────────────────────────────────────────────────┘
+```
+
+| ส่วน | สเปก |
+|---|---|
+| ป๊อปอัป | `Popup size='extraLarge'` · `bodyScrollable={false}` (พื้นที่อ่านเต็มความสูงที่เหลือ) |
+| หัว | title = ชื่อเอกสาร · subtitle = `หน้า X(–Y) จาก N หน้า · กดปุ่ม ‹ › …` (เอกสารหน้าเดียวไม่มี subtitle) |
+| หน้าเอกสาร | สูงเต็มช่อง `object-fit: contain` · พื้น `--surface-card-100` · เงา `--shadow-drop-bottom-400` · หน้าคู่ห่าง `--dim-space-050` |
+| ปุ่ม ‹ › ข้างหน้า | วงกลม `--dim-size-1000` (48) · `--dim-radius-full` · ขอบ `--border-neutral-quaternary` · ไอคอน `chevron_left/right` 28 `--icon-brandPrimary-default` (ปิด = `--icon-neutral-tertiary`) · เงา `--shadow-drop-bottom-200` · hover ขยาย 1.08 + พื้น `--surface-brandPrimary-quaternary` + ขอบ `--border-brandPrimary-tertiary` + เงา 400 · กดยุบ 0.94 |
+| pagination ท้าย | กึ่งกลาง: ‹ (ghost 40×40 `--dim-radius-200`) · "หน้า" · `InputField md` กว้าง `--dim-size-1400` (พิมพ์เลขแล้ว Enter) · "/ N" · › |
+| ปุ่มขวา | `NeutralSubdueButton outline` "ส่งอีเมล" (mail) → ป๊อปอัปเล็กกรอกอีเมล → `useSuccessPopup` · `BrandSubdueButton fill` "ดาวน์โหลด PDF" (download) · `NeutralSubdueButton outline` "ปิด" |
+
+Props: `open` · `onClose` · `title` · แหล่งหน้า **อย่างใดอย่างหนึ่ง** `pdfSrc` (วาดด้วย pdf.js โหลด lazy) หรือ `pageCount` + `pageSrc(n)` (ภาพเรนเดอร์ล่วงหน้า — เร็วกว่า ใช้กับเล่มที่เปิดบ่อย) ·
+`layout` `'book'` (ค่าเริ่มต้น: จอ ≥ 1024 ปกเดี่ยวแล้วกางคู่ 2–3 · 4–5 …) | `'single'` (ทีละหน้า — หน้าแนวนอนอย่าง DSPM) · `startPage` ·
+`downloadHref` (ค่าเริ่มต้น `pdfSrc`) · `downloadName` · `downloadLabel` · `email` (false = ไม่มีปุ่มส่งอีเมล) · `defaultEmail` · `patientName`
+
+Responsive: ≥ 1024 ท้ายป๊อปอัป 3 ช่อง (ว่าง · pagination · ปุ่ม) · < 1024 ทีละหน้า + pagination แถวบน ปุ่มแถวล่าง · < 768 ซ่อนปุ่ม ‹ › ข้างหน้า (ใช้ pagination)
+
+ผู้ใช้ (wrapper บาง ๆ ห้ามแตกหน้าตาเอง):
+- `MchHandbookViewer` (`src/pages/treat/anc/`) — สมุดบันทึกสุขภาพแม่และเด็ก 68 หน้า ภาพ `public/documents/anc/mch-book/pNN.jpg`
+- `ManualBookPopup` (`src/components/document/`) — คลังความรู้ (PDF ผ่าน pdf.js · ไฟล์ภาพ = หน้าเดียว "ดาวน์โหลดภาพ")
+- `DspmManualMenuButton` (`MentalHealthKnowledgeMenu.jsx`) — ⋮ หน้าตรวจคลินิกสุขภาพจิต กลุ่ม "แบบฟอร์มและเอกสาร" → คู่มือเฝ้าระวังและส่งเสริมพัฒนาการเด็กปฐมวัย (DSPM) `layout='single'`
+
+ปุ่มเปิดเอกสารใน ⋮ = `BrandSubdueButton outline sm` ไอคอน `menu_book` + ชื่อเอกสาร (ไม่ใส่ตัวย่อถ้าชื่อยาวพอ)
+
+
+### 6.41 SelectedItemsList — รายการที่เลือกจากดรอปดาวน์หลายข้อ (ลงทะเบียน 14 ต.ค. 69)
+
+ใช้คู่กับ `Select multiple` ทุกที่ที่ต้องเห็นของที่เลือกชัด ๆ (ประเภทการปรึกษา · ให้คำแนะนำหลัง 9Q/8Q)
+ไฟล์: `src/components/forms/SelectedItemsList.jsx` · demo: `/components/selected-items-list` · ไม่มี token ใหม่
+
+| ส่วน | สเปก |
+|---|---|
+| กล่อง | พื้น `--surface-brandPrimary-quaternary` · มุม `--dim-radius-300` · padding `--dim-space-200` `--dim-space-300` `--dim-space-200` `--dim-space-400` |
+| แถว | สูงขั้นต่ำ `--dim-size-700` · วงกลม 16 `--icon-positive-success` + ถูกขาว · ชื่อ sm `--text-content-default` |
+| ลบ | `NeutralSubdueIconButton` ghost sm `delete` ชิดขวา · `locked` (ข้อบังคับเลือก) = ข้อความ xs tertiary "บังคับเลือก" แทนปุ่มลบ |
+
+Props: `items` · `onRemove(item)` · `locked` · `readOnly` · `ariaLabel`
 
 ---
 
