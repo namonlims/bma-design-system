@@ -35,7 +35,18 @@
 - **ปุ่มบอกลำดับ:** การกระทำหลัก 1 ปุ่ม = Fill · รอง = Outline · ที่เหลือ = Ghost / ⋮ (§5.10)
 - **ข้อความยาว:** แยกเป็นรายการ / ตาราง / label-value — ไม่เขียนเป็นประโยคยาวต่อกัน (ทูลทิปดู §6.8.8)
 - **ข้อมูลอ่านอย่างเดียว vs ช่องกรอก:** แยกให้เห็นชัด (ข้อความบนพื้นอ่อน vs ช่อง input)
-- **ชิดซ้าย · คอลัมน์ตรง:** ป้ายในกลุ่มเดียวกันเริ่มที่แนวเดียวกัน · แถวเดียวกันสูงเท่ากัน
+**Alignment** (ผู้ใช้สั่ง 17 ต.ค. 69 "เวลาออกแบบต้องอ้างอิง Hierarchy และมี Alignment เพื่อความใช้งานง่าย อ่านง่าย")
+
+| กติกา | รายละเอียด |
+|---|---|
+| ขอบซ้ายเดียวต่อส่วน | หัวข้อ · สรุป · หัวกลุ่ม · ป้าย ในการ์ด/ส่วนเดียวกันเริ่มที่แนวเดียวกัน ไม่เยื้องเอง |
+| ค่าตรงคอลัมน์ | label/value ใช้ grid `max-content minmax(0,1fr)` หรือคอลัมน์ป้ายกว้างคงที่ — ค่าทุกแถวในการ์ดเดียวกันเริ่มที่แนวเดียวกัน แม้อยู่ต่างกลุ่ม |
+| แถวเดียวกันสูง/กว้างเท่ากัน | ช่องกรอก · ปุ่ม · การ์ดในแถวเดียวกันสูงเท่ากัน · ไอคอนกับข้อความกึ่งกลางแนวตั้ง |
+| ตัวเลข | ในตารางชิดขวา + `tabular-nums` · หน่วยต่อท้ายตัวเลขเดียวกันทุกแถว |
+| ปุ่ม | ปุ่มของส่วนอยู่ตำแหน่งเดิมทุกหน้า (หัวการ์ดขวา / ท้ายป๊อปอัปขวา) · ปุ่มหลักอยู่ขวาสุด |
+| จัดกลางเฉพาะ | empty state · ตัวเลข KPI เดี่ยว · ภาพประกอบ — นอกนั้นชิดซ้าย |
+| จอแคบ | grid ยุบ 4 → 2 → 1 คอลัมน์โดยขอบซ้ายยังตรงกัน · label/value จอ < 640 ซ้อนบน-ล่าง |
+| ตรวจก่อนส่ง | ดูภาพหน้าจอ 1440 · 390 ว่าแนวขอบซ้ายน้อยที่สุดและค่าทุกแถวตรงคอลัมน์ |
 
 ### 0.2 Collapse / Expand — กางได้ทีละอัน
 
@@ -753,6 +764,7 @@ badge fill itself is a 141° cyan gradient (token exception, inline).
 | `dimension.size.2700` | `448` |
 | `dimension.size.2800` | `512` |
 | `dimension.size.2900` | `640` |
+| `dimension.size.2950` | `720` |
 | `dimension.size.3000` | `768` |
 | `dimension.size.3100` | `960` |
 | `dimension.size.3200` | `1200` |
@@ -762,6 +774,12 @@ badge fill itself is a 141° cyan gradient (token exception, inline).
 | Token | Value |
 | --- | --- |
 | `dimension.blur.100` | `4` |
+
+#### Opacity
+
+| Token | CSS variable | Value | ใช้กับ |
+| --- | --- | --- | --- |
+| `opacity.disabled` | `--opacity-disabled` | `0.5` | ตัวคุมที่ปิดใช้งานซึ่งไม่มีสี disabled ของตัวเอง (XCloseButton · ปุ่มไอคอน) |
 
 #### Depth / Z-index
 
@@ -813,7 +831,7 @@ Effect styles define shadows and blurs. Multi-layer effects are separated by `+`
 | `effect.drop-shadow-top.400` | `drop_shadow blur=4px x=0 y=-4 #64748B1A` + `drop_shadow blur=32px x=0 y=-16 #64748B26` |
 | `effect.drop-shadow-top.500` | `drop_shadow blur=4px x=0 y=-4 #64748B1A` + `drop_shadow blur=16px x=0 y=-16 #64748B26` |
 | `effect.drop-shadow-top.600` | `drop_shadow blur=32px x=0 y=-16 #64748B40` |
-| `effect.drop-shadow-bottom.100` | `drop_shadow blur=4px x=0 y=1 #64748B1A` |
+| `effect.drop-shadow-bottom.100` | `drop_shadow blur=4px x=0 y=1 #64748B1A` → `--shadow-drop-bottom-100` · alias `--shadow-avatar-ring` |
 | `effect.drop-shadow-bottom.200` | `drop_shadow blur=4px x=0 y=1 #64748B1A` + `drop_shadow blur=8px x=0 y=1 #64748B26` |
 | `effect.drop-shadow-bottom.300` | `drop_shadow blur=4px x=0 y=4 #64748B1A` + `drop_shadow blur=4px x=0 y=4 #64748B26` |
 | `effect.drop-shadow-bottom.400` | `drop_shadow blur=4px x=0 y=4 #64748B1A` + `drop_shadow blur=32px x=0 y=16 #64748B26` |
@@ -13923,6 +13941,142 @@ Responsive: ≥ 1024 ท้ายป๊อปอัป 3 ช่อง (ว่า
 | ลบ | `NeutralSubdueIconButton` ghost sm `delete` ชิดขวา · `locked` (ข้อบังคับเลือก) = ข้อความ xs tertiary "บังคับเลือก" แทนปุ่มลบ |
 
 Props: `items` · `onRemove(item)` · `locked` · `readOnly` · `ariaLabel`
+
+### 6.42 Product Components ชุด 3 (ลงทะเบียน 17 ต.ค. 69)
+
+ตรวจ `src/components` ทั้งหมด 590 ไฟล์เทียบ design.md เมื่อ 17 ต.ค. 69 — ใช้ซ้ำ ≥ 2 ไฟล์แต่ยังไม่มีในเอกสาร 226 ตัว
+ส่วนใหญ่เป็นฟอร์ม/ป๊อปอัปเฉพาะโมดูล (คัดกรอง · ความยินยอม · คลังศูนย์ · ห้องยา) ซึ่งไม่ใช่ design system
+ชุดนี้คัดเฉพาะ **ตัว UI ทั่วไปที่ใช้ข้ามโมดูล** 16 ตัว — ทุกตัว alias token ของ Foundation ไม่มี token ใหม่
+และมี demo ที่ `/components/<slug>` · "ใช้ใน" = จำนวนไฟล์ใน `src/` ที่ import ณ วันที่ลงทะเบียน
+
+| # | Component | slug | ไฟล์ | ใช้ใน | ประกอบจาก |
+|---|---|---|---|---:|---|
+| 6.42.1 | LottieIllustration | `lottie-illustration` | `src/components/illustrations/LottieIllustration.jsx` | 31 | lottie-web (svg) |
+| 6.42.2 | StaffProfileAvatar | `staff-profile-avatar` | `src/components/appointment/StaffProfileAvatar.jsx` | 20 | Icon · `--surface-profile-avatar-*` |
+| 6.42.3 | DoctorProfileAvatar | `doctor-profile-avatar` | `src/components/layout/DoctorProfileAvatar.jsx` | 13 | `--surface-profile-avatar-secondary` |
+| 6.42.4 | XCloseButton | `x-close-button` | `src/components/button/XCloseButton.jsx` | 7 | Icon `close` · neutral button tokens |
+| 6.42.5 | SelectableOptionCard | `selectable-option-card` | `src/components/card/SelectableOptionCard.jsx` | 7 | Sym · brandPrimary border · `--shadow-card` |
+| 6.42.6 | OtpInput | `otp-input` | `src/components/forms/OtpInput.jsx` | 6 | FieldShell · input tokens |
+| 6.42.7 | PainScaleCards | `pain-scale-cards` | `src/components/forms/PainScaleCards.jsx` | 6 | SelectableCardButton · MaterialSymbol |
+| 6.42.8 | UploadProgressBar | `upload-progress-bar` | `src/components/forms/UploadProgressBar.jsx` | 4 | formbuilder surface/border · brand fill |
+| 6.42.9 | InlineNameEditor | `inline-name-editor` | `src/components/forms/InlineNameEditor.jsx` | 2 | InputField · BrandIconButton · NeutralSubdueIconButton |
+| 6.42.10 | TableExpandButton | `table-expand-button` | `src/components/table/TableExpandButton.jsx` | 6 | NeutralSubdueIconButton · Tooltip (light) · Popup large |
+| 6.42.11 | TablePaginationBar | `table-pagination-bar` | `src/components/table/TablePaginationBar.jsx` | 4 | Pagination (§6.19) |
+| 6.42.12 | OverflowActionRow | `overflow-action-row` | `src/components/layout/OverflowActionRow.jsx` | 9 | BrandSubdueIconButton ⋮ · list tokens |
+| 6.42.13 | ViewOnlyRegion | `view-only-region` | `src/components/layout/ViewOnlyRegion.jsx` | 9 | ห่อฟอร์มเดิม (CSS เท่านั้น) |
+| 6.42.14 | PageHeaderInfoPanel | `page-header-info-panel` | `src/components/layout/PageHeaderInfoPanel.jsx` | 3 | `--surface-card-100` · `--shadow-brand-drop-bottom-100` |
+| 6.42.15 | WizardMorphHeader | `wizard-morph-header` | `src/components/layout/WizardMorphHeader.jsx` | 10 | StepMorphHeader · StepProgress |
+| 6.42.16 | RecordWizardMorphBand | `record-wizard-morph-band` | `src/components/layout/RecordWizardMorphBand.jsx` | 14 | PageHeaderInfoPanel + WizardMorphHeader |
+
+ไม่ลงทะเบียน (เฉพาะโมดูล — เอกสารอยู่ใน `.claude/rules/*` ของโมดูลนั้น): ฟอร์มคัดกรอง (`screening/*`) · ความยินยอม
+(`consent/*`) · คลังศูนย์ (`centerWarehouse/*`) · ป๊อปอัปลบ/ยืนยันเฉพาะงาน · `InternalReferPopup` (§ flow ส่งต่อ) ·
+context/helper ที่ไม่ใช่ UI (`ButtonSizeAliasContext` · `FormBuilderContext` · `referNoteColumn` · `TelemedCallProvider`)
+
+#### 6.42.1 LottieIllustration (lottie-illustration)
+
+ภาพเคลื่อนไหวประกอบ empty state / success — ส่ง `animationData` เป็น JSON ที่ import จาก `src/assets/illustrations/`
+(ไม่ใช้ `path:` เพราะ HMR cleanup ก่อน fetch เสร็จ) · renderer svg · `aria-hidden` เว้นแต่ส่ง `ariaLabel`
+Props: `animationData` · `size` (112) · `loop` · `autoplay` · `ariaLabel` · `className` · `style`
+
+#### 6.42.2 StaffProfileAvatar (staff-profile-avatar)
+
+รูปโปรไฟล์บุคลากรวงกลม (Figma Appointment 1:38622) — รูปจาก `staff.avatarSrc` หรือรูปตามบทบาท/`id`
+โหลดรูปไม่ได้ → ไอคอน `person` สี `--text-brandPrimary-default` บนพื้น `--surface-profile-avatar-default`
+`ring` = ขอบ `--dim-stroke-400` `--border-image-default` + เงาบาง (ใช้บนการ์ด hero)
+Props: `staff` ({ id · name · role · avatarSrc · icon }) · `size` (36) · `ring` · `alt`
+
+#### 6.42.3 DoctorProfileAvatar (doctor-profile-avatar)
+
+รูปแพทย์ที่ login (Sidebar · Header · หัวการ์ด) วงกลม 40 พื้น `--surface-profile-avatar-secondary`
+Props: `src` · `alt` · `size` (40) · `className` · ส่งออก `DOCTOR_PROFILE_AVATAR_SRC` ให้ผู้เรียกใช้รูปเดียวกัน
+
+#### 6.42.4 XCloseButton (x-close-button)
+
+ปุ่ม × หัวป๊อปอัป (Figma Popup 104:5369) — 32×32 `--dim-size-600` · มุม `--dim-radius-200` · ไอคอน 16
+สี `--text-neutralButton-default` · hover พื้น `--background-neutral-tertiary` · ใช้ทุกป๊อปอัปที่ไม่ได้ใช้ `Popup` กลาง
+Props: `onClick` · `ariaLabel` ("ปิด") · `disabled`
+
+#### 6.42.5 SelectableOptionCard (selectable-option-card)
+
+การ์ดเลือก 1 จาก N (Figma Card / Selectable Option 227:193) — ไทล์ไอคอนวงกลม · หัวข้อ · คำอธิบาย จัดกลาง
+default ขอบ `--dim-stroke-100` `--border-brandPrimary-quaternary` + `--shadow-card` · selected ขอบ `--dim-stroke-200`
+`--border-brandPrimary-default` · `role="radio"` กดด้วยคีย์บอร์ดได้ · ใช้: ช่องทางรับ OTP · วิธีรับยา · กลุ่มคิว
+Props: `icon` | `illustration` · `title` · `description` · `selected` · `onSelect` · `disabled` · `size` (default · compact)
+
+#### 6.42.6 OtpInput (otp-input)
+
+ช่องรหัส n หลัก (Figma OTP 3649:928) — พิมพ์แล้วเลื่อนช่อง · Backspace ถอย · ←/→ · วางรหัสกระจายทุกช่อง
+สถานะ default · focus (วง `--primaryBorder-600`) · filled · error · disabled · ขนาด xl 52×60 · lg 44 · md 40
+Props: `length` (6) · `value` · `onChange` · `onComplete` · `label` · `helperText` · `error` · `size` · `secret` (PIN) · `autoFocus`
+
+#### 6.42.7 PainScaleCards (pain-scale-cards)
+
+ระดับความปวด 0–10 — `SelectableCardButton` ต่อระดับ ไอคอนหน้าคนในวงกลมไล่โทนเขียว → แดง แล้วตามด้วยเลข
+ใช้ร่วมจุดคัดกรอง OPD · เยี่ยมบ้าน · คลินิก — ห้ามวาดปุ่มระดับความปวดเอง · ค่าเข้า/ออกเป็นตัวเลข
+Props: `value` · `onChange(score)` · `disabled` · `ariaPrefix`
+
+#### 6.42.8 UploadProgressBar (upload-progress-bar)
+
+แถบความคืบหน้าอัปโหลดไฟล์ — กล่องเส้นประ `--border-formbuilder-default` บนพื้น `--surface-formbuilder-default`
+แถบสูง `--dim-size-100` · ตัวเลข % สีแบรนด์ tabular-nums · shimmer ระหว่างโหลด (ปิดเมื่อ reduced motion)
+Props: `progress` (0–100) · `label` ("กำลังอัปโหลด…") · `fileName` · `showPercent`
+
+#### 6.42.9 InlineNameEditor (inline-name-editor)
+
+แก้ชื่อในแถว — InputField medium + ✓ `BrandIconButton` fill sm + ✕ `NeutralSubdueIconButton` outline sm
+Enter / ✓ บันทึก · Esc / ✕ ยกเลิก · `onSave` คืน `false` = ไม่ผ่าน validation (อยู่ในโหมดแก้ต่อ)
+Props: `initial` · `onSave` · `onCancel` · `ariaLabel` · `minWidth`
+
+#### 6.42.10 TableExpandButton (table-expand-button)
+
+ปุ่ม `open_in_full` (outline sm + Tooltip light "ขยายตาราง") สำหรับตารางในการ์ด/คอลัมน์แคบ — เปิด Popup large
+กว้าง 1120 สูงคงที่ แสดงตารางเดียวกันเต็มคอลัมน์ · ปุ่มหลัก "ย่อกลับ"
+Props: `title` · `subtitle` · `renderTable()` · `width` · `height` · `tooltip` · `ariaLabel`
+
+#### 6.42.11 TablePaginationBar (table-pagination-bar)
+
+แถบท้ายตาราง sticky — ข้อความช่วงแถว (`tablePaginationRangeLabel`) ซ้าย · Pagination ขวา
+พื้น `--surface-card-100` · เส้นบน `--border-brandPrimary-quaternary` · ไม่แสดงเมื่อ `show=false`
+Props: `show` · `total` · `rangeStart` · `rangeEnd` · `page` · `pageCount` · `onPageChange`
+
+#### 6.42.12 OverflowActionRow (overflow-action-row)
+
+แถวปุ่มหัวแฟ้มที่ซ่อนเข้า ⋮ จากหลังมาหน้าเมื่อพื้นที่ไม่พอ (ResizeObserver) — ปุ่มในแผง ⋮ แสดงเป็นรายการแบบ ActionList
+(พื้น `--surface-list-*` สูงขั้นต่ำ 48) · ปุ่มที่มี `notify` ถูกซ่อน = จุดกระพริบบน ⋮ · `pinEnd` ชิดขวาสุดไม่ถูกซ่อน
+Props: `items` ([{ key · node · notify · menuGroup · pinEnd }]) · `menuOnlyKeys` · `size` (md · sm) · `leading`
+
+#### 6.42.13 ViewOnlyRegion (view-only-region)
+
+ห่อฟอร์มให้ดูอย่างเดียวแบบ informative — เต็มสี ไม่จาง · กดได้เฉพาะแท็บ (`role="tab"`) และจุดที่ติด `data-view-allowed`
+`asText` = แสดงเป็นข้อความล้วน: ตัวเลือกที่ไม่ได้เลือกซ่อน · ช่องกรอกถอดกรอบ · หัวข้อ sm secondary ซ้าย / คำตอบ base medium ขวา (จอ < 640 ซ้อนบน-ล่าง)
+Props: `asText` · `className` · `style` · ใช้ `data-view-hidden` ซ่อนแถวเพิ่มรายการ
+
+#### 6.42.14 PageHeaderInfoPanel (page-header-info-panel)
+
+แถบขาวใต้ SubHeader (Figma Appointment 1:38611) — padding/gap ย่อตาม `--header-morph` เมื่อเลื่อน
+Props: `dense` · `flat` (โปร่งใส ไม่มี padding เมื่อข้างในมีการ์ดของตัวเอง) · `noShadow` · `noDivider` · `tightX`
+
+#### 6.42.15 WizardMorphHeader (wizard-morph-header)
+
+หัว wizard ชื่อหน้า + StepProgress ที่ย่อตอนเลื่อน — ยังไม่เลื่อน: ชื่อกลาง stepper ล่าง · ย่อแล้ว: ชื่อซ้าย stepper ขวา
+ใช้คู่ `<QueuePageShell {...WIZARD_MORPH_SHELL_PROPS} headerInfo={…}>` · ดู skill `wizard-morph-header`
+Props: `title` · `afterTitle` · `steps` · `current` · `onStepClick` · `completedSteps` · `hideTitle` · `stepperOwnRow` · `stepperSameRow`
+
+#### 6.42.16 RecordWizardMorphBand (record-wizard-morph-band)
+
+แถบ stepper sticky ของฟอร์มบันทึก (FormShell · TreatmentFormShell · คัดกรอง OPD · จ่ายยา) = PageHeaderInfoPanel + WizardMorphHeader
+ฟอร์มบันทึกคลินิกใช้ `noShadow` · ฝังในการ์ดอื่นใช้ `flat` · ค่าคงที่ `MORPH_STICKY_BELOW_TOPBAR` / `_PATIENT` / `_TABS` สำหรับ `stickyTop`
+Props: `title` · `steps` · `current` · `onStepClick` · `completedSteps` · `hideTitle` · `sticky` · `stickyTop` · `noShadow` · `flat`
+
+#### 6.42.17 ค่า literal ที่พบระหว่างตรวจ (17 ต.ค. 69)
+
+| ไฟล์ | ค่า | ทางแก้ |
+|---|---|---|
+| PainScaleCards | วงกลมไอคอน 36 | แก้แล้ว 17 ต.ค. 69 → `--dim-size-700` |
+| DoctorProfileAvatar | พื้น `#e7f1f8` | แก้แล้ว 17 ต.ค. 69 → `--surface-profile-avatar-secondary` |
+| StaffProfileAvatar | เงาวง `0 1px 4px 0 rgba(100,116,139,0.1)` | แก้แล้ว 17 ต.ค. 69 → `--shadow-avatar-ring` (= `--shadow-drop-bottom-100`) |
+| XCloseButton | `opacity: 0.5` ตอน disabled | แก้แล้ว 17 ต.ค. 69 → `--opacity-disabled` |
+| InlineNameEditor | `maxWidth: 720` | แก้แล้ว 17 ต.ค. 69 → `--dim-size-2950` (720) |
 
 ---
 

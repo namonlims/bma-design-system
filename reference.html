@@ -747,12 +747,16 @@ function classifyToken(name, resolved){
       { slug: 'brand-subdue-icon-button',           name: 'BrandSubdueIconButton' },
       { slug: 'brand-circle-icon-button',           name: 'BrandCircleIconButton' },
       { slug: 'brand-circle-subdue-icon-button',    name: 'BrandCircleSubdueIconButton' },
+      { slug: 'brand-radius-subdue-icon-button',   name: 'BrandRadiusSubdueIconButton' },
+      { slug: 'x-close-button',                    name: 'XCloseButton' },
     ]},
     { group: 'Button — Danger', items: [
       { slug: 'danger-button',                      name: 'DangerButton' },
       { slug: 'danger-subdue-button',               name: 'DangerSubdueButton' },
       { slug: 'danger-icon-button',                 name: 'DangerIconButton' },
       { slug: 'danger-subdue-icon-button',          name: 'DangerSubdueIconButton' },
+      { slug: 'danger-circle-icon-button',         name: 'DangerCircleIconButton' },
+      { slug: 'danger-circle-subdue-icon-button',  name: 'DangerCircleSubdueIconButton' },
     ]},
     { group: 'Button — Neutral', items: [
       { slug: 'neutral-button',                     name: 'NeutralButton' },
@@ -762,6 +766,8 @@ function classifyToken(name, resolved){
     ]},
     { group: 'Button — Selectable', items: [
       { slug: 'selectable-card-button',             name: 'SelectableCardButton' },
+      { slug: 'selectable-option-card',            name: 'SelectableOptionCard' },
+      { slug: 'pain-scale-cards',                  name: 'PainScaleCards' },
     ]},
     { group: 'Checkbox & Radio & Switch', items: [
       { slug: 'checkbox',                           name: 'Checkbox' },
@@ -791,6 +797,9 @@ function classifyToken(name, resolved){
       { slug: 'patient-card',                       name: 'PatientCard' },
       { slug: 'vital-card',                         name: 'VitalCard' },
       { slug: 'vital-sign-timeline-card',           name: 'VitalSignTimelineCard' },
+      { slug: 'vital-reading-card',                name: 'VitalReadingCard' },
+      { slug: 'staff-profile-avatar',              name: 'StaffProfileAvatar' },
+      { slug: 'doctor-profile-avatar',             name: 'DoctorProfileAvatar' },
       { slug: 'inventory-card',                     name: 'InventoryCard' },
       { slug: 'patient-summary-card',               name: 'PatientSummaryCard' },
       { slug: 'queue-patient-avatar',               name: 'QueuePatientAvatar' },
@@ -862,6 +871,10 @@ function classifyToken(name, resolved){
       { slug: 'select-with-other',                 name: 'SelectWithOther' },
       { slug: 'file-upload-field',                 name: 'FileUploadField' },
       { slug: 'photo-upload-field',                name: 'PhotoUploadField' },
+      { slug: 'upload-progress-bar',               name: 'UploadProgressBar' },
+      { slug: 'otp-input',                         name: 'OtpInput' },
+      { slug: 'inline-name-editor',                name: 'InlineNameEditor' },
+      { slug: 'selected-items-list',               name: 'SelectedItemsList' },
     ]},
     { group: 'Forms', items: [
       { slug: 'allergy-form',                       name: 'AllergyForm' },
@@ -896,6 +909,10 @@ function classifyToken(name, resolved){
       { slug: 'summary-cards-bar',                  name: 'SummaryCardsBar' },
       { slug: 'scroll-to-top-button',              name: 'ScrollToTopButton' },
       { slug: 'folder-tabs-card',                  name: 'FolderTabsCard' },
+      { slug: 'lottie-illustration',               name: 'LottieIllustration' },
+      { slug: 'overflow-action-row',               name: 'OverflowActionRow' },
+      { slug: 'view-only-region',                  name: 'ViewOnlyRegion' },
+      { slug: 'page-header-info-panel',            name: 'PageHeaderInfoPanel' },
     ]},
     { group: 'Page Shells', items: [
       { slug: 'queue-page-shell',                   name: 'QueuePageShell' },
@@ -915,6 +932,7 @@ function classifyToken(name, resolved){
       { slug: 'vitals-sign-graph-dialog',           name: 'VitalsSignGraphDialog' },
       { slug: 'privacy-reveal-popup',              name: 'PrivacyRevealPopup' },
       { slug: 'result-read-popup',                 name: 'ResultReadPopup' },
+      { slug: 'document-book-viewer',              name: 'DocumentBookViewer' },
     ]},
     { group: 'List & Table', items: [
       { slug: 'action-list',                        name: 'ActionList' },
@@ -925,6 +943,8 @@ function classifyToken(name, resolved){
       { slug: 'queue-call-actions',                name: 'QueueCallActions' },
       { slug: 'wait-duration-cell',                name: 'WaitDurationCell' },
       { slug: 'approval-icon-buttons',             name: 'ApprovalIconButtons' },
+      { slug: 'table-expand-button',               name: 'TableExpandButton' },
+      { slug: 'table-pagination-bar',              name: 'TablePaginationBar' },
     ]},
     { group: 'Search', items: [
       { slug: 'primary-search',                     name: 'PrimarySearch' },
@@ -942,6 +962,8 @@ function classifyToken(name, resolved){
       { slug: 'sticky-status-tab-bar',              name: 'StickyStatusTabBar' },
       { slug: 'view-toggle',                        name: 'ViewToggle' },
       { slug: 'tab-count-badge',                   name: 'TabCountBadge' },
+      { slug: 'wizard-morph-header',               name: 'WizardMorphHeader' },
+      { slug: 'record-wizard-morph-band',          name: 'RecordWizardMorphBand' },
     ]},
     { group: 'Timeline', items: [
       { slug: 'history-timeline',                   name: 'HistoryTimeline' },

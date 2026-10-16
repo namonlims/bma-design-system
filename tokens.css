@@ -453,6 +453,10 @@
      (blur 4 + 32, y-offset 4 + 16, alpha 10% + 15%) per design.md row 762.
      Canonical shadow for the popup-container family: <Popup>, <AlertDialog>,
      <ScreeningConfirmPopup>, and any future popup-shaped surface. */
+  /* Figma "Drop Shadow Bottom/100" (design.md §1d effect.drop-shadow-bottom.100) —
+     slate-500 10%, blur 4, y 1. Avatar ring on hero cards (StaffProfileAvatar ring). */
+  --shadow-drop-bottom-100: 0 1px 4px rgb(100 116 139 / 0.10);
+  --shadow-avatar-ring: var(--shadow-drop-bottom-100);
   --shadow-drop-bottom-400:
     0 4px 4px   rgb(100 116 139 / 0.10),
     0 16px 32px rgb(100 116 139 / 0.15);
@@ -723,6 +727,10 @@
   --dim-size-2700:  448px; /* dimension.size.2700 — sign-in card max-width (Figma 40:10656) */
   --dim-size-2800:  512px; /* dimension.size.2800 */
   --dim-size-2900:  640px;  /* primary search w / max-w */
+  --dim-size-2950:  720px;  /* dimension.size.2950 — inline editor / form column / chart max-width (bma.health 10 จุด · 17 ต.ค. 69) */
+
+  /* Opacity — ความจางของตัวคุมที่ปิดใช้งาน (bma.health XCloseButton และปุ่ม/ช่อง disabled ~24 จุด · 17 ต.ค. 69) */
+  --opacity-disabled: 0.5;
 
   --dim-stroke-100: 1px;
   --dim-stroke-150: 1.5px;
