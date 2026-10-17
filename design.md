@@ -14078,6 +14078,18 @@ Props: `title` · `steps` · `current` · `onStepClick` · `completedSteps` · `
 | XCloseButton | `opacity: 0.5` ตอน disabled | แก้แล้ว 17 ต.ค. 69 → `--opacity-disabled` |
 | InlineNameEditor | `maxWidth: 720` | แก้แล้ว 17 ต.ค. 69 → `--dim-size-2950` (720) |
 
+### 6.43 OutstandingDebtAlert — แจ้งเตือนยอดค้างชำระจากครั้งก่อน (ลงทะเบียน 17 ต.ค. 69)
+
+มติ คทง.8 ข้อ 2.1.5: ผู้รับบริการมียอดค้างชำระจากครั้งก่อน → เตือนตั้งแต่เวชระเบียนและทุกจุดบริการจนกว่าจะชำระ
+ไฟล์ `src/components/alert/OutstandingDebtAlert.jsx` · ข้อมูล `outstandingDebtOf(hn)` (`src/data/outstandingDebts.js`,
+คำนวณจาก `FINANCE_QUEUE`: `priorDebts` + `outstandingOf(row)` ของแถวที่ไม่ใช่วันนี้, memo ต่อ HN) · ยอด 0 = ไม่แสดงอะไร
+
+| Export | ใช้ที่ | หน้าตา |
+|---|---|---|
+| `OutstandingDebtAlert` (default) · `hn` | หน้าเปิด Visit (`RegistrationVisitOpenPage`) | `Alert type='warning'` title "ผู้รับบริการมียอดค้างชำระ ฿X จากครั้งก่อน" · subtext วันที่ · เลขใบเสร็จ คั่น " · " · ⓘ ทูลทิปรายการ |
+| `OutstandingDebtBadge` · `hn` · `label` · `size` | `PatientCard` แถวแพ้ยา/โรคประจำตัว (ทุกหน้าที่ใช้การ์ด) · ท้ายชื่อในคิวเวชระเบียน (`label='ค้างชำระ'`) | `ColorfulBadge` orange primary "ค้างชำระ ฿X" + `Tooltip` light |
+| `outstandingDebtTip(hn)` | เนื้อหาทูลทิป | `TooltipGroups` ยอดรวม → สรุป → กลุ่ม "รายการค้าง N รายการ" (วันที่ / ใบเสร็จ · ยอด) · memo ระดับโมดูลต่อ HN |
+
 ---
 
 ## 7. Mobile Application Design System
