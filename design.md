@@ -14618,6 +14618,8 @@ When adding a new mobile primitive: create the file under [src/components/mobile
 
 **Patterns (Figma DS components):** Header/Home (avatar · greeting · solid green HN badge · outline pill "บัตรประจำตัว" · outline bell) · Home/Quick Menu (8 actions, 4 columns, 60px gradient circle + white glyph — gradients inline: green #9BC781→#77B757 · mint #10DFB5→#00D29D · orange #FFCF8A→#FFC15E · blue #6AA8E6→#008CDE · pink #FF90CD→#FF63BC · purple #BB96D2→#772FA5) · Banner/Appointment (white, 1px pink outline, cut corners, solid pink offset) · Chip/Request (pill, 1px border) · Card/Visit · Card/News · History/Timeline Item · Background/Splash. Bottom nav and tabs keep their green drop shadow.
 
+**Icon colours:** every icon badge (Colorful icon Badge · MobileIconBadge · RequestIconBadge · ColorfulIconBadge on mobile) = theme gradient by tone (green → Green · purple → Purple · blue/indigo → Blue · pink/magenta → Pink · teal/turquoise → Mint · orange/yellow → Orange) + white glyph — `MOBILE_THEME_GRADIENTS` / `mobileIconSolidStyle(tone)` in bma.mobile `mobileIconTones.js`. Red (danger) and grey badges keep the pastel palette. Small inline glyphs in cards use BMA accents (medication #50A622 · lab #0073D6 · X-ray/notification #FF1FAE). Nav: active #00744B · inactive #ADB2B7.
+
 ### 7.5. Figma reference
 
 **Mobile button source-of-truth** — file `opz7X9AAKGQf5prHhsPDGn` (MIH-Design-System-Foundation Copy), Button section `319:2012`. The 16 frames in that section map 1:1 to the 16 files in [src/components/mobile/button/](src/components/mobile/button/) — see §7.3 table for per-component node IDs.
