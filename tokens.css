@@ -2776,11 +2776,23 @@
   /* New tokens (Figma variables collection "New Theme") */
   --mobile-theme-header:          var(--surface-brandPrimary-default);  /* #007549 solid header (was teal gradient) */
   --mobile-theme-border-card:     var(--brand-p200);                    /* #C5EDDA 1px card border */
-  --mobile-theme-accent-pink:     #FF1FAE;                              /* BMA ท — banner outline, title, dot */
+  --mobile-theme-accent-pink:     #EC3FAA;                              /* BMA ท — banner outline, title, dot */
   --mobile-theme-accent-green:    #50A622;                              /* BMA ก — HN badge */
   --mobile-theme-accent-yellow:   #FBDD21;                              /* BMA ม */
   --mobile-theme-text-caption:    #868686;                              /* banner caption */
-  --mobile-theme-weight-semibold: 600;                                  /* Anuphan SemiBold — section titles */
+  --mobile-theme-weight-semibold: 600;                                  /* Anuphan SemiBold — titles + button labels */
+  --mobile-button-type-weight:    var(--mobile-theme-weight-semibold);  /* button labels SemiBold (_base.jsx) */
+  /* BMA CI secondary palette (Color System 01/02 · คทง.12 THEME-01) — primary stays #00744B */
+  --mobile-theme-ci-emerald:      #00744B;                              /* PANTONE 3415C — primary */
+  --mobile-theme-ci-forest:       #205A41;                              /* secondary dark green */
+  --mobile-theme-ci-leaf:         #67A33B;
+  --mobile-theme-ci-mint:         #00C08B;
+  --mobile-theme-ci-gold:         #FFB449;
+  --mobile-theme-ci-yellow:       #F8DF52;
+  --mobile-theme-ci-blue:         #0071CE;
+  --mobile-theme-ci-pink:         var(--mobile-theme-accent-pink);      /* #EC3FAA PANTONE 232C */
+  --mobile-theme-family-display:  var(--type-family-heading-graphic);   /* Sao Chingcha — splash / hero / page titles (THEME-02) */
+  --mobile-card-radius:           var(--dim-radius-400);                /* 12px cards (Figma Visit Card 2790:107930) */
 
   /* Re-pointed shared tokens (mobile app only) */
   --background-screen-brand-100:  var(--surface-card-100);              /* page bg mint → white */

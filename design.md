@@ -14607,7 +14607,7 @@ When adding a new mobile primitive: create the file under [src/components/mobile
 |---|---|---|
 | `--mobile-theme-header` | `var(--surface-brandPrimary-default)` #007549 | solid header / splash / login / profile hero (was teal gradient #13B292 → #00A08E) |
 | `--mobile-theme-border-card` | `var(--brand-p200)` #C5EDDA | 1px card border |
-| `--mobile-theme-accent-pink` | #FF1FAE | appointment banner outline + title, bell dot |
+| `--mobile-theme-accent-pink` | #EC3FAA | appointment banner outline + title, bell dot |
 | `--mobile-theme-accent-green` | #50A622 | HN badge (solid, white text) |
 | `--mobile-theme-accent-yellow` | #FBDD21 | BMA ก ท ม letters (splash) |
 | `--mobile-theme-text-caption` | #868686 | banner caption |
@@ -14618,7 +14618,9 @@ When adding a new mobile primitive: create the file under [src/components/mobile
 
 **Patterns (Figma DS components):** Header/Home (avatar · greeting · solid green HN badge · outline pill "บัตรประจำตัว" · outline bell) · Home/Quick Menu (8 actions, 4 columns, 60px gradient circle + white glyph — gradients inline: green #9BC781→#77B757 · mint #10DFB5→#00D29D · orange #FFCF8A→#FFC15E · blue #6AA8E6→#008CDE · pink #FF90CD→#FF63BC · purple #BB96D2→#772FA5) · Banner/Appointment (white, 1px pink outline, cut corners, solid pink offset) · Chip/Request (pill, 1px border) · Card/Visit · Card/News · History/Timeline Item · Background/Splash. Bottom nav and tabs keep their green drop shadow.
 
-**Icon colours:** every icon badge (Colorful icon Badge · MobileIconBadge · RequestIconBadge · ColorfulIconBadge on mobile) = theme gradient by tone (green → Green · purple → Purple · blue/indigo → Blue · pink/magenta → Pink · teal/turquoise → Mint · orange/yellow → Orange) + white glyph — `MOBILE_THEME_GRADIENTS` / `mobileIconSolidStyle(tone)` in bma.mobile `mobileIconTones.js`. Red (danger) and grey badges keep the pastel palette. Small inline glyphs in cards use BMA accents (medication #50A622 · lab #0073D6 · X-ray/notification #FF1FAE). Nav: active #00744B · inactive #ADB2B7.
+**BMA CI colours (Color System 01/02):** primary emerald #00744B (PANTONE 3415C) · secondary #205A41 · #67A33B · #00C08B · #FFB449 · #F8DF52 · #0071CE · pink #EC3FAA (PANTONE 232C). Illustrations use CI only: green parts #00744B · pink #EC3FAA (light pink = #F69FD5, 50% tint) · blue #0071CE — Figma variables `color/ci/*` in collection "New Theme". Titles + button labels = Anuphan SemiBold.
+
+**Icon colours:** every icon badge (Colorful icon Badge · MobileIconBadge · RequestIconBadge · ColorfulIconBadge on mobile) = theme gradient by tone (green → Green · purple → Purple · blue/indigo → Blue · pink/magenta → Pink · teal/turquoise → Mint · orange/yellow → Orange) + white glyph — `MOBILE_THEME_GRADIENTS` / `mobileIconSolidStyle(tone)` in bma.mobile `mobileIconTones.js`. Red (danger) and grey badges keep the pastel palette. Small inline glyphs in cards use BMA accents (medication #50A622 · lab #0073D6 · X-ray/notification #EC3FAA). Nav: active #00744B · inactive #ADB2B7.
 
 ### 7.5. Figma reference
 
