@@ -2763,3 +2763,28 @@
   --text-steps-title-success:        #6CDCCA;  /* teal/300 */
 }
 
+
+/* ─────────────────────────────────────────────────────────────────────
+   Mobile Application · New Theme (Design Option A) — design.md §7.6
+   Figma XCuT5qG9E7V7Aa815X3usM · Theme 2790:109177 · DS page 6003:47665
+   SCOPED to the mobile app only: bma.mobile sets <html data-app="mobile">.
+   Web (bma.health) never sets data-app, so none of the values below apply
+   there — the re-pointed shared tokens keep their web values.
+   Light mode only; dark mode keeps the [data-mode="dark"] values.
+   ───────────────────────────────────────────────────────────────────── */
+:root[data-app='mobile']:not([data-mode='dark']) {
+  /* New tokens (Figma variables collection "New Theme") */
+  --mobile-theme-header:          var(--surface-brandPrimary-default);  /* #007549 solid header (was teal gradient) */
+  --mobile-theme-border-card:     var(--brand-p200);                    /* #C5EDDA 1px card border */
+  --mobile-theme-accent-pink:     #FF1FAE;                              /* BMA ท — banner outline, title, dot */
+  --mobile-theme-accent-green:    #50A622;                              /* BMA ก — HN badge */
+  --mobile-theme-accent-yellow:   #FBDD21;                              /* BMA ม */
+  --mobile-theme-text-caption:    #868686;                              /* banner caption */
+  --mobile-theme-weight-semibold: 600;                                  /* Anuphan SemiBold — section titles */
+
+  /* Re-pointed shared tokens (mobile app only) */
+  --background-screen-brand-100:  var(--surface-card-100);              /* page bg mint → white */
+  --type-family-heading-graphic2: 'Anuphan', 'Sarabun', system-ui, sans-serif;  /* Mitr → Anuphan */
+  --shadow-brand-drop-bottom-200: inset 0 0 0 1px var(--mobile-theme-border-card);  /* cards: border, no shadow */
+  --shadow-card:                  inset 0 0 0 1px var(--mobile-theme-border-card);
+}

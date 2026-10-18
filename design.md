@@ -14597,6 +14597,27 @@ These web primitives have **no** mobile equivalent today. Pages that need them m
 
 When adding a new mobile primitive: create the file under [src/components/mobile/](src/components/mobile/), add tokens to §7.2, and register the entry in §7.3's component-map table.
 
+### 7.6. Mobile New Theme (Design Option A)
+
+ลูกค้าเลือก 18 ต.ค. 69 · Figma `XCuT5qG9E7V7Aa815X3usM` — Theme [`2790:109177`](https://www.figma.com/design/XCuT5qG9E7V7Aa815X3usM/Mobile-Application--New-Theme-?node-id=2790-109177) · DS page "New Theme · Design System" [`6003:47665`](https://www.figma.com/design/XCuT5qG9E7V7Aa815X3usM/Mobile-Application--New-Theme-?node-id=6003-47665). Approved exception to §7.1 "must not redefine colour / typography family" — the customer changed the mobile brand look.
+
+**Scope:** `tokens.css` block `:root[data-app='mobile']:not([data-mode='dark'])`. Only bma.mobile sets `<html data-app="mobile">` → web pages (bma.health, including its `/m/*` preview) keep the default values. Dark mode unchanged.
+
+| Token | Value | Use |
+|---|---|---|
+| `--mobile-theme-header` | `var(--surface-brandPrimary-default)` #007549 | solid header / splash / login / profile hero (was teal gradient #13B292 → #00A08E) |
+| `--mobile-theme-border-card` | `var(--brand-p200)` #C5EDDA | 1px card border |
+| `--mobile-theme-accent-pink` | #FF1FAE | appointment banner outline + title, bell dot |
+| `--mobile-theme-accent-green` | #50A622 | HN badge (solid, white text) |
+| `--mobile-theme-accent-yellow` | #FBDD21 | BMA ก ท ม letters (splash) |
+| `--mobile-theme-text-caption` | #868686 | banner caption |
+| `--mobile-theme-weight-semibold` | 600 | section titles (Anuphan SemiBold 14, brand) |
+| `--background-screen-brand-100` *(re-pointed)* | `var(--surface-card-100)` white | page background (was mint #F4FBF8) |
+| `--type-family-heading-graphic2` *(re-pointed)* | Anuphan | headings / labels (was Mitr) |
+| `--shadow-brand-drop-bottom-200` · `--shadow-card` *(re-pointed)* | `inset 0 0 0 1px var(--mobile-theme-border-card)` | cards: border instead of drop shadow |
+
+**Patterns (Figma DS components):** Header/Home (avatar · greeting · solid green HN badge · outline pill "บัตรประจำตัว" · outline bell) · Home/Quick Menu (8 actions, 4 columns, 60px gradient circle + white glyph — gradients inline: green #9BC781→#77B757 · mint #10DFB5→#00D29D · orange #FFCF8A→#FFC15E · blue #6AA8E6→#008CDE · pink #FF90CD→#FF63BC · purple #BB96D2→#772FA5) · Banner/Appointment (white, 1px pink outline, cut corners, solid pink offset) · Chip/Request (pill, 1px border) · Card/Visit · Card/News · History/Timeline Item · Background/Splash. Bottom nav and tabs keep their green drop shadow.
+
 ### 7.5. Figma reference
 
 **Mobile button source-of-truth** — file `opz7X9AAKGQf5prHhsPDGn` (MIH-Design-System-Foundation Copy), Button section `319:2012`. The 16 frames in that section map 1:1 to the 16 files in [src/components/mobile/button/](src/components/mobile/button/) — see §7.3 table for per-component node IDs.
