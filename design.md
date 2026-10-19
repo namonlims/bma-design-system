@@ -13939,8 +13939,9 @@ Responsive: ≥ 1024 ท้ายป๊อปอัป 3 ช่อง (ว่า
 | กล่อง | พื้น `--surface-brandPrimary-quaternary` · มุม `--dim-radius-300` · padding `--dim-space-200` `--dim-space-300` `--dim-space-200` `--dim-space-400` |
 | แถว | สูงขั้นต่ำ `--dim-size-700` · วงกลม 16 `--icon-positive-success` + ถูกขาว · ชื่อ sm `--text-content-default` |
 | ลบ | `NeutralSubdueIconButton` ghost sm `delete` ชิดขวา · `locked` (ข้อบังคับเลือก) = ข้อความ xs tertiary "บังคับเลือก" แทนปุ่มลบ |
+| subtext | (ถ้ามี) xs `--text-content-tertiary` บรรทัดใต้ชื่อ เช่น ที่มา "จากประวัติ ICD-10" (19 ต.ค. 69) |
 
-Props: `items` · `onRemove(item)` · `locked` · `readOnly` · `ariaLabel`
+Props: `items` · `onRemove(item)` · `locked` · `readOnly` · `ariaLabel` · `subtexts` (`{ [item]: string }`)
 
 ### 6.42 Product Components ชุด 3 (ลงทะเบียน 17 ต.ค. 69)
 
