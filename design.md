@@ -14410,6 +14410,14 @@ PIN / numeric keypad key. 72×72 circle (`--dim-size-1600`). Default: 1px `--bra
 | [`MobileSectionLabel`](src/components/mobile/SectionLabel.jsx) | SectionLabel.jsx | — | Section header above content blocks |
 | [`MobileShell`](src/components/mobile/MobileShell.jsx) | MobileShell.jsx | — | Phone frame + status bar + bottom nav + auth gate |
 | [`Sym`](src/components/mobile/Sym.jsx) | Sym.jsx | `Sym` (web) | Same shape, separate file so the mobile tree has no web-only coupling |
+| [`BottomActionBar`](src/components/mobile/BottomActionBar.jsx) | BottomActionBar.jsx | sticky footer | Bottom button bar (column \| row · sticky · safe area) — §7.3.11 |
+| [`BottomSheet`](src/components/mobile/BottomSheet.jsx) · `SheetCloseButton` | BottomSheet.jsx | `Popup` | The one slide-up sheet of the app: ‹ / centred title / × · footer · variant page · portal — §7.3.12 |
+| [`EmptyState`](src/components/mobile/EmptyState.jsx) | EmptyState.jsx | empty state | Icon 48 → title → text → action · framed / compact — §7.3.13 |
+| [`InlineNotice`](src/components/mobile/InlineNotice.jsx) | InlineNotice.jsx | `Alert` (§6) | Compact alert: icon + text, 4 tones, md / sm, optional × — §7.3.14 |
+| [`Divider`](src/components/mobile/Divider.jsx) | Divider.jsx | — | 1px solid / dashed line, optional centred label ("หรือ") — §7.3.15 |
+| [`AmountRow`](src/components/mobile/AmountRow.jsx) · `AmountRows` | AmountRow.jsx | — | Label left / amount right, total row (`strong`), value tone — §7.3.16 |
+| [`StepProgress`](src/components/mobile/StepProgress.jsx) | StepProgress.jsx | `Stepper` | "ขั้นตอนที่ n จาก N" + segmented / continuous bar — §7.3.17 |
+| [`Avatar`](src/components/mobile/Avatar.jsx) | Avatar.jsx | `Avatar` (§6.11) | Photo circle → initial → icon fallback · ring — §7.3.18 |
 
 > 📝 **Naming exception**: Primitives that are conceptually "mobile shell" (Card, Input, Field, Badge, Header, SectionLabel, Shell) keep the `Mobile*` prefix because there is no Figma master of these yet — the prefix marks them as mobile-only until a Figma source-of-truth exists. Buttons, **Password**, and **Textarea** drop the prefix because their Figma App masters (`319:2012` / `5021:1008` / `268:26`) ARE the source-of-truth. **SuccessCard** drops the prefix as a shared flow template (Archive success screens), not a shell chrome piece.
 
@@ -14601,6 +14609,56 @@ Used by register identity success, **register complete** ([Archive `171:70337`](
 
 The shell wraps the page in a 402×874 iPhone 17 mock so desktop reviewers can demo the citizen flow. On touch devices ≤ 430 wide the chrome collapses and the app fills the viewport.
 
+#### 7.3.11–7.3.18 Common primitives (ผู้ใช้ 22 ต.ค. 69)
+
+> Source lives in the **bma.mobile** repo (`src/components/mobile/`); this section mirrors its design.md §7.3.
+
+Seven of these were hand-drawn again and again across pages; `BottomSheet` was already made the single sheet of the app and is listed so the set is complete (counts from a scan of every `src/pages/mobile/*` + `src/components/mobile/*` file). New screens use the shared component; old copies move to it when their page is touched. All are exported from `@/components/mobile`; live demos at `/m/components?component=<slug>`.
+
+| # | Component | Slug | Replaces (copies found) | Key props |
+|---|-----------|------|-------------------------|-----------|
+| 7.3.11 | [`BottomActionBar`](src/components/mobile/BottomActionBar.jsx) | `mobile-bottom-action-bar` | `Footer` · `StickyFooter` · `BookingFooter` + inline footers (~20) | `direction` column \| row · `sticky` · `safeArea` · `border` brand \| neutral \| none · `shadow` |
+| 7.3.12 | [`BottomSheet`](src/components/mobile/BottomSheet.jsx) (`BookingSheet` = alias) · `SheetCloseButton` · `SHEET_TITLE` | `mobile-bottom-sheet` | the one sheet of the whole app — every sheet already moved to it (ผู้ใช้ 21–22 ต.ค. 69 · `.claude/rules/mobile-ui-layout.md`) | `open` · `title` · `onClose` · `onBack` · `footer` · `headerRight` · `padded` · `dismissOnOverlay` · `variant` sheet \| page · `zIndex` · portals into `.mih-phone-screen` |
+| 7.3.13 | [`EmptyState`](src/components/mobile/EmptyState.jsx) | `mobile-empty-state` | `EmptyState` · `EmptyTimeline` + "ไม่พบ…" screens (~14) | `icon` (null = none) · `tone` · `title` · `description` · `action` · `framed` · `compact` |
+| 7.3.14 | [`InlineNotice`](src/components/mobile/InlineNotice.jsx) | `mobile-inline-notice` | `ErrorAlert` · `ErrorNote` · `InfoAlert` + inline alert boxes (~10) | `tone` info \| success \| warning \| error · `title` · `icon` · `size` md \| sm · `action` · `onClose` |
+| 7.3.15 | [`Divider`](src/components/mobile/Divider.jsx) | `mobile-divider` | `SettingsList` Divider + inline 1px / dashed lines (~9) | `variant` solid \| dashed · `tone` neutral \| brand \| strong · `label` · `spacing` |
+| 7.3.16 | [`AmountRow`](src/components/mobile/AmountRow.jsx) · `AmountRows` | `mobile-amount-row` | `CostRow` · `InfoRow` · `AmountRow` · receipt `Row` (~8) | `label` · `value` · `sub` · `strong` · `tone` danger \| success \| brand · `size` sm \| xs |
+| 7.3.17 | [`StepProgress`](src/components/mobile/StepProgress.jsx) | `mobile-step-progress` | `StepBar` · `BookingStepper` · `RequestStepProgress` · `ProgressBar` (5) | `current` (1-based) · `total` · `label` · `caption` · `variant` segmented \| continuous |
+| 7.3.18 | [`Avatar`](src/components/mobile/Avatar.jsx) | `mobile-avatar` | `ListAvatar` + home / doctor / switcher / profile photo circles (7) | `src` · `name` (first letter fallback, title prefix stripped) · `fallbackIcon` · `size` · `ring` white \| brand |
+
+Rules that apply to all eight:
+
+- **Which one, when.** Buttons at the bottom of a page or sheet → `BottomActionBar` (one Fill CTA, the rest Subdue). Any slide-up panel → `BottomSheet` (never re-draw the overlay; do not stack sheets — change the content and use `onBack`). Nothing to show → `EmptyState`. A message inside the page → `InlineNotice` (the web `Alert` stays for full-width Figma 297:59 alerts only). Money rows → `AmountRow` (right-aligned value); other label/value pairs → `InfoGrid` (left-aligned two columns).
+- **Tokens.** Sheet panel `--surface-card-100` + top radius `--dim-radius-600` + `--shadow-brand-top-200`, up to 92% tall · overlay `--surface-overlay-default` (black 50% in the app) · notice `--surface-/--border-/--text-alert-{tone}` · bar border `--border-brandPrimary-quaternary` + `--shadow-brand-drop-top-100` · step fill `--surface-brandPrimary-default` / current `--surface-positive-default` / rest `--surface-brandPrimary-tertiary` (Archive `2119:51183`).
+- **Touch.** `InlineNotice` × is 44×44. `SheetCloseButton` and the sheet ‹ are 44×44 hit areas; the visible circle stays 40 (Figma) — ผู้ใช้ 22 ต.ค. 69 ข้อ 2ก.
+- **Close.** `BottomSheet` closes on ×, tap on the overlay (unless `dismissOnOverlay={false}`), and Esc.
+
+```jsx
+<BottomSheet title='เลือกขนาดตัวอักษร' onClose={close}
+  footer={<BrandButton fullWidth onClick={save}>บันทึก</BrandButton>}>
+  …
+</BottomSheet>
+
+<BottomActionBar sticky safeArea>
+  <BrandButton fullWidth>ยืนยันนัดหมาย</BrandButton>
+  <BrandSubdueButton fullWidth>ย้อนกลับ</BrandSubdueButton>
+</BottomActionBar>
+
+<AmountRows>
+  <AmountRow label='ค่ายา' value='฿320.00' />
+  <AmountRow label='สิทธิการรักษา' value='-฿320.00' tone='success' />
+  <Divider variant='dashed' tone='strong' />
+  <AmountRow label='ยอดที่ต้องชำระ' value='฿0.00' strong />
+</AmountRows>
+
+<StepProgress current={2} total={4} label='ยืนยันตัวตน' />
+<EmptyState icon='event_busy' title='ยังไม่มีนัดหมาย' description='นัดหมายที่จองไว้จะแสดงที่นี่' framed />
+<InlineNotice tone='warning' size='sm'>ยาบางรายการต้องเก็บในตู้เย็น</InlineNotice>
+<Avatar src={user.avatar} name={user.name} size={48} ring='white' />
+```
+
+**Not migrated yet** (copies still in pages — move them when the page is next touched; sheets are already done): footers in Telemed · PharmacyPayment · Consent · Register; empty states in Book · Appointments · Records; step bars in Register · BookingWizard · RequestDetailSheet · SelfAssessment.
+
 ### 7.4. What does **not** exist yet on mobile
 
 These web primitives have **no** mobile equivalent today. Pages that need them must either compose from existing mobile primitives or motivate the new addition in a PR:
@@ -14608,7 +14666,7 @@ These web primitives have **no** mobile equivalent today. Pages that need them m
 - `Table` — long list patterns use stacked `MobileCard` rows instead.
 - `Tabs` — segmented control should land here when first needed.
 - `Accordion` — `MobileCard` + collapsible state is the current pattern.
-- `Dropdown` / `Select` — bottom-sheet picker is the mobile-native pattern; not yet built.
+- `Dropdown` / `Select` — bottom-sheet picker is the mobile-native pattern; build it on `BottomSheet` (§7.3.12) + `ListRow` `selected`, not as a new overlay.
 - `DatePicker` / `TimeSlot` — wizards currently use a custom grid (see [MobileBookPage.jsx](src/pages/mobile/MobileBookPage.jsx)). A canonical `MobileDatePicker` belongs here.
 
 When adding a new mobile primitive: create the file under [src/components/mobile/](src/components/mobile/), add tokens to §7.2, and register the entry in §7.3's component-map table.
@@ -14627,6 +14685,7 @@ When adding a new mobile primitive: create the file under [src/components/mobile
 | `--mobile-theme-accent-green` | #50A622 | HN badge (solid, white text) |
 | `--mobile-theme-accent-yellow` | #FBDD21 | BMA ก ท ม letters (splash) |
 | `--mobile-theme-text-caption` | #868686 | banner caption |
+| `--mobile-theme-overlay` · `--surface-overlay-default` *(re-pointed)* | `rgb(0 0 0 / 0.50)` black 50% | backdrop of every bottom sheet / popup in the mobile app (was slate-500 @ 40%) — user 21 Oct 2569 |
 | `--mobile-theme-weight-semibold` | 600 | section titles (Anuphan SemiBold 14, brand) |
 | `--background-screen-brand-100` *(re-pointed)* | `var(--surface-card-100)` white | page background (was mint #F4FBF8) |
 | `--type-family-heading-graphic2` *(re-pointed)* | Anuphan | headings / labels (was Mitr) |

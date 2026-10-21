@@ -1016,6 +1016,19 @@ function classifyToken(name, resolved){
       { slug: 'mobile-shell',         name: 'MobileShell' },
       { slug: 'sym',                  name: 'Sym' },
     ]},
+    /* Common primitives (ผู้ใช้ 22 ต.ค. 69) — patterns that were re-drawn on
+       many mobile pages, now shared. Spec = design.md §7.3.11–§7.3.18. */
+    { group: 'Mobile · Common', items: [
+      { slug: 'mobile-bottom-action-bar', name: 'BottomActionBar', anchor: '73117318-common-primitives-ผู้ใช้-22-ตค-69' },
+      /* BottomSheet portals into the phone frame — spec only, no Live tab */
+      { slug: null,                       name: 'BottomSheet',     anchor: '73117318-common-primitives-ผู้ใช้-22-ตค-69' },
+      { slug: 'mobile-empty-state',       name: 'EmptyState',      anchor: '73117318-common-primitives-ผู้ใช้-22-ตค-69' },
+      { slug: 'mobile-inline-notice',     name: 'InlineNotice',    anchor: '73117318-common-primitives-ผู้ใช้-22-ตค-69' },
+      { slug: 'mobile-divider',           name: 'Divider',         anchor: '73117318-common-primitives-ผู้ใช้-22-ตค-69' },
+      { slug: 'mobile-amount-row',        name: 'AmountRow',       anchor: '73117318-common-primitives-ผู้ใช้-22-ตค-69' },
+      { slug: 'mobile-step-progress',     name: 'StepProgress',    anchor: '73117318-common-primitives-ผู้ใช้-22-ตค-69' },
+      { slug: 'mobile-avatar',            name: 'Avatar',          anchor: '73117318-common-primitives-ผู้ใช้-22-ตค-69' },
+    ]},
     { group: 'Mobile · Reference', items: [
       { slug: null, name: 'Layering rules',       anchor: '71-layering-rules' },
       { slug: null, name: 'Platform tokens',      anchor: '72-platform-tokens---mobile-' },

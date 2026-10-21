@@ -2791,6 +2791,8 @@
   --mobile-theme-ci-yellow:       #F8DF52;
   --mobile-theme-ci-blue:         #0071CE;
   --mobile-theme-ci-pink:         var(--mobile-theme-accent-pink);      /* #EC3FAA PANTONE 232C */
+  --mobile-theme-overlay:         rgb(0 0 0 / 0.50);                    /* sheet / popup backdrop — black (user 21 Oct 2569) */
+  --surface-overlay-default:      var(--mobile-theme-overlay);          /* re-pointed: every mobile overlay = black */
   --mobile-theme-family-display:  var(--type-family-heading-graphic);   /* Sao Chingcha — splash / hero / page titles (THEME-02) */
   --mobile-card-radius:           var(--dim-radius-400);                /* 12px cards (Figma Visit Card 2790:107930) */
 
