@@ -13110,6 +13110,7 @@ Props: `tabs` = `[{ key, label, count? }]` · `value` · `onChange` · `size` (`
 | LineChart · AreaLineChart | `line-chart` | 20 · 5 | `months` + `series` · Area: `valueLabels` `xAxisLabel` | `activeMonth` + `onMonthClick` |
 | Gauge | `gauge` | 15 | `value` `max` `color` `label` `sub` `size` `tooltip` | — |
 | Pyramid · PyramidPct | `pyramid` | 3 | `groups = [{ label, male, female }]` `maleColor` `femaleColor` | — |
+| ViolinSplit | `violin-split` | 1 | `groups = [{ label, male, female }]` (อายุน้อย → มาก) `maleColor` `femaleColor` `height` `unit` | hover แถว → tooltip ชาย/หญิง |
 | Pie | `pie` | 1 | `slices = [{ value, color, label }]` `size` | `activeIndex` + `onSliceClick` |
 | Reveal | `reveal` | 11 | `delay` `threshold` — fade + slide-up ครั้งเดียวเมื่อเลื่อนถึง | — |
 
@@ -13539,6 +13540,20 @@ Props: `slices` · `size` · `activeIndex` · `onSliceClick`
 
 Props: `groups` · `maleColor` · `femaleColor` · `height`  
 ไฟล์: `src/components/graph/Charts.jsx` · demo: `/components/pyramid`
+
+#### 6.37.51b ViolinSplit (violin-split)
+
+กราฟไวโอลินคู่ อายุ × เพศ (กรฉ. คทง.11) — ซีกซ้ายชาย ซีกขวาหญิง · แกนตั้ง = กลุ่มอายุ (ล่าง = อายุน้อย) · ความกว้าง = จำนวนในกลุ่มอายุเทียบค่าสูงสุดของทั้งสองซีก (เส้นโค้งเรียบ) · เส้นประ = กลุ่มอายุมัธยฐานของแต่ละเพศ · legend บอกยอดรวม + มัธยฐาน · hover แถวขึ้น tooltip ชาย/หญิง.
+
+Props: `groups` · `maleColor` · `femaleColor` · `height` · `unit`  
+ไฟล์: `src/components/graph/Charts.jsx` · ใช้ที่: `/dashboard/tor/disease-situation`
+
+#### 6.37.51c BangkokDistrictMap (bangkok-district-map)
+
+แผนที่ระบายสี 50 เขต กทม. ตามขอบเขตจริง (SVG ล้วน ไม่โหลดแผ่นแผนที่) — ขอบเขตจาก `src/data/geo/bangkokDistricts.json` (ย่อจุดจาก pcrete/gsvloader-demo, MIT) · สีตาม `tiers` (น้อย → มาก, ตัวสุดท้าย `max: Infinity`) · เขตนอกตัวกรอง = `--surface-neutral-tertiary` · เขตที่เลือก/hover = ขอบ `--text-content-default` 2px + กล่องชื่อเขต/ค่ามุมซ้ายบน (ไม่ใช้ title ของเบราว์เซอร์) · legend ใต้แผนที่.
+
+Props: `values` · `tiers` · `selected` · `onSelect` · `valueLabel` · `formatValue`  
+ไฟล์: `src/components/dashboard/BangkokDistrictMap.jsx` · ใช้ที่: `/dashboard/tor/disease-situation`
 
 #### 6.37.52 Reveal (reveal)
 
