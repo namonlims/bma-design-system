@@ -804,6 +804,7 @@ function classifyToken(name, resolved){
       { slug: 'patient-summary-card',               name: 'PatientSummaryCard' },
       { slug: 'queue-patient-avatar',               name: 'QueuePatientAvatar' },
       { slug: 'masked-worklist-name',               name: 'MaskedWorklistName' },
+      { slug: 'arrival-mobility-mark',              name: 'ArrivalMobilityMark' },
     ]},
     { group: 'Card — Dashboard', items: [
       { slug: 'age-service-pyramid-card',           name: 'AgeServicePyramidCard' },
@@ -1596,9 +1597,27 @@ function classifyToken(name, resolved){
     var slug = slugEl.textContent.trim();
     if (!data || !slug) { box.hidden = true; return; }
     var rows = data.commits.filter(function (c) { return c.slugs.indexOf(slug) !== -1; });
-    if (!rows.length) { box.hidden = true; return; }
-    var last = rows[0];
+    var notes = (data.changelog || []).filter(function (e) { return e.slug === slug; });
+    var TH = { added: 'เพิ่ม', changed: 'แก้ไข', fixed: 'แก้บั๊ก', deprecated: 'เลิกใช้', removed: 'ลบ' };
+    if (!rows.length && !notes.length) { box.hidden = true; return; }
     box.className = 'ds-history';
+    /* บันทึกการแก้ไข (changelog) ก่อน — dev อ่านว่าเปลี่ยนอะไร · ไม่มีจึงใช้ commit ล่าสุด */
+    if (notes.length) {
+      var n0 = notes[0];
+      box.innerHTML = '<span>บันทึกการแก้ไข <b>' + esc(n0.date) + '</b></span>'
+        + '<span class="sha">' + esc(TH[n0.type] || n0.type) + '</span><span>' + esc(n0.summary || '') + (n0.api ? ' · API: ' + esc(n0.api) : '') + '</span>'
+        + '<a class="more" href="#" id="ds-history-toggle">บันทึก ' + notes.length + ' · commit ' + rows.length + ' ▾</a>'
+        + '<ul>' + notes.map(function (e) {
+            return '<li><span class="d">' + esc(e.date) + '</span><span class="sha">' + esc(TH[e.type] || e.type) + '</span><span>' + esc(e.summary || '') + ((e.details || []).length ? ' — ' + e.details.map(esc).join(' · ') : '') + (e.migrate ? ' · ผู้เรียกเดิม: ' + esc(e.migrate) : '') + '</span></li>';
+          }).join('') + rows.slice(0, 10).map(function (c) {
+            return '<li><span class="d">' + c.date + '</span><a class="sha" href="https://github.com/namonlims/bma.health/commit/' + c.sha + '" target="_blank" rel="noopener">' + c.short + '</a><span>' + esc(c.subject) + '</span></li>';
+          }).join('') + '<li><a class="sha" href="./history.html#' + encodeURIComponent(slug) + '">ดูทั้งหมดในหน้า History →</a></li></ul>';
+      box.hidden = false;
+      var t0 = document.getElementById('ds-history-toggle');
+      if (t0) t0.onclick = function (e) { e.preventDefault(); box.classList.toggle('open'); };
+      return;
+    }
+    var last = rows[0];
     box.innerHTML = '<span>แก้ไขล่าสุด <b>' + last.date + '</b></span>'
       + '<a class="sha" href="https://github.com/namonlims/bma.health/commit/' + last.sha + '" target="_blank" rel="noopener">' + last.short + '</a>'
       + '<span>' + esc(last.subject) + '</span>'

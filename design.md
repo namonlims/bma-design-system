@@ -12862,6 +12862,15 @@ Replacements applied:
 
 Benefit: brand-aware tokens, focus ring, press stretch, accessibility (`role`, `aria-*`), and all interaction polish flow from one source — switching themes or upgrading the design-system component automatically updates every consumer.
 
+#### 6.34.8 Row tone + disabled-row explanation (`rowTone` · `rowToneTip`, ลงทะเบียน 23 ต.ค. 69)
+
+| Prop | ค่า | ผล |
+|---|---|---|
+| `rowTone(row, i)` | `'danger'` · `'disabled'` · `null` | danger = พื้น `--surface-alert-error` + กรอบแดง · disabled = พื้น `--surface-input-disabled` · เนื้อหาจาง `--opacity-disabled` · กดไม่ได้ (`aria-disabled`, cursor not-allowed) · คอลัมน์ `keepInDisabledRow` ไม่จาง |
+| `rowToneTip(row, i)` | node (`TooltipGroups`) · `null` | แถว disabled ต้องอธิบายตัวเอง: hover = บับเบิล light (`TooltipBubble variant='light'`) เหนือแถว (ชิดบนจอ = ใต้แถว) ตามตำแหน่งเมาส์ · แตะ (จอสัมผัส) = แสดง · แตะที่อื่น = ซ่อน · กว้างตามเนื้อหา ไม่เกิน min(320, 100vw − 32) |
+
+เนื้อหา tip ตามกติกา tooltip: ชื่อ (ทำไมกดไม่ได้) → สรุป 1 บรรทัด → กลุ่ม label/value (ตอนนี้อยู่ที่ไหน · ไปทำต่อที่ไหน) · ใช้จริง: `/opd/queue` (คัดกรองเสร็จแล้ว · คิวถูกยกเลิก · ส่งเวชระเบียนแล้ว) · Live demo `/components/table` "disabled row + rowToneTip"
+
 ---
 
 ### 6.35 Product Components ที่ใช้ซ้ำทั่วระบบ (ลงทะเบียน 20 ก.ย. 69)
@@ -14105,6 +14114,48 @@ Props: `title` · `steps` · `current` · `onStepClick` · `completedSteps` · `
 | `OutstandingDebtAlert` (default) · `hn` | หน้าเปิด Visit (`RegistrationVisitOpenPage`) | `Alert type='warning'` title "ผู้รับบริการมียอดค้างชำระ ฿X จากครั้งก่อน" · subtext วันที่ · เลขใบเสร็จ คั่น " · " · ⓘ ทูลทิปรายการ |
 | `OutstandingDebtBadge` · `hn` · `label` · `size` | `PatientCard` แถวแพ้ยา/โรคประจำตัว (ทุกหน้าที่ใช้การ์ด) · ท้ายชื่อในคิวเวชระเบียน (`label='ค้างชำระ'`) | `ColorfulBadge` orange primary "ค้างชำระ ฿X" + `Tooltip` light |
 | `outstandingDebtTip(hn)` | เนื้อหาทูลทิป | `TooltipGroups` ยอดรวม → สรุป → กลุ่ม "รายการค้าง N รายการ" (วันที่ / ใบเสร็จ · ยอด) · memo ระดับโมดูลต่อ HN |
+
+### 6.44 ArrivalMobilityMark + PatientCard `nameSubline` (ลงทะเบียน 23 ต.ค. 69)
+
+**ArrivalMobilityMark** — สภาพที่มาใช้บริการหลังชื่อผู้รับบริการ · ไฟล์ `src/components/badge/ArrivalMobilityMark.jsx`
+· ข้อมูล `arrivalMobilityOf(hn)` (`src/data/registrationHandoff.js`: ค่าที่เวชระเบียนบันทึกในขั้น "หมายเหตุและ Flag" (`mobilityKey`)
+ไม่มีจึงใช้ `mrPatients.mobility` · "นอนติดเตียง" นับเป็นเปลนอน) · ฝังใน `MaskedWorklistName` (§6.35.7) แล้ว ทุก worklist ได้พร้อมกัน
+
+| สภาพ | หน้าตา | ลำดับใน worklist |
+|---|---|---|
+| เปลนอน (`gurney`) | Material Symbol `airline_seat_flat` filled 14 ในกรอบ 16×24 · `--text-info-default` | รองจากฉุกเฉิน |
+| นั่งรถเข็น (`wheel`) | `accessible` · สีเดียวกัน | รองจากเปลนอน |
+| อื่นๆ (`other`) | คำที่กรอก · `--text-danger-default` + `--type-weight-medium` | ไม่มีลำดับพิเศษ |
+| เดิน | ไม่แสดง | — |
+
+Props: `hn` · `value` (`{ key, label }` override — Components Library / หน้าที่รู้สภาพเอง) · hover/แตะ = `TooltipGroups`
+(สภาพที่มาใช้บริการ → สรุปลำดับ → สภาพ · ที่มา) · ลำดับตั้งต้นของ `Table triageFirst` + `sortRowsByTriage` (`src/data/visitTriage.js`):
+ฉุกเฉิน → เปลนอน → นั่งรถเข็น → เร่งด่วน → ที่เหลือ (stable)
+
+**PatientCard `nameSubline`** — node บรรทัดเล็กใต้ชื่ออังกฤษ (`text-sm leading-snug`, สีตามการ์ด) สำหรับข้อมูลรองของคนนี้ที่ไม่ใช่ป้าย
+· ใช้ที่ `/opd/screening` (คัดกรอง + คัดแยก): "นัดครั้งถัดไป <วันที่> <เวลา> น." + ไอคอน `event` 14 · hover/แตะ = `TooltipGroups`
+วันที่ · เวลา · คลินิก · ประเภท · แพทย์ · หมายเหตุ · ไม่ส่ง = ไม่มีบรรทัด · ป้ายยังอยู่ใน `idBadges`
+
+**Table** — คอลัมน์ content-fit วัดใหม่ทุกครั้งที่ฟอนต์โหลดเสร็จ (`document.fonts` `loadingdone`) กันชื่อ + ไอคอนหลังชื่อถูกตัด "…"
+เมื่อ Sarabun / Material Symbols โหลดหลังการวัดครั้งแรก
+
+### 6.45 NotificationTopToast — การ์ดแจ้งเตือนมุมขวาบน (ลงทะเบียน 23 ต.ค. 69)
+
+ที่เดียวของทั้งเว็บที่เด้งแจ้งเตือนใหม่ (ผู้ใช้ 23 ต.ค. 69 "แสดง Noti Badge ที่มุมขวาบนเท่านั้น") · ไฟล์
+`src/components/notification/NotificationTopToast.jsx` · mount ครั้งเดียวใน `Sidebar` · ข้อมูล = รายการยังไม่อ่านของกระดิ่ง
+(`getNotifications` ใน `src/data/userNotifications.js`) · ไอคอนกระดิ่งมีที่เดียว = "แจ้งเตือน" ในเมนูข้าง
+
+| Export | Props | หน้าที่ |
+|---|---|---|
+| `NotificationTopToast` (default) | `unread` · `role` · `onOpenAll` | วางตำแหน่ง fixed top/right `--dim-space-200` · ทีละใบ · ซ่อนเองใน 10 วิ (ชี้ค้าง = หยุดนับ) · จำ id ที่เด้งแล้วต่อบทบาทใน sessionStorage `mih:notify-toasted:<role>` · ใช้กอง `floatingNoticeStack` ร่วมกับ `AccessApprovedNotice` (การ์ดคำขอเข้าถึงขึ้นก่อน) มุมจึงไม่ซ้อนสองใบ |
+| `NotificationTopToastCard` | `notice` · `others` · `compact` · `onOpen` · `onOpenAll` · `onClose` · `style` | ตัวการ์ดล้วน ไม่มีตำแหน่ง/เวลา — ใช้ใน Components Library |
+
+| จอ | หน้าตา |
+|---|---|
+| ≥ 768 | การ์ดขาวกว้าง 420 (ไม่เกิน 100vw − 16) · แถบซ้าย `--dim-stroke-400` สีตามความรุนแรง (ปกติ `--border-brandPrimary-default` · เร่งด่วน orange-bold · วิกฤต red-bold) · ป้ายหมวด (`ColorfulBadge`) → ชื่อเรื่อง medium → avatar 20 + HN · ชื่อ → รายละเอียด 1 บรรทัด xs secondary → ที่มา · เวลา xs tertiary → `BrandSubdueButton` outline sm "ดูรายละเอียด" + `BrandButton` ghost "ดูทั้งหมด (อีก N รายการ)" · × `NeutralIconButton` ghost sm |
+| < 768 | แถบบรรทัดเดียวเต็มกว้าง (ซ้าย/ขวา 8) สูงอย่างน้อย `--dim-size-900` (44): ไอคอนหมวด 20 · ชื่อเรื่องตัดด้วย … · ป้าย "+N" grey · × ghost lg (44) — แตะแถบ = ดูรายละเอียด (ผู้ใช้ 23 ต.ค. 69 ข้อ 1ก: การ์ดเต็มบังจอครึ่งบน) |
+
+ไม่ทำ: ปุ่มลอย/แถบย่อของการ์ดเอง · กระดิ่งที่อื่น · การ์ดลอยอื่นของแต่ละหน้า (`FloatingNoticeFrame` ปิดไว้ `FLOATING_CARDS = false`; ค่าวิกฤต · ห้องยาส่งกลับ · ขอจำหน่ายจากห้องสังเกตอาการ มาทางรายการกระดิ่ง)
 
 ---
 
