@@ -12194,6 +12194,26 @@ In Figma, this token has a resolved value per brand mode (e.g. Pink mode = `rgba
 - Don't use Tertiary on a tinted brand surface — the subtext fades into the background. Use `tertiary-on` instead.
 - Don't change `showChevron` based on hover alone; the chevron should reflect *expanded* state, not pointer position.
 
+#### 6.28.7 TopicHeader (หัวข้อกลุ่มในขั้นฟอร์ม)
+
+**Source:** [src/components/topic/TopicHeader.jsx](src/components/topic/TopicHeader.jsx) · library `/components/topic-header`
+
+> หัวข้อกลุ่มภายในขั้นของฟอร์ม/การ์ด (ไม่ใช่แถวการ์ดแบบ Topic) — รวม TopicHeader ที่เคยเขียนซ้ำ 18 ไฟล์ (ANC · ทันตกรรม · วัณโรค · เยี่ยมบ้าน · คัดกรองกลาง ฯลฯ) เป็นตัวเดียว (ผู้ใช้ 23 ต.ค. 69)
+
+| Prop | Values | หมายเหตุ |
+|---|---|---|
+| `children` / `title` | node | ข้อความหัวข้อ |
+| `subtitle` | node | บรรทัดรอง sm · secondary (`tone='topic'` → `--text-topic-primary-subtext-default`) |
+| `icon` | Material Symbol | 20px `--text-brandPrimary-default` · ไม่ส่ง = ไม่มี |
+| `trailing` (`aside` · `action`) | node | ชิดขวา · wrap บนจอแคบ |
+| `small` | bool | `--type-size-sm` แทน `--type-size-base` |
+| `tone` | `brand` · `neutral` · `label` · `topic` | `label` = sm · medium · body (ฉลากหัวข้อในฟอร์ม) |
+| `weight` | `bold` (ค่าเริ่ม) · `medium` · `regular` | `--type-weight-*` · ห้ามใช้คลาส `font-bold` |
+| `font` | `heading` · `body` · `graphic` | `--type-family-heading-content` / `body` / `heading-graphic2` |
+| `required` | bool | ดอกจัน `--text-input-require` |
+
+Gap ไอคอน/หัวข้อ/ปุ่ม `--dim-space-200` · line-height 1.5
+
 ---
 
 ### 6.29 Information
@@ -14156,6 +14176,31 @@ Props: `hn` · `value` (`{ key, label }` override — Components Library / ห�
 | < 768 | แถบบรรทัดเดียวเต็มกว้าง (ซ้าย/ขวา 8) สูงอย่างน้อย `--dim-size-900` (44): ไอคอนหมวด 20 · ชื่อเรื่องตัดด้วย … · ป้าย "+N" grey · × ghost lg (44) — แตะแถบ = ดูรายละเอียด (ผู้ใช้ 23 ต.ค. 69 ข้อ 1ก: การ์ดเต็มบังจอครึ่งบน) |
 
 ไม่ทำ: ปุ่มลอย/แถบย่อของการ์ดเอง · กระดิ่งที่อื่น · การ์ดลอยอื่นของแต่ละหน้า (`FloatingNoticeFrame` ปิดไว้ `FLOATING_CARDS = false`; ค่าวิกฤต · ห้องยาส่งกลับ · ขอจำหน่ายจากห้องสังเกตอาการ มาทางรายการกระดิ่ง)
+
+### 6.46 QueueVitalsCell — ช่อง Vitals 3 บรรทัดใน worklist แพทย์ (ลงทะเบียน 23 ต.ค. 69)
+
+ไฟล์ `src/components/queue/QueueVitalsCell.jsx` · ใช้ใน `/treat/queue` (คิววันนี้) และคิวรวมรอรับเคส (`UnassignedWorklistPage`) — เดิมเขียนซ้ำสองไฟล์ (ผู้ใช้ 23 ต.ค. 69 ข้อ 2ก)
+
+| Prop | ค่า | หน้าที่ |
+|---|---|---|
+| `vitals` | `{ bp, pr, spo2, bpColor?, prColor?, spo2Color? }` | 3 บรรทัด BP · PR · O₂ · ป้าย `--text-neutral-tertiary` · ค่า `--text-content-default` (หรือสีที่ส่งมาเมื่อผิดปกติ) · xs medium · ช่องไฟป้าย↔ค่า `--dim-space-200` |
+| `emptyDash` | boolean | ไม่มีค่า (มาฟังผล ไม่ผ่านคัดกรอง) → "—" · ไม่ส่ง = ไม่แสดงอะไร |
+
+### 6.47 VitalsTextRow — แถบสัญญาณชีพข้อความใต้แถบขั้นตอน (ลงทะเบียน 23 ต.ค. 69)
+
+ไฟล์ `src/components/vitals/VitalsTextRow.jsx` · ใช้ในหน้าบันทึกทุกคลินิก (`ClinicRecordPage`) · `/treat/record` · ANC · งานโภชนาการ · ค่าอ้างอิงที่ต้องเห็นตลอดทุกขั้น ช่องกรอกจริงอยู่ที่จุดคัดกรอง (ผู้ใช้ 23 ต.ค. 69 "เพิ่ม")
+
+| Export | Props | หน้าที่ |
+|---|---|---|
+| `VitalsTextRow` (default) | `vitals` · `measuredAt` · `hn` · `sex` · `age` · `pediatric` · `omit` · `extraItems` · `alignColumns` · `embedded` · `compact` · `specialAggression` · `children` | 2 บรรทัดต่อค่า: ชื่อไทย + ตัวย่อ (`--text-content-tertiary`) บน · ค่า xs medium ล่าง · เส้นคั่นแนวตั้ง `--border-neutral-tertiary` (ค่าแรกของแต่ละบรรทัดไม่มีเส้น) · ค่าหลุดเกณฑ์ = สีแดง bold + "↑ สูง / ↓ ต่ำ" (`vitalStatus` ใน `src/data/vitalCriteria.js`) · hover = `VitalTrendTip` กราฟย้อนหลัง · ปักใต้แถบขั้นตอน (`--mih-record-band-bottom`) เว้นแต่ `embedded` |
+| `CarriedVitalsTextRow` | `patient` · `fallback` · `embedded` · `pediatric` · `age` · `omit` · `extraItems` · `alignColumns` · `children` | ดึงค่าจากจุดคัดกรอง (`carriedVitalsFor`) แล้วส่งเข้า `VitalsTextRow` |
+| `VitalsBandCompactContext` | boolean | เปลือกฟอร์มส่ง `true` ตอนเลื่อนลง → บรรทัดเดียว "ตัวย่อ ค่า" |
+| `VITAL_TEXT_FIELDS` · `vitalStatusOf` · `isVitalAbnormal` · `carriedVitalsFor` · `mockWaistFromWeight` · `SpecialAggressionTag` · `SpecialAggressionIcon` | — | ข้อมูลและ helper ชุดเดียวกับแถบ |
+
+| จอ | หน้าตา |
+|---|---|
+| ทุกขนาด | ค่าเรียงแนวนอนแล้วตัดบรรทัดเมื่อเต็มแถว — ห้ามดันหน้าล้นแนวนอน (iPad 1024/768 เคยล้น 1108px · แก้ 23 ต.ค. 69) |
+| มี `children` (เช่น แถบความก้าวหน้าบำบัด) | container ≥ 640: ค่าอยู่ซ้าย กว้างตามเนื้อหาไม่เกิน 100% · ส่วนท้ายชิดขวา · < 640 ค่าเต็มกว้าง ส่วนท้ายลงบรรทัดใหม่ |
 
 ---
 
