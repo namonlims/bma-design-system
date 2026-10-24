@@ -636,6 +636,7 @@ badge fill itself is a 141° cyan gradient (token exception, inline).
 | `typography.size.xs` | `12` |
 | `typography.size.sm` | `14` |
 | `typography.size.base` | `16` |
+| `typography.size.title` | `16` — alias `size.base` · page / component titles (`--type-size-title`) |
 | `typography.size.lg` | `18` |
 | `typography.size.xl` | `20` |
 | `typography.size.2xl` | `24` |
@@ -653,6 +654,8 @@ badge fill itself is a 141° cyan gradient (token exception, inline).
 | `typography.weight.regular` | `400` |
 | `typography.weight.medium` | `500` |
 | `typography.weight.bold` | `700` |
+| `typography.weight.title` | `400` — alias `weight.regular` · page / popup / table titles (`--type-weight-title`) |
+| `typography.weight.heading-strong` | `500` — alias `weight.medium` (`--type-weight-heading-strong`) |
 
 #### Letter Spacing
 
@@ -5402,7 +5405,18 @@ it up without a per-page override. Borders, background and icons keep their disa
 
 > **Behavior:** User can click `−`/`+` buttons to decrement/increment, or click the number field and type directly. Value is clamped to `[min, max]` on blur. The `−` button disables automatically at `min`, `+` at `max`.
 
-#### 6.5.5 CSS Implementation
+#### 6.5.5 Typography (number field)
+
+> **Typography — Stepper value:** `typography.family.body` (**Sarabun**) via `--type-family-body` — same rule as Status Summary Card hero numbers. Digits must stay tabular / body family; **do not** use `heading-content` (Mitr). Weight: Medium (`--type-weight-medium` / 500). Size: Large = `typography.size.base` (16px); Small = `typography.size.sm` (14px).
+
+| Role | CSS Variable | Figma Token | Value |
+|------|-------------|-------------|-------|
+| Number family | `--type-family-body` | `typography.family.body` | Sarabun |
+| Number weight | `--type-weight-medium` | `typography.weight.medium` | 500 |
+| Number size — Large | `--type-size-base` | `typography.size.base` | 16px |
+| Number size — Small | `--type-size-sm` | `typography.size.sm` | 14px |
+
+#### 6.5.6 CSS Implementation
 
 ```css
 .st2 {
@@ -5434,17 +5448,22 @@ it up without a per-page override. Borders, background and icons keep their disa
 .st2-btn:disabled { cursor: not-allowed; color: var(--icon-stepper-btn-dis); }
 /* Divider lines */
 .st2-div { width: 1px; background: var(--border-stepper-default); align-self: stretch; }
-/* Input field */
+/* Input field — Sarabun (body), not Mitr */
 .st2-inp {
   flex: 1; border: none; background: transparent; outline: none;
-  text-align: center; font-size: 16px; font-weight: 500; color: var(--n900);
+  text-align: center;
+  font-family: var(--type-family-body);
+  font-size: var(--type-size-base);
+  font-weight: var(--type-weight-medium, 500);
+  color: var(--text-input-filled, #4D5358);
   -moz-appearance: textfield; appearance: textfield;
 }
+.st2.sm .st2-inp { font-size: var(--type-size-sm); }
 .st2-inp::-webkit-inner-spin-button,
 .st2-inp::-webkit-outer-spin-button { -webkit-appearance: none; }
 ```
 
-#### 6.5.6 Dimension Tokens (Figma node 2709-6338)
+#### 6.5.7 Dimension Tokens (Figma node 2709-6338)
 
 | Property | Design Token | Value | Role |
 |----------|-------------|-------|------|
@@ -5454,7 +5473,7 @@ it up without a per-page override. Borders, background and icons keep their disa
 | Border radius | `dimension/radius/200` | **8px** | Container corner |
 | Border default | `dimension/stroke/150` | **1.5px** | Outer border |
 
-#### 6.5.7 Token Alias Chain
+#### 6.5.8 Token Alias Chain
 
 ```
 --border-stepper-default      ← border/input/default       ← neutral-200       ← #E2E4E6
@@ -5468,6 +5487,7 @@ it up without a per-page override. Borders, background and icons keep their disa
 --icon-stepper-btn-active     ← icon/stepper/btn-active    ← emerald-700       ← #007549
 --icon-stepper-btn-dis        ← icon/input/disabled        ← neutral-400       ← #ADB2B7
 --surface-stepper-disabled    ← surface/input/disabled     ← neutral-100       ← #F4F5F5
+--type-family-body (Stepper #) ← typography.family.body    ← Sarabun
 ```
 
 ---
@@ -14233,675 +14253,15 @@ Props: `hn` · `onCard` · hover/แตะ = `TooltipGroups` (หัวข้อ
 
 ---
 
-## 7. Mobile Application Design System
+## 7. Mobile App · Kiosk — design system แยกของตัวเอง
 
-The mobile citizen app (`/m/*` routes, see [src/pages/mobile/](src/pages/mobile/)) reuses the **foundation** tokens — colour, typography family, icon size, motion — verbatim from §1–§4. Only **shape, height, and density** differ, because thumb reach and one-handed use are the dominant constraints on a 390-wide viewport.
+> แยกจาก HCIS ตั้งแต่ 24 ต.ค. 69 (ผู้ใช้: "Design system ของ HCIS, Mobile App, Kiosk แยกออกจากกัน")
 
-The mobile system is intentionally lean: ~7 primitives that compose every screen. There is no mobile `Table`, `Tabs`, `Accordion`, or `Dropdown` yet — when those land, they extend this layer, not duplicate it.
-
-### 7.1. Layering rules
-
-```
-┌──────────────────────────────────────────────────┐
-│  Foundation (shared)                             │  §1–§4
-│  --brand-p*, --type-family-*, --text-*, etc.     │
-└──────────────────────────────────────────────────┘
-              ▲                      ▲
-              │                      │
-┌─────────────────────────┐  ┌──────────────────────┐
-│  Web tokens (default)   │  │  Mobile tokens       │  §7.2
-│  --dim-*, --type-size-* │  │  --mobile-*          │
-└─────────────────────────┘  └──────────────────────┘
-              ▲                      ▲
-              │                      │
-   Web components (§5–§6)     Mobile components (§7.3)
-```
-
-**Hard rules:**
-
-| Rule | What it means | Where it's enforced |
-|------|---------------|--------------------|
-| ✅ Mobile components alias `--mobile-*` and foundation tokens | shape/height/density tokens are platform-specific; everything else is shared | [`src/components/mobile/*`](src/components/mobile/) — every primitive |
-| ❌ Web components MUST NOT consume `--mobile-*` | if a value belongs on both, it lives in `--dim-*` / `--type-*` instead | review |
-| ❌ Mobile components MUST NOT redefine colour / typography family / icon | brand fork = brand broken | review |
-| ❌ Mobile components MUST NOT alias `--btn-*`, `--card-*`, web-only component tokens | those carry web-only geometry (radius 6, height 44/56 fixed shape) | review |
-| ✅ Touch target floor = `var(--mobile-touch-target-min, 44px)` | iOS HIG / Material 3 minimum — even for icon-only taps | every interactive primitive |
-
-If you find yourself reaching for a literal pixel in a mobile component, the answer is **add a new `--mobile-*` token** — not paste in `12px`.
-
-### 7.2. Platform tokens (`--mobile-*`)
-
-Defined in [`src/index.css`](src/index.css) — a single `:root` block right above the Spotlight CSS. Each token aliases a foundation `--dim-*` / `--type-*` value where possible, so a foundation rescale still propagates.
-
-#### Button
-
-| Token | Value | Resolves to |
-|-------|-------|-------------|
-| `--mobile-button-radius` | `var(--dim-radius-full)` | `9999px` (pill) |
-| `--mobile-button-height-sm` | `40px` | Figma Size=Small (`dimension/size/800`) |
-| `--mobile-button-height-md` | `48px` | Figma Size=Medium (`dimension/size/1000`) |
-| `--mobile-button-height-lg` | `56px` | Figma Size=Large (`dimension/size/1200`) |
-| `--mobile-button-padding-x` | `var(--dim-space-600)` | `24px` |
-| `--mobile-button-gap` | `var(--dim-space-200)` | `8px` (Medium / Large) |
-| `--mobile-button-gap-sm` | `var(--dim-space-150)` | `6px` (Small) |
-| `--mobile-button-type-size` | `var(--type-size-base)` | `16px` (Small) |
-| `--mobile-button-type-size-lg` | `var(--type-size-lg)` | `18px` (Medium / Large) |
-| `--mobile-button-type-weight` | `var(--type-weight-regular)` | `400` (heading-graphic2) |
-| `--mobile-button-shadow-fill` | Brand Drop Shadow Bottom/300 | Fill · Default / Hover / Focus |
-| `--mobile-surface-keypadButton-pressed` | white @ 20% (`color-mix` on `--text-content-on-content`) | KeypadButton · Pressed fill (Archive `314:43835`) |
-
-> **Why pill, not 6 px?** The brief is "ทรงมนโค้ง" — mobile buttons read as soft chips, not rectangular form-controls. Pill survives at any width without re-tuning the radius (a fixed `12 px` looks pill at width 60, square at width 280).
-
-#### Input
-
-| Token | Value | Resolves to |
-|-------|-------|-------------|
-| `--mobile-input-radius` | `var(--dim-radius-400)` | `12px` |
-| `--mobile-input-height` | `48px` | comfortable thumb-tap target |
-| `--mobile-input-padding-x` | `var(--dim-space-400)` | `16px` |
-| `--mobile-input-type-size` | `var(--type-size-base)` | `16px` ⚠️ |
-
-> ⚠️ **iOS Safari auto-zoom**: input `font-size < 16 px` triggers the viewport zoom on focus. Never override `--mobile-input-type-size` below 16.
-
-#### Card
-
-| Token | Value | Resolves to |
-|-------|-------|-------------|
-| `--mobile-card-radius` | `var(--dim-radius-500)` | `16px` |
-| `--mobile-card-padding` | `var(--dim-space-400)` | `16px` |
-
-#### Badge
-
-| Token | Value | Resolves to |
-|-------|-------|-------------|
-| `--mobile-badge-radius` | `var(--dim-radius-full)` | `9999px` (pill) |
-| `--mobile-badge-padding-x` | `var(--dim-space-200)` | `8px` |
-| `--mobile-badge-padding-y` | — | `2px` |
-| `--mobile-badge-type-size` | `var(--type-size-xs)` | `12px` |
-
-#### Shell (frame chrome)
-
-| Token | Value | Resolves to |
-|-------|-------|-------------|
-| `--mobile-header-height` | — | `56px` |
-| `--mobile-status-bar-height` | — | `44px` |
-| `--mobile-bottom-nav-height` | — | `80px` |
-| `--mobile-touch-target-min` | — | `44px` |
-
-#### Semantic colour (`--mobile-surface-*` / `--mobile-text-*` / `--mobile-border-*` / `--mobile-icon-*`)
-
-Mobile colour tokens are **separate from web** (web uses `--surface-*` / `--text-*` directly). This split lets the citizen app run a different palette — currently a brighter emerald (`#08A768`) versus the desktop deep-green (`#007549`) — without re-skinning the desktop EMR. Both palettes inherit foundation tokens (typography family, motion, icon families).
-
-Source of truth: Figma file `opz7X9AAKGQf5prHhsPDGn` Light/Dark variable collections. Values exported to [`src/index.css`](src/index.css) — light values live under `:root`, dark overrides under `[data-mobile-theme="dark"]` (toggleable per-subtree).
-
-Each tone covers 4 categories × 5 surface tiers + on-* text variants. The button system reads from these tokens via the `buildPalette(tone, options)` helper in [_base.jsx](src/components/mobile/button/_base.jsx):
-
-| Tone | Used by | Default fill (light) | Default fill (dark) |
-|------|---------|----------------------|---------------------|
-| `brandPrimaryButton` | BrandButton, BrandSubdueButton, BrandIconButton, BrandSubdueIconButton, BrandCircleIconButton, BrandCircleSubdueIconButton, BrandSubdueFloatButton | `#08A768` | `#6AD6A5` |
-| `brandSecondaryButton` | reserved for second-tier brand actions | `#427C3D` | `#78B573` |
-| `dangerButton` | DangerButton, DangerSubdueButton, DangerIconButton, DangerSubdueIconButton | `#B91C1C` | `#FCA5A5` |
-| `neutralButton` | NeutralButton, NeutralSubdueButton, NeutralIconButton, NeutralSubdueIconButton, HistoryListFormButton | `#4D5358` | `#C9CDD0` |
-| `disabledButton` | every variant's `disabled` state (all tones) | `#F4F5F5` | `#363B3F` |
-
-Per-tone surface tiers — same shape for every tone:
-
-| Tier | Where it shows up |
-|------|-------------------|
-| `default` | Fill bg for solid (fill) variant |
-| `default-hover` | Hover bg for solid fill |
-| `secondary` | Active bg for solid fill (pressed) |
-| `secondary-hover` | (reserved — currently unused by buttons) |
-| `tertiary` | Active bg for ghost / outline-active fallback |
-| `tertiary-hover` | (reserved) |
-| `quaternary` | Default bg for subdue (soft) fill |
-| `quaternary-hover` | Hover bg for subdue fill / outline-active |
-| `quinary` | (reserved — lightest tier) |
-| `quinary-hover` | Hover bg for outline / ghost variant |
-
-Text + icon tokens follow the same naming (`text-{tone}-default | secondary | tertiary | quaternary | on-brand | on-default | on-neutral`). `on-*` keys carry the contrast colour painted ON TOP of the matching solid fill (`text-brandPrimaryButton-on-brand` = white in light mode, `#002318` in dark mode).
-
-Focus ring stroke comes from `--mobile-focus-ring-width` (4px); colour is `--mobile-border-brandPrimaryButton-tertiary` regardless of tone (the focus ring's job is to mark _focus_, not _intent_).
-
-> **How to add a new tone**: append the full tier+text+border+icon set to BOTH `:root` and `[data-mobile-theme="dark"]` in [src/index.css](src/index.css), then call `buildPalette('newTone')` from the consuming button file. No changes to `_base.jsx` should be needed.
-
-### 7.3. Component map
-
-Each primitive lives in its own file under [src/components/mobile/](src/components/mobile/). Pages can import from `'src/components/mobile'` (barrel) or from `'./MobileShell'` (legacy re-exports — kept so the existing 19 pages don't need to be touched).
-
-**Naming convention** — mobile components use the **same names as the Figma file** (no `Mobile` prefix). The folder location (`src/components/mobile/button/BrandButton.jsx` vs `src/components/button/BrandButton.jsx`) is what disambiguates them from the web equivalents. Import path is the source of truth:
-
-```js
-import { BrandButton } from '@/components/button';         // web (36/40/44h, radius-150)
-import { BrandButton } from '@/components/mobile';         // mobile (40/48/56h, pill)
-import { BrandButton } from '@/components/mobile/button';  // mobile, explicit
-```
-
-#### Button family (Figma App `opz7X9AAKGQf5prHhsPDGn` · Brand Button `231:29` + siblings)
-
-All text buttons live under [src/components/mobile/button/](src/components/mobile/button/). They share `MobileButtonBase` + `createFigmaTextButton` ([_base.jsx](src/components/mobile/button/_base.jsx)) — each file builds a tone palette then exposes the **same Figma property surface**:
-
-| Figma property | Code prop | Values |
-|----------------|-----------|--------|
-| **Style** | `variant` / `buttonStyle` | `Fill` · `Outline` · `Ghost` (Subdue families: Fill · Outline only) |
-| **State** | `state` or `hovered` / `active` / `focused` / `disabled` | `Default` · `Hover` · `Active` · `Focus` · `Disable` |
-| **Size** | `size` | `Large` (56) · `Medium` (48) · `Small` (40) — also `lg` / `md` / `sm` |
-| **Show Leading icon** | `showLeadingIcon` + `leadingIcon` | boolean + Material Symbol name |
-| **Show Tailing icon** | `showTailingIcon` + `trailingIcon` | boolean + Material Symbol name (Figma spelling *Tailing*) |
-
-**Size matrix (Figma App):**
-
-| Size | Height | Icon | Gap | Type |
-|------|--------|------|-----|------|
-| Small | 40px | 16 | 6px | `--type-size-base` (16) |
-| Medium | 48px | 20 | 8px | `--type-size-lg` (18) |
-| Large | 56px | 24 | 8px | `--type-size-lg` (18) |
-
-Padding X = `24px` (`--dim-space-600`) · radius = pill · font = `--type-family-heading-graphic2` regular. Fill · Default uses `--mobile-button-shadow-fill` (Brand Drop Shadow Bottom/300).
-
-**State matrix** — every Style resolves to 5 states (`default` / `hover` / `active` / `focus` / `disabled`). The renderer tracks hover/focus/pressed; callers can force a state via props (used by `/m/components`). Focus ring uses CSS `outline` outside the box.
-
-| Component | Figma node | Styles | Notes |
-|-----------|-----------|--------|-------|
-| [`BrandButton`](src/components/mobile/button/BrandButton.jsx) | [231:29](https://www.figma.com/design/opz7X9AAKGQf5prHhsPDGn/MIH-Design-System-Foundation--App-?node-id=231-29) | Fill · Outline · Ghost | Primary CTA |
-| [`BrandSubdueButton`](src/components/mobile/button/BrandSubdueButton.jsx) | [2024:3589](https://www.figma.com/design/opz7X9AAKGQf5prHhsPDGn/MIH-Design-System-Foundation--App-?node-id=2024-3589) | Fill · Outline | Soft brand · no Ghost |
-| [`DangerButton`](src/components/mobile/button/DangerButton.jsx) | [2024:3590](https://www.figma.com/design/opz7X9AAKGQf5prHhsPDGn/MIH-Design-System-Foundation--App-?node-id=2024-3590) | Fill · Outline · Ghost | Destructive |
-| [`DangerSubdueButton`](src/components/mobile/button/DangerSubdueButton.jsx) | [2024:3592](https://www.figma.com/design/opz7X9AAKGQf5prHhsPDGn/MIH-Design-System-Foundation--App-?node-id=2024-3592) | Fill · Outline | Soft destructive · no Ghost |
-| [`NeutralButton`](src/components/mobile/button/NeutralButton.jsx) | [2024:3591](https://www.figma.com/design/opz7X9AAKGQf5prHhsPDGn/MIH-Design-System-Foundation--App-?node-id=2024-3591) | Fill · Outline · Ghost | Greyscale secondary |
-| [`NeutralSubdueButton`](src/components/mobile/button/NeutralSubdueButton.jsx) | [2024:2940](https://www.figma.com/design/opz7X9AAKGQf5prHhsPDGn/MIH-Design-System-Foundation--App-?node-id=2024-2940) | Fill · Outline | Soft neutral · no Ghost |
-| [`BrandIconButton`](src/components/mobile/button/BrandIconButton.jsx) | 377:11596 | pill (square) | Icon-only |
-| [`BrandSubdueIconButton`](src/components/mobile/button/BrandSubdueIconButton.jsx) | 2024:4352 | pill (square) | Icon-only · soft brand |
-| [`DangerIconButton`](src/components/mobile/button/DangerIconButton.jsx) | 2024:3701 | pill (square) | Icon-only · destructive |
-| [`DangerSubdueIconButton`](src/components/mobile/button/DangerSubdueIconButton.jsx) | 2024:4434 | pill (square) | Icon-only · soft destructive |
-| [`NeutralIconButton`](src/components/mobile/button/NeutralIconButton.jsx) | 2024:4189 | pill (square) | Icon-only · neutral |
-| [`NeutralSubdueIconButton`](src/components/mobile/button/NeutralSubdueIconButton.jsx) | 2024:4516 | pill (square) | Icon-only · soft neutral |
-| [`BrandCircleIconButton`](src/components/mobile/button/BrandCircleIconButton.jsx) | 2103:548 | circle (50%) | Force-circular |
-| [`BrandCircleSubdueIconButton`](src/components/mobile/button/BrandCircleSubdueIconButton.jsx) | 2103:645 | circle (50%) | Force-circular · soft brand |
-| [`BrandSubdueFloatButton`](src/components/mobile/button/BrandSubdueFloatButton.jsx) | 2293:11088 | circle (50%) | FAB · drop-shadow |
-| [`HistoryListFormButton`](src/components/mobile/button/HistoryListFormButton.jsx) | 3360:2711 | pill | Wide row · forced Medium |
-| [`KeypadButton`](src/components/mobile/button/KeypadButton.jsx) | [314:43835](https://www.figma.com/design/4WXeI8fgBLQGgQ9VheM2yD/-Archive--Mobile-Application?node-id=314-43835) | circle 72 | PIN keypad · Number / icon · Default / Pressed |
-
-#### BrandButton
-
-> Mobile · Figma App node [`231:29`](https://www.figma.com/design/opz7X9AAKGQf5prHhsPDGn/MIH-Design-System-Foundation--App-?node-id=231-29) · Live: [`/m/components`](/m/components)
-
-##### Component Properties
-
-| Property | Type | Default | Description |
+| ระบบ | เอกสาร | Token (mih-design `packages/design-tokens`) | Figma |
 |---|---|---|---|
-| `variant` / `buttonStyle` | `Fill` \| `Outline` \| `Ghost` | `Fill` | Figma **Style** |
-| `size` | `Large` \| `Medium` \| `Small` | `Large` | 56 / 48 / 40 px height |
-| `state` | `Default` \| `Hover` \| `Active` \| `Focus` \| `Disable` | `Default` | Force state (demos) |
-| `showLeadingIcon` | `boolean` | `true` | Show leading icon when `leadingIcon` set |
-| `showTailingIcon` | `boolean` | `true` | Show trailing icon when `trailingIcon` set (Figma name) |
-| `leadingIcon` / `trailingIcon` | Material Symbol name | — | Icon slots |
-| `fullWidth` | `boolean` | `true` | Span container width |
-| `disabled` | `boolean` | `false` | Non-interactive |
-
-##### Spacing
-
-| Size | Height | Padding X | Gap | Icon | Type |
-|---|---|---|---|---|---|
-| Large | 56px | 24px | 8px | 24×24 | 18px regular |
-| Medium | 48px | 24px | 8px | 20×20 | 18px regular |
-| Small | 40px | 24px | 6px | 16×16 | 16px regular |
-
-```jsx
-<BrandButton
-  buttonStyle="Fill"
-  size="Large"
-  leadingIcon="image"
-  trailingIcon="chevron_right"
-  showLeadingIcon
-  showTailingIcon
->
-  Button
-</BrandButton>
-```
-
-#### BrandSubdueButton
-
-> Mobile · Figma [`2024:3589`](https://www.figma.com/design/opz7X9AAKGQf5prHhsPDGn/MIH-Design-System-Foundation--App-?node-id=2024-3589) · Soft brand · **Style: Fill / Outline only** (no Ghost) · same Size / State / icon toggles as BrandButton.
-
-#### DangerButton
-
-> Mobile · Figma [`2024:3590`](https://www.figma.com/design/opz7X9AAKGQf5prHhsPDGn/MIH-Design-System-Foundation--App-?node-id=2024-3590) · Destructive · Style: Fill / Outline / Ghost · same Size / State / icon toggles.
-
-#### DangerSubdueButton
-
-> Mobile · Figma [`2024:3592`](https://www.figma.com/design/opz7X9AAKGQf5prHhsPDGn/MIH-Design-System-Foundation--App-?node-id=2024-3592) · Soft destructive · **Style: Fill / Outline only** · same Size / State / icon toggles.
-
-#### NeutralButton
-
-> Mobile · Figma [`2024:3591`](https://www.figma.com/design/opz7X9AAKGQf5prHhsPDGn/MIH-Design-System-Foundation--App-?node-id=2024-3591) · Greyscale · Style: Fill / Outline / Ghost · same Size / State / icon toggles.
-
-#### NeutralSubdueButton
-
-> Mobile · Figma [`2024:2940`](https://www.figma.com/design/opz7X9AAKGQf5prHhsPDGn/MIH-Design-System-Foundation--App-?node-id=2024-2940) · Soft neutral · **Style: Fill / Outline only** · same Size / State / icon toggles.
-
-**Props (shared via `createFigmaTextButton`):**
-
-```jsx
-<BrandButton
-  variant="Fill" | "Outline" | "Ghost"   // or buttonStyle=…
-  size="Large" | "Medium" | "Small"      // or lg | md | sm
-  state="Default"                        // optional force for demos
-  leadingIcon="event_available"
-  trailingIcon="arrow_forward"
-  showLeadingIcon
-  showTailingIcon
-  disabled
-  fullWidth                              // default true
-  onClick={...}
->
-  Label
-</BrandButton>
-```
-
-> ⚠️ **Deprecated**: `MobileButton` with `variant='primary' | 'secondary' | 'ghost' | 'danger' | 'neutral'` is kept as a translation shim ([MobileButton.jsx](src/components/mobile/MobileButton.jsx)) so existing `/m/*` pages keep working. New code MUST use the canonical Figma names above.
-
-#### KeypadButton — Archive `314:43835`
-
-> Mobile · [`KeypadButton.jsx`](src/components/mobile/button/KeypadButton.jsx) · Live: [`/m/components#keypad-button`](/m/components#keypad-button)
-
-PIN / numeric keypad key. 72×72 circle (`--dim-size-1600`). Default: 1px `--brand-p400` ring · transparent fill. Pressed: 1.5px `--brand-p300` ring + `--mobile-surface-keypadButton-pressed` (white @ 20%). Digit = Sarabun Bold 24 / on-content. Icon type uses Material `backspace` (Figma Delete).
-
-| Property | Type | Default | Description |
-|---|---|---|---|
-| `type` | `Number` \| `icon` | `Number` | Digit vs delete |
-| `state` | `Default` \| `Pressed` | interactive | Force for demos |
-| `digit` / `children` | `ReactNode` | — | Number label |
-| `icon` | Material Symbol | `backspace` | When `type=icon` |
-
-```jsx
-<KeypadButton type="Number" digit="1" onClick={() => press('1')} />
-<KeypadButton type="icon" onClick={backspace} aria-label="ลบ" />
-```
-
-#### Primitives
-
-| Component | File | Web equivalent | What differs on mobile |
-|-----------|------|----------------|------------------------|
-| [`Password`](src/components/mobile/Password.jsx) | Password.jsx | `PasswordField` (§6) | Figma App [`5021:1008`](https://www.figma.com/design/opz7X9AAKGQf5prHhsPDGn/MIH-Design-System-Foundation--App-?node-id=5021-1008) · pill · lock + eye · Large 56 / Medium 48 |
-| [`Textarea`](src/components/mobile/Textarea.jsx) | Textarea.jsx | `Textarea` (§6.12) | Figma App [`268:26`](https://www.figma.com/design/opz7X9AAKGQf5prHhsPDGn/MIH-Design-System-Foundation--App-?node-id=268-26) · min-h 96 · radius-200 · Default/Press/Filled/Error/Disabled |
-| [`SuccessCard`](src/components/mobile/SuccessCard.jsx) | SuccessCard.jsx | — | Archive [`178:122765`](https://www.figma.com/design/4WXeI8fgBLQGgQ9VheM2yD/?node-id=178-122765) · teal gradient + arch card (radius-1000 / 600) · award hero · optional rows / dual CTA |
-| [`MobileCard`](src/components/mobile/Card.jsx) | Card.jsx | `Card` (web) | Radius 16 vs 8; subtle elevation opt-in |
-| [`ServiceRequestCard`](src/components/mobile/ServiceRequestCard.jsx) | ServiceRequestCard.jsx | — | Archive [`194:153209`](https://www.figma.com/design/4WXeI8fgBLQGgQ9VheM2yD/?node-id=194-153209) · 160w · radius-600 · Colorful icon Badge pill · Home ส่งคำขอ |
-| [`MobileInput`](src/components/mobile/Input.jsx) | Input.jsx | `InputField` (§6.12) | 16px base font (iOS zoom guard); 48h; pill-leaning radius |
-| [`MobileField`](src/components/mobile/Field.jsx) | Field.jsx | `FormControl` wrapper | Stacks label / hint / error around any control |
-| [`MobileBadge`](src/components/mobile/Badge.jsx) | Badge.jsx | soft tone chips | countdown / distance pills — prefer ColorfulBadge for categorical tags |
-| [`ColorfulBadge`](src/components/badge/ColorfulBadge.jsx) | shared web | Figma App [`2076:8413`](https://www.figma.com/design/opz7X9AAKGQf5prHhsPDGn/MIH-Design-System-Foundation--App-?node-id=2076-8413) · 11 styles × Small/Default × Default/Outline × Primary/Secondary |
-| [`MobileHeader`](src/components/mobile/Header.jsx) | Header.jsx | `Header` (§6.19) | 56h app-bar pattern; back arrow + title + right-slot; `transparent` mode over hero gradient |
-| [`MobileSectionLabel`](src/components/mobile/SectionLabel.jsx) | SectionLabel.jsx | — | Section header above content blocks |
-| [`MobileShell`](src/components/mobile/MobileShell.jsx) | MobileShell.jsx | — | Phone frame + status bar + bottom nav + auth gate |
-| [`Sym`](src/components/mobile/Sym.jsx) | Sym.jsx | `Sym` (web) | Same shape, separate file so the mobile tree has no web-only coupling |
-| [`BottomActionBar`](src/components/mobile/BottomActionBar.jsx) | BottomActionBar.jsx | sticky footer | Bottom button bar (column \| row · sticky · safe area) — §7.3.11 |
-| [`BottomSheet`](src/components/mobile/BottomSheet.jsx) · `SheetCloseButton` | BottomSheet.jsx | `Popup` | The one slide-up sheet of the app: ‹ / centred title / × · footer · variant page · portal — §7.3.12 |
-| [`EmptyState`](src/components/mobile/EmptyState.jsx) | EmptyState.jsx | empty state | Icon 48 → title → text → action · framed / compact — §7.3.13 |
-| [`InlineNotice`](src/components/mobile/InlineNotice.jsx) | InlineNotice.jsx | `Alert` (§6) | Compact alert: icon + text, 4 tones, md / sm, optional × — §7.3.14 |
-| [`Divider`](src/components/mobile/Divider.jsx) | Divider.jsx | — | 1px solid / dashed line, optional centred label ("หรือ") — §7.3.15 |
-| [`AmountRow`](src/components/mobile/AmountRow.jsx) · `AmountRows` | AmountRow.jsx | — | Label left / amount right, total row (`strong`), value tone — §7.3.16 |
-| [`StepProgress`](src/components/mobile/StepProgress.jsx) | StepProgress.jsx | `Stepper` | "ขั้นตอนที่ n จาก N" + segmented / continuous bar — §7.3.17 |
-| [`Avatar`](src/components/mobile/Avatar.jsx) | Avatar.jsx | `Avatar` (§6.11) | Photo circle → initial → icon fallback · ring — §7.3.18 |
-
-> 📝 **Naming exception**: Primitives that are conceptually "mobile shell" (Card, Input, Field, Badge, Header, SectionLabel, Shell) keep the `Mobile*` prefix because there is no Figma master of these yet — the prefix marks them as mobile-only until a Figma source-of-truth exists. Buttons, **Password**, and **Textarea** drop the prefix because their Figma App masters (`319:2012` / `5021:1008` / `268:26`) ARE the source-of-truth. **SuccessCard** drops the prefix as a shared flow template (Archive success screens), not a shell chrome piece.
-
-#### 7.3.1 MobileButton — props & variants
-
-```jsx
-<MobileButton
-  variant='primary' | 'secondary' | 'ghost' | 'danger' | 'neutral'
-  size='md' | 'lg'           // default 'lg' (56h)
-  icon='event_available'     // optional leading Material Symbol
-  iconRight='arrow_forward'  // optional trailing
-  disabled
-  fullWidth                  // default true — mobile CTAs span the safe area
-  onClick={...}
->
-  จองนัด
-</MobileButton>
-```
-
-| Variant | Surface token | Text token | Border |
-|---------|---------------|------------|--------|
-| `primary` | `--surface-brandPrimary-default` | `#FFFFFF` | transparent |
-| `secondary` | `--surface-brandPrimary-quaternary` | `--text-brandPrimary-default` | `--border-brandPrimary-default` |
-| `ghost` | transparent | `--text-brandPrimary-default` | transparent |
-| `danger` | `--surface-warning-default` | `#FFFFFF` | transparent |
-| `neutral` | `--surface-content-default` | `--text-content-primary` | `--border-content-tertiary` |
-
-#### 7.3.2 MobileCard — props
-
-```jsx
-<MobileCard
-  padding='var(--dim-space-500, 20px)'   // override default 16
-  onClick={...}                          // makes the card a button (role/keyboard)
-  interactive                            // visual cursor: pointer without onClick
-  elevated                               // adds --shadow-brand-drop-bottom-200
->
-  …
-</MobileCard>
-```
-
-#### 7.3.3 Password — Figma App `5021:1008`
-
-> Mobile · [`Password.jsx`](src/components/mobile/Password.jsx) · Live: [`/m/components#mobile-password`](/m/components#mobile-password)
-
-| Property | Type | Default | Description |
-|---|---|---|---|
-| `size` | `Large` \| `Medium` \| `lg` \| `md` | `lg` | 56 / 48 px height |
-| `state` | `default` \| `press` \| `filled` \| `error` \| `disabled` | derived | Force for demos |
-| `showFieldName` | `boolean` | `true` | Show label |
-| `required` | `boolean` | `false` | Show `*` |
-| `showLeadingIcon` | `boolean` | `true` | Leading `lock` (override via `leadingIcon`) |
-| `showPassword` | `boolean` | `true` | Eye toggle (`visibility` / `visibility_off`) |
-| `helperText` / `error` | `string` | — | Helper under field; `error` forces Error state |
-
-```jsx
-<Password
-  label="รหัสผ่าน"
-  required
-  size="Large"
-  value={pw}
-  onChange={(e) => setPw(e.target.value)}
-  placeholder="กรอกรหัสผ่าน"
-  helperText="อย่างน้อย 8 ตัวอักษร"
-/>
-```
-
-#### 7.3.4 Textarea — Figma App `268:26`
-
-> Mobile · [`Textarea.jsx`](src/components/mobile/Textarea.jsx) · Live: [`/m/components#mobile-textarea`](/m/components#mobile-textarea)
-
-| Property | Type | Default | Description |
-|---|---|---|---|
-| `state` | `default` \| `press` \| `filled` \| `error` \| `disabled` | derived | Force for demos |
-| `showFieldName` | `boolean` | `true` | Show label |
-| `required` | `boolean` | `false` | Show `*` |
-| `helperText` / `error` | `string` | — | Helper under field; `error` forces Error state |
-| `minHeight` | `number` | `96` | Box min-height (px) |
-| `rows` | `number` | `3` | Native rows |
-| `resize` | CSS resize | `none` | Override if needed |
-
-```jsx
-<Textarea
-  label="อาการเบื้องต้น / หมายเหตุ"
-  required
-  value={note}
-  onChange={(e) => setNote(e.target.value)}
-  placeholder="Placeholder"
-  helperText="Helper text"
-/>
-```
-
-#### 7.3.5 SuccessCard — Archive `178:122765`
-
-> Mobile · [`SuccessCard.jsx`](src/components/mobile/SuccessCard.jsx) · Live: [`/m/components#mobile-success-card`](/m/components#mobile-success-card)
-
-Reusable post-flow success template: teal gradient shell + white arch card (top `--dim-radius-1000`, bottom `--dim-radius-600`) + award hero + title + optional description / info rows + primary `BrandButton` (+ optional `BrandSubdueButton` Outline).
-
-Used by register identity success, **register complete** ([Archive `171:70337`](https://www.figma.com/design/4WXeI8fgBLQGgQ9VheM2yD/-Archive--Mobile-Application?node-id=171-70337)), and booking success. Export `SUCCESS_CARD_BG` for `MobileShell` `background` when chrome is hidden.
-
-| Property | Type | Default | Description |
-|---|---|---|---|
-| `title` | `ReactNode` | — | Brand heading |
-| `description` | `ReactNode` | — | Supporting copy under title |
-| `rows` | `{ label, value }[]` | — | Soft brand summary card |
-| `primaryAction` / `secondaryAction` | `{ label, onClick, showTailingIcon?, … }` | — | CTA(s); primary defaults chevron |
-| `heroSrc` / `heroSize` | `string` / `number` | award PNG / `160` | Hero illustration |
-| `fill` | `boolean` | `true` | `flex:1` + min-height 100% |
-| `background` | `string` | `SUCCESS_CARD_BG` | Gradient override |
-
-```jsx
-<SuccessCard
-  title="ยืนยันตัวตนสำเร็จ"
-  rows={[
-    { label: 'ชื่อ–สกุล', value: fullName },
-    { label: 'เลขประจำตัวประชาชน', value: formatCid(cid) },
-  ]}
-  primaryAction={{ label: 'ดำเนินการต่อ', onClick: onNext }}
-/>
-
-{/* Archive 171:70337 — register complete */}
-<SuccessCard
-  title="ลงทะเบียนสำเร็จ"
-  description="ยินดีต้อนรับเข้าสู่แอปพลิเคชัน PHCIS ข้อมูลของคุณถูกบันทึกเข้าระบบเรียบร้อยแล้ว"
-  primaryAction={{ label: 'เข้าสู่ระบบ', onClick: enterApp }}
-/>
-
-<SuccessCard
-  title="สร้างนัดหมายสำเร็จ"
-  description={<>ระบบได้บันทึก…</>}
-  primaryAction={{ label: 'ดูการนัดหมาย', showTailingIcon: false, onClick: goAppts }}
-  secondaryAction={{ label: 'กลับสู่หน้าหลัก', onClick: goHome }}
-/>
-```
-
-#### 7.3.6 MobileInput + MobileField — pattern
-
-```jsx
-<MobileField label='เลขประจำตัวประชาชน' required hint='13 หลัก' error={errors.cid}>
-  <MobileInput inputMode='numeric' maxLength={13} value={cid} onChange={…} />
-</MobileField>
-```
-
-`MobileField` accepts **any control** as children — `MobileInput`, `<textarea>`, `<select>`, or a custom picker. The label / hint / error treatment is the same.
-
-#### 7.3.7 MobileBadge — tones
-
-`tone` = `'neutral'` | `'brand'` | `'success'` | `'warning'` | `'info'`. Soft countdown / distance chips. For categorical tags use **ColorfulBadge** (Figma App `2076:8413`) instead.
-
-#### 7.3.8 ColorfulBadge — Figma App `2076:8413`
-
-> Shared · [`ColorfulBadge.jsx`](src/components/badge/ColorfulBadge.jsx) · Live: [`/m/components#mobile-colorful-badge`](/m/components#mobile-colorful-badge) · Web: `/components`
-
-11 styles × Small (24) / Default (32) × Default / Outline × Primary (`*-bold` + badge-on) / Secondary (100 + 700). Toggles: Show Dot · Show Icon · Show Text.
-
-```jsx
-<ColorfulBadge style="green" size="small" hierarchy="secondary" showDot icon="pill">
-  Text
-</ColorfulBadge>
-<ColorfulBadge style="green" size="small" hierarchy="primary" showDot>Text</ColorfulBadge>
-<ColorfulBadge style="grey" size="small" fill="outline" showDot>Text</ColorfulBadge>
-```
-
-#### 7.3.9 MobileHeader — props
-
-```jsx
-<MobileHeader
-  title='นัดหมาย'
-  subtitle='TOR §4.2'      // optional small line beneath title
-  onBack={...}              // defaults to history.goBack()
-  right={<BellIcon />}      // any node — usually an icon-button or badge
-  hideBack                  // omit the back arrow (e.g. tab-root pages)
-  transparent               // for hero screens that own their background
-/>
-```
-
-#### 7.3.10 MobileShell — frame
-
-```jsx
-<MobileShell
-  showStatusBar={true}      // hide for full-bleed onboarding
-  showBottomNav={true}      // hide on auth screens / wizard steps
-  requireAuth={false}       // public pages (login, register, reset)
-  background='var(--surface-content-secondary)'
->
-  <MobileHeader title='…' />
-  {/* page body */}
-</MobileShell>
-```
-
-The shell wraps the page in a 402×874 iPhone 17 mock so desktop reviewers can demo the citizen flow. On touch devices ≤ 430 wide the chrome collapses and the app fills the viewport.
-
-#### 7.3.11–7.3.18 Common primitives (ผู้ใช้ 22 ต.ค. 69)
-
-> Source lives in the **bma.mobile** repo (`src/components/mobile/`); this section mirrors its design.md §7.3.
-
-Seven of these were hand-drawn again and again across pages; `BottomSheet` was already made the single sheet of the app and is listed so the set is complete (counts from a scan of every `src/pages/mobile/*` + `src/components/mobile/*` file). New screens use the shared component; old copies move to it when their page is touched. All are exported from `@/components/mobile`; live demos at `/m/components?component=<slug>`.
-
-| # | Component | Slug | Replaces (copies found) | Key props |
-|---|-----------|------|-------------------------|-----------|
-| 7.3.11 | [`BottomActionBar`](src/components/mobile/BottomActionBar.jsx) | `mobile-bottom-action-bar` | `Footer` · `StickyFooter` · `BookingFooter` + inline footers (~20) | `direction` column \| row · `sticky` · `safeArea` · `border` brand \| neutral \| none · `shadow` |
-| 7.3.12 | [`BottomSheet`](src/components/mobile/BottomSheet.jsx) (`BookingSheet` = alias) · `SheetCloseButton` · `SHEET_TITLE` | `mobile-bottom-sheet` | the one sheet of the whole app — every sheet already moved to it (ผู้ใช้ 21–22 ต.ค. 69 · `.claude/rules/mobile-ui-layout.md`) | `open` · `title` · `onClose` · `onBack` · `footer` · `headerRight` · `padded` · `dismissOnOverlay` · `variant` sheet \| page · `zIndex` · portals into `.mih-phone-screen` |
-| 7.3.13 | [`EmptyState`](src/components/mobile/EmptyState.jsx) | `mobile-empty-state` | `EmptyState` · `EmptyTimeline` + "ไม่พบ…" screens (~14) | `icon` (null = none) · `tone` · `title` · `description` · `action` · `framed` · `compact` |
-| 7.3.14 | [`InlineNotice`](src/components/mobile/InlineNotice.jsx) | `mobile-inline-notice` | `ErrorAlert` · `ErrorNote` · `InfoAlert` + inline alert boxes (~10) | `tone` info \| success \| warning \| error · `title` · `icon` · `size` md \| sm · `action` · `onClose` |
-| 7.3.15 | [`Divider`](src/components/mobile/Divider.jsx) | `mobile-divider` | `SettingsList` Divider + inline 1px / dashed lines (~9) | `variant` solid \| dashed · `tone` neutral \| brand \| strong · `label` · `spacing` |
-| 7.3.16 | [`AmountRow`](src/components/mobile/AmountRow.jsx) · `AmountRows` | `mobile-amount-row` | `CostRow` · `InfoRow` · `AmountRow` · receipt `Row` (~8) | `label` · `value` · `sub` · `strong` · `tone` danger \| success \| brand · `size` sm \| xs |
-| 7.3.17 | [`StepProgress`](src/components/mobile/StepProgress.jsx) | `mobile-step-progress` | `StepBar` · `BookingStepper` · `RequestStepProgress` · `ProgressBar` (5) | `current` (1-based) · `total` · `label` · `caption` · `variant` segmented \| continuous |
-| 7.3.18 | [`Avatar`](src/components/mobile/Avatar.jsx) | `mobile-avatar` | `ListAvatar` + home / doctor / switcher / profile photo circles (7) | `src` · `name` (first letter fallback, title prefix stripped) · `fallbackIcon` · `size` · `ring` white \| brand |
-
-Rules that apply to all eight:
-
-- **Which one, when.** Buttons at the bottom of a page or sheet → `BottomActionBar` (one Fill CTA, the rest Subdue). Any slide-up panel → `BottomSheet` (never re-draw the overlay; do not stack sheets — change the content and use `onBack`). Nothing to show → `EmptyState`. A message inside the page → `InlineNotice` (the web `Alert` stays for full-width Figma 297:59 alerts only). Money rows → `AmountRow` (right-aligned value); other label/value pairs → `InfoGrid` (left-aligned two columns).
-- **Tokens.** Sheet panel `--surface-card-100` + top radius `--dim-radius-600` + `--shadow-brand-top-200`, up to 92% tall · overlay `--surface-overlay-default` (black 50% in the app) · notice `--surface-/--border-/--text-alert-{tone}` · bar border `--border-brandPrimary-quaternary` + `--shadow-brand-drop-top-100` · step fill `--surface-brandPrimary-default` / current `--surface-positive-default` / rest `--surface-brandPrimary-tertiary` (Archive `2119:51183`).
-- **Touch.** `InlineNotice` × is 44×44. `SheetCloseButton` and the sheet ‹ are 44×44 hit areas; the visible circle stays 40 (Figma) — ผู้ใช้ 22 ต.ค. 69 ข้อ 2ก.
-- **Close.** `BottomSheet` closes on ×, tap on the overlay (unless `dismissOnOverlay={false}`), and Esc.
-
-```jsx
-<BottomSheet title='เลือกขนาดตัวอักษร' onClose={close}
-  footer={<BrandButton fullWidth onClick={save}>บันทึก</BrandButton>}>
-  …
-</BottomSheet>
-
-<BottomActionBar sticky safeArea>
-  <BrandButton fullWidth>ยืนยันนัดหมาย</BrandButton>
-  <BrandSubdueButton fullWidth>ย้อนกลับ</BrandSubdueButton>
-</BottomActionBar>
-
-<AmountRows>
-  <AmountRow label='ค่ายา' value='฿320.00' />
-  <AmountRow label='สิทธิการรักษา' value='-฿320.00' tone='success' />
-  <Divider variant='dashed' tone='strong' />
-  <AmountRow label='ยอดที่ต้องชำระ' value='฿0.00' strong />
-</AmountRows>
-
-<StepProgress current={2} total={4} label='ยืนยันตัวตน' />
-<EmptyState icon='event_busy' title='ยังไม่มีนัดหมาย' description='นัดหมายที่จองไว้จะแสดงที่นี่' framed />
-<InlineNotice tone='warning' size='sm'>ยาบางรายการต้องเก็บในตู้เย็น</InlineNotice>
-<Avatar src={user.avatar} name={user.name} size={48} ring='white' />
-```
-
-**Not migrated yet** (copies still in pages — move them when the page is next touched; sheets are already done): footers in Telemed · PharmacyPayment · Consent · Register; empty states in Book · Appointments · Records; step bars in Register · BookingWizard · RequestDetailSheet · SelfAssessment.
-
-### 7.4. What does **not** exist yet on mobile
-
-These web primitives have **no** mobile equivalent today. Pages that need them must either compose from existing mobile primitives or motivate the new addition in a PR:
-
-- `Table` — long list patterns use stacked `MobileCard` rows instead.
-- `Tabs` — segmented control should land here when first needed.
-- `Accordion` — `MobileCard` + collapsible state is the current pattern.
-- `Dropdown` / `Select` — bottom-sheet picker is the mobile-native pattern; build it on `BottomSheet` (§7.3.12) + `ListRow` `selected`, not as a new overlay.
-- `DatePicker` / `TimeSlot` — wizards currently use a custom grid (see [MobileBookPage.jsx](src/pages/mobile/MobileBookPage.jsx)). A canonical `MobileDatePicker` belongs here.
-
-When adding a new mobile primitive: create the file under [src/components/mobile/](src/components/mobile/), add tokens to §7.2, and register the entry in §7.3's component-map table.
-
-### 7.6. Mobile New Theme (Design Option A)
-
-ลูกค้าเลือก 18 ต.ค. 69 · Figma `XCuT5qG9E7V7Aa815X3usM` — Theme [`2790:109177`](https://www.figma.com/design/XCuT5qG9E7V7Aa815X3usM/Mobile-Application--New-Theme-?node-id=2790-109177) · DS page "New Theme · Design System" [`6003:47665`](https://www.figma.com/design/XCuT5qG9E7V7Aa815X3usM/Mobile-Application--New-Theme-?node-id=6003-47665). Approved exception to §7.1 "must not redefine colour / typography family" — the customer changed the mobile brand look.
-
-**Scope:** `tokens.css` block `:root[data-app='mobile']:not([data-mode='dark'])`. Only bma.mobile sets `<html data-app="mobile">` → web pages (bma.health, including its `/m/*` preview) keep the default values. Dark mode unchanged.
-
-| Token | Value | Use |
-|---|---|---|
-| `--mobile-theme-header` | `var(--surface-brandPrimary-default)` #007549 | solid header / splash / login / profile hero (was teal gradient #13B292 → #00A08E) |
-| `--mobile-theme-border-card` | `var(--brand-p200)` #C5EDDA | 1px card border |
-| `--mobile-theme-accent-pink` | #EC3FAA | appointment banner outline + title, bell dot |
-| `--mobile-theme-accent-green` | #50A622 | HN badge (solid, white text) |
-| `--mobile-theme-accent-yellow` | #FBDD21 | BMA ก ท ม letters (splash) |
-| `--mobile-theme-text-caption` | #868686 | banner caption |
-| `--mobile-theme-overlay` · `--surface-overlay-default` *(re-pointed)* | `rgb(0 0 0 / 0.50)` black 50% | backdrop of every bottom sheet / popup in the mobile app (was slate-500 @ 40%) — user 21 Oct 2569 |
-| `--mobile-theme-weight-semibold` | 600 | section titles (Anuphan SemiBold 14, brand) |
-| `--background-screen-brand-100` *(re-pointed)* | `var(--surface-card-100)` white | page background (was mint #F4FBF8) |
-| `--type-family-heading-graphic2` *(re-pointed)* | Anuphan | headings / labels (was Mitr) |
-| `--shadow-brand-drop-bottom-200` · `--shadow-card` *(re-pointed)* | `inset 0 0 0 1px var(--mobile-theme-border-card)` | cards: border instead of drop shadow |
-
-**Patterns (Figma DS components):** Header/Home (avatar · greeting · solid green HN badge · outline pill "บัตรประจำตัว" · outline bell) · Home/Quick Menu (8 actions, 4 columns, 60px gradient circle + white glyph — gradients inline: green #9BC781→#77B757 · mint #10DFB5→#00D29D · orange #FFCF8A→#FFC15E · blue #6AA8E6→#008CDE · pink #FF90CD→#FF63BC · purple #BB96D2→#772FA5) · Banner/Appointment (white, 1px pink outline, cut corners, solid pink offset) · Chip/Request (pill, 1px border) · Card/Visit · Card/News · History/Timeline Item · Background/Splash. Bottom nav and tabs keep their green drop shadow.
-
-**BMA CI colours (Color System 01/02):** primary emerald #00744B (PANTONE 3415C) · secondary #205A41 · #67A33B · #00C08B · #FFB449 · #F8DF52 · #0071CE · pink #EC3FAA (PANTONE 232C). Illustrations use CI only: green parts #00744B · pink #EC3FAA (light pink = #F69FD5, 50% tint) · blue #0071CE — Figma variables `color/ci/*` in collection "New Theme". Titles + button labels = Anuphan SemiBold.
-
-**Icon colours:** every icon badge (Colorful icon Badge · MobileIconBadge · RequestIconBadge · ColorfulIconBadge on mobile) = theme gradient by tone (green → Green · purple → Purple · blue/indigo → Blue · pink/magenta → Pink · teal/turquoise → Mint · orange/yellow → Orange) + white glyph — `MOBILE_THEME_GRADIENTS` / `mobileIconSolidStyle(tone)` in bma.mobile `mobileIconTones.js`. Red (danger) and grey badges keep the pastel palette. Small inline glyphs in cards use BMA accents (medication #50A622 · lab #0073D6 · X-ray/notification #EC3FAA). Nav: active #00744B · inactive #ADB2B7.
-
-### 7.5. Figma reference
-
-**Mobile button source-of-truth** — file `opz7X9AAKGQf5prHhsPDGn` (MIH-Design-System-Foundation Copy), Button section `319:2012`. The 16 frames in that section map 1:1 to the 16 files in [src/components/mobile/button/](src/components/mobile/button/) — see §7.3 table for per-component node IDs.
-
-**Web button source-of-truth** — file `GXI1CGpLhpImm8JYpW9ksh`, Button section `319:2012`. Web buttons live at [src/components/button/](src/components/button/) and use the same component names (BrandButton, etc.) with web-specific tokens (radius-150 / 4-6 px, no pill).
-
-**Password source-of-truth** — Figma App file `opz7X9AAKGQf5prHhsPDGn`, Password set [`5021:1008`](https://www.figma.com/design/opz7X9AAKGQf5prHhsPDGn/MIH-Design-System-Foundation--App-?node-id=5021-1008) → [`Password.jsx`](src/components/mobile/Password.jsx).
-
-**Textarea source-of-truth** — Figma App file `opz7X9AAKGQf5prHhsPDGn`, Textarea set [`268:26`](https://www.figma.com/design/opz7X9AAKGQf5prHhsPDGn/MIH-Design-System-Foundation--App-?node-id=268-26) → [`Textarea.jsx`](src/components/mobile/Textarea.jsx).
-
-Other mobile primitives (Card / Input / Field / Badge / Header / SectionLabel / Shell) do not yet have a Figma master — when they do, add Figma node IDs to the §7.3 component map and drop the `Mobile*` prefix following the button-family convention.
-
----
-
-## 8. Kiosk Design System (bma.kiosk)
-
-> Kiosk = ตู้บริการตนเองสำนักอนามัย 1080×1920 แนวตั้ง · repo `namonlims/bma.kiosk` (React 19 + Tailwind v4) · ลงทะเบียน 24 ต.ค. 69
-> สีหลักเป็น**น้ำเงิน** (ไม่ใช่เขียวมรกตของเว็บ) และตัวอักษรใหญ่สำหรับอ่านจากระยะยืน — จึงเป็นชั้น platform แยก `--kiosk-*` แบบเดียวกับ `--mobile-*` (§7)
-
-### 8.1. Layering rules
-
-| ชั้น | ที่อยู่ | ใครใช้ |
-|---|---|---|
-| Foundation `--dim-*` · `--type-weight-*` · primitives | `:root` (§1–§3) | ทุกแอป |
-| Kiosk platform `--kiosk-*` | `:root` block "KIOSK platform tokens" ท้าย `tokens.css` | **bma.kiosk เท่านั้น** — เว็บ/มือถือห้ามใช้ |
-| Kiosk re-point ของ semantic ที่ใช้ร่วม | `:root[data-app='kiosk']` (ยังไม่มี) | bma.kiosk ตั้ง `<html data-app="kiosk">` แล้ว |
-| Tailwind `@theme` | `bma.kiosk/src/index.css` | alias `var(--kiosk-*)` เท่านั้น — ห้ามใส่ค่าดิบ |
-
-- token ใหม่ของ kiosk → เพิ่มใน **mih-design** `packages/design-tokens/tokens.css` (+ ตารางนี้) → `npm run tokens:pull` ใน bma.kiosk → alias ใน `@theme` → commit mirror `src/styles/tokens.css`
-- ในโค้ด kiosk ใช้ class ของ theme (`text-kiosk-blue` · `bg-kiosk-card` · `text-kiosk-48`) — ห้าม `text-[#0d4477]` / `text-[48px]`
-- ยกเว้น: canvas (`receiptDownload.ts` — canvas อ่าน `var()` ไม่ได้) · โลโก้แบรนด์ภายนอก (ThaID) · illustration ใน `src/assets/`
-
-### 8.2. Platform tokens (`--kiosk-*`)
-
-#### Colour
-
-| Token | Value | Tailwind | ใช้ที่ |
-|---|---|---|---|
-| `--kiosk-blue` | #0D4477 | `kiosk-blue` | หัวข้อ · ข้อความหลัก · ปุ่ม Fill |
-| `--kiosk-blue-pressed` | #022D56 | `kiosk-blue-pressed` | ปุ่ม Fill ตอนกด |
-| `--kiosk-blue-muted` | #466E93 | `kiosk-blue-muted` | ข้อความรอง · คำอธิบาย |
-| `--kiosk-blue-subdued` | rgb(13 68 119 / 0.5) | `kiosk-blue-subdued` | Outline Subdued ขอบ/พื้นกด (Figma 268:14108) |
-| `--kiosk-field-border` | rgb(13 68 119 / 0.2) | `kiosk-field-border` | ช่องเลขบัตร · passport · แท็บเอกสารที่ไม่ได้เลือก |
-| `--kiosk-ink` | #1D1F23 | `kiosk-ink` | ค่าตัวเลขเข้มสุด (ใบเสร็จ / ใบคิว) |
-| `--kiosk-disabled` | #C2C8CE | `kiosk-disabled` | ปุ่ม disabled พื้น/ขอบ/ข้อความ |
-| `--kiosk-green` | #41614D | `kiosk-green` | เนื้อความ/คำอธิบาย (ใช้ที่ 70%) |
-| `--kiosk-surface-card` | #EEFFFC | `kiosk-card` | พื้นการ์ด / ไฮไลต์ |
-| `--kiosk-mint-50 / 100 / 200` | #EAFFFB · #F7FFFD · #C8FFF5 | `kiosk-mint-*` | พื้นหลังหน้าจอไล่สี ต้น · กลาง · ปลาย |
-| `--kiosk-pink-50 / 100 / 200` | #FFEBF6 · #FFF4FA · #FFC1E2 | `kiosk-pink-*` | พื้นหลังหน้าจอผิดพลาดไล่สี |
-
-#### Elevation · shape
-
-| Token | Value | Tailwind |
-|---|---|---|
-| `--kiosk-shadow-card` / `-hover` | 0 10 24 0 rgba(145,232,216, .2 / .6) | `shadow-kiosk-card` / `-hover` |
-| `--kiosk-shadow-outline-button` / `-pressed` | 0 10 48 0 · 0 10 24 0 rgba(145,232,216,.2) | `shadow-kiosk-outline-button` / `-pressed` |
-| `--kiosk-radius-card` | `var(--dim-radius-600)` 24px | `rounded-kiosk-card` |
-
-#### Type (Prompt · large-screen scale)
-
-| Token | px | Tailwind | บทบาท |
-|---|---:|---|---|
-| `--kiosk-type-family` | Prompt, Noto Sans Thai | `font-prompt` | ทุกข้อความ |
-| `--kiosk-type-family-display` | Noto Sans Thai, Prompt | `font-thai-display` | แทน wordmark "Sao Chingcha" |
-| `--kiosk-type-size-100` | 100 | `text-kiosk-100` | เลขคิว · ตัวเลขเด่น (semibold) |
-| `--kiosk-type-size-58` · `-56` | 58 · 56 | `text-kiosk-58` · `-56` | หัวข้อหน้าจอ |
-| `--kiosk-type-size-48` | 48 | `text-kiosk-48` | หัวข้อส่วน · ป้ายปุ่ม |
-| `--kiosk-type-size-40` · `-36` | 40 · 36 | `text-kiosk-40` · `-36` | เนื้อความใหญ่ · หัวการ์ด |
-| `--kiosk-type-size-32` · `-28` · `-24` | 32 · 28 · 24 | `text-kiosk-32` … | เนื้อความ · ป้าย · caption |
-| `--kiosk-type-size-20` · `-16` · `-14` | 20 · 16 · 14 | `text-kiosk-20` … | ใบคิว/ใบเสร็จที่พิมพ์ |
-
-ชื่อ = ขนาด px ตาม text style ใน Figma ของ kiosk เพื่อให้ dev จับคู่ 1:1 · `text-kiosk-*` ตั้งเฉพาะ font-size (line-height ยังกำหนดต่อ element)
-
-### 8.3. Components (bma.kiosk `src/design-system/`)
-
-`PrimaryButton` · `OutlineButton` · `OutlineSubduedButton` · `Card` · `Keypad` / `NumberKey` · ปุ่มรวม `kioskButtonStyles.ts` · หน้าดูรวม `/Kiosk/design-system`
-Shell: `KioskShell` · `Header` · `IdNumberDisplay` · `PrintingScreen` · `LottieAsset` (ไฟล์ Lottie/ภาพจาก `@mih/assets`)
-
-### 8.4. Figma reference
-
-Node ที่โค้ดอ้าง: outline Subdued `268:14108` · Card `237:9258` · `51:14038` / `51:14039` · `249:13756` · ไฟล์ Figma ของ kiosk: *(รอผู้ใช้ระบุ file key)* · PHCIS|KIOSK เดิมในไฟล์เว็บ `4002:928` (`--dim-radius-450`)
-
----
+| HCIS (เว็บ) | ไฟล์นี้ §0–§6 | `tokens.css` | DS `GXI1CGpLhpImm8JYpW9ksh` |
+| Mobile App | bma.mobile `design.md` | `mobile.css` (`--mobile-*` · ใช้คู่ `tokens.css`) | New Theme `XCuT5qG9E7V7Aa815X3usM` · app DS `opz7X9AAKGQf5prHhsPDGn` |
+| Kiosk | bma.kiosk `design.md` | `kiosk.css` (`--kiosk-*` · ไฟล์เดียวจบ) | Kiosk `AGes4Mc8odyTEYARFeFqcj` |
+
+- หน้า `/m` ใน bma.health เป็นสำเนาแอป Mobile → โหลด `mobile.css` ด้วย และอ่านกติกาจาก bma.mobile `design.md`
+- HCIS ห้ามใช้ `--mobile-*` / `--kiosk-*` · Mobile / Kiosk ไม่เพิ่ม token ของตัวเองลง `tokens.css`
