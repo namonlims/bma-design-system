@@ -12263,7 +12263,7 @@ Gap ไอคอน/หัวข้อ/ปุ่ม `--dim-space-200` · line-he
 #### 6.29.5 Interactive Behavior
 
 - **Static.** Information is presentational — no hover, click, focus, or keyboard handling. It renders a single layout regardless of pointer state.
-- **Truncation.** Each text node uses `whiteSpace: nowrap`. Wrap the parent with `min-w-0` and a fixed width if you need ellipsis behavior at narrow widths.
+- **Wrapping (24 ต.ค. 69).** Sub Text and Text wrap when the column is narrow (`overflow-wrap: anywhere`, no `nowrap`) — two values side by side in a narrow card on a 390px phone must never push the page wider than the screen. Wide screens look the same as before.
 - **Brand-aware.** Trailing green badge tints with `[data-brand]` because it aliases the brand palette. Badge2 (red) is non-brand and stays red across all themes.
 
 #### 6.29.6 Do / Don't
@@ -12277,6 +12277,7 @@ Gap ไอคอน/หัวข้อ/ปุ่ม `--dim-space-200` · line-he
 - Don't wrap Information in an `<a>` or `<button>` — it's not an action. Use Topic (Primary) when you need a clickable row.
 - Don't put both badges (`showBadge` + `showBadge2`) on every row — the red Badge2 loses urgency if every entry uses it.
 - Don't override `text` color to a brand color — the topic is meant to read neutral-800 against any surface.
+- Don't add `whitespace-nowrap` / `truncate` back to Sub Text or Text — critical values (HN, dose, history) must stay readable and the page must not scroll sideways on mobile.
 
 ---
 
