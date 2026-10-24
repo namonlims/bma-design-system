@@ -14203,6 +14203,34 @@ Props: `hn` · `value` (`{ key, label }` override — Components Library / ห�
 | ทุกขนาด | ค่าเรียงแนวนอนแล้วตัดบรรทัดเมื่อเต็มแถว — ห้ามดันหน้าล้นแนวนอน (iPad 1024/768 เคยล้น 1108px · แก้ 23 ต.ค. 69) |
 | มี `children` (เช่น แถบความก้าวหน้าบำบัด) | container ≥ 640: ค่าอยู่ซ้าย กว้างตามเนื้อหาไม่เกิน 100% · ส่วนท้ายชิดขวา · < 640 ค่าเต็มกว้าง ส่วนท้ายลงบรรทัดใหม่ |
 
+### 6.48 MobileAppMark + SelfPeakFlowResults (ลงทะเบียน 24 ต.ค. 69)
+
+**MobileAppMark** — ไอคอน Mobile Application หลังชื่อผู้รับบริการ · ไฟล์ `src/components/badge/MobileAppMark.jsx`
+· ข้อมูล `mobileAppAccountOf(hn)` (`src/data/mobileAppAccounts.js`, mock) · ฝังใน `MaskedWorklistName` (§6.35.7, ปิดด้วย `showMobileApp={false}`) และ `PatientCard` แล้ว ทุก worklist ได้พร้อมกัน
+
+| สถานะ | หน้าตา |
+|---|---|
+| มีบัญชี (`active`) | Material Symbol `mobile_friendly` filled 14 ในกรอบ 16×24 · `--text-colorfulbadge-teal` |
+| ลบบัญชีแล้ว (`deleted`) | `mobile_off` · `--text-colorfulbadge-grey` |
+| ยังไม่มีบัญชี | ไม่แสดง (เจ้าหน้าที่แนะนำให้ดาวน์โหลด) |
+| `onCard` | สีเดียว `--icon-brandPrimaryButton-on-brand` บนการ์ดเขียว PatientCard |
+
+Props: `hn` · `onCard` · hover/แตะ = `TooltipGroups` (หัวข้อตามสถานะ → สรุป 1 บรรทัด → "ประวัติ (เรียงตามเวลา)": ดาวน์โหลด · ลบบัญชี + เหตุผล) เก็บ cache ต่อ HN + จำนวนเหตุการณ์
+· เหตุการณ์จริงจากแอป (ลบบัญชี + เหตุผล · เข้าสู่ระบบอีกครั้ง = ดาวน์โหลด) มาทาง relay `/__mobile/app-accounts` poll 10 วินาที (`useMobileAppAccountVersion`)
+· ลำดับหลังชื่อ: PsychMark → MobileAppMark · PatientCard นับไอคอนนี้ใน `wideName` กันชื่อตัดกลางคำ
+
+**SelfPeakFlowResults** — ผลตรวจสมรรถภาพปอดด้วยตนเอง (Peak Flow) ที่ผู้รับบริการบันทึกในแอป `/m/peak-flow` · ไฟล์ `src/components/clinic/SelfPeakFlowResults.jsx`
+· ข้อมูล `useSelfPeakFlowRecords(hn)` (`src/data/selfPeakFlowRecords.js`: seed สูตรเดียวกับ bma.mobile + relay `/__mobile/peak-flow` สองทาง วันละ 1 ค่า ตัวหลังชนะ) · ใช้ใน "ผลตรวจ ▾" คลินิกหอบหืด/COPD ผ่าน `TreatmentResultActions extraResults` (`after: 'spiro'`)
+
+| กลุ่ม | เนื้อหา |
+|---|---|
+| สรุป | label/value: ล่าสุด (% · A/B L/min · วันที่ + ป้ายผล) · เฉลี่ย 7 ครั้งล่าสุด · ต่ำกว่าเกณฑ์ (70%) N จาก 14 ครั้ง |
+| %PEFR 14 ครั้งล่าสุด | `VBars` สี teal-bold · `refLine` 70% pink-bold · `maxValue` 120 |
+| บันทึกรายวัน | `Table` เรียงได้ ใหม่ → เก่า: วันที่ (+ เวลา) · ค่าที่เป่าได้ดีที่สุด (L/min) · ค่ามาตรฐาน (L/min) · %PEFR (ชิดขวา) · ผล `StatusBadge` · บันทึกโดย (ผู้รับบริการ (แอป) / ชื่อเจ้าหน้าที่) |
+| "บันทึกค่า" (`BrandSubdueButton` outline sm ขวาของหัวข้อสรุป) | ฟอร์มพื้น `--surface-neutral-quaternary`: `DatePicker` วันที่วัด · `InputField` A · B (auto-fit ≥ 200 → 1 คอลัมน์บนจอแคบ) → %PEFR สด + ป้ายผล · ยกเลิก (outline) · บันทึก (fill) ชิดขวา |
+
+สูตร: %PEFR = A ÷ B × 100 · > 70% "อยู่ในเกณฑ์" (success) · ≤ 70% "ต่ำกว่าเกณฑ์" (warning + ตัวเลข `--text-danger-default`) — แบบคัดกรองโรคหืดและ COPD ส่วนที่ 2 · ใช้ `pefrPercent` / `pefrInRange` ห้ามคำนวณเองในหน้า
+
 ---
 
 ## 7. Mobile Application Design System
@@ -14805,5 +14833,75 @@ When adding a new mobile primitive: create the file under [src/components/mobile
 **Textarea source-of-truth** — Figma App file `opz7X9AAKGQf5prHhsPDGn`, Textarea set [`268:26`](https://www.figma.com/design/opz7X9AAKGQf5prHhsPDGn/MIH-Design-System-Foundation--App-?node-id=268-26) → [`Textarea.jsx`](src/components/mobile/Textarea.jsx).
 
 Other mobile primitives (Card / Input / Field / Badge / Header / SectionLabel / Shell) do not yet have a Figma master — when they do, add Figma node IDs to the §7.3 component map and drop the `Mobile*` prefix following the button-family convention.
+
+---
+
+## 8. Kiosk Design System (bma.kiosk)
+
+> Kiosk = ตู้บริการตนเองสำนักอนามัย 1080×1920 แนวตั้ง · repo `namonlims/bma.kiosk` (React 19 + Tailwind v4) · ลงทะเบียน 24 ต.ค. 69
+> สีหลักเป็น**น้ำเงิน** (ไม่ใช่เขียวมรกตของเว็บ) และตัวอักษรใหญ่สำหรับอ่านจากระยะยืน — จึงเป็นชั้น platform แยก `--kiosk-*` แบบเดียวกับ `--mobile-*` (§7)
+
+### 8.1. Layering rules
+
+| ชั้น | ที่อยู่ | ใครใช้ |
+|---|---|---|
+| Foundation `--dim-*` · `--type-weight-*` · primitives | `:root` (§1–§3) | ทุกแอป |
+| Kiosk platform `--kiosk-*` | `:root` block "KIOSK platform tokens" ท้าย `tokens.css` | **bma.kiosk เท่านั้น** — เว็บ/มือถือห้ามใช้ |
+| Kiosk re-point ของ semantic ที่ใช้ร่วม | `:root[data-app='kiosk']` (ยังไม่มี) | bma.kiosk ตั้ง `<html data-app="kiosk">` แล้ว |
+| Tailwind `@theme` | `bma.kiosk/src/index.css` | alias `var(--kiosk-*)` เท่านั้น — ห้ามใส่ค่าดิบ |
+
+- token ใหม่ของ kiosk → เพิ่มใน **mih-design** `packages/design-tokens/tokens.css` (+ ตารางนี้) → `npm run tokens:pull` ใน bma.kiosk → alias ใน `@theme` → commit mirror `src/styles/tokens.css`
+- ในโค้ด kiosk ใช้ class ของ theme (`text-kiosk-blue` · `bg-kiosk-card` · `text-kiosk-48`) — ห้าม `text-[#0d4477]` / `text-[48px]`
+- ยกเว้น: canvas (`receiptDownload.ts` — canvas อ่าน `var()` ไม่ได้) · โลโก้แบรนด์ภายนอก (ThaID) · illustration ใน `src/assets/`
+
+### 8.2. Platform tokens (`--kiosk-*`)
+
+#### Colour
+
+| Token | Value | Tailwind | ใช้ที่ |
+|---|---|---|---|
+| `--kiosk-blue` | #0D4477 | `kiosk-blue` | หัวข้อ · ข้อความหลัก · ปุ่ม Fill |
+| `--kiosk-blue-pressed` | #022D56 | `kiosk-blue-pressed` | ปุ่ม Fill ตอนกด |
+| `--kiosk-blue-muted` | #466E93 | `kiosk-blue-muted` | ข้อความรอง · คำอธิบาย |
+| `--kiosk-blue-subdued` | rgb(13 68 119 / 0.5) | `kiosk-blue-subdued` | Outline Subdued ขอบ/พื้นกด (Figma 268:14108) |
+| `--kiosk-field-border` | rgb(13 68 119 / 0.2) | `kiosk-field-border` | ช่องเลขบัตร · passport · แท็บเอกสารที่ไม่ได้เลือก |
+| `--kiosk-ink` | #1D1F23 | `kiosk-ink` | ค่าตัวเลขเข้มสุด (ใบเสร็จ / ใบคิว) |
+| `--kiosk-disabled` | #C2C8CE | `kiosk-disabled` | ปุ่ม disabled พื้น/ขอบ/ข้อความ |
+| `--kiosk-green` | #41614D | `kiosk-green` | เนื้อความ/คำอธิบาย (ใช้ที่ 70%) |
+| `--kiosk-surface-card` | #EEFFFC | `kiosk-card` | พื้นการ์ด / ไฮไลต์ |
+| `--kiosk-mint-50 / 100 / 200` | #EAFFFB · #F7FFFD · #C8FFF5 | `kiosk-mint-*` | พื้นหลังหน้าจอไล่สี ต้น · กลาง · ปลาย |
+| `--kiosk-pink-50 / 100 / 200` | #FFEBF6 · #FFF4FA · #FFC1E2 | `kiosk-pink-*` | พื้นหลังหน้าจอผิดพลาดไล่สี |
+
+#### Elevation · shape
+
+| Token | Value | Tailwind |
+|---|---|---|
+| `--kiosk-shadow-card` / `-hover` | 0 10 24 0 rgba(145,232,216, .2 / .6) | `shadow-kiosk-card` / `-hover` |
+| `--kiosk-shadow-outline-button` / `-pressed` | 0 10 48 0 · 0 10 24 0 rgba(145,232,216,.2) | `shadow-kiosk-outline-button` / `-pressed` |
+| `--kiosk-radius-card` | `var(--dim-radius-600)` 24px | `rounded-kiosk-card` |
+
+#### Type (Prompt · large-screen scale)
+
+| Token | px | Tailwind | บทบาท |
+|---|---:|---|---|
+| `--kiosk-type-family` | Prompt, Noto Sans Thai | `font-prompt` | ทุกข้อความ |
+| `--kiosk-type-family-display` | Noto Sans Thai, Prompt | `font-thai-display` | แทน wordmark "Sao Chingcha" |
+| `--kiosk-type-size-100` | 100 | `text-kiosk-100` | เลขคิว · ตัวเลขเด่น (semibold) |
+| `--kiosk-type-size-58` · `-56` | 58 · 56 | `text-kiosk-58` · `-56` | หัวข้อหน้าจอ |
+| `--kiosk-type-size-48` | 48 | `text-kiosk-48` | หัวข้อส่วน · ป้ายปุ่ม |
+| `--kiosk-type-size-40` · `-36` | 40 · 36 | `text-kiosk-40` · `-36` | เนื้อความใหญ่ · หัวการ์ด |
+| `--kiosk-type-size-32` · `-28` · `-24` | 32 · 28 · 24 | `text-kiosk-32` … | เนื้อความ · ป้าย · caption |
+| `--kiosk-type-size-20` · `-16` · `-14` | 20 · 16 · 14 | `text-kiosk-20` … | ใบคิว/ใบเสร็จที่พิมพ์ |
+
+ชื่อ = ขนาด px ตาม text style ใน Figma ของ kiosk เพื่อให้ dev จับคู่ 1:1 · `text-kiosk-*` ตั้งเฉพาะ font-size (line-height ยังกำหนดต่อ element)
+
+### 8.3. Components (bma.kiosk `src/design-system/`)
+
+`PrimaryButton` · `OutlineButton` · `OutlineSubduedButton` · `Card` · `Keypad` / `NumberKey` · ปุ่มรวม `kioskButtonStyles.ts` · หน้าดูรวม `/Kiosk/design-system`
+Shell: `KioskShell` · `Header` · `IdNumberDisplay` · `PrintingScreen` · `LottieAsset` (ไฟล์ Lottie/ภาพจาก `@mih/assets`)
+
+### 8.4. Figma reference
+
+Node ที่โค้ดอ้าง: outline Subdued `268:14108` · Card `237:9258` · `51:14038` / `51:14039` · `249:13756` · ไฟล์ Figma ของ kiosk: *(รอผู้ใช้ระบุ file key)* · PHCIS|KIOSK เดิมในไฟล์เว็บ `4002:928` (`--dim-radius-450`)
 
 ---
