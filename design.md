@@ -14210,7 +14210,7 @@ Props: `hn` · `value` (`{ key, label }` override — Components Library / ห�
 
 | สถานะ | หน้าตา |
 |---|---|
-| มีบัญชี (`active`) | Material Symbol `mobile_friendly` filled 14 ในกรอบ 16×24 · `--text-colorfulbadge-teal` |
+| มีบัญชี (`active`) | Material Symbol `mobile_friendly` แบบเส้น (FILL 0 · weight 600) 14 ในกรอบ 16×24 · `--text-colorfulbadge-teal` — เปลี่ยนจากแบบทึบ 25 ต.ค. 69 ให้อ่านง่าย |
 | ลบบัญชีแล้ว (`deleted`) | `mobile_off` · `--text-colorfulbadge-grey` |
 | ยังไม่มีบัญชี | ไม่แสดง (เจ้าหน้าที่แนะนำให้ดาวน์โหลด) |
 | `onCard` | สีเดียว `--icon-brandPrimaryButton-on-brand` บนการ์ดเขียว PatientCard |
