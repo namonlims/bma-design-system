@@ -14302,6 +14302,62 @@ Props: `hn` · `onCard` · hover/แตะ = `TooltipGroups` (หัวข้อ
 
 แสดงอย่างเดียว — ไม่มีปุ่ม "ปิดการแสดงผล" (ผู้ใช้ 25 ต.ค. 69 "ลบปุ่ม")
 
+### 6.52 UrineDrugResultFields (ลงทะเบียน 26 ต.ค. 69)
+
+**UrineDrugResultFields** — ช่องผลตรวจปัสสาวะหาสารเสพติด (แบบ สยส.9: เฮโรอีน · เมทาโดน) ของงานบำบัด · ไฟล์ `src/components/clinic/UrineDrugResultFields.jsx` · API: `value` (= `form.sys9`) · `onChange(patch)` · `readOnly` · `cols` (2 ตั้งต้น)
+· ใช้ที่ ตาราง "หัวข้อการตรวจ" คลินิกเมทาโดน (แถว "ผลตรวจปัสสาวะ") · แบบ สยส.9 ก้าวใหม่ · ขั้น "บันทึกการให้บริการ" ของพยาบาลคัดกรอง
+
+| ส่วน | รายละเอียด |
+|---|---|
+| ผลต่อสาร | `Select` "ผลปัสสาวะ <สาร>" ตัวเลือก ลบ · บวก · ไม่ได้ตรวจ (`SYS9_URINE_RESULTS`) ใน `FieldGrid` (ยุบคอลัมน์เองบนจอแคบ) · ช่องห่าง `--dim-space-400` |
+| สารที่พบ | เฉพาะผล "บวก" → `Field` "สารที่พบ — ผลปัสสาวะ <สาร> บวก (เลือกได้หลายรายการ)" + `Checkbox` 10 รายการ `SYS9_URINE_PANEL` (เลือกได้หลายข้อ · grid `auto-fill minmax(--dim-size-2350, 1fr)`) → `sys9.<สาร>Found` |
+| สรุปเป็นข้อความ | `sys9UrineFoundText(s9, key)` = "ยาบ้า / ไอซ์ (MET) · …" (ใช้ในแถวสรุปและหน้าตรวจสอบ) |
+
+รายการ 10 ชนิด = mock ชุดตรวจ 10-panel (ผู้ใช้ยืนยัน 26 ต.ค. 69 "ok Mock")
+
+### 6.53 UrineResultsTable (ลงทะเบียน 26 ต.ค. 69)
+
+**UrineResultsTable** — ตารางผลตรวจปัสสาวะหาสารเสพติดทุกครั้งของผู้รับบริการ (งานบำบัด) · ไฟล์ `src/components/clinic/UrineResultsTable.jsx` · API: `hn` · ตัวช่วย `urineResultItem(hn)` = รายการ "ผลตรวจปัสสาวะ" สำหรับ `extraResults` ของ "ผลตรวจ ▾" (`TreatmentResultActions`, ต่อจากผลตรวจชันสูตร)
+· ใช้ที่ "ผลตรวจ ▾" หน้าบันทึกคลินิกงานบำบัด (`ext.extraResults`) · หน้าบันทึกการติดตาม `/clinic/addiction/follow-up/record` · พยาบาลคัดกรองก้าวใหม่เห็นเฉพาะรายการนี้ (`resultKeys={['urine']}`)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| ข้อมูล | `urineResultsOf(hn)` (`src/data/addictionUrineResults.js`): ผลที่พยาบาลคัดกรองบันทึกวันนี้ (`form.sys9` + `savedByName`) + ผลชันสูตรในทะเบียน (`ADDICTION_LAB_HISTORY` รายการ Urine) — ชุดเดียวกับ "ผลการประเมิน" ในแบบฟอร์มติดตาม |
+| คอลัมน์ | วันที่ (วันบน · เวลา xs tertiary ล่าง) · รายการตรวจ · ผล (`StatusBadge` บวก error / ลบ success) · บันทึกโดย · ที่มา — เรียงทุกคอลัมน์ (`useTableSort`) ตั้งต้นใหม่ → เก่า |
+| ว่าง | "ยังไม่มีผลตรวจปัสสาวะของผู้รับบริการรายนี้" |
+
+### 6.54 FormFieldBlock (ลงทะเบียน 26 ต.ค. 69)
+
+**FormFieldBlock** — กรอบช่องกรอกในฟอร์ม/ป๊อปอัป: ชื่อช่อง (+ * · ⓘ) → คำขยาย → ตัวกรอก → ข้อความผิดพลาด · ไฟล์ `src/components/forms/FormFieldBlock.jsx` · API: `label` · `sublabel` · `required` · `error` · `info` (ทูลทิปขาว) · `wide` (เต็มแถว grid) · `labelWeight` 'regular' | 'medium' · `children`
+· แทน `FieldBlock` ที่เคยเขียนซ้ำในป๊อปอัปขึ้นทะเบียน FP · TB · สุขภาพจิต · HIV/STI และแบบประเมิน TB (`labelWeight='medium'`)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| ระยะ | ชื่อช่อง ↔ ตัวกรอก 8 (`--dim-space-200`) · * ห่าง 2 · ⓘ 14 `--icon-neutral-tertiary` ห่าง 4 |
+| ตัวอักษร | ชื่อช่อง sm `--text-content-default` · คำขยาย xs tertiary · error xs `--text-danger-default` |
+| ต่างจาก `Field` (`forms/Fields`) | `Field` = ป้าย medium สี `--text-input-label` ระยะ 6 + `span` คอลัมน์ · ตัวนี้มี error/คำขยายในตัว |
+
+### 6.55 StaffNameCell (ลงทะเบียน 26 ต.ค. 69)
+
+**StaffNameCell** — เซลล์บุคลากรในตาราง: รูปโปรไฟล์กลม + ชื่อ + บรรทัดรอง · ไฟล์ `src/components/table/StaffNameCell.jsx` · API: `name` · `avatarUrl` · `subtext` (บทบาท/อีเมล) · `size` 'sm' (24) | 'md' (36) · `truncate`
+· ใช้ที่ ทะเบียนบุคลากร `/system/staff` (md · อีเมล · truncate) · ประวัติแบบฟอร์มติดตามงานบำบัด คอลัมน์ "บันทึกโดย" (sm · บทบาท)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| ไม่มีรูป | วงกลม `--surface-brandPrimary-quaternary` + อักษรแรกของชื่อ (ตัดคำนำหน้า) สี `--text-brandPrimary-default` |
+| ระยะ | sm: รูป↔ชื่อ 8 · md: 12 จัดกลางแนวตั้ง |
+
+### 6.56 RegistryAddressLine (ลงทะเบียน 26 ต.ค. 69)
+
+**RegistryAddressLine** — "ที่อยู่จากทะเบียน" + ที่อยู่บ้านจากเวชระเบียน + ปุ่ม outline sm "ดูแผนที่" → Popup large แผนที่ปักหมุด (แสดงอย่างเดียว) · ไฟล์ `src/components/patient/RegistryAddressLine.jsx` · API: `hn` · `label` · `fallback` · `mapTitle` · ตัวช่วย `mrAddressText(address)`
+· ใช้ที่ แบบฟอร์ม "การเยี่ยมบ้าน" ของการติดตามงานบำบัดทุกคลินิก (`FollowUpFormBlocks` block `regAddress`)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| ข้อมูล | `findMrPatientByHn(hn).address` (เลขที่ · ม. · ถนน · แขวง · เขต · จังหวัด · รหัสไปรษณีย์) · ไม่มี = `fallback` · ไม่มีทั้งคู่ = "—" ไม่มีปุ่ม |
+| แผนที่ | `AddressMapBlock readOnly flush` · หมุด = `mapPin` ในทะเบียน ไม่มี = `autoPinFromAddress` (คงที่ต่อที่อยู่) |
+| ระยะ | ป้าย xs tertiary · ที่อยู่ sm medium · แถวตัดบรรทัดได้ (8/12) |
+
 ---
 
 ### 6.52 MobileAppVisitTag — ป้าย "ตรวจผ่านแอป" ท้ายชื่อ (ลงทะเบียน 25 ต.ค. 69)
