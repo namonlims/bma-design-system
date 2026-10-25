@@ -14304,6 +14304,19 @@ Props: `hn` · `onCard` · hover/แตะ = `TooltipGroups` (หัวข้อ
 
 ---
 
+### 6.52 MobileAppVisitTag — ป้าย "ตรวจผ่านแอป" ท้ายชื่อ (ลงทะเบียน 25 ต.ค. 69)
+
+**MobileAppVisitTag** — ครั้งนี้มาจากการปรึกษาแพทย์ออนไลน์ (Telemedicine) ผ่าน Mobile App · ไฟล์ `src/components/badge/MobileAppVisitTag.jsx`
+· ใช้ที่ คิวห้องยา (`PharmacyQueuePage` ผ่าน `MaskedWorklistName extraMarks`) · หน้าจ่ายยา (`PatientCard titleTags`) · แถวที่มี `visitSource: 'mobile-telemed'` → `isMobileAppVisit(row)` (`src/data/pharmacyQueue.js`)
+· คนละความหมายกับ §6.48 `MobileAppMark` (= มีบัญชีแอป) — แถวเดียวกันแสดงได้ทั้งคู่
+
+| ส่วน | ค่า |
+|---|---|
+| ป้าย | `ColorfulBadge` style `teal` · size `xsmall` · hierarchy `secondary` · width `hug` · ข้อความ "ตรวจผ่านแอป" |
+| hover / แตะ | `Tooltip` light → `TooltipGroups`: "ตรวจผ่าน Mobile App" → สรุป "ปรึกษาแพทย์ออนไลน์ (Telemedicine) จากแอป BMA Health" → กลุ่ม "การรับยา" (ช่องทาง · ชำระเงิน) — เนื้อหาคงที่ระดับโมดูล |
+
+Props: ไม่มี (ผู้เรียกตัดสินว่าจะแสดงจาก `isMobileAppVisit`) · ไม่ทำเป็นคอลัมน์แยก (แบบเดียวกับป้าย "ใหม่")
+
 ## 7. Mobile App · Kiosk — design system แยกของตัวเอง
 
 > แยกจาก HCIS ตั้งแต่ 24 ต.ค. 69 (ผู้ใช้: "Design system ของ HCIS, Mobile App, Kiosk แยกออกจากกัน")
