@@ -544,6 +544,11 @@
     padding:.75rem 1.25rem;display:flex;gap:1rem;align-items:center;flex-wrap:wrap;
     font-family:'Sarabun','Inter','Noto Sans Thai',system-ui,sans-serif;color:#14312A}
   header.ds-top .ds-brandmark{display:flex;align-items:center;gap:.6rem;font-weight:700;letter-spacing:-.01em;font-size:1rem}
+  header.ds-top .ds-brandrow{display:flex;align-items:center;gap:10px;flex-shrink:0}
+  header.ds-top .ds-brandrow .dot{width:2rem;height:2rem;border-radius:8px;background:var(--brand);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:14px}
+  header.ds-top .ds-brandrow .title-wrap{line-height:1.3}
+  header.ds-top .ds-brandrow .title{font-weight:700;font-size:1rem;letter-spacing:-.01em;color:var(--ink)}
+  header.ds-top .ds-brandrow .subtitle{font-size:12px;color:var(--ink-3)}
   header.ds-top .ds-dot{width:1.6rem;height:1.6rem;border-radius:.5rem;background:linear-gradient(135deg,var(--brand-p600,#08A768),var(--brand-p800,#004C31))}
   header.ds-top .ds-pill{font:600 .7rem/1 ui-monospace,monospace;padding:.35rem .55rem;border-radius:999px;background:var(--brand-p100,#E2F3EB);color:var(--brand-p700,#007549)}
   header.ds-top label{display:flex;gap:.4rem;align-items:center;font-size:.8rem;color:#5C6B68}
@@ -604,7 +609,13 @@
 </head>
 <body class="ds-has-top">
 <header class="ds-top">
-  <div class="ds-brandmark"><span class="ds-dot"></span> MIH Design System</div>
+  <div class="brand-row ds-brandrow">
+      <span class="dot">M</span>
+      <div class="title-wrap">
+        <div class="title">MIH Design System</div>
+        <div class="subtitle" id="brand-subtitle">Foundations · 158 components</div>
+      </div>
+    </div>
   <label>Brand
     <select id="ds-brand" aria-label="Brand"></select>
   </label>
@@ -620,13 +631,6 @@
 
   <!-- ── Sidebar ──────────────────────────────────────────── -->
   <aside>
-    <div class="brand-row">
-      <span class="dot">M</span>
-      <div class="title-wrap">
-        <div class="title">MIH Design System</div>
-        <div class="subtitle" id="brand-subtitle">Foundations · 158 components</div>
-      </div>
-    </div>
     <div class="platform-toggle" role="tablist" aria-label="Platform">
       <button class="pt-btn active" data-platform="desktop" type="button" role="tab"><span class="pt-emoji">🖥</span> Desktop</button>
       <button class="pt-btn"        data-platform="mobile"  type="button" role="tab"><span class="pt-emoji">📱</span> Mobile</button>
@@ -661,6 +665,7 @@
         <a id="open-new" href="#" target="_blank" rel="noopener" style="display:none">↗ แท็บใหม่</a>
         <button id="reload-btn" type="button" style="display:none">↻ Reload</button>
         <a href="./design.md" target="_blank" rel="noopener">↗ raw design.md</a>
+        <a href="./design.md" download="design.md">↓ ดาวน์โหลด design.md</a>
       </div>
     </div>
     <div class="ds-history" id="ds-history" hidden></div>
