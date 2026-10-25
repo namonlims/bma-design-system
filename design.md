@@ -4,7 +4,7 @@
 > CSS custom properties ship from that package (`tokens.css`); this `design.md` is the human-readable mirror.  
 > Edit tokens in **mih-design**, then run `npm run tokens:pull` here to refresh this file.
 >
-> Auto-generated from Figma Variable exports. Last updated: July 2026 (§1–§4 synced from tokens/figma/ (primitive · brand · breakpoint · semantic))
+> Auto-generated from Figma Variable exports. Last updated: 26 ต.ค. 2569 (§1–§4 synced from tokens/figma/ (primitive · brand · breakpoint · semantic) · §4.7 = token ที่ vibe code ใช้แล้ว)
 
 ## 0. Working Rules (บังคับทุกงาน UI — ไม่ต้องสั่งซ้ำ)
 
@@ -700,15 +700,20 @@ badge fill itself is a 141° cyan gradient (token exception, inline).
 | `dimension.space.100` | `4` |
 | `dimension.space.150` | `6` |
 | `dimension.space.200` | `8` |
+| `dimension.space.250` | `10` — โค้ดใช้แล้ว (§4.7) |
 | `dimension.space.300` | `12` |
 | `dimension.space.400` | `16` |
+| `dimension.space.500` | `20` |
 | `dimension.space.600` | `24` |
+| `dimension.space.700` | `28` — โค้ดใช้แล้ว (§4.7) |
 | `dimension.space.800` | `32` |
+| `dimension.space.900` | `36` — โค้ดใช้แล้ว (§4.7) |
+| `dimension.space.1000` | `40` — โค้ดใช้แล้ว (§4.7) |
 | `dimension.space.1200` | `48` |
 | `dimension.space.1600` | `64` |
 | `dimension.space.2400` | `96` |
 | `dimension.space.4000` | `160` |
-| `dimension.space.050` | `2` |
+| `dimension.space.050` | `2` (CSS `--dim-space-50` · §4.7) |
 | `dimension.space.negative-100` | `-4` |
 | `dimension.space.negative-200` | `-8` |
 | `dimension.space.negative-300` | `-12` |
@@ -2533,6 +2538,133 @@ Every style below maps to a Figma text style of the same name. The right-hand "A
 | `typography.button.sm` | Sarabun | Medium | 14px | 150% | 0% | `typography.family.body` | `typography.weight.medium` | `typography.size.sm` | `typography.letter-spacing.normal` |
 
 ---
+
+### 4.7. Vibe-code sync — token ที่โค้ดใช้แล้ว (26 ต.ค. 69)
+
+> token ที่โค้ด bma.health เรียกใช้อยู่แล้ว แต่เดิมไม่มีค่าโหมดสว่าง (มีแค่ใน `[data-mode="dark"]` หรือไม่เคยนิยาม) — หน้าจอจึงแสดง fallback ของแต่ละจุด
+> ค่าด้านล่าง = fallback ที่โค้ดแสดงอยู่ (ค่าที่ใช้มากสุด) หน้าจอจึงไม่เปลี่ยน · ประเภท: **เติมค่าสว่าง** = มีค่ามืดแล้ว · **ใหม่** = เพิ่งนิยาม
+> ตัวแปรภายในของแอป (`--mih-*` · `--header-morph*` · `--qps-*` ฯลฯ) ไม่ใช่ token จึงไม่อยู่ในตารางนี้
+
+| Token | ค่า (โหมดสว่าง) | ประเภท | จุดที่ใช้ |
+|---|---|---|---:|
+| `--dim-blur-100` | `4px` | ใหม่ | 2 |
+| `--dim-radius-0` | `0px` | ใหม่ | 2 |
+| `--dim-size-50` | `4px` | ใหม่ | 1 |
+| `--dim-space-1000` | `40px` | ใหม่ | 6 |
+| `--dim-space-250` | `10px` | ใหม่ | 7 |
+| `--dim-space-50` | `2px` | ใหม่ | 17 |
+| `--dim-space-700` | `28px` | ใหม่ | 4 |
+| `--dim-space-900` | `36px` | ใหม่ | 3 |
+| `--type-family-button` | `var(--type-family-heading-content)` | ใหม่ | 9 |
+| `--type-family-heading` | `var(--type-family-heading-content)` | ใหม่ | 24 |
+| `--type-family-mono` | `ui-monospace, SFMono-Regular, Menlo, monospace` | ใหม่ | 13 |
+| `--type-lineheight-relaxed` | `1.7` | ใหม่ | 2 |
+| `--type-family-display` | `var(--type-family-heading-graphic)` (Sao Chingcha) — เฉพาะ `/m` ใน `mobile.css` | ใหม่ | 11 |
+| `--background-neutral-tertiary` | `#F4F5F5` | เติมค่าสว่าง | 1 |
+| `--background-screen-default` | `#FFFFFF` | เติมค่าสว่าง | 5 |
+| `--surface-actionlist-default` | `#FFFFFF` | เติมค่าสว่าง | 1 |
+| `--surface-alert-error-default` | `#DC2626` | ใหม่ | 1 |
+| `--surface-alert-warning-default` | `#EA580C` | ใหม่ | 1 |
+| `--surface-avatar-fallback` | `#9AA1A8` | ใหม่ | 2 |
+| `--surface-brandTag-default` | `#FFFFFF` | เติมค่าสว่าง | 1 |
+| `--surface-card-brand-100` | `var(--brand-p50)` | เติมค่าสว่าง | 7 |
+| `--surface-card-default` | `#FFFFFF` | เติมค่าสว่าง | 14 |
+| `--surface-card-quaternary` | `#F9FBFB` | เติมค่าสว่าง | 45 |
+| `--surface-content-default` | `#FFFFFF` | เติมค่าสว่าง | 10 |
+| `--surface-content-secondary` | `#F5F6F7` | เติมค่าสว่าง | 8 |
+| `--surface-danger-default` | `#DC2626` | เติมค่าสว่าง | 7 |
+| `--surface-destructive-default` | `#D42F2F` | ใหม่ | 1 |
+| `--surface-indicator-indigo` | `#6366F1` | เติมค่าสว่าง | 2 |
+| `--surface-info-default` | `#3B82F6` | ใหม่ | 1 |
+| `--surface-negative-primary` | `#D04949` | ใหม่ | 2 |
+| `--surface-neutral-default` | `#FFFFFF` | เติมค่าสว่าง | 1 |
+| `--surface-neutral-primary` | `#FFFFFF` | เติมค่าสว่าง | 9 |
+| `--surface-neutral-secondary` | `#1B2227` | ใหม่ | 2 |
+| `--surface-neutralbutton-default` | `#FFFFFF` | เติมค่าสว่าง | 1 |
+| `--surface-page-default` | `#FFFFFF` | เติมค่าสว่าง | 3 |
+| `--surface-positive-primary` | `#08A768` | เติมค่าสว่าง | 5 |
+| `--surface-positive-quaternary` | `var(--surface-brandPrimary-quaternary)` | เติมค่าสว่าง | 2 |
+| `--surface-positive-secondary` | `#A2EDDE` | เติมค่าสว่าง | 5 |
+| `--surface-progress-quaternary` | `#FBFAF4` | เติมค่าสว่าง | 1 |
+| `--surface-sidesubmenu-hover` | `var(--brand-p100)` | เติมค่าสว่าง | 1 |
+| `--surface-sidesubmenu-selected` | `var(--brand-p100)` | เติมค่าสว่าง | 1 |
+| `--surface-slider-indigo-bar` | `#EEF2FF` | เติมค่าสว่าง | 1 |
+| `--surface-slider-indigo-pill` | `#818CF8` | ใหม่ | 1 |
+| `--surface-slider-lavender-bar` | `#EDE7FF` | เติมค่าสว่าง | 1 |
+| `--surface-slider-lavender-pill` | `#C8B6FF` | ใหม่ | 1 |
+| `--surface-slider-sakura-bar` | `#FFEDF3` | เติมค่าสว่าง | 1 |
+| `--surface-slider-sakura-pill` | `#F5AFCA` | ใหม่ | 1 |
+| `--surface-success-default` | `#1F9D55` | ใหม่ | 1 |
+| `--surface-switch-knob-disabled` | `#FFFFFF` | เติมค่าสว่าง | 1 |
+| `--surface-switch-unchecked-default` | `#E2E4E6` | เติมค่าสว่าง | 1 |
+| `--surface-switch-unchecked-disabled` | `#F4F5F5` | เติมค่าสว่าง | 1 |
+| `--surface-switch-unchecked-hover` | `#C9CDD0` | เติมค่าสว่าง | 1 |
+| `--surface-timeslot-box` | `#FAFCFA` | เติมค่าสว่าง | 1 |
+| `--surface-timeslot-default` | `#FFFFFF` | เติมค่าสว่าง | 2 |
+| `--surface-timeslot-disabled` | `#FAFCFA` | เติมค่าสว่าง | 1 |
+| `--surface-warning-default` | `#EAB308` | ใหม่ | 1 |
+| `--surface-warning-quaternary` | `#FFF9F0` | เติมค่าสว่าง | 25 |
+| `--surface-warning-secondary` | `#FDF1E0` | ใหม่ | 2 |
+| `--surface-warning-tertiary` | `#FEF3C7` | ใหม่ | 1 |
+| `--border-brandPrimary-secondary` | `var(--brand-p600)` | เติมค่าสว่าง | 9 |
+| `--border-brandsecondary-quaternary` | `#EFF5EF` | เติมค่าสว่าง | 1 |
+| `--border-brandSecondary-quaternary` | `var(--border-brandsecondary-quaternary)` | ใหม่ | 1 |
+| `--border-brandTag-default` | `#E2E4E6` | เติมค่าสว่าง | 1 |
+| `--border-card-brand-100` | `var(--brand-p200)` | เติมค่าสว่าง | 1 |
+| `--border-content-quaternary` | `var(--border-neutral-quaternary)` | ใหม่ | 2 |
+| `--border-content-tertiary` | `#E1E3E5` | เติมค่าสว่าง | 33 |
+| `--border-danger-default` | `#E58585` | ใหม่ | 2 |
+| `--border-danger-quaternary` | `#F7D9D9` | ใหม่ | 1 |
+| `--border-danger-subdued` | `#F5C2C2` | ใหม่ | 1 |
+| `--border-danger-tertiary` | `#F6C9C9` | ใหม่ | 1 |
+| `--border-info-quaternary` | `#DBEAFE` | เติมค่าสว่าง | 2 |
+| `--border-info-tertiary` | `#BFDBFE` | เติมค่าสว่าง | 3 |
+| `--border-modal-cardborder` | `#F5F6FA` | เติมค่าสว่าง | 1 |
+| `--border-negative-primary` | `#E7A0A0` | ใหม่ | 2 |
+| `--border-neutral-secondary` | `#C8CDD1` | ใหม่ | 8 |
+| `--border-slider-indigo` | `#818CF8` | ใหม่ | 1 |
+| `--border-slider-lavender` | `#C8B6FF` | ใหม่ | 1 |
+| `--border-slider-sakura` | `#F5AFCA` | ใหม่ | 1 |
+| `--border-statusbadge-error` | `#B91C1C` | เติมค่าสว่าง | 1 |
+| `--border-statusbadge-warning` | `#FDBA74` | เติมค่าสว่าง | 2 |
+| `--border-success-default` | `#1F9D55` | ใหม่ | 2 |
+| `--border-success-subdued` | `#BFE5CC` | ใหม่ | 1 |
+| `--border-warning-default` | `#FDBA74` | ใหม่ | 1 |
+| `--border-warning-primary` | `#F0C589` | ใหม่ | 1 |
+| `--border-warning-subdued` | `#F6DFA8` | ใหม่ | 1 |
+| `--text-brandprimary-default` | `var(--brand-p700)` | เติมค่าสว่าง | 5 |
+| `--text-brandPrimaryButton-onBrand` | `#FFFFFF` | เติมค่าสว่าง | 1 |
+| `--text-brandTag-default` | `#4D5358` | เติมค่าสว่าง | 1 |
+| `--text-content-primary` | `var(--text-content-default)` | เติมค่าสว่าง | 114 |
+| `--text-input-placeholder` | `#ADB2B7` | เติมค่าสว่าง | 5 |
+| `--text-negative-primary` | `#B91C1C` | เติมค่าสว่าง | 5 |
+| `--text-neutral-disabled` | `#CBD5E1` | เติมค่าสว่าง | 1 |
+| `--text-neutral-on-neutral` | `#FFFFFF` | เติมค่าสว่าง | 5 |
+| `--text-positive-on-positive` | `#FFFFFF` | เติมค่าสว่าง | 1 |
+| `--text-positive-secondary` | `#1B867D` | เติมค่าสว่าง | 2 |
+| `--text-sidesubmenu-default` | `var(--brand-p700)` | เติมค่าสว่าง | 2 |
+| `--text-sidesubmenu-disabled` | `#C9CDD0` | เติมค่าสว่าง | 1 |
+| `--text-sidesubmenu-selected` | `var(--brand-p700)` | เติมค่าสว่าง | 1 |
+| `--text-timeslot-default` | `#4D5358` | เติมค่าสว่าง | 1 |
+| `--text-tooltip-default` | `#F9FBFB` | เติมค่าสว่าง | 1 |
+| `--text-topic-primary-disabled` | `#ADB2B7` | เติมค่าสว่าง | 1 |
+| `--text-topic-primary-subtext-disabled` | `#C9CDD0` | เติมค่าสว่าง | 1 |
+| `--icon-alert-warning` | `#D97706` | ใหม่ | 1 |
+| `--icon-content-secondary` | `var(--text-content-secondary)` | เติมค่าสว่าง | 9 |
+| `--icon-content-tertiary` | `#7A7F83` | ใหม่ | 7 |
+| `--icon-danger-default` | `#DC2626` | ใหม่ | 2 |
+| `--icon-disablediconButton-default` | `#4D5358` | เติมค่าสว่าง | 1 |
+| `--icon-info-default` | `#1D4ED8` | เติมค่าสว่าง | 1 |
+| `--icon-info-tertiary` | `#60A5FA` | เติมค่าสว่าง | 1 |
+| `--icon-negative-primary` | `#D04949` | ใหม่ | 1 |
+| `--icon-neutral-quaternary` | `#C6CBD0` | ใหม่ | 1 |
+| `--icon-positive-default` | `#196C65` | เติมค่าสว่าง | 1 |
+| `--icon-positive-tertiary` | `#3EC3B2` | เติมค่าสว่าง | 1 |
+| `--icon-statusbadge-warning` | `#B25E09` | ใหม่ | 2 |
+| `--icon-success-default` | `#1B8A4C` | ใหม่ | 1 |
+| `--icon-topic-primary-disabled` | `#C9CDD0` | เติมค่าสว่าง | 2 |
+| `--icon-warning-default` | `#F59E0B` | ใหม่ | 1 |
+| `--icon-warning-tertiary` | `#EA580C` | เติมค่าสว่าง | 9 |
 
 ## 5. Component Token Mapping
 
@@ -14360,7 +14492,7 @@ Props: `hn` · `onCard` · hover/แตะ = `TooltipGroups` (หัวข้อ
 
 ---
 
-### 6.52 MobileAppVisitTag — ป้าย "ตรวจผ่านแอป" ท้ายชื่อ (ลงทะเบียน 25 ต.ค. 69)
+### 6.57 MobileAppVisitTag — ป้าย "ตรวจผ่านแอป" ท้ายชื่อ (ลงทะเบียน 25 ต.ค. 69)
 
 **MobileAppVisitTag** — ครั้งนี้มาจากการปรึกษาแพทย์ออนไลน์ (Telemedicine) ผ่าน Mobile App · ไฟล์ `src/components/badge/MobileAppVisitTag.jsx`
 · ใช้ที่ คิวห้องยา (`PharmacyQueuePage` ผ่าน `MaskedWorklistName extraMarks`) · หน้าจ่ายยา (`PatientCard titleTags`) · แถวที่มี `visitSource: 'mobile-telemed'` → `isMobileAppVisit(row)` (`src/data/pharmacyQueue.js`)
@@ -14372,6 +14504,473 @@ Props: `hn` · `onCard` · hover/แตะ = `TooltipGroups` (หัวข้อ
 | hover / แตะ | `Tooltip` light → `TooltipGroups`: "ตรวจผ่าน Mobile App" → สรุป "ปรึกษาแพทย์ออนไลน์ (Telemedicine) จากแอป BMA Health" → กลุ่ม "การรับยา" (ช่องทาง · ชำระเงิน) — เนื้อหาคงที่ระดับโมดูล |
 
 Props: ไม่มี (ผู้เรียกตัดสินว่าจะแสดงจาก `isMobileAppVisit`) · ไม่ทำเป็นคอลัมน์แยก (แบบเดียวกับป้าย "ใหม่")
+
+### 6.58 InternalReferPopup — ป๊อปอัป "ส่งไปยัง" (ส่งต่อ · ส่งปรึกษา) (ลงทะเบียน 26 ต.ค. 69)
+
+**InternalReferPopup** — ป๊อปอัปกลางสำหรับส่งผู้รับบริการไปขั้นถัดไป: แผนก/คลินิกในศูนย์ · ส่งต่อภายนอกสำนักอนามัย · ส่งปรึกษา (ชื่อเรียกกลาง `ReferPopup`) · ไฟล์ `src/components/popup/InternalReferPopup.jsx` · API: `open` · `onClose` · `onConfirm(payload)` · `title` (ค่าตั้งต้น "ส่งไปยัง") · `subtitle` · `fromDepartment` · `fromDepartmentLabel` · `patient` · `initialScope` 'internal' | 'external' · `initialDepartments` · `allowedDepartments` · `lockInitialDestination` · `primaryLabel` · `width` · `consultOption` · `finishOption` · `prefill` / `prefillNote` · `routing` · `externalConsent` · `externalReferral`
+· ใช้ที่ คัดกรองกลาง (`opd/ScreeningPage`) · หัวแฟ้ม OPD "ส่งต่อภายนอก" (`OpdHeaderActions`) · ตรวจสุขภาพ (`CheckupNurseScreeningPage` · `CheckupFollowUpCard`) · คัดกรองคลินิกพิเศษ (TB · ทันตกรรม · สุขภาพจิต · สารเสพติด) · `TreatmentFormShell`
+· กติกา flow: `.claude/rules/staff-condition-flow.md` (ส่งปรึกษา vs ส่งต่อ)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| แถว "ส่งไปยัง" | 3 ปุ่ม `SelectableCardButton`: ภายในศูนย์ (`sendDirect`) · ภายนอกสำนักอนามัย · ส่งปรึกษา → แถวย่อย `consultScope` ภายใน / ภายนอกศูนย์ (ในสำนักอนามัย) |
+| ช่อง | ภายในศูนย์: ปลายทาง + แพทย์ (`ScreeningStepDoctor`) + ESI + หมายเหตุ · ภายนอกศูนย์: ศูนย์ปลายทาง* → คลินิก* → เหตุผล* · ภายนอกสำนักอนามัย: โรงพยาบาล · ใบส่งตัว · ความยินยอม Health Link (แผงซ้อน) |
+| ปุ่ม | primary "ส่งต่อ →" (`primaryLabel` · `primaryTrailingIcon`) disabled จนครบ · ส่งปรึกษา = "ส่งปรึกษา" · `finishOption` = "เสร็จสิ้นการบริการ" |
+| ขนาด | กว้างตั้งต้น 1040 (`width`) · ย่อพอดีจอบนจอแคบ (Popup) |
+
+---
+
+### 6.59 MedicalHistoryPopup — ป๊อปอัปดูข้อมูลทางการแพทย์ (EMR) (ลงทะเบียน 26 ต.ค. 69)
+
+**MedicalHistoryPopup** — ป๊อปอัป "ดูข้อมูลทางการแพทย์" แสดงประวัติการรักษาแบบอ่านอย่างเดียว (Figma Appointment 23:10946 · CPOE 4034:3723) · ไฟล์ `src/components/popup/MedicalHistoryPopup.jsx` · API: `open` · `onClose` · `patient` ({ hn }) · `initialViewMode` 'order' | 'date' · `initialTab` (ชื่อแท็บ EMR) · `size` (ค่าตั้งต้น 'extraLarge' · 'fullscreen')
+· ใช้ที่ หน้าตรวจรักษา (`TreatmentSteps` · `TreatmentFormPage`) · นัดหมาย (`AppointmentFormPopup`) · ห้องปฏิบัติการ (`LabResultEntryPage`) · `PatientCard` · `EmrRowAction`
+
+| ส่วน | รายละเอียด |
+|---|---|
+| โครง | `Popup` extraLarge · หัว "ดูข้อมูลทางการแพทย์" + คำอธิบาย 1 บรรทัด · body ไม่เลื่อนเอง (`bodyScrollable={false}`) |
+| เนื้อหา | `MedicalHistoryReadOnlyLayout` (`hideSectionTitle` · `independentScroll` · `viewModes`) — ตัวสลับ ดูตามรายการตรวจ / ดูตามวันที่รับบริการ + แท็บ EMR |
+| ปุ่ม | primary "ปิด" ปุ่มเดียว |
+
+---
+
+### 6.60 CameraCapturePopup — ป๊อปอัปถ่ายรูป/สแกนด้วยกล้อง (ลงทะเบียน 26 ต.ค. 69)
+
+**CameraCapturePopup** — เปิดกล้องในป๊อปอัป ถ่ายภาพเป็น PNG data URL แล้วคืนผ่าน `onCapture` (Figma PHCIS-ALL 2373:119045 / 1:3964) · ไฟล์ `src/components/popup/CameraCapturePopup.jsx` · API: `open` · `onClose` · `onCapture(dataUrl)` · `mode` 'photo' | 'scan' · `title` · `subtitle` · `faceGuide`
+· ใช้ที่ เวชระเบียน (`RegistrationSteps` ถ่ายรูปผู้รับบริการ · `RightsGroupCard`) · ความยินยอม (`ConsentIdentityVerifyPanel` · `AccessRequestForm`) · คลังศูนย์ (`CenterWarehouseReceivePopup` mode scan) · ฟื้นฟู (`RehabSteps`)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| โครง | `Popup` · พรีวิว `<video>` + `Select` เลือกกล้อง (เลือกกล้องโทรศัพท์/Continuity Camera ให้เอง) · `faceGuide` = กรอบคนเส้นประ 322×439 ชุดเดียวกับ FaceScanVerifyPopup หน้าตรง |
+| โหมดสแกน | `TabBar` "สแกน QR code" (กรอบจัตุรัส) / "สแกนบาร์โค้ด" (กรอบแนวนอน) · ข้อความเปลี่ยนเป็น "สแกน" |
+| ปุ่ม | secondary "ยกเลิก" · primary "ถ่ายรูป" / "สแกน" (กดได้เมื่อกล้องพร้อม) |
+| สถานะ | idle · live · denied (ข้อความไม่ได้รับสิทธิ์) · error — ปิดแล้วหยุดกล้องทุกครั้ง |
+
+---
+
+### 6.61 DeleteQueueConfirmPopup — ป๊อปอัปยืนยันลบ/ยกเลิกคิว (ลงทะเบียน 26 ต.ค. 69)
+
+**DeleteQueueConfirmPopup** — ยืนยันการลบคิวแบบย้อนกลับไม่ได้ พร้อมเหตุผลการยกเลิกชุดกลาง (Figma 282:42435) · ไฟล์ `src/components/popup/DeleteQueueConfirmPopup.jsx` · API: `open` · `onClose` · `onConfirm({ reason, reasonLabel })` · `queue` · `hn` · `patientName` · `avatarSrc` · `title` (ค่าตั้งต้น "ยืนยันการลบคิว") · `subtitle` · `requireReason` · named export `QUEUE_CANCEL_REASONS`
+· ใช้ที่ คิวเวชระเบียน (`RegistrationQueuePage` · `RegistrationVisitOpenPage`) · คัดกรอง (`opd/ScreeningPage` · `QueuePage`) · การเงิน (`FinancePaymentPage`) · คลินิก TB / ทันตกรรม (`TbFormPage` · `DentalFormPage`)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| โครง | `Popup` large · แถบสรุปพื้น brand tint: รูป (ไม่มี = อักษรย่อ) · คิว `ColorfulBadge` · HN · ชื่อ คั่นเส้นตั้ง `--border-neutral-tertiary` |
+| เหตุผล | `Field` "เหตุผลที่ยกเลิกคิว *" + `Select` 8 รายการ · "อื่นๆ" → `InputField` "ระบุเหตุผล *" |
+| ปุ่ม | secondary "ยกเลิก" · primary "ยืนยัน" `tone: 'danger'` (แดง) disabled จนมีเหตุผล |
+
+---
+
+### 6.62 AddMedicationPopup — ป๊อปอัปเพิ่ม/แก้ไขรายการยา (ลงทะเบียน 26 ต.ค. 69)
+
+**AddMedicationPopup** — ฟอร์มยา 1 รายการ รูปเดียวกับแถวในตารางยา (`MED_TABLE_COLUMNS`) ใช้ทั้งเพิ่มและแก้ไข · ไฟล์ `src/components/popup/AddMedicationPopup.jsx` · API: `open` · `onClose` · `onConfirm(row)` · `initialValue` · `title` (ค่าตั้งต้น "เพิ่มรายการยา") · `clearLabel` · `confirmLabel`
+· ใช้ที่ สั่งการรักษา (`TreatmentSteps` ขั้น 5) · ANC (`AncSteps`) · วางแผนครอบครัว (`FamilyPlanningSteps`) · HIV/STI (`HivStiSteps`) · `MedicationCdssPanel`
+
+| ส่วน | รายละเอียด |
+|---|---|
+| ช่อง | ชื่อยา (`Select` + รูปจาก `MEDICATION_NAME_OPTIONS`) · วิธีใช้ · หน่วย · ทานครั้งละ · จำนวน · ความถี่ · เวลาใช้ยา (`FieldGrid`) · การใช้ + คำเตือน = `SuggestibleTextarea` (เสียง + คำแนะนำ) เต็มแถว |
+| พฤติกรรม | ทุกช่องบังคับ · เปิดใหม่ = `EMPTY` + `initialValue` · `closeOnEscape={false}` |
+| ปุ่ม | tertiary "ล้างค่า" · primary "ตกลง" disabled จนครบ |
+
+---
+
+### 6.63 NestedPopupPanel — แผงซ้อนภายในป๊อปอัป (ลงทะเบียน 26 ต.ค. 69)
+
+**NestedPopupPanel** — แผงที่ทับเต็ม dialog ของ Popup แม่ ใช้แทน Popup ซ้อน Popup (ไม่มีฉากหลังชั้นที่สอง) · ไฟล์ `src/components/popup/NestedPopupPanel.jsx` · API: `open` · `direction` 'forward' | 'backward' · `className` · `bodyClassName` · ตัวช่วย `portalNestedToTopPopup(node, open)` · `getTopPopupDialog()` · `hasVisiblePopupOverlay()` · hook คู่กัน `useNestedPopupPanel`
+· ใช้ที่ ตารางว่างของบุคลากร (`TelemedConsultFields`) · นำเข้าผลรังสี/ชันสูตร/ตา · แนบผลตรวจย้อนหลัง (`TreatmentSteps`) · ใบยินยอม Health Link (`InternalReferPopup`) · `PrivacyRevealPopup` (ลืม PIN)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| โครง | `.mih-nested-popup-panel` absolute inset 0 · z-index 1200 · พื้น `--surface-modal-default` · body เลื่อนแนวตั้งในตัว |
+| ใช้งาน | portal เข้า `.mih-popup-dialog` ชั้นบนสุดด้วย `portalNestedToTopPopup` · หัวแผง = ปุ่ม ghost ← "ย้อนกลับ" + ชื่อแผง (ระยะ 24 รอบ) |
+| motion | `data-direction` forward/backward · ปิด animation เมื่อ prefers-reduced-motion |
+
+---
+
+### 6.64 MedicationHistoryMatrixPopup — ป๊อปอัปประวัติการใช้ยาแบบ Matrix (ลงทะเบียน 26 ต.ค. 69)
+
+**MedicationHistoryMatrixPopup** — ประวัติยาเป็นตาราง แถว = รายการยา · คอลัมน์ = วันที่รับบริการ ให้เห็นการเริ่มยา ปรับขนาด และยาต่อเนื่อง · ไฟล์ `src/components/popup/MedicationHistoryMatrixPopup.jsx` · API: `open` · `onClose` · `hn` · `items` · `title` (ค่าตั้งต้น "ประวัติการใช้ยา") · `subtitle` · named export `MedicationHistoryMatrix` (ฝังในหน้า)
+· ใช้ที่ ห้องยา (`PharmacyPatientsPage` · `PharmacyAllergyPatientsPage` · `PharmacyScreeningReviewPage` · `PharmacyDispensePage`) · ANC (`AncSteps`)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| ตาราง | ชื่อยาตรึงซ้าย `clamp(160px, 30vw, 280px)` เส้นกั้น 2px `--border-brandPrimary-default` · คอลัมน์วันที่ 190 · เส้นตาราง `--border-brandPrimary-tertiary` |
+| สถานะช่อง | เริ่มยา (green) · ปรับขนาด ↑/↓ (orange) · ต่อเนื่อง (ข้อความ secondary) |
+| ตัวกรอง | `PrimarySearch` ชื่อยา · `TabCapsule` แท็ก ยาต้องติดตาม / อาหารเสริม · `Checkbox` ซ่อนยาไม่สำคัญ · ปุ่มแท็กท้ายชื่อยา (`Popover` + `ActionList`) |
+| โครง | `Popup` extraLarge · primary "ปิด" ปุ่มเดียว |
+
+---
+
+### 6.65 FaceScanVerifyPopup — ป๊อปอัปยืนยันตัวตนด้วยใบหน้า (ลงทะเบียน 26 ต.ค. 69)
+
+**FaceScanVerifyPopup** — "ถ่ายรูปเพื่อยืนยันตัวตน" ถ่าย 360 องศา (ท่าทางศีรษะ 4 ท่า แบบ Face ID จาก bma.kiosk) หรือหน้าตรงในกรอบคน แล้วเทียบรูปอ้างอิง (Figma PHCIS-Registration 402:52908) · ไฟล์ `src/components/popup/FaceScanVerifyPopup.jsx` · API: `open` · `onClose` · `onCapture(dataUrl)` · `patientName` · `referencePhoto` · `matchScore` (mock 96) · `lockMode` 'front' | '360' · `autoConfirm`
+· ใช้ที่ เวชระเบียนขั้นยืนยันตัวตน (`RegistrationSteps`) · เข้าสู่ระบบ (`LoginVerifyPage` autoConfirm) · สร้างบัญชีบุคลากร (`AssessUserCreatePage`) · สกิล `face-identity-capture`
+
+| ส่วน | รายละเอียด |
+|---|---|
+| วิธีถ่าย | `TabCapsule` 360° (ค่าตั้งต้น · `useHeadPoseGestures` วงแหวน 64 ขีด) / หน้าตรง (`useFaceInFrame` กรอบ 322×439) · `lockMode` ซ่อนแท็บ |
+| ผลเทียบ | ภาพถ่าย ↔ `referencePhoto` + `StatusBadge` % ความตรง + `Checkbox` ยืนยันการเปรียบเทียบ |
+| ปุ่ม | ก่อนถ่าย: "ยกเลิก" · "ถ่ายภาพ" · หลังถ่าย: "ถ่ายใหม่" · "ใช้รูปนี้" (disabled จนติ๊ก) · `autoConfirm` ไม่มีขั้นยืนยัน |
+| token debt | สีวงแหวน 3 ค่า (เขียว/จาง/ฟ้า) ยังเป็น hex — รอเพิ่ม token ใน mih-design |
+
+---
+
+### 6.66 ContactItSupportPopup — ป๊อปอัปติดต่อฝ่ายไอที (ลงทะเบียน 26 ต.ค. 69)
+
+**ContactItSupportPopup** — แจ้งปัญหาการเข้าใช้งานถึงฝ่ายไอทีโรงพยาบาล: เลือกเรื่อง + รายละเอียด → ป๊อปอัปสำเร็จ (mock) · ไฟล์ `src/components/popup/ContactItSupportPopup.jsx` · API: `open` · `onClose` · `account` (ชื่อบัญชีที่พิมพ์ไว้ — แสดงใน subtitle)
+· ใช้ที่ เข้าสู่ระบบ (`LoginPage`) · ยืนยันตัวตน (`LoginVerifyPage`) · ตั้งรหัสผ่าน (`LoginSetPasswordPage`) · SSO (`LoginSsoPage`)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| ช่อง | "เรื่องที่ต้องการแจ้ง *" = `SelectWithOther` 7 เรื่อง + "อื่นๆ" (พิมพ์เอง) · "รายละเอียดเพิ่มเติม" = `Textarea` 4 แถว · ระหว่างช่อง 16 (`--dim-space-400`) ป้าย↔ช่อง 8 |
+| ปุ่ม | secondary "ยกเลิก" · primary "ส่งเรื่อง" disabled จนมีเรื่อง |
+| หลังส่ง | `SuccessPopup` "ส่งเรื่องถึงฝ่ายไอทีแล้ว" — ฝ่ายไอทีติดต่อกลับทางอีเมล/เบอร์ที่ลงทะเบียน |
+
+---
+
+### 6.67 ReDiagnosisPopup — ป๊อปอัปเลือกการวินิจฉัยซ้ำ (Re-Diagnosis) (ลงทะเบียน 26 ต.ค. 69)
+
+**ReDiagnosisPopup** — เลือกรหัส ICD จากประวัติการรักษาครั้งก่อนโดยไม่ต้องพิมพ์ใหม่ (Figma Medical-examination 161:42074 + 347:42231) · ไฟล์ `src/components/popup/ReDiagnosisPopup.jsx` · API: `open` · `onClose` · `onConfirm(picked[])` · `items` ({ id, date, code, name }) · `title` (ค่าตั้งต้น "เลือกการวินิจฉัยซ้ำ (Re-Diagnosis)") · `subtitle` · `clearLabel` · `confirmLabel`
+· ใช้ที่ ขั้นวินิจฉัยหน้าตรวจรักษา (`TreatmentSteps` · `PAST_VISIT_DIAGNOSES`) · ทันตกรรมยังมีตัวเขียนเองชื่อเดียวกันใน `DentalSteps.jsx` (`rows`) — ควรย้ายมาใช้ตัวนี้
+
+| ส่วน | รายละเอียด |
+|---|---|
+| แถว | สูงขั้นต่ำ 48 · วันที่ `ColorfulBadge` blue secondary ในคอลัมน์ 112 · รหัส ICD blue primary · ชื่อโรค flex · `Checkbox` ขวาสุด · คั่น `--border-neutral-quaternary` |
+| ติ๊กแล้ว | แผง `--surface-card-quaternary` ระยะ 16 + `DiagTypeSelect` (ไม่บังคับ — ไม่เลือก = principle) |
+| ปุ่ม | tertiary "ล้างค่า" · primary "ตกลง" disabled จนติ๊ก ≥ 1 |
+
+---
+
+### 6.68 DeleteMedicationConfirmPopup — ป๊อปอัปยืนยันลบรายการยา (ลงทะเบียน 26 ต.ค. 69)
+
+**DeleteMedicationConfirmPopup** — ยืนยันลบยาออกจากคำสั่ง พร้อมเหตุผลบังคับ (การลบยาเป็นการกระทำที่ต้อง audit) · ไฟล์ `src/components/popup/DeleteMedicationConfirmPopup.jsx` · API: `open` · `onClose` · `onConfirm(reason)` · `medicationName` · `title` (ค่าตั้งต้น "ยืนยันการลบรายการยา") · `message` · `cancelLabel` · `confirmLabel` ("ลบรายการยา")
+· ใช้ที่ ตารางยาหน้าสั่งการรักษา (`TreatmentSteps`) · ห้องยา (`PharmacyDispensePage`)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| โครง | `Popup` default · subtitle "คุณต้องการลบ <ชื่อยา>" |
+| ช่อง | `Field` "เหตุผลที่ลบรายการยา *" + `Select` 7 รายการ (placeholder "เลือกเหตุผล") |
+| ปุ่ม | tertiary outline "ยกเลิก" (neutral) · primary "ลบรายการยา" `tone: 'danger'` disabled จนเลือกเหตุผล |
+
+---
+
+### 6.69 DeleteCenterContactConfirmPopup — ยืนยันลบเบอร์โทร/อีเมลของศูนย์ (ลงทะเบียน 26 ต.ค. 69)
+
+**DeleteCenterContactConfirmPopup** — ยืนยันลบแถวช่องทางติดต่อที่กรอกแล้วของศูนย์บริการ (Figma Assess-control 3:15319 เบอร์ · 3:15293 อีเมล) · ไฟล์ `src/components/popup/DeleteCenterContactConfirmPopup.jsx` · API: `open` · `kind` 'phone' | 'email' · `onClose` · `onConfirm` · `cancelLabel`
+· ใช้ที่ เพิ่มศูนย์บริการ ขั้นที่ 3 (`system/AddCenterPage`) · แก้ไขศูนย์บริการ (`system/CenterEditPopup`)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| โครง | `AlertDialog` type destructive · alignment center |
+| ข้อความ | phone: "ยืนยันการลบเบอร์โทรศัพท์" / "คุณต้องการลบเบอร์โทรศัพท์" · email: "ยืนยันการลบอีเมล" / "คุณต้องการลบอีเมล" |
+| ปุ่ม | "ยกเลิก" · ปุ่มแดง "ลบเบอร์โทร" / "ลบอีเมล" |
+
+---
+
+### 6.70 ConsentHistoryPopup — ป๊อปอัปประวัติความยินยอม (ลงทะเบียน 26 ต.ค. 69)
+
+**ConsentHistoryPopup** — ประวัติการให้และถอนความยินยอมของผู้รับบริการ 1 ราย (Figma PHCIS | Consent 299:86535 · TOR ด.1.1.10 · 1.4.3.16) · ไฟล์ `src/components/popup/ConsentHistoryPopup.jsx` · API: `open` · `onClose` · `record` ({ name, hn, guardian, requester, createdDate, signedDate, history[{ date, formCode, formName, type, version, status, channel }] })
+· ใช้ที่ ยังไม่มีหน้า import (0 ที่ใน `src/` — git grep 26 ต.ค. 69) · รูปข้อมูลตรงกับ `CONSENT_RECORDS[].history` (`src/data/consentRecords.js`)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| การ์ดผู้รับบริการ | พื้น `--surface-brandPrimary-quaternary` ขอบ `--border-brandPrimary-quaternary` radius `--dim-radius-400` · อักษรย่อวงกลม 40 · ชื่อ · HN · ผู้แทนโดยชอบธรรม (ถ้ามี) ห่างกัน 24 |
+| ตาราง | `Table` 7 คอลัมน์ · รหัส grey · ประเภท `CONSENT_TYPE_TONE` · เวอร์ชั่น blue · สถานะ `CONSENT_STATUS[].tone` (ColorfulBadge small secondary) · ชื่อแบบฟอร์ม flex ≥ 360 ตัด … |
+| ท้าย | `ConsentAuditBar` ผู้บันทึก · วันที่สร้าง · วันที่ลงนาม · ปุ่ม `BrandButton` "ปิด" |
+
+---
+
+### 6.71 ConsentFormFillPopup — ป๊อปอัปกรอกแบบฟอร์มยินยอม (ลงทะเบียน 26 ต.ค. 69)
+
+**ConsentFormFillPopup** — ป๊อปอัปกรอกแบบฟอร์มยินยอม 1 ฉบับจากคลัง `FORMS` (`category: 'consent'`) ที่เคาน์เตอร์ เรนเดอร์ `sections[].fields[]` ทั่วไป · ไฟล์ `src/components/popup/ConsentFormFillPopup.jsx` · API: `open` · `form` · `patient` · `onClose` · `onConfirm({ slug, signedAt })`
+· ใช้ที่ ขั้น "แบบฟอร์มยินยอม" เวชระเบียน (`RegistrationConsentStep`) · ความยินยอม Telemedicine (`TelemedConsentPage`) · แบบฟอร์มยินยอมงานบำบัด (`addictionForms.js`)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| โครง | `Popup` large กว้าง 640 · หัว = `form.name` · คำขยาย = `form.summary` · แต่ละส่วน `SectionTitle` ไอคอน assignment |
+| ชนิดช่อง | `checkbox` → `Checkbox` (บังคับต่อท้าย *) · `signature` → `ESignatureField` · อื่น ๆ → `InputField` disabled ค่าจาก `patient` (ชื่อ · เลขบัตร · HN · วันเกิด · วันที่วันนี้) |
+| ปุ่ม | "ยกเลิก" (secondary) · "ยืนยันการยินยอม" (primary) disabled จนติ๊กข้อบังคับครบ + มีลายเซ็น |
+| ระยะ | ระหว่างส่วน 20 (`--dim-space-500`) · ในส่วน 12 (`--dim-space-300`) · หมายเหตุท้าย xs tertiary + ไอคอน info |
+
+---
+
+### 6.72 AddDiagnosisPopup — ป๊อปอัปเพิ่ม/แก้ไขรหัสการวินิจฉัย ICD-10 (ลงทะเบียน 26 ต.ค. 69)
+
+**AddDiagnosisPopup** — ป๊อปอัปเพิ่มแถววินิจฉัย ICD-10 ด้วยมือ (Figma PHCIS Medical-examination 350:35255) ใช้ทั้งเพิ่มและแก้ไข · ไฟล์ `src/components/popup/AddDiagnosisPopup.jsx` · API: `open` · `onClose` · `onConfirm({ code, name, type })` · `initialValue` · `title` · `clearLabel` · `confirmLabel`
+· ใช้ที่ ขั้นวินิจฉัยหน้าตรวจรักษา (`TreatmentSteps`) · คลินิก HIV/STI (`HivStiSteps`) · `EditDiagnosisPopup` (ครอบตัวนี้ ส่ง `initialValue`)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| ช่อง | "รหัส (ICD10)" + "โรค" = `SuggestibleTextarea` (เสียง + คำแนะนำจาก `DEFAULT_ICD_SUGGESTIONS`) · "Diag Type *" = `DiagTypeSelect` |
+| พฤติกรรม | รหัส/ชื่อตรงคลัง → เติมอีกช่องให้ · เปิดใหม่รีเซ็ตเป็น `initialValue` |
+| ปุ่ม | tertiary "ล้างค่า" · primary "ตกลง" disabled จนครบ 3 ช่อง (โหมดแก้ไข: ต้องต่างจากเดิม) |
+| ระยะ | `Popup` large · ระหว่างช่อง 20 (`--dim-space-500`) |
+
+---
+
+### 6.73 AddressMapBlock — ปักหมุดตำแหน่งบ้านบนแผนที่จำลอง (ลงทะเบียน 26 ต.ค. 69)
+
+**AddressMapBlock** — บล็อกแผนที่ปักหมุดตำแหน่งบ้าน (Figma PHCIS Registration 133:9181) บนแผนที่ SVG จำลอง ไม่มี tile/API key · ไฟล์ `src/components/forms/AddressMapBlock.jsx` · API: `value` ({ lat, lng, pinSaved }) · `onChange` · `heading` · `hint` · `readOnly` · `compact` · `flush`
+· ใช้ที่ ขั้นที่อยู่เวชระเบียน (`RegistrationSteps`) · ผู้ป่วยใหม่งานเยี่ยมบ้าน (`HomeVisitNewPatientForm`, `HomeVisitMapPopup`) · ชุมชนงานบำบัด (`AddictionCommunityPage`) · `RegistryAddressLine` (§6.56) · EMR Telemedicine (readOnly)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| โครง | หัวข้อ + คำอธิบาย + ปุ่ม outline sm "ใช้ตำแหน่งปัจจุบัน" → ช่องค้นหา `SecondarySearch` + ผลแยกแท็บ `TabPill` (ชื่อชุมชน · เขต · ถนน/ซอย) → แผนที่ + หมุด + ซูม +/− → แถว "ตำแหน่งที่บันทึก" + ปุ่ม "บันทึกตำแหน่ง" |
+| ขนาด | ปกติสูง 360 · `compact` สูง 224 มุม `--dim-radius-600` · `flush` ตัด padding 24 + maxWidth 780 ของกรอบใน |
+| พฤติกรรม | คลิก/ลาก → `onChange({ lat, lng, pinSaved: false })` · บันทึก → `pinSaved: true` · `readOnly` ซ่อนค้นหา/ปุ่ม ปิด pointer บนแผนที่ |
+| ข้อมูล | พิกัดจำลองในกรอบ 0.05°×0.07° กลางกรุงเทพ · ลายน้ำ "MIH Map Mock — ไม่ใช่แผนที่จริง" |
+
+---
+
+### 6.74 SmokingBehaviorFields — ชุดคำถามการสูบบุหรี่ (ลงทะเบียน 26 ต.ค. 69)
+
+**SmokingBehaviorFields** — ชุดคำถามการสูบบุหรี่ที่ใช้ร่วมทุกจุดคัดกรอง ช่องโผล่ตามคำตอบก่อนหน้า (+ `AlcoholBehaviorFields` ชุดดื่มแอลกอฮอล์ในไฟล์เดียวกัน) · ไฟล์ `src/components/forms/SmokingBehaviorFields.jsx` · API: `value` (`EMPTY_SMOKING`) · `onChange` · `statusLabel` · `patientAgeYears` · `showDeepHistory` · `showFollowUp` · `showQuitDate` · `narrow` · ตัวช่วย `smokingSummaryText` · `smokingDetailRows` · `normalizeSmokingStatus`
+· ใช้ที่ คัดกรองที่ส่งต่อมา (`CarriedScreeningStep`) · คัดกรองทันตกรรม (`DentalScreeningPage`) · คัดกรองวัณโรค (`TbScreeningPage`) · ตรวจคลินิก COPD (`CopdExamSections`) · ขั้นตรวจรักษา (`TreatmentSteps`)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| ลำดับช่อง | สถานะ (ไม่สูบ · เคยสูบ เลิกแล้ว · เคยเลิกแล้วกลับมาสูบอีก · สูบ) → สูบแบบไหน (หลายข้อ เก็บเป็น "A + B": บุหรี่มวน · ยาเส้น · บุหรี่ไฟฟ้า) → อายุที่เริ่ม · สูบมานาน · มวน/วัน · ปีที่เลิก · มวนแรกหลังตื่น → ความต้องการเลิก → วันนัดเลิก → ประวัติเชิงลึก (`SmokingDeepHistoryPopup`) → ติดตาม 1/3/6 เดือน |
+| พฤติกรรม | เปลี่ยนสถานะล้างช่องที่ไม่เกี่ยว · มี `patientAgeYears` → "สูบมานานแค่ไหน — คำนวณให้" · เด็ก < 13 ปี ถามคนในครอบครัวสูบ |
+| ตัวเลือก | สถานะ/ความต้องการเลิก/ติดตาม = `SelectableCardButton` · ตัวเลข = `Select` / `InputField` · วันที่ = `DatePicker` |
+| `narrow` | กริดคอลัมน์เท่ากันตามความกว้างกรอบ (ในป๊อปอัป) แทน breakpoint ของจอ |
+
+---
+
+### 6.75 ConsentAuditBar — แถบผู้บันทึก/เวลา + ทำเครื่องหมายข้อมูลผิด (ลงทะเบียน 26 ต.ค. 69)
+
+**ConsentAuditBar** — แถบ audit 1 บรรทัดท้ายการ์ด/ป๊อปอัปแบบฟอร์ม: ผู้บันทึก · เวลาบันทึก · แก้ไขล่าสุด + "ทำเครื่องหมายข้อมูลผิด" · ไฟล์ `src/components/forms/ConsentAuditBar.jsx` · API: `recordedBy` · `recordedAt` · `editedAt` · `flaggedAt` · `onFlag(stamp)` · `showIcon` · `showTimestamps` · `showFlag` · `showRecordedByLabel` · `avatarSrc` · `groupPolicy`
+· ใช้ที่ ประวัติความยินยอม (`ConsentHistoryPopup`) · ความยินยอมการเข้าถึงข้อมูล (`ConsentAccessRightsPage`) · ทะเบียน HIV/STI (`HivStiRegistryPage`) · ติดตาม HIV/STI (`HivStiFollowUpPage`)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| โครง | ไอคอน history 18 tertiary (หรือ `StaffAvatar` 32 เมื่อมี `avatarSrc`) · "บันทึกโดย **ชื่อ** · เวลา · แก้ไขล่าสุด …" sm secondary · ป้าย `groupPolicy` (แพทย์ blue · พยาบาล magenta · เภสัชกร teal · อื่น grey) |
+| ปุ่ม | `NeutralButton` outline sm ไอคอน flag → `AlertDialog` warning "ยืนยันทำเครื่องหมาย" → `ColorfulBadge` red secondary "ทำเครื่องหมายข้อมูลผิดแล้ว · เวลา" |
+| กรอบ | `--surface-card-200` · เส้น `--border-neutral-quaternary` · มุม `--dim-radius-300` · padding 12/16 · ตัดบรรทัดได้ |
+
+---
+
+### 6.76 RegistrationEditHistoryPanel — ตารางประวัติการแก้ไขทะเบียน (ลงทะเบียน 26 ต.ค. 69)
+
+**RegistrationEditHistoryPanel** — ตาราง audit "ประวัติการแก้ไขข้อมูล" ของทะเบียนผู้รับบริการ (Figma 2373:119045) ค่าเดิมขีดฆ่าคู่ค่าใหม่ อ่านอย่างเดียว · ไฟล์ `src/components/forms/RegistrationEditHistoryPanel.jsx` · API: `embedded` · `fieldFilter` (เช่น `['Passport']`) · ตัวช่วย `getRegistrationEditHistoryRows()`
+· ใช้ที่ ⋮ "ประวัติการแก้ไขข้อมูล" ของเวชระเบียน (`FormShell`) · หน้าคัดกรอง OPD (`ScreeningPage`) · ปุ่มประวัติท้ายช่อง Passport / Work Permit (`RegistrationSteps`)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| คอลัมน์ | วันเวลา · ผู้แก้ไข · หมวด (`ColorfulBadge`: ส่วนตัว purple · ที่อยู่ teal · ติดต่อ blue · สิทธิ orange · Flag pink · เวชระเบียน indigo) · รายการ · ค่าเดิม (ขีดฆ่า) · ค่าใหม่ — shared `Table` เรียงได้ 4 คอลัมน์แรก |
+| ข้อมูล | รายการในเซสชัน (`getRegistrationAuditEntries`) ต่อหน้า mock เรียงใหม่ → เก่า · `fieldFilter` เฉพาะเลขเอกสาร → หัว "เลขเดิม / เลขใหม่" |
+| โหมด | `embedded` = ตารางเปล่า (ในป๊อปอัป) · ปกติ = การ์ด `--dim-radius-500` เงา `--shadow-brand-drop-bottom-200` padding 24 + หัว base "ประวัติการแก้ไขข้อมูล" + "N รายการ · เรียงจากใหม่ไปเก่า" sm tertiary |
+
+---
+
+### 6.77 FormStructurePreview — ตัวอย่างโครงสร้างแบบฟอร์ม (ลงทะเบียน 26 ต.ค. 69)
+
+**FormStructurePreview** — บล็อก "โครงสร้างแบบฟอร์ม" วาดทุกส่วน/ช่องของแบบฟอร์มในคลัง `FORMS` ด้วยคอมโพเนนต์ฟอร์มจริงแบบกดไม่ได้ · ไฟล์ `src/components/forms/FormStructurePreview.jsx` · API: `form` · `heading` (ค่าตั้งต้น "โครงสร้างแบบฟอร์ม") · ตัวช่วย `countFields` · `estimateFormMinutes` · `ESTIMATE_MINUTES_TIP` · `SectionBlock`
+· ใช้ที่ หน้ารายละเอียดแบบฟอร์ม `/forms/:slug` (`FormDetailPage`) · `FormDetailPopup` · คลังแบบฟอร์ม (`FormsLibraryPage`, `FormsCategoryPage` — ตัวช่วยนับช่อง/เวลา) · แก้ไขคลินิก (`SystemClinicEditPage`)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| หัว | ชื่อบล็อก base bold brand → "หน้าตาช่องกรอก… ทั้งหมด N ช่อง แบ่งเป็น M ส่วน (ตัวอย่าง — กรอกไม่ได้)" xs tertiary |
+| ส่วน | วงกลมเลขส่วน 28 `--surface-brandPrimary-default` + ชื่อส่วน base bold + "N ช่อง" xs tertiary · กริด 1 → 2 คอลัมน์ (md) ระยะ 20/16 · `FULL_WIDTH_TYPES` เต็มแถว |
+| ช่อง | `FormFieldControl` ทุกชนิด · `pointer-events: none` + `aria-hidden` · `layout: 'scoreGrid'` → `ScoreGridSection` readOnly |
+| ระยะ | ระหว่างส่วน 24 (`--dim-space-600`) · เลข ↔ ชื่อส่วน 8 |
+
+---
+
+### 6.78 FormFieldControl — ตัวควบคุมช่องกรอกจากนิยาม field (ลงทะเบียน 26 ต.ค. 69)
+
+**FormFieldControl** (default export `FieldControl`) — เรนเดอร์ช่องกรอก 1 ช่องจากนิยาม `{ label, type, required, options, … }` ด้วยคอมโพเนนต์ DS · ไฟล์ `src/components/forms/FormFieldControl.jsx` · API: `field` · `fieldKey` · `value` · `onChange` · export เพิ่ม `FULL_WIDTH_TYPES` · `FieldLabel` · `RADIO_4_OPTIONS` · `RADIO_5_OPTIONS` · `SELECT_FALLBACK` · `EMPTY_BODY_DRAWING`
+· ใช้ที่ หน้ากรอกแบบฟอร์ม (`FormFillPage`) · `FormStructurePreview` / `FormDetailPopup` · Form Builder (`FormBuilderCanvasBlock`) · ฟอร์มคลินิกพิเศษ (`LibraryFormFields`, `opdExtraExams`)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| ชนิด → คอมโพเนนต์ | text/default → `InputField` · textarea → `Textarea` · date → `DatePicker` · datetime → `InputField` datetime-local · select → `Select` · checkbox → `Checkbox` · radio / radio-4 / radio-5 → `RadioGroup` · signature → `ESignatureField` · slider-0-10 → `PainScaleCards` · suggest-textarea → `SuggestibleTextarea` · body-drawing → `BodyDiagramPanel` · photo → `DragAndDrop` · exam-status / exam-systems → `PhysicalExamChecklist` · dental-chart → `ToothConditionGrid` · widget → `ClinicWidgetField` |
+| ค่าร่วม | ป้าย = `field.label` · required → * `--text-input-require` · size md · ไม่มี helper text |
+| เลย์เอาต์ | ผู้เรียกวางในกริด 2 คอลัมน์ · `FULL_WIDTH_TYPES` → `md:col-span-2` |
+
+---
+
+### 6.79 PasswordField — ช่องรหัสผ่านพร้อมปุ่มแสดง/ซ่อน (ลงทะเบียน 26 ต.ค. 69)
+
+**PasswordField** — ช่องรหัสผ่านมาตรฐาน (Figma Foundation 3647:681) สร้างบน `InputField` · ไฟล์ `src/components/forms/PasswordField.jsx` · API: `label` ('รหัสผ่าน') · `placeholder` ('********') · `leadingIcon` ('lock') · `disabled` · `error` · ส่งต่อ prop ของ `InputField` (`value` · `onChange(value, e)` · `helperText` · `required` · `autoComplete` · `style`) · forwardRef
+· ใช้ที่ หน้าเข้าสู่ระบบ (`LoginPage`) · ตั้งค่าความปลอดภัย เปลี่ยนรหัสผ่าน 3 ช่อง (`SecuritySettingsPanel`)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| โครง | ไอคอนนำ `lock` → ค่าถูกซ่อน → ปุ่ม `visibility` / `visibility_off` ในช่อง `trailing` |
+| ปุ่มตา | `<button>` จริง · aria-label "แสดงรหัสผ่าน / ซ่อนรหัสผ่าน" · `aria-pressed` · ไอคอน `--dim-size-400` สี `--icon-input-default` (disabled `--icon-input-disabled`) |
+| State | default · focus · filled · error · disabled — ได้จาก `InputField` ทั้งหมด |
+
+---
+
+### 6.80 RightsLookupPanel — แผงกรอกเลขบัตรเพื่อตรวจสอบสิทธิ (ลงทะเบียน 26 ต.ค. 69)
+
+**RightsLookupPanel** — แผงตรวจสอบสิทธิการรักษาด้วยเลขบัตรประชาชน (Figma PHCIS-Registration 1:4150) · ไฟล์ `src/components/forms/RightsLookupPanel.jsx` · API: `title` · `subtitle` · `placeholder` · `value` · `onChange` · `onSubmit(value)` · `submitLabel` · `submitDisabled` · `submitIcon` ('search') · `submitSubdued` · `inputMode` · `maxLength` (17) · `inputAlign` ('center') · `inputWidth` (320)
+· ใช้ที่ ขั้นสิทธิการรักษาเวชระเบียน (`RegistrationSteps`) · เช็คสิทธิสมาชิกชุมชน (`CommunityRightsCheck`) · เพิ่มสิทธิแคมเปญตรวจสุขภาพ (`CampaignRightsAddPopup`) · แท็บ "เช็คสิทธิ" งานสิทธิและการเบิกจ่าย (`RightsCheckSection`)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| โครง | Lottie "Girl finding health insurance online" 128×104 → หัว sm `--text-brandPrimary-default` + คำขยาย sm medium quaternary → `InputField` (ไม่มีป้าย/ไอคอน ตัวอักษรกลาง) + `BrandButton` ไอคอน search |
+| ปุ่ม | ปกติ = BrandButton fill · `submitSubdued` (ตรวจแล้ว) = BrandButton outline · Enter = ส่ง |
+| กรอบ | `--surface-positive-quaternary` · มุม `--dim-radius-500` · เงา `--shadow-brand-drop-bottom-200` · padding 24 · กว้าง fit-content ≤ 100% · ตัดบรรทัดได้ที่จอแคบ |
+
+---
+
+### 6.81 RightsGroupCard — การ์ดกลุ่มสิทธิการรักษา (ลงทะเบียน 26 ต.ค. 69)
+
+**RightsGroupCard** — การ์ดกลุ่มสิทธิ (Figma PHCIS-Registration 1:4153): จัดลำดับสิทธิ + เอกสาร/รูปภาพประกอบ · ไฟล์ `src/components/forms/RightsGroupCard.jsx` · API: `group` ({ id, title, priorityItems[{ id, label, role }], documents, photos, showAddPriority }) · `onReorderPriorityItems(id, items)` · `onAddDocuments(id, files)` · `onRemoveDocument(id, docId)` · `onAddPhotos(id, files)` · `onRemovePhoto(id, photoId)` · `onAddPriority(id)` · export เพิ่ม `RightsAttachRow` · `RightsPhotoThumb` · `RightsUploadedDocChip` · `filesToRightsDocuments` · `filesToRightsPhotos` · `dataUrlToRightsPhoto` · `revokeRightsPhotoPreview`
+· ใช้ที่ ขั้นสิทธิการรักษาเวชระเบียน (`RegistrationSteps`) · เช็คสิทธิสมาชิกชุมชน (`CommunityRightsCheck`) · แท็บ "เช็คสิทธิ" งานสิทธิและการเบิกจ่าย (`RightsCheckSection`) · mock `buildMockRightsGroups()` (`src/data/registrationForm.js`)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| หัว | ชื่อกลุ่ม base `--text-topic-secondary-title` + "จัดลำดับความต้องการใช้สิทธิด้วยปุ่มขึ้น/ลง โดยระบบจะตัดสิทธิ์จากลำดับแรกก่อน" xs quaternary · ป้าย `ColorfulBadge` green "N สิทธิ" |
+| รายการสิทธิ | `RightsEntitlementList` (แบบเดียวกับตู้ Kiosk) · กลุ่ม `showAddPriority` มี `BrandDashedAddButton` "เพิ่มสิทธิ" |
+| เอกสารประกอบ | กล่องเดียว: ชิปเอกสาร + รูปย่อ + แถวแนบ (`DragAndDrop` · ถ่ายรูป `CameraCapturePopup` · สแกน `RightsDocumentScanPopup`) ไทล์เส้นประ 128 |
+| กรอบ | `--surface-card-100` · เส้น `--border-neutral-quaternary` · มุม `--dim-radius-400` · เงา `--shadow-brand-drop-bottom-200` · padding 24 · ระยะใน 12 |
+
+---
+
+### 6.82 DiagTypeSelect — เลือกประเภทการวินิจฉัย (Diag Type) (ลงทะเบียน 26 ต.ค. 69)
+
+**DiagTypeSelect** — Dropdown เลือก Diag Type ของแถว ICD-10 (Figma PHCIS Medical-examination 347:42762 · 348:34475) · ไฟล์ `src/components/forms/DiagTypeSelect.jsx` · API: `value` · `onChange` · `options` (ค่าตั้งต้น `DIAGNOSIS_TYPE_PICK_OPTIONS` 4 ประเภท) · `placeholder` ("เลือก Diag Type") · `pickedText` · `label` ("Diag Type" · `null` = ไม่มีป้าย) · `disabled` · `className` · ตัวช่วย `getDiagType(value)`
+· ใช้ที่ `AddDiagnosisPopup` · `ReDiagnosisPopup` · ตารางวินิจฉัยทันตกรรม (`DentalSteps`) · แผงลงรหัสวินิจฉัย (`DiagnosisCodingPanel`)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| ปุ่ม | ยังไม่เลือก = placeholder + chevron · เลือกแล้ว = `ColorfulBadge` เล็ก ชื่ออังกฤษ (สีตาม `badgeStyle`) + `pickedText` + chevron |
+| Dropdown | `Popover` · 1 แถวต่อประเภท: เลขวงกลม `ColorfulBadge` สีตามประเภท + ชื่ออังกฤษ medium / ชื่อไทยบรรทัดล่าง |
+| ตัวเลือก | `principle` · `comorbidity` · `other` · `externalCause` (จาก `DIAGNOSIS_TYPE_OPTIONS` 7 แถว backend DIAGTYPE) |
+
+---
+
+### 6.83 NameMark — ไอคอนเล็กหลังชื่อผู้รับบริการ (ลงทะเบียน 26 ต.ค. 69)
+
+**NameMark** — ไอคอน Material Symbol เส้นหลังชื่อผู้รับบริการ + Tooltip ขาว · ไฟล์ `src/components/badge/NameMark.jsx` · API: `icon` · `color` · `label` (aria-label) · `tip` · ค่าคงที่ `NAME_MARK_GLYPH`
+· ใช้ที่ `VitalAlertMark` · `PsychMark` · `TriageMark` · `MobileAppMark` · `ArrivalMobilityMark` · `OutstandingDebtAlert`
+
+| ส่วน | รายละเอียด |
+|---|---|
+| ขนาด | กรอบ 16×24 (`--dim-size-300` × `--dim-size-500`) · ไอคอน 12 outline weight 600 · ไม่มีวงกลมรองพื้น |
+| ระยะ | ช่องระหว่าง mark = gap 4 ของแถวชื่อ — ห้ามตั้งเอง |
+| ทูลทิป | `Tooltip variant='light' position='bottom' maxWidth 320` · เนื้อหา `tip` หรือ `label` · โฟกัสด้วยคีย์บอร์ดได้ (`tabIndex 0`) |
+
+---
+
+### 6.84 ResultsVisitBadge — ป้าย "มาฟังผล" ใน worklist แพทย์ (ลงทะเบียน 26 ต.ค. 69)
+
+**ResultsVisitBadge** — ป้าย teal "มาฟังผล" (ไม่ต้องคัดกรอง · ไม่ซักประวัติ/ตรวจร่างกายซ้ำ) + ทูลทิปการส่งต่อ · ไฟล์ `src/components/badge/ResultsVisitBadge.jsx` · API: `visit` (แถว `src/data/resultsVisits.js`) · `asText`
+· ใช้ที่ คิวคัดกรอง OPD `QueuePage` · คิวห้องตรวจ `TreatmentQueuePage` · คิว ANC `AncQueuePage` · คิว FP `FamilyPlanningQueuePage` · คิวคลินิกเรื้อรัง `ChronicQueuePage` (asText)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| ป้าย | `ColorfulBadge style='teal' size='small' icon='lab_profile'` |
+| asText | "นัดฟังผล" xs สี `--text-colorfulbadge-teal` ไม่ตัดบรรทัด ใต้ชื่อ |
+| ทูลทิป | `TooltipGroups` light interactive — กลุ่ม "การส่งต่อ": ส่งจาก · ผู้ส่ง · เวลา · แพทย์ · นัดพบแพทย์ (ไม่มีค่า = "—") |
+
+---
+
+### 6.85 DmRemissionBadge — ป้ายเบาหวานระยะสงบ (ลงทะเบียน 26 ต.ค. 69)
+
+**DmRemissionBadge** — ป้าย "DM-Remission" + ทูลทิปนิยาม (HbA1c < 6.5% โดยหยุดยาลดน้ำตาล ≥ 3 เดือน) · ไฟล์ `src/components/badge/DmRemissionBadge.jsx` · API: `hn` · `size` ('small') · `position` ('top') · ส่งออก `DM_REMISSION_TIP` · `DM_REMISSION_DEFINITION`
+· ใช้ที่ แท็บประเภทผู้ป่วยคลินิกเรื้อรัง `chronicPatientTypeTabs` · ส่วนขยายคลินิกเบาหวาน `chronicClinicExtension` · หน้าบันทึกตรวจ `TreatmentSteps` (position bottom)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| ป้าย | `ColorfulBadge style='teal' hierarchy='secondary'` |
+| เงื่อนไข | ส่ง `hn` → แสดงเมื่อ `isInDmRemission(hn)` (ใบยินยอมโครงการใน visit คลินิกเบาหวาน) · ไม่ส่ง = แสดงเสมอ |
+| ทูลทิป | light · wrap · maxWidth 400 — หัวข้อ bold → เกณฑ์สีแบรนด์ → grid 2 คอลัมน์ (เกณฑ์ medium · คำอธิบาย) → หมายเหตุ tertiary |
+
+---
+
+### 6.86 TableExp — ตารางหัว 2 ชั้น + แถวกางได้ (ลงทะเบียน 26 ต.ค. 69)
+
+**TableExp** — ตารางรุ่นขยายของ `Table` (column config เดียวกัน) เพิ่มหัวกลุ่มชั้นบน `column.group` และแถวกาง `renderExpandedRow` · ไฟล์ `src/components/table/TableExp.jsx` · API: `columns` · `rows` · `rowKey` · `renderExpandedRow` · `sortConfig` · `onSort` · `stickyColCount` · `stickyRightColCount` · `stickyHeaderTop` · `columnFit` · `density` · `pagination` · `pageSize` · `emptyMessage` · `loading` · ส่งออก `HeaderCell` · `DataCell` · `FooterCell` · `TableRow` · `TableSummary` · `EllipsisText`
+· ใช้ที่ รายงานยา `drugReportKit` / `drugReportStock` / `drugReportMovement` · รายงาน IIS `IisReportsPage` · `wellBabyReportTabs` · ตัวชี้วัดคลินิก `indicatorReportKit` · กิจกรรมเชิงรุก `SchoolProactiveActivityPage` (สลับกับ Table เมื่อมี group)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| หัว 2 ชั้น | คอลัมน์ติดกันที่ `group` เดียวกัน → หัวชั้นบนคร่อม · ไม่มี group = `gridRow 1 / span 2` · ปิดเมื่อมี `stickyHeaderTop` |
+| แถวกาง | คอลัมน์ +/− หน้าสุด · กดปุ่มหรือแถว · เปิดได้ทีละแถว (กางใหม่ปิดแถวเดิม) |
+| ต่างจาก Table | `Table` ไม่รองรับ `column.group` · แถวกางของ `Table` ผู้เรียกคุมเอง (`isRowExpanded`) ไม่มีปุ่ม +/− ในตัว · `Table` มี `triageFirst` / `isRowHighlighted` — ตาราง worklist ใช้ `Table` |
+
+---
+
+### 6.87 QueueSubMenu — แผงคิวผู้ป่วยข้างฟอร์ม (Sub Menu B) (ลงทะเบียน 26 ต.ค. 69)
+
+**QueueSubMenu** — แผงคิวพับ/กางชิดซ้ายจอ ข้างฟอร์มบันทึก (Figma PHCIS-ALL 2624:122779 พับ / 2624:122781 กาง) ให้ดูคิววันนี้โดยไม่ออกจากแฟ้ม · ไฟล์ `src/components/layout/QueueSubMenu.jsx` · API: `queue` (`{ done, draft, inProgress, waiting }` แต่ละหมวด `{ items, total }` หรือ array) · `sections` · `sectionLabels` · `rowVariant` 'card' | 'divider' · `showQueueNo` · `showDots` · `renderRowActions` · `renderRow` · `headerSlot` · `onPickPatient` · `onViewAll` · `expanded` / `onExpandedChange` · `expandedWidth` · `bodyOrientation` 'vertical' | 'horizontal'
+· ใช้ที่ หน้าคัดกรอง `ScreeningPage` · เวชระเบียน `RegistrationFormPage` · แบบฟอร์มคลินิก `AddictionFormPage` · `DentalFormPage` · `MentalHealthFormPage` · `TbFormPage`
+
+| ส่วน | รายละเอียด |
+|---|---|
+| โครง | aside จองที่ 24px ในแถว flex · แผงจริง `position: fixed` ซ้าย `--sm-width-closed` (0 เมื่อเมนูหลักเป็นลิ้นชัก) · พื้น `--surface-navigation-default` ขอบขวา `--border-brandsecondary-quaternary` เงา `--shadow-sidemenu` |
+| หมวด | ตรวจเสร็จแล้ว (teal) · ที่ร่างไว้ (เทา) · ตรวจอยู่ (ฟ้า เน้น) · รอคิว (ส้ม) · ลำดับ/ชุดตาม `sections` · คีย์อื่น (เช่นรายคลินิก) ได้ |
+| พฤติกรรม | ปุ่ม › / ‹ สลับ · คลิกนอกพาเนลปิด · จอ < 768 ไม่แสดง · < 1280 เริ่มใต้แถบบน (`MIH_TOPBAR_OFFSET`) |
+| แถว | `card` = การ์ด + จุดสี · `divider` = แถวเรียบเส้นคั่นแบบ worklist · รูป `QueuePatientAvatar` 28 · ป้าย `badge` · ปุ่มท้ายแถว `renderRowActions` |
+
+---
+
+### 6.88 AppointmentMenuButton — ปุ่มเมนู "การนัดหมาย" บนหัวหน้าคิว (ลงทะเบียน 26 ต.ค. 69)
+
+**AppointmentMenuButton** — ปุ่ม BrandSubdue outline "การนัดหมาย ▾" + เมนู 4 รายการ ทุกรายการเปิดป๊อปอัปบนหน้าเดิม · ไฟล์ `src/components/layout/AppointmentMenuButton.jsx` · API: `patientHn` · `createOnly` · `defaultPurposeCode` · `defaultClinic` · `patientFallback` · `hideDxField` · `hideDoctorField` · `size` ('lg') · `onAdd` · `onView` · `className`
+· ใช้ที่ คิวคัดกรอง OPD `QueuePage` · คิว Lab `LabQueuePage` · คิว X-ray `XrayQueuePage` · คิวทันตกรรม `DentalSubClinicQueuePage` · หน้าบันทึกงานบำบัด · `QueuePageShell`
+
+| ส่วน | รายละเอียด |
+|---|---|
+| เมนู | สร้างการนัดหมาย (`AppointmentFormPopup`) · นัดปรึกษาสหวิชาชีพ (`TelemedConsultPopup`) · ดูการนัดหมาย (`AppointmentViewPopup`) · ประวัติสร้างการนัดหมาย / ประวัติการนัดหมาย — `ActionList` ใน `Popover` |
+| โหมด | ไม่มี `patientHn` = worklist (เลือกคนไข้ในฟอร์ม) · มี = ผูกคนไข้ (เติมจาก mock นัดหมาย → MR → `patientFallback`) · `createOnly` = ปุ่มเดี่ยว "สร้างนัดหมาย" |
+| ผลลัพธ์ | บันทึกนัด → `addExtraAppointments` + `PhcisTopToast` success |
+
+---
+
+### 6.89 SystemGridMenu — เมนูเปลี่ยนระบบบนแถบบน (ลงทะเบียน 26 ต.ค. 69)
+
+**SystemGridMenu** — ปุ่ม `BrandSubdueIconButton` apps/close + Popover ตาราง `HubCard size='compact'` 3 คอลัมน์ "กรุณาเลือกระบบที่คุณต้องการปฏิบัติงาน…" · ไฟล์ `src/components/layout/SystemGridMenu.jsx` · API: `buttonVariant` ('outline') · `buttonSize` ('md') · `className`
+· ใช้ที่ แถบบน `Header` (outline · ซ่อนเมื่อบทบาทมีระบบเดียว) · `ScheduleHeader` ระบบจัดการตารางเวร (fill)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| Popover | กว้าง `min(960px, calc(100vw - 16px))` · พื้น `--surface-card-100` ขอบ `--border-brandPrimary-quaternary` มุม `--dim-radius-500` เงา `--shadow-drop-bottom-400` · ในกรอบพื้น `--background-screen-brand-100` maxHeight `min(75vh, 720px)` |
+| ข้อมูล | `systemCatalogRowsForRole(getStaffRoleView())` · subscribe บทบาท · ไม่มีระบบ = ไม่ render |
+| ระยะ | หัวข้อ base `--text-brandPrimary-secondary` · การ์ด gap 16 · padding 16/24 |
+
+---
+
+### 6.90 SidebarProfileMenu — เมนูโปรไฟล์/ตั้งค่ากลางของทุกระบบ (ลงทะเบียน 26 ต.ค. 69)
+
+**SidebarProfileMenu** — ชุด ProfilePopover + SettingsModal + AlertDialog "ออกจากระบบ?" ที่ทุก shell ใช้ร่วม · ไฟล์ `src/components/layout/SidebarProfileMenu.jsx` · API: `open` · `anchorRect` · `anchorRef` · `onClose` · `onLogout`
+· ใช้ที่ `Sidebar` (PHCIS) · `HubSidebar` (System Hub) · `ScheduleSidebar` (ระบบจัดการตารางเวร)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| เมนู | ภาษา · โหมดและธีม · รหัสผ่านและ PIN · แจ้งเตือน → เปิด `SettingsModal` ที่ส่วนนั้น · ออกจากระบบ → `AlertDialog` warning กลาง "งานที่ยังไม่ได้บันทึกจะหายไป…" |
+| ธีม/โหมด | global: `data-brand` / `data-mode` บน `<html>` · 'system' ตาม prefers-color-scheme สด · เก็บ `phcis.mode` · `phcis.theme` |
+| ออกจากระบบ | `resetPinSession()` + `clearSessionEmail()` → `onLogout()` |
+
+---
+
+### 6.91 FullPageLoader — หน้ารอโหลดเต็มจอ Heart Care (ลงทะเบียน 26 ต.ค. 69)
+
+**FullPageLoader** — หน้ารอโหลดเต็มจอ แอนิเมชัน Lottie `heart-care.json` + ข้อความ · ไฟล์ `src/components/feedback/FullPageLoader.jsx` · API: `label` ('กำลังโหลด...') · `delay` (500 ms)
+· ใช้ที่ `App.jsx` (fallback ของ `React.Suspense` ตอนโหลดโค้ดหน้าถัดไป)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| โครง | flex คอลัมน์กลางจอ minHeight 100vh · พื้น `--background-screen-brand-100` · gap 8 |
+| เนื้อหา | `LottieIllustration` 240 (`--dim-size-2350`) · ข้อความ sm medium `--text-content-secondary` |
+| หน่วงเวลา | ก่อนครบ `delay` เรนเดอร์พื้นว่าง · `delay <= 0` แสดงทันที · role=status aria-busy |
+
+---
+
+### 6.92 DoctorAiIcdPanel — แผงค้นหารหัสการวินิจฉัย Doctor AI (ลงทะเบียน 26 ต.ค. 69)
+
+**DoctorAiIcdPanel** — แผงพื้นไล่สีม่วง-ฟ้า: Lottie Doctor AI + หัวข้อ → แท็บ ICD-10 · ICD-9-CM · SNOMED-CT → `AISearch` ค้นด้วยคำที่ใช้พูด · ไฟล์ `src/components/search/DoctorAiIcdPanel.jsx` · API: `value` · `onChange` · `onSubmit(next, picked)` · `width` (640) · `dropdownInFlow` · ส่งออก `icdToRow`
+· ใช้ที่ ขั้นวินิจฉัยหน้าตรวจรักษา `TreatmentSteps` · `Icd10SearchPopup` (ฟอร์มส่งต่อภายนอกห้องสังเกตการณ์ `ObservationExternalReferForm` · รายละเอียดนัดหมาย `AppointmentDetailSections`)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| โครง | กว้าง 100% · padding `--dim-space-600` · มุม `--dim-radius-500` · พื้น linear-gradient (ข้อยกเว้น gradient) · Lottie 68 · `TabPill` small |
+| ค้นหา | ICD-10 = `DEFAULT_ICD_SUGGESTIONS` + `commonTermsForIcd` · ICD-9-CM = `ICD9_PROCEDURES` · SNOMED = `SNOMED_CONCEPTS` · สูงสุด 8 รายการ |
+| ป้ายรหัส | ฟ้า ICD-10 · ส้ม ICD-9-CM · ม่วง SNOMED-CT (+ "เทียบ ICD-10: …") · ไม่พบ = "ไม่พบรหัส <ระบบ> ที่ตรงกับคำค้น" |
+
+---
 
 ## 7. Mobile App · Kiosk — design system แยกของตัวเอง
 

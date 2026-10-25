@@ -1403,6 +1403,139 @@
   --icon-brandprimary-secondary:     var(--icon-brandPrimary-secondary);
 }
 
+/* ── Vibe-code sync (26 ต.ค. 69) ───────────────────────────────
+   Tokens the bma.health code already uses whose light value was missing
+   (dark-only, or never defined) — so light mode rendered each call site's
+   fallback. Values = the fallback the code renders (most common one), so
+   the screen does not change. Documented in design.md §4.7.
+   Must stay above the [data-mode="dark"] blocks (same specificity). */
+:root {
+  /* dim */
+  --dim-blur-100:                             4px;
+  --dim-radius-0:                             0px;
+  --dim-size-50:                              4px;
+  --dim-space-1000:                           40px;
+  --dim-space-250:                            10px;
+  --dim-space-50:                             2px;
+  --dim-space-700:                            28px;
+  --dim-space-900:                            36px;
+  /* type */
+  --type-family-button:                       var(--type-family-heading-content);
+  --type-family-heading:                      var(--type-family-heading-content);
+  --type-family-mono:                         ui-monospace, SFMono-Regular, Menlo, monospace;
+  --type-lineheight-relaxed:                  1.7;
+  /* background */
+  --background-neutral-tertiary:              #F4F5F5;
+  --background-screen-default:                #FFFFFF;
+  /* surface */
+  --surface-actionlist-default:               #FFFFFF;
+  --surface-alert-error-default:              #DC2626;
+  --surface-alert-warning-default:            #EA580C;
+  --surface-avatar-fallback:                  #9AA1A8;
+  --surface-brandTag-default:                 #FFFFFF;
+  --surface-card-brand-100:                   var(--brand-p50);
+  --surface-card-default:                     #FFFFFF;
+  --surface-card-quaternary:                  #F9FBFB;
+  --surface-content-default:                  #FFFFFF;
+  --surface-content-secondary:                #F5F6F7;
+  --surface-danger-default:                   #DC2626;
+  --surface-destructive-default:              #D42F2F;
+  --surface-indicator-indigo:                 #6366F1;
+  --surface-info-default:                     #3B82F6;
+  --surface-negative-primary:                 #D04949;
+  --surface-neutral-default:                  #FFFFFF;
+  --surface-neutral-primary:                  #FFFFFF;
+  --surface-neutral-secondary:                #1B2227;
+  --surface-neutralbutton-default:            #FFFFFF;
+  --surface-page-default:                     #FFFFFF;
+  --surface-positive-primary:                 #08A768;
+  --surface-positive-quaternary:              var(--surface-brandPrimary-quaternary);
+  --surface-positive-secondary:               #A2EDDE;
+  --surface-progress-quaternary:              #FBFAF4;
+  --surface-sidesubmenu-hover:                var(--brand-p100);
+  --surface-sidesubmenu-selected:             var(--brand-p100);
+  --surface-slider-indigo-bar:                #EEF2FF;
+  --surface-slider-indigo-pill:               #818CF8;
+  --surface-slider-lavender-bar:              #EDE7FF;
+  --surface-slider-lavender-pill:             #C8B6FF;
+  --surface-slider-sakura-bar:                #FFEDF3;
+  --surface-slider-sakura-pill:               #F5AFCA;
+  --surface-success-default:                  #1F9D55;
+  --surface-switch-knob-disabled:             #FFFFFF;
+  --surface-switch-unchecked-default:         #E2E4E6;
+  --surface-switch-unchecked-disabled:        #F4F5F5;
+  --surface-switch-unchecked-hover:           #C9CDD0;
+  --surface-timeslot-box:                     #FAFCFA;
+  --surface-timeslot-default:                 #FFFFFF;
+  --surface-timeslot-disabled:                #FAFCFA;
+  --surface-warning-default:                  #EAB308;
+  --surface-warning-quaternary:               #FFF9F0;
+  --surface-warning-secondary:                #FDF1E0;
+  --surface-warning-tertiary:                 #FEF3C7;
+  /* border */
+  --border-brandPrimary-secondary:            var(--brand-p600);
+  --border-brandsecondary-quaternary:         #EFF5EF;
+  --border-brandSecondary-quaternary:         var(--border-brandsecondary-quaternary);
+  --border-brandTag-default:                  #E2E4E6;
+  --border-card-brand-100:                    var(--brand-p200);
+  --border-content-quaternary:                var(--border-neutral-quaternary);
+  --border-content-tertiary:                  #E1E3E5;
+  --border-danger-default:                    #E58585;
+  --border-danger-quaternary:                 #F7D9D9;
+  --border-danger-subdued:                    #F5C2C2;
+  --border-danger-tertiary:                   #F6C9C9;
+  --border-info-quaternary:                   #DBEAFE;
+  --border-info-tertiary:                     #BFDBFE;
+  --border-modal-cardborder:                  #F5F6FA;
+  --border-negative-primary:                  #E7A0A0;
+  --border-neutral-secondary:                 #C8CDD1;
+  --border-slider-indigo:                     #818CF8;
+  --border-slider-lavender:                   #C8B6FF;
+  --border-slider-sakura:                     #F5AFCA;
+  --border-statusbadge-error:                 #B91C1C;
+  --border-statusbadge-warning:               #FDBA74;
+  --border-success-default:                   #1F9D55;
+  --border-success-subdued:                   #BFE5CC;
+  --border-warning-default:                   #FDBA74;
+  --border-warning-primary:                   #F0C589;
+  --border-warning-subdued:                   #F6DFA8;
+  /* text */
+  --text-brandprimary-default:                var(--brand-p700);
+  --text-brandPrimaryButton-onBrand:          #FFFFFF;
+  --text-brandTag-default:                    #4D5358;
+  --text-content-primary:                     var(--text-content-default);
+  --text-input-placeholder:                   #ADB2B7;
+  --text-negative-primary:                    #B91C1C;
+  --text-neutral-disabled:                    #CBD5E1;
+  --text-neutral-on-neutral:                  #FFFFFF;
+  --text-positive-on-positive:                #FFFFFF;
+  --text-positive-secondary:                  #1B867D;
+  --text-sidesubmenu-default:                 var(--brand-p700);
+  --text-sidesubmenu-disabled:                #C9CDD0;
+  --text-sidesubmenu-selected:                var(--brand-p700);
+  --text-timeslot-default:                    #4D5358;
+  --text-tooltip-default:                     #F9FBFB;
+  --text-topic-primary-disabled:              #ADB2B7;
+  --text-topic-primary-subtext-disabled:      #C9CDD0;
+  /* icon */
+  --icon-alert-warning:                       #D97706;
+  --icon-content-secondary:                   var(--text-content-secondary);
+  --icon-content-tertiary:                    #7A7F83;
+  --icon-danger-default:                      #DC2626;
+  --icon-disablediconButton-default:          #4D5358;
+  --icon-info-default:                        #1D4ED8;
+  --icon-info-tertiary:                       #60A5FA;
+  --icon-negative-primary:                    #D04949;
+  --icon-neutral-quaternary:                  #C6CBD0;
+  --icon-positive-default:                    #196C65;
+  --icon-positive-tertiary:                   #3EC3B2;
+  --icon-statusbadge-warning:                 #B25E09;
+  --icon-success-default:                     #1B8A4C;
+  --icon-topic-primary-disabled:              #C9CDD0;
+  --icon-warning-default:                     #F59E0B;
+  --icon-warning-tertiary:                    #EA580C;
+}
+
 /* ─────────────────────────────────────────────────────────────
    Dark-mode token overrides (Figma Variables panel — dark column).
    Triggered by either the OS-level preference or an explicit
