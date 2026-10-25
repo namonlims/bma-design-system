@@ -14240,7 +14240,7 @@ Props: `hn` · `onCard` · hover/แตะ = `TooltipGroups` (หัวข้อ
 · ลำดับหลังชื่อ: PsychMark → MobileAppMark · PatientCard นับไอคอนนี้ใน `wideName` กันชื่อตัดกลางคำ
 
 **SelfPeakFlowResults** — ผลตรวจสมรรถภาพปอดด้วยตนเอง (Peak Flow) ที่ผู้รับบริการบันทึกในแอป `/m/peak-flow` · ไฟล์ `src/components/clinic/SelfPeakFlowResults.jsx`
-· ข้อมูล `useSelfPeakFlowRecords(hn)` (`src/data/selfPeakFlowRecords.js`: seed สูตรเดียวกับ bma.mobile + relay `/__mobile/peak-flow` สองทาง วันละ 1 ค่า ตัวหลังชนะ) · ใช้ใน "ผลตรวจ ▾" คลินิกหอบหืด/COPD ผ่าน `TreatmentResultActions extraResults` (`after: 'spiro'`)
+· ข้อมูล `useSelfPeakFlowRecords(hn)` (`src/data/selfPeakFlowRecords.js`: seed สูตรเดียวกับ bma.mobile + relay `/__mobile/peak-flow` สองทาง วันละ 1 ค่า ตัวหลังชนะ) · ใช้ใน "ผลตรวจ ▾" ทุกหน้าเป็นรายการกลาง "ผลบันทึกการเป่าปอดด้วยตนเอง" (`TreatmentResultActions` key `selfPeakFlow` · ผู้ใช้ 25 ต.ค. 69 · เดิมเฉพาะคลินิกหอบหืด/COPD)
 
 | กลุ่ม | เนื้อหา |
 |---|---|
@@ -14265,6 +14265,29 @@ Props: `hn` · `onCard` · hover/แตะ = `TooltipGroups` (หัวข้อ
 |---|---|
 | กว้าง | ชื่อ + meta ซ้าย · "ใช้สิทธิในฐานะ" + `trailing` ชิดขวาบรรทัดเดียว · คั่นแถวด้วยเส้น `--border-neutral-quaternary` |
 | แคบ | กลุ่มซ้ายหดและตัดบรรทัด (`flex-wrap` · `min-w-0`) · ช่องข้อความกว้างขั้นต่ำ `--dim-size-2100` 160 ไม่พอ = ลงบรรทัดใต้ป้ายลำดับ · "ใช้สิทธิในฐานะ" ลงบรรทัดใหม่ชิดขวา — ห้ามดันหน้าล้นแนวนอน (390 เคยกว้าง 597 · แก้ 25 ต.ค. 69) |
+
+### 6.50 SelfHomeBpResults + EmrGrowthSection (ลงทะเบียน 25 ต.ค. 69)
+
+**SelfHomeBpResults** — ผลวัดความดันด้วยตนเอง (Home BP · HBPM) ที่ผู้รับบริการบันทึกจากปุ่ม "บันทึกความดันด้วยตนเอง" ในแอป · ไฟล์ `src/components/clinic/SelfHomeBpResults.jsx`
+· ข้อมูล `useSelfHomeBpRecords(hn)` (`src/data/selfHomeBpRecords.js`: คำสั่ง Home BP + ค่าตั้งต้นชุดเดียวกับ bma.mobile `phcisLink` (HBP-2569-001 · 67-00001) + relay `/__mobile/home-bp` · วันละหลายค่า · id เดิม = แทนค่าเดิม) · ใช้ใน "ผลตรวจ ▾" ทุกหน้า รายการ "ผลวัดความดันด้วยตนเอง" (`TreatmentResultActions` key `selfBp`) · API: `hn`
+
+| กลุ่ม | เนื้อหา |
+|---|---|
+| คำสั่งติดตามความดันที่บ้าน (มีคำสั่งเท่านั้น) | label/value: แพทย์ผู้สั่ง · ช่วงที่ให้วัด (วันละ N ครั้ง) · เป้าหมาย · คำแนะนำ |
+| สรุป | ล่าสุด (ตัวบน/ตัวล่าง · ชีพจร · วันเวลา + ป้ายผล) · เฉลี่ย 7 ครั้งล่าสุด · เกินเป้าหมาย N จาก 14 ครั้ง |
+| ความดัน 14 ครั้งล่าสุด | `LineChart fitRange` ตัวบน teal · ตัวล่าง indigo · จุดเกินเป้าหมาย = abnormal |
+| บันทึกทุกครั้ง | `Table` เรียงได้ ใหม่ → เก่า: วันที่วัด (+ เวลา) · ตัวบน · ตัวล่าง · ชีพจร (ชิดขวา, เกินเป้า `--text-danger-default`) · ผล `StatusBadge` · บันทึกโดย |
+
+เกณฑ์: เกินเป้าหมาย = ตัวบน ≥ เป้า หรือ ตัวล่าง ≥ เป้า (`homeBpHigh`, ค่าเริ่มต้น 140/90) · ไม่มีค่า = "ผู้รับบริการรายนี้ยังไม่ได้บันทึกความดันด้วยตนเองในแอป"
+
+**EmrGrowthSection** — เนื้อหาแท็บ EMR "การเจริญเติบโต" · ไฟล์ `src/components/growth/EmrGrowthSection.jsx` · API: `patient` (`hn` · `gender` · `age`), `tick` (เปลี่ยนเมื่อบันทึกค่าใหม่)
+· ข้อมูล `emrGrowthFor` (`src/data/emrGrowth.js`): เด็กในทะเบียนสุขภาพเด็กดี → `getGrowthRecords` · เด็ก/วัยรุ่น ≤ 19 ปีที่วัดที่จุดคัดกรอง OPD → `growthMeasurementsFor` · ผู้ใหญ่ → เด็กตัวอย่าง 69-11016 + `PanelAlert` "ข้อมูลตัวอย่าง (เด็ก) สำหรับนำเสนอ"
+· กราฟ = `WellChildGrowthReference` (ดูด้านล่าง)
+
+**WellChildGrowthReference** — กราฟการเจริญเติบโตชุดคลินิกสุขภาพเด็กดี · ไฟล์ `src/components/growth/WellChildGrowthReference.jsx` (ย้ายจาก `ImmunizationSteps.jsx` 25 ต.ค. 69 · ไฟล์เดิม re-export ชื่อเดิม) · ใช้ที่ป๊อปอัป "ดูกราฟ" ตารางโภชนาการเด็กดี และ `EmrGrowthSection`
+· API: `rows` [{ key, date, weight, height, headCirc }] · `child` { sex, birthDate } · `immHn` · `currentGrowth` · `selectedKey` · `growthRecords` (ส่งต่อกราฟ 0–5 ปี; ไม่ส่ง = อ่านจาก immHn)
+· เนื้อหา: `GrowthReferenceChart` สลับเกณฑ์ กรมอนามัย 2564 / TSPE 2022 (5–19 ปี) + เด็ก < 6 ปี เติม "กราฟกรมอนามัยสำหรับเด็กแรกเกิด–5 ปี" = `ImmGrowthCharts zoomToAge` (W/A · H/A · W/H · เส้นรอบศีรษะ) — `ImmGrowthCharts` อยู่ไฟล์เดียวกัน
+· ใต้กราฟ = "ประวัติการชั่ง/วัด" `Table`: วันที่บันทึก (+ เวลา) · อายุขณะวัด · น้ำหนัก · ส่วนสูง · รอบศีรษะ (ชิดขวา) · บันทึกจากคลินิก · ผู้บันทึก — ทุกระเบียนมี `clinic` · `recordedBy` · `recordedAt`
 
 ---
 
