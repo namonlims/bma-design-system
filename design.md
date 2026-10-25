@@ -14289,6 +14289,19 @@ Props: `hn` · `onCard` · hover/แตะ = `TooltipGroups` (หัวข้อ
 · เนื้อหา: `GrowthReferenceChart` สลับเกณฑ์ กรมอนามัย 2564 / TSPE 2022 (5–19 ปี) + เด็ก < 6 ปี เติม "กราฟกรมอนามัยสำหรับเด็กแรกเกิด–5 ปี" = `ImmGrowthCharts zoomToAge` (W/A · H/A · W/H · เส้นรอบศีรษะ) — `ImmGrowthCharts` อยู่ไฟล์เดียวกัน
 · ใต้กราฟ = "ประวัติการชั่ง/วัด" `Table`: วันที่บันทึก (+ เวลา) · อายุขณะวัด · น้ำหนัก · ส่วนสูง · รอบศีรษะ (ชิดขวา) · บันทึกจากคลินิก · ผู้บันทึก — ทุกระเบียนมี `clinic` · `recordedBy` · `recordedAt`
 
+### 6.51 PublicNoteBanner (ลงทะเบียน 26 ต.ค. 69)
+
+**PublicNoteBanner** — ป้ายเตือน Public Note ของผู้ป่วยเคสพิเศษ (พฤติกรรมพึงระวัง) ใต้การ์ดผู้ป่วยบนหน้าตรวจรักษา · ไฟล์ `src/components/patient/PublicNoteBanner.jsx` · API: `hn`
+· ข้อมูล `listPublicNotes(hn)` (`src/data/publicNotes.js`, ค่าตั้งต้น 67-00003 · 67-00010) · ไม่มีโน้ตที่เปิดอยู่ = ไม่แสดงอะไร · ใช้ที่ `/treat/record` (WG1 EMR-19)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| การ์ดรอง | การ์ดขาว `--surface-card-100` · padding `--dim-space-600` · `--dim-radius-500` · `--shadow-brand-drop-bottom-200` · ห่างการ์ดถัดไป `--dim-space-300` (12px) |
+| ป้าย | `--surface-alert-warning` · ขอบ `--border-alert-warning` · ขอบซ้าย 4px `--surface-colorfulbadge-orange-bold` · `--dim-radius-200` |
+| แต่ละโน้ต | ไอคอน `campaign` · "Public Note · " (bold `--text-warning-default`) + ข้อความ (sm medium) → บรรทัดรอง "บันทึกโดย <ชื่อ> (<บทบาท>) · <วันเวลา>" (xs secondary) · หลายโน้ตคั่นเส้น 1px |
+
+แสดงอย่างเดียว — ไม่มีปุ่ม "ปิดการแสดงผล" (ผู้ใช้ 25 ต.ค. 69 "ลบปุ่ม")
+
 ---
 
 ## 7. Mobile App · Kiosk — design system แยกของตัวเอง
