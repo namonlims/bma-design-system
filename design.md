@@ -14251,6 +14251,21 @@ Props: `hn` · `onCard` · hover/แตะ = `TooltipGroups` (หัวข้อ
 
 สูตร: %PEFR = A ÷ B × 100 · > 70% "อยู่ในเกณฑ์" (success) · ≤ 70% "ต่ำกว่าเกณฑ์" (warning + ตัวเลข `--text-danger-default`) — แบบคัดกรองโรคหืดและ COPD ส่วนที่ 2 · ใช้ `pefrPercent` / `pefrInRange` ห้ามคำนวณเองในหน้า
 
+
+### 6.49 RightsEntitlementList — รายการสิทธิการรักษาเรียงลำดับ (ลงทะเบียน 25 ต.ค. 69)
+
+ไฟล์ `src/components/forms/RightsEntitlementList.jsx` · Figma PHCIS-Registration 1:4150 · ใช้ผ่าน `RightsGroupCard` ในขั้น "สิทธิการรักษา" เวชระเบียน (`RegistrationSteps`) · แท็บเช็คสิทธิ `/rights` (`RightsCheckSection`) · `RightsCardPopup` · ทะเบียนบ้านงานชุมชน (`CommunityRightsCheck`) — ทะเบียนสิทธิเดียวกันจึงหน้าตาเดียวกัน (ผู้ใช้ 11 ก.ย. 69 · ลงทะเบียน 25 ต.ค. 69 ก)
+
+| Prop | ค่า | หน้าที่ |
+|---|---|---|
+| `items` | `[{ id, label, role?, meta?, trailing?, actions? }]` | หนึ่งแถวต่อสิทธิ: ป้าย "ลำดับ N" (`ColorfulBadge` green) · `check_circle` · ชื่อสิทธิ sm `--text-content-default` · `meta` xs `--text-content-quaternary` (สถานะเปิดใช้งาน · ใช้ได้ถึง · สถานพยาบาลหลัก) · กล่อง "ใช้สิทธิในฐานะ" `role` (ไม่ส่ง = "เจ้าของสิทธิ (ตนเอง)") พื้น `--surface-brandPrimary-quaternary` ชิดขวา · `trailing` ปุ่มท้ายแถว (ดู · แก้ไข · ลบ) · `actions` แถวปุ่มใต้บรรทัด (งานเบิกจ่าย) |
+| `onReorder` | `(nextItems) => void` | ส่งมาและมี ≥ 2 แถว → ปุ่ม `keyboard_arrow_up` / `keyboard_arrow_down` (`NeutralIconButton` ghost sm) ก่อนป้ายลำดับ · ไม่ส่ง = ดูอย่างเดียว (ข้อมูลระบบห้ามเรียงเอง ตาม assessments rules) |
+
+| จอ | หน้าตา |
+|---|---|
+| กว้าง | ชื่อ + meta ซ้าย · "ใช้สิทธิในฐานะ" + `trailing` ชิดขวาบรรทัดเดียว · คั่นแถวด้วยเส้น `--border-neutral-quaternary` |
+| แคบ | กลุ่มซ้ายหดและตัดบรรทัด (`flex-wrap` · `min-w-0`) · ช่องข้อความกว้างขั้นต่ำ `--dim-size-2100` 160 ไม่พอ = ลงบรรทัดใต้ป้ายลำดับ · "ใช้สิทธิในฐานะ" ลงบรรทัดใหม่ชิดขวา — ห้ามดันหน้าล้นแนวนอน (390 เคยกว้าง 597 · แก้ 25 ต.ค. 69) |
+
 ---
 
 ## 7. Mobile App · Kiosk — design system แยกของตัวเอง
