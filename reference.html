@@ -69,8 +69,8 @@
   aside .title-wrap { line-height: 1.3; }
   aside .title { font-weight: 700; font-size: 14px; color: var(--ink); }
   aside .subtitle { font-size: 11px; color: var(--ink-3); }
-  /* Platform toggle — Desktop vs Mobile. Primitive tokens (Foundations) are
-     shared between both; only the component catalog changes. */
+  /* Platform toggle — Desktop (bma.health design.md) vs Mobile (bma.mobile
+     design.md) — two separate design systems, nothing shared (ผู้ใช้ 26 ต.ค. 69). */
   aside .platform-toggle {
     display: flex;
     gap: 4px;
@@ -105,16 +105,6 @@
   }
   aside .pt-btn.active:hover { color: #fff; }
   aside .pt-btn .pt-emoji { font-size: 13px; line-height: 1; }
-  aside .platform-note {
-    margin: 0 14px 8px;
-    padding: 6px 10px;
-    border-radius: 6px;
-    background: var(--brand-100, #F4FBF8);
-    color: var(--brand-700, #00563A);
-    font-size: 10.5px;
-    line-height: 1.45;
-    flex-shrink: 0;
-  }
   aside .search-wrap {
     padding: 10px 14px;
     border-bottom: 1px solid var(--border);
@@ -536,6 +526,39 @@
   @media (max-width: 1100px) {
     .layout { grid-template-columns: 280px 1fr; }
   }
+  /* Tablet / mobile (ผู้ใช้ 26 ต.ค. 69 "ตรวจ"): the topbar wraps instead of
+     pushing raw / ดาวน์โหลด off-screen · under 768 the sidebar is a drawer. */
+  .menu-btn, .nav-scrim { display: none; }
+  @media (max-width: 1023px) {
+    .topbar { flex-wrap: wrap; row-gap: 8px; padding: 10px 16px; }
+    .topbar .tabs { margin-left: 0; }
+  }
+  @media (max-width: 767px) {
+    .layout { grid-template-columns: minmax(0, 1fr); }
+    aside {
+      position: fixed; top: 0; bottom: 0; left: 0; z-index: 30;
+      width: min(320px, 88vw);
+      transform: translateX(-100%);
+      transition: transform 200ms ease;
+      box-shadow: var(--shadow);
+    }
+    body.nav-open aside { transform: none; }
+    body.nav-open .nav-scrim {
+      display: block; position: fixed; inset: 0; z-index: 29;
+      background: rgba(15, 23, 42, 0.35);
+    }
+    .menu-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      min-height: 44px; padding: 0 12px;
+      border: 1px solid var(--border); border-radius: 8px;
+      background: var(--surface); color: var(--ink-2);
+      font: inherit; font-size: 13px; font-weight: 600; cursor: pointer;
+    }
+    .topbar .heading { flex: 1 1 auto; min-width: 0; overflow-wrap: anywhere; }
+    .topbar .actions { margin-left: 0; width: 100%; flex-wrap: wrap; }
+    .topbar .actions a, .topbar .actions button, .tab-btn { min-height: 44px; }
+    .item { min-height: 44px; }
+  }
   html { scroll-behavior: smooth; }
 
   body.ds-has-top{display:flex;flex-direction:column}
@@ -635,9 +658,6 @@
       <button class="pt-btn active" data-platform="desktop" type="button" role="tab"><span class="pt-emoji">🖥</span> Desktop</button>
       <button class="pt-btn"        data-platform="mobile"  type="button" role="tab"><span class="pt-emoji">📱</span> Mobile</button>
     </div>
-    <div class="platform-note" id="platform-note">
-      Primitive tokens (color · typography · dimension) ใช้ร่วมกันทั้งสอง platform
-    </div>
     <div class="search-wrap">
       <input id="search" class="search" type="text" placeholder="ค้นหา… (e.g. button, vital, token)" />
     </div>
@@ -650,10 +670,12 @@
       <div class="item" style="color: var(--ink-4);">⏳ กำลังโหลด…</div>
     </nav>
   </aside>
+  <div class="nav-scrim" id="nav-scrim"></div>
 
   <!-- ── Main ────────────────────────────────────────────── -->
   <main>
     <div class="topbar">
+      <button class="menu-btn" id="menu-btn" type="button" aria-label="เปิดเมนู" aria-expanded="false">☰ เมนู</button>
       <span class="heading" id="current-name">เลือก section จาก sidebar</span>
       <span class="slug" id="current-slug" style="display:none"></span>
       <div class="tabs" role="tablist">
@@ -664,8 +686,8 @@
       <div class="actions">
         <a id="open-new" href="#" target="_blank" rel="noopener" style="display:none">↗ แท็บใหม่</a>
         <button id="reload-btn" type="button" style="display:none">↻ Reload</button>
-        <a href="./design.md" target="_blank" rel="noopener">↗ raw design.md</a>
-        <a href="./design.md" download="design.md">↓ ดาวน์โหลด design.md</a>
+        <a id="doc-raw" href="./design.md" target="_blank" rel="noopener">↗ raw design.md</a>
+        <a id="doc-dl" href="./design.md" download="design.md">↓ ดาวน์โหลด design.md</a>
       </div>
     </div>
     <div class="ds-history" id="ds-history" hidden></div>
@@ -1095,6 +1117,12 @@ function classifyToken(name, resolved){
     if (saved === 'desktop' || saved === 'mobile') platform = saved;
   } catch (_) {}
 
+  /* สเปกแยกตาม platform (ผู้ใช้ 26 ต.ค. 69): Desktop = design.md ของ bma.health ·
+     Mobile = design.md ของ bma.mobile ที่ repo นั้นส่งขึ้นเว็บเองเป็น design-mobile.md
+     ปุ่ม raw / ดาวน์โหลด สลับไฟล์ตาม platform ด้วย */
+  const DOC_SRC = { desktop: './design.md', mobile: './design-mobile.md' };
+  const DOC_FILE = { desktop: 'design.md', mobile: 'design-mobile.md' };
+
   /* ── Foundation entries — design.md sections NOT covered by components.
        These get a TOC entry but no live preview. Each entry tries to
        match a heading slug in design.md via the `anchor` field. */
@@ -1225,12 +1253,13 @@ function classifyToken(name, resolved){
        reference). The component catalogue swaps per platform. */
   function buildEntries() {
     allEntries = [];
-    /* Foundations — anchor only, shared across platforms */
-    for (const g of FOUNDATIONS) {
+    /* Foundations (§1–§4 of the HCIS design.md) — Desktop only; the Mobile
+       design system is separate and its own sections are in CATALOG_MOBILE */
+    for (const g of platform === 'desktop' ? FOUNDATIONS : []) {
       for (const it of g.items) {
         allEntries.push({
           kind: 'foundation',
-          platform: 'shared',
+          platform: 'desktop',
           group: g.group,
           name: it.name,
           anchor: it.anchor && headingSlugs.has(it.anchor) ? it.anchor : null,
@@ -1279,32 +1308,36 @@ function classifyToken(name, resolved){
   /* ── Apply the current platform — rebuild sidebar + update subtitle.
        If the currently selected entry no longer exists on the new
        platform, fall back to the first entry. */
-  function setPlatform(next) {
+  function setPlatform(next, want) {
     if (next !== 'desktop' && next !== 'mobile') return;
     if (next === platform) return;
     platform = next;
     try { localStorage.setItem(PLATFORM_KEY, platform); } catch (_) {}
+    syncPlatformChrome();
+    /* Each platform has its own design.md — reload, then keep the entry
+       by name if it exists there, else the requested anchor, else the first. */
+    loadDoc(want || (activeEntry ? { name: activeEntry.name } : null));
+  }
+
+  /* Toggle state · subtitle · note · raw/download links for the current platform. */
+  function syncPlatformChrome() {
     document.querySelectorAll('.pt-btn').forEach((b) =>
       b.classList.toggle('active', b.dataset.platform === platform),
     );
     const subtitle = document.getElementById('brand-subtitle');
     if (subtitle) {
       subtitle.textContent = platform === 'mobile'
-        ? 'Foundations + Mobile primitives'
+        ? 'Mobile App · bma.mobile'
         : 'Foundations · 158 components';
     }
-    buildEntries();
-    /* If active entry still exists by name, keep it. Otherwise pick the
-       first entry that has either an anchor or a slug. */
-    let next2 = activeEntry
-      ? allEntries.find((e) => e.name === activeEntry.name && e.platform === activeEntry.platform)
-      : null;
-    if (!next2) next2 = allEntries.find((e) => e.anchor || e.slug) || allEntries[0];
-    if (next2) {
-      selectEntry(next2);
-    } else {
-      activeEntry = null;
-      renderSidebar(searchEl.value);
+    const raw = document.getElementById('doc-raw');
+    const dl = document.getElementById('doc-dl');
+    const suffix = platform === 'mobile' ? ' (Mobile)' : '';
+    if (raw) { raw.href = DOC_SRC[platform]; raw.textContent = `↗ raw design.md${suffix}`; }
+    if (dl) {
+      dl.href = DOC_SRC[platform];
+      dl.setAttribute('download', DOC_FILE[platform]);
+      dl.textContent = `↓ ดาวน์โหลด design.md${suffix}`;
     }
   }
 
@@ -1475,15 +1508,21 @@ function classifyToken(name, resolved){
     });
   });
 
+  /* ── Drawer (< 768px): ☰ opens the sidebar, picking an entry or the scrim closes it. */
+  const menuBtn = document.getElementById('menu-btn');
+  function setNav(open) {
+    document.body.classList.toggle('nav-open', open);
+    menuBtn.setAttribute('aria-expanded', String(open));
+  }
+  menuBtn.addEventListener('click', () => setNav(!document.body.classList.contains('nav-open')));
+  document.getElementById('nav-scrim').addEventListener('click', () => setNav(false));
+  tocEl.addEventListener('click', (ev) => { if (ev.target.closest('.item')) setNav(false); });
+
   /* ── Platform toggle wiring. */
   document.querySelectorAll('.pt-btn').forEach((b) => {
     b.addEventListener('click', () => setPlatform(b.dataset.platform));
-    b.classList.toggle('active', b.dataset.platform === platform);
   });
-  const initialSubtitle = document.getElementById('brand-subtitle');
-  if (initialSubtitle && platform === 'mobile') {
-    initialSubtitle.textContent = 'Foundations + Mobile primitives';
-  }
+  syncPlatformChrome();
 
   /* ── Search. */
   searchEl.addEventListener('input', (e) => renderSidebar(e.target.value));
@@ -1499,29 +1538,51 @@ function classifyToken(name, resolved){
     if (f) f.src = f.src;
   });
 
-  /* ── Load + render design.md. */
-  async function loadDoc() {
-    content.innerHTML = '<p class="loading">⏳ กำลังโหลด <code>design.md</code>…</p>';
+  /* ── Load + render the current platform's design.md.
+       `want` = { name } | { anchor } to land on after a platform switch;
+       first load uses the URL hash, and a hash that only exists on the
+       other platform (e.g. #mobile-step-progress) flips to it once. */
+  const docCache = {};
+  let docSeq = 0;
+  async function loadDoc(want, triedOther) {
+    const seq = ++docSeq;
+    const file = DOC_FILE[platform];
+    content.innerHTML = `<p class="loading">⏳ กำลังโหลด <code>${file}</code>…</p>`;
     try {
-      const res = await fetch('./design.md', { cache: 'no-cache' });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const md = await res.text();
+      let md = docCache[platform];
+      if (md == null) {
+        const res = await fetch(DOC_SRC[platform], { cache: 'no-cache' });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        md = docCache[platform] = await res.text();
+      }
+      if (seq !== docSeq) return;  /* a newer switch won */
       content.innerHTML = marked.parse(md);
       indexHeadings();
       injectSwatches(content);
       buildEntries();
-      renderSidebar('');
-      /* Initial entry: URL hash, else first foundation entry */
-      const hash = location.hash.slice(1);
+      renderSidebar(searchEl.value);
       let initial = null;
-      if (hash) {
-        initial = allEntries.find((e) => e.slug === hash || e.anchor === hash);
+      if (want && want.anchor) initial = allEntries.find((e) => e.anchor === want.anchor);
+      if (!initial && want && want.name) {
+        initial = allEntries.find((e) => e.name === want.name && (e.anchor || e.slug));
+      }
+      const hash = want ? '' : decodeURIComponent(location.hash.slice(1));
+      if (!initial && hash) {
+        initial = allEntries.find((e) => (e.slug === hash || e.anchor === hash));
+        const inMobile = CATALOG_MOBILE.some((g) => g.items.some((it) => it.slug === hash || it.anchor === hash));
+        if (!initial && !triedOther && (platform === 'desktop' ? inMobile : !inMobile)) {
+          platform = platform === 'mobile' ? 'desktop' : 'mobile';
+          try { localStorage.setItem(PLATFORM_KEY, platform); } catch (_) {}
+          syncPlatformChrome();
+          return loadDoc(null, true);
+        }
       }
       if (!initial) initial = allEntries.find((e) => e.anchor) || allEntries[0];
       if (initial) selectEntry(initial);
     } catch (err) {
+      if (seq !== docSeq) return;
       content.innerHTML = `
-        <p class="error">❌ โหลด <code>design.md</code> ไม่สำเร็จ — ${err.message}</p>
+        <p class="error">❌ โหลด <code>${file}</code> ไม่สำเร็จ — ${err.message}</p>
         <p class="error">ต้องเปิดผ่าน http(s) ไม่ใช่ <code>file://</code> — <code>https://bma-design-system.mih.co.th/reference.html</code></p>
       `;
       tocEl.innerHTML = '<div class="item" style="color: var(--danger);">(load failed)</div>';
@@ -1634,7 +1695,9 @@ function classifyToken(name, resolved){
   var esc = function (t) { return String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); };
   function render() {
     var slug = slugEl.textContent.trim();
-    if (!data || !slug) { box.hidden = true; return; }
+    /* history.json = commits of bma.health — none of it is about the Mobile tab (bma.mobile) */
+    var onMobile = (document.querySelector('.pt-btn.active') || {}).dataset;
+    if (!data || !slug || (onMobile && onMobile.platform === 'mobile')) { box.hidden = true; return; }
     var rows = data.commits.filter(function (c) { return c.slugs.indexOf(slug) !== -1; });
     var notes = (data.changelog || []).filter(function (e) { return e.slug === slug; });
     var TH = { added: 'เพิ่ม', changed: 'แก้ไข', fixed: 'แก้บั๊ก', deprecated: 'เลิกใช้', removed: 'ลบ' };
