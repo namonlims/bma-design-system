@@ -1670,7 +1670,7 @@ computing it, and never sample a colour by eye.
 | Token | Light | Dark | Alias (Light) |
 |-------|-------|------|----------------|
 | `border.brandPrimary.default` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `border.brandPrimary.secondary` | `#6AD6A5` | `#08A768` | `Brand/primary/400` |
+| `border.brandPrimary.secondary` | `#08A768` | `#08A768` | `Brand/primary/400` · ⚠ โค้ด ≠ Figma (Figma: `#6AD6A5`) |
 | `border.brandPrimary.tertiary` | `#C5EDDA` | `#004C31` | `Brand/primary/200` |
 | `border.brandPrimary.quaternary` | `#E2F3EB` | `#003322` | `Brand/primary/100` |
 | `border.brandSecondary.default` | `#427C3D` | `#78B573` | `Brand/secondary/600` |
@@ -1678,7 +1678,7 @@ computing it, and never sample a colour by eye.
 | `border.brandSecondary.tertiary` | `#E1F0E0` | `#2E4F2C` | `Brand/secondary/200` |
 | `border.brandSecondary.quaternary` | `#EFF5EF` | `#274126` | `Brand/secondary/100` |
 | `border.neutral.default` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` |
-| `border.neutral.secondary` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
+| `border.neutral.secondary` | `#C8CDD1` | `#636B72` | `Primitive/color/neutral/400` · ⚠ โค้ด ≠ Figma (Figma: `#ADB2B7`) |
 | `border.neutral.tertiary` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` |
 | `border.neutral.quaternary` | `#F4F5F5` | `#222629` | `Primitive/color/neutral/100` |
 | `border.disabled.default` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` |
@@ -1689,7 +1689,7 @@ computing it, and never sample a colour by eye.
 | `border.positive.secondary` | `#3EC3B2` | `#1B867D` | `Primitive/color/teal/400` |
 | `border.positive.tertiary` | `#A2EDDE` | `#195652` | `Primitive/color/teal/200` |
 | `border.positive.quaternary` | `#D1F6EE` | `#194845` | `Primitive/color/teal/100` |
-| `border.warning.default` | `#EA580C` | `#FB923C` | `Primitive/color/orange/600` |
+| `border.warning.default` | `#FDBA74` | `#FB923C` | `Primitive/color/orange/600` · ⚠ โค้ด ≠ Figma (Figma: `#EA580C`) |
 | `border.warning.secondary` | `#FB923C` | `#EA580C` | `Primitive/color/orange/400` |
 | `border.warning.tertiary` | `#FED7AA` | `#9A3412` | `Primitive/color/orange/200` |
 | `border.warning.quaternary` | `#FFEDD5` | `#7C2D12` | `Primitive/color/orange/100` |
@@ -1697,10 +1697,10 @@ computing it, and never sample a colour by eye.
 | `border.progress.secondary` | `#FACC15` | `#CA8A04` | `Primitive/color/yellow/400` |
 | `border.progress.tertiary` | `#FEF08A` | `#854D0E` | `Primitive/color/yellow/200` |
 | `border.progress.quaternary` | `#FEF9C3` | `#713F12` | `Primitive/color/yellow/100` |
-| `border.danger.default` | `#DC2626` | `#F87171` | `Primitive/color/red/600` |
+| `border.danger.default` | `#E58585` | `#F87171` | `Primitive/color/red/600` · ⚠ โค้ด ≠ Figma (Figma: `#DC2626`) |
 | `border.danger.secondary` | `#F87171` | `#DC2626` | `Primitive/color/red/400` |
-| `border.danger.tertiary` | `#FECACA` | `#991B1B` | `Primitive/color/red/200` |
-| `border.danger.quaternary` | `#FEE2E2` | `#7F1D1D` | `Primitive/color/red/100` |
+| `border.danger.tertiary` | `#F6C9C9` | `#991B1B` | `Primitive/color/red/200` · ⚠ โค้ด ≠ Figma (Figma: `#FECACA`) |
+| `border.danger.quaternary` | `#F7D9D9` | `#7F1D1D` | `Primitive/color/red/100` · ⚠ โค้ด ≠ Figma (Figma: `#FEE2E2`) |
 | `border.info.default` | `#2563EB` | `#60A5FA` | `Primitive/color/blue/600` |
 | `border.info.secondary` | `#60A5FA` | `#2563EB` | `Primitive/color/blue/400` |
 | `border.info.tertiary` | `#BFDBFE` | `#1E40AF` | `Primitive/color/blue/200` |
@@ -1715,10 +1715,10 @@ computing it, and never sample a colour by eye.
 | `border.primarySearch.hover` | `#007549` | `#91DFBB` | `Brand/primary/700` |
 | `border.primarySearch.typing` | `#007549` | `#91DFBB` | `Brand/primary/700` |
 | `border.primarySearch.filled` | `#08A768` | `#6AD6A5` | `Brand/primary/600` |
-| `border.aiSearch.default` | `#818CF8` | `#818CF8` | `Primitive/color/indigo/500` |
-| `border.aiSearch.hover` | `#4F46E5` | `#C7D2FE` | `Primitive/color/indigo/700` |
-| `border.aiSearch.typing` | `#4F46E5` | `#C7D2FE` | `Primitive/color/indigo/700` |
-| `border.aiSearch.filled` | `#818CF8` | `#818CF8` | `Primitive/color/indigo/500` |
+| `border.aiSearch.default` | `#6F82FF` | `#818CF8` | `Primitive/color/indigo/500` · ⚠ โค้ด ≠ Figma (Figma: `#818CF8`) |
+| `border.aiSearch.hover` | `#4338CA` | `#C7D2FE` | `Primitive/color/indigo/700` · ⚠ โค้ด ≠ Figma (Figma: `#4F46E5`) |
+| `border.aiSearch.typing` | `#4338CA` | `#C7D2FE` | `Primitive/color/indigo/700` · ⚠ โค้ด ≠ Figma (Figma: `#4F46E5`) |
+| `border.aiSearch.filled` | `#4F46E5` | `#818CF8` | `Primitive/color/indigo/500` · ⚠ โค้ด ≠ Figma (Figma: `#818CF8`) |
 | `border.secondarySearch.default` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` |
 | `border.secondarySearch.hover` | `#007549` | `#91DFBB` | `Brand/primary/700` |
 | `border.secondarySearch.typing` | `#007549` | `#91DFBB` | `Brand/primary/700` |
@@ -1752,8 +1752,8 @@ computing it, and never sample a colour by eye.
 | `border.dangerButton.tertiary-hover` | `#FCA5A5` | `#B91C1C` | `Primitive/color/red/300` |
 | `border.dangerButton.quaternary` | `#FEE2E2` | `#7F1D1D` | `Primitive/color/red/100` |
 | `border.dangerButton.quaternary-hover` | `#FECACA` | `#991B1B` | `Primitive/color/red/200` |
-| `border.neutralButton.default` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` |
-| `border.neutralButton.default-hover` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
+| `border.neutralButton.default` | `#4D5358` | `#ADB2B7` | `Primitive/color/neutral/600` · ⚠ โค้ด ≠ Figma (Figma: `#636B72`) |
+| `border.neutralButton.default-hover` | `#363B3F` | `#C9CDD0` | `Primitive/color/neutral/700` · ⚠ โค้ด ≠ Figma (Figma: `#4D5358`) |
 | `border.neutralButton.secondary` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
 | `border.neutralButton.secondary-hover` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` |
 | `border.neutralButton.tertiary` | `#E2E4E6` | `#4D5358` | `Primitive/color/neutral/200` |
@@ -1856,12 +1856,12 @@ computing it, and never sample a colour by eye.
 | `icon.brandSecondary.default` | `#366233` | `#A7D2A3` | `Brand/secondary/700` |
 | `icon.brandSecondary.secondary` | `#427C3D` | `#78B573` | `Brand/secondary/600` |
 | `icon.brandSecondary.tertiary` | `#78B573` | `#427C3D` | `Brand/secondary/400` |
-| `icon.brandSecondary.quaternary` | `#A7D2A3` | `#366233` | `Brand/secondary/300` |
+| `icon.brandSecondary.quaternary` | `#91DFBB` | `#366233` | `Brand/secondary/300` · ⚠ โค้ด ≠ Figma (Figma: `#A7D2A3`) |
 | `icon.brandSecondary.on-default` | `#FFFFFF` | `#102310` | `Primitive/color/grey/50` |
 | `icon.neutral.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
 | `icon.neutral.secondary` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` |
 | `icon.neutral.tertiary` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
-| `icon.neutral.quaternary` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` |
+| `icon.neutral.quaternary` | `#C6CBD0` | `#4D5358` | `Primitive/color/neutral/300` · ⚠ โค้ด ≠ Figma (Figma: `#C9CDD0`) |
 | `icon.neutral.on-neutral` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
 | `icon.disabled.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
 | `icon.disabled.secondary` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` |
@@ -1874,9 +1874,9 @@ computing it, and never sample a colour by eye.
 | `icon.positive.quaternary` | `#6CDCCA` | `#196C65` | `Primitive/color/teal/300` |
 | `icon.positive.on-brand` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` |
 | `icon.positive.success` | `#24A899` | `#24A899` | `Primitive/color/teal/500` |
-| `icon.warning.default` | `#C2410C` | `#FDBA74` | `Primitive/color/orange/700` |
+| `icon.warning.default` | `#F59E0B` | `#FDBA74` | `Primitive/color/orange/700` · ⚠ โค้ด ≠ Figma (Figma: `#C2410C`) |
 | `icon.warning.secondary` | `#EA580C` | `#FB923C` | `Primitive/color/orange/600` |
-| `icon.warning.tertiary` | `#FB923C` | `#EA580C` | `Primitive/color/orange/400` |
+| `icon.warning.tertiary` | `#EA580C` | `#EA580C` | `Primitive/color/orange/400` · ⚠ โค้ด ≠ Figma (Figma: `#FB923C`) |
 | `icon.warning.quaternary` | `#FDBA74` | `#C2410C` | `Primitive/color/orange/300` |
 | `icon.warning.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` |
 | `icon.progress.default` | `#A16207` | `#FDE047` | `Primitive/color/yellow/700` |
@@ -1884,7 +1884,7 @@ computing it, and never sample a colour by eye.
 | `icon.progress.tertiary` | `#FACC15` | `#CA8A04` | `Primitive/color/yellow/400` |
 | `icon.progress.quaternary` | `#FDE047` | `#A16207` | `Primitive/color/yellow/300` |
 | `icon.progress.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` |
-| `icon.danger.default` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` |
+| `icon.danger.default` | `#DC2626` | `#FCA5A5` | `Primitive/color/red/700` · ⚠ โค้ด ≠ Figma (Figma: `#B91C1C`) |
 | `icon.danger.secondary` | `#DC2626` | `#F87171` | `Primitive/color/red/600` |
 | `icon.danger.tertiary` | `#F87171` | `#DC2626` | `Primitive/color/red/400` |
 | `icon.danger.quaternary` | `#FCA5A5` | `#B91C1C` | `Primitive/color/red/300` |
@@ -1932,17 +1932,17 @@ computing it, and never sample a colour by eye.
 | `icon.input.default` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
 | `icon.input.hover` | `#08A768` | `#6AD6A5` | `Brand/primary/600` |
 | `icon.input.typing` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `icon.input.filled` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
+| `icon.input.filled` | `#4D5358` | `#636B72` | `Primitive/color/neutral/400` · ⚠ โค้ด ≠ Figma (Figma: `#ADB2B7`) |
 | `icon.input.error` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
 | `icon.input.disabled` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
 | `icon.primarySearch.default` | `#08A768` | `#6AD6A5` | `Brand/primary/600` |
 | `icon.primarySearch.hover` | `#007549` | `#91DFBB` | `Brand/primary/700` |
 | `icon.primarySearch.typing` | `#007549` | `#91DFBB` | `Brand/primary/700` |
 | `icon.primarySearch.filled` | `#08A768` | `#6AD6A5` | `Brand/primary/600` |
-| `icon.aiSearch.default` | `#6366F1` | `#A5B4FC` | `Primitive/color/indigo/600` |
-| `icon.aiSearch.hover` | `#4F46E5` | `#C7D2FE` | `Primitive/color/indigo/700` |
-| `icon.aiSearch.typing` | `#4F46E5` | `#C7D2FE` | `Primitive/color/indigo/700` |
-| `icon.aiSearch.filled` | `#6366F1` | `#A5B4FC` | `Primitive/color/indigo/600` |
+| `icon.aiSearch.default` | `#4F46E5` | `#A5B4FC` | `Primitive/color/indigo/600` · ⚠ โค้ด ≠ Figma (Figma: `#6366F1`) |
+| `icon.aiSearch.hover` | `#4338CA` | `#C7D2FE` | `Primitive/color/indigo/700` · ⚠ โค้ด ≠ Figma (Figma: `#4F46E5`) |
+| `icon.aiSearch.typing` | `#4338CA` | `#C7D2FE` | `Primitive/color/indigo/700` · ⚠ โค้ด ≠ Figma (Figma: `#4F46E5`) |
+| `icon.aiSearch.filled` | `#4F46E5` | `#A5B4FC` | `Primitive/color/indigo/600` · ⚠ โค้ด ≠ Figma (Figma: `#6366F1`) |
 | `icon.secondarySearch.default` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
 | `icon.secondarySearch.hover` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
 | `icon.secondarySearch.typing` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
@@ -2028,7 +2028,7 @@ computing it, and never sample a colour by eye.
 | `icon.accordion.disabled` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
 | `icon.alert.info` | `#1D4ED8` | `#93C5FD` | `Primitive/color/blue/700` |
 | `icon.alert.success` | `#196C65` | `#6CDCCA` | `Primitive/color/teal/700` |
-| `icon.alert.warning` | `#C2410C` | `#FDBA74` | `Primitive/color/orange/700` |
+| `icon.alert.warning` | `#D97706` | `#FDBA74` | `Primitive/color/orange/700` · ⚠ โค้ด ≠ Figma (Figma: `#C2410C`) |
 | `icon.alert.error` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` |
 | `icon.alertDialog.info` | `#007549` | `#91DFBB` | `Brand/primary/700` |
 | `icon.alertDialog.success` | `#196C65` | `#6CDCCA` | `Primitive/color/teal/700` |
@@ -2086,9 +2086,9 @@ computing it, and never sample a colour by eye.
 | `surface.brandSecondary.tertiary-hover` | `#E1F0E0` | `#2E4F2C` | `Brand/secondary/200` |
 | `surface.brandSecondary.quaternary` | `#FAFCFA` | `#102310` | `Brand/secondary/50` |
 | `surface.brandSecondary.quaternary-hover` | `#EFF5EF` | `#274126` | `Brand/secondary/100` |
-| `surface.neutral.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
+| `surface.neutral.default` | `#FFFFFF` | `#C9CDD0` | `Primitive/color/neutral/700` · ⚠ โค้ด ≠ Figma (Figma: `#4D5358`) |
 | `surface.neutral.default-hover` | `#363B3F` | `#E2E4E6` | `Primitive/color/neutral/800` |
-| `surface.neutral.secondary` | `#363B3F` | `#E2E4E6` | `Primitive/color/neutral/800` |
+| `surface.neutral.secondary` | `#1B2227` | `#E2E4E6` | `Primitive/color/neutral/800` · ⚠ โค้ด ≠ Figma (Figma: `#363B3F`) |
 | `surface.neutral.secondary-hover` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` |
 | `surface.neutral.tertiary` | `#F4F5F5` | `#222629` | `Primitive/color/neutral/100` |
 | `surface.neutral.tertiary-hover` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` |
@@ -2108,13 +2108,13 @@ computing it, and never sample a colour by eye.
 | `surface.positive.secondary-hover` | `#6CDCCA` | `#196C65` | `Primitive/color/teal/300` |
 | `surface.positive.tertiary` | `#D1F6EE` | `#194845` | `Primitive/color/teal/100` |
 | `surface.positive.tertiary-hover` | `#A2EDDE` | `#195652` | `Primitive/color/teal/200` |
-| `surface.positive.quaternary` | `#F4FBFA` | `#082B2A` | `Primitive/color/teal/50` |
+| `surface.positive.quaternary` | `#F4FBF8` | `#082B2A` | `Primitive/color/teal/50` · ⚠ โค้ด ≠ Figma (Figma: `#F4FBFA`) |
 | `surface.positive.quaternary-hover` | `#D1F6EE` | `#194845` | `Primitive/color/teal/100` |
-| `surface.warning.default` | `#C2410C` | `#FDBA74` | `Primitive/color/orange/700` |
+| `surface.warning.default` | `#EAB308` | `#FDBA74` | `Primitive/color/orange/700` · ⚠ โค้ด ≠ Figma (Figma: `#C2410C`) |
 | `surface.warning.default-hover` | `#9A3412` | `#FED7AA` | `Primitive/color/orange/800` |
-| `surface.warning.secondary` | `#FED7AA` | `#9A3412` | `Primitive/color/orange/200` |
+| `surface.warning.secondary` | `#FDF1E0` | `#9A3412` | `Primitive/color/orange/200` · ⚠ โค้ด ≠ Figma (Figma: `#FED7AA`) |
 | `surface.warning.secondary-hover` | `#FDBA74` | `#C2410C` | `Primitive/color/orange/300` |
-| `surface.warning.tertiary` | `#FFEDD5` | `#7C2D12` | `Primitive/color/orange/100` |
+| `surface.warning.tertiary` | `#FEF3C7` | `#7C2D12` | `Primitive/color/orange/100` · ⚠ โค้ด ≠ Figma (Figma: `#FFEDD5`) |
 | `surface.warning.tertiary-hover` | `#FED7AA` | `#9A3412` | `Primitive/color/orange/200` |
 | `surface.warning.quaternary` | `#FFF9F0` | `#431407` | `Primitive/color/orange/50` |
 | `surface.warning.quaternary-hover` | `#FFEDD5` | `#7C2D12` | `Primitive/color/orange/100` |
@@ -2126,7 +2126,7 @@ computing it, and never sample a colour by eye.
 | `surface.progress.tertiary-hover` | `#FEF08A` | `#854D0E` | `Primitive/color/yellow/200` |
 | `surface.progress.quaternary` | `#FBFAF4` | `#422006` | `Primitive/color/yellow/50` |
 | `surface.progress.quaternary-hover` | `#FEF9C3` | `#713F12` | `Primitive/color/yellow/100` |
-| `surface.danger.default` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` |
+| `surface.danger.default` | `#DC2626` | `#FCA5A5` | `Primitive/color/red/700` · ⚠ โค้ด ≠ Figma (Figma: `#B91C1C`) |
 | `surface.danger.default-hover` | `#991B1B` | `#FECACA` | `Primitive/color/red/800` |
 | `surface.danger.secondary` | `#FECACA` | `#991B1B` | `Primitive/color/red/200` |
 | `surface.danger.secondary-hover` | `#FCA5A5` | `#B91C1C` | `Primitive/color/red/300` |
@@ -2134,7 +2134,7 @@ computing it, and never sample a colour by eye.
 | `surface.danger.tertiary-hover` | `#FECACA` | `#991B1B` | `Primitive/color/red/200` |
 | `surface.danger.quaternary` | `#FFF0F0` | `#450A0A` | `Primitive/color/red/50` |
 | `surface.danger.quaternary-hover` | `#FEE2E2` | `#7F1D1D` | `Primitive/color/red/100` |
-| `surface.info.default` | `#1D4ED8` | `#93C5FD` | `Primitive/color/blue/700` |
+| `surface.info.default` | `#3B82F6` | `#93C5FD` | `Primitive/color/blue/700` · ⚠ โค้ด ≠ Figma (Figma: `#1D4ED8`) |
 | `surface.info.default-hover` | `#1E40AF` | `#BFDBFE` | `Primitive/color/blue/800` |
 | `surface.info.secondary` | `#BFDBFE` | `#1E40AF` | `Primitive/color/blue/200` |
 | `surface.info.secondary-hover` | `#93C5FD` | `#1D4ED8` | `Primitive/color/blue/300` |
@@ -2176,7 +2176,7 @@ computing it, and never sample a colour by eye.
 | `surface.switch.icon-disabled` | `#F4F5F5` | `#636B72` | `Primitive/color/neutral/100` |
 | `surface.switch.off` | `#E2E4E6` | `#4D5358` | `Primitive/color/neutral/200` |
 | `surface.switch.off-hover` | `#C9CDD0` | `#636B72` | `Primitive/color/neutral/300` |
-| `surface.switch.on` | `#1B867D` | `#3EC3B2` | `Primitive/color/teal/600` |
+| `surface.switch.on` | `#08A768` | `#3EC3B2` | `Primitive/color/teal/600` · ⚠ โค้ด ≠ Figma (Figma: `#1B867D`) |
 | `surface.switch.hover` | `#3EC3B2` | `#1B867D` | `Primitive/color/teal/400` |
 | `surface.switch.checkbox-dedault-hover` | `#54CF97` | `#54CF97` | `Brand/primary/500` |
 | `surface.switch.on-hover` | `#196C65` | `#6CDCCA` | `Primitive/color/teal/700` |
@@ -2309,7 +2309,7 @@ computing it, and never sample a colour by eye.
 | `surface.list.selected-hover` | `#F4FBF8` | `#002318` | `Brand/primary/50` |
 | `surface.timeslot.default` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
 | `surface.timeslot.hover` | `#E2F3EB` | `#003322` | `Brand/primary/100` |
-| `surface.timeslot.selected` | `#007549` | `#91DFBB` | `Brand/primary/700` |
+| `surface.timeslot.selected` | `#FFFFFF` | `#91DFBB` | `Brand/primary/700` · ⚠ โค้ด ≠ Figma (Figma: `#007549`) |
 | `surface.timeslot.disabled` | `#FAFCFA` | `#102310` | `Brand/secondary/50` |
 | `surface.timeslot.box` | `#FAFCFA` | `#102310` | `Brand/secondary/50` |
 | `surface.accordion.collapsed` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` |
@@ -4860,7 +4860,7 @@ SVG path (Figma exact): `M9.52864 3.52864 ... L5.52864 7.52864Z` — right chevr
 --text-calendar-selected:    #FFFFFF;   /* text/calendar/selected */
 --text-calendar-disabled:    #CBD5E1;   /* text/calendar/disabled */
 --text-calendar-other:       #ADB2B7;   /* text/neutral/tertiary */
---text-calendar-default:     #1A1E23;   /* text/neutral/default */
+--text-calendar-default:     #4D5358;   /* text/neutral/default */
 --text-calendar-month:       #4D5358;   /* text/calendar/month */
 --text-calendar-dow:         #636B72;   /* text/neutral/secondary */
 --icon-calendar-default:     #ADB2B7;   /* icon/calendar/default */
@@ -6375,7 +6375,7 @@ icon/accordion/collapsed     →  neutral/400 → #ADB2B7
 
 > **Switch (Toggle):** `44×24px`. Aliases MIH DS Switch tokens — NOT brand-responsive.
 > - Track OFF: `surface/switch/off` = `--surface-switch-off` → `#E2E4E6` (neutral-200)
-> - Track ON: `surface/switch/on` = `--surface-switch-on` → `#1B867D` (teal/600, **fixed**)
+> - Track ON: `surface/switch/on` = `--surface-switch-on` → `#08A768` (brand/p600 · Figma: `#1B867D`)
 > - Track OFF hover: `surface/switch/off-hover` = `--surface-switch-off-hover` → `#C9CDD0` (neutral-300)
 > - Track ON hover: `surface/switch/on-hover` = `--surface-switch-on-hover` → `#196C65` (teal/700, **fixed**)
 > - Thumb: `surface/switch/icon` = `--surface-switch-thumb` → `#FFFFFF`
@@ -6480,7 +6480,7 @@ icon/accordion/collapsed     →  neutral/400 → #ADB2B7
   transition: background .2s;
 }
 /* ON: surface/switch/on → teal/600 (fixed, not brand) */
-.al-switch.on              { background: var(--surface-switch-on, #1B867D); }
+.al-switch.on              { background: var(--surface-switch-on, #08A768); }
 /* OFF hover: surface/switch/off-hover → neutral-300 */
 .al-switch:not(.on):hover  { background: var(--surface-switch-off-hover, #C9CDD0); }
 /* ON hover: surface/switch/on-hover → teal/700 */
@@ -6766,8 +6766,8 @@ Add a `+N` overflow pill as the last `.av` with `neutral-200` bg and `neutral-60
 | `icon/input/default` | `#adb2b7` | `#636b72` | neutral-400 | Leading icon — default / hover |
 | `icon/input/hover` | `#08a768` | `#6ad6a5` | Brand/primary/600 | Leading icon — hover / focus active |
 | `icon/input/typing` | `#4d5358` | `#c9cdd0` | neutral-700 | Leading icon — typing |
-| `icon/input/filled` | `#adb2b7` | `#636b72` | neutral-400 | Leading icon — filled (unfocused) |
-| `icon/input/error` | `#dc2626` | `#f87171` | red-600 | Leading icon — error |
+| `icon/input/filled` | `#4D5358` | `#636b72` | neutral-400 | Leading icon — filled (unfocused) |
+| `icon/input/error` | `#ADB2B7` | `#f87171` | red-600 | Leading icon — error |
 | `icon/input/disabled` | `#adb2b7` | `#636b72` | neutral-400 | Leading icon — disabled |
 
 ---
@@ -6890,9 +6890,9 @@ Font family: `Sarabun` (all elements)
 /* Icon */
 --icon-input-default:           #adb2b7;   /* icon/input/default      → neutral-400 */
 --icon-input-hover:             #08a768;   /* icon/input/hover        → Brand/primary/600 */
---icon-input-typing:            #08a768;   /* icon/input/typing       → Brand/primary/600 */
---icon-input-filled:            #adb2b7;   /* icon/input/filled       → neutral-400 */
---icon-input-error:             #dc2626;   /* icon/input/error        → red-600 */
+--icon-input-typing:            #4D5358;   /* icon/input/typing       → Brand/primary/600 */
+--icon-input-filled:            #4D5358;   /* icon/input/filled       → neutral-400 */
+--icon-input-error:             #ADB2B7;   /* icon/input/error        → red-600 */
 --icon-input-disabled:          #adb2b7;   /* icon/input/disabled     → neutral-400 */
 
 /* Input Field Slash separator "/" */
@@ -8876,8 +8876,8 @@ text/steps/subtitle         neutral/500        → #858C92  (fixed neutral)
 --text-neutral-tertiary:       #ADB2B7;
 
 /* Dark mode override (brand-p* primitives flip per :root[data-theme=dark]) */
-/* --surface-pagination-hover  → brand/p950 (#002318) */
-/* --text-pagination-hover     → brand/p300 (#91DFBB) */
+/* --surface-pagination-hover  → brand/p50 (#F4FBF8) */
+/* --text-pagination-hover     → brand/p700 (#007549) */
 
 /* Component */
 .pagination { display: flex; gap: 4px; align-items: center; }  /* dimension/space/100 */
@@ -9523,7 +9523,7 @@ The signature capture area includes two action buttons aliased directly from the
 |---|---|---|
 | `surface/brandPrimaryButton/default` | `#007549` | Background — default |
 | `text/brandPrimaryButton/on-brand` | `#ffffff` | Label text |
-| `surface/brandPrimaryButton/default-hover` | `#005a35` | Background — hover (emerald-800) |
+| `surface/brandPrimaryButton/default-hover` | `#004C31` | Background — hover (emerald-800) |
 | `Brand Drop Shadow Bottom/300` | `PrimaryShadow/600 + /601` | Button elevation shadow |
 | `surface/disabledButton/tertiary` | `#f4f5f5` | Background — disabled |
 | `border/disabledButton/tertiary` | `#e2e4e6` | Border — disabled |
@@ -10563,7 +10563,7 @@ Footer แสดงที่ท้ายหน้าทุกหน้า รอ
   font-size: 14px;
 }
 .ftr-page-btn:hover,
-.ftr-page-btn.active { background: var(--surface-pagination-hover, #F4F5F5); } /* surface/pagination/hover */
+.ftr-page-btn.active { background: var(--surface-pagination-hover, #F4FBF8); } /* surface/pagination/hover */
 .ftr-page-arrow {
   width: 36px; height: 36px; border-radius: 8px;
   border: none; background: transparent; cursor: pointer;
