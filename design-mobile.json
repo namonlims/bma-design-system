@@ -1,0 +1,491 @@
+{
+  "generated": "npm run design:catalog (bma.mobile) — ห้ามแก้มือ",
+  "preview": "https://bma-mobile.mih.co.th/m/components",
+  "groups": [
+    {
+      "group": "Mobile · Button",
+      "items": [
+        {
+          "slug": "state-matrix",
+          "name": "State matrix · convention",
+          "anchor": "75-figma-reference"
+        },
+        {
+          "slug": "brand-button",
+          "name": "BrandButton",
+          "anchor": "brandbutton"
+        },
+        {
+          "slug": "brand-subdue-button",
+          "name": "BrandSubdueButton",
+          "anchor": "brandsubduebutton"
+        },
+        {
+          "slug": "danger-button",
+          "name": "DangerButton",
+          "anchor": "dangerbutton"
+        },
+        {
+          "slug": "danger-subdue-button",
+          "name": "DangerSubdueButton",
+          "anchor": "dangersubduebutton"
+        },
+        {
+          "slug": "neutral-button",
+          "name": "NeutralButton",
+          "anchor": "neutralbutton"
+        },
+        {
+          "slug": "neutral-subdue-button",
+          "name": "NeutralSubdueButton",
+          "anchor": "neutralsubduebutton"
+        }
+      ]
+    },
+    {
+      "group": "Mobile · Icon Button",
+      "items": [
+        {
+          "slug": "brand-icon-button",
+          "name": "BrandIconButton",
+          "anchor": "button-family-figma-app-opz7x9aakgqf5prhhspdgn-brand-button-23129-siblings"
+        },
+        {
+          "slug": "brand-subdue-icon-button",
+          "name": "BrandSubdueIconButton",
+          "anchor": "button-family-figma-app-opz7x9aakgqf5prhhspdgn-brand-button-23129-siblings"
+        },
+        {
+          "slug": "danger-icon-button",
+          "name": "DangerIconButton",
+          "anchor": "button-family-figma-app-opz7x9aakgqf5prhhspdgn-brand-button-23129-siblings"
+        },
+        {
+          "slug": "danger-subdue-icon-button",
+          "name": "DangerSubdueIconButton",
+          "anchor": "button-family-figma-app-opz7x9aakgqf5prhhspdgn-brand-button-23129-siblings"
+        },
+        {
+          "slug": "neutral-icon-button",
+          "name": "NeutralIconButton",
+          "anchor": "button-family-figma-app-opz7x9aakgqf5prhhspdgn-brand-button-23129-siblings"
+        },
+        {
+          "slug": "neutral-subdue-icon-button",
+          "name": "NeutralSubdueIconButton",
+          "anchor": "button-family-figma-app-opz7x9aakgqf5prhhspdgn-brand-button-23129-siblings"
+        }
+      ]
+    },
+    {
+      "group": "Mobile · Specialty Button",
+      "items": [
+        {
+          "slug": "brand-circle-icon-button",
+          "name": "BrandCircleIconButton",
+          "anchor": "button-family-figma-app-opz7x9aakgqf5prhhspdgn-brand-button-23129-siblings"
+        },
+        {
+          "slug": "brand-circle-subdue-icon-button",
+          "name": "BrandCircleSubdueIconButton",
+          "anchor": "button-family-figma-app-opz7x9aakgqf5prhhspdgn-brand-button-23129-siblings"
+        },
+        {
+          "slug": "float-button",
+          "name": "BrandSubdueFloatButton (FAB)",
+          "anchor": "button-family-figma-app-opz7x9aakgqf5prhhspdgn-brand-button-23129-siblings"
+        },
+        {
+          "slug": "history-list-form-button",
+          "name": "HistoryListFormButton",
+          "anchor": "button-family-figma-app-opz7x9aakgqf5prhhspdgn-brand-button-23129-siblings"
+        },
+        {
+          "slug": "keypad-button",
+          "name": "KeypadButton",
+          "anchor": "keypadbutton-archive-31443835"
+        }
+      ]
+    },
+    {
+      "group": "Mobile · Primitives",
+      "items": [
+        {
+          "slug": "mobile-card",
+          "name": "Card",
+          "anchor": "732-mobilecard-props"
+        },
+        {
+          "slug": "mobile-input-field",
+          "name": "Input Field",
+          "anchor": "7327-feature-cards-sheets-calendar-ผู้ใช้-26-ตค-69"
+        },
+        {
+          "slug": "mobile-password",
+          "name": "Password",
+          "anchor": "733-password-figma-app-50211008"
+        },
+        {
+          "slug": "mobile-textarea",
+          "name": "Textarea",
+          "anchor": "734-textarea-figma-app-26826"
+        },
+        {
+          "slug": "mobile-success-card",
+          "name": "SuccessCard",
+          "anchor": "735-successcard-archive-178122765"
+        },
+        {
+          "slug": "mobile-badge",
+          "name": "Badge",
+          "anchor": "737-mobilebadge-tones"
+        },
+        {
+          "slug": "mobile-colorful-badge",
+          "name": "ColorfulBadge",
+          "anchor": "738-colorfulbadge-figma-app-20768413"
+        },
+        {
+          "slug": "mobile-section-label",
+          "name": "SectionLabel",
+          "anchor": "primitives"
+        },
+        {
+          "slug": "sym",
+          "name": "Sym (Material Symbols)",
+          "anchor": "primitives"
+        },
+        {
+          "slug": "mobile-header",
+          "name": "Header",
+          "anchor": "739-mobileheader-props"
+        },
+        {
+          "slug": "mobile-shell",
+          "name": "Shell (PhoneFrame)",
+          "anchor": "7310-mobileshell-frame"
+        }
+      ]
+    },
+    {
+      "group": "Mobile · Common",
+      "items": [
+        {
+          "slug": "mobile-bottom-action-bar",
+          "name": "BottomActionBar",
+          "anchor": "primitives"
+        },
+        {
+          "slug": "mobile-bottom-sheet",
+          "name": "BottomSheet",
+          "anchor": "primitives"
+        },
+        {
+          "slug": "mobile-empty-state",
+          "name": "EmptyState",
+          "anchor": "primitives"
+        },
+        {
+          "slug": "mobile-inline-notice",
+          "name": "InlineNotice",
+          "anchor": "primitives"
+        },
+        {
+          "slug": "mobile-divider",
+          "name": "Divider",
+          "anchor": "primitives"
+        },
+        {
+          "slug": "mobile-amount-row",
+          "name": "AmountRow · AmountRows",
+          "anchor": "primitives"
+        },
+        {
+          "slug": "mobile-step-progress",
+          "name": "StepProgress",
+          "anchor": "primitives"
+        },
+        {
+          "slug": "mobile-avatar",
+          "name": "Avatar",
+          "anchor": "primitives"
+        },
+        {
+          "slug": "mobile-carousel-dots",
+          "name": "CarouselDots",
+          "anchor": "carousel-dots-bookingpay-blocks-scan-vaccine-photos-ผู้ใช้-23-ตค-69"
+        },
+        {
+          "slug": "mobile-unpaid-booking-block",
+          "name": "UnpaidBookingBlockSheet",
+          "anchor": "carousel-dots-bookingpay-blocks-scan-vaccine-photos-ผู้ใช้-23-ตค-69"
+        },
+        {
+          "slug": "mobile-center-dialog",
+          "name": "CenterDialog",
+          "anchor": "primitives"
+        },
+        {
+          "slug": "mobile-choice-button-group",
+          "name": "ChoiceButtonGroup",
+          "anchor": "primitives"
+        },
+        {
+          "slug": "mobile-toast",
+          "name": "Toast · useToast",
+          "anchor": "primitives"
+        },
+        {
+          "slug": "mobile-tabs",
+          "name": "Tabs",
+          "anchor": "primitives"
+        },
+        {
+          "slug": "mobile-chart-tap-readout",
+          "name": "ChartTapReadout",
+          "anchor": "73197322-common-primitives-รอบ-2-ผู้ใช้-23-ตค-69"
+        }
+      ]
+    },
+    {
+      "group": "Mobile · Cards & lists",
+      "items": [
+        {
+          "slug": "mobile-figma-icon",
+          "name": "FigmaIcon",
+          "anchor": "7325-notifications-journey-icons"
+        },
+        {
+          "slug": "mobile-option-card",
+          "name": "MobileOptionCard",
+          "anchor": "7323-fields-pickers-ผู้ใช้-21-ตค-69"
+        },
+        {
+          "slug": "mobile-clinic-card",
+          "name": "ClinicCard · ClinicRow",
+          "anchor": "7327-feature-cards-sheets-calendar-ผู้ใช้-26-ตค-69"
+        },
+        {
+          "slug": "mobile-doctor-card",
+          "name": "DoctorCard",
+          "anchor": "7327-feature-cards-sheets-calendar-ผู้ใช้-26-ตค-69"
+        },
+        {
+          "slug": "mobile-booking-calendar",
+          "name": "BookingCalendar",
+          "anchor": "7327-feature-cards-sheets-calendar-ผู้ใช้-26-ตค-69"
+        },
+        {
+          "slug": "mobile-service-request-card",
+          "name": "ServiceRequestCard",
+          "anchor": "primitives"
+        },
+        {
+          "slug": "mobile-select-field",
+          "name": "MobileSelectField",
+          "anchor": "7323-fields-pickers-ผู้ใช้-21-ตค-69"
+        },
+        {
+          "slug": "mobile-radio-button",
+          "name": "RadioButton · RadioButtonGroup",
+          "anchor": "primitives"
+        },
+        {
+          "slug": "mobile-lab-results",
+          "name": "LabResults",
+          "anchor": "lab-results-home-bp-คทง12-ประชุม-19-ตค-69-emr-091011-hbp-01"
+        },
+        {
+          "slug": "mobile-timeline-item",
+          "name": "TimelineItem · TimelineRow",
+          "anchor": "primitives"
+        },
+        {
+          "slug": "mobile-time-slot-list",
+          "name": "TimeSlotList",
+          "anchor": "primitives"
+        },
+        {
+          "slug": "mobile-list-row",
+          "name": "ListRow · ListSection",
+          "anchor": "primitives"
+        },
+        {
+          "slug": "mobile-page-section",
+          "name": "PageSection · InfoGrid",
+          "anchor": "primitives"
+        },
+        {
+          "slug": "mobile-appointment-request-status",
+          "name": "AppointmentRequestStatus · AppointmentRulesList · LabelValueRows · RequestReasonPicker",
+          "anchor": "appointment-requests-ratingsheet-คทง12-appt-020405-eval-01"
+        },
+        {
+          "slug": "mobile-filter-chip",
+          "name": "FilterChip · FilterChipBar",
+          "anchor": "73197322-common-primitives-รอบ-2-ผู้ใช้-23-ตค-69"
+        },
+        {
+          "slug": "mobile-font-size-row",
+          "name": "FontSizeRow",
+          "anchor": "settingslist-homemenusheet-คทง12-home-03-theme-03"
+        }
+      ]
+    },
+    {
+      "group": "Mobile · Sheets & popups",
+      "items": [
+        {
+          "slug": "mobile-request-detail-sheet",
+          "name": "RequestDetailSheet · RequestIconBadge",
+          "anchor": "76-mobile-new-theme-design-option-a"
+        },
+        {
+          "slug": "mobile-health-info-sheet",
+          "name": "HealthInfoSheet",
+          "anchor": "7327-feature-cards-sheets-calendar-ผู้ใช้-26-ตค-69"
+        },
+        {
+          "slug": "mobile-account-switcher-sheet",
+          "name": "AccountSwitcherSheet",
+          "anchor": "settingslist-homemenusheet-คทง12-home-03-theme-03"
+        },
+        {
+          "slug": "mobile-account-switcher-launcher",
+          "name": "AccountSwitcherLauncher",
+          "anchor": "settingslist-homemenusheet-คทง12-home-03-theme-03"
+        },
+        {
+          "slug": "mobile-add-account-sheet",
+          "name": "AddAccountSheet",
+          "anchor": "settingslist-homemenusheet-คทง12-home-03-theme-03"
+        },
+        {
+          "slug": "mobile-receipt-sheet",
+          "name": "ReceiptSheet · ReceiptCard",
+          "anchor": "7327-feature-cards-sheets-calendar-ผู้ใช้-26-ตค-69"
+        },
+        {
+          "slug": "mobile-payment-detail-sheet",
+          "name": "PaymentDetailSheet · PaymentDetailBody",
+          "anchor": "7327-feature-cards-sheets-calendar-ผู้ใช้-26-ตค-69"
+        },
+        {
+          "slug": "mobile-medication-list-sheet",
+          "name": "MedicationListSheet",
+          "anchor": "7327-feature-cards-sheets-calendar-ผู้ใช้-26-ตค-69"
+        },
+        {
+          "slug": "mobile-home-menu-sheet",
+          "name": "HomeMenuSheet",
+          "anchor": "settingslist-homemenusheet-คทง12-home-03-theme-03"
+        },
+        {
+          "slug": "mobile-rating-sheet",
+          "name": "RatingSheet",
+          "anchor": "appointment-requests-ratingsheet-คทง12-appt-020405-eval-01"
+        },
+        {
+          "slug": "mobile-rating-nudge",
+          "name": "RatingNudge",
+          "anchor": "appointment-requests-ratingsheet-คทง12-appt-020405-eval-01"
+        },
+        {
+          "slug": "mobile-camera-permission-popup",
+          "name": "CameraPermissionPopup",
+          "anchor": "73197322-common-primitives-รอบ-2-ผู้ใช้-23-ตค-69"
+        },
+        {
+          "slug": "mobile-location-permission-popup",
+          "name": "LocationPermissionPopup",
+          "anchor": "73197322-common-primitives-รอบ-2-ผู้ใช้-23-ตค-69"
+        },
+        {
+          "slug": "mobile-in-app-browser",
+          "name": "InAppBrowser",
+          "anchor": "7324-navigation-sheets-shell"
+        }
+      ]
+    },
+    {
+      "group": "Mobile · Notifications & nav",
+      "items": [
+        {
+          "slug": "mobile-notification-card",
+          "name": "NotificationCard",
+          "anchor": "7325-notifications-journey-icons"
+        },
+        {
+          "slug": "mobile-app-notification",
+          "name": "AppNotification",
+          "anchor": "appointment-requests-ratingsheet-คทง12-appt-020405-eval-01"
+        },
+        {
+          "slug": "mobile-sms-push",
+          "name": "SmsPush",
+          "anchor": "7325-notifications-journey-icons"
+        },
+        {
+          "slug": "mobile-email-push",
+          "name": "EmailPush",
+          "anchor": "7325-notifications-journey-icons"
+        },
+        {
+          "slug": "mobile-journey-stepper",
+          "name": "JourneyStepper",
+          "anchor": "7325-notifications-journey-icons"
+        },
+        {
+          "slug": "mobile-navigation-menu",
+          "name": "NavigationMenu",
+          "anchor": "7324-navigation-sheets-shell"
+        }
+      ]
+    },
+    {
+      "group": "Mobile · Reference",
+      "items": [
+        {
+          "slug": null,
+          "name": "Token reference — ทุก token ที่แอปใช้",
+          "anchor": "70-token-reference-ทุก-token-ที่แอปใช้-สร้างอัตโนมัติ"
+        },
+        {
+          "slug": null,
+          "name": "Layering rules",
+          "anchor": "71-layering-rules"
+        },
+        {
+          "slug": null,
+          "name": "Platform tokens",
+          "anchor": "72-platform-tokens---mobile-"
+        },
+        {
+          "slug": null,
+          "name": "Component map",
+          "anchor": "73-component-map"
+        },
+        {
+          "slug": null,
+          "name": "What does not exist yet on mobile",
+          "anchor": "74-what-does-not-exist-yet-on-mobile"
+        },
+        {
+          "slug": null,
+          "name": "Navigation stack",
+          "anchor": "77-navigation-stack-คทง12-21-ตค-69"
+        },
+        {
+          "slug": null,
+          "name": "Mobile New Theme",
+          "anchor": "76-mobile-new-theme-design-option-a"
+        },
+        {
+          "slug": null,
+          "name": "Figma reference",
+          "anchor": "75-figma-reference"
+        }
+      ]
+    }
+  ]
+}
