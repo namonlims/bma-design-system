@@ -13560,7 +13560,7 @@ Props: `systemKey` · `title`
 
 #### 6.37.29 StepProgress (step-progress)
 
-Horizontal stepper for multi-step forms. Past steps render as success (check), the current step is highlighted, future steps are dimmed. Pass `framed` to wrap the row in a white card chrome (the previous "Stepper" component is now this variant).
+Horizontal stepper for multi-step forms. No number circle (ผู้ใช้ 26 ต.ค. 69) — the label is the button: current step = bold + 2px underline `--border-brandPrimary-default`, past/success steps use `--text-steps-title-success`, future steps are dimmed. The numbered circle only returns with `hideLabels` (collapsed band). Pass `framed` to wrap the row in a white card chrome (the previous "Stepper" component is now this variant).
 
 Props: `steps` · `current` · `completedSteps` · `onStepClick` · `className` · `framed` · `compact` · `labelNoWrap` · `hideLabels` · `morph`  
 ไฟล์: `src/components/step/StepProgress.jsx` · demo: `/components/step-progress`
@@ -14983,6 +14983,19 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 | เหลือง (เร่งด่วน) | "มีประวัติที่มีความเสี่ยงสูง เจ็บปวดมาก หรือมีสาเหตุอื่นให้ผู้คัดแยกกังวล" · เช่น ตกจากที่สูง … ได้รับบาดเจ็บที่ตา |
 | เขียว (ไม่เร่งด่วน) | "ความเสี่ยงต่ำ เข้าเกณฑ์ผู้ป่วยไม่ฉุกเฉิน ไม่เร่งด่วน" |
 | ระยะ | การ์ดห่างกัน 12 · จุดสี 12 · หัวข้อ sm medium · บรรทัดรอง xs tertiary "<ระดับ> (<English>) · <ตัวอย่าง>" |
+
+---
+
+### 6.94 VisitPurposeLine (ลงทะเบียน 26 ต.ค. 69)
+
+**VisitPurposeLine** — แถวใต้ชื่อผู้ป่วยใน worklist บอกจุดประสงค์การมาวันนี้ · ไฟล์ `src/components/badge/VisitPurposeLine.jsx` · API: `resultsVisit` (แถวจาก `src/data/resultsVisits.js`) · `proxyPickup` (bool) · `children` (ป้ายอื่นของหน้า เช่น "แทรกคิวด่วน") · ไม่มีอะไรเลย = ไม่ render
+· ใช้ที่ `/treat/queue` · `/finance` คิวชำระเงิน
+
+| ส่วน | รายละเอียด |
+|---|---|
+| "มาฟังผล" | `ResultsVisitBadge` = ข้อความ xs `--text-info-default` + hover `TooltipGroups` (ส่งจาก · ผู้ส่ง · เวลา · แพทย์ · นัดพบแพทย์) |
+| "มารับยาแทน" | `ProxyPickupText` = ข้อความ xs `--text-info-default` (ไม่มี "· ข้ามคัดกรอง") |
+| ระยะ | ระหว่างรายการ 6 (`--dim-space-150`) · ตัดบรรทัดได้ |
 
 ---
 
