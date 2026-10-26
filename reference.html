@@ -684,8 +684,6 @@
         <button class="tab-btn" data-tab="both" type="button">⫩ Both</button>
       </div>
       <div class="actions">
-        <a id="open-new" href="#" target="_blank" rel="noopener" style="display:none">↗ แท็บใหม่</a>
-        <button id="reload-btn" type="button" style="display:none">↻ Reload</button>
         <a id="doc-raw" href="./design.md" target="_blank" rel="noopener">↗ raw design.md</a>
         <a id="doc-dl" href="./design.md" download="design.md">↓ ดาวน์โหลด design.md</a>
       </div>
@@ -736,12 +734,10 @@ function classifyToken(name, resolved){
   const content      = document.getElementById('content');
   const tocEl        = document.getElementById('toc');
   const searchEl     = document.getElementById('search');
-  const reloadBtn    = document.getElementById('reload-btn');
   const serverInput  = document.getElementById('server-url');
   const serverSave   = document.getElementById('server-save');
   const nameEl       = document.getElementById('current-name');
   const slugEl       = document.getElementById('current-slug');
-  const openNew      = document.getElementById('open-new');
   const panes        = document.getElementById('panes');
   const livePane     = document.getElementById('live-pane');
   const noLivePh     = document.getElementById('no-live-placeholder');
@@ -1100,8 +1096,27 @@ function classifyToken(name, resolved){
     ]},
   ];
 
-  /* Mobile components share a single live preview page. */
-  const MOBILE_PREVIEW_PATH = '/m/components';
+  /* Mobile components share a single live preview page — on the real
+     bma.mobile app, not the /m copy inside bma.health (ผู้ใช้ 26 ต.ค. 69:
+     SuccessCard ในเว็บไม่ใช่ตัวล่าสุด). design-mobile.json overrides both. */
+  let MOBILE_PREVIEW = 'https://bma-mobile.mih.co.th/m/components';
+  /* เมนูแท็บ Mobile สร้างจากโค้ด bma.mobile (npm run design:catalog → design-mobile.json ที่
+     repo นั้นส่งขึ้นเว็บเอง) — CATALOG_MOBILE ข้างบนใช้เมื่อโหลดไฟล์ไม่ได้เท่านั้น */
+  const MOBILE_CATALOG_SRC = './design-mobile.json';
+  let mobileCatalogLoaded = false;
+  async function loadMobileCatalog() {
+    if (mobileCatalogLoaded) return;
+    mobileCatalogLoaded = true;
+    try {
+      const res = await fetch(MOBILE_CATALOG_SRC, { cache: 'no-cache' });
+      if (!res.ok) return;
+      const data = await res.json();
+      if (Array.isArray(data.groups) && data.groups.length) {
+        CATALOG_MOBILE.splice(0, CATALOG_MOBILE.length, ...data.groups);
+      }
+      if (data.preview) MOBILE_PREVIEW = data.preview;
+    } catch (_) { /* keep the built-in list */ }
+  }
 
   /* ── State ────────────────────────────────────────────── */
   let currentTab = 'live';         /* 'live' | 'spec' | 'both' */
@@ -1330,6 +1345,9 @@ function classifyToken(name, resolved){
         ? 'Mobile App · bma.mobile'
         : 'Foundations · 158 components';
     }
+    /* Live server box is the HCIS app — Mobile previews always come from bma.mobile */
+    const serverBar = document.querySelector('aside .server-bar');
+    if (serverBar) serverBar.style.display = platform === 'mobile' ? 'none' : '';
     const raw = document.getElementById('doc-raw');
     const dl = document.getElementById('doc-dl');
     const suffix = platform === 'mobile' ? ' (Mobile)' : '';
@@ -1415,7 +1433,7 @@ function classifyToken(name, resolved){
     const mode = document.body.dataset.mode || 'light';
     const theme = `&brand=${encodeURIComponent(brand)}&mode=${encodeURIComponent(mode)}`;
     return e.platform === 'mobile'
-      ? `${serverRoot}${MOBILE_PREVIEW_PATH}?embed=1&component=${e.slug}${theme}`
+      ? `${MOBILE_PREVIEW}?embed=1&component=${e.slug}${theme}`
       : `${serverRoot}/components/${e.slug}?embed=1${theme}`;
   }
   window.addEventListener('mih:restyle', () => {
@@ -1451,9 +1469,6 @@ function classifyToken(name, resolved){
          primitives — there is no per-component mobile route yet) */
     const serverRoot = (serverInput.value || 'https://bma-health.mih.co.th').replace(/\/+$/, '');
     const liveUrl = e.slug ? liveUrlFor(e, serverRoot) : '';
-    openNew.style.display = e.slug ? 'inline-flex' : 'none';
-    openNew.href = liveUrl;
-    reloadBtn.style.display = e.slug ? 'inline-flex' : 'none';
 
     /* Live pane content */
     livePane.innerHTML = '';
@@ -1533,11 +1548,6 @@ function classifyToken(name, resolved){
     if (activeEntry && activeEntry.slug) selectEntry(activeEntry);
   });
 
-  reloadBtn.addEventListener('click', () => {
-    const f = document.getElementById('live-iframe');
-    if (f) f.src = f.src;
-  });
-
   /* ── Load + render the current platform's design.md.
        `want` = { name } | { anchor } to land on after a platform switch;
        first load uses the URL hash, and a hash that only exists on the
@@ -1549,6 +1559,7 @@ function classifyToken(name, resolved){
     const file = DOC_FILE[platform];
     content.innerHTML = `<p class="loading">⏳ กำลังโหลด <code>${file}</code>…</p>`;
     try {
+      if (platform === 'mobile') await loadMobileCatalog();
       let md = docCache[platform];
       if (md == null) {
         const res = await fetch(DOC_SRC[platform], { cache: 'no-cache' });
