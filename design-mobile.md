@@ -1396,7 +1396,7 @@ Rules + labels live in [`src/features/appointments/lib/appointmentRules.js`](src
 | `MobileButton` | [`shared/ui/MobileButton.jsx`](src/shared/ui/MobileButton.jsx) | [`brand-button`](/m/components?component=brand-button) | 7.3.1 MobileButton — props & variants |
 | `MobileCard` | [`shared/ui/Card.jsx`](src/shared/ui/Card.jsx) | [`mobile-card`](/m/components?component=mobile-card) | 7.3.2 MobileCard — props |
 | `MobileOptionCard` | [`shared/ui/OptionCard.jsx`](src/shared/ui/OptionCard.jsx) | [`mobile-option-card`](/m/components?component=mobile-option-card) | 7.3.23 Fields · pickers (ผู้ใช้ 21 ต.ค. 69) |
-| `ClinicCard` · `ClinicRow` | [`features/clinics/components/ClinicCard.jsx`](src/features/clinics/components/ClinicCard.jsx) | [`mobile-clinic-card`](/m/components?component=mobile-clinic-card) | 7.3.27 Feature cards · sheets · calendar (ผู้ใช้ 26 ต.ค. 69) |
+| `ClinicCard` · `ClinicRow` | [`features/clinics/components/ClinicCard.jsx`](src/features/clinics/components/ClinicCard.jsx) | [`mobile-clinic-card-states`](/m/components?component=mobile-clinic-card-states) | 7.3.27 Feature cards · sheets · calendar (ผู้ใช้ 26 ต.ค. 69) |
 | `DoctorCard` | [`features/appointments/components/DoctorCard.jsx`](src/features/appointments/components/DoctorCard.jsx) | [`mobile-doctor-card`](/m/components?component=mobile-doctor-card) | 7.3.27 Feature cards · sheets · calendar (ผู้ใช้ 26 ต.ค. 69) |
 | `BookingCalendar` | [`features/appointments/components/BookingCalendar.jsx`](src/features/appointments/components/BookingCalendar.jsx) | [`mobile-booking-calendar`](/m/components?component=mobile-booking-calendar) | 7.3.27 Feature cards · sheets · calendar (ผู้ใช้ 26 ต.ค. 69) |
 | `BottomSheet` | [`shared/ui/BottomSheet.jsx`](src/shared/ui/BottomSheet.jsx) | [`mobile-bottom-sheet`](/m/components?component=mobile-bottom-sheet) | Primitives |
@@ -1505,6 +1505,7 @@ When adding a new mobile primitive: create the file under [src/shared/ui/](src/s
 | `--type-family-heading-graphic2` *(re-pointed)* | Anuphan | headings / labels / buttons — light **and dark** mode (was Mitr; app no longer loads Mitr · user 25 Oct 2569) |
 | `--mobile-theme-family-label` | `'Anuphan Medium'` (500, self-hosted) → Anuphan | home quick-menu labels — lighter than headings (user 25 Oct 2569) |
 | `--shadow-brand-drop-bottom-200` · `--shadow-card` *(re-pointed)* | `inset 0 0 0 1px var(--mobile-theme-border-card)` | cards: border instead of drop shadow |
+| `--surface-neutral-primary` *(re-pointed)* | #FFFFFF · dark `var(--d-surface-1)` #222629 | neutral surface — value from Figma variable `surface/neutral/primary` (ds:sync pull 26 Oct 2569) |
 
 **Patterns (Figma DS components):** Header/Home (avatar · greeting · solid green HN badge · outline pill "บัตรประจำตัว" · outline bell) · Home/Quick Menu (8 actions, 4 columns, 60px gradient circle + white glyph — gradients inline: green #9BC781→#77B757 · mint #10DFB5→#00D29D · orange #FFCF8A→#FFC15E · blue #6AA8E6→#008CDE · pink #FF90CD→#FF63BC · purple #BB96D2→#772FA5) · Banner/Appointment (white, 1px pink outline, cut corners, solid pink offset) · Chip/Request (pill, 1px border) · Card/Visit · Card/News · History/Timeline Item · Background/Splash. Bottom nav and tabs keep their green drop shadow.
 

@@ -244,6 +244,11 @@
           "slug": "mobile-chart-tap-readout",
           "name": "ChartTapReadout",
           "anchor": "73197322-common-primitives-รอบ-2-ผู้ใช้-23-ตค-69"
+        },
+        {
+          "slug": "mobile-clinic-card-states",
+          "name": "ClinicCard",
+          "anchor": "7327-feature-cards-sheets-calendar-ผู้ใช้-26-ตค-69"
         }
       ]
     },
