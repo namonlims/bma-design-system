@@ -361,9 +361,19 @@
           "anchor": "settingslist-homemenusheet-คทง12-home-03-theme-03"
         },
         {
+          "slug": "mobile-app-keyboard",
+          "name": "AppKeyboard",
+          "anchor": "7324-navigation-sheets-shell"
+        },
+        {
           "slug": "mobile-thaid-not-installed-sheet",
           "name": "ThaiIdNotInstalledSheet",
           "anchor": "7324-navigation-sheets-shell"
+        },
+        {
+          "slug": "mobile-email-otp-view",
+          "name": "EmailOtpView",
+          "anchor": "7325-notifications-journey-icons"
         },
         {
           "slug": "mobile-consent-doc-step",
