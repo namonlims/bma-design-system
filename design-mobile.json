@@ -381,6 +381,11 @@
           "anchor": "7324-navigation-sheets-shell"
         },
         {
+          "slug": "mobile-inline-row",
+          "name": "InlineRow · EditSheet",
+          "anchor": "7324-navigation-sheets-shell"
+        },
+        {
           "slug": "mobile-add-account-sheet",
           "name": "AddAccountSheet",
           "anchor": "settingslist-homemenusheet-คทง12-home-03-theme-03"
