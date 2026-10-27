@@ -361,6 +361,11 @@
           "anchor": "settingslist-homemenusheet-คทง12-home-03-theme-03"
         },
         {
+          "slug": "mobile-thaid-not-installed-sheet",
+          "name": "ThaiIdNotInstalledSheet",
+          "anchor": "7324-navigation-sheets-shell"
+        },
+        {
           "slug": "mobile-add-account-sheet",
           "name": "AddAccountSheet",
           "anchor": "settingslist-homemenusheet-คทง12-home-03-theme-03"

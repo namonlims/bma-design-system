@@ -1356,6 +1356,7 @@ Rules + labels live in [`src/features/appointments/lib/appointmentRules.js`](src
 | `InAppBrowser` | [InAppBrowser.jsx](src/shared/ui/InAppBrowser.jsx) | `open` · `url` · `title` · `onClose` | External web pages inside the app (user 19 Oct 2569). |
 | `CameraCaptureSheet` | [CameraCaptureSheet.jsx](src/shared/ui/CameraCaptureSheet.jsx) | `open` · `onClose` · `onCapture` · `onFallback` · `maxPx=320` · `title` · `shape='circle'\|'document'` | In-page camera (getUserMedia) for "ถ่ายรูป" — circle = profile (front, mirrored), document = vaccine book. Dark backdrop = gradient exception. |
 | `DeleteAccountSheet` | [DeleteAccountSheet.jsx](src/shared/ui/DeleteAccountSheet.jsx) | `onClose` | ตั้งค่า › "ลบบัญชี" (user 24 Oct 2569). Exports `DELETE_REASONS` · `DELETED_HN_KEY`. |
+| `ThaiIdNotInstalledSheet` · `ThaiIdNotInstalledContent` | [ThaiIdNotInstalledSheet.jsx](src/features/auth/components/ThaiIdNotInstalledSheet.jsx) | Sheet: `open` · `onClose` · `onUseCitizenId` — Content: `onDownload=openThaiIdStore` · `onUseCitizenId` · `showTitle` | "เข้าสู่ระบบด้วย ThaiD" with no ThaiD app (user 27 Oct 2569). ThaiD logo 72 → 1-line summary → group "ขั้นตอน" (3 numbered rows) → Fill "ดาวน์โหลดแอป ThaiD" (store by OS · `THAID_STORE_URL` · Google Play = search page, mock) + Outline "เข้าสู่ระบบด้วยเลขบัตรประชาชน". Content = same body inside another sheet (no nested sheets). Demo account `no-thaid` (นายวิชัย รุ่งเรือง). Figma Mobile Application `10443:2`. |
 
 #### 7.3.25 Notifications · journey · icons
 
@@ -1386,7 +1387,7 @@ Rules + labels live in [`src/features/appointments/lib/appointmentRules.js`](src
 <!-- components:start (npm run design:catalog — ห้ามแก้มือ) -->
 #### 7.3.0 Component registry — ทุก component ที่แอปใช้ (สร้างอัตโนมัติ)
 
-> สร้างจาก `src/shared/ui/index.js` (export ทั้งหมด) + `src/features/dev/pages/MobileComponentsPage.jsx` · `src/features/dev/pages/MobileFeatureDemos.jsx` (เดโม) ด้วย `npm run design:catalog` · 63 รายการ · ยังไม่มีเดโม 0 · ยังไม่มีสเปก 0
+> สร้างจาก `src/shared/ui/index.js` (export ทั้งหมด) + `src/features/dev/pages/MobileComponentsPage.jsx` · `src/features/dev/pages/MobileFeatureDemos.jsx` (เดโม) ด้วย `npm run design:catalog` · 64 รายการ · ยังไม่มีเดโม 0 · ยังไม่มีสเปก 0
 > CI รันให้เองทุกครั้งที่ merge เข้า main (`.github/workflows/publish-design-md.yml`) แล้วส่งเมนูแท็บ Mobile (`design-mobile.json`) ขึ้นเว็บ Design System
 
 | Component | ไฟล์ | เดโม (/m/components) | สเปก (หัวข้อใน design.md) |
@@ -1422,6 +1423,7 @@ Rules + labels live in [`src/features/appointments/lib/appointmentRules.js`](src
 | `AccountSwitcherSheet` | [`features/auth/components/AccountSwitcherSheet.jsx`](src/features/auth/components/AccountSwitcherSheet.jsx) | [`mobile-account-switcher-sheet`](/m/components?component=mobile-account-switcher-sheet) | SettingsList · HomeMenuSheet (คทง.12 HOME-03 · THEME-03) |
 | `AccountSwitcherLauncher` | [`features/auth/components/AccountSwitcherLauncher.jsx`](src/features/auth/components/AccountSwitcherLauncher.jsx) | [`mobile-account-switcher-launcher`](/m/components?component=mobile-account-switcher-launcher) | SettingsList · HomeMenuSheet (คทง.12 HOME-03 · THEME-03) |
 | `AddAccountSheet` | [`features/auth/components/AddAccountSheet.jsx`](src/features/auth/components/AddAccountSheet.jsx) | [`mobile-add-account-sheet`](/m/components?component=mobile-add-account-sheet) | SettingsList · HomeMenuSheet (คทง.12 HOME-03 · THEME-03) |
+| `ThaiIdNotInstalledSheet` · `ThaiIdNotInstalledContent` | [`features/auth/components/ThaiIdNotInstalledSheet.jsx`](src/features/auth/components/ThaiIdNotInstalledSheet.jsx) | [`mobile-thaid-not-installed-sheet`](/m/components?component=mobile-thaid-not-installed-sheet) | 7.3.24 Navigation · sheets · shell |
 | `ReceiptSheet` · `ReceiptCard` | [`features/payment/components/ReceiptSheet.jsx`](src/features/payment/components/ReceiptSheet.jsx) | [`mobile-receipt-sheet`](/m/components?component=mobile-receipt-sheet) | 7.3.27 Feature cards · sheets · calendar (ผู้ใช้ 26 ต.ค. 69) |
 | `PaymentDetailSheet` · `PaymentDetailBody` | [`features/payment/components/PaymentDetailSheet.jsx`](src/features/payment/components/PaymentDetailSheet.jsx) | [`mobile-payment-detail-sheet`](/m/components?component=mobile-payment-detail-sheet) | Carousel dots · Booking/pay blocks · Scan · Vaccine photos (ผู้ใช้ 23 ต.ค. 69) |
 | `MedicationListSheet` | [`features/pharmacy/components/MedicationListSheet.jsx`](src/features/pharmacy/components/MedicationListSheet.jsx) | [`mobile-medication-list-sheet`](/m/components?component=mobile-medication-list-sheet) | 7.3.27 Feature cards · sheets · calendar (ผู้ใช้ 26 ต.ค. 69) |
