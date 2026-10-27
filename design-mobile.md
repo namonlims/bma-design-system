@@ -993,7 +993,7 @@ PIN / numeric keypad key. 72×72 circle (`--dim-size-1600`). Default: 1px `--bra
 | [`MobileSectionLabel`](src/shared/ui/SectionLabel.jsx) | SectionLabel.jsx | — | Section header above content blocks |
 | [`MobileShell`](src/shared/ui/MobileShell.jsx) | MobileShell.jsx | — | Phone frame + status bar + bottom nav + auth gate |
 | [`Sym`](src/shared/ui/Sym.jsx) | Sym.jsx | `Sym` (web) | Same shape, separate file so the mobile tree has no web-only coupling |
-| [`TimelineItem`](src/shared/ui/TimelineItem.jsx) · `TimelineRow` | TimelineItem.jsx | Figma New Theme `2790:109178` | Date-sorted list (appointments · history · vaccines · home visits): left date/time/icon on a rail · right small card (centre · clinic · doctor · label/value · indicator icons) |
+| [`TimelineItem`](src/shared/ui/TimelineItem.jsx) · `TimelineRow` | TimelineItem.jsx | Figma New Theme `2790:109178` | Date-sorted list (appointments · history · vaccines · home visits): left date/time/icon on a rail · right small card (centre · clinic · doctor · label/value · indicator icons) · `TimelineRow lines={2}` cuts a long value at 2 lines + "…" (home-visit summary) |
 | [`TimeSlotList`](src/features/appointments/components/TimeSlotList.jsx) | TimeSlotList.jsx | — | Pick a time: hourly rows "09:00 - 10:00 น. · ว่าง N คิว" → action sheet (`BookingSheet`) with the 15-min slots |
 | [`ListRow`](src/shared/ui/ListRow.jsx) · `ListSection` | ListRow.jsx | — | Divider list row (icon · title · 1-line summary · right value/status · chevron) + section heading with summary |
 | [`PageSection`](src/shared/ui/PageSection.jsx) · `InfoGrid` | PageSection.jsx | — | Frameless page section (heading + 1px divider) + aligned label/value grid |
