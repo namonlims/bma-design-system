@@ -15039,6 +15039,33 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 
 ---
 
+### 6.98 RegistrationRenamePopup (ลงทะเบียน 29 ต.ค. 69)
+
+**RegistrationRenamePopup** — popup "เปลี่ยนชื่อ-นามสกุล" ของผู้รับบริการเก่า · ไฟล์ `src/components/forms/RegistrationRenamePopup.jsx` · API: `open` · `onClose` · `form` (ชื่อปัจจุบัน) · `onSave({ name, docType, docOther, evidence, note })` · export `RENAME_DOC_TYPES`
+· ใช้ที่หน้าลงทะเบียนผู้รับบริการเก่า การ์ด "ข้อมูลส่วนตัว" (ปุ่ม "เปลี่ยนชื่อ" ข้างปุ่ม ยืนยัน/แก้ไขและอัปเดต)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| ลำดับ | ชื่อปัจจุบัน (อ่านอย่างเดียว) → ชื่อใหม่ (คำนำหน้า · ชื่อ · นามสกุล ไทยบังคับ · อังกฤษเว้นว่าง = คงค่าเดิม) → หลักฐาน* (ชนิดเอกสาร + ไฟล์ PNG/JPG/PDF ≤ 5 MB) → หมายเหตุ |
+| error | ขึ้นเมื่อกด "บันทึกการเปลี่ยนชื่อ" เท่านั้น |
+| เมื่อบันทึก | ชื่อใหม่ลงฟอร์ม · ชื่อเดิม + หลักฐานลง `form.nameHistory` · แถว "ประวัติการแก้ไขข้อมูล" (`appendRegistrationAudit`) · `logAuditEvent` · SuccessPopup |
+
+---
+
+### 6.100 MedicationRetroAddPopup (ประวัติการใช้ยา 29 ต.ค. 69)
+
+**MedicationRetroAddPopup** — ฟอร์ม "เพิ่มประวัติการใช้ยา (ย้อนหลัง)" / "แก้ไขข้อมูลยา" ของป๊อปอัปประวัติการใช้ยา · ไฟล์ `src/components/popup/MedicationRetroAddPopup.jsx` · API: `open` · `onClose` · `onSave(rec)` · `initialDrug` · export `useRetroAddForm({ open, onSave, initialDrug })` → `{ body, save }` · `RETRO_TITLE` · `RETRO_SUBTITLE` · `RETRO_EDIT_TITLE`
+· `MedicationHistoryMatrixPopup` ใช้ hook นี้เป็น nested panel ในป๊อปอัปเดียวกัน (`onBack` ‹ ซ้ายหัวข้อ · ไม่เปิด Popup ซ้อน) · วางตาราง matrix ในหน้าตรง ๆ = เปิดเป็น Popup ของตัวเอง · ข้อมูลเก็บต่อ HN ใน `src/data/medHistoryRetro.js`
+
+| ส่วน | รายละเอียด |
+|---|---|
+| กลุ่ม | ยาที่ใช้ (ชื่อยา + ขนาด) → ช่วงเวลาที่ใช้ (เริ่ม* · หยุด · ยังใช้อยู่) → วิธีใช้ → แหล่งที่มาและหมายเหตุ · เส้นแบ่งกลุ่ม 1px · ช่องจัด 3 คอลัมน์ตรงแนว (ต่ำกว่า 768 = 1 คอลัมน์) |
+| ตัวเลือกยา | ทะเบียนยาเดียวกับ CPOE พร้อมรูปยา หรือ "อื่นๆ" ระบุเอง |
+| ⋮ ที่ช่องตาราง | ช่องมียา = "เพิ่มข้อมูลยา" + "แก้ไขข้อมูลยา" · ช่องว่าง = "เพิ่มยา" · โทนไอคอนอ่อน (ไม่มี ⋮ ระดับแถว/แถบกรอง) |
+| error | ขึ้นเมื่อกด "บันทึก" เท่านั้น · บันทึกประวัติการแก้ไข (ใคร · เมื่อไร · เพิ่ม/แก้ · ค่าเดิม → ค่าใหม่) + audit |
+
+---
+
 ## 7. Mobile App · Kiosk — design system แยกของตัวเอง
 
 > แยกจาก HCIS ตั้งแต่ 24 ต.ค. 69 (ผู้ใช้: "Design system ของ HCIS, Mobile App, Kiosk แยกออกจากกัน")
