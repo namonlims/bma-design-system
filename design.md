@@ -14975,7 +14975,7 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 ### 6.93 TriageLevelPicker (ลงทะเบียน 26 ต.ค. 69)
 
 **TriageLevelPicker** — ตัวเลือกความเร่งด่วน 3 ระดับตามเอกสาร "Triage interface เสนอ" (`public/documents/opd-screening/triage-interface-proposal.pdf`) · การ์ดเต็มแถวซ้อนลง 3 ใบ (`SelectableCardButton` · กดแล้วขึ้น ✓) · ไฟล์ `src/components/screening/TriageLevelPicker.jsx` · API: `value` (lv 2 · 3 · 5 ของ `OPD_TRIAGE_3`) · `onChange(lv)` · `disabled`
-· ใช้ที่ `/opd/screening` ขั้นซักประวัติ "ความเร่งด่วน" และใต้คำเตือน "สัญญาณชีพเข้าเกณฑ์อันตราย" ของขั้นสัญญาณชีพ (`ScreeningStep1` — คัดแยก · คัดกรองกลาง · พยาบาลคัดกรองสุขภาพเด็กดี · ตรวจสุขภาพ)
+· ใช้ที่ `/opd/screening` ขั้นสัญญาณชีพผ่าน `TriageUrgencySection` (§6.96 · ผู้ใช้ 28 ต.ค. 69) และใต้คำเตือน "สัญญาณชีพเข้าเกณฑ์อันตราย" ของหน้าอื่นที่ใช้ `ScreeningStep1` (พยาบาลคัดกรองสุขภาพเด็กดี · ตรวจสุขภาพ)
 
 | ส่วน | รายละเอียด |
 |---|---|
@@ -14996,6 +14996,32 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 | "มาฟังผล" | `ResultsVisitBadge` = ข้อความ xs `--text-info-default` + hover `TooltipGroups` (ส่งจาก · ผู้ส่ง · เวลา · แพทย์ · นัดพบแพทย์) |
 | "มารับยาแทน" | `ProxyPickupText` = ข้อความ xs `--text-info-default` (ไม่มี "· ข้ามคัดกรอง") |
 | ระยะ | ระหว่างรายการ 6 (`--dim-space-150`) · ตัดบรรทัดได้ |
+
+---
+
+### 6.95 ScreeningHistoryChecklist (ลงทะเบียน 27 ต.ค. 69)
+
+**ScreeningHistoryChecklist** — รายการติ๊กขั้น "ซักประวัติ" ประวัติการแพ้ / โรคประจำตัว / ยาทานประจำ · ไฟล์ `src/components/screening/ScreeningHistoryChecklist.jsx` (เดิม `src/pages/opd/ScreeningStep3.jsx`) · API: `patient` (ใช้ `hn`) · `onValidityChange(valid)` · export อื่น: `SCREENING_HISTORY_CHECKLIST` · `PHARMACY_REVIEW_KEYS` · `needsPharmacyReview` · `PharmacistAllergyResult` · `canEditAllergyRole`
+· ใช้ที่ `/opd/screening` · `/checkup/screen` · คัดกรองทันตกรรม · เยี่ยมบ้าน · วัณโรค · `CarriedScreeningStep`
+
+| ส่วน | รายละเอียด |
+|---|---|
+| รายการ | ปฏิเสธการมีโรคประจำตัว/ยาทานประจำ · ปฏิเสธการแพ้ยา · มีการแพ้ยา · มีการแพ้อาหาร · มียาเดิม · มียาเดิมจากสถานพยาบาลอื่น · มีข้อระวังด้านความปลอดภัย · มีโรคประจำตัว · มีภาวะพร่องเอนไซม์ G6PD · มี e-Living Will · อื่นๆ |
+| ติ๊กแล้ว | ช่อง `SuggestibleTextarea` (ภาษา + ไมค์ + คำแนะนำ) · "มีโรคประจำตัว" = ตารางดรอปดาวน์โรค (ไม่มี G6PD) · e-Living Will ต้องแนบหลักฐาน |
+| ส่งเภสัชกร | แพ้ยา · มียาเดิม · มียาเดิมจากสถานพยาบาลอื่น → แถบ "ให้เภสัชกรประเมินยาก่อน แล้วจึงคัดกรองต่อ" |
+
+---
+
+### 6.96 TriageUrgencySection (ลงทะเบียน 28 ต.ค. 69)
+
+**TriageUrgencySection** — ส่วน "ความเร่งด่วน" ทั้งก้อนของขั้นสัญญาณชีพ `/opd/screening` (คัดแยก · คัดกรองกลาง) · ไฟล์ `src/components/screening/TriageUrgencySection.jsx` · API: `patient` (ใช้ `hn` · ชื่อ · รูป) · `value` (lv ของ `OPD_TRIAGE_3`) · `onChange(lv)` · `dangerHits` (จาก `dangerVitalsOf`) · เปิดผ่าน `ScreeningStep1 triageSection`
+
+| ส่วน | รายละเอียด |
+|---|---|
+| ลำดับ | หัวข้อ "ความเร่งด่วน" (`TopicHeader tone='label'`) → `Alert` warning "สัญญาณชีพเข้าเกณฑ์อันตราย" (เฉพาะเมื่อเข้าเกณฑ์) → `TriageLevelPicker` (§6.93) → แถว label/value "ตรวจรักษา" · "ประเมินซ้ำ" ของระดับที่เลือก → ฉุกเฉิน/เร่งด่วน = `Alert` + ปุ่ม "ส่งห้องแพทย์ทันที" (ส่งแล้ว = Alert success "ส่งห้องแพทย์แล้ว · HH:MM น.") |
+| ป๊อปอัป | "ส่งผู้รับบริการไปห้องแพทย์ทันที" กว้าง 720 · `PatientSummaryCard` + "อาการนำมาพบแพทย์"* · ส่ง = `addToUnassignedPool` + เขียน `symptom.complaint` · `doctorSentAt` |
+| บังคับ + เปลี่ยนค่า | หัวข้อมีดอกจัน (`required`) · ค่าที่จุดคัดแยกเลือก (`symptom.triageDesk`) บทบาทอื่นเปลี่ยนได้ผ่าน AlertDialog เหตุผล* → `symptom.triageHistory` แสดงเป็นแถว label/value "จุดคัดแยกเลือก" + "ประวัติการแก้ไขความเร่งด่วน" |
+| ระยะ | ระหว่างชิ้น 12 (`--dim-space-300`) |
 
 ---
 
