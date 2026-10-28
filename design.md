@@ -15052,6 +15052,20 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 
 ---
 
+### 6.99 PatientAppointmentsPopup (ลงทะเบียน 29 ต.ค. 69)
+
+**PatientAppointmentsPopup** — popup "นัดหมายของผู้รับบริการ": ดูนัดทั้งหมดของ HN แล้วยกเลิกนัดได้ · ไฟล์ `src/components/appointment/PatientAppointmentsPopup.jsx` · API: `open` · `onClose` · `patient` {`hn`, `fullName`} · export `PatientAppointmentsButton` {`hn`, `onOpen`} (ปุ่ม "นัดหมาย N" N = นัดที่ยังยกเลิกได้ · หุบเป็นไอคอนต่ำกว่า `lg`) · `withPatientAppointmentsColumn(columns, onOpen)` (แทรกคอลัมน์ต่อจากชื่อ) · `upcomingAppointmentCount(hn)`
+· ใช้ที่แท็บ "รายชื่อผู้ป่วยทั้งหมด" ของพยาบาลคัดกรองกลาง `/opd/queue` · `ClinicQueuePage` · `ClinicScreeningQueuePage` · `TbScreeningQueuePage` · `AddictionClientDirectory showAppointments`
+
+| ส่วน | รายละเอียด |
+|---|---|
+| ตารางนัด | วันที่ (วัน + เวลา 2 บรรทัด) · นัดเพื่อ (+ แพทย์ · ศูนย์) · สถานะ (`APPT_STATUS_PRESENTATIONS` + เหตุผลที่ยกเลิก) · การดำเนินการ · ใหม่ → เก่า เรียงได้ทุกคอลัมน์ · ใช้ `Table` + `size='extraLarge'` |
+| ยกเลิกนัด | ปุ่ม `DangerSubdueButton` outline sm เฉพาะนัดที่ยังไม่ถึง/ยังไม่ยกเลิก → หน้าย่อยใน popup เดียวกัน (`onBack`) : นัดที่จะยกเลิก (label/value) → เหตุผล* (`APPT_CANCEL_REASONS`) → "ยืนยันยกเลิก" (ปิดจนกว่าจะเลือกเหตุผล) → `SuccessPopup` |
+| เมื่อยกเลิก | `appointmentCancellations.js` เก็บผล (sessionStorage) · `appendCancelAudit` (TOR 1.6.2.7) · `pushNotify` แจ้งผู้รับบริการ · `/appointment` ซ้อนผลนี้ทับรายการนัด |
+| แคบกว่า 768 | ซ่อนคอลัมน์สถานะ/การดำเนินการ → สถานะ + ปุ่มยกเลิกอยู่ใต้ "นัดเพื่อ" (ไม่ต้องเลื่อนขวา) · พื้นที่แตะ 44px |
+
+---
+
 ### 6.100 MedicationRetroAddPopup (ประวัติการใช้ยา 29 ต.ค. 69)
 
 **MedicationRetroAddPopup** — ฟอร์ม "เพิ่มประวัติการใช้ยา (ย้อนหลัง)" / "แก้ไขข้อมูลยา" ของป๊อปอัปประวัติการใช้ยา · ไฟล์ `src/components/popup/MedicationRetroAddPopup.jsx` · API: `open` · `onClose` · `onSave(rec)` · `initialDrug` · export `useRetroAddForm({ open, onSave, initialDrug })` → `{ body, save }` · `RETRO_TITLE` · `RETRO_SUBTITLE` · `RETRO_EDIT_TITLE`
