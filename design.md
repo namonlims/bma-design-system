@@ -15080,6 +15080,19 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 
 ---
 
+### 6.101 NotificationCenterPopup (ลงทะเบียน 31 ต.ค. 69)
+
+**NotificationCenterPopup** — ป๊อปอัป "การแจ้งเตือน" ของเมนู "แจ้งเตือน" ในเมนูข้าง (TOR §1.17.5.5) · ไฟล์ `src/components/notification/NotificationCenterPopup.jsx` · mount ใน `Sidebar` · API: `open` · `onClose` · `center` · `role` · ข้อมูล `getNotifications` (`src/data/userNotifications.js`) · คู่กับ §6.45 `NotificationTopToast`
+
+| ส่วน | รายละเอียด |
+|---|---|
+| หัว | "การแจ้งเตือน" + "ยังไม่อ่าน N รายการ จากทั้งหมด M รายการ" |
+| ตัวกรองหมวด | `TabCapsule variant='filter'` + `TabCountBadge` · ทั้งหมด → ยังไม่อ่าน → หมวดตาม `NOTIFICATION_CATEGORIES` · **แถวเดียวทุกขนาดจอ** เลื่อนซ้าย-ขวา (ไม่มีแถบเลื่อน) · ลูกศร ‹ › `BrandCircleSubdueIconButton` outline sm (วงกลม) ที่ปลายทั้งสองข้าง ขึ้นเฉพาะตอนล้น ฝั่งที่สุดขอบ = disabled · ล้อเมาส์แนวตั้งเลื่อนแนวนอน · หมวดที่เลือกเลื่อนเข้ามาในจอเอง (ผู้ใช้ 31 ต.ค. 69) |
+| รายการ | ไอคอนหมวด → ชื่อเรื่อง + ป้ายความรุนแรง/หมวด → รายละเอียด → ที่มา · เวลา · ยังไม่อ่าน = พื้นเขียวอ่อน + ปุ่ม "อ่านแล้ว" · กดรายการ = อ่านแล้ว + ไปหน้าต้นทาง · เลื่อนในกล่องตัวเอง |
+| ท้าย | "ปิด" + "ทำเครื่องหมายว่าอ่านแล้วทั้งหมด" (disabled เมื่อไม่มีที่ยังไม่อ่าน) |
+
+---
+
 ## 7. Mobile App · Kiosk — design system แยกของตัวเอง
 
 > แยกจาก HCIS ตั้งแต่ 24 ต.ค. 69 (ผู้ใช้: "Design system ของ HCIS, Mobile App, Kiosk แยกออกจากกัน")
