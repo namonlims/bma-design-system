@@ -15091,6 +15091,19 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 | รายการ | ไอคอนหมวด → ชื่อเรื่อง + ป้ายความรุนแรง/หมวด → รายละเอียด → ที่มา · เวลา · ยังไม่อ่าน = พื้นเขียวอ่อน + ปุ่ม "อ่านแล้ว" · กดรายการ = อ่านแล้ว + ไปหน้าต้นทาง · เลื่อนในกล่องตัวเอง |
 | ท้าย | "ปิด" + "ทำเครื่องหมายว่าอ่านแล้วทั้งหมด" (disabled เมื่อไม่มีที่ยังไม่อ่าน) |
 
+
+### 6.102 AssessmentResultCard (ลงทะเบียน 1 พ.ย. 69)
+
+**AssessmentResultCard** — การ์ด "ผลการประเมิน" กลางของทุกแบบประเมิน (ผู้ใช้ 1 พ.ย. 69 "ผลการประเมินทำให้เด่นกว่านี้ ในทุกๆแบบประเมินเลย" · ต้นแบบ = การ์ดผล ASSIST) · ไฟล์ `src/components/screening/AssessmentResultCard.jsx` · API: `title` · `summary` · `score` · `unit` (null = ไม่แสดงคะแนน) · `level` · `tone` (สี ColorfulBadge) · `complete` · `rows` [{label, value}] · `bands` [{range, label, guide?, tone?}] · `activeIndex` · `bandsTitle` · `note` · `children`
+
+| ส่วน | รายละเอียด |
+|---|---|
+| กรอบ | `--dim-stroke-200` `--border-brandPrimary-default` · พื้น `--surface-brandPrimary-quaternary` · มุม `--dim-radius-400` · padding 16/24 |
+| หัว | ซ้าย "ผลการประเมิน" (base · bold · `--text-topic-primary-title`) + สรุป 1 บรรทัด (xs secondary) · ขวา คะแนน `--type-size-2xl` bold + หน่วย + ป้ายระดับ |
+| เนื้อหา | เส้นคั่น `--border-brandPrimary-tertiary` → แถวป้าย/ค่า (แนวทางการรักษา · ข้อควรดำเนินการ) → children (ผลรายด้าน ฯลฯ) → "เกณฑ์การแปลผล" ช่วง | ระดับ | แนวทาง (จอ < 768 แนวทางลงบรรทัดใต้ระดับ) แถวที่ตรงคะแนนตัวหนาสีตามระดับ แถวอื่นสี tertiary → note |
+| ยังตอบไม่ครบ | ป้ายเทา "ยังประเมินไม่ครบ" · คะแนน "—" · สรุป "ตอบแล้ว N/M ข้อ" · เกณฑ์จางทั้งหมด |
+| ใช้ที่ | LibraryFormFields (scoreGrid) · StressAssessmentForm · MhScoreStrip · MhToolForm · แบบประเมินสารเสพติด · OAS · หอบหืด/COPD · โรคเรื้อรัง · โภชนาการ · Naranjo · พัฒนาการ · ฟื้นฟู · ลดหย่อน · อนามัยโรงเรียน · เยี่ยมบ้าน |
+
 ---
 
 ## 7. Mobile App · Kiosk — design system แยกของตัวเอง
