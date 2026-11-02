@@ -6344,6 +6344,7 @@ icon/accordion/collapsed     →  neutral/400 → #ADB2B7
 | `icon` (iconWeight) | enum | `Default` (font-weight 400) · `Darker` (font-weight 700) | `Default` |
 | `showLeadingIcon` | bool | true / false | **`true`** — 16×16 leading icon |
 | `showSubtext` | bool | true / false | **`false`** — secondary line under the label (`text/list/subtext`) |
+| `wrapText` | bool | true / false | **`false`** — label + subtext wrap onto more lines instead of `…` (long document names in a ⋮ menu must read in full · คลังศูนย์ ⋮ · ผู้ใช้ 2 พ.ย. 69) |
 | `showSwitch` | bool | true / false | **`true`** — 44×24 Switch (`surface/switch/*`) |
 | `showBadge` | bool | true / false | **`true`** — Colorful badge pill (trailing position) |
 | `showCheck` | bool | true / false | **`true`** — 16×16 check mark |
@@ -14016,7 +14017,7 @@ Props: `tabs` ([{ key, label, content }]) · `onAdd` · `onRemove` · `addLabel`
 
 ตัวเลขนับบนแท็บ สีตามสถานะ `selected` / `hovered` ของแท็บ ใช้คู่ TabPill / TabUnderline · ห้ามใช้ ColorfulBadge แทน
 
-Props: `count` · `selected` · `hovered` · `tone` (ค่าเริ่มต้น brandtag)
+Props: `count` · `selected` · `hovered` · `tone` (ค่าเริ่มต้น brandtag · `green` · `warning` = ส้ม `--surface-statusbadge-warning` / `--text-statusbadge-warning` สำหรับหัวข้อที่รอดำเนินการ เช่น "รายการที่รออนุมัติ" ในคลังศูนย์ · ผู้ใช้ 2 พ.ย. 69)
 ไฟล์: `src/components/tab/TabCountBadge.jsx` · demo: `/components/tab-count-badge`
 
 #### 6.38.8 PrivacyRevealPopup (privacy-reveal-popup)
@@ -15122,7 +15123,11 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 
 ### 6.107 ReviewRow (ลงทะเบียน 2 พ.ย. 69)
 
-**ReviewRow** — แถวป้าย/ค่า ของการ์ดสรุป · ขั้นตรวจสอบข้อมูล · ไฟล์ `src/components/list/ReviewRow.jsx` · API: `label` · `value` | children · `labelWidth` (ค่าเริ่มต้น `--dim-size-2200` 192) · `valueStyle` · ป้าย sm `--text-content-tertiary` · ค่า sm `--text-content-default` ตัดบรรทัดได้ · ค่าว่าง "—" · จอแคบค่าตกลงใต้ป้าย · ใช้ที่ ANC · ห้องยาเยี่ยมบ้าน · ตั้งค่ารายการชันสูตร · ทะเบียนยา (`PharmacyRegistryEditor`)
+**ReviewRow** — แถวป้าย/ค่า ของการ์ดสรุป · ขั้นตรวจสอบข้อมูล · ไฟล์ `src/components/list/ReviewRow.jsx` · API: `label` · `value` | children · `labelWidth` (ค่าเริ่มต้น `--dim-size-2200` 192) · `valueStyle` · ป้าย sm `--text-content-tertiary` · ค่า sm `--text-content-default` ตัดบรรทัดได้ · ค่าว่าง `emptyText` ("—") · จอแคบค่าตกลงใต้ป้ายเมื่อเหลือน้อยกว่า `valueMinWidth` (240 · 0 = แถวเดียวเสมอ) · `labelStyle` · `align='end'` ค่าชิดขวา · `divider` เส้นคั่นล่าง `--border-neutral-quaternary` + ระยะบนล่าง 8 · `padded` ระยะบนล่าง 8 · `gap` · ใช้ที่ ANC · ห้องยาเยี่ยมบ้าน · ตั้งค่ารายการชันสูตร · ทะเบียนยา (`PharmacyRegistryEditor`) · แทน `DetailRow` (2 พ.ย. 69) ใน คลังศูนย์ · ตารางเวร · CPOE order gate · คำขอส่งออกข้อมูลส่วนบุคคล · คำขอเข้าถึงข้อมูล
+
+### 6.108 StatusPill (ลงทะเบียน 2 พ.ย. 69)
+
+**StatusPill** — ป้ายสถานะจาก meta ของหน้า · ไฟล์ `src/components/badge/StatusPill.jsx` · API: `meta` { label · style | badge | tone } · `kind` colorful (`ColorfulBadge`, ค่าเริ่มต้น) | status (`StatusBadge`) · `size` (small) · `hierarchy` · `showDot` · children แทน label · ไม่มี meta = ป้ายเทา "—" · หน้าเก็บแค่ตาราง สถานะ → meta · ใช้ที่ เวชระเบียน (คิว) · คลังศูนย์ · Problem List · อนามัยโรงเรียน (`schoolHealthShared` re-export) · หน้า `/drug` (ของน้อง) ยังประกาศเอง
 
 ---
 
