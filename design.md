@@ -15098,11 +15098,31 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 
 | ส่วน | รายละเอียด |
 |---|---|
-| กรอบ | `--dim-stroke-200` `--border-brandPrimary-default` · พื้น `--surface-brandPrimary-quaternary` · มุม `--dim-radius-400` · padding 16/24 |
+| กรอบ | สีตามผล (ผู้ใช้ 2 พ.ย. 69): ผลดี teal · กลาง ๆ ฟ้า · แย่ชมพู — `--dim-stroke-200` `--surface-colorfulbadge-<t>-bold` · พื้น colorfulbadge surface 45% บนขาว · หัวข้อ `--text-colorfulbadge-<t>` (tone ของผู้เรียก green/teal → teal · yellow/orange/blue → blue · red/pink → pink, `assessmentResultTone`) · ยังไม่มีผล = `--border-brandPrimary-default` + `--surface-brandPrimary-quaternary` · มุม `--dim-radius-400` · padding 16/24 |
 | หัว | ซ้าย "ผลการประเมิน" (base · bold · `--text-topic-primary-title`) + สรุป 1 บรรทัด (xs secondary) · ขวา คะแนน `--type-size-2xl` bold + หน่วย + ป้ายระดับ |
 | เนื้อหา | เส้นคั่น `--border-brandPrimary-tertiary` → แถวป้าย/ค่า (แนวทางการรักษา · ข้อควรดำเนินการ) → children (ผลรายด้าน ฯลฯ) → "เกณฑ์การแปลผล" ช่วง | ระดับ | แนวทาง (จอ < 768 แนวทางลงบรรทัดใต้ระดับ) แถวที่ตรงคะแนนตัวหนาสีตามระดับ แถวอื่นสี tertiary → note |
 | ยังตอบไม่ครบ | ป้ายเทา "ยังประเมินไม่ครบ" · คะแนน "—" · สรุป "ตอบแล้ว N/M ข้อ" · เกณฑ์จางทั้งหมด |
 | ใช้ที่ | LibraryFormFields (scoreGrid) · StressAssessmentForm · MhScoreStrip · MhToolForm · แบบประเมินสารเสพติด · OAS · หอบหืด/COPD · โรคเรื้อรัง · โภชนาการ · Naranjo · พัฒนาการ · ฟื้นฟู · ลดหย่อน · อนามัยโรงเรียน · เยี่ยมบ้าน |
+
+### 6.103 StepCard (ลงทะเบียน 2 พ.ย. 69)
+
+**StepCard** — ตัวห่อเนื้อหาของหนึ่งขั้นในฟอร์มแบบขั้นตอน · ไฟล์ `src/components/layout/StepCard.jsx` · API: `children` · `className` · `style` · section แนวตั้ง gap `--dim-space-600` · `w-full min-w-0` · รวมจาก 12 โมดูล (ANC · สารเสพติด · ทันตกรรม · วางแผนครอบครัว · HIV/STI · วัคซีน · สุขภาพจิต · ฟื้นฟู · สังคมสงเคราะห์ · วัณโรค · เยี่ยมบ้าน · เทมเพลตคลินิก) — ไฟล์ `*Shared.jsx` re-export เท่านั้น · การ์ดขั้นของเวชระเบียน (`StepReview`) เป็นคนละชิ้น
+
+### 6.104 QuestionRow (ลงทะเบียน 2 พ.ย. 69)
+
+**QuestionRow** — คำถามหนึ่งข้อ: คำถามบรรทัดบน (sm default) ตัวเลือก (children) แถวล่าง gap 8 · ไฟล์ `src/components/forms/QuestionRow.jsx` · API: `index` · `label` · `sublabel` (xs tertiary) · `required` (* `--text-input-require`) · `zebra` (พื้น `--surface-neutral-quaternary`) · padding 12 · มุม `--dim-radius-200` · ใช้ที่ ANC · `LibraryFormFields`
+
+### 6.105 CheckList (ลงทะเบียน 2 พ.ย. 69)
+
+**CheckList** — รายการติ๊กหลายข้อ · ไฟล์ `src/components/forms/CheckList.jsx` · API: `options` (string[] | [{value,label}]) · `values` (array) · `onToggle(value)` | `onChange(next[])` · `disabled` · `layout` grid (ค่าเริ่มต้น · `columns` 1–4: < 640 = 1 · ≥ 640 = 2 · ≥ 768 = 3 · ≥ 1024 = 4) | auto (auto-fit `min` px) | wrap (แต่ละข้อสูง 44) · `columnGap` · ข้อ value `other` + `onOther` = ช่องระบุเมื่อติ๊ก (`otherLabel` · `otherValue`) · `Checkbox` แทนได้ · ใช้ที่ สารเสพติด (คัดกรอง · After care) · ทันตกรรม · วัคซีน · สุขภาพจิต · วัณโรค
+
+### 6.106 GroupLabel (ลงทะเบียน 2 พ.ย. 69)
+
+**GroupLabel** — ป้ายหัวกลุ่มย่อยในฟอร์ม (sm · `--text-content-default`) · ไฟล์ `src/components/topic/GroupLabel.jsx` · API: `weight` bold | medium · `required` · ใช้ที่ ANC (ประวัติการเจ็บป่วย) · สร้างสิทธิ์การเข้าถึง (วันเริ่มมีผล / วันสิ้นสุด)
+
+### 6.107 ReviewRow (ลงทะเบียน 2 พ.ย. 69)
+
+**ReviewRow** — แถวป้าย/ค่า ของการ์ดสรุป · ขั้นตรวจสอบข้อมูล · ไฟล์ `src/components/list/ReviewRow.jsx` · API: `label` · `value` | children · `labelWidth` (ค่าเริ่มต้น `--dim-size-2200` 192) · `valueStyle` · ป้าย sm `--text-content-tertiary` · ค่า sm `--text-content-default` ตัดบรรทัดได้ · ค่าว่าง "—" · จอแคบค่าตกลงใต้ป้าย · ใช้ที่ ANC · ห้องยาเยี่ยมบ้าน · ตั้งค่ารายการชันสูตร · ทะเบียนยา (`PharmacyRegistryEditor`)
 
 ---
 
