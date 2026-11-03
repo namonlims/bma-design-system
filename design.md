@@ -13294,6 +13294,7 @@ Props: `tabs` = `[{ key, label, count? }]` · `value` · `onChange` · `size` (`
 | Gauge | `gauge` | 15 | `value` `max` `color` `label` `sub` `size` `tooltip` | — |
 | Pyramid · PyramidPct | `pyramid` | 3 | `groups = [{ label, male, female }]` `maleColor` `femaleColor` | — |
 | ViolinSplit | `violin-split` | 1 | `groups = [{ label, male, female }]` (อายุน้อย → มาก) `maleColor` `femaleColor` `height` `unit` | hover แถว → tooltip ชาย/หญิง |
+| HeatmapGrid | `heatmap-grid` | 2 | `rows[]` `cols[]` `values[row][col]` `unit` `ariaLabel` `formatCol` — 6 ระดับสีจาก brand palette · hover/แตะแสดงค่า | — |
 | Pie | `pie` | 1 | `slices = [{ value, color, label }]` `size` | `activeIndex` + `onSliceClick` |
 | Reveal | `reveal` | 11 | `delay` `threshold` — fade + slide-up ครั้งเดียวเมื่อเลื่อนถึง | — |
 
@@ -13332,7 +13333,8 @@ Top10Short) ยังอยู่ในกลุ่ม graph ตามเดิ�
 | DashboardHeaderTools | `dashboard-header-tools` | ปุ่มมาตรฐานเรียงคงที่ [แชร์] [ตั้งค่าเป้าหมาย] [นำส่งออกรายงาน] (15 ก.ย. 69) แชร์ → `DashboardSharePopup` · เป้าหมาย → `DashboardTargetsPopup` (localStorage ผ่าน `useDashboardTargets`) หรือ `targets.onOpen` | `share = { title, scope }` · `targets = { storageKey, fields[{ key,label,unit,default,min,max,direction }], current }` · `onExport` |
 | DashboardTemplateSwitcher | `dashboard-template-switcher` | ชิปเลือกเทมเพลตหน้าจอ (แทนแท็บกลุ่มแดชบอร์ด 27 ส.ค. 69) ลิสต์ = สร้างใหม่ + `screen:<key>` 5 หน้าจอ + เทมเพลตผู้ใช้ · ขนาด lg เท่าชิปตัวกรอง | `value` (`screenValue(key)`) `onSelectTemplate` `onCreate` `onApply` `templates` `options` |
 | DashboardSubNav | `dashboard-sub-nav` | TabUnderline ข้ามหน้ากลุ่ม §1.20 เรียงตาม TOR (14 ก.ย. 69) · `BASE_NAV_LINKS` static + `data/dashboardNavLinks.js` รายบทบาท (prop `links`) | `links` (อ่าน location) |
-| DataSourceStrip | `data-source-strip` | แถบสถานะ Read Replica §1.20.9 (ปกติ/ล่าช้า · sync ล่าสุด · ประวัติ) | `scopeLabel` |
+| DataSourceStrip | `data-source-strip` | แถบสถานะ Read Replica §1.20.9 (ปกติ/ล่าช้า · sync ล่าสุด · ประวัติ) · QueuePageShell วางให้เองทุกหน้า `/dashboard/*` (ยกเว้น `/dashboard/reports`) — ปิดด้วย `dataSource={false}` (2 พ.ย. 69) | `scopeLabel` · shell: `dataSource` `dataSourceScope` |
+| ChartFormulaTip · ChartTitleWithFormula | `chart-formula-tip` | วิธีคำนวณ/สูตรของกราฟ = ⓘ 14px หลังชื่อกราฟ + tooltip TooltipGroups กลุ่ม "วิธีคำนวณ" แทนบรรทัดสูตรใน hint (2 พ.ย. 69) · ChartPanel ทั้ง 2 kit รับ `formula` | `title` `formula` (ข้อความ \| `[[label, value]]`) |
 | StatTile · StatTileRow | `stat-tile` | ตัวเลข KPI + ป้าย (+ หน่วย โทน hint) กริด 2/3/4 · ตัวเลขใช้ `--type-family-heading-content` ไม่ใช่ Mitr (เลข 0 มีขีดทับ 25 ส.ค. 69) | `label` `value` `unit` `tone` (default/info/warning/danger) `hint` · Row: `columns` `framed` |
 | ChartPanel · ChartsRow · EmptyChartNote | `chart-panel` | กล่องกราฟหนึ่งใบ (deep-link `#id` + กะพริบ) · แถวกล่องเท่ากัน · สถานะว่างมาตรฐาน | `id` `title` `hint` `actions` `alignContent` (center/start) `framed` · Empty: `text` `hint` `icon` |
 | SummaryBannerCard | `summary-banner-card` | การ์ดสรุปแถวแรกใต้หัวหน้าจอ = WidgetCard + `SummaryCardsBar variant=banner` (14 ก.ย. 69) | `cards` (รูปแบบ SummaryCardsBar) `columns` |
@@ -13855,6 +13857,14 @@ chrome ของการ์ดวิดเจ็ตทุกใบบนแด�
 
 Props: `scopeLabel`  
 ไฟล์: `src/components/dashboard/DataSourceStrip.jsx` · demo: `/components/data-source-strip`
+วางอัตโนมัติ: `QueuePageShell` ทุกหน้า `/dashboard/*` (`isDashboardReportPath`) ยกเว้นหน้ารวมรายงาน `/dashboard/reports` · ปิด `dataSource={false}` · ขอบเขต `dataSourceScope` · หน้า `/dashboard/overview` (ไม่ใช้ shell) วางเอง · ปุ่มตกบรรทัดบนจอแคบ
+
+#### 6.37.68a ChartFormulaTip (chart-formula-tip)
+
+วิธีคำนวณของกราฟเป็นไอคอน ⓘ (14px `--icon-neutral-tertiary`) หลังชื่อกราฟ + Tooltip light ที่มี TooltipGroups (ชื่อกราฟ → กลุ่ม "วิธีคำนวณ" แถว label/value) แทนบรรทัดสูตรใต้ชื่อกราฟ · แตะได้บนจอสัมผัส (`.mih-hit-44`).
+
+Props: `title` `formula` (ข้อความ = แถว "สูตร" หรือ `[[label, value], …]`) · `ChartTitleWithFormula` = ชื่อ + ไอคอน (ไม่มี formula = ชื่อเดิม) · `ChartPanel` ของ `dashboardReportKit` / `dashboardReportKitFramed` รับ `formula`  
+ไฟล์: `src/components/dashboard/ChartFormulaTip.jsx` · demo: `/components/chart-formula-tip`
 
 **dashboard (report kit)**
 
@@ -14997,6 +15007,29 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 | "มาฟังผล" | `ResultsVisitBadge` = ข้อความ xs `--text-info-default` + hover `TooltipGroups` (ส่งจาก · ผู้ส่ง · เวลา · แพทย์ · นัดพบแพทย์) |
 | "มารับยาแทน" | `ProxyPickupText` = ข้อความ xs `--text-info-default` (ไม่มี "· ข้ามคัดกรอง") |
 | ระยะ | ระหว่างรายการ 6 (`--dim-space-150`) · ตัดบรรทัดได้ |
+
+### 6.95 ViewPills (ลงทะเบียน 3 พ.ย. 69)
+
+**ViewPills** — แถวปุ่มสลับมุมมองในการ์ด/แผงกราฟ (`TabBar` + `TabPill`) · ไฟล์ `src/components/tab/ViewPills.jsx` · API: `options=[{ value, label }]` · `value` · `onChange` · `label` (aria) · `style`
+· วางบนสุดของเนื้อหาการ์ด ไม่วางในแถบหัว (หัวการ์ดไม่ตัดบรรทัด จอ 390 ชื่อถูกบีบ) · จอแคบเลื่อนแนวนอนในกล่องตัวเอง · ใช้ที่ `DashboardCards` (สิทธิ · ปิรามิด · 21 กลุ่มโรค) · Dashboard ระดับกอง · รายงานผู้บริหาร · เภสัชกรรม · คลินิกพิเศษ
+
+### 6.96 DraftBadge (ลงทะเบียน 3 พ.ย. 69)
+
+**DraftBadge** — ป้าย "ร่าง · รอ <หน่วยงาน>" บนการ์ดที่ยังใช้ข้อมูลจำลองเพราะรอนิยาม/รหัส/เกณฑ์ · ไฟล์ `src/components/badge/DraftBadge.jsx` · API: `waitFor` (ข้อความหน่วยงาน · ไม่ส่ง = "รอนิยาม") · `ColorfulBadge` orange small secondary · วางที่ `actions`/`action` ของ ChartPanel
+
+### 6.97 SortTable (ลงทะเบียน 3 พ.ย. 69)
+
+**SortTable** — `Table` เรียงได้ทุกคอลัมน์ที่มี accessor + แบ่งหน้า · ไฟล์ `src/components/table/SortTable.jsx` · API: `columns` · `rows` (ต้องมี `id`) · `accessors={ [key]: (row) => value }` · `pageSize` (10) · คอลัมน์ที่ไม่มี accessor = `sortable: false`
+
+### 6.98 StandardReportShell (ลงทะเบียน 3 พ.ย. 69)
+
+**StandardReportShell** + `useStandardReportScope` — โครงหน้ารายงาน `/dashboard/*` แถวตัวกรองมาตรฐาน · ไฟล์ `src/templates/StandardReportShell.jsx`
+· แถวชิป: Template · `chipsBefore` · ปีงบประมาณ · เดือน (`hideMonth`) · ศบส. · โซนสุขภาพ · เขต (`hideArea`) · `chipsAfter` · "ล้างตัวกรอง" (ล้างเดือน + พื้นที่ + `onClearExtra` เมื่อ `extraActive`)
+· ผอ.ศูนย์ = ล็อกศูนย์ตนเอง ซ่อนชิปพื้นที่ · นำส่งออก = `reportsCatalog` → `ExportFormatPopup` + SuccessPopup
+· hook คืน `fiscalYear` · `scope` · `centers` (ทะเบียนพื้นที่ 69 ศูนย์ ผ่าน `providerCentersIn`) · `period` · `periodKey` · `byCenter` · `locked`
+· แท็บระดับหน้า `tabs` · `activeTab` · `onTabChange` (ส่งต่อ QueuePageShell · ไม่ส่ง = ไม่มีแท็บ)
+· `filterKeys` = ชิปที่เปิด (ค่าตั้งต้น เดือน · ศบส. · โซน · เขต) · `STANDARD_FILTER_KEYS` = "มาตรฐานกลาง" ของ wireframe คทง.11: เดือน · ช่วงวันที่ · ศบส. · ประเภทหน่วยบริการ · กลุ่มเขต · โซน · เขต · แขวง · สิทธิ · อาชีพ · กลุ่มอายุ · เพศ · `filterLabels` เปลี่ยนชื่อชิป · hook คืน `dateFilter` · `demoShare`
+· ใช้ที่ รายงานงานพยาบาล · WBC · โรคจากสิ่งแวดล้อม · ทะเบียนรายงาน · รายงานเภสัชกรรม (`/dashboard/reports/pharmacy`)
 
 ---
 
