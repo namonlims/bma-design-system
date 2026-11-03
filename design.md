@@ -15145,6 +15145,10 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 
 **BreastCancerScreening** — แบบคัดกรองมะเร็งเต้านม · ไฟล์ `src/components/screening/BreastCancerScreening.jsx` · export: default `BreastCancerScreening` (`patient` · `readOnly` · `onAssessedChange`; อ่าน/เขียน screening section `breast`) · `BreastExamFields` (`data` · `setData` · `readOnly` · `hn` · `hideRisks` · `hideBse` · `showSelfRecords` · `sideDetail` — ผลตรวจรายข้าง + ภาพตำแหน่ง 12 นาฬิกา) · `BreastRiskFactorsFields` (`hideTitle`; ผลใน `AssessmentResultCard`) + `breastRiskSummary` · `BseTeachingFields` = "แบบประเมินการตรวจเต้านมด้วยตนเอง" รายการเดียว 8 ข้อ: แต่ละข้อ Checkbox "สอนแล้ว" (กลางแนวตั้งเท่าปุ่ม) + ผ่าน/ไม่ผ่าน · "สอนครบทุกข้อ" · ป้าย สอนแล้ว N/8 · ประเมินแล้ว N/8 · จอ < 640 กล่อง+ปุ่มลงใต้ข้อความ · `BseSelfRecordTable` (`hn`, ผลตรวจด้วยตนเองจากแอป) · ใช้ที่ วางแผนครอบครัว · ฝากครรภ์ · คัดกรอง OPD · แนบผลตรวจย้อนหลัง (`retroExamForms`) · หน้าตรวจรักษา (ผู้ใช้ 3 พ.ย. 69 ข้อ 1ก) · demo `/components/breast-cancer-screening`
 
+### 6.120 TbHivLinkAlert (ลงทะเบียน 3 พ.ย. 69)
+
+**TbHivLinkAlert** — แถบแจ้งเตือน (`Alert`) ผู้ป่วยที่อยู่ทั้งทะเบียนวัณโรคและคลินิก HIV · ไฟล์ `src/components/clinic/TbHivLinkAlert.jsx` · ข้อมูล `tbHivLinkOf(hn)` + `TB_HIV_DOSE_ALERT` (`src/data/tbHivLink.js`) · API: `hn` · `side` hiv (แสดงข้อมูลฝั่งวัณโรค: TB No. · สูตรยา) | tb (แสดงฝั่ง HIV ด้วยเลข UIC ไม่แสดงชื่อ · ข้อมูลลับ §1.4.2) · ได้ยา Rifamycin ร่วมกับ ARV = โทนเตือน + หัวข้อ `TB_HIV_DOSE_ALERT.title` · การ์ดรายละเอียด 2 กลุ่ม "ประวัติยา TPT (IPT)" · "ผลเลือดล่าสุด" (label/value · เส้นคั่น `--border-neutral-quaternary`) · ไม่มีข้อมูลทั้งสองฝั่ง = ไม่แสดง · ใช้ที่ แท็บ "ข้อมูล HIV" (`HivExamDiagnosisTab`) · แท็บการวินิจฉัยวัณโรค (`TbExamDiagnosisTab`) (Checklist คทง.9 TB-10 · ผู้ใช้ 3 พ.ย. 69 DSก) · demo `/components/tb-hiv-link-alert`
+
 ---
 
 ## 7. Mobile App · Kiosk — design system แยกของตัวเอง
