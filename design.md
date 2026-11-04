@@ -15180,6 +15180,8 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 
 ### 6.120 TbHivLinkAlert (ลงทะเบียน 3 พ.ย. 69)
 
+ใช้ 4 ที่ (อัปเดต 4 พ.ย. 69): แท็บ "ข้อมูล HIV" · แท็บ "การวินิจฉัยวัณโรค" · ขั้นสั่งการรักษา (CPOE) ของ 2 คลินิก · รายละเอียดเพิ่มกลุ่ม "ยาที่กำลังกิน" + "ข้อพิจารณาเพิ่มโดส"
+
 **TbHivLinkAlert** — แถบแจ้งเตือน (`Alert`) ผู้ป่วยที่อยู่ทั้งทะเบียนวัณโรคและคลินิก HIV · ไฟล์ `src/components/clinic/TbHivLinkAlert.jsx` · ข้อมูล `tbHivLinkOf(hn)` + `TB_HIV_DOSE_ALERT` (`src/data/tbHivLink.js`) · API: `hn` · `side` hiv (แสดงข้อมูลฝั่งวัณโรค: TB No. · สูตรยา) | tb (แสดงฝั่ง HIV ด้วยเลข UIC ไม่แสดงชื่อ · ข้อมูลลับ §1.4.2) · ได้ยา Rifamycin ร่วมกับ ARV = โทนเตือน + หัวข้อ `TB_HIV_DOSE_ALERT.title` · การ์ดรายละเอียด 2 กลุ่ม "ประวัติยา TPT (IPT)" · "ผลเลือดล่าสุด" (label/value · เส้นคั่น `--border-neutral-quaternary`) · ไม่มีข้อมูลทั้งสองฝั่ง = ไม่แสดง · ใช้ที่ แท็บ "ข้อมูล HIV" (`HivExamDiagnosisTab`) · แท็บการวินิจฉัยวัณโรค (`TbExamDiagnosisTab`) (Checklist คทง.9 TB-10 · ผู้ใช้ 3 พ.ย. 69 DSก) · demo `/components/tb-hiv-link-alert`
 
 ### 6.121 UnitConversionTip (ลงทะเบียน 4 พ.ย. 69)
@@ -15191,6 +15193,32 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 **CpoeCancelPrescription** — ปุ่ม "ยกเลิกใบสั่งยา" + ป๊อปอัปเลือกใบ + เหตุผล (บังคับ) ให้แพทย์ยกเลิกใบยาที่ส่งห้องยาแล้ว จากตารางสั่งยา (CPOE) · TOR 1.9.2.10 · ไฟล์ `src/components/pharmacy/CpoeCancelPrescription.jsx` · API: `hn` · ไม่มีใบที่ยกเลิกได้ = ไม่แสดงปุ่ม · ยืนยัน → `cancelPharmacyOrder` (`src/data/pharmacyQueue.js`) คิวห้องยา "แพทย์ยกเลิก" + แถบแจ้งเตือนแดงในหน้าจ่ายยา + audit · ใบที่จ่ายแล้ว/ไม่มารับยกเลิกไม่ได้ · ใช้ที่ `AncStep5Orders` (ข้างปุ่ม Med-Reconciliation / Re-Medicine)
 
 ---
+
+### 6.123 ClinicFollowUpFlag (ลงทะเบียน 4 พ.ย. 69)
+
+**ClinicFollowUpFlag** — ปุ่มติ๊ก "ผู้ป่วยรายนี้ต้องติดตามการดูแล" ใต้การวินิจฉัย หน้าตาเดียวกับ `PsychDoctorFlag` · ไฟล์ `src/components/clinic/ClinicFollowUpFlag.jsx` · ข้อมูล `src/data/clinicFollowUpFlags.js` · props `clinic` (tb | std) · `hn` · `readOnly` · `setForm` · แพทย์เท่านั้นที่ติ๊กได้ · บทบาทอื่นเห็นเมื่อถูกติ๊กแล้ว แบบกดไม่ได้ · ใช้ 2 ที่: หน้าบันทึกคลินิกวัณโรค · คลินิกรักปลอดภัย ผ่าน `dxExtra` ของ `CpoeExamDiagnosisStep`
+
+### 6.124 ClinicDirectoryFollowUp (ลงทะเบียน 4 พ.ย. 69)
+
+**ClinicDirectoryFollowUp** — ชุดแท็บย่อยของแท็บรายชื่อผู้ป่วยทั้งหมด คลินิกที่ใช้การติ๊กติดตาม · ไฟล์ `src/components/clinic/ClinicDirectoryFollowUp.jsx`
+
+| ส่วน | หน้าที่ |
+|---|---|
+| `useClinicDirectoryTabs(clinic, rows, { active, scope, onChange })` | คืน `bar` · `subTab` · `filterRows` · `followRows` · `isFollowUp` |
+| `ClinicFollowUpTable` | ตารางแท็บย่อย "ติดตามการดูแล" (`clinic` · `rows` · `query`) |
+| `ClinicFollowUpMark` | ไอคอนหลังชื่อ ส่งเข้า `MaskedWorklistName extraMarks` |
+| `clinicFollowUpIdBadges(clinic, hn)` | ป้าย `idBadges` บน `PatientCard` |
+| `clinicMissedOverTab(clinic)` + `ClinicMissedOverPanel` | แท็บ "ผู้ป่วยขาดนัดเกิน 1 เดือน" + เนื้อหาแท็บ |
+
+ใช้ 5 หน้า: `/clinic/tb` · `/clinic/tb/screening` · `/clinic/hiv-sti` · `/clinic/hiv-sti/screening` · `/exit`
+
+### 6.125 MissedFollowUpTable (ลงทะเบียน 4 พ.ย. 69)
+
+**MissedFollowUpTable** — ตารางผู้ป่วยขาดนัดเกิน 1 เดือน + ป๊อปอัปบันทึกการติดตาม · ไฟล์ `src/components/clinic/MissedFollowUpTable.jsx` (ย้ายจาก `src/pages/clinic/chronic`) · ข้อมูล `src/data/chronicMissedFollowUp.js` · props `clinicCode` · `readOnly` · `onChanged` · `maskName` (คลินิกข้อมูลลับ) · `byName` (ชื่อผู้บันทึก) · ใช้ที่คลินิกเบาหวาน · ความดัน · วัณโรค · รักปลอดภัย
+
+### 6.126 TbReferralFields (ลงทะเบียน 4 พ.ย. 69)
+
+**TbReferralFields** — ชุดช่องแบบฟอร์มการส่งต่อผู้ป่วยวัณโรค (TB09) แสดงแทนช่องปกติของ "ส่งต่อภายนอก" เมื่อติ๊ก "ผู้ป่วยวัณโรค" · ไฟล์ `src/components/clinic/TbReferralFields.jsx` · ข้อมูล `src/data/tb09Referral.js` · ใบพิมพ์ `src/utils/tb09Print.js` · props `value` (externalReferral) · `onChange(patch)` · `patient` · `cardPatient` · `hn` · `readOnly` · ตัวช่วย `useIsTbReferral(ref, hn)` · `tb09ValuesOf(ref, hn)` · `value.abroad` = ใบภาษาอังกฤษ + ช่องที่ส่งต่อ · ที่รับรักษาต่อ · ที่อยู่ · ใช้ที่ `ExternalReferFields` (ปุ่มหัวแฟ้ม · ป๊อปอัป "ส่งไปยัง" · ฟอร์มจำหน่าย)
 
 ## 7. Mobile App · Kiosk — design system แยกของตัวเอง
 
