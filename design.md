@@ -15220,6 +15220,10 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 
 **TbReferralFields** — ชุดช่องแบบฟอร์มการส่งต่อผู้ป่วยวัณโรค (TB09) แสดงแทนช่องปกติของ "ส่งต่อภายนอก" เมื่อติ๊ก "ผู้ป่วยวัณโรค" · ไฟล์ `src/components/clinic/TbReferralFields.jsx` · ข้อมูล `src/data/tb09Referral.js` · ใบพิมพ์ `src/utils/tb09Print.js` · props `value` (externalReferral) · `onChange(patch)` · `patient` · `cardPatient` · `hn` · `readOnly` · ตัวช่วย `useIsTbReferral(ref, hn)` · `tb09ValuesOf(ref, hn)` · `value.abroad` = ใบภาษาอังกฤษ + ช่องที่ส่งต่อ · ที่รับรักษาต่อ · ที่อยู่ · ใช้ที่ `ExternalReferFields` (ปุ่มหัวแฟ้ม · ป๊อปอัป "ส่งไปยัง" · ฟอร์มจำหน่าย)
 
+### 6.127 EmrNapUnlock (ลงทะเบียน 5 พ.ย. 69)
+
+**EmrNapUnlock** — ช่องเลข NAP + ปุ่มปลดล็อกในป๊อปอัปขอเข้าถึงข้อมูลข้ามศูนย์ · ไฟล์ `src/components/patient/EmrNapUnlock.jsx` · props `hn` · `center` · `onUnlocked` · แสดงกับทุกรายเสมอเพื่อไม่บอกว่ารายนี้อยู่คลินิก HIV · เลขตรงเปิดได้ทันทีและลง Log · ใช้ 2 ที่ใน `TreatmentSteps.jsx`
+
 ## 7. Mobile App · Kiosk — design system แยกของตัวเอง
 
 > แยกจาก HCIS ตั้งแต่ 24 ต.ค. 69 (ผู้ใช้: "Design system ของ HCIS, Mobile App, Kiosk แยกออกจากกัน")
