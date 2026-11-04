@@ -15182,6 +15182,14 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 
 **TbHivLinkAlert** — แถบแจ้งเตือน (`Alert`) ผู้ป่วยที่อยู่ทั้งทะเบียนวัณโรคและคลินิก HIV · ไฟล์ `src/components/clinic/TbHivLinkAlert.jsx` · ข้อมูล `tbHivLinkOf(hn)` + `TB_HIV_DOSE_ALERT` (`src/data/tbHivLink.js`) · API: `hn` · `side` hiv (แสดงข้อมูลฝั่งวัณโรค: TB No. · สูตรยา) | tb (แสดงฝั่ง HIV ด้วยเลข UIC ไม่แสดงชื่อ · ข้อมูลลับ §1.4.2) · ได้ยา Rifamycin ร่วมกับ ARV = โทนเตือน + หัวข้อ `TB_HIV_DOSE_ALERT.title` · การ์ดรายละเอียด 2 กลุ่ม "ประวัติยา TPT (IPT)" · "ผลเลือดล่าสุด" (label/value · เส้นคั่น `--border-neutral-quaternary`) · ไม่มีข้อมูลทั้งสองฝั่ง = ไม่แสดง · ใช้ที่ แท็บ "ข้อมูล HIV" (`HivExamDiagnosisTab`) · แท็บการวินิจฉัยวัณโรค (`TbExamDiagnosisTab`) (Checklist คทง.9 TB-10 · ผู้ใช้ 3 พ.ย. 69 DSก) · demo `/components/tb-hiv-link-alert`
 
+### 6.121 UnitConversionTip (ลงทะเบียน 4 พ.ย. 69)
+
+**UnitConversionTip** — ครอบตัวเลข/ข้อความจำนวนยา ชี้หรือแตะแล้วขึ้นทูลทิปตารางหน่วยของยา (หลายหน่วย + อัตราแปลง เช่น 1 กล่อง = 10 แผง · 1 กล่อง = 1,000 เม็ด · 1 แผง = 100 เม็ด) · TOR 1.9.1.2 · ไฟล์ `src/components/pharmacy/UnitConversionTip.jsx` · ข้อมูล `unitConversionRows(drugName)` (`src/data/pharmacyUnitTable.js` อ่านจากทะเบียนยา: `unit` · `packSize` + `UNIT_CONVERSION_DEFAULTS`) · API: `drugName` · `children` (ข้อความที่ครอบ) · ยาที่ไม่มีข้อมูลบรรจุ = แสดง children ตามเดิมไม่มีทูลทิป · ทูลทิป `TooltipGroups` variant light · content เก็บต่อชื่อยาระดับ module (กติกา tooltip ในตาราง) · ใช้ที่ช่อง "ที่แพทย์สั่ง" หน้าจ่ายยา `PharmacyDispensePage` · ใช้ซ้ำได้ที่ใบเบิก/ใบรับคลังศูนย์
+
+### 6.122 CpoeCancelPrescription (ลงทะเบียน 4 พ.ย. 69)
+
+**CpoeCancelPrescription** — ปุ่ม "ยกเลิกใบสั่งยา" + ป๊อปอัปเลือกใบ + เหตุผล (บังคับ) ให้แพทย์ยกเลิกใบยาที่ส่งห้องยาแล้ว จากตารางสั่งยา (CPOE) · TOR 1.9.2.10 · ไฟล์ `src/components/pharmacy/CpoeCancelPrescription.jsx` · API: `hn` · ไม่มีใบที่ยกเลิกได้ = ไม่แสดงปุ่ม · ยืนยัน → `cancelPharmacyOrder` (`src/data/pharmacyQueue.js`) คิวห้องยา "แพทย์ยกเลิก" + แถบแจ้งเตือนแดงในหน้าจ่ายยา + audit · ใบที่จ่ายแล้ว/ไม่มารับยกเลิกไม่ได้ · ใช้ที่ `AncStep5Orders` (ข้างปุ่ม Med-Reconciliation / Re-Medicine)
+
 ---
 
 ## 7. Mobile App · Kiosk — design system แยกของตัวเอง
