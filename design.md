@@ -14258,7 +14258,7 @@ Props: `items` ([{ key · node · notify · menuGroup · pinEnd }]) · `menuOnly
 
 ห่อฟอร์มให้ดูอย่างเดียวแบบ informative — เต็มสี ไม่จาง · กดได้เฉพาะแท็บ (`role="tab"`) และจุดที่ติด `data-view-allowed`
 `asText` = แสดงเป็นข้อความล้วน: ตัวเลือกที่ไม่ได้เลือกซ่อน · ช่องกรอกถอดกรอบ · หัวข้อ sm secondary ซ้าย / คำตอบ base medium ขวา (จอ < 640 ซ้อนบน-ล่าง)
-Props: `asText` · `className` · `style` · ใช้ `data-view-hidden` ซ่อนแถวเพิ่มรายการ
+Props: `asText` · `className` · `style` · ใช้ `data-view-hidden` ซ่อนแถวเพิ่มรายการ · `data-view-value` ให้ค่าขนาดเดียวกับคำตอบ Checkbox (ค่าในปุ่มตัวเลือกที่กำหนดขนาดเอง)
 
 #### 6.42.14 PageHeaderInfoPanel (page-header-info-panel)
 
