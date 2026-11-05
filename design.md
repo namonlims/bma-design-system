@@ -15257,6 +15257,22 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 
 **EmrNapUnlock** — ช่องเลข NAP + ปุ่มปลดล็อกในป๊อปอัปขอเข้าถึงข้อมูลข้ามศูนย์ · ไฟล์ `src/components/patient/EmrNapUnlock.jsx` · props `hn` · `center` · `onUnlocked` · แสดงกับทุกรายเสมอเพื่อไม่บอกว่ารายนี้อยู่คลินิก HIV · เลขตรงเปิดได้ทันทีและลง Log · ใช้ 2 ที่ใน `TreatmentSteps.jsx`
 
+### 6.128 DrugBoard (ลงทะเบียน 6 พ.ย. 69)
+
+**DrugBoard** — บอร์ดยาบนสุดของขั้นสั่งการรักษา: การ์ด "ตามกลุ่มยา" + การ์ด Medication Reconciliation · ไฟล์ `src/components/clinic/DrugBoard.jsx` · props `hn` · `patient` · `columns` · `form` · `readOnly` · `api` (จาก `ClinicOrdersPanel orderBoard`) · กลุ่มยาต่อคลินิก = `chronicDrugBoardColumns(clinicCode)` ใน `src/data/drugBoard.js` · ใช้ที่เบาหวาน · ความดัน · หอบหืด/COPD · วัณโรค · HIV · วัณโรคและ HIV โหลดผ่าน `ClinicDrugBoardLazy`
+
+### 6.129 NoticeLine (ลงทะเบียน 6 พ.ย. 69)
+
+**NoticeLine** — แถบแจ้งเตือนหนึ่งบรรทัดในหน้าสั่งการรักษา พื้นและกรอบ 1px โทนเดียวกัน · ไฟล์ `src/components/alert/NoticeLine.jsx` · props `tone` info | warning | danger | pink · `icon` · `trailing` · children · หลายแถบซ้อนกันห่าง 8px · ใช้ที่ `ClinicOrdersPanel` · ฝากครรภ์
+
+### 6.130 OrderSetCreatePopup (ลงทะเบียน 6 พ.ย. 69)
+
+**OrderSetCreatePopup** — ป๊อปอัปสร้าง/แก้ไขชุดยาของฉัน: ชื่อชุด · คำอธิบาย · ช่องค้นหา + ตารางยาชุดเดียวกับการ์ดสั่งการรักษา เก็บใน draft ของป๊อปอัป ไม่แตะใบสั่งของผู้ป่วย · ไฟล์ `src/components/clinic/ClinicOrdersPanel.jsx` · props `patient` · `searchOptions` · `editChip` · `onClose` · เปิดจากเมนู "ชุดที่ฉันสร้างเอง" และ "แก้ไขชุดนี้"
+
+### 6.131 OrderSetCard (ลงทะเบียน 6 พ.ย. 69)
+
+**OrderSetCard · OrderSetCardGrid** — การ์ดชุดยาในป๊อปอัป "ชุดสั่งสำเร็จรูป" และ "ชุดที่ฉันสร้างเอง": ชื่อชุด · คำอธิบาย · รายการยาพร้อมรูปในกล่องขาวใบเดียว · ปุ่มเพิ่ม/ถอด · ไอคอนแก้ไข · คัดลอก · ลบ · ไฟล์ `src/components/clinic/OrderSetCard.jsx` · `OrderSetCardGrid` props `chips` · `card` · แถวละ 3 ใบ จอแคบลดเป็น 2 และ 1 · ใช้ที่เบาหวาน · ความดัน · หอบหืด/COPD · วัณโรค · HIV
+
 ## 7. Mobile App · Kiosk — design system แยกของตัวเอง
 
 > แยกจาก HCIS ตั้งแต่ 24 ต.ค. 69 (ผู้ใช้: "Design system ของ HCIS, Mobile App, Kiosk แยกออกจากกัน")
