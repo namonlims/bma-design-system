@@ -15162,6 +15162,37 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 
 **StatusPill** — ป้ายสถานะจาก meta ของหน้า · ไฟล์ `src/components/badge/StatusPill.jsx` · API: `meta` { label · style | badge | tone } · `kind` colorful (`ColorfulBadge`, ค่าเริ่มต้น) | status (`StatusBadge`) · `size` (small) · `hierarchy` · `showDot` · children แทน label · ไม่มี meta = ป้ายเทา "—" · หน้าเก็บแค่ตาราง สถานะ → meta · ใช้ที่ เวชระเบียน (คิว) · คลังศูนย์ · Problem List · อนามัยโรงเรียน (`schoolHealthShared` re-export) · หน้า `/drug` (ของน้อง) ยังประกาศเอง
 
+### 6.109 SplitCard (ลงทะเบียน 2 พ.ย. 69)
+
+**SplitCard** — การ์ดขาวของขั้นแบ่งซ้าย-ขวา (ตรวจร่างกาย | วินิจฉัย) และการ์ดเต็มแถวใต้คู่นั้น · ไฟล์ `src/components/card/SplitCard.jsx` · API: `SPLIT_CARD_STYLE` (flex 1 · padding `--dim-space-600` · gap `--dim-space-600` · radius `--dim-radius-400` · เส้น `--border-neutral-quaternary` · `--shadow-brand-drop-bottom-200`) · `SplitCardTitle` (base · bold · `--text-brandPrimary-default`) · default `SplitCard` (`as` · `title` · `className` · `style`) · รวมจาก 9 สำเนา: ClinicRecordSteps · ANC · OPD · วัคซีน · สารเสพติด · วางแผนครอบครัว · วัณโรค · สุขภาพจิต · ทันตกรรม (ผู้ใช้ 2 พ.ย. 69 ข้อ 6ก) · demo `/components/split-card`
+
+### 6.110 ReviewCard (ลงทะเบียน 2 พ.ย. 69)
+
+**ReviewCard** — การ์ดสรุปหนึ่งหัวข้อในขั้น "ตรวจสอบข้อมูล" + ปุ่ม "แก้ไข" · ไฟล์ `src/components/card/ReviewCard.jsx` · API: `title` · `icon` · `onEdit` · `editLabel` · `rows` [[label, value, span?]] (ว่าง = "—" · value เป็น JSX ได้) · `layout` stack (ป้ายบน ค่าล่าง · กริด auto-fill ≥ 240 หรือ `columns` N = 1 · 2 ที่ 640 · N ที่ 1024) | inline (`ReviewRow`, `labelWidth`) · children · รวมจาก ANC ทะเบียนฝากครรภ์ · เยี่ยมบ้าน · ชุมชน · ทะเบียนบ้าน · ประเมินครัวเรือน · สุขภาพเด็กดี (ผู้ใช้ 2 พ.ย. 69 ข้อ 5ก) · demo `/components/review-card`
+
+### 6.111 ReviewSection (ลงทะเบียน 2 พ.ย. 69)
+
+**ReviewSection** — การ์ดหนึ่งขั้นในขั้น "ตรวจสอบข้อมูล" ของฟอร์มแบบขั้นตอน: หัวข้อ (+ `stepNumber`) · ป้ายสถานะ (ครบแล้ว · ขาด N รายการ · บันทึกแล้ว · ยังไม่มีบันทึก · ยืนยันแล้ว) · ปุ่ม "แก้ไข" · บรรทัด "ยังไม่ได้กรอก: …" · ไฟล์ `src/components/card/ReviewSection.jsx` · API: `title` · `stepNumber` · `missing` · `optional` · `empty` · `onEdit` · `editLabel` · `onConfirm` + `audit` (ผู้ป่วยเก่า "ยืนยัน (ใช้ข้อมูลเดิม)") · เข้ากันกับผู้เรียกเดิม `stepIndex` + `onJumpToStep` · รวม คัดกรองกลาง (`ScreeningStep5`) + สรุปสั่งการรักษา (`CpoeReviewStep`) — ตรวจสุขภาพ · วัณโรค · สารเสพติด · ความดัน/ทันตกรรมใช้ผ่านสองไฟล์นี้ (ผู้ใช้ 2 พ.ย. 69 ข้อ 7ก) · demo `/components/review-section`
+
+### 6.112 ClinicOrdersPanel (ลงทะเบียน 2 พ.ย. 69)
+
+**ClinicOrdersPanel** — ตารางสั่งการรักษา (ยา · วัคซีน · หัตถการ · เวชภัณฑ์ · แท็บแฟ้ม CPOE) + `NextAppointmentBox` + `NoticeLine` + `buildMockMedicationRow` · ไฟล์ `src/components/clinic/ClinicOrdersPanel.jsx` · ย้ายจาก `AncSteps.jsx` (ANC เรียกชื่อเดิม `AncStep5Orders` / `AncNextAppointmentBox`) · ใช้ที่ OPD `/treat/record` · เทมเพลตคลินิก · สุขภาพจิต · สารเสพติด · วางแผนครอบครัว · วัคซีน · ทันตกรรม (ผู้ใช้ 2 พ.ย. 69 ข้อ 8ก)
+
+### 6.113 ClinicDiagnosisNotes (ลงทะเบียน 2 พ.ย. 69)
+
+**ClinicDiagnosisNotes** — ส่วนท้ายการ์ดวินิจฉัย: ระดับความเสี่ยง · บันทึกวินิจฉัย + ค้นรหัส (ICD-9 · ICD-10 · SNOMED CT) · ผลตรวจจากภายนอก · คำแนะนำ · แผนการคลอด (`parts` เลือกชิ้น) · ไฟล์ `src/components/clinic/ClinicDiagnosisNotes.jsx` · ย้ายจาก `AncSteps.jsx` (ANC = `AncStep4Diagnosis`) · ใช้ที่ ANC · วางแผนครอบครัว (ผู้ใช้ 2 พ.ย. 69 ข้อ 8ก)
+
+### 6.114 PatientDirectoryDetail (ลงทะเบียน 2 พ.ย. 69 · **เลิกใช้** 2 พ.ย. 69 ข้อ 8ก → ใช้ §6.115 PatientProfileView)
+
+> เลิกใช้: `/pharmacy/patients` ย้ายไป `PatientProfileView` (การ์ดเพิ่ม "ประวัติการใช้ยา" ผ่าน `openPatientProfile({ extra })`) · ไม่มีผู้เรียกแล้ว ห้ามใช้ในงานใหม่
+
+**PatientDirectoryDetail** — เนื้อหน้าผู้รับบริการเต็มหน้าหลังกดแถวในรายชื่อ: การ์ดชื่อ + HN/เพศ/อายุ + แพ้ยาและโรคประจำตัว แล้วการ์ดหัวข้อประวัติกับตารางที่ผู้เรียกส่งมา · ปุ่มย้อนกลับอยู่ที่ `QueuePageShell` `onBack` ไม่ได้อยู่ในคอมโพเนนต์นี้ · ไฟล์ `src/components/table/useVisitHistoryExpand.jsx` · API: `hn` · `name` (ว่าง = ไม่แสดงบรรทัดชื่อ) · `meta` · `hideEmr` · `historyTitle` · children · ใช้ที่ `/pharmacy/patients` (ประวัติการใช้ยา) และแผงรายชื่อผู้ป่วยทั้งหมดของคัดกรอง `ScreeningHistoryPanel` (ประวัติการคัดกรอง · `hideEmr`)
+
+### 6.115 PatientProfileView (ลงทะเบียน 2 พ.ย. 69)
+
+**PatientProfileView** — หน้าโปรไฟล์ผู้รับบริการเต็มหน้า แสดงเฉพาะกลุ่มข้อมูลที่บทบาทปัจจุบันมีสิทธิ์: `PatientCard` (ปุ่ม "ประวัติ EMR" เฉพาะบทบาทที่มีสิทธิ์) → บรรทัด "แสดงตามสิทธิ์ของ<บทบาท> · ไม่แสดง: …" → การ์ด ข้อมูลส่วนตัว · ข้อมูลการติดต่อและที่อยู่ · สิทธิการรักษา · ข้อมูลสุขภาพ (2 คอลัมน์ตั้งแต่ 1024 · 1 คอลัมน์ต่ำกว่านั้น) → ตาราง "ประวัติการคัดกรอง N ครั้ง" · ไฟล์ `src/components/patient/PatientProfileView.jsx` · สิทธิ์ `src/data/patientProfileAccess.js` (`patientProfileAccessOf(role)` → `sections` · `maskId`) · API: `hn` · `emrRequireReason` (เปิด EMR ต้องเลือกเหตุผล) · `extraTitle` + `children` (การ์ดเพิ่มท้ายหน้า เช่น ประวัติการใช้ยาของ `/pharmacy/patients`; ผ่าน store = `openPatientProfile({ extra: { title, render } })`) · เปิดผ่าน `openPatientProfile({ hn, name })` (`src/components/patient/patientProfileStore.js`) แล้ว `QueuePageShell` แทนเนื้อหาหน้าด้วยโปรไฟล์ + ชื่อเรื่อง + ปุ่มกลับ (สลับแท็บ/ออกจากหน้า = ปิด) · ใช้ที่แท็บ "รายชื่อผู้ป่วยทั้งหมด" ของทุก worklist ผ่าน `useVisitHistoryExpand` (กดแถว/ปุ่มตาต้นแถว) และ `/opd/queue` (ผู้ใช้ 2 พ.ย. 69 ข้อ 6ก) · demo `/components/patient-profile-view`
+
+
 ### 6.116 EmptyState (ลงทะเบียน 3 พ.ย. 69)
 
 **EmptyState** — กล่อง "ไม่มีข้อมูล" กลาง: ไอคอน → หัวข้อ (sm medium default) → คำอธิบาย (xs tertiary · กว้างสุด 448) → ปุ่ม · ไฟล์ `src/components/feedback/EmptyState.jsx` · API: `icon` · `title` · `subtitle` (รับชื่อเดิม `description` · `hint` · `subtext`) · `action` (node) หรือ `actionLabel` + `onAction` + `actionIcon` (BrandSubdueButton outline sm) · `variant` dashed (เส้นประ `--border-neutral-tertiary` + `--surface-card-quaternary` · ค่าเริ่มต้น) | plain · `iconTone` muted (`--icon-neutral-tertiary`) | brand (วงกลม `--surface-brandPrimary-quaternary`) · `size` sm (padding 20 · ไอคอน 24) | md (32 · 32) | lg (48 · 40 · หัวข้อ base) · `compact` = sm · `heading` = หัวข้อตัวหนาเหนือกล่อง (การ์ดกราฟ) · รวมจาก 10 สำเนา (ผู้ใช้ 3 พ.ย. 69 ข้อ 3ก): วางแผนครอบครัว · ทันตกรรม (`dentalShared` plain) · ตรวจสุขภาพ (`CheckupUi`) · อนามัยโรงเรียน (`schoolHealthShared`) · กราฟการเจริญเติบโต (`GrowthPercentileChart` · `NutritionZoneChart`) · สิทธิ (`rightsUi`) · Telemedicine (`telemedShared` lg) · ศูนย์จัดการคิว (`queueCenterShared` brand lg) · บุคลากร (`usersShared` brand) — ไฟล์ *Shared re-export พร้อม variant เท่านั้น · หน้า `/m` (Mobile) ใช้ `components/mobile/EmptyState` ของตัวเอง · demo `/components/empty-state`
@@ -15179,6 +15210,8 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 **BreastCancerScreening** — แบบคัดกรองมะเร็งเต้านม · ไฟล์ `src/components/screening/BreastCancerScreening.jsx` · export: default `BreastCancerScreening` (`patient` · `readOnly` · `onAssessedChange`; อ่าน/เขียน screening section `breast`) · `BreastExamFields` (`data` · `setData` · `readOnly` · `hn` · `hideRisks` · `hideBse` · `showSelfRecords` · `sideDetail` — ผลตรวจรายข้าง + ภาพตำแหน่ง 12 นาฬิกา) · `BreastRiskFactorsFields` (`hideTitle`; ผลใน `AssessmentResultCard`) + `breastRiskSummary` · `BseTeachingFields` = "แบบประเมินการตรวจเต้านมด้วยตนเอง" รายการเดียว 8 ข้อ: แต่ละข้อ Checkbox "สอนแล้ว" (กลางแนวตั้งเท่าปุ่ม) + ผ่าน/ไม่ผ่าน · "สอนครบทุกข้อ" · ป้าย สอนแล้ว N/8 · ประเมินแล้ว N/8 · จอ < 640 กล่อง+ปุ่มลงใต้ข้อความ · `BseSelfRecordTable` (`hn`, ผลตรวจด้วยตนเองจากแอป) · ใช้ที่ วางแผนครอบครัว · ฝากครรภ์ · คัดกรอง OPD · แนบผลตรวจย้อนหลัง (`retroExamForms`) · หน้าตรวจรักษา (ผู้ใช้ 3 พ.ย. 69 ข้อ 1ก) · demo `/components/breast-cancer-screening`
 
 ### 6.120 TbHivLinkAlert (ลงทะเบียน 3 พ.ย. 69)
+
+**TbHivLinkAlert** — แถบแจ้งเตือน (`Alert`) ผู้ป่วยที่อยู่ทั้งทะเบียนวัณโรคและคลินิก HIV · ไฟล์ `src/components/clinic/TbHivLinkAlert.jsx` · ข้อมูล `tbHivLinkOf(hn)` + `TB_HIV_DOSE_ALERT` (`src/data/tbHivLink.js`) · API: `hn` · `side` hiv (แสดงข้อมูลฝั่งวัณโรค: TB No. · สูตรยา) | tb (แสดงฝั่ง HIV ด้วยเลข UIC ไม่แสดงชื่อ · ข้อมูลลับ §1.4.2) · ได้ยา Rifamycin ร่วมกับ ARV = โทนเตือน + หัวข้อ `TB_HIV_DOSE_ALERT.title` · การ์ดรายละเอียด 2 กลุ่ม "ประวัติยา TPT (IPT)" · "ผลเลือดล่าสุด" (label/value · เส้นคั่น `--border-neutral-quaternary`) · ไม่มีข้อมูลทั้งสองฝั่ง = ไม่แสดง · ใช้ที่ แท็บ "ข้อมูล HIV" (`HivExamDiagnosisTab`) · แท็บการวินิจฉัยวัณโรค (`TbExamDiagnosisTab`) (Checklist คทง.9 TB-10 · ผู้ใช้ 3 พ.ย. 69 DSก) · demo `/components/tb-hiv-link-alert`
 
 ใช้ 4 ที่ (อัปเดต 4 พ.ย. 69): แท็บ "ข้อมูล HIV" · แท็บ "การวินิจฉัยวัณโรค" · ขั้นสั่งการรักษา (CPOE) ของ 2 คลินิก · รายละเอียดเพิ่มกลุ่ม "ยาที่กำลังกิน" + "ข้อพิจารณาเพิ่มโดส"
 
