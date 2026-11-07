@@ -15273,6 +15273,10 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 
 **OrderSetCard · OrderSetCardGrid** — การ์ดชุดยาในป๊อปอัป "ชุดสั่งสำเร็จรูป" และ "ชุดที่ฉันสร้างเอง": ชื่อชุด · คำอธิบาย · รายการยาพร้อมรูปในกล่องขาวใบเดียว · ปุ่มเพิ่ม/ถอด · ไอคอนแก้ไข · คัดลอก · ลบ · ไฟล์ `src/components/clinic/OrderSetCard.jsx` · `OrderSetCardGrid` props `chips` · `card` · แถวละ 3 ใบ จอแคบลดเป็น 2 และ 1 · ใช้ที่เบาหวาน · ความดัน · หอบหืด/COPD · วัณโรค · HIV
 
+
+### 6.133 PrescriptionConsentGate (ลงทะเบียน 6 พ.ย. 69)
+
+`src/components/consent/PrescriptionConsentGate.jsx` · ด่านความยินยอมก่อนส่งใบสั่งยา ใช้ที่ `/treat/record` และ `ClinicRecordPage` ตอน "บันทึกและส่งต่อ" · ปุ่ม "ทำแบบฟอร์ม" เปิด `ConsentFormFillPopup` ในหน้าเดิม ลงนามแล้วบันทึกเข้าทะเบียนความยินยอม · props: `gate` (ผลจาก `gateCpoeOrder`) · `patient` · `requester` · `onClose` · `onSigned`
 ## 7. Mobile App · Kiosk — design system แยกของตัวเอง
 
 > แยกจาก HCIS ตั้งแต่ 24 ต.ค. 69 (ผู้ใช้: "Design system ของ HCIS, Mobile App, Kiosk แยกออกจากกัน")
