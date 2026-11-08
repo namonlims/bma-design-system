@@ -2466,10 +2466,10 @@ computing it, and never sample a colour by eye.
 | Family | Role | Styles | Weights | Sample |
 |---|---|---|---|---|
 | **Sao Chingcha** | Display graphic 1 — Thai-led hero, brand moments | 9 | Bold only | `Aa Bb Cc · กขคงจ · 0123456789` |
-| **Mitr**         | Display graphic 2 + Heading (h1–h8) — brand display family driving both hero + section headings | 17 | Regular (heading) · Bold (graphic2) — broader scale available 200–900 | `Aa Bb Cc · กขคงจ · 0123456789` |
+| **Mitr**         | Display graphic 2 only (web) — brand display family · headings and buttons use Sarabun | 17 | Bold (graphic2) — broader scale available 200–900 | `Aa Bb Cc · กขคงจ · 0123456789` |
 | **Sarabun**      | UI typography — display, body, labels, captions, buttons (no longer used for headings) | 19 | Regular · Medium · Bold | `Aa Bb Cc · กขคงจ · 0123456789` |
 
-> Sao Chingcha + Mitr are the two **brand display** typefaces. Mitr now also drives **headings h1–h8** (Regular weight) — gives the product a softer, warmer brand voice than Sarabun Bold did previously. Sarabun remains the workhorse for body / display / labels / captions / buttons.
+> Sao Chingcha + Mitr are the two **brand display** typefaces. Headings h1–h8 and buttons use **Sarabun** (ผู้ใช้ 24 ต.ค. 69 ข้อ 2ข · 7 พ.ย. 69 ข้อ 6ก) · Sarabun is the workhorse for body / display / labels / captions / buttons · the mobile app keeps its own Mitr headings.
 
 ##### Groups
 
@@ -2478,7 +2478,7 @@ computing it, and never sample a colour by eye.
 | Display Graphic   | 9 | Sao Chingcha | Bold | 60 → 14 px | Hero, marketing splash, brand moments. LH 125%, LS 0. |
 | Display Graphic 2 | 9 | Mitr | Bold (default) · Medium / SemiBold available | 60 → 14 px | Alternative display headings, posters, kiosk hero blocks where Mitr's wider Latin glyphs read better. LH 125%, LS 0. |
 | Display / Heading | 9 | Sarabun | Bold | 60 → 14 px | Page-level display headlines. `display1` LS 0; `display2`–`display9` LS −2% (`tighter`). |
-| Heading | 8 | Mitr | Regular | 36 → 12 px | Section headings. h1–h4 LH **137.5%**; h5–h8 LH **150%**. Brand-driven heading family (was Sarabun Bold; now Mitr Regular for warmer brand voice). |
+| Heading | 8 | Sarabun | Regular | 36 → 12 px | Section headings. h1–h4 LH **137.5%**; h5–h8 LH **150%**. |
 | Body | 4 | Sarabun | Regular | 20 → 14 px | Body text, paragraphs, descriptions. LH 150%. |
 | Label | 2 | Sarabun | Medium | 14, 12 px | Form labels, nav items, tab labels, tags, chips, overlines. |
 | Caption | 2 | Sarabun | Regular | 12, 10 px | Supporting text, timestamps, metadata, legal copy, hints. |
@@ -2517,15 +2517,15 @@ Every style below maps to a Figma text style of the same name. The right-hand "A
 | `typography.display7` | Sarabun | Bold | 18px | 125% | -2% | `typography.family.body` | `typography.weight.bold` | `typography.size.lg` | `typography.letter-spacing.tighter` |
 | `typography.display8` | Sarabun | Bold | 16px | 125% | -2% | `typography.family.body` | `typography.weight.bold` | `typography.size.base` | `typography.letter-spacing.tighter` |
 | `typography.display9` | Sarabun | Bold | 14px | 125% | -2% | `typography.family.body` | `typography.weight.bold` | `typography.size.sm` | `typography.letter-spacing.tighter` |
-| `typography.h1` | Mitr | Regular | 36px | 137.5% | 0% | `typography.family.heading-graphic2` | `typography.weight.regular` | `typography.size.4xl`  | `typography.letter-spacing.normal` |
-| `typography.h2` | Mitr | Regular | 30px | 137.5% | 0% | `typography.family.heading-graphic2` | `typography.weight.regular` | `typography.size.3xl`  | `typography.letter-spacing.normal` |
-| `typography.h3` | Mitr | Regular | 24px | 137.5% | 0% | `typography.family.heading-graphic2` | `typography.weight.regular` | `typography.size.2xl`  | `typography.letter-spacing.normal` |
-| `typography.h4` | Mitr | Regular | 20px | 137.5% | 0% | `typography.family.heading-graphic2` | `typography.weight.regular` | `typography.size.xl`   | `typography.letter-spacing.normal` |
-| `typography.h5` | Mitr | Regular | 18px | 150%   | 0% | `typography.family.heading-graphic2` | `typography.weight.regular` | `typography.size.lg`   | `typography.letter-spacing.normal` |
-| `typography.h5-emphasis` | Mitr | Medium | 18px | 150% | 0% | `typography.family.heading-graphic2` | `typography.weight.medium` | `typography.size.lg` | `typography.letter-spacing.normal` |
-| `typography.h6` | Mitr | Regular | 16px | 150%   | 0% | `typography.family.heading-graphic2` | `typography.weight.regular` | `typography.size.base` | `typography.letter-spacing.normal` |
-| `typography.h7` | Mitr | Regular | 14px | 150%   | 0% | `typography.family.heading-graphic2` | `typography.weight.regular` | `typography.size.sm`   | `typography.letter-spacing.normal` |
-| `typography.h8` | Mitr | Regular | 12px | 150%   | 0% | `typography.family.heading-graphic2` | `typography.weight.regular` | `typography.size.xs`   | `typography.letter-spacing.normal` |
+| `typography.h1` | Sarabun | Regular | 36px | 137.5% | 0% | `typography.family.heading-content` | `typography.weight.regular` | `typography.size.4xl`  | `typography.letter-spacing.normal` |
+| `typography.h2` | Sarabun | Regular | 30px | 137.5% | 0% | `typography.family.heading-content` | `typography.weight.regular` | `typography.size.3xl`  | `typography.letter-spacing.normal` |
+| `typography.h3` | Sarabun | Regular | 24px | 137.5% | 0% | `typography.family.heading-content` | `typography.weight.regular` | `typography.size.2xl`  | `typography.letter-spacing.normal` |
+| `typography.h4` | Sarabun | Regular | 20px | 137.5% | 0% | `typography.family.heading-content` | `typography.weight.regular` | `typography.size.xl`   | `typography.letter-spacing.normal` |
+| `typography.h5` | Sarabun | Regular | 18px | 150%   | 0% | `typography.family.heading-content` | `typography.weight.regular` | `typography.size.lg`   | `typography.letter-spacing.normal` |
+| `typography.h5-emphasis` | Sarabun | Medium | 18px | 150% | 0% | `typography.family.heading-content` | `typography.weight.medium` | `typography.size.lg` | `typography.letter-spacing.normal` |
+| `typography.h6` | Sarabun | Regular | 16px | 150%   | 0% | `typography.family.heading-content` | `typography.weight.regular` | `typography.size.base` | `typography.letter-spacing.normal` |
+| `typography.h7` | Sarabun | Regular | 14px | 150%   | 0% | `typography.family.heading-content` | `typography.weight.regular` | `typography.size.sm`   | `typography.letter-spacing.normal` |
+| `typography.h8` | Sarabun | Regular | 12px | 150%   | 0% | `typography.family.heading-content` | `typography.weight.regular` | `typography.size.xs`   | `typography.letter-spacing.normal` |
 | `typography.body1` | Sarabun | Regular | 20px | 150% | 0% | `typography.family.body` | `typography.weight.regular` | `typography.size.xl` | `typography.letter-spacing.normal` |
 | `typography.body2` | Sarabun | Regular | 18px | 150% | 0% | `typography.family.body` | `typography.weight.regular` | `typography.size.lg` | `typography.letter-spacing.normal` |
 | `typography.body3` | Sarabun | Regular | 16px | 150% | 0% | `typography.family.body` | `typography.weight.regular` | `typography.size.base` | `typography.letter-spacing.normal` |
@@ -2534,8 +2534,8 @@ Every style below maps to a Figma text style of the same name. The right-hand "A
 | `typography.label2` | Sarabun | Medium | 12px | 150% | 0% | `typography.family.body` | `typography.weight.medium` | `typography.size.xs` | `typography.letter-spacing.normal` |
 | `typography.caption1` | Sarabun | Regular | 12px | 150% | 0px | `typography.family.body` | `typography.weight.regular` | `typography.size.xs` | `typography.letter-spacing.normal` |
 | `typography.caption2` | Sarabun | Regular | 10px | 150% | 0px | `typography.family.body` | `typography.weight.regular` | `typography.size.xxs` | `typography.letter-spacing.normal` |
-| `typography.button.lg` | Sarabun | Medium | 16px | 150% | 0% | `typography.family.body` | `typography.weight.medium` | `typography.size.base` | `typography.letter-spacing.normal` |
-| `typography.button.sm` | Sarabun | Medium | 14px | 150% | 0% | `typography.family.body` | `typography.weight.medium` | `typography.size.sm` | `typography.letter-spacing.normal` |
+| `typography.button.lg` | Sarabun | Regular | 16px | 150% | 0% | `typography.family.heading-content` | `typography.weight.regular` | `typography.size.base` | `typography.letter-spacing.normal` |
+| `typography.button.sm` | Sarabun | Regular | 14px | 150% | 0% | `typography.family.heading-content` | `typography.weight.regular` | `typography.size.sm` | `typography.letter-spacing.normal` |
 
 ---
 
@@ -13399,7 +13399,7 @@ Props: `checked` · `hover` · `disabled` · `className` · `style`
 
 Group label (with optional required asterisk) + multiple Checkbox rows + optional error message. 4 states: default / withDescription / error / withDescription-error.
 
-Props: `legend` · `required` · `options` · `value` · `defaultValue` · `onChange` · `withDescription` · `error` · `name` · `className` · `style` · `columns`  
+Props: `legend` · `required` · `options` · `value` · `defaultValue` · `onChange` · `withDescription` · `error` · `name` · `className` · `style` · `columns` (จำนวนคอลัมน์สูงสุด · จอแคบลดเองเมื่อช่องกว้างไม่ถึง `--dim-size-2200`)  
 ไฟล์: `src/components/checkbox/CheckboxGroup.jsx` · demo: `/components/checkbox-group`
 
 **radio**
@@ -15203,6 +15203,8 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 
 ### 6.118 ChoiceRow (ลงทะเบียน 3 พ.ย. 69)
 
+**ChoiceButtons** (named export ไฟล์เดียวกัน · 7 พ.ย. 69) — เฉพาะแถวปุ่มตัวเลือก ไม่มีป้ายและกรอบ ใช้ใน Field ของหน้า · `size` sm (36 · ค่าเริ่มต้น) | md (40) · `column` · `clearable` · option มี `hint` (tooltip) · `ariaText` · ChoiceRow แบบ card ใช้ชิ้นนี้ · รวมจาก 3 สำเนา
+
 **ChoiceRow** — คำถาม/หัวข้อ + ปุ่มตัวเลือกคำตอบเดียว · ไฟล์ `src/components/forms/ChoiceRow.jsx` · API: `label` · `options` (string[] | [{value,label}]) · `value` · `onChange` (ชื่อเดิม `onSelect`) · `layout` stack (ป้ายบน sm default · ตัวเลือกล่าง gap 6 · ค่าเริ่มต้น) | inline (ป้ายซ้ายกว้างสุด 640 · ตัวเลือกขวา · ตัดบรรทัดเมื่อแคบ · padding 8/12) | bare (ไม่มีป้าย · ใส่ใน Field ของหน้า) · `chip` card (`SelectableCardButton` gap 12 · ค่าเริ่มต้น) | tag (`SelectableTag` md gap 8) · `clearable` (กดซ้ำยกเลิก → `emptyValue`, ค่าเริ่มต้น '') · `disabled` (ชื่อเดิม `locked` · `readOnly`) · `required` · `hint` · `error` · `tone='danger'` พื้น `--surface-danger-quaternary` · children แทนตัวเลือก · หลายคำตอบใช้ `CheckList` §6.105 · รวมจาก 9 สำเนา (ผู้ใช้ 3 พ.ย. 69 ข้อ 4ก): วางแผนครอบครัว + สุขภาพจิต (inline tag) · MhToolForm + จิตวิทยา (bare) · ก้าวใหม่ 2 ไฟล์ + ทันตกรรม (stack children) · เยี่ยมบ้าน + ประเมินชุมชน (bare ใน Field) · demo `/components/choice-row`
 
 ### 6.119 BreastCancerScreening (ลงทะเบียน 3 พ.ย. 69)
@@ -15273,10 +15275,22 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 
 **OrderSetCard · OrderSetCardGrid** — การ์ดชุดยาในป๊อปอัป "ชุดสั่งสำเร็จรูป" และ "ชุดที่ฉันสร้างเอง": ชื่อชุด · คำอธิบาย · รายการยาพร้อมรูปในกล่องขาวใบเดียว · ปุ่มเพิ่ม/ถอด · ไอคอนแก้ไข · คัดลอก · ลบ · ไฟล์ `src/components/clinic/OrderSetCard.jsx` · `OrderSetCardGrid` props `chips` · `card` · แถวละ 3 ใบ จอแคบลดเป็น 2 และ 1 · ใช้ที่เบาหวาน · ความดัน · หอบหืด/COPD · วัณโรค · HIV
 
+### 6.132 MedRecReconcileCard (ลงทะเบียน 6 พ.ย. 69)
+
+**MedRecReconcileCard · useMedReconcile** — การ์ด Medication Reconciliation ของเภสัชกร: ตารางยาเดิม 3 แหล่ง · คงเหลือ · บริหารยาเดิม · DRP · ข้อเสนอถึงแพทย์ · ปุ่มเพิ่มยาที่ผู้ป่วยนำมา · พิมพ์แบบบันทึก · ไฟล์ `src/components/pharmacy/MedRecReconcileCard.jsx` · props `hn` · `patient` · `drugAllergies` · `medRec` (จาก `useMedReconcile` เมื่อหน้าต้องตรวจก่อนบันทึก) · `showErrors` · `inline` (ไม่มีกรอบการ์ด ใช้ในแท็บ) · `recDate` · ข้อมูลอยู่ที่ `src/data/treatmentMedRec.js` · ใช้ที่ `/pharmacy/screening-review` · `/pharmacy/dispense` · แพทย์อ่านชุดเดียวกันใน `MedRecPanel`
 
 ### 6.133 PrescriptionConsentGate (ลงทะเบียน 6 พ.ย. 69)
 
 `src/components/consent/PrescriptionConsentGate.jsx` · ด่านความยินยอมก่อนส่งใบสั่งยา ใช้ที่ `/treat/record` และ `ClinicRecordPage` ตอน "บันทึกและส่งต่อ" · ปุ่ม "ทำแบบฟอร์ม" เปิด `ConsentFormFillPopup` ในหน้าเดิม ลงนามแล้วบันทึกเข้าทะเบียนความยินยอม · props: `gate` (ผลจาก `gateCpoeOrder`) · `patient` · `requester` · `onClose` · `onSigned`
+
+### 6.134 ReadOnlyFence (ลงทะเบียน 7 พ.ย. 69)
+
+**ReadOnlyFence** — ห่อคอมโพเนนต์กลางที่ไม่รับ prop `readOnly` ให้กดไม่ได้และเห็นว่าถูกล็อก · ไฟล์ `src/components/layout/ReadOnlyFence.jsx` · API: `active` · `children` · รวมจาก 4 สำเนา (DiagnosisColumn · ก้าวใหม่ · ทันตกรรม · สุขภาพจิต) · ต่างจาก `ViewOnlyRegion` ที่แสดงเต็มสีหรือเป็นข้อความ · opacity 0.7 ยังไม่มี token
+
+### 6.135 FieldGrid (ลงทะเบียน 7 พ.ย. 69)
+
+**FieldGrid** — กริดช่องกรอกของฟอร์ม · ไฟล์ `src/components/forms/Fields.jsx` · API: `cols` (ค่าเริ่มต้น 4 · ยุบเป็น 2 ที่ ≤ 1024 และ 1 ที่ ≤ 680 ด้วย `.mih-field-grid`) · `min` (px · คอลัมน์ auto-fit แทนจำนวนคงที่) · `gap` · `rowGap` · `columnGap` · `align` · รวมจาก 8 สำเนา (ก้าวใหม่ · ทันตกรรม · วัณโรค · COPD · ภูมิคุ้มกัน · สิทธิ) · ระยะห่างเดิมของแต่ละโมดูลส่งเป็น prop
+
 ## 7. Mobile App · Kiosk — design system แยกของตัวเอง
 
 > แยกจาก HCIS ตั้งแต่ 24 ต.ค. 69 (ผู้ใช้: "Design system ของ HCIS, Mobile App, Kiosk แยกออกจากกัน")
