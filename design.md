@@ -15261,7 +15261,7 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 
 ### 6.128 DrugBoard (ลงทะเบียน 6 พ.ย. 69)
 
-**DrugBoard** — บอร์ดยาบนสุดของขั้นสั่งการรักษา: การ์ด "ตามกลุ่มยา" + การ์ด Medication Reconciliation · ไฟล์ `src/components/clinic/DrugBoard.jsx` · props `hn` · `patient` · `columns` · `form` · `readOnly` · `api` (จาก `ClinicOrdersPanel orderBoard`) · กลุ่มยาต่อคลินิก = `chronicDrugBoardColumns(clinicCode)` ใน `src/data/drugBoard.js` · ใช้ที่เบาหวาน · ความดัน · หอบหืด/COPD · วัณโรค · HIV · วัณโรคและ HIV โหลดผ่าน `ClinicDrugBoardLazy`
+**DrugBoard** — บอร์ดยาบนสุดของขั้นสั่งการรักษา: การ์ด "ตามกลุ่มยา" + การ์ด Medication Reconciliation · ไฟล์ `src/components/clinic/DrugBoard.jsx` · props `hn` · `patient` · `columns` · `form` · `readOnly` · `api` (จาก `ClinicOrdersPanel orderBoard`) · กลุ่มยาต่อคลินิก = `chronicDrugBoardColumns(clinicCode)` ใน `src/data/drugBoard.js` · ใช้ที่เบาหวาน · ความดัน · หอบหืด/COPD · วัณโรค · HIV · วัณโรคและ HIV โหลดผ่าน `ClinicDrugBoardLazy` · แผงกลุ่มยา = การ์ดกลไกการออกฤทธิ์ พับ-กางได้ทีละใบต่อแผง (ยากลไกเดียวกันอยู่ใบเดียวกัน · หัวการ์ดบอก "สั่งแล้ว · <ยา>") · กดสั่งยากลไกเดียวกับที่สั่งแล้ว = AlertDialog "สั่งยากลไกการออกฤทธิ์ซ้ำ" ปุ่ม "คงยาเดิม" | "เปลี่ยนตัวยา" (9 พ.ย. 69)
 
 ### 6.129 NoticeLine (ลงทะเบียน 6 พ.ย. 69)
 
