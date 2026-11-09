@@ -15291,6 +15291,10 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 
 **FieldGrid** — กริดช่องกรอกของฟอร์ม · ไฟล์ `src/components/forms/Fields.jsx` · API: `cols` (ค่าเริ่มต้น 4 · ยุบเป็น 2 ที่ ≤ 1024 และ 1 ที่ ≤ 680 ด้วย `.mih-field-grid`) · `min` (px · คอลัมน์ auto-fit แทนจำนวนคงที่) · `gap` · `rowGap` · `columnGap` · `align` · รวมจาก 8 สำเนา (ก้าวใหม่ · ทันตกรรม · วัณโรค · COPD · ภูมิคุ้มกัน · สิทธิ) · ระยะห่างเดิมของแต่ละโมดูลส่งเป็น prop
 
+### 6.136 LeftoverMedCountCard (ลงทะเบียน 9 พ.ย. 69)
+
+**LeftoverMedCountCard** — การ์ด "นับยาเหลือ" ก่อนพบแพทย์ (เดิมเภสัชกรนับที่ห้องยา) · ไฟล์ `src/components/screening/LeftoverMedCountCard.jsx` · API: `patient` ({ hn }) · `CollapsibleCard` หุบตอนเข้า ไม่บังคับ · 2 กลุ่ม: (1) "ยาจากศูนย์บริการ" = ใบสั่งยาครั้งก่อนใน EMR (`previousRxOf`) ตาราง `Table`: รายการยา (+ ที่มา xs) · ยาเหลือ `Stepper` (ว่าง = ยังไม่นับ) · หน่วย `Select` (2) "ยาจากภายนอก" = พยาบาลพิมพ์ชื่อยาเอง (ช่องกรอก + "เพิ่ม" → ตาราง + ลบ · ไม่ดึงรายการจากระบบ) — พยาบาลไม่นับ มีรายการแล้วขึ้น `Alert` + "ส่งต่อเภสัชกร" (`sendScreeningMedReviewToPharmacy`) ให้เภสัชกรนับเอง · บันทึกเป็น screening section `leftoverCount` → `leftoverMedsForHn` ส่งให้ CPOE · Med-Reconciliation · บอร์ดยา · ใช้ที่ `/opd/screening` ขั้น "ซักประวัติ" (จุดคัดแยก + พยาบาลคัดกรองกลาง) ที่เดียว (ผู้ใช้ 9 พ.ย. 69)
+
 ## 7. Mobile App · Kiosk — design system แยกของตัวเอง
 
 > แยกจาก HCIS ตั้งแต่ 24 ต.ค. 69 (ผู้ใช้: "Design system ของ HCIS, Mobile App, Kiosk แยกออกจากกัน")
