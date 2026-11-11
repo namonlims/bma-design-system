@@ -15295,6 +15295,31 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 
 **LeftoverMedCountCard** — การ์ด "นับยาเหลือ" ก่อนพบแพทย์ (เดิมเภสัชกรนับที่ห้องยา) · ไฟล์ `src/components/screening/LeftoverMedCountCard.jsx` · API: `patient` ({ hn }) · `CollapsibleCard` หุบตอนเข้า ไม่บังคับ · 2 กลุ่ม: (1) "ยาจากศูนย์บริการ" = ใบสั่งยาครั้งก่อนใน EMR (`previousRxOf`) ตาราง `Table`: รายการยา (+ ที่มา xs) · ยาเหลือ `Stepper` (ว่าง = ยังไม่นับ) · หน่วย `Select` (2) "ยาจากภายนอก" = พยาบาลพิมพ์ชื่อยาเอง (ช่องกรอก + "เพิ่ม" → ตาราง + ลบ · ไม่ดึงรายการจากระบบ) — พยาบาลไม่นับ มีรายการแล้วขึ้น `Alert` + "ส่งต่อเภสัชกร" (`sendScreeningMedReviewToPharmacy`) ให้เภสัชกรนับเอง · บันทึกเป็น screening section `leftoverCount` → `leftoverMedsForHn` ส่งให้ CPOE · Med-Reconciliation · บอร์ดยา · ใช้ที่ `/opd/screening` ขั้น "ซักประวัติ" (จุดคัดแยก + พยาบาลคัดกรองกลาง) ที่เดียว (ผู้ใช้ 9 พ.ย. 69)
 
+### 6.138 FastTrackSection (ลงทะเบียน 11 พ.ย. 69)
+
+**FastTrackSection** — "ช่องทาง Fast Track" ที่จุดคัดกรองกลาง ขั้นสัญญาณชีพ ใต้ `TriageUrgencySection` · ไฟล์ `src/components/screening/FastTrackSection.jsx` · API: `hn` · `showErrors` (แถบแดงเมื่อติ๊กแต่ยังไม่ส่ง) · `demo` (ไม่เขียนข้อมูลจริง ใช้ในหน้าตัวอย่าง)
+· ใช้ที่ `ScreeningStep1` (`/opd/screening` ทั้งพยาบาลคัดกรองกลางและจุดคัดแยก)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| ติ๊ก | `SelectableCardButton` + `CheckboxBox` "เข้าช่องทาง Fast Track" + subtext xs |
+| ยังไม่ส่ง | `Alert` warning "Fast Track — ส่งเข้าคลินิกได้ทันที" + `BrandButton` fill sm `fast_forward` "ส่ง Fast Track ทันที" |
+| ป๊อปอัป | `Popup` 720 · `PatientSummaryCard` → 2 คอลัมน์เท่ากัน (< 640 = 1): "เหตุผลการเข้า Fast Track*" · "คลินิกที่เข้ารับบริการ*" (+ "ระบุเหตุผล*" เมื่อ อื่นๆ) → "ส่ง Fast Track" |
+| ส่งแล้ว | `Alert` success "ส่ง Fast Track แล้ว · เวลา · คลินิก" + outline "เปลี่ยนคลินิก" · ข้อมูล `symptom.fastTrack` · แถว "ไม่ระบุแพทย์" ของคลินิก (`addToUnassignedPool` ESI 2) |
+
+### 6.139 ReferralTransferPanel · ReferralTransferPopup (ลงทะเบียน 11 พ.ย. 69)
+
+**ReferralTransferPanel** — เนื้อหาแท็บ "ส่งต่อ" ของทุก worklist (`QueuePageShell consult='auto'` ใส่ให้ · คีย์ `REFERRAL_TAB_KEY`) · ไฟล์ `src/components/queue/ReferralTransferPanel.jsx` · ไม่มี prop (อ่านบทบาทปัจจุบัน)
+**ReferralTransferPopup** — ป๊อปอัป "รับผู้ป่วยส่งกลับ (Refer-in)" / "บันทึกการดูแล…" / "บันทึกผลการส่งไป (Refer Out)" · ไฟล์ `src/components/queue/ReferralTransferPopup.jsx` · API: `row` · `onClose` · `onSaved(row, entry)` · `demo`
+· ข้อมูล `src/data/referralTransfers.js` (ทะเบียน `/treat/refer` + ชุดตัวอย่างต่อคลินิก · ประวัติ `mih:referral-transfer-log`) · กติกาเต็ม `.claude/rules/worklist-consult.md`
+
+| ส่วน | รายละเอียด |
+|---|---|
+| แท็บย่อย | `TabBar` + `TabPill` กลาง "ส่งกลับ (Refer-in)" · "ส่งไป (Refer Out)" + count · จอแคบเลื่อนในตัว |
+| ตาราง | `Table`: วันที่ส่ง · ผู้รับบริการ · ส่งมาจาก/ส่งไปที่ · สาเหตุที่ส่งต่อ · สถานะ (`StatusBadge`) · การดำเนินการ (ตรึงขวา) |
+| ปุ่ม | รอรับ = `BrandButton` fill sm "รับ" · อื่น = `BrandSubdueButton` outline sm "บันทึก" |
+| ป๊อปอัป | ข้อมูลการส่งต่อ (`ReviewRow`) → ผลการรับ/ผลจากปลายทาง (`SelectableCardButton`) · วันนัด · บันทึก → "ประวัติการบันทึก N ครั้ง" (`Table`, ใหม่ → เก่า) |
+
 ## 7. Mobile App · Kiosk — design system แยกของตัวเอง
 
 > แยกจาก HCIS ตั้งแต่ 24 ต.ค. 69 (ผู้ใช้: "Design system ของ HCIS, Mobile App, Kiosk แยกออกจากกัน")
