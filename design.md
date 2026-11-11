@@ -15339,6 +15339,10 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 | ทูลทิป | `TooltipGroups`: "Fast Track" → "ช่องทางด่วนจากจุดคัดกรองกลาง · จัดคิวก่อน" → เหตุผล · บันทึกโดย · เวลา |
 | ขนาด/ระยะ | ตาม `NameMark` (กรอบ 16×24 · ไอคอน 12 · gap 4) |
 
+### 6.141 PharmacyRawDataPopup (ลงทะเบียน 11 พ.ย. 69)
+
+**PharmacyRawDataPopup · indicatorCenterColumns** — ข้อมูลดิบ (Raw Data) ของตัวชี้วัดเภสัชกรรม (คณะทำงาน 7 ข้อ 105) · ไฟล์ `src/components/pharmacy/PharmacyRawDataPopup.jsx` · Popup extraLarge: ชื่อ → ช่วงข้อมูล · เป้าหมาย 1 บรรทัด → ตัวตั้ง · ตัวหาร · ผลลัพธ์ (label/value) → ชิป "การนับ:" · "ศบส.:" + ล้างตัวกรอง → `Table` เรียงได้ทุกคอลัมน์ + "นำส่งออกรายงาน" · props `open` · `onClose` · `indicator` ({ key · no · short · num · den · unit · absolute · `rowKind` patient | drug | me · `rate` 'per1000' · `countLabels` · `allInNumerator` · `rowNoun` }) · `rows` · `denominatorByCenter` (ตัวหารเป็นยอดรวมรายศูนย์ ไม่ใช่จำนวนแถว) · `periodLabel` · `targetLabel` · `onExport(report)` · named export `indicatorCenterColumns(formatValue)` = คอลัมน์ตาราง "ตัวตั้ง · ตัวหาร · ผลลัพธ์ แยกรายศูนย์" (ศบส. · ตัวตั้ง · ตัวหาร · ผลลัพธ์ · ผลประเมิน ผ่าน/ไม่ผ่าน/ไม่มีข้อมูล · แถว `isTotal` ตัวหนา) · ข้อมูลจาก `src/data/pharmacyRduRawData.js` (RDU) · `src/data/pharmacyIndicatorRawData.js` (ED · ME · `indicatorCenterRows` · `centerRowsFromCounts`) · ใช้ที่ `/pharmacy/reports` · `/dashboard/reports/pharmacist` · `/dashboard/reports/pharmacy` · `/pharmacy/dashboard`
+
 ## 7. Mobile App · Kiosk — design system แยกของตัวเอง
 
 > แยกจาก HCIS ตั้งแต่ 24 ต.ค. 69 (ผู้ใช้: "Design system ของ HCIS, Mobile App, Kiosk แยกออกจากกัน")
