@@ -15294,6 +15294,15 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 ### 6.136 LeftoverMedCountCard (ลงทะเบียน 9 พ.ย. 69)
 
 **LeftoverMedCountCard** — การ์ด "นับยาเหลือ" ก่อนพบแพทย์ (เดิมเภสัชกรนับที่ห้องยา) · ไฟล์ `src/components/screening/LeftoverMedCountCard.jsx` · API: `patient` ({ hn }) · `CollapsibleCard` หุบตอนเข้า ไม่บังคับ · 2 กลุ่ม: (1) "ยาจากศูนย์บริการ" = ใบสั่งยาครั้งก่อนใน EMR (`previousRxOf`) ตาราง `Table`: รายการยา (+ ที่มา xs) · ยาเหลือ `Stepper` (ว่าง = ยังไม่นับ) · หน่วย `Select` (2) "ยาจากภายนอก" = พยาบาลพิมพ์ชื่อยาเอง (ช่องกรอก + "เพิ่ม" → ตาราง + ลบ · ไม่ดึงรายการจากระบบ) — พยาบาลไม่นับ มีรายการแล้วขึ้น `Alert` + "ส่งต่อเภสัชกร" (`sendScreeningMedReviewToPharmacy`) ให้เภสัชกรนับเอง · บันทึกเป็น screening section `leftoverCount` → `leftoverMedsForHn` ส่งให้ CPOE · Med-Reconciliation · บอร์ดยา · ใช้ที่ `/opd/screening` ขั้น "ซักประวัติ" (จุดคัดแยก + พยาบาลคัดกรองกลาง) ที่เดียว (ผู้ใช้ 9 พ.ย. 69)
+### 6.137 VisibleWidthPanel (ลงทะเบียน 10 พ.ย. 69)
+
+**VisibleWidthPanel** — กรอบเนื้อหาของแถวที่กางในตาราง (`Table renderExpandedRow`) เมื่อตารางกว้างกว่าจอแล้วเลื่อนข้าง: ยึดซ้าย (`position: sticky; left: 0`) และกว้างเท่าส่วนที่มองเห็นของกล่องเลื่อน (วัดด้วย ResizeObserver) จึงไม่ถูกตัดขวา · ไฟล์ `src/components/table/VisibleWidthPanel.jsx` · API: `style` (พื้น/ระยะของกรอบ) · `className` · `inPopup` (อยู่ในป๊อปอัป = กว้าง 100% ไม่วัด) · `ref` ส่งต่อได้
+· ใช้ที่ `PatientProfileView` (รายละเอียดนัดที่กาง — การ์ดขาวบนพื้นเขียวอ่อน) · `HistoryPanel` ของ `useVisitHistoryExpand` (ประวัติการมาตรวจ)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| พื้นแถวที่กาง | `--surface-brandPrimary-quaternary` + การ์ดขาวด้านใน (ขอบ `--border-brandPrimary-quaternary` · `--shadow-brand-drop-bottom-200`) ตาม tables-and-lists.md |
+| ไม่มีกล่องเลื่อน | กว้าง 100% ตามแถว |
 
 ### 6.138 FastTrackSection (ลงทะเบียน 11 พ.ย. 69)
 
@@ -15319,6 +15328,16 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 | ตาราง | `Table`: วันที่ส่ง · ผู้รับบริการ · ส่งมาจาก/ส่งไปที่ · สาเหตุที่ส่งต่อ · สถานะ (`StatusBadge`) · การดำเนินการ (ตรึงขวา) |
 | ปุ่ม | รอรับ = `BrandButton` fill sm "รับ" · อื่น = `BrandSubdueButton` outline sm "บันทึก" |
 | ป๊อปอัป | ข้อมูลการส่งต่อ (`ReviewRow`) → ผลการรับ/ผลจากปลายทาง (`SelectableCardButton`) · วันนัด · บันทึก → "ประวัติการบันทึก N ครั้ง" (`Table`, ใหม่ → เก่า) |
+
+### 6.140 FastTrackMark (ลงทะเบียน 9 พ.ย. 69)
+
+**FastTrackMark** — สัญลักษณ์ Fast Track หลังชื่อผู้รับบริการ (ห่อ `NameMark` §6.83: `fast_forward` สี `--icon-danger-default`) · ไฟล์ `src/components/badge/FastTrackMark.jsx` · API: `hn` (อ่าน `fastTrackOf(hn)` จาก `src/data/fastTrack.js` = พยาบาลคัดกรองกลางติ๊ก "เข้าช่องทาง Fast Track" + เหตุผล) · `value` ({ reason, by, at } แทนค่าจริง ใช้ในหน้าตัวอย่าง) · ไม่มี Fast Track = ไม่แสดง
+· ใช้ที่ `MaskedWorklistName` (ทุก worklist) · `PatientCard` · แถวเรียงขึ้นต่อจากฉุกเฉิน (`sortRowsByTriage`)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| ทูลทิป | `TooltipGroups`: "Fast Track" → "ช่องทางด่วนจากจุดคัดกรองกลาง · จัดคิวก่อน" → เหตุผล · บันทึกโดย · เวลา |
+| ขนาด/ระยะ | ตาม `NameMark` (กรอบ 16×24 · ไอคอน 12 · gap 4) |
 
 ## 7. Mobile App · Kiosk — design system แยกของตัวเอง
 
