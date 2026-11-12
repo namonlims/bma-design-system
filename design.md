@@ -14250,7 +14250,7 @@ Props: `title` · `subtitle` · `renderTable()` · `width` · `height` · `toolt
 
 แถบท้ายตาราง sticky — ข้อความช่วงแถว (`tablePaginationRangeLabel`) ซ้าย · Pagination ขวา
 พื้น `--surface-card-100` · เส้นบน `--border-brandPrimary-quaternary` · ไม่แสดงเมื่อ `show=false`
-Props: `show` · `total` · `rangeStart` · `rangeEnd` · `page` · `pageCount` · `onPageChange`
+Props: `show` · `total` · `rangeStart` · `rangeEnd` · `page` · `pageCount` · `onPageChange` · `sticky` (false = แถวธรรมดา ไม่มีเส้นบน) · `unit` (คำนับท้าย ค่าเริ่ม "รายการ") · named export `PagerRow` (`page` · `pageSize` · `total` · `onPageChange` · `unit` · `sticky` ค่าเริ่ม false) = คิดช่วง/จำนวนหน้าให้ หน้าเกินถูกดึงกลับ — ตรวจสุขภาพ · อนามัยโรงเรียน · ศูนย์เด็กเล็ก ใช้ตัวนี้ (`CheckupUi` · `schoolHealthShared` re-export เท่านั้น · ผู้ใช้ 12 พ.ย. 69 ข้อ 17ก · 5ข)
 
 #### 6.42.12 OverflowActionRow (overflow-action-row)
 
@@ -15269,7 +15269,7 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 
 ### 6.129 NoticeLine (ลงทะเบียน 6 พ.ย. 69)
 
-**NoticeLine** — แถบแจ้งเตือนหนึ่งบรรทัดในหน้าสั่งการรักษา พื้นและกรอบ 1px โทนเดียวกัน · ไฟล์ `src/components/alert/NoticeLine.jsx` · props `tone` info | warning | danger | pink · `icon` · `trailing` · children · หลายแถบซ้อนกันห่าง 8px · ใช้ที่ `ClinicOrdersPanel` · ฝากครรภ์
+**NoticeLine** — แถบแจ้งเตือนหนึ่งบรรทัดในหน้าสั่งการรักษา พื้นและกรอบ 1px โทนเดียวกัน · ไฟล์ `src/components/alert/NoticeLine.jsx` · props `tone` info (เขียวแบรนด์) | blue (ฟ้าแจ้งข้อมูล) | success | warning | danger | neutral | pink · `icon` · `trailing` · `onClose` (ปุ่ม ×) · children · named export `NoticeBar` = คำโทนของหน้าฟอร์ม info (ฟ้า) | brand (เขียว) | success | warning | danger | neutral · ไม่ส่ง `icon` = ไอคอนตามโทน — ตรวจสุขภาพ · อนามัยโรงเรียนใช้ตัวนี้ (`CheckupUi` · `schoolHealthShared` re-export เท่านั้น · ผู้ใช้ 12 พ.ย. 69 ข้อ 16ก · 5ข) · หลายแถบซ้อนกันห่าง 8px · ใช้ที่ `ClinicOrdersPanel` · ฝากครรภ์
 
 ### 6.130 OrderSetCreatePopup (ลงทะเบียน 6 พ.ย. 69)
 
