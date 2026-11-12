@@ -13894,7 +13894,20 @@ Props: `title` `formula` (ข้อความ = แถว "สูตร" ห�
 
 ตัวเลข KPI + ป้าย (+ หน่วย · โทน · hint) เรียงเป็นกริด 2/3/4 คอลัมน์ ใช้ทุกหน้ารายงานใน /dashboard/reports/* label · value · unit · tone (default | info | warning | danger — success ใช้สีแบรนด์เดียวกับ default) · hint · StatTileRow columns (4) · framed (การ์ดของตัวเอง; false เมื่ออยู่ในการ์ดอื่นแล้ว) ตัวเลขใช้ heading-content ไม่ใช่ Mitr เพราะเลข 0 ของ Mitr มีขีดทับ (25 ส.ค. 69).
 
-ไฟล์: `src/pages/dashboard/dashboardReportKit.jsx` · demo: `/components/stat-tile`
+ไฟล์: `src/components/card/StatTile.jsx` (`dashboardReportKit` ส่งต่อชื่อเดิม · StatTileRow ยังอยู่ใน kit) · demo: `/components/stat-tile`
+
+**รวม 12 สำเนาเป็นตัวเดียว (ผู้ใช้ 12 พ.ย. 69 3ก)** — ตรวจสุขภาพ · Telemed · การเงิน · ชุมชน · ติดตามเบาหวาน/ความดัน · วัณโรค · รายงานสุขภาพจิต · สุขภาพนักเรียน · widget แดชบอร์ด ใช้ชิ้นนี้ผ่าน props:
+
+| prop | ค่า |
+|---|---|
+| `surface` | `none` (ตั้งต้น) · `soft` (พื้นอ่อนตามโทน) · `card` (ขาว + `--border-card-default`) · `muted` (`--surface-neutral-quaternary` + เส้นขอบ) · `raised` (ขาว + `--shadow-card`) — กรอบ padding 12/16 · `--dim-radius-400` |
+| `order` | `value-first` (ตั้งต้น) · `label-first` |
+| `size` | ตัวเลข `base` · `lg` · `xl` · `2xl` (ตั้งต้น) — ตัวเลขเป็น heading-content bold เสมอ |
+| `tone` | `brand` · `info` · `warning` · `danger` · `default` (สีเนื้อหา) · `neutral` (สีรอง) |
+| `icon` + `iconStyle` | `inline` (หน้าป้าย 16) · `lead` (ซ้าย 24) · `badge` (`ColorfulIconBadge` · `badgeStyle`) |
+| `sub` | บรรทัดรอง xs tertiary (`hint` · `caption` ชื่อเดิมใช้ได้) |
+| ชื่อเดิมจาก PR #876 | `variant` plain/card/tint/soft = surface none/card/soft/muted · `iconPlacement` label/lead · `iconBadge` = iconStyle badge · `size='md'` = lg · tone `blue`/`negative` = info/danger (รวมไฟล์ 12 พ.ย. 69 ผู้ใช้ 10ก) |
+| preset | `TintStatTile` (ตรวจสุขภาพ: soft · label-first · lg · กว้างขั้นต่ำ 280) · `CardLeadStatTile` (อนามัยโรงเรียน: card · ไอคอนซ้าย · ฐาน 192) |
 
 #### 6.37.73 SummaryBannerCard (summary-banner-card)
 
@@ -13932,7 +13945,7 @@ Props: `stepIndex` · `onStepChange` · `onReadSmartCard` · `smartCardRead` · 
 Shared chrome for queue / list pages: Sidebar + Header + SubHeader + SummaryCardsBar + sticky TabUnderline + body + Footer. Pass title, breadcrumb, summaryCards, tabs, etc. via props; children render in the body.
 
 Props: `activeKey` · `sidebarItems` · `sidebarFallbackKey` · `sidebarOpenWidth` · `sidebarWrapLabels` · `sidebarHideActiveChevron` · `breadcrumb` · `brandTitle` · `title` · `afterTitle` · `belowTitle` · `onBack` · `backLabel` · `actions` · `leadingActions` · `hideConsentAction` · `summaryCards` · `summaryTitle` · `summaryFlushUnderSubHeader` · `summaryBottomPad` · `summaryBelowTabs` · `headerInfo` · `sti  
-ไฟล์: `src/templates/QueuePageShell.jsx` · demo: `/components/queue-page-shell`
+ไฟล์: `src/components/layout/QueuePageShell.jsx` (ย้ายจาก `src/templates` 12 พ.ย. 69 · ทางเดิมยัง import ได้) · demo: `/components/queue-page-shell`
 
 #### 6.37.78 TreatmentFormShell (treatment-form-shell)
 
@@ -15343,6 +15356,10 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 | ทูลทิป | `TooltipGroups`: "Fast Track" → "ช่องทางด่วนจากจุดคัดกรองกลาง · จัดคิวก่อน" → เหตุผล · บันทึกโดย · เวลา |
 | ขนาด/ระยะ | ตาม `NameMark` (กรอบ 16×24 · ไอคอน 12 · gap 4) |
 
+### 6.141 PharmacyRawDataPopup (ลงทะเบียน 11 พ.ย. 69)
+
+**PharmacyRawDataPopup · indicatorCenterColumns** — ข้อมูลดิบ (Raw Data) ของตัวชี้วัดเภสัชกรรม (คณะทำงาน 7 ข้อ 105) · ไฟล์ `src/components/pharmacy/PharmacyRawDataPopup.jsx` · Popup extraLarge: ชื่อ → ช่วงข้อมูล · เป้าหมาย 1 บรรทัด → ตัวตั้ง · ตัวหาร · ผลลัพธ์ (label/value) → ชิป "การนับ:" · "ศบส.:" + ล้างตัวกรอง → `Table` เรียงได้ทุกคอลัมน์ + "นำส่งออกรายงาน" · props `open` · `onClose` · `indicator` ({ key · no · short · num · den · unit · absolute · `rowKind` patient | drug | me · `rate` 'per1000' · `countLabels` · `allInNumerator` · `rowNoun` }) · `rows` · `denominatorByCenter` (ตัวหารเป็นยอดรวมรายศูนย์ ไม่ใช่จำนวนแถว) · `periodLabel` · `targetLabel` · `onExport(report)` · named export `indicatorCenterColumns(formatValue)` = คอลัมน์ตาราง "ตัวตั้ง · ตัวหาร · ผลลัพธ์ แยกรายศูนย์" (ศบส. · ตัวตั้ง · ตัวหาร · ผลลัพธ์ · ผลประเมิน ผ่าน/ไม่ผ่าน/ไม่มีข้อมูล · แถว `isTotal` ตัวหนา) · ข้อมูลจาก `src/data/pharmacyRduRawData.js` (RDU) · `src/data/pharmacyIndicatorRawData.js` (ED · ME · `indicatorCenterRows` · `centerRowsFromCounts`) · ใช้ที่ `/pharmacy/reports` · `/dashboard/reports/pharmacist` · `/dashboard/reports/pharmacy` · `/pharmacy/dashboard`
+
 ### 6.142 ExamField (ลงทะเบียน 11 พ.ย. 69)
 
 **ExamField** — ป้าย + ช่องกรอกของแบบบันทึกการตรวจ (ยกจาก `Field` ใน `ChronicExamSections` · ผู้ใช้ 11 พ.ย. 69 "1. ข") · ไฟล์ `src/components/forms/ExamField.jsx` · API: `label` (ข้อความที่มี "*" → ดอกจันแดง) · `hint` (ⓘ 14px `--icon-neutral-tertiary` + ทูลทิปขาว · string/JSX ระดับโมดูล) · `subgrid` (พาเรนต์เป็น grid → ช่องในแถวเดียวกันตรงกันแม้ป้ายตัดบรรทัด) · children · export สไตล์ `EXAM_SUBTITLE` · `EXAM_LABEL` · `EXAM_SUBTEXT`
@@ -15370,13 +15387,43 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 | แบบฟอร์มอื่น ๆ | ใบจากทะเบียนกลางที่ยังไม่ลงนาม 4 ใบแรก + "ดูทั้งหมด" · ใบที่ลงนามแล้วไม่ขึ้นซ้ำ |
 | ดูใบที่ลงนาม | `ConsentViewPopup` ข้อความรายข้อ + ผล + ลายมือชื่อ/ไฟล์กระดาษ |
 
-### 6.141 PharmacyRawDataPopup (ลงทะเบียน 11 พ.ย. 69)
-
-**PharmacyRawDataPopup · indicatorCenterColumns** — ข้อมูลดิบ (Raw Data) ของตัวชี้วัดเภสัชกรรม (คณะทำงาน 7 ข้อ 105) · ไฟล์ `src/components/pharmacy/PharmacyRawDataPopup.jsx` · Popup extraLarge: ชื่อ → ช่วงข้อมูล · เป้าหมาย 1 บรรทัด → ตัวตั้ง · ตัวหาร · ผลลัพธ์ (label/value) → ชิป "การนับ:" · "ศบส.:" + ล้างตัวกรอง → `Table` เรียงได้ทุกคอลัมน์ + "นำส่งออกรายงาน" · props `open` · `onClose` · `indicator` ({ key · no · short · num · den · unit · absolute · `rowKind` patient | drug | me · `rate` 'per1000' · `countLabels` · `allInNumerator` · `rowNoun` }) · `rows` · `denominatorByCenter` (ตัวหารเป็นยอดรวมรายศูนย์ ไม่ใช่จำนวนแถว) · `periodLabel` · `targetLabel` · `onExport(report)` · named export `indicatorCenterColumns(formatValue)` = คอลัมน์ตาราง "ตัวตั้ง · ตัวหาร · ผลลัพธ์ แยกรายศูนย์" (ศบส. · ตัวตั้ง · ตัวหาร · ผลลัพธ์ · ผลประเมิน ผ่าน/ไม่ผ่าน/ไม่มีข้อมูล · แถว `isTotal` ตัวหนา) · ข้อมูลจาก `src/data/pharmacyRduRawData.js` (RDU) · `src/data/pharmacyIndicatorRawData.js` (ED · ME · `indicatorCenterRows` · `centerRowsFromCounts`) · ใช้ที่ `/pharmacy/reports` · `/dashboard/reports/pharmacist` · `/dashboard/reports/pharmacy` · `/pharmacy/dashboard`
-
-### 6.137 DevTrainingCard (ลงทะเบียน 11 พ.ย. 69)
+### 6.170 DevTrainingCard (ลงทะเบียน 11 พ.ย. 69)
 
 **DevTrainingCard** — การ์ด "วิธีฝึกทักษะพัฒนาการ": ทักษะ + ขั้นตอนฝึกของด้านที่ล่าช้าตามช่วงอายุ จากใบส่งเสริมพัฒนาการเด็ก กทม. (`src/data/bmaDevPromotionGuide.js`) · ไฟล์ `src/components/clinic/DevTrainingCard.jsx` · API: `tool` ('DSPM'), `band` (ช่วงอายุ `{ label }`), `items` (รายการของใบ: `domain` · `skill` · `steps[]` · `note?` · `purpose?` · `alt?` · `altLabel?`), `onPrint?` (ส่ง = มีปุ่ม outline sm "พิมพ์ให้ผู้ปกครอง" มุมขวาบนของการ์ด · ปกติเรียก `printDevTrainingSheet` ใน `src/utils/devTrainingPrint.js`) · ใช้ที่ขั้นแผนการดูแลของแพทย์เด็กดี (`ImmCareStep`) และฟอร์มประเมินของนักจิตวิทยางานพัฒนาการ (`DevSchoolStyleForm`) · ห่อด้วย `CareStepCard` (เปิดเสมอ ไม่พับ) · ไม่มี token ของตัวเอง
+
+### 6.171 MutedCell (ลงทะเบียน 12 พ.ย. 69)
+
+**MutedCell** — ข้อความรองในเซลล์ตาราง เช่น "—" · "ไม่ระบุแพทย์" · ไฟล์ `src/components/table/MutedCell.jsx` (ผู้ใช้ 12 พ.ย. 69 6ก)
+· ใช้ที่คิวทันตกรรม (`DentalSubClinicQueuePage` · `DentalWellChildQueuePage`)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| ข้อความ | `--text-content-tertiary` · `--type-size-sm` |
+| API | `children` · `style` |
+
+### 6.172 EmptyChartNote (ลงทะเบียน 12 พ.ย. 69)
+
+**EmptyChartNote** — กล่อง "ยังไม่มีข้อมูล" ในพื้นที่กราฟ · ไฟล์ `src/components/graph/EmptyChartNote.jsx` (ผู้ใช้ 12 พ.ย. 69 5ก · รวม 4 สำเนา)
+· ใช้ที่ทุกหน้ารายงาน (ผ่าน `dashboardReportKit` / `dashboardReportKitFramed` ที่ส่งต่อชื่อเดิม) · กราฟแนวโน้มเบาหวาน/ความดัน · เวชศาสตร์ฟื้นฟู
+
+| แบบ | รายละเอียด |
+|---|---|
+| ค่าตั้งต้น (แผงกราฟรายงาน) | ไอคอน `search_off` 28 สี tertiary · ข้อความ sm secondary · คำแนะนำ xs tertiary (ตั้งต้น "ลองขยายช่วงวันที่…") · ไม่มีกรอบ |
+| `dashed` (กราฟแนวโน้มในหน้าบันทึกคลินิก) | กรอบเส้นประ `--dim-stroke-100` `--border-neutral-tertiary` · `--dim-radius-300` · ไอคอน `monitoring` 24 · ข้อความ tertiary · ไม่มีคำแนะนำ |
+| API | `text` หรือ `children` · `hint` (null = ซ่อน) · `icon` · `dashed` |
+
+### 6.173 MetricTrendChart (ลงทะเบียน 12 พ.ย. 69)
+
+**MetricTrendChart** — กราฟเส้นหนึ่งตัวชี้วัดรายครั้งที่รับบริการ + สรุปข้อความ · ไฟล์ `src/components/graph/MetricTrendChart.jsx` (ห่อ `LineChart` · ผู้ใช้ 12 พ.ย. 69 5ก)
+· ใช้ที่ `ChronicTrendSection` (ติดตามการดูแลเบาหวาน/ความดัน) · `RehabTrendSection` (เวชศาสตร์ฟื้นฟู) — นิยามตัวชี้วัด (CHART_DEFS) อยู่ในโมดูลของตัวเอง
+
+| ส่วน | รายละเอียด |
+|---|---|
+| หัว | ชื่อ sm bold · "หน่วย … · N ครั้ง" xs tertiary · `headerAction` ชิดขวา |
+| แกนนอน | เฉพาะครั้งที่มีค่าครบทุก series · `periodLabel` ถ้ามี ไม่งั้น `formatDate(date)` |
+| 0 / 1 จุด | `EmptyChartNote dashed` (`emptyText` · "มีข้อมูลเพียง 1 ครั้ง…") |
+| สรุป | ต่ำสุด · สูงสุด · ครั้งแรก → ล่าสุด · เปลี่ยนแปลง (ดีขึ้น = `--text-brandPrimary-default` · แย่ลง = `--text-danger-default` ตาม `def.higherIsBetter`) |
+| API | `def` · `visits` · `formatDate` · `emptyText` · `refColor` · `headerAction` · `selectedVisitIdx` · `onSelectVisit` |
 
 ## 7. Mobile App · Kiosk — design system แยกของตัวเอง
 
