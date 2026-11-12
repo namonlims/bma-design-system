@@ -15156,7 +15156,7 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 
 ### 6.107 ReviewRow (ลงทะเบียน 2 พ.ย. 69)
 
-**ReviewRow** — แถวป้าย/ค่า ของการ์ดสรุป · ขั้นตรวจสอบข้อมูล · ไฟล์ `src/components/list/ReviewRow.jsx` · API: `label` · `value` | children · `labelWidth` (ค่าเริ่มต้น `--dim-size-2200` 192) · `valueStyle` · ป้าย sm `--text-content-tertiary` · ค่า sm `--text-content-default` ตัดบรรทัดได้ · ค่าว่าง `emptyText` ("—") · จอแคบค่าตกลงใต้ป้ายเมื่อเหลือน้อยกว่า `valueMinWidth` (240 · 0 = แถวเดียวเสมอ) · `labelStyle` · `align='end'` ค่าชิดขวา · `divider` เส้นคั่นล่าง `--border-neutral-quaternary` + ระยะบนล่าง 8 · `padded` ระยะบนล่าง 8 · `gap` · ใช้ที่ ANC · ห้องยาเยี่ยมบ้าน · ตั้งค่ารายการชันสูตร · ทะเบียนยา (`PharmacyRegistryEditor`) · แทน `SummaryRow` 7 สำเนา (3 พ.ย. 69 ข้อ 5ก: สรุปคัดกรองที่ส่งต่อ `CarriedScreeningStep` · วัณโรค · ทันตกรรม · วางแผนครอบครัว · สุขภาพจิต · สังคมสงเคราะห์ · เวชศาสตร์ฟื้นฟู) · แทน `DetailRow` (2 พ.ย. 69) ใน คลังศูนย์ · ตารางเวร · CPOE order gate · คำขอส่งออกข้อมูลส่วนบุคคล · คำขอเข้าถึงข้อมูล
+**ReviewRow** — แถวป้าย/ค่า ของการ์ดสรุป · ขั้นตรวจสอบข้อมูล · ไฟล์ `src/components/list/ReviewRow.jsx` · API: `label` · `value` | children · `labelWidth` (ค่าเริ่มต้น `--dim-size-2200` 192) · `valueStyle` · ป้าย sm `--text-content-tertiary` · ค่า sm `--text-content-default` ตัดบรรทัดได้ · ค่าว่าง `emptyText` ("—") · จอแคบค่าตกลงใต้ป้ายเมื่อเหลือน้อยกว่า `valueMinWidth` (240 · 0 = แถวเดียวเสมอ) · `labelStyle` · `align='end'` ค่าชิดขวา · `divider` เส้นคั่นล่าง `--border-neutral-quaternary` + ระยะบนล่าง 8 · `padded` ระยะบนล่าง 8 · `gap` · `badge` [style, ข้อความ] = `ColorfulBadge` small secondary หน้าค่า (สถานะหัวข้อ · มี badge ไม่มีค่า = แสดงแค่ badge ไม่ขึ้น "—" · 11 พ.ย. 69 ข้อ 16ก แทน SummaryRow ของเวชศาสตร์ฟื้นฟู) · ใช้ที่ ANC · ห้องยาเยี่ยมบ้าน · ตั้งค่ารายการชันสูตร · ทะเบียนยา (`PharmacyRegistryEditor`) · แทน `SummaryRow` 7 สำเนา (3 พ.ย. 69 ข้อ 5ก: สรุปคัดกรองที่ส่งต่อ `CarriedScreeningStep` · วัณโรค · ทันตกรรม · วางแผนครอบครัว · สุขภาพจิต · สังคมสงเคราะห์ · เวชศาสตร์ฟื้นฟู) · แทน `DetailRow` (2 พ.ย. 69) ใน คลังศูนย์ · ตารางเวร · CPOE order gate · คำขอส่งออกข้อมูลส่วนบุคคล · คำขอเข้าถึงข้อมูล
 
 ### 6.108 StatusPill (ลงทะเบียน 2 พ.ย. 69)
 
@@ -15205,7 +15205,7 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 
 **ChoiceButtons** (named export ไฟล์เดียวกัน · 7 พ.ย. 69) — เฉพาะแถวปุ่มตัวเลือก ไม่มีป้ายและกรอบ ใช้ใน Field ของหน้า · `size` sm (36 · ค่าเริ่มต้น) | md (40) · `column` · `clearable` · option มี `hint` (tooltip) · `ariaText` · ChoiceRow แบบ card ใช้ชิ้นนี้ · รวมจาก 3 สำเนา
 
-**ChoiceRow** — คำถาม/หัวข้อ + ปุ่มตัวเลือกคำตอบเดียว · ไฟล์ `src/components/forms/ChoiceRow.jsx` · API: `label` · `options` (string[] | [{value,label}]) · `value` · `onChange` (ชื่อเดิม `onSelect`) · `layout` stack (ป้ายบน sm default · ตัวเลือกล่าง gap 6 · ค่าเริ่มต้น) | inline (ป้ายซ้ายกว้างสุด 640 · ตัวเลือกขวา · ตัดบรรทัดเมื่อแคบ · padding 8/12) | bare (ไม่มีป้าย · ใส่ใน Field ของหน้า) · `chip` card (`SelectableCardButton` gap 12 · ค่าเริ่มต้น) | tag (`SelectableTag` md gap 8) · `clearable` (กดซ้ำยกเลิก → `emptyValue`, ค่าเริ่มต้น '') · `disabled` (ชื่อเดิม `locked` · `readOnly`) · `required` · `hint` · `error` · `tone='danger'` พื้น `--surface-danger-quaternary` · children แทนตัวเลือก · หลายคำตอบใช้ `CheckList` §6.105 · รวมจาก 9 สำเนา (ผู้ใช้ 3 พ.ย. 69 ข้อ 4ก): วางแผนครอบครัว + สุขภาพจิต (inline tag) · MhToolForm + จิตวิทยา (bare) · ก้าวใหม่ 2 ไฟล์ + ทันตกรรม (stack children) · เยี่ยมบ้าน + ประเมินชุมชน (bare ใน Field) · demo `/components/choice-row`
+**ChoiceRow** — คำถาม/หัวข้อ + ปุ่มตัวเลือกคำตอบเดียว · ไฟล์ `src/components/forms/ChoiceRow.jsx` · API: `label` · `options` (string[] | [{value,label}]) · `value` · `onChange` (ชื่อเดิม `onSelect`) · `layout` stack (ป้ายบน sm default · ตัวเลือกล่าง gap 6 · ค่าเริ่มต้น) | inline (ป้ายซ้ายกว้างสุด 640 · ตัวเลือกขวา · ตัดบรรทัดเมื่อแคบ · padding 8/12) | bare (ไม่มีป้าย · ใส่ใน Field ของหน้า) | field (ห่อด้วย `Field` ของ forms/Fields: ป้าย sm medium `--text-input-label` + * · `span` ใน `FieldGrid` · 11 พ.ย. 69) · `chip` card (`SelectableCardButton` gap 12 · ค่าเริ่มต้น) | tag (`SelectableTag` md gap 8) · `clearable` (กดซ้ำยกเลิก → `emptyValue`, ค่าเริ่มต้น '') · `disabled` (ชื่อเดิม `locked` · `readOnly`) · `required` · `hint` · `error` · `tone='danger'` พื้น `--surface-danger-quaternary` · children แทนตัวเลือก · หลายคำตอบใช้ `CheckList` §6.105 · รวมจาก 9 สำเนา (ผู้ใช้ 3 พ.ย. 69 ข้อ 4ก): วางแผนครอบครัว + สุขภาพจิต (inline tag) · MhToolForm + จิตวิทยา (bare) · ก้าวใหม่ 2 ไฟล์ + ทันตกรรม (stack children) · เยี่ยมบ้าน + ประเมินชุมชน (field) · ไม่มี wrapper ชื่อ ChoiceRow ในหน้าแล้ว — หน้าส่ง preset เป็น constant แล้ว spread (`{...CHOICE}`, ผู้ใช้ 11 พ.ย. 69 ข้อ 15ก) · demo `/components/choice-row`
 
 ### 6.119 BreastCancerScreening (ลงทะเบียน 3 พ.ย. 69)
 
@@ -15338,6 +15338,33 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 |---|---|
 | ทูลทิป | `TooltipGroups`: "Fast Track" → "ช่องทางด่วนจากจุดคัดกรองกลาง · จัดคิวก่อน" → เหตุผล · บันทึกโดย · เวลา |
 | ขนาด/ระยะ | ตาม `NameMark` (กรอบ 16×24 · ไอคอน 12 · gap 4) |
+
+### 6.142 ExamField (ลงทะเบียน 11 พ.ย. 69)
+
+**ExamField** — ป้าย + ช่องกรอกของแบบบันทึกการตรวจ (ยกจาก `Field` ใน `ChronicExamSections` · ผู้ใช้ 11 พ.ย. 69 "1. ข") · ไฟล์ `src/components/forms/ExamField.jsx` · API: `label` (ข้อความที่มี "*" → ดอกจันแดง) · `hint` (ⓘ 14px `--icon-neutral-tertiary` + ทูลทิปขาว · string/JSX ระดับโมดูล) · `subgrid` (พาเรนต์เป็น grid → ช่องในแถวเดียวกันตรงกันแม้ป้ายตัดบรรทัด) · children · export สไตล์ `EXAM_SUBTITLE` · `EXAM_LABEL` · `EXAM_SUBTEXT`
+· ใช้ที่ คลินิกเรื้อรัง (ChronicExamSections · CopdExamSections · 6MWT · ขึ้นทะเบียน) · วัณโรค (ตรวจวินิจฉัย · DOT · บัตรรักษา · ทะเบียนคัดกรองเสี่ยง) · HIV (ตรวจวินิจฉัย · ครอบครัว/เพื่อน) · ตรวจสุขภาพ (ความเสี่ยงจากการทำงาน) · ตัวเลือกคำตอบเดียวในช่องนี้ = `ChoiceButtons` (§6.118)
+
+| ส่วน | รายละเอียด |
+|---|---|
+| ป้าย | sm medium `--text-content-default` · ระยะป้าย↔ช่อง 6 (`--dim-space-150`) |
+| ต่างจาก `Field` (forms/Fields) | ExamField ไม่มี `required`/`span` — ใช้ "*" ในป้าย · ฟอร์มทั่วไปที่อยู่ใน `FieldGrid` ใช้ `Field` |
+
+### 6.143 ExamCard (ลงทะเบียน 11 พ.ย. 69)
+
+**ExamCard** — การ์ดหัวข้อการตรวจ: หัวข้อ sm ตัวหนาสีเขียว · ขอบ `--border-brandPrimary-quaternary` + `--shadow-brand-drop-bottom-200` · มุม radius-400 · ขอบใน 16 · ระยะในการ์ด 12 · ไฟล์ `src/components/card/ExamCard.jsx` · API: `title` · children · รวม 2 สำเนา (FootAssessmentFields · ChronicExamSections)
+· ใช้ที่ ผลตรวจเท้า · ตรวจตา (`EyeExamFields` ผ่าน export ต่อของ FootAssessmentFields) · ป๊อปอัปประวัติการตรวจตา · การ์ดหลายใบในหัวข้อเดียวกันห่าง 24
+
+### 6.144 ClinicConsentFormsStep (ลงทะเบียน 11 พ.ย. 69)
+
+**ClinicConsentFormsStep** — ขั้น "แบบฟอร์มความยินยอม" ของทุกคลินิก/หน้าบันทึก (ผู้ใช้ 11 พ.ย. 69 ข้อ 13ก) · ไฟล์ `src/components/clinic/ClinicConsentFormsStep.jsx` · API: `ctx` (`form` · `setForm` · `hn` · `cardPatient` ของหน้าบันทึก) · `code` (รหัสคลินิกใน `clinicConsentForms.js`) · `displayName` · `readOnly` · `statusOnly` (แสดงสถานะว่าลงนามครบแล้ว) · `inPopup` (เปิดจาก ⋮ "แบบฟอร์มความยินยอม") · export `clinicConsentAllSigned`
+· ใช้ที่ `ClinicRecordPage` (ทุกคลินิกพิเศษ) · `TreatmentFormPage` · `PhysioFormPage` · `SocialWorkFormPage` · ก้าวใหม่ (`AddictionConsentFormsBody`) · ตรวจสุขภาพ (`CheckupNurseScreeningPage` · `CheckupReviewStep`) · `ClinicStepPreview` · กติกา `.claude/rules/consent-forms.md`
+
+| ส่วน | รายละเอียด |
+|---|---|
+| ใบของคลินิก | การ์ด `PendingConsentFormCard` (grid auto-fill ขั้นต่ำ 280) · กด → ป๊อปอัป `ConsentFormFillBody` ยินยอม/ไม่ยินยอม + ลายมือชื่อ หรือ อัปโหลดแบบฟอร์มกระดาษ · ลงนามที่จุดคัดกรองแล้ว = "ยินยอมแล้ว · จุดคัดกรอง" ดูได้ |
+| บันทึก | `form.clinicConsent[formId]` ของการบันทึกครั้งนี้ + ทะเบียนกลาง `/consent` ผ่าน `recordConsentCapture` (ADD-C4 ผ่าน `setAddC4`) |
+| แบบฟอร์มอื่น ๆ | ใบจากทะเบียนกลางที่ยังไม่ลงนาม 4 ใบแรก + "ดูทั้งหมด" · ใบที่ลงนามแล้วไม่ขึ้นซ้ำ |
+| ดูใบที่ลงนาม | `ConsentViewPopup` ข้อความรายข้อ + ผล + ลายมือชื่อ/ไฟล์กระดาษ |
 
 ### 6.141 PharmacyRawDataPopup (ลงทะเบียน 11 พ.ย. 69)
 
