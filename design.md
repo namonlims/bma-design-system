@@ -5343,6 +5343,10 @@ The Date Picker reuses `input` tokens for the field and `calendar` tokens for th
 | Size | `Large` (40px) · `Medium` (36px) |
 | State | `Default` · `Focus` · `Open` · `Filled` · `Error` · `Disabled` |
 
+#### 6.4.1b `typeable` — พิมพ์วันที่เอง (ผู้ใช้ 11 พ.ย. 69)
+
+`<DatePicker typeable />` เปลี่ยนช่องเป็นช่องพิมพ์ + ไอคอนปฏิทินกับลูกศรเปิดปฏิทินตามเดิม: พิมพ์ตัวเลขได้ 8 หลัก ระบบใส่ `/` ให้เป็น `วว/ดด/ปปปป` (ปี ≥ 2400 = พ.ศ. ไม่งั้น = ค.ศ.) · กด Enter หรือออกจากช่อง = ใช้ค่า · วันที่ไม่มีจริงหรือนอก `minDate`/`maxDate` = ขอบแดง ไม่เปลี่ยนค่า · ใช้กับรูปแบบวันที่ค่าตั้งต้นเท่านั้น และไม่ใช้ร่วมกับ `modal` · ค่าตั้งต้นของทุกหน้าที่ไม่ส่ง prop นี้ = ปุ่มเปิดปฏิทินเหมือนเดิม
+
 #### 6.4.2 Input Field — Color Tokens
 
 | Figma Semantic Token | CSS Variable | Hex | Primitive | State |
@@ -15369,6 +15373,10 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 ### 6.141 PharmacyRawDataPopup (ลงทะเบียน 11 พ.ย. 69)
 
 **PharmacyRawDataPopup · indicatorCenterColumns** — ข้อมูลดิบ (Raw Data) ของตัวชี้วัดเภสัชกรรม (คณะทำงาน 7 ข้อ 105) · ไฟล์ `src/components/pharmacy/PharmacyRawDataPopup.jsx` · Popup extraLarge: ชื่อ → ช่วงข้อมูล · เป้าหมาย 1 บรรทัด → ตัวตั้ง · ตัวหาร · ผลลัพธ์ (label/value) → ชิป "การนับ:" · "ศบส.:" + ล้างตัวกรอง → `Table` เรียงได้ทุกคอลัมน์ + "นำส่งออกรายงาน" · props `open` · `onClose` · `indicator` ({ key · no · short · num · den · unit · absolute · `rowKind` patient | drug | me · `rate` 'per1000' · `countLabels` · `allInNumerator` · `rowNoun` }) · `rows` · `denominatorByCenter` (ตัวหารเป็นยอดรวมรายศูนย์ ไม่ใช่จำนวนแถว) · `periodLabel` · `targetLabel` · `onExport(report)` · named export `indicatorCenterColumns(formatValue)` = คอลัมน์ตาราง "ตัวตั้ง · ตัวหาร · ผลลัพธ์ แยกรายศูนย์" (ศบส. · ตัวตั้ง · ตัวหาร · ผลลัพธ์ · ผลประเมิน ผ่าน/ไม่ผ่าน/ไม่มีข้อมูล · แถว `isTotal` ตัวหนา) · ข้อมูลจาก `src/data/pharmacyRduRawData.js` (RDU) · `src/data/pharmacyIndicatorRawData.js` (ED · ME · `indicatorCenterRows` · `centerRowsFromCounts`) · ใช้ที่ `/pharmacy/reports` · `/dashboard/reports/pharmacist` · `/dashboard/reports/pharmacy` · `/pharmacy/dashboard`
+
+### 6.137 DevTrainingCard (ลงทะเบียน 11 พ.ย. 69)
+
+**DevTrainingCard** — การ์ด "วิธีฝึกทักษะพัฒนาการ": ทักษะ + ขั้นตอนฝึกของด้านที่ล่าช้าตามช่วงอายุ จากใบส่งเสริมพัฒนาการเด็ก กทม. (`src/data/bmaDevPromotionGuide.js`) · ไฟล์ `src/components/clinic/DevTrainingCard.jsx` · API: `tool` ('DSPM'), `band` (ช่วงอายุ `{ label }`), `items` (รายการของใบ: `domain` · `skill` · `steps[]` · `note?` · `purpose?` · `alt?` · `altLabel?`), `onPrint?` (ส่ง = มีปุ่ม outline sm "พิมพ์ให้ผู้ปกครอง" มุมขวาบนของการ์ด · ปกติเรียก `printDevTrainingSheet` ใน `src/utils/devTrainingPrint.js`) · ใช้ที่ขั้นแผนการดูแลของแพทย์เด็กดี (`ImmCareStep`) และฟอร์มประเมินของนักจิตวิทยางานพัฒนาการ (`DevSchoolStyleForm`) · ห่อด้วย `CareStepCard` (เปิดเสมอ ไม่พับ) · ไม่มี token ของตัวเอง
 
 ## 7. Mobile App · Kiosk — design system แยกของตัวเอง
 
