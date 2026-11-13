@@ -4780,6 +4780,8 @@ Row buttons set `className='flex-1 min-w-0'` and `style={{ minWidth: 0, maxWidth
 
 **Day marker (2026-10-14):** optional prop `dayMarker={(date) => color | null}` draws an 8px dot (`--dim-size-100`) under the day number for days that have items (white on the selected day). Used by ปฏิทินติดตาม (งานสุขภาพจิตทั่วไป) — color = status token (warning · success · brand).
 
+**Panel navigation — Ant Design DatePicker style (2026-11-12):** the header label stays the same text, but the month name and the year are separate click targets. Month → 12-month panel · year → 10-year panel (BE decades `2560 – 2569`, 12 cells, the first and last cell muted like antd) → pick a year → month panel → pick a month → day grid. The existing ‹ › chevrons step by month / year / 10 years depending on the panel. Panels are 3 × 4 cells, 40px tall, `--dim-radius-200`, `--type-size-sm` (same look as the old year list); selected = `--surface-brandPrimary-default`, this month/year = `--surface-calendar-current` + `--text-calendar-current`, out of `minDate`/`maxDate` = `--text-input-disabled` and not clickable. The panel area is exactly the day grid's size (292 × 292), so the popup never resizes. Enabled automatically whenever the caller passes `onNavigate` (month delta) — no new prop; `onPickYear` is kept only as a fallback. `picker='month'` (2026-11-13, like antd) opens on the month panel and picking a month calls `onSelect(first day of that month)` instead of opening the day grid — used by `MonthYearPicker` (§6.146).
+
 #### 6.2.1 Color Tokens
 
 | CSS Variable | Figma Semantic Token | Primitive | Hex | Usage |
@@ -5335,6 +5337,8 @@ icon/input/default                  → neutral/400               → #ADB2B7  �
 **Node:** `341-6345` · Figma library: **MIH Design System Foundation / Semantic**
 
 The Date Picker reuses `input` tokens for the field and `calendar` tokens for the popup.
+
+**Focus on open (2026-11-12):** every open re-centres the calendar — on the value's month, or (no value) on today clamped into `minDate`/`maxDate` (e.g. the end field of `DatePickerRange` opens on the start date's month). Same in `modal` mode. Year → month → day navigation comes from `Calendar` ([6.2](#62-calendar) "Panel navigation").
 
 #### 6.4.1 Component Properties (Figma node 341-6345)
 
@@ -13507,6 +13511,8 @@ Layout building blocks for the Registration form. Composed together to lay out a
 
 ไฟล์: `src/components/forms/Fields.jsx` · demo: `/components/registration-form-fields-layout`
 
+**SubCard `surfaceTone`** (13 พ.ย. 69): `card` (ค่าเริ่มต้น · ขาว pad 24 + เงา) · `neutral` (เทาอ่อน pad 24) · `brandQuaternary` (เขียวอ่อน pad 16 gap 12) · `inset` (ขาว ขอบ `--border-neutral-tertiary` pad 16 gap 12 ไม่มีเงา = การ์ดย่อยในการ์ดหลัก) · ส่งผ่าน `gap` · `className` · `style` (ทับท้ายสุด) · `id` · ตรวจสุขภาพ (`CheckupUi`) และอนามัยโรงเรียน (`schoolHealthShared`) ห่อตัวนี้แล้ว — ห้ามประกาศ SubCard ในหน้าอีก
+
 #### 6.37.21 RegistrationSteps (registration-steps)
 
 Per-step form bodies for the Registration (เวชระเบียน) workflow (6 steps · Figma 292:104252 + 2373:119045..). Each step accepts (form, setForm) and is rendered inside FormShell. Demo shows Step 2 (ข้อมูลส่วนตัว).
@@ -15424,6 +15430,26 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 | 0 / 1 จุด | `EmptyChartNote dashed` (`emptyText` · "มีข้อมูลเพียง 1 ครั้ง…") |
 | สรุป | ต่ำสุด · สูงสุด · ครั้งแรก → ล่าสุด · เปลี่ยนแปลง (ดีขึ้น = `--text-brandPrimary-default` · แย่ลง = `--text-danger-default` ตาม `def.higherIsBetter`) |
 | API | `def` · `visits` · `formatDate` · `emptyText` · `refColor` · `headerAction` · `selectedVisitIdx` · `onSelectVisit` |
+
+### 6.174 ErrorNote (ลงทะเบียน 13 พ.ย. 69)
+
+**ErrorNote** — ข้อความผิดพลาดสั้น ๆ ในฟอร์ม · ไฟล์ `src/components/alert/ErrorNote.jsx` · `variant='box'` (ค่าเริ่มต้น) = กล่อง `--surface-danger-quaternary` · ตัว `--text-danger-default` sm · ไอคอน `error` 16 · pad 8/12 · มุม `--dim-radius-200` · `variant='text'` = ตัว xs `--text-danger-secondary` ไม่มีกล่อง · props `children` · `variant` · `icon` (ส่ง `null` = ไม่มีไอคอน) · `style` · มี `role='alert'` · รวมตัวที่ประกาศซ้ำใน `tbShared.jsx` (re-export ให้หน้าวัณโรค: ทะเบียน · ติดตาม · คัดกรองเสี่ยง) · `RehabSteps.jsx` · ตัวที่ไม่ได้ใช้ใน `VisitAdviceAppointmentPanel.jsx` ถูกลบ (ผู้ใช้ 13 พ.ย. 69) · ข้อความยาวหรือมีปุ่ม → `Alert` · ห้ามประกาศ ErrorNote ในหน้าอีก
+
+### 6.175 MedChangeReason — เหตุผล / ประวัติการเปลี่ยนยาใน CPOE (ลงทะเบียน 13 พ.ย. 69)
+
+ไฟล์ `src/components/pharmacy/MedChangeReason.jsx` (ผู้ใช้ 22 ต.ค. 69) · ข้อมูล `src/data/medChangeHistory.js` · named exports: `MedOrderReasonCell` (`row` · `changed` · `onChange(patch)`) = ช่องเหตุผลในตารางสั่งยา ไม่บังคับ ไม่มี * สูงเท่าช่อง md ขยายตามบรรทัด (สูงสุด 4) · `MedChangeMarker` (`change` จาก `detectMedChanges`) = "เปลี่ยนจากครั้งก่อน" ใต้ชื่อยา + hover ครั้งก่อน/ครั้งนี้ · `MedChangeHistoryButton` (`hn` · `name`) = ไอคอน history หลังชื่อยา → `MedChangeHistoryPopup` (`open` · `onClose` · `name` · `entries`) "ประวัติการเปลี่ยนยา · <ชื่อยา>" · `MedOrderReasonNote` (`reason`) = เหตุผลที่แพทย์ระบุ อ่านอย่างเดียว (ห้องยา) · ใช้ที่ CPOE (`TreatmentSteps` · `ClinicOrdersPanel`) · `/pharmacy/dispense`
+
+### 6.176 PhysioProgressGraph (ลงทะเบียน 13 พ.ย. 69)
+
+ไฟล์ `src/components/physio/PhysioProgressGraph.jsx` · กราฟความคืบหน้ากายภาพบำบัดชุดเดียวกันทั้งแท็บ "กายภาพบำบัด" ของ EMR และขั้น "แผนการดูแลรักษา" ของนักกายภาพ · `ViewPills` เลือกตัวชี้วัด: ผลตอบสนองรายครั้ง (ดีขึ้น 3 · คงที่ 2 · แย่ลง 1) · Barthel · VAS · ROM — รวมประวัติฟื้นฟูของแพทย์ + ค่าที่นักกายภาพบันทึกรายครั้ง · กราฟ `LineChart` สูงราว 240px ทุกความกว้าง (คำนวณจากความกว้างจริง · ผู้ใช้ 12 พ.ย. 69) · props `hn` · `sessions` (= `getPhysioSessionHistory(hn)` ใหม่สุดก่อน) · named export `fmtPhysioDate(iso)` · ใช้ที่ `PhysioFormPage` · `TreatmentSteps` (EMR)
+
+### 6.177 XrayOrderPicker (ลงทะเบียน 13 พ.ย. 69)
+
+ไฟล์ `src/components/xray/XrayOrderPicker.jsx` · ตัวเลือกรายการส่งตรวจรังสีชุดเดียวทั้งระบบ (TOR §1.12.4–1.12.5): แท็บ รายการเดี่ยว | ชุดรายการตรวจ · ค้นหา + ตัวกรอง Modality / ส่วนของร่างกาย · กลุ่ม "รายการที่ใช้บ่อย" (หรือชุดของคลินิก `XRAY_CLINIC_PRESETS`) ปักบนสุด · ราคา/เบิกได้/จ่ายเองตามสิทธิ · เตือนตรวจซ้ำจากประวัติ (ต้องใส่เหตุผล) · ความเร่งด่วน ปกติ | ด่วน ต่อรายการ · ศูนย์ปลายทาง (ส่งข้ามศูนย์ได้) · props `value` / `onChange` (examIds · controlled หรือเก็บเอง) · `onSend` · `patient` · `rightKey` · `history` (`xrayHistoryFor(hn)`) · `clinicCode` · `center` / `onCenterChange` · `urgencyMap` / `onUrgencyChange` (หรือ `{...xrayUrgencyBinding(form, setForm)}`) · `repeatReasons` / `onRepeatReasonChange` · `variant` popup | embedded · `open` / `onClose` · `disabled` · ใช้ที่ CPOE (`TreatmentSteps` · `RadiologyOrderPanel`) · "ส่งตรวจ ▾" (`OpdHeaderActions` · `TreatmentFormPage` · `DentalSendExamAction`) · `/xray/order`
+
+### 6.178 MonthYearPicker (ลงทะเบียน 13 พ.ย. 69)
+
+ไฟล์ `src/components/forms/MonthYearPicker.jsx` · หัวเดือน "มกราคม 2570" ของมุมมองรายเดือนที่กดแล้วเลือกเดือน/ปีได้ (ผู้ใช้ 13 พ.ย. 69 "ตรงนี้อยากให้เลือกปฏิทินได้") · ข้อความคงสไตล์ของหน้า (`labelStyle`) ไม่มีลูกศร/กรอบ dropdown (ผู้ใช้ 13 พ.ย. 69 "ไม่ต้องมี dropdown") — บอกว่ากดได้ด้วย cursor pointer + พื้น hover/เปิด `--surface-brandPrimary-quaternary` มุม `--dim-radius-200` pad ซ้ายขวา 8 · `.mih-hit-44` ≤ 1024 · ป๊อปโอเวอร์ชุดเดียวกับ `DatePicker` = `Calendar picker='month'` (§6.2: แผงเดือน · กดปีบนหัว → แผงปี → เดือน) ไทย พ.ศ. · props `value` (Date) · `onChange(วันที่ 1 ของเดือน)` · `minDate` · `maxDate` (เดือนนอกช่วงเลือกไม่ได้) · `labelStyle` · `children` (ข้อความ · ค่าเริ่มต้น `monthYearLabel(value)`) · `disabled` · named export `monthYearLabel(date)` · ปุ่ม ‹ › ของหน้ายังทำงานเหมือนเดิม · ใช้ที่ `MonthNav` ใน `ScheduleEditorPage` = `/my-schedule` + `/schedule/:id` (สูงสุด = เดือนสุดท้ายที่ › ไปถึง)
 
 ## 7. Mobile App · Kiosk — design system แยกของตัวเอง
 
