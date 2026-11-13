@@ -15744,3 +15744,7 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 ### 6.184 FieldRows — TextRow · SelectRow · TextareaRow · DateRow (ลงทะเบียน 13 พ.ย. 69)
 
 **FieldRows** — ช่องฟอร์ม 1 ช่องใน `FieldGrid`: ป้ายจาก `Field` (`forms/Fields`) + ตัวกรอกกว้างเต็มช่อง ตัวอักษร sm (`FIELD_TEXT`) · ไฟล์ `src/components/forms/FieldRows.jsx` · `TextRow` = `InputField` (`type` · `inputMode` · `readOnly` · `disabled`) · `SelectRow` = `Select` (`options` เป็น string หรือ `{value,label}` · `listFooter`) · `TextareaRow` = `Textarea` (`rows` 3) · `DateRow` = `DatePicker` · ทุกตัว `label` · `required` · `span` · `value` · `onChange` · `error` · ยกจากงานชุมชน (`communityShared` re-export ชื่อเดิม · ผู้ใช้ 13 พ.ย. 69 ข้อ 11ก) · `/drug` ของน้อง (`drugFormShared.jsx`) ยังมีชุดของตัวเอง — ย้ายตามทีหลัง · ช่องที่ต้องมี ⓘ / subgrid → `ExamField` (§6.142) · ช่องในป๊อปอัปลงทะเบียน → `FormFieldBlock` (§6.54)
+
+### 6.189 CollapseToggle (ลงทะเบียน 13 พ.ย. 69)
+
+**CollapseToggle** — ปุ่มลูกศรหุบ/กางของหัวข้อการ์ด (ghost `NeutralSubdueIconButton` sm 36) · ไฟล์ `src/components/button/CollapseToggle.jsx` · props `open` · `onToggle` · `title` หรือ `label` (ใช้ทำ aria-label "หุบ/กาง …") · `arrow` = `vertical` ▴/▾ (ค่าเริ่ม) | `disclosure` ▾/▸ · `tone` = `neutral` (ค่าเริ่ม) | `brand` (hover พื้นเขียวอ่อน + ลูกศรเขียว) · `size` · ใช้คู่กับ `useAccordionItem` ได้ · แทนสำเนาใน หน้าบันทึกคลินิก (`ClinicRecordSteps` — แบบประเมิน · แบบคัดกรอง · รายการอื่น ๆ) · สร้างผู้ใช้แบบประเมิน (การ์ดหน่วยงาน · `arrow='disclosure' tone='brand'`) (ผู้ใช้ 12 พ.ย. 69 12ก)
