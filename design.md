@@ -13171,7 +13171,8 @@ Props: `selected` · `onClick` · `ariaLabel` · `showTrailingCheck` (true) · `
 
 รูปผู้รับบริการในตารางคิว (Register Home UserA / New User 3891:7747) ลำดับ fallback:
 รูป → วงกลมอักษรแรกของชื่อ (ตัดคำนำหน้าออกก่อน · สีพื้น 6 สีสุ่มคงที่จาก HN) → เงา New User
-Props: `name` · `hn` · `avatarUrl` · `size` (36) · `newUser` · helper
+Props: `name` · `hn` · `avatarUrl` · `size` (36) · `newUser` · `masked` (แม่กุญแจแทนรูป แถวข้อมูลลับ) · helper
+รูป alt ว่าง + aria-hidden (ชื่ออยู่ช่องข้าง ๆ) · ใช้แทนวงกลมรูปที่เคยวาดเองในหน้านัดหมาย · ตารางเวร · คิวรวมรอรับเคส · ชันสูตร · หัตถการ · พยาบาลหลังตรวจ · รังสี · สิทธิและการเบิกจ่าย (ผู้ใช้ 13 พ.ย. 69 ข้อ 3ก)
 `resolveQueuePatientAvatarProps({ hn, displayName, newUser, noProfilePhoto })` ดึงจากทะเบียนกลาง
 สีพื้นอักษรแรก: `#F472B6 #A78BFA #60A5FA #34D399 #FBBF24 #FB7185` (primitive pink/violet/blue/
 emerald/amber/rose 400 — palette เดียวกับหน้าลงทะเบียน)
@@ -15200,7 +15201,7 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 
 ### 6.108 StatusPill (ลงทะเบียน 2 พ.ย. 69)
 
-**StatusPill** — ป้ายสถานะจาก meta ของหน้า · ไฟล์ `src/components/badge/StatusPill.jsx` · API: `meta` { label · style | badge | tone } · `kind` colorful (`ColorfulBadge`, ค่าเริ่มต้น) | status (`StatusBadge`) · `size` (small) · `hierarchy` · `showDot` · children แทน label · ไม่มี meta = ป้ายเทา "—" · หน้าเก็บแค่ตาราง สถานะ → meta · ใช้ที่ เวชระเบียน (คิว) · คลังศูนย์ · Problem List · อนามัยโรงเรียน (`schoolHealthShared` re-export) · หน้า `/drug` (ของน้อง) ยังประกาศเอง · `icon` (หรือ meta.icon) · `width` hug|cap · meta.hierarchy ใช้เมื่อไม่ส่ง `hierarchy` · ใช้เพิ่ม (ผู้ใช้ 12 พ.ย. 69 ข้อ 29ก): ตีความผลตรวจสุขภาพ · เยี่ยมบ้านเภสัช/การแพทย์ · ตารางเวร · ผลตรวจไต · แผนบริการอนามัยโรงเรียน (หน้าเก็บแค่ สถานะ → meta · ตัวห่อหนึ่งบรรทัดตั้งชื่อตามเรื่อง ไม่ใช้ชื่อ `StatusBadge`) · เยี่ยมบ้านทันตกรรมยังประกาศเอง
+**StatusPill** — ป้ายสถานะจาก meta ของหน้า · ไฟล์ `src/components/badge/StatusPill.jsx` · API: `meta` { label · style | badge | tone } · `kind` colorful (`ColorfulBadge`, ค่าเริ่มต้น) | status (`StatusBadge`) · `size` (small) · `hierarchy` · `showDot` · children แทน label · ไม่มี meta = ป้ายเทา "—" · หน้าเก็บแค่ตาราง สถานะ → meta · ใช้ที่ เวชระเบียน (คิว) · คลังศูนย์ · Problem List · อนามัยโรงเรียน (`schoolHealthShared` re-export) · `/drug` คลังศูนย์ (kind status) + ทะเบียนยา (ผู้ใช้ 13 พ.ย. 69 ข้อ 4ก) · `icon` (หรือ meta.icon) · `width` hug|cap · meta.hierarchy ใช้เมื่อไม่ส่ง `hierarchy` · ใช้เพิ่ม (ผู้ใช้ 12 พ.ย. 69 ข้อ 29ก): ตีความผลตรวจสุขภาพ · เยี่ยมบ้านเภสัช/การแพทย์ · ตารางเวร · ผลตรวจไต · แผนบริการอนามัยโรงเรียน (หน้าเก็บแค่ สถานะ → meta · ตัวห่อหนึ่งบรรทัดตั้งชื่อตามเรื่อง ไม่ใช้ชื่อ `StatusBadge`) · เยี่ยมบ้านทันตกรรมยังประกาศเอง
 
 ### 6.109 SplitCard (ลงทะเบียน 2 พ.ย. 69)
 
@@ -15715,3 +15716,31 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 ### 6.188 FormRow (ลงทะเบียน 13 พ.ย. 69)
 
 **FormRow** — แถวของแบบคัดกรอง: ฉลาก (+ `hint` เล็ก) ซ้าย · ตัวเลือกขวาในคอลัมน์กว้างคงที่ (`controlWidth`, ค่าเริ่ม 340) ปุ่มทุกแถวเริ่มที่เส้นตั้งเดียวกัน · เส้นคั่นบางระหว่างแถว · `last` · `emphasis` · จอแคบตัวเลือกตกลงใต้ฉลาก · ไฟล์ `src/components/forms/FormRow.jsx` · ใช้ที่ คัดกรองวัณโรค · บันทึกวัณโรค (ผู้ใช้ 13 พ.ย. 69)
+
+### 6.178 LabOrderPanel (ลงทะเบียน 13 พ.ย. 69)
+
+**LabOrderPanel** — เนื้อในแท็บ "ส่งตรวจชันสูตร" ของ CPOE (เลือกรายการ · ชุดตรวจ · สรุปใบขอ · "พิมพ์ใบคำขอ" / "ส่งเข้า LIS") · ย้ายจาก `src/pages/treat/panels/` มาที่ `src/components/lab/LabOrderPanel.jsx` เพราะหน้าอื่นนอกห้องตรวจดึงไปใช้ · props `form` · `setForm` · `patient` · `onGoToInterfaces` · `defaultUrgency` · `stage` ('all' | 'pick' | 'summary') · `hideSendActions` · `actionsRef` · `onActionsMeta` · export `RIGHT_KEY_BY_THAI` · `FALLBACK_RIGHT_KEY` · ใช้ที่ แท็บ CPOE หน้าบันทึกการตรวจ/คลินิก · `LabOrderPopup` (ห้องสังเกตการณ์) · สรุปค่าใช้จ่าย `CpoeOrderTotal` · ส่งตรวจของทันตกรรม `DentalSendExamAction` (หน้าของน้อง) · เปิดเป็นป๊อปอัปให้ใช้ `LabOrderPopup` ไม่ห่อด้วย `Popup` เปล่า (ผู้ใช้ 13 พ.ย. 69 ข้อ 6ก)
+
+### 6.179 DentalSendExamAction (ลงทะเบียน 13 พ.ย. 69)
+
+**DentalSendExamAction** — ปุ่มหัวแฟ้ม "ส่งตรวจ ▾" (ส่งตรวจแล็บ · ส่งตรวจรังสี · ส่งตรวจสมรรถภาพปอด · ปรึกษาตรวจเฉพาะทาง · ส่งตรวจทันตกรรมเมื่อส่ง `dentalReferral`) ใบขอตรวจเป็นป๊อปอัปด้วย `LabOrderPanel` · `XrayOrderPicker` ชุดเดียวกับ OPD · ย้ายจาก `src/pages/clinic/dental/` มาที่ `src/components/dental/DentalSendExamAction.jsx` เพราะหน้าตรวจสุขภาพดึงไปใช้ · props `form` · `setForm` · `patient` · `dentalReferral` · ใช้ที่ หน้าบันทึกทันตกรรม (หน้าของน้อง) · ตรวจสุขภาพ บันทึกผลตรวจ + คัดกรองของพยาบาล (ผู้ใช้ 13 พ.ย. 69 ข้อ 7ก)
+
+### 6.180 ExportFormatPopup — ป๊อปอัป "นำออกรายงาน" (ลงทะเบียน 13 พ.ย. 69)
+
+**ExportFormatPopup** — ป๊อปอัปนำออกรายงานชุดเดียวทั้งระบบ: เลือกหัวข้อรายงาน → ช่วงวันที่/ปีงบประมาณ → รูปแบบไฟล์ PDF · CSV · XLSX → **เหตุผลในการนำออกรายงาน*** (`REPORT_EXPORT_REASONS` · "นำส่ง (Export) ให้หน่วยงานภายนอก" → "หน่วยงานภายนอกที่นำส่ง*" `SelectWithOther` · "อื่นๆ" → ระบุ ≥ 5 ตัวอักษร) → ข้อมูลส่วนบุคคล (PDPA/PII) → ตัวอย่างเอกสารพร้อมหัวกระดาษ · ยืนยันแล้วผ่าน `PdpaExportAcknowledgePopup` ก่อนได้ไฟล์ (ติ๊ก PII = สร้างคำขออนุมัติ) · เหตุผลเก็บใน log การนำออก + ทุกการนำออกลง `/audit/log` (การกระทำ "ส่งออกข้อมูล" · รายละเอียด = ไฟล์ · เหตุผล) · ไฟล์ `src/components/popup/ExportFormatPopup.jsx` (ย้ายจาก `src/pages/consent/consentExportPopup.jsx` ซึ่งเหลือเป็นตัวส่งต่อ · ผู้ใช้ 13 พ.ย. 69 ข้อ 3ก) · props หลัก `open` · `report` · `reportsCatalog` · `onClose` · `onExported` · `hideDateRange` · `fiscalYearOptions` · `initialFiscalYear` · `onFiscalYearChange` · `criteriaFields` · `columnOptions` · `allowPii` · `dataScope` · `onRequestApproval` · `allowedFormats` · export ร่วม `useExportFormatState` · `ExportFormatFormBody` · `ExportPdpaGate` · `buildReportTableColumns` · `buildReportColumnGroups` · `DateInputBox` · `stripTorRef` · ใช้ที่ 72 หน้า (รายงานทุกคลินิก/แผนก · แดชบอร์ด · audit log · ความยินยอม · `StandardReportShell` · `ClinicReportShell`) · อย่าเขียนช่องเหตุผล/ป๊อปอัปนำออกเองในหน้า
+
+### 6.181 PdpaExportAcknowledgePopup (ลงทะเบียน 13 พ.ย. 69)
+
+**PdpaExportAcknowledgePopup** — ป๊อปอัปรับทราบความรับผิดชอบ PDPA ก่อนนำออกข้อมูล (หน้าที่ผู้นำออก 4 ข้อ · Alert "ระบบบันทึกการนำออกทุกครั้ง" · แถว "เหตุผลในการนำออกรายงาน" อ่านอย่างเดียว · ติ๊ก PII = กล่องส้มสายอนุมัติ + "เหตุผลในการนำออกข้อมูลส่วนบุคคล") · ปุ่มยืนยันกดได้เมื่อติ๊กรับทราบ · ไฟล์ `src/components/popup/PdpaExportAcknowledgePopup.jsx` · props `open` · `onClose` · `includePii` · `requestApproval` · `scope` · `source` · `format` · `purpose` · `exportReason` · `onConfirm({ purpose })` · เปิดผ่าน `ExportFormatPopup` (§6.180 · `ExportPdpaGate`) — หน้าไม่ต้องวางเอง
+
+### 6.182 RadioPill (ลงทะเบียน 13 พ.ย. 69)
+
+**RadioPill** — ปุ่มเลือกค่าเดียว กล่องเหลี่ยมมุมมน (radius 200) สูง 40 ไม่มีเครื่องหมายถูก · เลือก = พื้น `--surface-brandPrimary-quaternary` + ขอบ/ตัวอักษรเขียว · hover = ขอบเขียว · `mih-hit-44` · ไฟล์ `src/components/forms/RadioPill.jsx` · props `label` · `selected` · `onClick` · `disabled` · ใช้: ปุ่มรูปแบบไฟล์ PDF · CSV · XLSX ใน `ExportFormatPopup` (§6.180) · อยากได้แคปซูลมีเครื่องหมายถูก → `SelectableTag`
+
+### 6.183 RowIconActions (ลงทะเบียน 13 พ.ย. 69)
+
+**RowIconActions** — ปุ่มไอคอนท้ายแถวตาราง ดู · พิมพ์ · แก้ไข · ลบ · ไฟล์ `src/components/table/RowIconActions.jsx` · API: `name` (ต่อท้าย aria-label) · `onView` · `onPrint` (+ `printLabel`) · `onEdit` · `onDelete` — ไม่ส่ง = ไม่แสดงปุ่มนั้น · ลำดับตายตัว ตา → พิมพ์ → ดินสอ → ถังขยะ · ตา/พิมพ์/ลบ = `NeutralSubdueIconButton` outline sm · แก้ไข = `BrandIconButton` quaternary sm · gap `--dim-space-150` · คลิกปุ่มไม่โดนคลิกทั้งแถว · ใช้ที่งานชุมชน 10 หน้า (`communityShared` export `RowActions` = ตัวนี้) · ทะเบียนยา (พิมพ์ฉลาก · แก้ไข · ลบ) + ตารางในหน้าลงทะเบียนยา (ผู้ใช้ 13 พ.ย. 69 ข้อ 7ก) · คำสั่งทางแยก/รอง → `RowActionMenu` (⋮) · ปุ่มดันงานขั้นถัดไปของคิวรังสีคงเป็น `XrayRowActions` ของหน้า (ผู้ใช้ 13 พ.ย. 69 ข้อ 5ก)
+
+### 6.184 FieldRows — TextRow · SelectRow · TextareaRow · DateRow (ลงทะเบียน 13 พ.ย. 69)
+
+**FieldRows** — ช่องฟอร์ม 1 ช่องใน `FieldGrid`: ป้ายจาก `Field` (`forms/Fields`) + ตัวกรอกกว้างเต็มช่อง ตัวอักษร sm (`FIELD_TEXT`) · ไฟล์ `src/components/forms/FieldRows.jsx` · `TextRow` = `InputField` (`type` · `inputMode` · `readOnly` · `disabled`) · `SelectRow` = `Select` (`options` เป็น string หรือ `{value,label}` · `listFooter`) · `TextareaRow` = `Textarea` (`rows` 3) · `DateRow` = `DatePicker` · ทุกตัว `label` · `required` · `span` · `value` · `onChange` · `error` · ยกจากงานชุมชน (`communityShared` re-export ชื่อเดิม · ผู้ใช้ 13 พ.ย. 69 ข้อ 11ก) · `/drug` ของน้อง (`drugFormShared.jsx`) ยังมีชุดของตัวเอง — ย้ายตามทีหลัง · ช่องที่ต้องมี ⓘ / subgrid → `ExamField` (§6.142) · ช่องในป๊อปอัปลงทะเบียน → `FormFieldBlock` (§6.54)
