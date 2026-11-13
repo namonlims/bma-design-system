@@ -12357,6 +12357,8 @@ In Figma, this token has a resolved value per brand mode (e.g. Pink mode = `rgba
 
 #### 6.28.7 TopicHeader (หัวข้อกลุ่มในขั้นฟอร์ม)
 
+ชุดค่าตั้งต้น (ผู้ใช้ 12 พ.ย. 69 ข้อ 11ก — แทน SectionHeader ที่ห่อ TopicHeader ใน 5 หน้า + ตรวจสุขภาพ + อนามัยโรงเรียน): หน้าใช้ `TopicHeader` ตรง (`action` = `trailing`) · `RegularTopicHeader` (น้ำหนักปกติ · CheckupUi) · `LevelTopicHeader` (`level` main | section | sub · schoolHealthShared) re-export `as SectionHeader`
+
 **Source:** [src/components/topic/TopicHeader.jsx](src/components/topic/TopicHeader.jsx) · library `/components/topic-header`
 
 > หัวข้อกลุ่มภายในขั้นของฟอร์ม/การ์ด (ไม่ใช่แถวการ์ดแบบ Topic) — รวม TopicHeader ที่เคยเขียนซ้ำ 18 ไฟล์ (ANC · ทันตกรรม · วัณโรค · เยี่ยมบ้าน · คัดกรองกลาง ฯลฯ) เป็นตัวเดียว (ผู้ใช้ 23 ต.ค. 69)
@@ -12372,6 +12374,11 @@ In Figma, this token has a resolved value per brand mode (e.g. Pink mode = `rgba
 | `weight` | `bold` (ค่าเริ่ม) · `medium` · `regular` | `--type-weight-*` · ห้ามใช้คลาส `font-bold` |
 | `font` | `heading` · `body` · `graphic` | `--type-family-heading-content` / `body` / `heading-graphic2` |
 | `required` | bool | ดอกจัน `--text-input-require` |
+| `size` | `xs` · `sm` · `base` | แทน `small` · `xs` = หัวกลุ่มในแถบสรุปคัดกรอง |
+| `as` | แท็ก | ค่าเริ่ม `h2` · หัวกลุ่มย่อยใช้ `h3` |
+| `bare` | bool | ไม่มีกล่อง flex ครอบ (ไม่มี icon/subtitle/trailing) — หัวกลุ่มในคอลัมน์ของผู้เรียก · แทน `GroupTitle` ที่เคยเขียนเอง 11 ไฟล์ (สรุปคัดกรอง งานบำบัด · สุขภาพจิต · ทันตกรรม · สร้างเสริมภูมิคุ้มกัน · โรคเรื้อรัง · ANC สามี · แบบประเมินงานบำบัด ฯลฯ — ผู้ใช้ 12 พ.ย. 69 ข้อ 11ก) |
+
+`FieldLabel` (export จากไฟล์เดียวกัน) = ป้ายชื่อช่องกรอกเหนือช่อง = `TopicHeader bare as='span' tone='label'` · props `children` · `required` (ดอกจันแดง) — แทน FieldLabel ที่เขียนเองในหน้า (เวชศาสตร์ฟื้นฟู 3 ไฟล์ · การ์ดนัดหมาย · ศูนย์คิว · อสส. · บริบาลเภสัชกรรม — ผู้ใช้ 12 พ.ย. 69 ข้อ 20ก) · `ClinicAppointmentFields` และ `queueCenterShared` export ต่อให้ import เดิม
 
 Gap ไอคอน/หัวข้อ/ปุ่ม `--dim-space-200` · line-height 1.5
 
@@ -13882,13 +13889,13 @@ Props: `title` `formula` (ข้อความ = แถว "สูตร" ห�
 
 กล่องกราฟของหน้ารายงาน (§1.20) — ChartPanel = การ์ดกราฟหนึ่งใบ (id สำหรับ deep-link #id แล้วกะพริบ · title · hint · actions · alignContent center|start · framed) · ChartsRow = แถวที่วาง ChartPanel หลายใบเท่า ๆ กัน · EmptyChartNote = สถานะว่างมาตรฐาน (text · hint · icon).
 
-ไฟล์: `src/pages/dashboard/dashboardReportKit.jsx` · demo: `/components/chart-panel`
+ไฟล์: ChartPanel `src/components/dashboard/ReportBlocks.jsx` (ผู้ใช้ 12 พ.ย. 69 ข้อ 8ก — รวมสำเนา 8 ที่: dashboardReportKit · Framed · สุขภาพจิต · ทันตกรรม · ทันตสุขภาพนักเรียน · ห้องยา · คลังศูนย์ · การเงิน) · `variant` card (ค่าเริ่ม) | panel (กล่องเส้นขอบ หัวในกล่อง · `action` · `listRows` · `boxStyle` · `bodyColumn` · `basis` · `minWidth`) | plain | section (`summary`) · `listMinHeight` · ชุดค่าตั้งต้น `PanelChartPanel` · `ClippedPanelChartPanel` · `WidePanelChartPanel` · `ListCardChartPanel` · `PlainChartPanel` · `SectionChartPanel` (หน้า import `as ChartPanel`) · ChartsRow · EmptyChartNote ยังอยู่ `src/pages/dashboard/dashboardReportKit.jsx` · demo: `/components/chart-panel` · ChartsRow (`autoUnframe` · `AutoUnframeChartsRow`) · EmptyChartNote (`variant` plain | dashed · `DashedEmptyChartNote`) · StatTileRow (`framed` · `PlainStatTileRow`) · ReportToolbar (`trailing` · `framed`) ย้ายเข้า `src/components/dashboard/ReportBlocks.jsx` แล้ว (ผู้ใช้ 12 พ.ย. 69 ข้อ 10ก 23ก 24ก 25ก) — dashboardReportKit / Framed re-export ชื่อเดิม · ชุดหน้ารายงานทั้งไฟล์ (ตัวช่วยตัวกรองช่วงวัน · ReportViewPopup · buildExportReport · SummaryBannerCard · GroupPlain) ย้ายไป `src/components/dashboard/reportKit.jsx` · ค่าคงที่ปีงบ `src/data/reportFiscalYears.js` · `src/pages/dashboard/dashboardReportKit.jsx` ส่งต่อทุกชื่อ (ผู้ใช้ 12 พ.ย. 69 ข้อ 26ก) · เพิ่ม (ผู้ใช้ 13 พ.ย. 69 ข้อ 33ก 34ก 36ก): ChartPanel `variant='plain'` รับ `wide` (กางเต็มแถวกริด) · `empty` (ข้อความว่าง + ไอคอนกราฟ แทนเนื้อหา) · `titleStyle` · `wrapBody` (ห่อเนื้อหา flex-1 กึ่งกลาง · `alignContent='start'` ชิดบน) · ชุดค่าตั้งต้น `InnerChartPanel` (การ์ดย่อย InnerCard · `list` · รายงานหอบหืด/COPD แทน `ChartBox`) · `ElevatedChartPanel` (การ์ดเงา ชื่อ base · รายงาน Telemedicine แทน `ChartBox`) · StatTileRow `gap` · `wideAt` md|lg · `minTile` (กริด auto-fit ทุกใบสูงเท่ากัน) · `style` — แทน `TileRow` วัณโรค/หอบหืด และ `StatGrid` โรคเรื้อรัง (ตัวชี้วัด) · งานบำบัด (แถบเส้นทางการดูแล) · `ChartSummaryTable` (ตารางสรุป จำนวน + ร้อยละ ข้างกราฟ · `rows` [{label · count · percent · tone}] · `countUnit`) ย้ายจากห้องยา + ชุดกรอบ (ใช้ที่ ห้องยา · คลังยา · สังคมสงเคราะห์) · เพิ่ม (ผู้ใช้ 13 พ.ย. 69 ข้อ 37ก–42ก): `KpiRow` (แถบ KPI ในกรอบกล่องกราฟเต็มแถว · `columns` · `boxStyle`) · `TableHeading` (`size` base|sm · `gap`) · `ReportTablePanel` (แผงตารางเต็มแถว · `titleSize` · `headingGap` · `boxStyle`) · ชุดค่า `ClippedKpiRow` · `ClippedReportTablePanel` (รายงานห้องยา) · `ReportDisclosure` (หนึ่งรายงาน = แถวกางดู · `report` {no · title · target} · `open` · `onToggle` · `onExport` ไม่ส่ง = ไม่มีปุ่ม · ไม่ mount เนื้อหาจนกว่าจะกาง · ใช้ที่ รายงานห้องยา · รายงานคลังศูนย์ · /drug ของน้องยังมีสำเนา) · ชุดรายงานกรอบทั้งไฟล์ย้ายไป `src/components/dashboard/reportKitFramed.jsx` (`src/pages/dashboard/dashboardReportKitFramed.jsx` ส่งต่อทุกชื่อ · CHART_PANEL = CHART_PANEL_BOX) · สีหมวดกราฟทันตกรรม `DENTAL_CATEGORY_COLORS` → `src/data/dentalChartColors.js` (Dashboard ทันตกรรมผู้บริหารเลิก import จากหน้ารายงานทันตกรรม) · `ClippedPanelChartPanel` / `WidePanelChartPanel` สูงตามเนื้อหา (flex 1 0 auto — รายการ HBar ยาวไม่ล้นทับตารางอีก)
 
 #### 6.37.70 ReportGroupCard · SectionTopic (report-group-card)
 
 หนึ่งกลุ่มรายงาน (หนึ่งหัวข้อ TOR) = ลูกของมันเท่านั้น ไม่มีการ์ดขาวรองและไม่มีแถวหัวกลุ่ม/ปุ่มนำส่งออกรายกลุ่ม (มติผู้ใช้ 14 ก.ย. 69) แถวหัวโผล่เฉพาะเมื่อส่ง extraActions (ชิปเลือกช่วง · ปุ่มกติกา) SectionTopic = หัวข้อส่วนแบบ Topic primary ตัวหนา + subtitle + trailing.
 
-ไฟล์: `src/pages/dashboard/dashboardReportKit.jsx` · demo: `/components/report-group-card`
+ไฟล์: `src/components/dashboard/ReportBlocks.jsx` (ผู้ใช้ 12 พ.ย. 69 ข้อ 8ก) · ReportGroupCard `variant` cards (ค่าเริ่ม) | framed (การ์ดขาว + หัวข้อ + ปุ่ม · `topicBold` · `heading` h2 · `childrenRow` · `viewTone` neutral|brand · `viewLabel` · `actionsWrap`) · SectionTopic `bold` (ค่าเริ่ม true) · ชุดค่าตั้งต้น `FramedReportGroupCard` · `SectionTopicRegular` · demo: `/components/report-group-card`
 
 #### 6.37.71 ReportToolbar (report-toolbar)
 
@@ -14916,7 +14923,7 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 
 ### 6.86 TableExp — ตารางหัว 2 ชั้น + แถวกางได้ (ลงทะเบียน 26 ต.ค. 69)
 
-**TableExp** — ตารางรุ่นขยายของ `Table` (column config เดียวกัน) เพิ่มหัวกลุ่มชั้นบน `column.group` และแถวกาง `renderExpandedRow` · ไฟล์ `src/components/table/TableExp.jsx` · API: `columns` · `rows` · `rowKey` · `renderExpandedRow` · `sortConfig` · `onSort` · `stickyColCount` · `stickyRightColCount` · `stickyHeaderTop` · `columnFit` · `density` · `pagination` · `pageSize` · `emptyMessage` · `loading` · ส่งออก `HeaderCell` · `DataCell` · `FooterCell` · `TableRow` · `TableSummary` · `EllipsisText`
+**TableExp** — ตารางรุ่นขยายของ `Table` (column config เดียวกัน) เพิ่มหัวกลุ่มชั้นบน `column.group` และแถวกาง `renderExpandedRow` · ไฟล์ `src/components/table/TableExp.jsx` · API: `columns` · `rows` · `rowKey` · `renderExpandedRow` · `sortConfig` · `onSort` · `stickyColCount` · `stickyRightColCount` · `stickyHeaderTop` · `columnFit` · `density` · `pagination` · `pageSize` · `emptyMessage` · `loading` · ส่งออก `HeaderCell` · `DataCell` · `FooterCell` · `TableRow` · `TableSummary` · `EllipsisText` · `TableExpandGroup` (ครอบหลายตารางในหน้าเดียว = ทั้งกลุ่มกางได้ทีละแถว · ใช้ที่ /clinic/immunization/reports · ผู้ใช้ 13 พ.ย. 69 ข้อ 5ก)
 · ใช้ที่ รายงานยา `drugReportKit` / `drugReportStock` / `drugReportMovement` · รายงาน IIS `IisReportsPage` · `wellBabyReportTabs` · ตัวชี้วัดคลินิก `indicatorReportKit` · กิจกรรมเชิงรุก `SchoolProactiveActivityPage` (สลับกับ Table เมื่อมี group)
 
 | ส่วน | รายละเอียด |
@@ -15179,11 +15186,11 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 
 ### 6.107 ReviewRow (ลงทะเบียน 2 พ.ย. 69)
 
-**ReviewRow** — แถวป้าย/ค่า ของการ์ดสรุป · ขั้นตรวจสอบข้อมูล · ไฟล์ `src/components/list/ReviewRow.jsx` · API: `label` · `value` | children · `labelWidth` (ค่าเริ่มต้น `--dim-size-2200` 192) · `valueStyle` · ป้าย sm `--text-content-tertiary` · ค่า sm `--text-content-default` ตัดบรรทัดได้ · ค่าว่าง `emptyText` ("—") · จอแคบค่าตกลงใต้ป้ายเมื่อเหลือน้อยกว่า `valueMinWidth` (240 · 0 = แถวเดียวเสมอ) · `labelStyle` · `align='end'` ค่าชิดขวา · `divider` เส้นคั่นล่าง `--border-neutral-quaternary` + ระยะบนล่าง 8 · `padded` ระยะบนล่าง 8 · `gap` · `badge` [style, ข้อความ] = `ColorfulBadge` small secondary หน้าค่า (สถานะหัวข้อ · มี badge ไม่มีค่า = แสดงแค่ badge ไม่ขึ้น "—" · 11 พ.ย. 69 ข้อ 16ก แทน SummaryRow ของเวชศาสตร์ฟื้นฟู) · ใช้ที่ ANC · ห้องยาเยี่ยมบ้าน · ตั้งค่ารายการชันสูตร · ทะเบียนยา (`PharmacyRegistryEditor`) · แทน `SummaryRow` 7 สำเนา (3 พ.ย. 69 ข้อ 5ก: สรุปคัดกรองที่ส่งต่อ `CarriedScreeningStep` · วัณโรค · ทันตกรรม · วางแผนครอบครัว · สุขภาพจิต · สังคมสงเคราะห์ · เวชศาสตร์ฟื้นฟู) · แทน `DetailRow` (2 พ.ย. 69) ใน คลังศูนย์ · ตารางเวร · CPOE order gate · คำขอส่งออกข้อมูลส่วนบุคคล · คำขอเข้าถึงข้อมูล
+**ReviewRow** — แถวป้าย/ค่า ของการ์ดสรุป · ขั้นตรวจสอบข้อมูล · ไฟล์ `src/components/list/ReviewRow.jsx` · API: `label` · `value` | children · `labelWidth` (ค่าเริ่มต้น `--dim-size-2200` 192) · `valueStyle` · ป้าย sm `--text-content-tertiary` · ค่า sm `--text-content-default` ตัดบรรทัดได้ · ค่าว่าง `emptyText` ("—") · จอแคบค่าตกลงใต้ป้ายเมื่อเหลือน้อยกว่า `valueMinWidth` (240 · 0 = แถวเดียวเสมอ) · `labelStyle` · `align='end'` ค่าชิดขวา · `divider` เส้นคั่นล่าง `--border-neutral-quaternary` + ระยะบนล่าง 8 · `padded` ระยะบนล่าง 8 · `gap` · `badge` [style, ข้อความ] = `ColorfulBadge` small secondary หน้าค่า (สถานะหัวข้อ · มี badge ไม่มีค่า = แสดงแค่ badge ไม่ขึ้น "—" · 11 พ.ย. 69 ข้อ 16ก แทน SummaryRow ของเวชศาสตร์ฟื้นฟู) · `stacked` = ป้าย xs เทาอยู่บน ค่า sm อยู่ล่าง ห่าง 2 สำหรับข้อมูลในกริดหลายคอลัมน์ (12 พ.ย. 69 ข้อ 8ก แทน `KV` เวชกรรมฟื้นฟู IMC + รับผู้ป่วยใหม่ · และ `InfoRow`/`KV` แบบแถวใน COPD เภสัชกร · รายละเอียดบุคลากร · แผนอนามัยโรงเรียน) · ใช้ที่ ANC · ห้องยาเยี่ยมบ้าน · ตั้งค่ารายการชันสูตร · ทะเบียนยา (`PharmacyRegistryEditor`) · แทน `SummaryRow` 7 สำเนา (3 พ.ย. 69 ข้อ 5ก: สรุปคัดกรองที่ส่งต่อ `CarriedScreeningStep` · วัณโรค · ทันตกรรม · วางแผนครอบครัว · สุขภาพจิต · สังคมสงเคราะห์ · เวชศาสตร์ฟื้นฟู) · แทน `DetailRow` (2 พ.ย. 69) ใน คลังศูนย์ · ตารางเวร · CPOE order gate · คำขอส่งออกข้อมูลส่วนบุคคล · คำขอเข้าถึงข้อมูล · เพิ่ม (ผู้ใช้ 12 พ.ย. 69 ข้อ 13ก 14ก 15ก): `style` · `className` · `valueColor` · `center` · named export `ReadField` (ReviewRow stacked ในกล่อง · `minWidth` · `flex` · `wide` · `valueColor`) + ชุดค่าตั้งต้น `FormReadField` (อนามัยโรงเรียน) · `StrongReadField` (สิทธิ · `tone`) — แทน ReadField ใน CheckupUi · schoolHealthShared · rightsUi และ FieldRow ของรังสี/บันทึกสุขภาพจิต · StatRow จอสถานะคิว · `info` = ⓘ 14 `--icon-neutral-tertiary` หลังป้าย + Tooltip ขาว (ผู้ใช้ 13 พ.ย. 69 ข้อ 35ก) — แทน `InfoRow` 4 จุด: แหล่งข้อมูลรายงาน (`DataSourceStrip`) · งานพัฒนาการ (`DevelopmentAssessmentSection`) · ใบสรุปอนามัยโรงเรียน · หน้ารับยาสำเร็จ (สำเนาแอปเก่า) — หน้าเก็บค่าตั้งต้นเป็นค่าคงที่ + spread
 
 ### 6.108 StatusPill (ลงทะเบียน 2 พ.ย. 69)
 
-**StatusPill** — ป้ายสถานะจาก meta ของหน้า · ไฟล์ `src/components/badge/StatusPill.jsx` · API: `meta` { label · style | badge | tone } · `kind` colorful (`ColorfulBadge`, ค่าเริ่มต้น) | status (`StatusBadge`) · `size` (small) · `hierarchy` · `showDot` · children แทน label · ไม่มี meta = ป้ายเทา "—" · หน้าเก็บแค่ตาราง สถานะ → meta · ใช้ที่ เวชระเบียน (คิว) · คลังศูนย์ · Problem List · อนามัยโรงเรียน (`schoolHealthShared` re-export) · หน้า `/drug` (ของน้อง) ยังประกาศเอง
+**StatusPill** — ป้ายสถานะจาก meta ของหน้า · ไฟล์ `src/components/badge/StatusPill.jsx` · API: `meta` { label · style | badge | tone } · `kind` colorful (`ColorfulBadge`, ค่าเริ่มต้น) | status (`StatusBadge`) · `size` (small) · `hierarchy` · `showDot` · children แทน label · ไม่มี meta = ป้ายเทา "—" · หน้าเก็บแค่ตาราง สถานะ → meta · ใช้ที่ เวชระเบียน (คิว) · คลังศูนย์ · Problem List · อนามัยโรงเรียน (`schoolHealthShared` re-export) · หน้า `/drug` (ของน้อง) ยังประกาศเอง · `icon` (หรือ meta.icon) · `width` hug|cap · meta.hierarchy ใช้เมื่อไม่ส่ง `hierarchy` · ใช้เพิ่ม (ผู้ใช้ 12 พ.ย. 69 ข้อ 29ก): ตีความผลตรวจสุขภาพ · เยี่ยมบ้านเภสัช/การแพทย์ · ตารางเวร · ผลตรวจไต · แผนบริการอนามัยโรงเรียน (หน้าเก็บแค่ สถานะ → meta · ตัวห่อหนึ่งบรรทัดตั้งชื่อตามเรื่อง ไม่ใช้ชื่อ `StatusBadge`) · เยี่ยมบ้านทันตกรรมยังประกาศเอง
 
 ### 6.109 SplitCard (ลงทะเบียน 2 พ.ย. 69)
 
@@ -15218,7 +15225,7 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 
 ### 6.116 EmptyState (ลงทะเบียน 3 พ.ย. 69)
 
-**EmptyState** — กล่อง "ไม่มีข้อมูล" กลาง: ไอคอน → หัวข้อ (sm medium default) → คำอธิบาย (xs tertiary · กว้างสุด 448) → ปุ่ม · ไฟล์ `src/components/feedback/EmptyState.jsx` · API: `icon` · `title` · `subtitle` (รับชื่อเดิม `description` · `hint` · `subtext`) · `action` (node) หรือ `actionLabel` + `onAction` + `actionIcon` (BrandSubdueButton outline sm) · `variant` dashed (เส้นประ `--border-neutral-tertiary` + `--surface-card-quaternary` · ค่าเริ่มต้น) | plain · `iconTone` muted (`--icon-neutral-tertiary`) | brand (วงกลม `--surface-brandPrimary-quaternary`) · `size` sm (padding 20 · ไอคอน 24) | md (32 · 32) | lg (48 · 40 · หัวข้อ base) · `compact` = sm · `heading` = หัวข้อตัวหนาเหนือกล่อง (การ์ดกราฟ) · รวมจาก 10 สำเนา (ผู้ใช้ 3 พ.ย. 69 ข้อ 3ก): วางแผนครอบครัว · ทันตกรรม (`dentalShared` plain) · ตรวจสุขภาพ (`CheckupUi`) · อนามัยโรงเรียน (`schoolHealthShared`) · กราฟการเจริญเติบโต (`GrowthPercentileChart` · `NutritionZoneChart`) · สิทธิ (`rightsUi`) · Telemedicine (`telemedShared` lg) · ศูนย์จัดการคิว (`queueCenterShared` brand lg) · บุคลากร (`usersShared` brand) — ไฟล์ *Shared re-export พร้อม variant เท่านั้น · หน้า `/m` (Mobile) ใช้ `components/mobile/EmptyState` ของตัวเอง · demo `/components/empty-state`
+**EmptyState** — กล่อง "ไม่มีข้อมูล" กลาง: ไอคอน → หัวข้อ (sm medium default) → คำอธิบาย (xs tertiary · กว้างสุด 448) → ปุ่ม · ไฟล์ `src/components/feedback/EmptyState.jsx` · API: `icon` · `title` · `subtitle` (รับชื่อเดิม `description` · `hint` · `subtext`) · `action` (node) หรือ `actionLabel` + `onAction` + `actionIcon` (BrandSubdueButton outline sm) · `variant` dashed (เส้นประ `--border-neutral-tertiary` + `--surface-card-quaternary` · ค่าเริ่มต้น) | plain · `iconTone` muted (`--icon-neutral-tertiary`) | brand (วงกลม `--surface-brandPrimary-quaternary`) · `size` sm (padding 20 · ไอคอน 24) | md (32 · 32) | lg (48 · 40 · หัวข้อ base) · `compact` = sm · `heading` = หัวข้อตัวหนาเหนือกล่อง (การ์ดกราฟ) · รวมจาก 10 สำเนา (ผู้ใช้ 3 พ.ย. 69 ข้อ 3ก): วางแผนครอบครัว · ทันตกรรม (`dentalShared` plain) · ตรวจสุขภาพ (`CheckupUi`) · อนามัยโรงเรียน (`schoolHealthShared`) · กราฟการเจริญเติบโต (`GrowthPercentileChart` · `NutritionZoneChart`) · สิทธิ (`rightsUi`) · Telemedicine (`telemedShared` lg) · ศูนย์จัดการคิว (`queueCenterShared` brand lg) · บุคลากร (`usersShared` brand) — ไฟล์ *Shared re-export พร้อม variant เท่านั้น · หน้า `/m` (Mobile) ใช้ `components/mobile/EmptyState` ของตัวเอง · demo `/components/empty-state` · ชุดค่าตั้งต้น (ผู้ใช้ 12 พ.ย. 69 ข้อ 12ก — ไฟล์ *Shared re-export `as EmptyState` แทนตัวห่อ): `PlainEmptyState` (ทันตกรรม) · `SearchEmptyState` (สิทธิ) · `LargeEmptyState` (Telemedicine) · `BrandEmptyState` (บุคลากร) · `BrandLargeEmptyState` (ศูนย์ออกคิว) · `SearchActionEmptyState` (อนามัยโรงเรียน) · `RangeEmptyState` = ไอคอน monitoring + ข้อความจาก children (แทน EmptyRangeCard ของหน้าติดตาม · ข้อ 27ก)
 
 ### 6.117 AssessmentCard (ลงทะเบียน 3 พ.ย. 69)
 
@@ -15226,7 +15233,7 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 
 ### 6.118 ChoiceRow (ลงทะเบียน 3 พ.ย. 69)
 
-**ChoiceButtons** (named export ไฟล์เดียวกัน · 7 พ.ย. 69) — เฉพาะแถวปุ่มตัวเลือก ไม่มีป้ายและกรอบ ใช้ใน Field ของหน้า · `size` sm (36 · ค่าเริ่มต้น) | md (40) · `column` · `clearable` · option มี `hint` (tooltip) · `ariaText` · ChoiceRow แบบ card ใช้ชิ้นนี้ · รวมจาก 3 สำเนา
+**ChoiceButtons** (named export ไฟล์เดียวกัน · 7 พ.ย. 69) — เฉพาะแถวปุ่มตัวเลือก ไม่มีป้ายและกรอบ ใช้ใน Field ของหน้า · `size` sm (36 · ค่าเริ่มต้น) | md (40) · `column` · `clearable` · option มี `hint` (tooltip) · `ariaText` · ChoiceRow แบบ card ใช้ชิ้นนี้ · รวมจาก 3 สำเนา · `multiple` = เลือกได้หลายข้อ (`value` array · `onChange(next)` | `onToggle(value)` · option `required` เลือกไว้เสมอ · 12 พ.ย. 69 ข้อ 9ก แทน `MultiChoice` ชนิดบุหรี่ที่สูบ — ยังเป็นปุ่ม ไม่ใช่ checkbox)
 
 **ChoiceRow** — คำถาม/หัวข้อ + ปุ่มตัวเลือกคำตอบเดียว · ไฟล์ `src/components/forms/ChoiceRow.jsx` · API: `label` · `options` (string[] | [{value,label}]) · `value` · `onChange` (ชื่อเดิม `onSelect`) · `layout` stack (ป้ายบน sm default · ตัวเลือกล่าง gap 6 · ค่าเริ่มต้น) | inline (ป้ายซ้ายกว้างสุด 640 · ตัวเลือกขวา · ตัดบรรทัดเมื่อแคบ · padding 8/12) | bare (ไม่มีป้าย · ใส่ใน Field ของหน้า) | field (ห่อด้วย `Field` ของ forms/Fields: ป้าย sm medium `--text-input-label` + * · `span` ใน `FieldGrid` · 11 พ.ย. 69) · `chip` card (`SelectableCardButton` gap 12 · ค่าเริ่มต้น) | tag (`SelectableTag` md gap 8) · `clearable` (กดซ้ำยกเลิก → `emptyValue`, ค่าเริ่มต้น '') · `disabled` (ชื่อเดิม `locked` · `readOnly`) · `required` · `hint` · `error` · `tone='danger'` พื้น `--surface-danger-quaternary` · children แทนตัวเลือก · หลายคำตอบใช้ `CheckList` §6.105 · รวมจาก 9 สำเนา (ผู้ใช้ 3 พ.ย. 69 ข้อ 4ก): วางแผนครอบครัว + สุขภาพจิต (inline tag) · MhToolForm + จิตวิทยา (bare) · ก้าวใหม่ 2 ไฟล์ + ทันตกรรม (stack children) · เยี่ยมบ้าน + ประเมินชุมชน (field) · ไม่มี wrapper ชื่อ ChoiceRow ในหน้าแล้ว — หน้าส่ง preset เป็น constant แล้ว spread (`{...CHOICE}`, ผู้ใช้ 11 พ.ย. 69 ข้อ 15ก) · demo `/components/choice-row`
 
@@ -15288,7 +15295,7 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 
 ### 6.129 NoticeLine (ลงทะเบียน 6 พ.ย. 69)
 
-**NoticeLine** — แถบแจ้งเตือนหนึ่งบรรทัดในหน้าสั่งการรักษา พื้นและกรอบ 1px โทนเดียวกัน · ไฟล์ `src/components/alert/NoticeLine.jsx` · props `tone` info (เขียวแบรนด์) | blue (ฟ้าแจ้งข้อมูล) | success | warning | danger | neutral | pink · `icon` · `trailing` · `onClose` (ปุ่ม ×) · children · named export `NoticeBar` = คำโทนของหน้าฟอร์ม info (ฟ้า) | brand (เขียว) | success | warning | danger | neutral · ไม่ส่ง `icon` = ไอคอนตามโทน — ตรวจสุขภาพ · อนามัยโรงเรียนใช้ตัวนี้ (`CheckupUi` · `schoolHealthShared` re-export เท่านั้น · ผู้ใช้ 12 พ.ย. 69 ข้อ 16ก · 5ข) · หลายแถบซ้อนกันห่าง 8px · ใช้ที่ `ClinicOrdersPanel` · ฝากครรภ์
+**NoticeLine** — แถบแจ้งเตือนหนึ่งบรรทัดในหน้าสั่งการรักษา พื้นและกรอบ 1px โทนเดียวกัน · ไฟล์ `src/components/alert/NoticeLine.jsx` · props `tone` info (เขียวแบรนด์) | blue (ฟ้าแจ้งข้อมูล) | success | warning | danger | neutral | pink · `icon` · `trailing` · `onClose` (ปุ่ม ×) · children · named export `NoticeBar` = คำโทนของหน้าฟอร์ม info (ฟ้า) | brand (เขียว) | success | warning | danger | neutral · ไม่ส่ง `icon` = ไอคอนตามโทน — ตรวจสุขภาพ · อนามัยโรงเรียนใช้ตัวนี้ (`CheckupUi` · `schoolHealthShared` re-export เท่านั้น · ผู้ใช้ 12 พ.ย. 69 ข้อ 16ก · 5ข) · หลายแถบซ้อนกันห่าง 8px · ใช้ที่ `ClinicOrdersPanel` · ฝากครรภ์ · เพิ่ม `style` · `BandNoticeLine` (ค่าเริ่มโทนเตือน · `action` · `surface`) แทน NoticeBand ของงานบำบัด · เยี่ยมบ้าน · HIV (ผู้ใช้ 12 พ.ย. 69 ข้อ 28ก)
 
 ### 6.130 OrderSetCreatePopup (ลงทะเบียน 6 พ.ย. 69)
 
@@ -15347,9 +15354,9 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 
 | ส่วน | รายละเอียด |
 |---|---|
-| แท็บย่อย | `TabBar` + `TabPill` กลาง "ส่งกลับ (Refer-in)" · "ส่งไป (Refer Out)" + count · จอแคบเลื่อนในตัว |
+| แท็บย่อย | `TabBar` + `TabPill` กลาง "ส่งกลับ (Refer-in)" · "ส่งไป (Refer Out)" + count · จอแคบขึ้นบรรทัดใหม่ในการ์ด (ไม่ถูกตัด) |
 | ตาราง | `Table`: วันที่ส่ง · ผู้รับบริการ · ส่งมาจาก/ส่งไปที่ · สาเหตุที่ส่งต่อ · สถานะ (`StatusBadge`) · การดำเนินการ (ตรึงขวา) |
-| ปุ่ม | รอรับ = `BrandButton` fill sm "รับ" · อื่น = `BrandSubdueButton` outline sm "บันทึก" |
+| ปุ่ม | รอรับ = `BrandButton` fill sm "รับเคส" (มติ คทง.3 10 พ.ย. 69) · อื่น = `BrandSubdueButton` outline sm "บันทึก" |
 | ป๊อปอัป | ข้อมูลการส่งต่อ (`ReviewRow`) → ผลการรับ/ผลจากปลายทาง (`SelectableCardButton`) · วันนัด · บันทึก → "ประวัติการบันทึก N ครั้ง" (`Table`, ใหม่ → เก่า) |
 
 ### 6.140 FastTrackMark (ลงทะเบียน 9 พ.ย. 69)
@@ -15451,6 +15458,191 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 
 ไฟล์ `src/components/forms/MonthYearPicker.jsx` · หัวเดือน "มกราคม 2570" ของมุมมองรายเดือนที่กดแล้วเลือกเดือน/ปีได้ (ผู้ใช้ 13 พ.ย. 69 "ตรงนี้อยากให้เลือกปฏิทินได้") · ข้อความคงสไตล์ของหน้า (`labelStyle`) ไม่มีลูกศร/กรอบ dropdown (ผู้ใช้ 13 พ.ย. 69 "ไม่ต้องมี dropdown") — บอกว่ากดได้ด้วย cursor pointer + พื้น hover/เปิด `--surface-brandPrimary-quaternary` มุม `--dim-radius-200` pad ซ้ายขวา 8 · `.mih-hit-44` ≤ 1024 · ป๊อปโอเวอร์ชุดเดียวกับ `DatePicker` = `Calendar picker='month'` (§6.2: แผงเดือน · กดปีบนหัว → แผงปี → เดือน) ไทย พ.ศ. · props `value` (Date) · `onChange(วันที่ 1 ของเดือน)` · `minDate` · `maxDate` (เดือนนอกช่วงเลือกไม่ได้) · `labelStyle` · `children` (ข้อความ · ค่าเริ่มต้น `monthYearLabel(value)`) · `disabled` · named export `monthYearLabel(date)` · ปุ่ม ‹ › ของหน้ายังทำงานเหมือนเดิม · ใช้ที่ `MonthNav` ใน `ScheduleEditorPage` = `/my-schedule` + `/schedule/:id` (สูงสุด = เดือนสุดท้ายที่ › ไปถึง)
 
+### 6.179 MissedAppointmentsPanel (ลงทะเบียน 11 พ.ย. 69)
+
+**MissedAppointmentsPanel** — เนื้อหาแท็บ "ไม่มาตามนัด" ของทุก worklist (`QueuePageShell missed` ใส่ให้) · ไฟล์ `src/components/queue/MissedAppointmentsPanel.jsx` · API: `depts` · `types` · `clinics` (กรองนัดของหน้า) · `cancelledRows` (แถวยกเลิกนัดของหน้า รวมเข้าตาราง) · `emptyMessage`
+· ข้อมูล `src/data/missedAppointments.js` (`MISSED_RANGES` · `DEFAULT_MISSED_RANGE` = ทั้งหมด · `missedRangeOf` · `getMissedAppointments({ days, minDays })` · `countMissedAppointments`) · ติดตามนัด `AppointmentCallPopup` + `missedAppointmentCalls.js`
+
+| ส่วน | รายละเอียด |
+|---|---|
+| ตัวกรอง | ป้าย "เลยนัด:" + `TabBar`/`TabPill` small: 1 สัปดาห์ · 2 สัปดาห์ · เกิน 1 เดือน (เลยนัด ≥ 31 วัน) · ทั้งหมด + count · ค่าเริ่มต้น ทั้งหมด (มติ คทง.3 10 พ.ย. 69 ข้อ 2.1) · จอแคบขึ้น 2 แถว |
+| ตาราง | `Table` วันนัด · เวลา · HN · ชื่อ-นามสกุล · สถานะ (ไม่มาตามนัด ส้ม / ยกเลิกนัด แดง) · เบอร์ติดต่อ · คลินิก · แพทย์ · ประเภทนัด · รายละเอียดนัด · การดำเนินการ (ติดตามนัด → `AppointmentCallPopup`) |
+| ตัวเลขบนแท็บหลัก | = ช่วง "ทั้งหมด" (`countMissedAppointments`) |
+
+### 6.180 VitalRoundBar (ลงทะเบียน 11 พ.ย. 69)
+
+**VitalRoundBar** — แถบรอบการวัดท้ายการ์ดสัญญาณชีพ: กรอกค่า → "บันทึกรอบที่ N" → "วัดรอบใหม่" · "ประวัติ" = ป๊อปอัปรอบการวัดวันนี้ · ไฟล์ `src/components/vitals/VitalRoundBar.jsx` · API: `hn` · `field` (temp · pulse · respiration · oxygen · pressure · glucose) · `value` · `onNewRound()` · `onUseRound(value)` · `allowZero` (0 ที่ผู้ใช้กรอกเอง = ค่าที่วัดได้ — RR หยุดหายใจ, มติ คทง.3 ข้อ 2.2) · ฟังก์ชัน `roundStatus(field, value)`
+· ใช้ที่ `VitalsForm` (คัดกรองกลาง · ตรวจสุขภาพ · วัคซีน) · `PhysioFormPage` · ประวัติร่วม `VitalsTodayHistory`
+
+| ส่วน | รายละเอียด |
+|---|---|
+| ซ้าย | "รอบที่ N" + สถานะ xs tertiary: "ยังไม่บันทึก" · "บันทึกแล้ว HH:MM น." · "ใช้ค่ารอบที่ N · HH:MM น." (brand) |
+| ยังไม่บันทึก | `BrandSubdueButton` outline sm `save` "บันทึกรอบที่ N" → ยืนยัน · ปิดเมื่อยังไม่มีค่า (0 = ยังไม่ได้วัด ยกเว้น `allowZero`) |
+| บันทึกแล้ว | `BrandSubdueButton` fill sm `add` "วัดรอบใหม่" |
+| ประวัติ | `BrandSubdueButton` outline sm `history` "ประวัติ" → ป๊อปอัปตาราง/กราฟ · ผล `roundStatus`: ปกติ เขียว · สูงเล็กน้อย ส้ม · สูง แดง · ต่ำ ฟ้า (RR 0 = ต่ำ) |
+
+### 6.145 PathwayProgress (ลงทะเบียน 12 พ.ย. 69)
+
+**PathwayProgress** — เส้นทางการดูแลแบบแถบความคืบหน้าแบ่งช่วง (progress bar ไม่ใช่ stepper) · ยกจาก 2 หน้างานบำบัด + รวม `SEG_GRID` เข้ามา (ผู้ใช้ 12 พ.ย. 69 ข้อ 4ก 5ก) · ไฟล์ `src/components/progress/PathwayProgress.jsx`
+· ใช้ที่ หน้าบันทึกบ้านพิชิตใจ (`AddictionRehabRecordPage` "เส้นทางการฟื้นฟู") · หน้าการบำบัดและการติดตาม 4 คลินิกงานบำบัด (`AddictionFollowUpRecordPage` "เส้นทางการดูแล") · หัวการ์ด/การพับ-กาง เป็นของหน้า (`RehabCollapse`)
+
+| export | หน้าที่ · API |
+|---|---|
+| `PathwaySteps` | แถบทุกช่วง + "ระยะที่ N" · ชื่อ · คำอธิบาย ใต้แถบ 8 · `steps` [{ key · label · caption · state done\|current\|pending · fill 0–100 · tone success\|info\|danger · tip }] · `percent` · `ariaLabel` · `actions` { [index]: ปุ่ม } · `showFill` · ระยะปัจจุบันตัวหนาสีตาม tone · รอดำเนินการ = เทา regular · จอ < 640 = "ระยะที่ N/รวม · ชื่อ" + "ถัดไป: …" + ปุ่ม |
+| `PathwayMiniBar` | แถบเล็ก (≤ 240 · 28vw) บนหัวการ์ดตอนพับ · `steps` · `hidden` (กางแล้วหดเป็น 0 แบบลื่น) |
+| `PathwayFacts` | ข้อมูลใต้แถบ คอลัมน์ตรงกับระยะ · เส้นคั่นบน `--border-neutral-quaternary` · `items` [{ label · value · detail · lead }] · `columns` · จอ < 640 = 2 คอลัมน์ |
+| `PathwaySegment` | แถบช่วงเดียว สูง 8 พื้น `--surface-neutral-tertiary` · `fill` · `tone` |
+| `pathwayGrid(n)` · `usePathwayNarrow` · `pathwayLabelStyle` | กริด n คอลัมน์ช่องห่าง 4 (เดิม `SEG_GRID`) · จอ < 640 · สไตล์ชื่อระยะ |
+
+### 6.146 InfoGroupCard (ลงทะเบียน 12 พ.ย. 69)
+
+**InfoGroupCard** — กลุ่มข้อมูลป้าย/ค่า: หัวข้อเขียวตัวหนา (`--text-topic-primary-title`) → กริด `max-content minmax(0,1fr)` ป้าย sm tertiary คอลัมน์เดียวกัน · ค่า sm default · ไฟล์ `src/components/card/InfoGroupCard.jsx` · รวม `InfoGroup` 3 สำเนา (ผู้ใช้ 12 พ.ย. 69 ข้อ 7ก)
+· API: `title` · `rows` [[label, value]] (ค่าว่าง "—") · `hideEmpty` ซ่อนแถวไม่มีค่า · `correction` { hn · name · dests } = ปุ่ม outline sm "แก้ไข" บนหัว → `useDataCorrection` กล่องขอแก้ไขส่งแผนกเจ้าของข้อมูล · `correctionFrom` ชื่อแผนกผู้ขอ · `bare` = ไม่มีกรอบการ์ด (หัวข้อ base · ค่า medium · ช่อง 16) ใส่ในป๊อปอัป
+· การ์ด = padding 24 · radius 500 · ขอบ `--border-brandPrimary-quaternary` · `--shadow-brand-drop-bottom-200` · ช่องป้าย↔ค่า 24 · แถวห่าง 8
+· ใช้ที่ โปรไฟล์ผู้รับบริการงานบำบัด (`/clinic/addiction/client` แท็บข้อมูลส่วนตัว) · โปรไฟล์วางแผนครอบครัว (`/clinic/family-planning/client`) · ป๊อปอัป "ข้อมูลทะเบียนผู้ป่วย" ทะเบียนศูนย์อื่นของคลินิกโรคเรื้อรัง (`bare hideEmpty`) · ยังไม่ย้าย: `DevelopmentAssessmentSection` (เทอร์มินัลสุขภาพจิตแก้ค้าง · เป็นตัวห่อ gap คนละอย่าง)
+
+### 6.150 ResultBadge (ลงทะเบียน 12 พ.ย. 69)
+
+**ResultBadge** — ป้ายผลการตรวจ/แปลผล 1 ค่า (ผ่าน/ไม่ผ่าน · ปกติ/ผิดปกติ · ระดับผล) · รวม `ResultBadge` ที่หน้าเขียนเอง 7 ที่ (ผู้ใช้ 12 พ.ย. 69 ข้อ 18ก) · ไฟล์ `src/components/badge/ResultBadge.jsx`
+· หน้าแปลงค่าของตัวเองเป็น `{ tone, label }` (ฟังก์ชันในหน้า เช่น `pefrResult` · `verdictResult`) แล้วส่ง `<ResultBadge {...x} />` — ชิ้นนี้คุมหน้าตาอย่างเดียว ไม่รู้เกณฑ์
+· ใช้ที่ ผลเป่าปอด/ความดันด้วยตนเอง (`SelfPeakFlowResults` · `SelfHomeBpResults`) · CXR/EKG (`CxrEkgResults`) · การทดสอบทางจิตวิทยา (`MentalHealthPsychSteps`) · ตรวจสุขภาพ (`CheckupUi` `verdictResult` → `CheckupRecordPage` · `CheckupHistoryPage`) · อนามัยโรงเรียน แบบประเมินสุขภาพจิต (`SchoolHealthSteps`) · รายงานสุขภาพเด็กดี ผลเทียบเป้า (`wellBabyReportTabs`)
+
+| prop | ค่า |
+|---|---|
+| `label` | ข้อความผล · ว่าง → แสดง `empty` |
+| `tone` | `kind='colorful'` = สี ColorfulBadge (green · red · orange · grey …) · `kind='status'` = success · warning · error · info · neutral |
+| `kind` | `'colorful'` (ค่าตั้งต้น · ColorfulBadge secondary) \| `'status'` (StatusBadge) |
+| `icon` · `size` · `width` | ไอคอน Material Symbols · `'small'` · `'hug'` (ค่าตั้งต้น) \| `'cap'` |
+| `empty` | ไม่มีผล → `"—"` (ค่าตั้งต้น) · `null` = ไม่แสดงอะไร (ตรวจสุขภาพ) |
+
+### 6.151 GroupDivider (ลงทะเบียน 12 พ.ย. 69)
+
+**GroupDivider** — เส้นคั่นบาง 1px ระหว่างกลุ่มข้อมูลในการ์ด/ฟอร์ม (CLAUDE.md "grouped content … 1px divider") · ไฟล์ `src/components/layout/GroupDivider.jsx` · ไม่มี margin ในตัว ระยะให้ `gap` ของพ่อแม่
+· `tone` = `'quaternary'` (ค่าตั้งต้น `--border-neutral-quaternary`) \| `'tertiary'` (`--border-neutral-tertiary` เข้มกว่า) · `style`
+· ใช้ที่ อาการนำ/ประวัติของแพทย์ (`ChiefComplaintField` tertiary) · ส่งตรวจชันสูตร CPOE (`LabOrderPanel`) · ประเมินพัฒนาการ/TEDA4I (`DevelopmentAssessmentSection`)
+
+### 6.152 InnerCard (ลงทะเบียน 12 พ.ย. 69)
+
+**InnerCard** — การ์ดย่อยวางในการ์ดหลัก แบ่งกลุ่มเนื้อหา ไม่มีเงา (ไม่ซ้อนเงา) · ไฟล์ `src/components/card/InnerCard.jsx` · รวม `SubCard` 2 สำเนา (ตรวจสุขภาพ `CheckupUi` · อนามัยโรงเรียน `schoolHealthShared` — ทั้งสองไฟล์ re-export ชื่อ `SubCard` ให้ผู้เรียกเดิม) · ผู้ใช้ 12 พ.ย. 69 ข้อ 24ก
+· `tone` = `'neutral'` (ค่าตั้งต้น `--surface-card-100` + `--border-card-default`) \| `'brand'` (`--surface-brandPrimary-quaternary` + `--border-brandPrimary-quaternary`) · `gap` (ค่าตั้งต้น `--dim-space-400` 16 = ระยะในกลุ่ม) · padding 16 · radius 400 · `id` · `className` · `style`
+· ต่างจาก `ExamCard` (§6.143 มีหัวข้อเขียว + เงา) และ `SubCard` ใน `forms/Fields` (การ์ดลงทะเบียน: หัวข้อ · ป้าย · ปุ่มลบ)
+· ใช้ที่ ตรวจสุขภาพ (ติดตาม · ส่งเยี่ยมบ้าน) · รายงานหอบหืด/COPD · อนามัยโรงเรียน (แผน · ลงนาม · อ้วน · AI insight · ติดตาม) · แบบประเมินพัฒนาการแบบโรงเรียน
+
+### 6.153 ClientPersonalInfoCards (ลงทะเบียน 12 พ.ย. 69)
+
+**ClientPersonalInfoCards** — แท็บ "ข้อมูลส่วนตัว" ของหน้าโปรไฟล์ผู้รับบริการคลินิก · ไฟล์ `src/components/patient/ClientPersonalInfoCards.jsx` · รวม `PersonalTab` 2 สำเนา (งานบำบัดยาเสพติด · วางแผนครอบครัว) · ผู้ใช้ 12 พ.ย. 69 ข้อ 26ก/7ก
+· 3 การ์ด `InfoGroupCard` (§6.146) จากเวชระเบียน: ข้อมูลทั่วไป · การติดต่อและสิทธิการรักษา · ข้อมูลสุขภาพ — แก้ตรงไม่ได้ ปุ่ม "แก้ไข" ส่งคำขอ (ข้อมูลเวชระเบียน → เวชระเบียน · ข้อมูลสุขภาพ → เภสัชกร/เวชระเบียน)
+· `hn` · `mr` (`findMrPatientByHn`) · `correctionFrom` = ชื่อแผนกผู้ขอ · `contactExtraRows` / `healthExtraRows` = แถว `[label, value]` เพิ่มท้ายการ์ด · `children` = การ์ดเฉพาะคลินิกต่อท้าย
+· แถวละ 2 การ์ด ห่าง 12 · < 768 เหลือ 1
+
+### 6.154 ClientConsentTab (ลงทะเบียน 12 พ.ย. 69)
+
+**ClientConsentTab** — แท็บ "แบบฟอร์มความยินยอม" ของหน้าโปรไฟล์ผู้รับบริการคลินิก · ไฟล์ `src/components/consent/ClientConsentTab.jsx` · รวม `ConsentTab` 2 สำเนา (งานบำบัดยาเสพติด · วางแผนครอบครัว)
+· แท็บย่อย "แบบฟอร์มทั้งหมด" (นับจำนวน) · "เปรียบเทียบการให้ความยินยอม" · "Timeline การเปลี่ยนแปลงความยินยอม" · ตารางใช้ `Table` กลาง · กดแถว/ไอคอนตา = เปิดใบที่ลงนาม
+· `hn` · `name` · `clinicCode` (`clinicConsentForms`) · `clinicRows` = ใบของคลินิก `[{ id, form, code, version, status, dateText, source, view:{ kind:'clinic', form, record } }]` (แถวจากทะเบียนความยินยอมกลาง `/consent` ต่อท้ายให้เอง) · `formatDate(iso)` · export `CONSENT_STATUS_TONE`
+
+### 6.155 GrowthCalcCell (ลงทะเบียน 12 พ.ย. 69)
+
+**GrowthCalcCell** — ช่องผลประเมินการเจริญเติบโตในตาราง · ไฟล์ `src/components/growth/GrowthCalcCell.jsx` · รวม 2 สำเนา (ขั้นตรวจสุขภาพอนามัยโรงเรียน · แท็บกราฟการเจริญเติบโต) · ผู้ใช้ 12 พ.ย. 69 ข้อ 33ก
+· ป้ายผล `ColorfulBadge` + บรรทัด xs tertiary "Z ±x · Pyy" · ไม่มีผล = "—"
+· `result` = { label, style, z } · `showZ` (ค่าตั้งต้น true) · export `zToPercentile(z)` = percentile จาก Z-score
+
+### 6.156 SensitiveGate (ลงทะเบียน 12 พ.ย. 69)
+
+**SensitiveGate** — ครอบส่วนที่เป็นข้อมูลลับ/อ่อนไหว · ไฟล์ `src/components/alert/SensitiveGate.jsx` · รวม 2 สำเนา (งานบำบัดสารเสพติด · อนามัยโรงเรียน) · ผู้ใช้ 12 พ.ย. 69 ข้อ 34ก
+· หน้าเป็นผู้ตัดสินสิทธิ์แล้วส่ง `level`: full = แสดงเนื้อหา · symbol = แสดง `symbol` (สัญลักษณ์ ไม่เผยค่า) · hidden = แถบล็อก `NoticeLine` (§6.129) icon lock
+· `message` = ข้อความในแถบล็อก · `tone` info | warning · งานบำบัดใช้ผ่าน `SensitiveGate` ของ `AddictionSensitive` (ระดับจากบทบาท × หมวดข้อมูล) · อนามัยโรงเรียนส่ง `canViewSensitive()`
+
+### 6.157 PageCard (ลงทะเบียน 12 พ.ย. 69)
+
+**PageCard** — การ์ดหลักของหน้า · ไฟล์ `src/components/card/PageCard.jsx` · รวม 2 สำเนา (ตรวจสุขภาพ `CheckupUi` · อนามัยโรงเรียน `schoolHealthShared` ที่ re-export / preset) · ผู้ใช้ 12 พ.ย. 69 ข้อ 10ก
+· พื้น `--surface-card-100` · radius 500 · เส้น 1px `--border-brandPrimary-quaternary` · `--shadow-card-strong` · padding 24
+· `gap` (ค่าตั้งต้น 24 · อนามัยโรงเรียน 20) · `as` div | section · `className` · `style` · export `PAGE_CARD_STYLE` · การ์ดย่อยข้างใน = `InnerCard` (§6.152)
+
+### 6.158 PageBody (ลงทะเบียน 12 พ.ย. 69)
+
+**PageBody** — ช่องเนื้อหาของหน้า (คอลัมน์ · padding ซ้าย/ขวา 24) วาง `PageCard` เรียงลงมา · ไฟล์ `src/components/layout/PageBody.jsx` · ผู้ใช้ 12 พ.ย. 69 ข้อ 10ก
+· `gap` 24 · `paddingTop` (ค่าตั้งต้น 20) · `paddingBottom` (ค่าตั้งต้น 32) · `className` (ค่าตั้งต้น `w-full` · อนามัยโรงเรียนบน/ล่าง 24 + `flex-1`)
+
+### 6.159 DateTimeCell (ลงทะเบียน 12 พ.ย. 69)
+
+**DateTimeCell** — ช่องวันที่ในตาราง: วันที่บรรทัดบน (sm default) · เวลาบรรทัดล่าง (xs tertiary) · ไฟล์ `src/components/table/DateTimeCell.jsx` · รวม 2 สำเนา (ผลตรวจไตคลินิกเรื้อรัง · แท็บบริการสุขภาพจิตทั่วไป) · ผู้ใช้ 12 พ.ย. 69 ข้อ 31ก
+· `date` · `time` = ข้อความที่จัดรูปแล้ว · ไม่มีเวลา = บรรทัดเดียว · ไม่มีวันที่ = "—"
+
+### 6.160 DspmHomeworkSlip (ลงทะเบียน 12 พ.ย. 69)
+
+**DspmHomeworkSlip** — ปุ่ม "พิมพ์…" + ป๊อปอัปตัวอย่างก่อนพิมพ์ "ใบสรุปผลประเมินพัฒนาการ + ใบการบ้าน/ใบส่งเสริมพัฒนาการ" ถึงผู้ปกครอง (ผลรายด้าน FM · GM · RL · EL · PS · สรุปผล · วิธีฝึกที่บ้าน) · ย้ายจาก `src/pages/clinic/school-health` (ผู้ใช้ 12 พ.ย. 69 ข้อ 3ก) · ไฟล์ `src/components/document/DspmHomeworkSlip.jsx` (default = ปุ่ม `DspmHomeworkSlipButton` · `DspmHomeworkSheet` = ตัวใบ)
+· สมวัย → แนวทางช่วงอายุถัดไป (ทุกด้าน) · สงสัยล่าช้า/ล่าช้า → ช่วงอายุที่ประเมิน เฉพาะด้านที่ไม่ผ่าน
+· ใช้ที่ อนามัยโรงเรียน แท็บพัฒนาการ (คู่มือ DSPM `dspmHomeGuide.js` ค่าตั้งต้น) · งานพัฒนาการ สุขภาพจิต (`DevPromotionPrintButton` · ใบส่งเสริมพัฒนาการ กทม. `bmaDevPromotionGuide.js` ผ่าน `guideOf`)
+
+| prop | ค่า |
+|---|---|
+| `student` | `{ fullName, birthDate, hn?, gradeName? }` · `gradeName` ไม่มี = ไม่แสดง "ชั้น / ห้อง" |
+| `record` | `{ result: normal\|suspect\|delayed, domains: {FM..PS: pass\|fail\|redflag}, ageMonths, assessedAt, assessedTime?, round?, assessor?, followUpDue? }` |
+| `schoolName` | สถานที่ (ว่าง = ไม่แสดง) |
+| `label` | ข้อความปุ่ม (ค่าตั้งต้น "พิมพ์ใบสรุป/ใบการบ้าน") · `variant` = variant ของ NeutralSubdueButton |
+| `guideOf(record, normal, failedKeys)` | แหล่งแนวทางอื่น → `{ key, label, items[{domain, skill, steps[], alt?, note?}], source? }` · ไม่ส่ง = คู่มือ DSPM |
+| `sheetTitle` · `popupTitle` · `centerName` | หัวกระดาษ · หัวป๊อปอัป · ชื่อหน่วยบริการ |
+
+### 6.161 AddictionScreeningFormBodies (ลงทะเบียน 12 พ.ย. 69)
+
+**AddictionScreeningFormBodies** — ชุดเนื้อหาแบบประเมินงานบำบัดยาเสพติด (body ของป๊อปอัปแบบประเมินแต่ละแบบ) · ไฟล์ `src/components/screening/AddictionScreeningFormBodies.jsx` · ย้ายจาก `src/pages/clinic/addiction` เพราะใช้ร่วมหลายโมดูล (ผู้ใช้ 12 พ.ย. 69 ข้อ 15) — ไฟล์เดิมเหลือ `export *` ให้ import เก่า (อนามัยโรงเรียน ยังไม่ย้าย)
+· ใช้ที่ งานบำบัด (แบบประเมิน · ติดตามผล) · จุดคัดกรองกลาง (`ScreeningStep4`) · คัดกรองโรคเรื้อรัง (`ChronicAssessmentStep`) · อนามัยโรงเรียน · ตรวจเพิ่มเติม OPD (`opdExtraExams`) · ป๊อปอัปประวัติการสูบบุหรี่ (`SmokingDeepHistoryPopup`)
+· body หลัก (props ร่วม `value` · `onChange(patch)` · `readOnly`): `St5Body` · `St20Body` · `OasBody` · `SmivBody` · `FtndBody` · `CowsBody` · `CageBody` · `DrugBehaviorV2Body` · `HsiBody` · `StageOfChangeBody` · `SmokingCauseBody` · `Smoke1ScreenBody` · `Smoke1ServiceBody` · `KaoMaiScreeningBody` · `KaoMaiTreatmentBody` · `DrugHistoryBody` · `Sys2IntakeBody` · `LabBody` · `AfterCareBody` · `MentalAssessmentBody` · `QolAssessmentBody` · `SocialAssessmentBody` · `AlcoholAssistAssessmentBody` · `AlcoholAssist7AssessmentBody` · `CiwaAssessmentBody` · `AlcoholPlanAssessmentBody`
+· ตัวช่วยที่ export: `RECORD_ASSESSMENT_SUMMARY` (สรุปผลต่อแบบ) · `smoke1HsiResults` · `QList` / `QRow` (แถวข้อคำถาม)
+· หัวกลุ่มในแบบประเมิน = `TopicHeader bare as='h3' small tone='neutral'` (§6.28.7) · ปุ่มหลายข้อ = `ChoiceButtons multiple` (§6.118)
+
+### 6.162 behaviorAssessmentExt (ลงทะเบียน 12 พ.ย. 69)
+
+**behaviorAssessmentExt** — แบบประเมินพฤติกรรม 6 ด้าน (สูบบุหรี่ · แอลกอฮอล์ · ออกกำลังกาย · อาหาร · นอน · ความเครียด/ซึมเศร้า) + ประวัติการคัดกรอง 9 · 6 · 3 เดือน สำหรับแถวแบบประเมินของเทมเพลตคลินิก · ไฟล์ `src/components/clinic/behaviorAssessmentExt.jsx` · ย้ายจาก `chronicClinicExtension` (ผู้ใช้ 12 พ.ย. 69 ข้อ 18ก)
+· `buildBehaviorAssessmentExt({ code, name, groups })` → `{ codeTools, viewOnlyCodeTools, assessmentRounds, assessmentRoundHeaders, assessmentRoundsNote }` — ใช้ที่ เบาหวาน · ความดัน · หอบหืด/COPD · ANC · งานบำบัด · สุขภาพจิต
+· `behaviourPastRounds(key, hn, place)` → แถวประวัติ 3 ครั้งก่อน — ใช้ที่จุดคัดกรองกลาง (`ScreeningStep4`)
+· ภายในคลินิกโรคเรื้อรัง: `groupsFor` · `buildCodeTools` · `buildHistoryRounds` · `HIDDEN_ASSESSMENTS` · `stressSubtitleFor` · `LONG_FORMS` · `COMPACT_LONG_FORMS`
+· `chronicClinicExtension` ยัง export สองตัวหลักต่อ ให้ import เดิมที่ยังไม่ได้ย้าย
+
+### 6.163 MissText (ลงทะเบียน 12 พ.ย. 69)
+
+**MissText** — ค่าในตารางรายงานที่ไม่ถึงเป้า = ตัวอักษร `--text-danger-default` (ตารางไม่มีสีพื้นแถว) · ไฟล์ `src/components/table/MissText.jsx` · รวม 2 สำเนา (รายงานคลังยา `drugReportKit` · รายงานคลินิกเด็กดี `wellBabyReportTabs`) · ผู้ใช้ 12 พ.ย. 69 ข้อ 36ก
+· `children` = ค่าที่จัดรูปแล้ว
+
+### 6.164 SectionCard (ลงทะเบียน 12 พ.ย. 69)
+
+**SectionCard** — การ์ดหัวข้อส่วนของหน้า: ไอคอน (กล่องเขียวอ่อน 40 / ไอคอน inline / เลขขั้น) + หัวข้อ (ตัวหนา `--text-topic-primary-title` · `TopicHeader bare`) + คำอธิบาย 1 บรรทัด (xs · `--text-content-secondary`) + ปุ่มชิดขวา → เนื้อหา · หัวการ์ดตัดบรรทัดเอง (หัวข้อขั้นต่ำ 160 ปุ่มลงแถวใหม่ ไม่ล้นแนวนอนที่ 390) · ไฟล์ `src/components/card/SectionCard.jsx` · รวม SectionCard ที่เขียนเองในหน้า 25 สำเนา (ผู้ใช้ 12 พ.ย. 69 ข้อ 22ก) · ห้ามประกาศ `SectionCard` ในหน้าเอง — หน้าตาเฉพาะโมดูลใช้ preset (ค่าคงที่ + spread) หรือ `*Shared` ห่อบาง ๆ
+
+| prop | ค่า | ความหมาย |
+|---|---|---|
+| `variant` | `card` (ค่าตั้งต้น) · `plain` | การ์ดขาว กรอบ `--border-brandPrimary-quaternary` radius 500 · plain = ไม่มีกรอบ/พื้น (วางในการ์ดขาวอีกชั้น) |
+| `elevation` | `card` · `strong` · `brand` | `--shadow-card` · `--shadow-card-strong` · `--shadow-brand-drop-bottom-200` |
+| `flat` | bool | การ์ดไม่มีเงา |
+| `padding` | `md` (24) · `sm` (16) | ระยะในการ์ด |
+| `icon` · `iconVariant` | ชื่อ Material Symbol / element · `tile` · `inline` · `none` | กล่อง 40 radius 300 · ไอคอน 20 สีแบรนด์ · ไม่แสดง (เภสัชกรรม) |
+| `step` | ตัวเลข | วงกลม 32 แทนไอคอน (ตั้งค่าคลินิก) |
+| `title` · `level` | node · `section` · `sub` | หัวข้อ base สีหัวข้อแบรนด์ · sub = sm สีเนื้อหา (หัวข้อซ้อน) |
+| `subtitle` | node (ชื่อเดิม `summary` · `hint`) | บรรทัดรอง xs |
+| `action` | node (ชื่อเดิม `aside` · `actions` · `right`) | ปุ่ม/ป้ายชิดขวา ตกบรรทัดเมื่อแคบ |
+| `tone` | `default` · `error` (`danger`) · `muted` | กล่องไอคอนแดง · พื้นเทาอ่อน |
+| `footer` · `id` · `as` · `className` · `style` | | ต่อท้ายเนื้อหา · anchor · แท็ก (ค่าตั้งต้น section) |
+
+ใช้ที่: แล็บ (สั่งตรวจ · บันทึกผล · ตั้งค่า) · เอกซเรย์ (สั่งตรวจ · ผล · ตั้งค่า · แผงรายละเอียด · ปฏิทินนัด) · เภสัชกรรม (ทะเบียนยา · จ่ายยา) · ภาพรวมคัดกรองของแพทย์ (`ScreeningSummaryDashboard`) · ศูนย์คิว · เยี่ยมบ้าน · งานบำบัด · สิทธิ · ผู้ใช้งาน (re-export / ห่อบาง ๆ ใน `*Shared`) · ตั้งค่าคลินิก · สร้างแบบฟอร์มความยินยอม · ติดตาม สุขภาพจิต · HIV · IMC · ยังไม่ย้าย: ทันตกรรม `dentalShared` (งานน้อง) · วัณโรค `TbFollowUpPage` (มีงานค้างของอีกเทอร์มินัล)
+
+ชุดค่าตั้งต้น (ผู้ใช้ 12 พ.ย. 69 ข้อ 18ก 22ก — ไฟล์ *Shared re-export `as SectionCard` / `as FormCard`): `InlineStrongSectionCard` (เยี่ยมบ้าน · ติดตามวัณโรค) · `RoomySectionCard` (ศูนย์ออกคิว) · `ToggleFlatSectionCard` (งานบำบัด) · `CompactSectionCard` (สิทธิ) · `BoxSectionCard` (ทันตกรรม) · `FormSectionCard` (ฟอร์มงานชุมชน = FormCard) · ฟอร์มลงทะเบียนในหน้าแอป `/m/register` = `PageCard`
+
+### 6.165 MonthlyIndicatorMatrix (ลงทะเบียน 12 พ.ย. 69)
+
+**MonthlyIndicatorMatrix** — ตารางรายงาน/ตัวชี้วัด × 12 เดือนของปีงบ (ต.ค. → ก.ย.) · คอลัมน์ชื่อตรึงซ้าย (เลขข้อ + ชื่อ + บรรทัดรอง xs) · หัวเดือนกดเรียงได้ · ปุ่ม "ออกรายงาน" ท้ายแถว · กางแถวดูตัวเลขเดียวกันแยกรายศูนย์ (`MonthlyCenterBreakdown`) · เดือนไม่มีข้อมูล = "—" · ไฟล์ `src/components/table/MonthlyIndicatorMatrix.jsx` · รวม 3 สำเนา: รายงานห้องจ่ายยา/บริบาลฯ (`PharmacyReportsPage` `DispensaryReportMatrix`) · รายงานคลังยา (`drugReportKit` `ReportMatrix` · งานน้อง) · รายงานตัวชี้วัดคลินิก (`indicatorReportKit` `IndicatorMatrix`) · ผู้ใช้ 12 พ.ย. 69 ข้อ 38ก 39ก · ไม่รวม: ตารางสรุปคลินิกเด็กดี (`wellBabyReportTabs` `IndicatorMatrix` มีคอลัมน์รวม 12 เดือน + แถวกางเป็นยอดทั้งปีรายศูนย์ ตัวตั้ง/ตัวหาร — คนละรูปแบบ)
+
+| prop | ค่า | ความหมาย |
+|---|---|---|
+| `rows` | `[{ key, no, title, monthly[12], … }]` | แถวละฉบับ · ข้อมูลอื่นของหน้าแนบไว้ในแถวได้ |
+| `months` | `[{ label }]` หรือ `['ต.ค.', …]` | หัวคอลัมน์เดือน |
+| `renderCell` | `(row, i) → node` | ค่าเดือน i (ค่าตั้งต้น `defaultMonthCell`: 0/ว่าง = "—" · คั่นหลักพัน) · ไม่ถึงเป้า → `MissText` |
+| `subtitle` | `(row) → string` | บรรทัดรองใต้ชื่อ (หน่วย · เป้าหมาย · สะสม) |
+| `onExport` · `exportLabel` | `(row) => …` · "ออกรายงาน" | ไม่ส่ง = ไม่มีคอลัมน์ปุ่ม |
+| `renderBreakdown` | `(row) → node` | แถวกาง · ปกติ = `<MonthlyCenterBreakdown rows months renderCell />` (`rows` = `{ key, center, monthly }` · compact · 10 แถว/หน้า) |
+| `titleLabel` · `titleMinWidth` · `titleMaxWidth` | "รายงาน" · 320 · 440 | หัว/ความกว้างคอลัมน์ชื่อ (ชื่อยาวตัดบรรทัด) |
+
+ชิ้นย่อย: `MatrixTitleCell` (`no` · `title` · `sub`) — ชื่อแถวแบบเดียวกันในตารางอื่นของรายงาน
+
 ## 7. Mobile App · Kiosk — design system แยกของตัวเอง
 
 > แยกจาก HCIS ตั้งแต่ 24 ต.ค. 69 (ผู้ใช้: "Design system ของ HCIS, Mobile App, Kiosk แยกออกจากกัน")
@@ -15463,3 +15655,52 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 
 - หน้า `/m` ใน bma.health เป็นสำเนาแอป Mobile → โหลด `mobile.css` ด้วย และอ่านกติกาจาก bma.mobile `design.md`
 - HCIS ห้ามใช้ `--mobile-*` / `--kiosk-*` · Mobile / Kiosk ไม่เพิ่ม token ของตัวเองลง `tokens.css`
+
+
+### 6.166 CheckupUi (ลงทะเบียน 12 พ.ย. 69)
+
+**CheckupUi** — ชิ้นส่วนหน้าตรวจสุขภาพที่โมดูลอื่นใช้ร่วม (หน้าโรคเรื้อรัง · หน้าตั้งค่าระบบ · คัดกรองสุขภาพจิต) · ไฟล์ `src/components/checkup/CheckupUi.jsx` (ย้ายจาก `src/pages/checkup/CheckupUi.jsx` ซึ่งเหลือเป็นตัวส่งต่อชื่อเดิม · ผู้ใช้ 12 พ.ย. 69 ข้อ 26ก) · export: `SectionHeader` (= TopicHeader) · `NoticeBar` (= NoticeLine) · `PagerRow` (= TablePaginationBar) · `ReadField` (= ReviewRow stacked) · `StatTile` (= StatTile tint) · `PageCard` · `PageBody` · `SubCard` · `EmptyState` · `verdictResult` · `RefSourceBadge` · `VerdictBadge` และอื่น ๆ ในไฟล์ · import ใหม่ใช้ `@/components/checkup/CheckupUi`
+
+### 6.167 CopdExamSections (ลงทะเบียน 12 พ.ย. 69)
+
+**CopdExamSections** — การ์ดตรวจคลินิกหอบหืด/COPD ที่ห้องยาใช้ร่วม (`CopdInhalerReviewForm` ในหน้าทบทวนการคัดกรองของเภสัชกร) · ไฟล์ `src/components/chronic/CopdExamSections.jsx` (ย้ายจาก `src/pages/clinic/chronic/CopdExamSections.jsx` ซึ่งเหลือเป็นตัวส่งต่อชื่อเดิม · ผู้ใช้ 12 พ.ย. 69 ข้อ 28ก) · export: default `CopdExamSections` · `CopdCapacityForm` · `CopdClinicAssessmentForm` · `CopdInhalerReviewForm` · `CopdExamReview` · `copdAssessmentReviewItems` · `goldGradeOf` · `copdAnnualRows` · `copdAnnualHistory` · `priorPharmacistInhalerReview` · `thisVisitPharmacistInhalerReview` · import ใหม่ใช้ `@/components/chronic/CopdExamSections`
+
+### 6.181 CheckupOccupationalRisk (ลงทะเบียน 13 พ.ย. 69)
+
+**CheckupOccupationalRisk** — แท็บ "ความเสี่ยงจากอาชีพและสิ่งแวดล้อม" ของแพทย์ ใช้ในหน้าตรวจสุขภาพและหน้าบันทึกการตรวจ `/treat/record` (`TreatmentFormPage`) · ไฟล์ `src/components/checkup/CheckupOccupationalRisk.jsx` (ย้ายจาก `src/pages/checkup/CheckupOccupationalRisk.jsx` ซึ่งเหลือเป็นตัวส่งต่อชื่อเดิม · ผู้ใช้ 12 พ.ย. 69 ข้อ 11ก/27ก) · export: default `CheckupOccupationalRisk` (props `form` · `setForm`) · `OCCUPATIONAL_RISK_OPTIONS` · `occupationalRiskSummary` · import ใหม่ใช้ `@/components/checkup/CheckupOccupationalRisk`
+
+### 6.168 CpoeExamDiagnosisStepLazy (ลงทะเบียน 12 พ.ย. 69)
+
+**CpoeExamDiagnosisStepLazy** — ทางเข้าเดียว (React.lazy) ของขั้น "ตรวจร่างกายและวินิจฉัย" ของหน้าบันทึกการตรวจ `/treat/record` (`CpoeExamDiagnosisStep` ใน `TreatmentFormPage`) · ไฟล์ `src/components/examination/CpoeExamDiagnosisStepLazy.jsx` · ใช้ที่ ห้องสังเกตการณ์ · วัณโรค · HIV/STI · สุขภาพจิต (แทน React.lazy 4 สำเนา · ผู้ใช้ 12 พ.ย. 69 ข้อ 30ก) · ผู้เรียกห่อ `<React.Suspense>` เอง · props เดียวกับ `CpoeExamDiagnosisStep`
+
+### 6.169 AuditLine (ลงทะเบียน 12 พ.ย. 69)
+
+**AuditLine** — บรรทัดเล็ก "บันทึกโดย … · เวลา …" ท้ายรายการ/การ์ด · ไฟล์ `src/components/list/AuditLine.jsx` · API: `icon` (Material Symbol 14 · ไม่ส่ง = ข้อความ xs เทาอย่างเดียว) · `tone` muted | danger · `HistoryAuditLine` = ไอคอน history ค่าเริ่ม · รวมสำเนา 5 ที่ (สร้างเสริมภูมิคุ้มกัน 3 · ทะเบียนเวชศาสตร์ฟื้นฟู · อนามัยโรงเรียน — ผู้ใช้ 12 พ.ย. 69 ข้อ 16ก) · demo `/components/audit-line`
+
+### 6.182 ProcedureHandoffCard (ลงทะเบียน 13 พ.ย. 69)
+
+**ProcedureHandoffCard** — ตารางสั่งหัตถการ (ICD-9) ในสั่งการรักษา (CPOE) + การ์ดส่งต่อห้องหัตถการ · ไฟล์ `src/components/clinic/ProcedureHandoffCard.jsx` (ย้ายจาก `src/pages/treat/ProcedureHandoffCard.jsx` ซึ่งเหลือเป็นตัวส่งต่อชื่อเดิม · ผู้ใช้ 13 พ.ย. 69 "ทำเลย ที่ควรเพิ่มใน design system") · export: default `ProcedureHandoffCard` · `ProcedureOrdersTab` · `ProcedureOrderTable` · `BoundProcedurePanel` · `useProcedureOrders` · `useProcedureRecord` · `procedureRowLabel` · ใช้ที่ หน้าบันทึกการตรวจ `/treat/record` · ห้องหัตถการ `/procedure` · กายภาพบำบัด
+
+### 6.183 TreatmentFormPage — แม่แบบหน้าบันทึกการตรวจ (ลงทะเบียน 13 พ.ย. 69)
+
+**TreatmentFormPage** — แม่แบบหน้าบันทึกการตรวจหลายขั้น (`VARIANTS` opd · exit · thai · checkup · homevisit · tb) อยู่ใน `src/templates/TreatmentFormPage.jsx` แบบเดียวกับ `ClinicRecordPage` (ย้ายจาก `src/pages/treat/TreatmentFormPage.jsx` ซึ่งเหลือเป็นตัวส่งต่อชื่อเดิม · ผู้ใช้ 13 พ.ย. 69) · export: default `TreatmentFormPage` (`variant`) · `CpoeExamDiagnosisStep` · `CpoeOrdersStep` · ใช้ที่ `/treat/record` · ตรวจสุขภาพ (`CheckupExamPage`) · พยาบาลหลังตรวจ (`ExitRecordPage`) · คลินิกพิเศษที่ยืมขั้น CPOE
+
+### 6.184 SchoolHealthGrowthChart / GrowthReferenceChart (ลงทะเบียน 13 พ.ย. 69)
+
+**GrowthReferenceChart** — กราฟการเจริญเติบโตตามเกณฑ์ กรมอนามัย 2564 / TSPE 2022 (5–19 ปี) ชุดเดียวทั้งระบบ · ไฟล์ `src/components/growth/SchoolHealthGrowthChart.jsx` (ย้ายจาก `src/pages/clinic/school-health/SchoolHealthGrowthChart.jsx` ซึ่งเหลือเป็นตัวส่งต่อชื่อเดิม · ผู้ใช้ 13 พ.ย. 69) · export `GrowthReferenceChart` · ใช้ที่ อนามัยโรงเรียน · โภชนาการ (`NutritionRecordPage`) · `WellChildGrowthReference` (§6.50)
+
+### 6.185 ScreeningStep4 — ขั้นพฤติกรรมสุขภาพ/แบบประเมินของจุดคัดกรอง (ลงทะเบียน 13 พ.ย. 69)
+
+**ScreeningStep4** — ขั้น "แบบประเมิน" ของคัดกรองกลาง (ตาราง 6 แถว สูบบุหรี่ · แอลกอฮอล์ · ออกกำลังกาย · อาหาร · นอน · ความเครียด, โหมด `cards`) · ไฟล์ `src/components/screening/ScreeningStep4.jsx` (ย้ายจาก `src/pages/opd/ScreeningStep4.jsx` ซึ่งเหลือเป็นตัวส่งต่อชื่อเดิม · ผู้ใช้ 13 พ.ย. 69 — ขั้นที่ 5 `ScreeningStep5` ยังอยู่ที่เดิม รอย้ายตามมติ 62ก) · export: default `ScreeningStep4` · `BEHAVIOR_GROUPS` · `BEHAVIOR_DETAIL_SUGGESTIONS` · ใช้ที่ คัดกรองกลาง · ตรวจสุขภาพ · เยี่ยมบ้าน · วัณโรค · ทันตกรรม (ผ่านตัวส่งต่อ) · `CarriedScreeningStep`
+
+### 6.186 BehaviourGroup (ลงทะเบียน 13 พ.ย. 69)
+
+**BehaviourGroup** — กลุ่มย่อยในการ์ด "พฤติกรรมสุขภาพ" ของขั้นคัดกรอง: เส้นคั่นบน 1px `--border-brandPrimary-quaternary` · หัวข้อ base medium สีเขียว · เนื้อหาห่าง 12 · ไฟล์ `src/components/screening/BehaviourGroup.jsx` · props `title` · `children` · แทนสำเนาใน `CarriedScreeningStep` · `TbScreeningPage` (ผู้ใช้ 13 พ.ย. 69) · `DentalScreeningPage` (หน้าของน้อง) ยังใช้สำเนาของตัวเอง
+
+### 6.187 ChipRow (ลงทะเบียน 13 พ.ย. 69)
+
+**ChipRow** — แถวตัวเลือกแบบปุ่ม sm (`SelectableCardButton` สูง 32) เลือกได้ 1 หรือหลายข้อ · กดซ้ำ = ยกเลิก · ไฟล์ `src/components/forms/ChipRow.jsx` · props `options` (string | { value, label }) · `value` · `onChange` · `multiple` · `ariaLabel` · `disabled` · `lockOnly` (ล็อกการกดแต่ไม่จางปุ่ม — โหมดอ่านอย่างเดียว) · `showCheck` · แทนสำเนาใน คัดกรองวัณโรค · บันทึกวัณโรค · หน้าบันทึกสุขภาพจิต · คัดกรองงานบำบัด (ผู้ใช้ 13 พ.ย. 69 "ทำตามที่แนะนำ") · ทันตกรรม (หน้าของน้อง) และ OHAT ยังใช้สำเนาของตัวเอง
+
+### 6.188 FormRow (ลงทะเบียน 13 พ.ย. 69)
+
+**FormRow** — แถวของแบบคัดกรอง: ฉลาก (+ `hint` เล็ก) ซ้าย · ตัวเลือกขวาในคอลัมน์กว้างคงที่ (`controlWidth`, ค่าเริ่ม 340) ปุ่มทุกแถวเริ่มที่เส้นตั้งเดียวกัน · เส้นคั่นบางระหว่างแถว · `last` · `emphasis` · จอแคบตัวเลือกตกลงใต้ฉลาก · ไฟล์ `src/components/forms/FormRow.jsx` · ใช้ที่ คัดกรองวัณโรค · บันทึกวัณโรค (ผู้ใช้ 13 พ.ย. 69)
