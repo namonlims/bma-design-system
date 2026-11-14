@@ -14523,8 +14523,8 @@ Props: `hn` · `onCard` · hover/แตะ = `TooltipGroups` (หัวข้อ
 
 ### 6.55 StaffNameCell (ลงทะเบียน 26 ต.ค. 69)
 
-**StaffNameCell** — เซลล์บุคลากรในตาราง: รูปโปรไฟล์กลม + ชื่อ + บรรทัดรอง · ไฟล์ `src/components/table/StaffNameCell.jsx` · API: `name` · `avatarUrl` · `subtext` (บทบาท/อีเมล) · `size` 'sm' (24) | 'md' (36) · `truncate`
-· ใช้ที่ ทะเบียนบุคลากร `/system/staff` (md · อีเมล · truncate) · ประวัติแบบฟอร์มติดตามงานบำบัด คอลัมน์ "บันทึกโดย" (sm · บทบาท)
+**StaffNameCell** — เซลล์บุคลากรในตาราง: รูปโปรไฟล์กลม + ชื่อ + บรรทัดรอง · ไฟล์ `src/components/table/StaffNameCell.jsx` · API: `name` · `avatarUrl` · `subtext` (บทบาท/อีเมล) · `size` 'sm' (24) | 'md' (36) · `truncate` · `showAvatar` (false = ชื่ออย่างเดียว ไม่มีวงกลมรูป · 14 พ.ย. 69)
+· ใช้ที่ ทะเบียนบุคลากร `/system/staff` (md · อีเมล · truncate) · ประวัติแบบฟอร์มติดตามงานบำบัด คอลัมน์ "บันทึกโดย" (sm · บทบาท) · ตรวจนับคลังศูนย์ `/center-warehouse` คอลัมน์ "ผู้ตรวจนับ" · "ผู้อนุมัติ" (showAvatar={false} · ผู้ใช้สั่ง "ไม่ต้องมีรูป profile" 4 พ.ย. 69)
 
 | ส่วน | รายละเอียด |
 |---|---|
