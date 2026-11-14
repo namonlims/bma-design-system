@@ -9777,7 +9777,7 @@ Each set has 4 prop combinations: `horizontal: Yes/No` × `type: reading / bmi`.
 
 ---
 
-## 6.19 Header
+## 6.207 Header
 
 **Figma nodes:** Container `1-2466` · Apps Button `1-2469` · Tag `1-2473` · Calendar `1-2477` · Manual Button `193-3723` · Dropdown open state `185-7220`
 **MIH Design Template:** `Urt0JAQES9364u2ud3XtpY`
@@ -9792,7 +9792,7 @@ requested by their caller.
 
 ---
 
-### 6.19.1 Component Properties
+### 6.207.1 Component Properties
 
 | Property | Type | Values | Default |
 |---|---|---|---|
@@ -9802,7 +9802,7 @@ requested by their caller.
 
 ---
 
-### 6.19.2 Dimension Tokens
+### 6.207.2 Dimension Tokens
 
 | Element | Token | Value | CSS variable |
 |---|---|---|---|
@@ -9838,7 +9838,7 @@ requested by their caller.
 
 ---
 
-### 6.19.3 Color Tokens
+### 6.207.3 Color Tokens
 
 | Element | Token | Hex | CSS variable |
 |---|---|---|---|
@@ -9882,7 +9882,7 @@ requested by their caller.
 
 ---
 
-### 6.19.4 Typography
+### 6.207.4 Typography
 
 | Element | Style | Size | Weight |
 |---|---|---|---|
@@ -9897,7 +9897,7 @@ requested by their caller.
 
 ---
 
-### 6.19.5 Figma Asset UUIDs
+### 6.207.5 Figma Asset UUIDs
 
 > Assets expire 7 days after fetch — re-fetch from the source node when stale.
 > Icon color change between states is handled via **CSS filter** (not separate image assets).
@@ -9950,7 +9950,7 @@ The chevron uses **one gray-down asset** rotated 180° via CSS transform on open
 
 ---
 
-### 6.19.6 CSS Implementation (prefix: `hdr-`)
+### 6.207.6 CSS Implementation (prefix: `hdr-`)
 
 ```css
 /* ── Bar container ── */
@@ -10114,7 +10114,7 @@ The chevron uses **one gray-down asset** rotated 180° via CSS transform on open
 
 ---
 
-### 6.19.7 Token Alias Chain
+### 6.207.7 Token Alias Chain
 
 ```
 surface/navigation/default          → neutral/white   → #FFFFFF
@@ -10144,7 +10144,7 @@ surface/brandprimary/quaternary     → emerald/50      → #F4FBF8   ← tab un
 
 ---
 
-## 6.20 Side Menu + Sub Menu
+## 6.208 Side Menu + Sub Menu
 
 **Figma nodes:** Side Menu `1-2253` · Menu Item States `1-2254` · Menu Item `1-2255` · Hover State `1-2260` · Collapsed `1-2390` · PHCIS Icons `1-2447` · Notification `1-2363` · Sub Menu A `6-1491` · [Design Template — SideMenu shell `1-2447`](https://www.figma.com/design/Urt0JAQES9364u2ud3XtpY/Design-Template?node-id=1-2447)
 
@@ -10357,7 +10357,7 @@ Sub Menu A properties:
 
 ---
 
-## 6.21 Breadcrumb
+## 6.209 Breadcrumb
 
 **Figma node:** `14-3191` · MIH Design Template
 
@@ -10595,11 +10595,11 @@ Footer แสดงที่ท้ายหน้าทุกหน้า รอ
 
 ---
 
-### 6.22 Side Menu + Side Menu Item
+### 6.210 Side Menu + Side Menu Item
 
 > Figma: **1-2281** (Side Menu), **1-2254** (Side Menu Item), **1-2282** (Notification item), **1-2390** (closed-state spec), **185-8826** (Notification badge)
 
-#### 6.22.1 Rail / Container
+#### 6.210.1 Rail / Container
 
 | Property | CSS Variable | Primitive | Value |
 |---|---|---|---|
@@ -10609,7 +10609,7 @@ Footer แสดงที่ท้ายหน้าทุกหน้า รอ
 | Width (open) | — | `dimension/size/6400` | `256px` |
 | Transition | — | cubic-bezier(.4,0,.2,1) | `width .25s` |
 
-#### 6.22.2 Side Menu Item — States
+#### 6.210.2 Side Menu Item — States
 
 | State | Surface | Text | Left Border |
 |---|---|---|---|
@@ -10618,7 +10618,7 @@ Footer แสดงที่ท้ายหน้าทุกหน้า รอ
 | Active (open) | `--surface-brandprimary-quaternary` | `--text-sidemenu-selected` (`brand/p700 #007549`) | `4px solid --surface-brandprimary-default` |
 | Disabled | transparent | `--text-sidemenu-disabled` (`neutral/400 #ADB2B7`) | — |
 
-#### 6.22.3 Side Menu Item — Dimensions
+#### 6.210.3 Side Menu Item — Dimensions
 
 | Property | CSS Variable | Primitive | Value |
 |---|---|---|---|
@@ -10630,7 +10630,7 @@ Footer แสดงที่ท้ายหน้าทุกหน้า รอ
 | Icon size | — | `dimension/size/400` | `16px` |
 | Font size | — | `typography/size/400` | `16px` |
 
-#### 6.22.4 Closed-state Centering (Figma 1-2390)
+#### 6.210.4 Closed-state Centering (Figma 1-2390)
 
 When `.sm-rail` is **64px wide**, icons center by:  
 `padding: 8px 24px` → 24 + 16 + 24 = **64px** ✓  
@@ -10641,7 +10641,7 @@ Active closed: `padding-left: 20px; padding-right: 24px` to offset the 4px left 
 .sm-rail:not(.open) .sm-item.active { padding-left: 20px; padding-right: 24px; }
 ```
 
-#### 6.22.5 Notification Badge (Figma 185-8826)
+#### 6.210.5 Notification Badge (Figma 185-8826)
 
 | Property | CSS Variable | Primitive | Value |
 |---|---|---|---|
@@ -10666,7 +10666,7 @@ background: var(--color-red-500);
 border: 1.5px solid var(--surface-navigation-default);
 ```
 
-#### 6.22.7 Logo Area — Figma 1:2283 + 1:2284
+#### 6.210.7 Logo Area — Figma 1:2283 + 1:2284
 
 | Element | Property | Token / Value | Figma Node |
 |---|---|---|---|
@@ -10683,7 +10683,7 @@ border: 1.5px solid var(--surface-navigation-default);
 | Sub-text | font-size | `var(--typograpphy-size-xs)` = `12px` | 1:2287 |
 | Sub-text | color | `#565D6C` | 1:2287 |
 
-#### 6.22.8 System Switcher Icon — swap_horiz (Figma 1:2288)
+#### 6.210.8 System Switcher Icon — swap_horiz (Figma 1:2288)
 
 Material icon `swap_horiz` — image asset rendered via Figma-exact relative/absolute inset layout.
 
@@ -10722,7 +10722,7 @@ Material icon `swap_horiz` — image asset rendered via Figma-exact relative/abs
 .sm-rail:not(.open) .sm-swap-icon { opacity: 0; pointer-events: none; transition: opacity .15s; }
 ```
 
-#### 6.22.9 Profile / User Row — unfold_more (Figma 1:2303 · 1:2308)
+#### 6.210.9 Profile / User Row — unfold_more (Figma 1:2303 · 1:2308)
 
 | Element | Property | Token / Value | Figma Node |
 |---|---|---|---|
@@ -10762,7 +10762,7 @@ Material icon `unfold_more` — image asset rendered via Figma-exact relative/ab
 
 **Behavior:** Click user row → profile popup menu (โปรไฟล์ / ตั้งค่า / ออกจากระบบ)
 
-#### 6.22.6 CSS Quick Reference
+#### 6.210.6 CSS Quick Reference
 
 ```css
 /* Rail */
@@ -11804,7 +11804,7 @@ The preview file (`mih-components-all-v2.html → Search tab`) includes two full
 
 ---
 
-### 6.28 Treatment Form — Step 1 Medical History (CPOE)
+### 6.193 Treatment Form — Step 1 Medical History (CPOE)
 
 > **Figma:** [PHCIS | CPOE · node `176:41635`](https://www.figma.com/design/cOjwwHvgGURA3IEuls8RT5/PHCIS-%7C-CPOE?node-id=176-41635)  
 > **Implementation:** `TreatmentFormShell.jsx` · `TreatmentSteps.jsx` (`Step1History`) · `ServiceDateList.jsx`
@@ -11861,7 +11861,7 @@ The preview file (`mih-components-all-v2.html → Search tab`) includes two full
 
 ---
 
-### 6.29 Treatment Form — Step 3 Physical Examination
+### 6.194 Treatment Form — Step 3 Physical Examination
 
 > **Figma:** [PHCIS-ALL · node `2431:213971`](https://www.figma.com/design/h0fghZdYHA7HRJcjmRsUmF/PHCIS-ALL?node-id=2431-213971)  
 > **Implementation:** `TreatmentSteps.jsx` (`Step3Examination`) · `BodyDiagramPanel.jsx` · `ExamSupportList.jsx` · `ExamNotesPanel.jsx`
@@ -12827,7 +12827,7 @@ A central reference for *behavior, accessibility, and usage rules* across recent
 
 **Source:** [src/components/layout/Sidebar.jsx](src/components/layout/Sidebar.jsx)
 
-Builds on the original Sidebar (§6.20) with two integrations:
+Builds on the original Sidebar (§6.208) with two integrations:
 
 #### 6.32.1 New menu items (Figma node 1:2363)
 
@@ -15049,20 +15049,20 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 | "มารับยาแทน" | `ProxyPickupText` = ข้อความ xs `--text-info-default` (ไม่มี "· ข้ามคัดกรอง") |
 | ระยะ | ระหว่างรายการ 6 (`--dim-space-150`) · ตัดบรรทัดได้ |
 
-### 6.95 ViewPills (ลงทะเบียน 3 พ.ย. 69)
+### 6.195 ViewPills (ลงทะเบียน 3 พ.ย. 69)
 
 **ViewPills** — แถวปุ่มสลับมุมมองในการ์ด/แผงกราฟ (`TabBar` + `TabPill`) · ไฟล์ `src/components/tab/ViewPills.jsx` · API: `options=[{ value, label }]` · `value` · `onChange` · `label` (aria) · `style`
 · วางบนสุดของเนื้อหาการ์ด ไม่วางในแถบหัว (หัวการ์ดไม่ตัดบรรทัด จอ 390 ชื่อถูกบีบ) · จอแคบเลื่อนแนวนอนในกล่องตัวเอง · ใช้ที่ `DashboardCards` (สิทธิ · ปิรามิด · 21 กลุ่มโรค) · Dashboard ระดับกอง · รายงานผู้บริหาร · เภสัชกรรม · คลินิกพิเศษ
 
-### 6.96 DraftBadge (ลงทะเบียน 3 พ.ย. 69)
+### 6.196 DraftBadge (ลงทะเบียน 3 พ.ย. 69)
 
 **DraftBadge** — ป้าย "ร่าง · รอ <หน่วยงาน>" บนการ์ดที่ยังใช้ข้อมูลจำลองเพราะรอนิยาม/รหัส/เกณฑ์ · ไฟล์ `src/components/badge/DraftBadge.jsx` · API: `waitFor` (ข้อความหน่วยงาน · ไม่ส่ง = "รอนิยาม") · `ColorfulBadge` orange small secondary · วางที่ `actions`/`action` ของ ChartPanel
 
-### 6.97 SortTable (ลงทะเบียน 3 พ.ย. 69)
+### 6.197 SortTable (ลงทะเบียน 3 พ.ย. 69)
 
 **SortTable** — `Table` เรียงได้ทุกคอลัมน์ที่มี accessor + แบ่งหน้า · ไฟล์ `src/components/table/SortTable.jsx` · API: `columns` · `rows` (ต้องมี `id`) · `accessors={ [key]: (row) => value }` · `pageSize` (10) · คอลัมน์ที่ไม่มี accessor = `sortable: false`
 
-### 6.98 StandardReportShell (ลงทะเบียน 3 พ.ย. 69)
+### 6.198 StandardReportShell (ลงทะเบียน 3 พ.ย. 69)
 
 **StandardReportShell** + `useStandardReportScope` — โครงหน้ารายงาน `/dashboard/*` แถวตัวกรองมาตรฐาน · ไฟล์ `src/templates/StandardReportShell.jsx`
 · แถวชิป: Template · `chipsBefore` · ปีงบประมาณ · เดือน (`hideMonth`) · ศบส. · โซนสุขภาพ · เขต (`hideArea`) · `chipsAfter` · "ล้างตัวกรอง" (ล้างเดือน + พื้นที่ + `onClearExtra` เมื่อ `extraActive`)
@@ -15717,35 +15717,35 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 
 **FormRow** — แถวของแบบคัดกรอง: ฉลาก (+ `hint` เล็ก) ซ้าย · ตัวเลือกขวาในคอลัมน์กว้างคงที่ (`controlWidth`, ค่าเริ่ม 340) ปุ่มทุกแถวเริ่มที่เส้นตั้งเดียวกัน · เส้นคั่นบางระหว่างแถว · `last` · `emphasis` · จอแคบตัวเลือกตกลงใต้ฉลาก · ไฟล์ `src/components/forms/FormRow.jsx` · ใช้ที่ คัดกรองวัณโรค · บันทึกวัณโรค (ผู้ใช้ 13 พ.ย. 69)
 
-### 6.178 LabOrderPanel (ลงทะเบียน 13 พ.ย. 69)
+### 6.199 LabOrderPanel (ลงทะเบียน 13 พ.ย. 69)
 
 **LabOrderPanel** — เนื้อในแท็บ "ส่งตรวจชันสูตร" ของ CPOE (เลือกรายการ · ชุดตรวจ · สรุปใบขอ · "พิมพ์ใบคำขอ" / "ส่งเข้า LIS") · ย้ายจาก `src/pages/treat/panels/` มาที่ `src/components/lab/LabOrderPanel.jsx` เพราะหน้าอื่นนอกห้องตรวจดึงไปใช้ · props `form` · `setForm` · `patient` · `onGoToInterfaces` · `defaultUrgency` · `stage` ('all' | 'pick' | 'summary') · `hideSendActions` · `actionsRef` · `onActionsMeta` · export `RIGHT_KEY_BY_THAI` · `FALLBACK_RIGHT_KEY` · ใช้ที่ แท็บ CPOE หน้าบันทึกการตรวจ/คลินิก · `LabOrderPopup` (ห้องสังเกตการณ์) · สรุปค่าใช้จ่าย `CpoeOrderTotal` · ส่งตรวจของทันตกรรม `DentalSendExamAction` (หน้าของน้อง) · เปิดเป็นป๊อปอัปให้ใช้ `LabOrderPopup` ไม่ห่อด้วย `Popup` เปล่า (ผู้ใช้ 13 พ.ย. 69 ข้อ 6ก)
 
-### 6.179 DentalSendExamAction (ลงทะเบียน 13 พ.ย. 69)
+### 6.200 DentalSendExamAction (ลงทะเบียน 13 พ.ย. 69)
 
 **DentalSendExamAction** — ปุ่มหัวแฟ้ม "ส่งตรวจ ▾" (ส่งตรวจแล็บ · ส่งตรวจรังสี · ส่งตรวจสมรรถภาพปอด · ปรึกษาตรวจเฉพาะทาง · ส่งตรวจทันตกรรมเมื่อส่ง `dentalReferral`) ใบขอตรวจเป็นป๊อปอัปด้วย `LabOrderPanel` · `XrayOrderPicker` ชุดเดียวกับ OPD · ย้ายจาก `src/pages/clinic/dental/` มาที่ `src/components/dental/DentalSendExamAction.jsx` เพราะหน้าตรวจสุขภาพดึงไปใช้ · props `form` · `setForm` · `patient` · `dentalReferral` · ใช้ที่ หน้าบันทึกทันตกรรม (หน้าของน้อง) · ตรวจสุขภาพ บันทึกผลตรวจ + คัดกรองของพยาบาล (ผู้ใช้ 13 พ.ย. 69 ข้อ 7ก)
 
-### 6.180 ExportFormatPopup — ป๊อปอัป "นำออกรายงาน" (ลงทะเบียน 13 พ.ย. 69)
+### 6.201 ExportFormatPopup — ป๊อปอัป "นำออกรายงาน" (ลงทะเบียน 13 พ.ย. 69)
 
 **ExportFormatPopup** — ป๊อปอัปนำออกรายงานชุดเดียวทั้งระบบ: เลือกหัวข้อรายงาน → ช่วงวันที่/ปีงบประมาณ → รูปแบบไฟล์ PDF · CSV · XLSX → **เหตุผลในการนำออกรายงาน*** (`REPORT_EXPORT_REASONS` · "นำส่ง (Export) ให้หน่วยงานภายนอก" → "หน่วยงานภายนอกที่นำส่ง*" `SelectWithOther` · "อื่นๆ" → ระบุ ≥ 5 ตัวอักษร) → ข้อมูลส่วนบุคคล (PDPA/PII) → ตัวอย่างเอกสารพร้อมหัวกระดาษ · ยืนยันแล้วผ่าน `PdpaExportAcknowledgePopup` ก่อนได้ไฟล์ (ติ๊ก PII = สร้างคำขออนุมัติ) · เหตุผลเก็บใน log การนำออก + ทุกการนำออกลง `/audit/log` (การกระทำ "ส่งออกข้อมูล" · รายละเอียด = ไฟล์ · เหตุผล) · ไฟล์ `src/components/popup/ExportFormatPopup.jsx` (ย้ายจาก `src/pages/consent/consentExportPopup.jsx` ซึ่งเหลือเป็นตัวส่งต่อ · ผู้ใช้ 13 พ.ย. 69 ข้อ 3ก) · props หลัก `open` · `report` · `reportsCatalog` · `onClose` · `onExported` · `hideDateRange` · `fiscalYearOptions` · `initialFiscalYear` · `onFiscalYearChange` · `criteriaFields` · `columnOptions` · `allowPii` · `dataScope` · `onRequestApproval` · `allowedFormats` · export ร่วม `useExportFormatState` · `ExportFormatFormBody` · `ExportPdpaGate` · `buildReportTableColumns` · `buildReportColumnGroups` · `DateInputBox` · `stripTorRef` · ใช้ที่ 72 หน้า (รายงานทุกคลินิก/แผนก · แดชบอร์ด · audit log · ความยินยอม · `StandardReportShell` · `ClinicReportShell`) · อย่าเขียนช่องเหตุผล/ป๊อปอัปนำออกเองในหน้า
 
-### 6.181 PdpaExportAcknowledgePopup (ลงทะเบียน 13 พ.ย. 69)
+### 6.202 PdpaExportAcknowledgePopup (ลงทะเบียน 13 พ.ย. 69)
 
-**PdpaExportAcknowledgePopup** — ป๊อปอัปรับทราบความรับผิดชอบ PDPA ก่อนนำออกข้อมูล (หน้าที่ผู้นำออก 4 ข้อ · Alert "ระบบบันทึกการนำออกทุกครั้ง" · แถว "เหตุผลในการนำออกรายงาน" อ่านอย่างเดียว · ติ๊ก PII = กล่องส้มสายอนุมัติ + "เหตุผลในการนำออกข้อมูลส่วนบุคคล") · ปุ่มยืนยันกดได้เมื่อติ๊กรับทราบ · ไฟล์ `src/components/popup/PdpaExportAcknowledgePopup.jsx` · props `open` · `onClose` · `includePii` · `requestApproval` · `scope` · `source` · `format` · `purpose` · `exportReason` · `onConfirm({ purpose })` · เปิดผ่าน `ExportFormatPopup` (§6.180 · `ExportPdpaGate`) — หน้าไม่ต้องวางเอง
+**PdpaExportAcknowledgePopup** — ป๊อปอัปรับทราบความรับผิดชอบ PDPA ก่อนนำออกข้อมูล (หน้าที่ผู้นำออก 4 ข้อ · Alert "ระบบบันทึกการนำออกทุกครั้ง" · แถว "เหตุผลในการนำออกรายงาน" อ่านอย่างเดียว · ติ๊ก PII = กล่องส้มสายอนุมัติ + "เหตุผลในการนำออกข้อมูลส่วนบุคคล") · ปุ่มยืนยันกดได้เมื่อติ๊กรับทราบ · ไฟล์ `src/components/popup/PdpaExportAcknowledgePopup.jsx` · props `open` · `onClose` · `includePii` · `requestApproval` · `scope` · `source` · `format` · `purpose` · `exportReason` · `onConfirm({ purpose })` · เปิดผ่าน `ExportFormatPopup` (§6.201 · `ExportPdpaGate`) — หน้าไม่ต้องวางเอง
 
-### 6.182 RadioPill (ลงทะเบียน 13 พ.ย. 69)
+### 6.203 RadioPill (ลงทะเบียน 13 พ.ย. 69)
 
-**RadioPill** — ปุ่มเลือกค่าเดียว กล่องเหลี่ยมมุมมน (radius 200) สูง 40 ไม่มีเครื่องหมายถูก · เลือก = พื้น `--surface-brandPrimary-quaternary` + ขอบ/ตัวอักษรเขียว · hover = ขอบเขียว · `mih-hit-44` · ไฟล์ `src/components/forms/RadioPill.jsx` · props `label` · `selected` · `onClick` · `disabled` · ใช้: ปุ่มรูปแบบไฟล์ PDF · CSV · XLSX ใน `ExportFormatPopup` (§6.180) · อยากได้แคปซูลมีเครื่องหมายถูก → `SelectableTag`
+**RadioPill** — ปุ่มเลือกค่าเดียว กล่องเหลี่ยมมุมมน (radius 200) สูง 40 ไม่มีเครื่องหมายถูก · เลือก = พื้น `--surface-brandPrimary-quaternary` + ขอบ/ตัวอักษรเขียว · hover = ขอบเขียว · `mih-hit-44` · ไฟล์ `src/components/forms/RadioPill.jsx` · props `label` · `selected` · `onClick` · `disabled` · ใช้: ปุ่มรูปแบบไฟล์ PDF · CSV · XLSX ใน `ExportFormatPopup` (§6.201) · อยากได้แคปซูลมีเครื่องหมายถูก → `SelectableTag`
 
-### 6.183 RowIconActions (ลงทะเบียน 13 พ.ย. 69)
+### 6.204 RowIconActions (ลงทะเบียน 13 พ.ย. 69)
 
 **RowIconActions** — ปุ่มไอคอนท้ายแถวตาราง ดู · พิมพ์ · แก้ไข · ลบ · ไฟล์ `src/components/table/RowIconActions.jsx` · API: `name` (ต่อท้าย aria-label) · `onView` · `onPrint` (+ `printLabel`) · `onEdit` · `onDelete` — ไม่ส่ง = ไม่แสดงปุ่มนั้น · ลำดับตายตัว ตา → พิมพ์ → ดินสอ → ถังขยะ · ตา/พิมพ์/ลบ = `NeutralSubdueIconButton` outline sm · แก้ไข = `BrandIconButton` quaternary sm · gap `--dim-space-150` · คลิกปุ่มไม่โดนคลิกทั้งแถว · ใช้ที่งานชุมชน 10 หน้า (`communityShared` export `RowActions` = ตัวนี้) · ทะเบียนยา (พิมพ์ฉลาก · แก้ไข · ลบ) + ตารางในหน้าลงทะเบียนยา (ผู้ใช้ 13 พ.ย. 69 ข้อ 7ก) · คำสั่งทางแยก/รอง → `RowActionMenu` (⋮) · ปุ่มดันงานขั้นถัดไปของคิวรังสีคงเป็น `XrayRowActions` ของหน้า (ผู้ใช้ 13 พ.ย. 69 ข้อ 5ก)
 
-### 6.184 FieldRows — TextRow · SelectRow · TextareaRow · DateRow (ลงทะเบียน 13 พ.ย. 69)
+### 6.205 FieldRows — TextRow · SelectRow · TextareaRow · DateRow (ลงทะเบียน 13 พ.ย. 69)
 
 **FieldRows** — ช่องฟอร์ม 1 ช่องใน `FieldGrid`: ป้ายจาก `Field` (`forms/Fields`) + ตัวกรอกกว้างเต็มช่อง ตัวอักษร sm (`FIELD_TEXT`) · ไฟล์ `src/components/forms/FieldRows.jsx` · `TextRow` = `InputField` (`type` · `inputMode` · `readOnly` · `disabled`) · `SelectRow` = `Select` (`options` เป็น string หรือ `{value,label}` · `listFooter`) · `TextareaRow` = `Textarea` (`rows` 3) · `DateRow` = `DatePicker` · ทุกตัว `label` · `required` · `span` · `value` · `onChange` · `error` · ยกจากงานชุมชน (`communityShared` re-export ชื่อเดิม · ผู้ใช้ 13 พ.ย. 69 ข้อ 11ก) · `/drug` ของน้อง (`drugFormShared.jsx`) ยังมีชุดของตัวเอง — ย้ายตามทีหลัง · ช่องที่ต้องมี ⓘ / subgrid → `ExamField` (§6.142) · ช่องในป๊อปอัปลงทะเบียน → `FormFieldBlock` (§6.54)
 
-### 6.186 MapTools — useMapTools · mapDensityLayers · MapDensityLegend · gisGeometry (ลงทะเบียน 14 พ.ย. 69)
+### 6.206 MapTools — useMapTools · mapDensityLayers · MapDensityLegend · gisGeometry (ลงทะเบียน 14 พ.ย. 69)
 
 **MapTools** — เครื่องมือแผนที่ Leaflet ชุดกลาง ไม่ผูกข้อมูลหน้าใด (ยกจาก `/community/gis` TOR 2.3.2–2.3.4 · ผู้ใช้ตอบ "22ก" 14 พ.ย. 69) · ไฟล์ `src/components/map/useMapTools.jsx` · `src/components/map/mapDensityLayers.js` · `src/components/map/MapDensityLegend.jsx` · `src/utils/gisGeometry.js` · **`useMapTools({ mapRef, ready, narrow, candidates, bufferSummary, countNote, areaShapeHint, onStart })`** → `toolbar` (ปุ่ม ตำแหน่งปัจจุบัน · วัดระยะทาง · คำนวณพื้นที่ · แนวกันชน (Buffer) = `MapToolButton` ไอคอน + Tooltip · เปิดอยู่ = `BrandIconButton` fill · แตะได้ 44 ที่ ≤ 1024) · `card` (การ์ดผล: ระยะ ม./กม. · พื้นที่ ตร.ม./ไร่ + เส้นรอบรูป · Buffer จาก จุด/เส้น/พื้นที่ + ระยะ (ม.) + แถวสรุปจาก `bufferSummary(insideData)` · ย้อนจุด/ล้าง · จอแคบ = แถบล่างเต็มกว้าง · จอกว้าง = มุมขวาล่างซ้ายคอลัมน์ปุ่ม · วางเหนือแถบล่างด้วย CSS var `--map-bottom-stack` ที่หน้าตั้ง) · `toast` (ปฏิเสธสิทธิ์ตำแหน่ง = `PhcisTopToast` แดง) · `handlePoint(latlng)` / `handleShape(latlngs)` คืน true เมื่อเครื่องมือรับคลิกไป (หน้าต่อสายจาก map click / หมุด / รูปทรง) · `candidates` = `[{ id, latlng, data }]` จุดที่นับในแนวกันชน · ตำแหน่งปัจจุบัน = Geolocation จริง ย้ายแผนที่เท่านั้น (ไม่ใช่เช็คอิน) · **`createHeatLayer(L, map, { radiusMeters })`** → `setPoints` · `remove` (canvas เอง ไม่ใช้ leaflet.heat · แถบสี `HEAT_LEGEND` = ข้อยกเว้น gradient สีจาก token) · **`drawClusters({ L, map, group, points, zoom, renderSingle, onTap, label, unit })`** วง 44 แตะแล้วซูม · **`MapDensityLegend`** `mode` pins|cluster|heat · `count` · `subject` · `unit` · `label` · `idleText` · `gisGeometry`: `haversine` · `pathLength` · `polygonArea` · `inBuffer` · `bufferRings` · `clusterPoints` · `metersPerPixel` · `formatDistance` · `formatArea` (1 ไร่ = 1,600 ตร.ม.) · ไม่เรียกบริการภายนอก · ใช้ที่ `/community/gis` (`CommunityGisMap`) · ตัวอย่าง `/components/map-tools`
 
