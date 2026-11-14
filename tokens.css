@@ -395,7 +395,7 @@
   /* — Text · neutral / static — */
   --text-content-default:    #363B3F;
   --text-content-secondary:  #636B72;
-  --text-content-tertiary:   #858C92;
+  --text-content-tertiary:   #70787E; /* WCAG AA 4.5:1 บนขาว · เดิม neutral/500 #858C92 (ผู้ใช้ 14 พ.ย. 69 33ก) */
   --text-content-quaternary: #ADB2B7;
   --text-content-on-content: #FFFFFF;
   --labels-primary:          #000000; /* iOS home indicator / system label */
