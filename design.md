@@ -14084,6 +14084,7 @@ Props: `open` · `fieldLabel` · `onClose` · `onConfirm`
 #### 6.38.9 ESignatureField (e-signature-field)
 
 ช่องลงลายมือชื่ออิเล็กทรอนิกส์ — วาดลายเซ็น หรือเลือกลายเซ็นที่บันทึกไว้ (แท็บลายเซ็นของฉัน) คืนค่าเป็น data URL
+แท็บลายเซ็นที่บันทึกไว้ = ช่อง "ค้นหาชื่อ - นามสกุล" + ลายเซ็นของตัวเองและเจ้าหน้าที่อื่น พร้อมชื่อ ตาม TOR 1.8.4.1 (ผู้ใช้ 16 พ.ย. 69) · "บันทึกลายเซ็นนี้ไว้ใช้ครั้งถัดไป" เพิ่มเข้ารายการ
 ใช้ในแบบฟอร์มความยินยอมและสายอนุมัติ e-signature
 
 Props: `value` · `onChange` · `signerName` · `height` (120) · `showSavedTab`
@@ -15753,6 +15754,14 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 
 **PermissionHint** — บรรทัดเล็กสีส้ม (`--text-statusbadge-warning` · xs) + ไอคอน `lock` 14 บอกว่าบทบาทนี้ดูได้แต่เพิ่ม/แก้ไข/ลบไม่ได้ · วางเหนือรายการ/ฟอร์มที่ถูกล็อก · ไฟล์ `src/components/alert/PermissionHint.jsx` · props `show` (false = ไม่แสดง) · `text` (ค่าเริ่ม "ไม่มีสิทธิแก้ไขข้อมูลนี้") · ใช้ที่ งานสิทธิและการเบิกจ่าย `/rights` (ผ่าน `rightsUi` ค่าเริ่ม `NO_PERMISSION_HINT`) · จัดการระบบ › ตั้งค่าสิทธิการรักษา `/admin/rights-settings` · อยากได้แถบมีพื้นสี → `NoticeLine` (§6.129) · รวมสำเนา 2 ที่ (ผู้ใช้ 15 พ.ย. 69 1ก)
 ### 6.219 CodeLookupPopup (ลงทะเบียน 15 พ.ย. 69)
+
+### 6.220 NhsoEligibilityPopup (ลงทะเบียน 15 พ.ย. 69)
+
+**NhsoEligibilityPopup** — ผลตรวจสอบสิทธิแบบหน้าจอ สปสช. ดูอย่างเดียว: หัว "ผลตรวจสอบสิทธิ (สปสช.)" + บรรทัดสรุป (สิทธิ · ช่องทาง · ข้อมูล ณ) → ป้ายสถานะ + Authen Code → กลุ่ม "ข้อมูลประชากร" (เลขประจำตัวประชาชน · ชื่อ-สกุล · เดือนปีเกิด · เพศ · สภาพบุคคล · ข้อมูล ณ วันที่ · 2 คอลัมน์ ยุบเหลือ 1 บนจอแคบ) → กลุ่ม "สิทธิใช้เบิก" (สิทธิที่ใช้เบิก · วันที่เริ่ม/หมดสิทธิ · ประกันสังคม = จังหวัดที่ สปส. รับผิดชอบ + รพ. รักษา · สิทธิอื่น = หน่วยบริการหลัก/รอง) · ปุ่ม "ปิด" · ไฟล์ `src/components/registration/NhsoEligibilityPopup.jsx` · props `open` · `onClose` · `data` (= `nhsoEligibilityOf(hn, cardId, check)` ใน `src/data/rightsClaimStore.js`) · ใช้ที่ เวชระเบียน › ขั้นสิทธิการรักษา › ⋮ ของการ์ดสิทธิ "ดูผลตรวจสอบสิทธิ (สปสช.)" · `/rights` › แท็บ "ประวัติตรวจสอบสิทธิ" (กดแถว) · ข้อมูล mock รอเชื่อมบริการ สปสช. จริง (ผู้ใช้ 15 พ.ย. 69 "ค")
+
+### 6.221 PendingProcedureMark (ลงทะเบียน 15 พ.ย. 69)
+
+**PendingProcedureMark** — ไอคอนหลังชื่อ `healing` สีส้ม (`--text-alert-warning`) เมื่อผู้รับบริการมีหัตถการค้าง (แถวห้องหัตถการวันนี้ "รอทำหัตถการ" / "กำลังทำหัตถการ" จาก `pendingProcedureOf(hn)` ใน `src/data/procedureQueue.js`) · hover/แตะ = TooltipGroups (สถานะ · คิวห้องหัตถการ · หัตถการ · เตียง/เก้าอี้) · ไม่ค้าง = ไม่แสดง · อัปเดตเองเมื่อห้องหัตถการเปลี่ยนสถานะ · ไฟล์ `src/components/badge/PendingProcedureMark.jsx` · props `hn` · ส่งผ่าน `MaskedWorklistName extraMarks` · ใช้ที่ พยาบาลหลังตรวจ `/exit` · ห้องยา `/pharmacy/queue` · การเงิน `/finance` (FIN-46 SDD 10.5 · ผู้ใช้ 15 พ.ย. 69)
 
 **CodeLookupPopup** — ป๊อปอัปเลือกรหัสจากรายการแบบ HCIS (พิมพ์รหัส 1–2 ตัวหรือชื่อบางส่วน → รายการกรองทันที → เลือกแถว → "ตกลง" · ดับเบิลคลิก = เลือกและตกลง · "ยกเลิก" ไม่บันทึก) · ไฟล์ `src/components/popup/CodeLookupPopup.jsx` · props `open` · `onClose` · `onConfirm(key | null)` · `title` · `subtitle` · `rows` · `value` · `getKey` / `getPrimary` / `getSecondary` (ค่าเริ่ม code · name · province) · `searchPlaceholder` · `allowClear` ("ล้างค่า" → `onConfirm(null)`) · `badgeTone` (สีชิปรหัส ICD-10 ฟ้า · ICD-9 ส้ม) · รายการ = `ActionList` (§6.10) · ใช้ที่ รหัสสถานพยาบาลหลัก/รอง (TOR 1.7.2.4 · เวชระเบียน ขั้นสิทธิการรักษา + งานสิทธิ) · หน่วยงานต้นสังกัด · ICD-10 / ICD-9CM หน้าส่งเบิก · ย้ายจาก `rightsUi.jsx` LookupPopup (ผู้ใช้ 15 พ.ย. 69 ก · ชื่อเดิม re-export)
 
