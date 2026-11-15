@@ -1291,7 +1291,7 @@
     0px 1px 4px var(--PrimaryShadow-600),
     0px 1px 8px var(--PrimaryShadow-601);
   /* Header / SubHeader bar — Figma "Brand Drop Shadow Bottom/100"
-     (effect.brand-drop-shadow-bottom.100 · design.md §6.19.3). Aliased, not
+     (effect.brand-drop-shadow-bottom.100 · design.md §6.207.3). Aliased, not
      restated: the old literal used PrimaryShadow/602 (0.12 alpha), which no
      Figma effect defines, so the bar sat a shade heavier than every other
      brand-tinted lift on the page. */
