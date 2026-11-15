@@ -15752,6 +15752,9 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 ### 6.218 PermissionHint (ลงทะเบียน 15 พ.ย. 69)
 
 **PermissionHint** — บรรทัดเล็กสีส้ม (`--text-statusbadge-warning` · xs) + ไอคอน `lock` 14 บอกว่าบทบาทนี้ดูได้แต่เพิ่ม/แก้ไข/ลบไม่ได้ · วางเหนือรายการ/ฟอร์มที่ถูกล็อก · ไฟล์ `src/components/alert/PermissionHint.jsx` · props `show` (false = ไม่แสดง) · `text` (ค่าเริ่ม "ไม่มีสิทธิแก้ไขข้อมูลนี้") · ใช้ที่ งานสิทธิและการเบิกจ่าย `/rights` (ผ่าน `rightsUi` ค่าเริ่ม `NO_PERMISSION_HINT`) · จัดการระบบ › ตั้งค่าสิทธิการรักษา `/admin/rights-settings` · อยากได้แถบมีพื้นสี → `NoticeLine` (§6.129) · รวมสำเนา 2 ที่ (ผู้ใช้ 15 พ.ย. 69 1ก)
+### 6.219 CodeLookupPopup (ลงทะเบียน 15 พ.ย. 69)
+
+**CodeLookupPopup** — ป๊อปอัปเลือกรหัสจากรายการแบบ HCIS (พิมพ์รหัส 1–2 ตัวหรือชื่อบางส่วน → รายการกรองทันที → เลือกแถว → "ตกลง" · ดับเบิลคลิก = เลือกและตกลง · "ยกเลิก" ไม่บันทึก) · ไฟล์ `src/components/popup/CodeLookupPopup.jsx` · props `open` · `onClose` · `onConfirm(key | null)` · `title` · `subtitle` · `rows` · `value` · `getKey` / `getPrimary` / `getSecondary` (ค่าเริ่ม code · name · province) · `searchPlaceholder` · `allowClear` ("ล้างค่า" → `onConfirm(null)`) · `badgeTone` (สีชิปรหัส ICD-10 ฟ้า · ICD-9 ส้ม) · รายการ = `ActionList` (§6.10) · ใช้ที่ รหัสสถานพยาบาลหลัก/รอง (TOR 1.7.2.4 · เวชระเบียน ขั้นสิทธิการรักษา + งานสิทธิ) · หน่วยงานต้นสังกัด · ICD-10 / ICD-9CM หน้าส่งเบิก · ย้ายจาก `rightsUi.jsx` LookupPopup (ผู้ใช้ 15 พ.ย. 69 ก · ชื่อเดิม re-export)
 
 ### 6.199 LabOrderPanel (ลงทะเบียน 13 พ.ย. 69)
 
