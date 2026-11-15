@@ -8833,6 +8833,7 @@ text/steps/subtitle         neutral/500        → #858C92  (fixed neutral)
 > **Figma node:** `312:52` · `306:1814` · MIH Design System Foundation  
 > `328:4734` (section) · Implemented in `mih-components-all-v2.html` · `#panel-pagination`  
 > Page navigation with prev/next chevron buttons and numbered page buttons.
+> **แสดงหน้าละ (15 พ.ย. 69):** ส่ง `pageSize` + `onPageSizeChange` → ช่อง Select "แสดงหน้าละ N รายการ" หน้าเลขหน้า (ตัวเลือก = pageSize เดิม + 20 · 50 · 100 · `pageSizeOptions` แทนได้ · `unit`) · state ใช้ `usePageSize(defaultSize, setPage)` · ชิ้น `PageSizeSelect` ใช้ร่วมกับ `TablePaginationBar` / `PagerRow` · ทุกรายการที่แบ่งหน้าทั้งเว็บต้องมี (ผู้ใช้ 15 พ.ย. 69 1ก)
 
 ---
 
