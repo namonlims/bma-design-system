@@ -15403,7 +15403,7 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 ### 6.144 ClinicConsentFormsStep (ลงทะเบียน 11 พ.ย. 69)
 
 **ClinicConsentFormsStep** — ขั้น "แบบฟอร์มความยินยอม" ของทุกคลินิก/หน้าบันทึก (ผู้ใช้ 11 พ.ย. 69 ข้อ 13ก) · ไฟล์ `src/components/clinic/ClinicConsentFormsStep.jsx` · API: `ctx` (`form` · `setForm` · `hn` · `cardPatient` ของหน้าบันทึก) · `code` (รหัสคลินิกใน `clinicConsentForms.js`) · `displayName` · `readOnly` · `statusOnly` (แสดงสถานะว่าลงนามครบแล้ว) · `inPopup` (เปิดจาก ⋮ "แบบฟอร์มความยินยอม") · export `clinicConsentAllSigned`
-· ใช้ที่ `ClinicRecordPage` (ทุกคลินิกพิเศษ) · `TreatmentFormPage` · `PhysioFormPage` · `SocialWorkFormPage` · ก้าวใหม่ (`AddictionConsentFormsBody`) · ตรวจสุขภาพ (`CheckupNurseScreeningPage` · `CheckupReviewStep`) · `ClinicStepPreview` · กติกา `.claude/rules/consent-forms.md`
+· ใช้ที่ `ClinicRecordPage` (ทุกคลินิกพิเศษ) · `TreatmentFormPage` · `PhysioFormPage` · `SocialWorkFormPage` · ก้าวใหม่ (`AddictionConsentFormsBody`) · ตรวจสุขภาพ (`CheckupNurseScreeningPage`) · `ClinicStepPreview` · กติกา `.claude/rules/consent-forms.md`
 
 | ส่วน | รายละเอียด |
 |---|---|
@@ -15704,7 +15704,7 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 
 ### 6.185 ScreeningStep4 — ขั้นพฤติกรรมสุขภาพ/แบบประเมินของจุดคัดกรอง (ลงทะเบียน 13 พ.ย. 69)
 
-**ScreeningStep4** — ขั้น "แบบประเมิน" ของคัดกรองกลาง (ตาราง 6 แถว สูบบุหรี่ · แอลกอฮอล์ · ออกกำลังกาย · อาหาร · นอน · ความเครียด, โหมด `cards`) · ไฟล์ `src/components/screening/ScreeningStep4.jsx` (ย้ายจาก `src/pages/opd/ScreeningStep4.jsx` ซึ่งเหลือเป็นตัวส่งต่อชื่อเดิม · ผู้ใช้ 13 พ.ย. 69 — ขั้นที่ 5 `ScreeningStep5` ยังอยู่ที่เดิม รอย้ายตามมติ 62ก) · export: default `ScreeningStep4` · `BEHAVIOR_GROUPS` · `BEHAVIOR_DETAIL_SUGGESTIONS` · ใช้ที่ คัดกรองกลาง · ตรวจสุขภาพ · เยี่ยมบ้าน · วัณโรค · ทันตกรรม (ผ่านตัวส่งต่อ) · `CarriedScreeningStep`
+**ScreeningStep4** — ขั้น "แบบประเมิน" ของคัดกรองกลาง (ตาราง 6 แถว สูบบุหรี่ · แอลกอฮอล์ · ออกกำลังกาย · อาหาร · นอน · ความเครียด, โหมด `cards`) · ไฟล์ `src/components/screening/ScreeningStep4.jsx` (ย้ายจาก `src/pages/opd/ScreeningStep4.jsx` ซึ่งเหลือเป็นตัวส่งต่อชื่อเดิม · ผู้ใช้ 13 พ.ย. 69 — ขั้นที่ 5 ดู §6.217) · export: default `ScreeningStep4` · `BEHAVIOR_GROUPS` · `BEHAVIOR_DETAIL_SUGGESTIONS` · ใช้ที่ คัดกรองกลาง · ตรวจสุขภาพ · เยี่ยมบ้าน · วัณโรค · ทันตกรรม (ผ่านตัวส่งต่อ) · `CarriedScreeningStep`
 
 ### 6.186 BehaviourGroup (ลงทะเบียน 13 พ.ย. 69)
 
@@ -15712,7 +15712,7 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 
 ### 6.187 ChipRow (ลงทะเบียน 13 พ.ย. 69)
 
-**ChipRow** — แถวตัวเลือกแบบปุ่ม sm (`SelectableCardButton` สูง 32) เลือกได้ 1 หรือหลายข้อ · กดซ้ำ = ยกเลิก · ไฟล์ `src/components/forms/ChipRow.jsx` · props `options` (string | { value, label }) · `value` · `onChange` · `multiple` · `ariaLabel` · `disabled` · `lockOnly` (ล็อกการกดแต่ไม่จางปุ่ม — โหมดอ่านอย่างเดียว) · `showCheck` · แทนสำเนาใน คัดกรองวัณโรค · บันทึกวัณโรค · หน้าบันทึกสุขภาพจิต · คัดกรองงานบำบัด (ผู้ใช้ 13 พ.ย. 69 "ทำตามที่แนะนำ") · ทันตกรรม (หน้าของน้อง) และ OHAT ยังใช้สำเนาของตัวเอง
+**ChipRow** — แถวตัวเลือกแบบปุ่ม sm (`SelectableCardButton` สูง 32) เลือกได้ 1 หรือหลายข้อ · กดซ้ำ = ยกเลิก · ไฟล์ `src/components/forms/ChipRow.jsx` · props `options` (string | { value, label }) · `value` · `onChange` · `multiple` · `ariaLabel` · `disabled` · `lockOnly` (ล็อกการกดแต่ไม่จางปุ่ม — โหมดอ่านอย่างเดียว) · `showCheck` · `equalWidth` (ทุกตัวเลือกกว้าง `--dim-size-1900` 112 — คำถามคู่ ใช่/ไม่ใช่) · แทนสำเนาใน คัดกรองวัณโรค · บันทึกวัณโรค · หน้าบันทึกสุขภาพจิต · คัดกรองงานบำบัด (ผู้ใช้ 13 พ.ย. 69 "ทำตามที่แนะนำ") · ทันตกรรม `DentalScreeningCards` (ส่งต่อชื่อเดิม) · OHAT `OhatAssessmentPanel` (ผู้ใช้ 13 พ.ย. 69 ข้อ 63ก)
 
 ### 6.188 FormRow (ลงทะเบียน 13 พ.ย. 69)
 
@@ -15776,3 +15776,19 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 ### 6.192 StatusReasonDialog (ลงทะเบียน 14 พ.ย. 69)
 
 **StatusReasonDialog** — ป๊อปอัปยืนยันเปลี่ยนสถานะที่ต้องบันทึกเหตุผล (ปิดใช้งาน · ยกเลิกใช้งาน · พ้นสภาพ · ย้ายออก/ลบ) = `AlertDialog` + เหตุผล `RadioGroup` (เห็นครบ ไม่ใช้ Select ในกล่อง) + หมายเหตุ `Textarea` · ไฟล์ `src/components/popup/StatusReasonDialog.jsx` · props `open` · `type` (warning ค่าเริ่ม · info · destructive) · `title` · `description` · `reasons` (string หรือ `{value,label}` · ไม่ส่ง = ไม่มีเหตุผล) · `reasonLegend` · `reasonRequired` (ค่าเริ่ม true) · `showNote` · `noteLabel` · `notePlaceholder` · `noteRequired` · `confirmLabel` · `cancelLabel` · `confirmDisabled` · `children` (ช่องเพิ่ม เช่น วันที่มีผล — ผู้เรียกถือ state) · `onCancel` · `onConfirm({ reason, note })` · ค่ารีเซ็ตทุกครั้งที่เปิด · คลิกนอกกล่องไม่ปิด · ใช้ที่ ปิดใช้งานชุมชน · ยกเลิกใช้งานบ้าน · ลบ/ย้ายออกสมาชิก · เปลี่ยน อสส. เป็นพ้นสภาพ (`communityShared` re-export ชื่อเดิม · ผู้ใช้ 14 พ.ย. 69 ข้อ 26ก) · ยืนยันอย่างเดียวไม่มีเหตุผล → `AlertDialog`
+
+### 6.216 RoleSwitcher (ลงทะเบียน 13 พ.ย. 69)
+
+**RoleSwitcher** — ตัวสลับบทบาทสาธิตสถานะ "สิทธิ์ไม่พอ" โดยไม่ต้อง login ใหม่ (ข้อมูลจำลอง): ไอคอน `badge` + ป้าย "บทบาท" xs tertiary · `Dropdown` md ทรงกล่องกว้าง 224 (ไม่ใช่ทรงแคปซูล `FilterDropdown` แบบ Telemed เดิม · ผู้ใช้ 13 พ.ย. 69 ข้อ 70ก) · ป้ายชื่อผู้ใช้สีม่วง (ถ้าส่ง `user`) · ตัดบรรทัดเมื่อจอแคบ · ไฟล์ `src/components/forms/RoleSwitcher.jsx` · props `options` [{ value, label }] · `value` · `onChange` · `user` · `tooltip` (คำอธิบายเมื่อชี้ป้าย) · แต่ละโมดูลส่งรายการบทบาทเอง: Telemed (`telemedShared` · ประเมิน · RPM · รายงาน · ความยินยอม) · คิวกลาง (`queueCenterShared` · ตั้งค่า · เชื่อมต่อ · ออกคิว) (ผู้ใช้ 13 พ.ย. 69 ข้อ 67ก)
+
+### 6.217 ScreeningStep5 — ขั้นตรวจสอบข้อมูลของจุดคัดกรอง (ลงทะเบียน 13 พ.ย. 69)
+
+**ScreeningStep5** — ขั้นสุดท้าย "ตรวจสอบข้อมูล" ของคัดกรองกลาง: การ์ด `ReviewSection` ต่อขั้น (ครบแล้ว · ขาด N รายการ · ปุ่มแก้ไขกระโดดกลับขั้นนั้น) · ไฟล์ `src/components/screening/ScreeningStep5.jsx` (ย้ายจาก `src/pages/opd/ScreeningStep5.jsx` ซึ่งเหลือเป็นตัวส่งต่อชื่อเดิม · ผู้ใช้ 13 พ.ย. 69 ข้อ 62ก) · export: default `ScreeningStep5` · `ReviewSection` · `Pairs` · `missingFrom` · `sectionTitleStyle` · `Pairs` ป้าย 240px · ค่า (จอ ≥1280 = 2 คู่ต่อแถว · จอ <640 = ป้าย:ค่า 2:3 · กฎใน index.css `.mih-review-pairs`) · ใช้ที่ คัดกรอง OPD (`ScreeningPage` การ์ดสรุปผู้ป่วยเก่า) · `CheckupReviewStep` (ตรวจสุขภาพ) ถูกลบ 13 พ.ย. 69 เพราะไม่มีหน้าใช้ (ผู้ใช้ 71ก)
+
+### 6.214 EmptyHint — ข้อความว่าง 1 บรรทัด (ลงทะเบียน 14 พ.ย. 69)
+
+**EmptyHint** — ข้อความว่างกลางรายการ/การ์ด ไม่มีหัวข้อ/กรอบ: ไอคอน 32 เทา + ข้อความ sm tertiary (กว้างไม่เกิน 520) + ปุ่ม (ถ้ามี) · ไฟล์ `src/components/feedback/EmptyHint.jsx` · props `icon` (ค่าเริ่มต้น `search_off`) · `children` · `action` · `compact` (ระยะบนล่าง 32 แทน 48 · ในตาราง/การ์ดเล็ก) · ต้องการหัวข้อ + คำอธิบาย หรือกรอบประ → `EmptyState` (§6.116) · รวมจาก 4 สำเนา: เยี่ยมบ้าน (`homevisitShared`) · บำบัดสารเสพติด + วางแผนครอบครัว (`addictionShared`) · ติดตามสุขภาพจิต (compact) · สังคมสงเคราะห์ + กายภาพ + โภชนาการ (`SwEmptyHint` = compact) — ไฟล์ *Shared re-export (ผู้ใช้ 14 พ.ย. 69 ข้อ 72ก)
+
+### 6.215 AuditStamp — บรรทัดผู้บันทึก + เวลา (ลงทะเบียน 14 พ.ย. 69)
+
+**AuditStamp** — "บันทึกโดย … · เวลา" ท้ายแถว/การ์ด: ไอคอน `history` 14 (SVG ในตัว ไม่รอฟอนต์) + ข้อความ xs tertiary ตัดบรรทัดได้ · ไฟล์ `src/components/feedback/AuditStamp.jsx` · props `by` · `at` · `prefix` (ค่าเริ่มต้น "บันทึกโดย") · `action` (= "action · ผู้บันทึก · เวลา" แทน prefix · Telemed) · `editedBy` · `editedAt` ("· แก้ไขล่าสุดโดย …") · `extra` · `formatAt` (ค่าเริ่มต้น: เวลา ISO → วัน เดือนย่อ เวลา th-TH · ข้อความอื่นแสดงตามเดิม) · ไม่มีทั้ง `by` และ `at` = ไม่แสดง · รวมจาก 4 สำเนา: เยี่ยมบ้าน · Telemed (ประเมิน · RPM · ความยินยอม) · บำบัดสารเสพติด (ทะเบียน · ติดตาม · ชุมชน) · สังคมสงเคราะห์ + โภชนาการ (`SwAuditLine` คงชื่อ prop `label` · `formatDateTime`) (ผู้ใช้ 14 พ.ย. 69 ข้อ 73ก)
