@@ -15665,9 +15665,28 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 | HCIS (เว็บ) | ไฟล์นี้ §0–§6 | `tokens.css` | DS `GXI1CGpLhpImm8JYpW9ksh` |
 | Mobile App | bma.mobile `design.md` | `mobile.css` (`--mobile-*` · ใช้คู่ `tokens.css`) | New Theme `XCuT5qG9E7V7Aa815X3usM` · app DS `opz7X9AAKGQf5prHhsPDGn` |
 | Kiosk | bma.kiosk `design.md` | `kiosk.css` (`--kiosk-*` · ไฟล์เดียวจบ) | Kiosk `AGes4Mc8odyTEYARFeFqcj` |
+| TV · จอแสดงคิว | ไฟล์นี้ §7.1 | `tokens.css` (ใช้ token เว็บ · ยังไม่มีไฟล์ของตัวเอง) | — |
 
 - หน้า `/m` ใน bma.health เป็นสำเนาแอป Mobile → โหลด `mobile.css` ด้วย และอ่านกติกาจาก bma.mobile `design.md`
 - HCIS ห้ามใช้ `--mobile-*` / `--kiosk-*` · Mobile / Kiosk ไม่เพิ่ม token ของตัวเองลง `tokens.css`
+
+### 7.1 TV · จอแสดงคิว (แยกจาก HCIS · ผู้ใช้ 15 พ.ย. 69 "ถ้าเป็นของ tv ให้แยก design system เป็น TV")
+
+ชิ้นของจอ TV เรียกคิว (TOR §1.3.4) อยู่ใน `src/components/queue-display/` · ใช้เฉพาะหน้าจอ `/queue-center/display/hall|station|finance` · ห้ามใช้ในหน้าเว็บ PHCIS ปกติ และชิ้นของเว็บไม่วาดซ้ำบนจอ TV (ยกเว้น `ColorfulBadge` สถานะย่อยต่อแถว) · Components Library กลุ่ม "TV · จอแสดงคิว" (`/components/tv-queue-frame` · `/components/tv-queue-call-card`)
+
+| ชิ้น | ไฟล์ | หน้าที่ · API |
+|---|---|---|
+| QueueTvFrame | `QueueTvFrame.jsx` | กรอบจอ: หัวจอ → แถบสถานะใต้หัวจอ (stale · idle ในลำดับปกติ ไม่ทับ) → เนื้อจอ → แถบอธิบายลำดับคิว + สี → แถบประกาศ · `title` · `centerName` · `announcement` · `stale` · `lastBeat` · `lastCallAt` · `soundOn` · `soundSupported` |
+| QueueCallCard | `QueueCallCard.jsx` | การ์ดคิว 1 จุดบริการ (จอโถงรวม · จอการเงิน) · `state` (`getStationState`, nextCount ≥ 12) · `rows` (ค่าตั้งต้น) · `pulsing` · `showPassed` |
+| BigQueueNumber | `BigQueueNumber.jsx` | กล่องเลขคิวปัจจุบัน `variant` default (112) · hero (320) · ย่อตามความยาวเลข |
+| PassedNumbersBlock | `PassedNumbersBlock.jsx` | หมายเลขที่เรียกผ่านไปแล้ว `variant` bar · card |
+| AnnouncementMarquee | `AnnouncementMarquee.jsx` | แถบประกาศล่างจอ (gradient teal · ข้อยกเว้น gradient) |
+| useTvCanvas · useFitRowCount | `queueDisplayHooks.js` | ขนาดผืนจอ + `compact` · จำนวนแถวที่ใส่ได้ตามความสูงจริง |
+
+- **ผืนจอ**: scale = min(กว้าง/1920, สูง/1270) (จอตั้ง min(กว้าง/1080, สูง/1600)) · ผืน = ขนาดจอ ÷ scale → เต็มกว้าง×สูงทุกอัตราส่วน ตัวอักษรขนาดคงที่ ไม่มีขอบว่าง/scrollbar · ตัวเลข 1920/1270/1080/1600/1500 = หน่วยของสมการ layout ไม่ใช่ค่า visual
+- **compact** = ผืนแคบกว่า 1500 หน่วย (จอตั้ง · มือถือ): ชื่อจอขึ้นบรรทัดใหม่ · คอลัมน์ซ้อนแนวตั้ง · คำอธิบายสีลงบรรทัดของตัวเอง · ถ้าสูงไม่พอ กล่องคอลัมน์เลื่อนขึ้นลง (การ์ดไม่หดจนทับกัน)
+- **แถวคิวถัดไป** เพิ่ม/ลดตามความสูงที่เหลือ (การ์ด 80 = `--dim-size-1700` · รางจอจุดบริการ 112 = `--dim-size-1900`) · คิวน้อยกว่าที่ใส่ได้ = แถวว่าง
+- ค่าภายในจอยัง alias token ของ `tokens.css` ทุกค่า · ห้ามแสดงชื่อ-นามสกุล/HN บนจอ TV
 
 
 ### 6.166 CheckupUi (ลงทะเบียน 12 พ.ย. 69)
@@ -15729,6 +15748,10 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 ### 6.213 FilterTimeRangeTag (ลงทะเบียน 15 พ.ย. 69)
 
 **FilterTimeRangeTag** — ชิปกรองช่วงเวลาในวัน "ช่วงเวลา: 00:00–24:00" คู่กับ `FilterDateTag` "ช่วงวันที่:" (คอมเมนต์ลูกค้าการเงิน ข้อ 13 · ผู้ใช้ 15 พ.ย. 69) · ไฟล์ `src/components/forms/FilterTimeRangeTag.jsx` · props `value` = `{ from, to }` ('HH:MM' · null = ทั้งวัน) · `onChange` · `prefix` (ค่าเริ่ม "ช่วงเวลา:") · `title` · กดชิป → `Popup` เล็ก `TimePicker` "ตั้งแต่เวลา" · "ถึงเวลา" (ถึง ≥ ตั้งแต่) → "ตกลง" · "ทั้งวัน" = กลับเป็น 00:00–24:00 · ชิปเป็นสีแบรนด์เมื่อไม่ใช่ทั้งวัน · export `FULL_DAY_TIME_RANGE` · `isFullDayTimeRange` · `formatTimeRange` · `inTimeRange(hhmm, value)` · ใช้ที่ /finance/reports · /dashboard/reports/finance · ส่วนรายงานในหน้าการเงิน (กรองรายงานที่นับจากใบเสร็จตามเวลาออกใบเสร็จ)
+
+### 6.218 PermissionHint (ลงทะเบียน 15 พ.ย. 69)
+
+**PermissionHint** — บรรทัดเล็กสีส้ม (`--text-statusbadge-warning` · xs) + ไอคอน `lock` 14 บอกว่าบทบาทนี้ดูได้แต่เพิ่ม/แก้ไข/ลบไม่ได้ · วางเหนือรายการ/ฟอร์มที่ถูกล็อก · ไฟล์ `src/components/alert/PermissionHint.jsx` · props `show` (false = ไม่แสดง) · `text` (ค่าเริ่ม "ไม่มีสิทธิแก้ไขข้อมูลนี้") · ใช้ที่ งานสิทธิและการเบิกจ่าย `/rights` (ผ่าน `rightsUi` ค่าเริ่ม `NO_PERMISSION_HINT`) · จัดการระบบ › ตั้งค่าสิทธิการรักษา `/admin/rights-settings` · อยากได้แถบมีพื้นสี → `NoticeLine` (§6.129) · รวมสำเนา 2 ที่ (ผู้ใช้ 15 พ.ย. 69 1ก)
 
 ### 6.199 LabOrderPanel (ลงทะเบียน 13 พ.ย. 69)
 
