@@ -7,10 +7,11 @@
 <link rel="stylesheet" href="./tokens.css" />
 <style>
   :root {
-    --brand: #007549;
-    --brand-100: #F4FBF8;
-    --brand-200: #DDF0E6;
-    --brand-700: #00563A;
+    /* สีหลักของหน้าตาม Brand ที่เลือก (data-brand บน <html> · tokens.css) — ผู้ใช้ 17 พ.ย. 69 */
+    --brand: var(--brand-p700, #007549);
+    --brand-100: var(--brand-p50, #F4FBF8);
+    --brand-200: var(--brand-p100, #E2F3EB);
+    --brand-700: var(--brand-p800, #004C31);
     --ink: #1F2937;
     --ink-2: #4D5358;
     --ink-3: #6B7177;
@@ -24,6 +25,25 @@
     --danger: #C72121;
     --shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 4px 12px rgba(15, 23, 42, 0.06);
   }
+  /* ปุ่ม Dark บนหัวเว็บ → หน้าทั้งหน้าเป็นธีมมืด (body[data-mode] ได้ --d-* จาก tokens.css · ผู้ใช้ 17 พ.ย. 69) */
+  body[data-mode="dark"] {
+    --brand: var(--brand-p600, #08A768);
+    --brand-100: rgb(var(--brand-p700-rgb, 0 117 73) / 0.22);
+    --brand-200: rgb(var(--brand-p700-rgb, 0 117 73) / 0.36);
+    --brand-700: var(--brand-p400, #6AD6A5);
+    --ink: var(--d-text-1, #F4F5F5);
+    --ink-2: var(--d-text-2, #ADB2B7);
+    --ink-3: var(--d-text-3, #858C92);
+    --ink-4: var(--d-text-3, #858C92);
+    --border: var(--d-border-1, #363B3F);
+    --surface: var(--d-surface-1, #222629);
+    --bg: var(--d-bg, #111314);
+    --code-bg: var(--d-surface-2, #363B3F);
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.35);
+  }
+  body[data-mode="dark"] .content tbody tr:nth-child(even) td { background: var(--d-bg, #111314); }
+  body[data-mode="dark"] .item .mark.live { background: rgb(37 128 234 / 0.2); }
+  body[data-mode="dark"] .error code { background: rgb(199 33 33 / 0.2); }
   * { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; height: 100%; }
   body {
@@ -95,16 +115,29 @@
     align-items: center;
     justify-content: center;
     gap: 5px;
-    transition: background 140ms, color 140ms, box-shadow 140ms;
+    position: relative;
+    z-index: 1;
+    transition: background 180ms ease-out, color 220ms ease-out, transform 120ms ease-out;
   }
-  aside .pt-btn:hover { color: var(--brand); }
-  aside .pt-btn.active {
+  /* hover + micro interaction (ผู้ใช้ 17 พ.ย. 69): ปุ่มที่ไม่ได้เลือก hover = พื้น brand อ่อน · กด = ยุบเล็กน้อย ·
+     แถบเลือกเลื่อนไปปุ่มใหม่แบบนุ่ม (.seg-ind · ใช้กับแท็บ Live/Spec/Both ด้วย) */
+  aside .pt-btn:hover:not(.active) { color: var(--brand); background: var(--brand-100); }
+  aside .pt-btn:active { transform: scale(0.96); }
+  aside .pt-btn.active { color: #fff; }
+  aside .pt-btn:focus-visible, .tab-btn:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+  .platform-toggle, .topbar .tabs { position: relative; }
+  .seg-ind {
+    position: absolute; z-index: 0; top: 0; left: 0; width: 0; height: 0;
+    border-radius: 7px; pointer-events: none;
+    transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1), width 320ms cubic-bezier(0.22, 1, 0.36, 1), background 200ms ease-out;
+  }
+  .seg-ind.no-anim { transition: none; }
+  .platform-toggle .seg-ind {
     background: var(--brand);
-    color: #fff;
-    box-shadow: 0 1px 3px rgba(0,117,73,0.25), 0 2px 8px rgba(0,117,73,0.18);
+    box-shadow: 0 1px 3px rgb(var(--brand-p700-rgb, 0 117 73) / 0.25), 0 2px 8px rgb(var(--brand-p700-rgb, 0 117 73) / 0.18);
   }
-  aside .pt-btn.active:hover { color: #fff; }
-  aside .pt-btn .pt-emoji { font-size: 13px; line-height: 1; }
+  .topbar .tabs .seg-ind { background: var(--surface); box-shadow: var(--shadow); border-radius: 6px; }
+  @media (prefers-reduced-motion: reduce) { .seg-ind, aside .pt-btn, .tab-btn { transition: none; } }
   aside .search-wrap {
     padding: 10px 14px;
     border-bottom: 1px solid var(--border);
@@ -123,7 +156,7 @@
     outline: none;
     transition: border-color 120ms, background 120ms;
   }
-  aside .search:focus { border-color: var(--brand); background: #fff; }
+  aside .search:focus { border-color: var(--brand); background: var(--surface); }
   aside .server-bar {
     display: flex;
     align-items: center;
@@ -220,7 +253,8 @@
     line-height: 1;
   }
   .item .mark {
-    width: 12px; height: 12px;
+    padding: 0 4px; height: 16px;
+    font-size: 10px; font-weight: 600; line-height: 1;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -235,7 +269,7 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    background: var(--bg);
+    background: var(--surface);  /* พื้นเนื้อหาขวา = ขาว (ผู้ใช้ 17 พ.ย. 69) */
   }
   .topbar {
     display: flex;
@@ -279,14 +313,13 @@
     font-weight: 600;
     color: var(--ink-3);
     border-radius: 6px;
-    transition: background 120ms, color 120ms;
+    position: relative;
+    z-index: 1;
+    transition: background 180ms ease-out, color 220ms ease-out, transform 120ms ease-out;
   }
-  .tab-btn:hover { color: var(--ink); }
-  .tab-btn.active {
-    background: var(--surface);
-    color: var(--brand-700);
-    box-shadow: var(--shadow);
-  }
+  .tab-btn:hover:not(.active):not(:disabled) { color: var(--brand); background: var(--brand-100); }
+  .tab-btn:active:not(:disabled) { transform: scale(0.96); }
+  .tab-btn.active { color: var(--brand-700); }
   .topbar .actions {
     display: flex;
     gap: 6px;
@@ -325,7 +358,7 @@
   .pane {
     flex: 1;
     overflow-y: auto;
-    background: var(--bg);
+    background: var(--surface);
     position: relative;
   }
   .pane::-webkit-scrollbar { width: 10px; }
@@ -517,7 +550,7 @@
   }
   /* Highlight the active section in the spec pane */
   .content .active-section {
-    background: linear-gradient(180deg, rgba(0, 117, 73, 0.08), transparent 80px);
+    background: linear-gradient(180deg, rgb(var(--brand-p700-rgb, 0 117 73) / 0.08), transparent 80px);
     border-radius: 10px;
     padding: 8px 10px;
     margin-left: -10px;
@@ -563,9 +596,9 @@
 
   body.ds-has-top{display:flex;flex-direction:column}
   body.ds-has-top .layout{height:auto;flex:1;min-height:0}
-  header.ds-top{flex:none;z-index:20;background:#FFFFFF;border-bottom:1px solid #E3E9E8;
+  header.ds-top{flex:none;z-index:20;background:var(--surface,#FFFFFF);border-bottom:1px solid var(--border,#E3E9E8);
     padding:.75rem 1.25rem;display:flex;gap:1rem;align-items:center;flex-wrap:wrap;
-    font-family:'Sarabun','Inter','Noto Sans Thai',system-ui,sans-serif;color:#14312A}
+    font-family:'Sarabun','Inter','Noto Sans Thai',system-ui,sans-serif;color:var(--ink,#14312A)}
   header.ds-top .ds-brandmark{display:flex;align-items:center;gap:.6rem;font-weight:700;letter-spacing:-.01em;font-size:1rem}
   header.ds-top .ds-brandrow{display:flex;align-items:center;gap:10px;flex-shrink:0}
   header.ds-top .ds-brandrow .dot{width:2rem;height:2rem;border-radius:8px;background:var(--brand);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:14px}
@@ -574,14 +607,14 @@
   header.ds-top .ds-brandrow .subtitle{font-size:12px;color:var(--ink-3)}
   header.ds-top .ds-dot{width:1.6rem;height:1.6rem;border-radius:.5rem;background:linear-gradient(135deg,var(--brand-p600,#08A768),var(--brand-p800,#004C31))}
   header.ds-top .ds-pill{font:600 .7rem/1 ui-monospace,monospace;padding:.35rem .55rem;border-radius:999px;background:var(--brand-p100,#E2F3EB);color:var(--brand-p700,#007549)}
-  header.ds-top label{display:flex;gap:.4rem;align-items:center;font-size:.8rem;color:#5C6B68}
-  header.ds-top select,header.ds-top button.ds-ghost{font:inherit;font-size:.85rem;padding:.4rem .6rem;border:1px solid #E3E9E8;
-    border-radius:.5rem;background:#FFFFFF;color:#14312A}
+  header.ds-top label{display:flex;gap:.4rem;align-items:center;font-size:.8rem;color:var(--ink-3,#5C6B68)}
+  header.ds-top select,header.ds-top button.ds-ghost{font:inherit;font-size:.85rem;padding:.4rem .6rem;border:1px solid var(--border,#E3E9E8);
+    border-radius:.5rem;background:var(--surface,#FFFFFF);color:var(--ink,#14312A)}
   header.ds-top button.ds-ghost{cursor:pointer}
   header.ds-top nav.ds-tabs{display:flex;gap:.25rem;margin-left:auto;flex-wrap:wrap}
-  header.ds-top nav.ds-tabs a{padding:.4rem .7rem;border-radius:.5rem;text-decoration:none;color:#5C6B68;font-size:.85rem;font-weight:600;transition:background .15s,color .15s}
-  header.ds-top nav.ds-tabs a:hover{background:var(--surface-list-hover,#F4FBF8);color:var(--brand-p700,#007549)}
-  header.ds-top nav.ds-tabs a.on{background:var(--brand-p100,#E2F3EB);color:var(--brand-p700,#007549)}
+  header.ds-top nav.ds-tabs a{padding:.4rem .7rem;border-radius:.5rem;text-decoration:none;color:var(--ink-3,#5C6B68);font-size:.85rem;font-weight:600;transition:background .15s,color .15s}
+  header.ds-top nav.ds-tabs a:hover{background:var(--brand-100,#F4FBF8);color:var(--brand,#007549)}
+  header.ds-top nav.ds-tabs a.on{background:var(--brand-200,#E2F3EB);color:var(--brand,#007549)}
   /* colour chips beside every #hex / --token / rgb() in the spec — big enough
      to actually read the colour (the 12px square read as a bullet) */
   .content .swatch{width:36px;height:18px;border-radius:4px;margin-right:6px;vertical-align:-4px;
@@ -590,10 +623,10 @@
     margin-left:4px;vertical-align:middle;white-space:nowrap}
   /* per-component change log under the topbar (history.json) */
   .ds-history{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;padding:6px 20px;font-size:12px;
-    background:#F7F9F9;border-bottom:1px solid #E3E9E8;color:#5C6B68}
-  .ds-history b{color:#14312A;font-weight:600}
-  .ds-history .sha{font:600 11px/1 ui-monospace,monospace;color:#007549;text-decoration:none}
-  .ds-history .more{margin-left:auto;color:#007549;text-decoration:none;font-weight:600}
+    background:var(--bg,#F7F9F9);border-bottom:1px solid var(--border,#E3E9E8);color:var(--ink-3,#5C6B68)}
+  .ds-history b{color:var(--ink,#14312A);font-weight:600}
+  .ds-history .sha{font:600 11px/1 ui-monospace,monospace;color:var(--brand-p700,#007549);text-decoration:none}
+  .ds-history .more{margin-left:auto;color:var(--brand-p700,#007549);text-decoration:none;font-weight:600}
   .ds-history ul{list-style:none;margin:2px 0 0;padding:0;flex-basis:100%;display:none;gap:2px;flex-direction:column}
   .ds-history.open ul{display:flex}
   .ds-history li{display:flex;gap:8px;align-items:baseline}
@@ -642,7 +675,7 @@
   <label>Brand
     <select id="ds-brand" aria-label="Brand"></select>
   </label>
-  <button class="ds-ghost" id="ds-mode" type="button" title="สลับค่า token ที่ swatch/preview ใช้ (chrome ของหน้านี้ยังเป็น light เสมอ)">Dark</button>
+  <button class="ds-ghost" id="ds-mode" type="button" title="สลับทั้งหน้าเป็นธีมมืด/สว่าง (ค่า token ของ swatch/preview เปลี่ยนตาม)">Dark</button>
   <nav class="ds-tabs">
     <a href="./reference.html" class="on">Reference + Preview</a>
     <a href="./tokens-css.html">tokens.css</a>
@@ -655,8 +688,9 @@
   <!-- ── Sidebar ──────────────────────────────────────────── -->
   <aside>
     <div class="platform-toggle" role="tablist" aria-label="Platform">
-      <button class="pt-btn active" data-platform="desktop" type="button" role="tab"><span class="pt-emoji">🖥</span> Desktop</button>
-      <button class="pt-btn"        data-platform="mobile"  type="button" role="tab"><span class="pt-emoji">📱</span> Mobile</button>
+      <button class="pt-btn active" data-platform="desktop" type="button" role="tab">Desktop</button>
+      <button class="pt-btn"        data-platform="mobile"  type="button" role="tab">Mobile</button>
+      <button class="pt-btn"        data-platform="kiosk"   type="button" role="tab">Kiosk</button>
     </div>
     <div class="search-wrap">
       <input id="search" class="search" type="text" placeholder="ค้นหา… (e.g. button, vital, token)" />
@@ -679,9 +713,9 @@
       <span class="heading" id="current-name">เลือก section จาก sidebar</span>
       <span class="slug" id="current-slug" style="display:none"></span>
       <div class="tabs" role="tablist">
-        <button class="tab-btn active" data-tab="live" type="button">🧩 Live</button>
-        <button class="tab-btn" data-tab="spec" type="button">📖 Spec</button>
-        <button class="tab-btn" data-tab="both" type="button">⫩ Both</button>
+        <button class="tab-btn active" data-tab="live" type="button">Live</button>
+        <button class="tab-btn" data-tab="spec" type="button">Spec</button>
+        <button class="tab-btn" data-tab="both" type="button">Both</button>
       </div>
       <div class="actions">
         <a id="doc-raw" href="./design.md" target="_blank" rel="noopener">↗ raw design.md</a>
@@ -697,7 +731,6 @@
       </div>
       <div class="pane live" id="live-pane">
         <div class="no-live" id="no-live-placeholder">
-          <div class="big">🧩</div>
           <div class="heading">เลือก component จาก sidebar เพื่อดู live preview</div>
           <div style="font-size:12px;margin-top:8px;">iframe จะโหลด <code>/components/&lt;slug&gt;</code> จาก <code>https://bma-health.mih.co.th</code></div>
         </div>
@@ -1096,6 +1129,49 @@ function classifyToken(name, resolved){
     ]},
   ];
 
+  /* Kiosk (ผู้ใช้ 17 พ.ย. 69 "ต้องทำ design system ของ kiosk ด้วย") — design system แยกของ bma.kiosk
+     สเปก = design.md ของ repo นั้น (ส่งขึ้นเว็บเป็น design-kiosk.md) · Live = หน้าดูรวม /Kiosk/design-system บน UAT
+     design-kiosk.json (ถ้ามี) แทนรายการนี้ได้ แบบเดียวกับ Mobile */
+  const CATALOG_KIOSK = [
+    { group: 'Kiosk · Button', items: [
+      { slug: 'kiosk-primary-button',          name: 'PrimaryButton', anchor: '83-components-bmakiosk-srcdesign-system' },
+      { slug: 'kiosk-outline-button',          name: 'OutlineButton', anchor: '83-components-bmakiosk-srcdesign-system' },
+      { slug: 'kiosk-outline-subdued-button',  name: 'OutlineSubduedButton', anchor: '83-components-bmakiosk-srcdesign-system' },
+    ]},
+    { group: 'Kiosk · Input · Surface', items: [
+      { slug: 'kiosk-keypad',      name: 'Keypad', anchor: '83-components-bmakiosk-srcdesign-system' },
+      { slug: 'kiosk-number-key',  name: 'NumberKey', anchor: '83-components-bmakiosk-srcdesign-system' },
+      { slug: 'kiosk-card',        name: 'Card', anchor: '83-components-bmakiosk-srcdesign-system' },
+    ]},
+    { group: 'Kiosk · Shell', items: [
+      { slug: null, name: 'KioskShell', anchor: '83-components-bmakiosk-srcdesign-system' },
+      { slug: null, name: 'Header', anchor: '83-components-bmakiosk-srcdesign-system' },
+      { slug: null, name: 'IdNumberDisplay', anchor: '83-components-bmakiosk-srcdesign-system' },
+      { slug: null, name: 'PrintingScreen', anchor: '83-components-bmakiosk-srcdesign-system' },
+      { slug: null, name: 'LottieAsset', anchor: '83-components-bmakiosk-srcdesign-system' },
+    ]},
+    { group: 'Kiosk · Reference', items: [
+      { slug: null, name: 'Layering rules',  anchor: '81-layering-rules' },
+      { slug: null, name: 'Platform tokens', anchor: '82-platform-tokens---kiosk-' },
+      { slug: null, name: 'Components',      anchor: '83-components-bmakiosk-srcdesign-system' },
+      { slug: null, name: 'Figma reference', anchor: '84-figma-reference' },
+    ]},
+  ];
+  let KIOSK_PREVIEW = 'https://bma-kiosk.mih.co.th/Kiosk/design-system';
+  const KIOSK_CATALOG_SRC = './design-kiosk.json';
+  let kioskCatalogLoaded = false;
+  async function loadKioskCatalog() {
+    if (kioskCatalogLoaded) return;
+    kioskCatalogLoaded = true;
+    try {
+      const res = await fetch(KIOSK_CATALOG_SRC, { cache: 'no-cache' });
+      if (!res.ok) return;
+      const data = await res.json();
+      if (Array.isArray(data.groups) && data.groups.length) CATALOG_KIOSK.splice(0, CATALOG_KIOSK.length, ...data.groups);
+      if (data.preview) KIOSK_PREVIEW = data.preview;
+    } catch (_) { /* keep the built-in list */ }
+  }
+
   /* Mobile components share a single live preview page — on the real
      bma.mobile app, not the /m copy inside bma.health (ผู้ใช้ 26 ต.ค. 69:
      SuccessCard ในเว็บไม่ใช่ตัวล่าสุด). design-mobile.json overrides both. */
@@ -1129,14 +1205,14 @@ function classifyToken(name, resolved){
   const PLATFORM_KEY = 'mih-design-system-platform';
   try {
     const saved = localStorage.getItem(PLATFORM_KEY);
-    if (saved === 'desktop' || saved === 'mobile') platform = saved;
+    if (saved === 'desktop' || saved === 'mobile' || saved === 'kiosk') platform = saved;
   } catch (_) {}
 
   /* สเปกแยกตาม platform (ผู้ใช้ 26 ต.ค. 69): Desktop = design.md ของ bma.health ·
      Mobile = design.md ของ bma.mobile ที่ repo นั้นส่งขึ้นเว็บเองเป็น design-mobile.md
      ปุ่ม raw / ดาวน์โหลด สลับไฟล์ตาม platform ด้วย */
-  const DOC_SRC = { desktop: './design.md', mobile: './design-mobile.md' };
-  const DOC_FILE = { desktop: 'design.md', mobile: 'design-mobile.md' };
+  const DOC_SRC = { desktop: './design.md', mobile: './design-mobile.md', kiosk: './design-kiosk.md' };
+  const DOC_FILE = { desktop: 'design.md', mobile: 'design-mobile.md', kiosk: 'design-kiosk.md' };
 
   /* ── Foundation entries — design.md sections NOT covered by components.
        These get a TOC entry but no live preview. Each entry tries to
@@ -1283,8 +1359,8 @@ function classifyToken(name, resolved){
       }
     }
     /* Components — choose catalogue per platform */
-    if (platform === 'mobile') {
-      for (const g of CATALOG_MOBILE) {
+    if (platform === 'mobile' || platform === 'kiosk') {
+      for (const g of platform === 'kiosk' ? CATALOG_KIOSK : CATALOG_MOBILE) {
         for (const it of g.items) {
           /* Prefer explicit anchor; else auto-match by component name. */
           let anchor = null;
@@ -1295,7 +1371,7 @@ function classifyToken(name, resolved){
           }
           allEntries.push({
             kind: it.slug ? 'component' : 'foundation',
-            platform: 'mobile',
+            platform,
             group: g.group,
             name: it.name,
             slug: it.slug,
@@ -1324,7 +1400,7 @@ function classifyToken(name, resolved){
        If the currently selected entry no longer exists on the new
        platform, fall back to the first entry. */
   function setPlatform(next, want) {
-    if (next !== 'desktop' && next !== 'mobile') return;
+    if (next !== 'desktop' && next !== 'mobile' && next !== 'kiosk') return;
     if (next === platform) return;
     platform = next;
     try { localStorage.setItem(PLATFORM_KEY, platform); } catch (_) {}
@@ -1343,14 +1419,16 @@ function classifyToken(name, resolved){
     if (subtitle) {
       subtitle.textContent = platform === 'mobile'
         ? 'Mobile App · bma.mobile'
+        : platform === 'kiosk'
+        ? 'Kiosk · bma.kiosk'
         : 'Foundations · 158 components';
     }
     /* Live server box is the HCIS app — Mobile previews always come from bma.mobile */
     const serverBar = document.querySelector('aside .server-bar');
-    if (serverBar) serverBar.style.display = platform === 'mobile' ? 'none' : '';
+    if (serverBar) serverBar.style.display = platform === 'desktop' ? '' : 'none';
     const raw = document.getElementById('doc-raw');
     const dl = document.getElementById('doc-dl');
-    const suffix = platform === 'mobile' ? ' (Mobile)' : '';
+    const suffix = platform === 'mobile' ? ' (Mobile)' : platform === 'kiosk' ? ' (Kiosk)' : '';
     if (raw) { raw.href = DOC_SRC[platform]; raw.textContent = `↗ raw design.md${suffix}`; }
     if (dl) {
       dl.href = DOC_SRC[platform];
@@ -1389,8 +1467,8 @@ function classifyToken(name, resolved){
         btn.type = 'button';
         btn.className = 'item' + (activeEntry === e ? ' active' : '');
         const marks = [];
-        if (e.anchor) marks.push('<span class="mark spec" title="มี spec">📖</span>');
-        if (e.slug)   marks.push('<span class="mark live" title="มี live preview">🧩</span>');
+        if (e.anchor) marks.push('<span class="mark spec" title="มี spec">Spec</span>');
+        if (e.slug)   marks.push('<span class="mark live" title="มี live preview">Live</span>');
         btn.innerHTML = `<span class="name">${e.name}</span><span class="marks">${marks.join('')}</span>`;
         btn.addEventListener('click', () => selectEntry(e));
         groupEl.appendChild(btn);
@@ -1432,6 +1510,7 @@ function classifyToken(name, resolved){
     const brand = document.documentElement.dataset.brand || 'default';
     const mode = document.body.dataset.mode || 'light';
     const theme = `&brand=${encodeURIComponent(brand)}&mode=${encodeURIComponent(mode)}`;
+    if (e.platform === 'kiosk') return `${KIOSK_PREVIEW}?embed=1&component=${e.slug}`;
     return e.platform === 'mobile'
       ? `${MOBILE_PREVIEW}?embed=1&component=${e.slug}${theme}`
       : `${serverRoot}/components/${e.slug}?embed=1${theme}`;
@@ -1483,7 +1562,6 @@ function classifyToken(name, resolved){
       const ph = document.createElement('div');
       ph.className = 'no-live';
       ph.innerHTML = `
-        <div class="big">📖</div>
         <div class="heading">section นี้เป็น spec ของ design system</div>
         <div style="font-size:12px;margin-top:8px;color:var(--ink-3);">ไม่มี live preview ใน Components Library</div>
       `;
@@ -1560,6 +1638,7 @@ function classifyToken(name, resolved){
     content.innerHTML = `<p class="loading">⏳ กำลังโหลด <code>${file}</code>…</p>`;
     try {
       if (platform === 'mobile') await loadMobileCatalog();
+      if (platform === 'kiosk') await loadKioskCatalog();
       let md = docCache[platform];
       if (md == null) {
         const res = await fetch(DOC_SRC[platform], { cache: 'no-cache' });
@@ -1580,9 +1659,10 @@ function classifyToken(name, resolved){
       const hash = want ? '' : decodeURIComponent(location.hash.slice(1));
       if (!initial && hash) {
         initial = allEntries.find((e) => (e.slug === hash || e.anchor === hash));
-        const inMobile = CATALOG_MOBILE.some((g) => g.items.some((it) => it.slug === hash || it.anchor === hash));
-        if (!initial && !triedOther && (platform === 'desktop' ? inMobile : !inMobile)) {
-          platform = platform === 'mobile' ? 'desktop' : 'mobile';
+        const inCat = (cat) => cat.some((g) => g.items.some((it) => it.slug === hash || it.anchor === hash));
+        const owner = inCat(CATALOG_MOBILE) ? 'mobile' : inCat(CATALOG_KIOSK) ? 'kiosk' : 'desktop';
+        if (!initial && !triedOther && owner !== platform) {
+          platform = owner;
           try { localStorage.setItem(PLATFORM_KEY, platform); } catch (_) {}
           syncPlatformChrome();
           return loadDoc(null, true);
@@ -1601,6 +1681,32 @@ function classifyToken(name, resolved){
   }
 
   loadDoc();
+</script>
+
+<script>
+/* แถบเลือกที่เลื่อนตามปุ่ม active (Desktop/Mobile/Kiosk · Live/Spec/Both) — ผู้ใช้ 17 พ.ย. 69 */
+(function () {
+  function setup(box, btnSel) {
+    if (!box) return;
+    var ind = document.createElement('span'); ind.className = 'seg-ind no-anim'; ind.setAttribute('aria-hidden', 'true');
+    box.insertBefore(ind, box.firstChild);
+    var btns = [].slice.call(box.querySelectorAll(btnSel));
+    function move() {
+      var a = btns.filter(function (b) { return b.classList.contains('active'); })[0];
+      if (!a || !a.offsetWidth) { ind.style.width = '0'; return; }
+      ind.style.width = a.offsetWidth + 'px'; ind.style.height = a.offsetHeight + 'px';
+      ind.style.transform = 'translate(' + a.offsetLeft + 'px,' + a.offsetTop + 'px)';
+    }
+    move(); requestAnimationFrame(function () { move(); requestAnimationFrame(function () { ind.classList.remove('no-anim'); }); });
+    var mo = new MutationObserver(move);
+    btns.forEach(function (b) { mo.observe(b, { attributes: true, attributeFilter: ['class'] }); });
+    addEventListener('resize', move);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(move);
+    if (window.ResizeObserver) new ResizeObserver(move).observe(box);
+  }
+  setup(document.querySelector('.platform-toggle'), '.pt-btn');
+  setup(document.querySelector('.topbar .tabs'), '.tab-btn');
+}());
 </script>
 
 <script>
@@ -1708,7 +1814,7 @@ function classifyToken(name, resolved){
     var slug = slugEl.textContent.trim();
     /* history.json = commits of bma.health — none of it is about the Mobile tab (bma.mobile) */
     var onMobile = (document.querySelector('.pt-btn.active') || {}).dataset;
-    if (!data || !slug || (onMobile && onMobile.platform === 'mobile')) { box.hidden = true; return; }
+    if (!data || !slug || (onMobile && onMobile.platform !== 'desktop')) { box.hidden = true; return; }
     var rows = data.commits.filter(function (c) { return c.slugs.indexOf(slug) !== -1; });
     var notes = (data.changelog || []).filter(function (e) { return e.slug === slug; });
     var TH = { added: 'เพิ่ม', changed: 'แก้ไข', fixed: 'แก้บั๊ก', deprecated: 'เลิกใช้', removed: 'ลบ' };
