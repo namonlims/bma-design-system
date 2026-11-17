@@ -7720,6 +7720,8 @@ When the horizontal space in the list card cannot fit every `FilterTag` / `Filte
 
 > Sizes: Default 32px / Large 48px · Styles: Text · Icon · States: Default · Hover · Selected · Disabled
 
+> **Width = hug content (ผู้ใช้ 17 พ.ย. 69).** When there is room, each pill is as wide as its label (+ `TabCountBadge`) and the `TabBar` is as wide as its pills — never stretched to fill leftover space (no `stretch`, no `flex: 1` / `width` on `TabPill`, no `width: 100%` on `TabBar`). Not enough room → the `TabBar` scrolls horizontally inside itself. `stretch` is allowed only on a narrow screen where the tabs already fill the row. `TabBar` is `fit-content` by default; `align='center' | 'end'` moves the whole bar (margin auto) when its parent is not a flex row.
+
 ##### Alias Tokens
 
 | CSS var | Figma token | Primitive | Hex (light) | Hex (dark) | Usage |
