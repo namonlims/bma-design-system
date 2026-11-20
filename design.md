@@ -1332,70 +1332,70 @@ computing it, and never sample a colour by eye.
 
 ### 4.1. `background`
 
-| Token | Light | Dark | Alias (Light) |
-|-------|-------|------|----------------|
-| `background.brandPrimary.default` | `#54CF97` | `#54CF97` | `Brand/primary/500` |
-| `background.brandPrimary.default-hover` | `#08A768` | `#6AD6A5` | `Brand/primary/600` |
-| `background.brandPrimary.secondary` | `#C5EDDA` | `#004C31` | `Brand/primary/200` |
-| `background.brandPrimary.secondary-hover` | `#91DFBB` | `#007549` | `Brand/primary/300` |
-| `background.brandPrimary.tertiary` | `#E2F3EB` | `#003322` | `Brand/primary/100` |
-| `background.brandPrimary.tertiary-hover` | `#C5EDDA` | `#004C31` | `Brand/primary/200` |
-| `background.brandSecondary.default` | `#53954E` | `#53954E` | `Brand/secondary/500` |
-| `background.brandSecondary.default-hover` | `#427C3D` | `#53954E` | `Brand/secondary/600` |
-| `background.brandSecondary.secondary` | `#E1F0E0` | `#2E4F2C` | `Brand/secondary/200` |
-| `background.brandSecondary.secondary-hover` | `#A7D2A3` | `#366233` | `Brand/secondary/300` |
-| `background.brandSecondary.tertiary` | `#EFF5EF` | `#274126` | `Brand/secondary/100` |
-| `background.brandSecondary.tertiary-hover` | `#E1F0E0` | `#2E4F2C` | `Brand/secondary/200` |
-| `background.neutral.default` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` |
-| `background.neutral.default-hover` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` |
-| `background.neutral.secondary` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` |
-| `background.neutral.secondary-hover` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` |
-| `background.neutral.tertiary` | `#F4F5F5` | `#222629` | `Primitive/color/neutral/100` |
-| `background.neutral.tertiary-hover` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` |
-| `background.disabled.default` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` |
-| `background.disabled.default-hover` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` |
-| `background.disabled.secondary` | `#E2E4E6` | `#E2E4E6` | `Primitive/color/neutral/200` |
-| `background.disabled.secondary-hover` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` |
-| `background.disabled.tertiary` | `#F4F5F5` | `#222629` | `Primitive/color/neutral/100` |
-| `background.disabled.tertiary-hover` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` |
-| `background.positive.default` | `#54CF97` | `#54CF97` | `Brand/primary/500` |
-| `background.positive.default-hover` | `#08A768` | `#6AD6A5` | `Brand/primary/600` |
-| `background.positive.secondary` | `#C5EDDA` | `#004C31` | `Brand/primary/200` |
-| `background.positive.secondary-hover` | `#91DFBB` | `#007549` | `Brand/primary/300` |
-| `background.positive.tertiary` | `#E2F3EB` | `#003322` | `Brand/primary/100` |
-| `background.positive.tertiary-hover` | `#C5EDDA` | `#004C31` | `Brand/primary/200` |
-| `background.warning.default` | `#F97316` | `#F97316` | `Primitive/color/orange/500` |
-| `background.warning.default-hover` | `#EA580C` | `#FB923C` | `Primitive/color/orange/600` |
-| `background.warning.secondary` | `#FED7AA` | `#9A3412` | `Primitive/color/orange/200` |
-| `background.warning.secondary-hover` | `#FDBA74` | `#C2410C` | `Primitive/color/orange/300` |
-| `background.warning.tertiary` | `#FFEDD5` | `#7C2D12` | `Primitive/color/orange/100` |
-| `background.warning.tertiary-hover` | `#FED7AA` | `#9A3412` | `Primitive/color/orange/200` |
-| `background.progress.default` | `#EAB308` | `#EAB308` | `Primitive/color/yellow/500` |
-| `background.progress.default-hover` | `#CA8A04` | `#FACC15` | `Primitive/color/yellow/600` |
-| `background.progress.secondary` | `#FEF08A` | `#854D0E` | `Primitive/color/yellow/200` |
-| `background.progress.secondary-hover` | `#FDE047` | `#A16207` | `Primitive/color/yellow/300` |
-| `background.progress.tertiary` | `#FEF9C3` | `#713F12` | `Primitive/color/yellow/100` |
-| `background.progress.tertiary-hover` | `#FEF08A` | `#854D0E` | `Primitive/color/yellow/200` |
-| `background.danger.default` | `#EF4444` | `#EF4444` | `Primitive/color/red/500` |
-| `background.danger.default-hover` | `#DC2626` | `#F87171` | `Primitive/color/red/600` |
-| `background.danger.secondary` | `#FECACA` | `#991B1B` | `Primitive/color/red/200` |
-| `background.danger.secondary-hover` | `#FCA5A5` | `#B91C1C` | `Primitive/color/red/300` |
-| `background.danger.tertiary` | `#FEE2E2` | `#7F1D1D` | `Primitive/color/red/100` |
-| `background.danger.tertiary-hover` | `#FECACA` | `#991B1B` | `Primitive/color/red/200` |
-| `background.info.default` | `#3B82F6` | `#3B82F6` | `Primitive/color/blue/500` |
-| `background.info.default-hover` | `#2563EB` | `#60A5FA` | `Primitive/color/blue/600` |
-| `background.info.secondary` | `#BFDBFE` | `#1E40AF` | `Primitive/color/blue/200` |
-| `background.info.secondary-hover` | `#93C5FD` | `#1D4ED8` | `Primitive/color/blue/300` |
-| `background.info.tertiary` | `#DBEAFE` | `#1E3A8A` | `Primitive/color/blue/100` |
-| `background.info.tertiary-hover` | `#BFDBFE` | `#1E40AF` | `Primitive/color/blue/200` |
-| `background.screen.100` | `#F5F6FA` | `#0F172A` | `Primitive/color/slate/50` |
-| `background.screen.200` | `#F5F7F9` | `#1E293B` | `Primitive/color/slate/100` |
-| `background.screen.300` | `#E9EDF5` | `#334155` | `Primitive/color/slate/200` |
-| `background.screen.400` | `#CBD5E1` | `#475569` | `Primitive/color/slate/300` |
-| `background.screen.default` | `#FFFFFF` | `#0F172A` | `Primitive/color/grey/50` |
-| `background.screen.brand-100` | `#F4FBF8` | `#002318` | `Brand/primary/50` |
-| `background.screen.brand-200` | `#E2F3EB` | `#003322` | `Brand/primary/100` |
-| `background.screen.disabled` | `#64748B` | `#94A3B8` | `Primitive/color/slate/500` |
+| Token | Light | Dark | Alias (Light) | Alias (Dark) |
+|-------|-------|------|----------------|----------------|
+| `background.brandPrimary.default` | `#54CF97` | `#54CF97` | `Brand/primary/500` | `Brand/primary/500` |
+| `background.brandPrimary.default-hover` | `#08A768` | `#6AD6A5` | `Brand/primary/600` | `Brand/primary/400` |
+| `background.brandPrimary.secondary` | `#C5EDDA` | `#004C31` | `Brand/primary/200` | `Brand/primary/800` |
+| `background.brandPrimary.secondary-hover` | `#91DFBB` | `#007549` | `Brand/primary/300` | `Brand/primary/700` |
+| `background.brandPrimary.tertiary` | `#E2F3EB` | `#003322` | `Brand/primary/100` | `Brand/primary/900` |
+| `background.brandPrimary.tertiary-hover` | `#C5EDDA` | `#004C31` | `Brand/primary/200` | `Brand/primary/800` |
+| `background.brandSecondary.default` | `#53954E` | `#53954E` | `Brand/secondary/500` | `Brand/secondary/500` |
+| `background.brandSecondary.default-hover` | `#427C3D` | `#53954E` | `Brand/secondary/600` | `Brand/secondary/500` |
+| `background.brandSecondary.secondary` | `#E1F0E0` | `#2E4F2C` | `Brand/secondary/200` | `Brand/secondary/800` |
+| `background.brandSecondary.secondary-hover` | `#A7D2A3` | `#366233` | `Brand/secondary/300` | `Brand/secondary/700` |
+| `background.brandSecondary.tertiary` | `#EFF5EF` | `#274126` | `Brand/secondary/100` | `Brand/secondary/900` |
+| `background.brandSecondary.tertiary-hover` | `#E1F0E0` | `#2E4F2C` | `Brand/secondary/200` | `Brand/secondary/800` |
+| `background.neutral.default` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` | `Primitive/color/neutral/500` |
+| `background.neutral.default-hover` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` | `Primitive/color/neutral/400` |
+| `background.neutral.secondary` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` | `Primitive/color/neutral/800` |
+| `background.neutral.secondary-hover` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` | `Primitive/color/neutral/700` |
+| `background.neutral.tertiary` | `#F4F5F5` | `#222629` | `Primitive/color/neutral/100` | `Primitive/color/neutral/900` |
+| `background.neutral.tertiary-hover` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` | `Primitive/color/neutral/800` |
+| `background.disabled.default` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` | `Primitive/color/neutral/500` |
+| `background.disabled.default-hover` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` | `Primitive/color/neutral/400` |
+| `background.disabled.secondary` | `#E2E4E6` | `#E2E4E6` | `Primitive/color/neutral/200` | `Primitive/color/neutral/200` |
+| `background.disabled.secondary-hover` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` | `Primitive/color/neutral/700` |
+| `background.disabled.tertiary` | `#F4F5F5` | `#222629` | `Primitive/color/neutral/100` | `Primitive/color/neutral/900` |
+| `background.disabled.tertiary-hover` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` | `Primitive/color/neutral/800` |
+| `background.positive.default` | `#54CF97` | `#54CF97` | `Brand/primary/500` | `Brand/primary/500` |
+| `background.positive.default-hover` | `#08A768` | `#6AD6A5` | `Brand/primary/600` | `Brand/primary/400` |
+| `background.positive.secondary` | `#C5EDDA` | `#004C31` | `Brand/primary/200` | `Brand/primary/800` |
+| `background.positive.secondary-hover` | `#91DFBB` | `#007549` | `Brand/primary/300` | `Brand/primary/700` |
+| `background.positive.tertiary` | `#E2F3EB` | `#003322` | `Brand/primary/100` | `Brand/primary/900` |
+| `background.positive.tertiary-hover` | `#C5EDDA` | `#004C31` | `Brand/primary/200` | `Brand/primary/800` |
+| `background.warning.default` | `#F97316` | `#F97316` | `Primitive/color/orange/500` | `Primitive/color/orange/500` |
+| `background.warning.default-hover` | `#EA580C` | `#FB923C` | `Primitive/color/orange/600` | `Primitive/color/orange/400` |
+| `background.warning.secondary` | `#FED7AA` | `#9A3412` | `Primitive/color/orange/200` | `Primitive/color/orange/800` |
+| `background.warning.secondary-hover` | `#FDBA74` | `#C2410C` | `Primitive/color/orange/300` | `Primitive/color/orange/700` |
+| `background.warning.tertiary` | `#FFEDD5` | `#7C2D12` | `Primitive/color/orange/100` | `Primitive/color/orange/900` |
+| `background.warning.tertiary-hover` | `#FED7AA` | `#9A3412` | `Primitive/color/orange/200` | `Primitive/color/orange/800` |
+| `background.progress.default` | `#EAB308` | `#EAB308` | `Primitive/color/yellow/500` | `Primitive/color/yellow/500` |
+| `background.progress.default-hover` | `#CA8A04` | `#FACC15` | `Primitive/color/yellow/600` | `Primitive/color/yellow/400` |
+| `background.progress.secondary` | `#FEF08A` | `#854D0E` | `Primitive/color/yellow/200` | `Primitive/color/yellow/800` |
+| `background.progress.secondary-hover` | `#FDE047` | `#A16207` | `Primitive/color/yellow/300` | `Primitive/color/yellow/700` |
+| `background.progress.tertiary` | `#FEF9C3` | `#713F12` | `Primitive/color/yellow/100` | `Primitive/color/yellow/900` |
+| `background.progress.tertiary-hover` | `#FEF08A` | `#854D0E` | `Primitive/color/yellow/200` | `Primitive/color/yellow/800` |
+| `background.danger.default` | `#EF4444` | `#EF4444` | `Primitive/color/red/500` | `Primitive/color/red/500` |
+| `background.danger.default-hover` | `#DC2626` | `#F87171` | `Primitive/color/red/600` | `Primitive/color/red/400` |
+| `background.danger.secondary` | `#FECACA` | `#991B1B` | `Primitive/color/red/200` | `Primitive/color/red/800` |
+| `background.danger.secondary-hover` | `#FCA5A5` | `#B91C1C` | `Primitive/color/red/300` | `Primitive/color/red/700` |
+| `background.danger.tertiary` | `#FEE2E2` | `#7F1D1D` | `Primitive/color/red/100` | `Primitive/color/red/900` |
+| `background.danger.tertiary-hover` | `#FECACA` | `#991B1B` | `Primitive/color/red/200` | `Primitive/color/red/800` |
+| `background.info.default` | `#3B82F6` | `#3B82F6` | `Primitive/color/blue/500` | `Primitive/color/blue/500` |
+| `background.info.default-hover` | `#2563EB` | `#60A5FA` | `Primitive/color/blue/600` | `Primitive/color/blue/400` |
+| `background.info.secondary` | `#BFDBFE` | `#1E40AF` | `Primitive/color/blue/200` | `Primitive/color/blue/800` |
+| `background.info.secondary-hover` | `#93C5FD` | `#1D4ED8` | `Primitive/color/blue/300` | `Primitive/color/blue/700` |
+| `background.info.tertiary` | `#DBEAFE` | `#1E3A8A` | `Primitive/color/blue/100` | `Primitive/color/blue/900` |
+| `background.info.tertiary-hover` | `#BFDBFE` | `#1E40AF` | `Primitive/color/blue/200` | `Primitive/color/blue/800` |
+| `background.screen.100` | `#F5F6FA` | `#0F172A` | `Primitive/color/slate/50` | `Primitive/color/slate/900` |
+| `background.screen.200` | `#F5F7F9` | `#1E293B` | `Primitive/color/slate/100` | `Primitive/color/slate/800` |
+| `background.screen.300` | `#E9EDF5` | `#334155` | `Primitive/color/slate/200` | `Primitive/color/slate/700` |
+| `background.screen.400` | `#CBD5E1` | `#475569` | `Primitive/color/slate/300` | `Primitive/color/slate/600` |
+| `background.screen.default` | `#FFFFFF` | `#0F172A` | `Primitive/color/grey/50` | `Primitive/color/slate/900` |
+| `background.screen.brand-100` | `#F4FBF8` | `#002318` | `Brand/primary/50` | `Brand/primary/950` |
+| `background.screen.brand-200` | `#E2F3EB` | `#003322` | `Brand/primary/100` | `Brand/primary/900` |
+| `background.screen.disabled` | `#64748B` | `#94A3B8` | `Primitive/color/slate/500` | `Primitive/color/slate/400` |
 | `background.overlay.default` | `#64748B @ 50%` | `#64748B @ 50%` | `` |
 | `background.bg.teal-400` | `#3EC3B2 @ 20%` | `#1B867D @ 20%` | `Primitive/color/bg/teal-400` |
 | `background.bg.blue-400` | `#40AAF2 @ 20%` | `#0A73CB @ 20%` | `Primitive/color/bg/sky-cyan-400` |
@@ -1404,1054 +1404,1054 @@ computing it, and never sample a colour by eye.
 
 ### 4.2. `text`
 
-| Token | Light | Dark | Alias (Light) |
-|-------|-------|------|----------------|
-| `text.brandPrimary.default` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `text.brandPrimary.secondary` | `#08A768` | `#6AD6A5` | `Brand/primary/600` |
-| `text.brandPrimary.tertiary` | `#6AD6A5` | `#08A768` | `Brand/primary/400` |
-| `text.brandPrimary.quaternary` | `#91DFBB` | `#007549` | `Brand/primary/300` |
-| `text.brandPrimary.on-brand` | `#FFFFFF` | `#002318` | `Primitive/color/grey/50` |
-| `text.brandSecondary.default` | `#366233` | `#A7D2A3` | `Brand/secondary/700` |
-| `text.brandSecondary.secondary` | `#427C3D` | `#78B573` | `Brand/secondary/600` |
-| `text.brandSecondary.tertiary` | `#78B573` | `#427C3D` | `Brand/secondary/400` |
-| `text.brandSecondary.quaternary` | `#A7D2A3` | `#366233` | `Brand/secondary/300` |
-| `text.brandSecondary.on-default` | `#FFFFFF` | `#102310` | `Primitive/color/grey/50` |
-| `text.neutral.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.neutral.secondary` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` |
-| `text.neutral.tertiary` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
-| `text.neutral.quaternary` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` |
-| `text.neutral.on-neutral` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
-| `text.disabled.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.disabled.secondary` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` |
-| `text.disabled.tertiary` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
-| `text.disabled.quaternary` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` |
-| `text.disabled.on-disabled` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
-| `text.positive.default` | `#196C65` | `#6CDCCA` | `Primitive/color/teal/700` |
-| `text.positive.secondary` | `#1B867D` | `#3EC3B2` | `Primitive/color/teal/600` |
-| `text.positive.tertiary` | `#3EC3B2` | `#1B867D` | `Primitive/color/teal/400` |
-| `text.positive.quaternary` | `#6CDCCA` | `#196C65` | `Primitive/color/teal/300` |
-| `text.positive.on-positive` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` |
-| `text.warning.default` | `#C2410C` | `#FDBA74` | `Primitive/color/orange/700` |
-| `text.warning.secondary` | `#EA580C` | `#FB923C` | `Primitive/color/orange/600` |
-| `text.warning.tertiary` | `#FB923C` | `#EA580C` | `Primitive/color/orange/400` |
-| `text.warning.quaternary` | `#FDBA74` | `#C2410C` | `Primitive/color/orange/300` |
-| `text.warning.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` |
-| `text.progress.default` | `#A16207` | `#FDE047` | `Primitive/color/yellow/700` |
-| `text.progress.secondary` | `#CA8A04` | `#FACC15` | `Primitive/color/yellow/600` |
-| `text.progress.tertiary` | `#FACC15` | `#CA8A04` | `Primitive/color/yellow/400` |
-| `text.progress.quaternary` | `#FDE047` | `#A16207` | `Primitive/color/yellow/300` |
-| `text.progress.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` |
-| `text.danger.default` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` |
-| `text.danger.secondary` | `#DC2626` | `#F87171` | `Primitive/color/red/600` |
-| `text.danger.tertiary` | `#F87171` | `#DC2626` | `Primitive/color/red/400` |
-| `text.danger.quaternary` | `#FCA5A5` | `#B91C1C` | `Primitive/color/red/300` |
-| `text.danger.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` |
-| `text.info.default` | `#1D4ED8` | `#93C5FD` | `Primitive/color/blue/700` |
-| `text.info.secondary` | `#2563EB` | `#60A5FA` | `Primitive/color/blue/600` |
-| `text.info.tertiary` | `#60A5FA` | `#2563EB` | `Primitive/color/blue/400` |
-| `text.info.quaternary` | `#93C5FD` | `#1D4ED8` | `Primitive/color/blue/300` |
-| `text.info.on-info` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` |
-| `text.navy.default` | `#4F46E5` | `#C7D2FE` | `Primitive/color/indigo/700` |
-| `text.navy.secondary` | `#6366F1` | `#A5B4FC` | `Primitive/color/indigo/600` |
-| `text.navy.tertiary` | `#A5B4FC` | `#6366F1` | `Primitive/color/indigo/400` |
-| `text.navy.quaternary` | `#C7D2FE` | `#4F46E5` | `Primitive/color/indigo/300` |
-| `text.navy.on-info` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` |
-| `text.magenta.default` | `#871598` | `#EA78F9` | `Primitive/color/magenta/700` |
-| `text.magenta.secondary` | `#A81BBD` | `#DC4CF2` | `Primitive/color/magenta/600` |
-| `text.magenta.tertiary` | `#DC4CF2` | `#A81BBD` | `Primitive/color/magenta/400` |
-| `text.magenta.quaternary` | `#EA78F9` | `#871598` | `Primitive/color/magenta/300` |
-| `text.magenta.on-info` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` |
-| `text.pink.default` | `#BE185D` | `#F9A8D4` | `Primitive/color/pink/700` |
-| `text.pink.secondary` | `#DB2777` | `#F472B6` | `Primitive/color/pink/600` |
-| `text.pink.tertiary` | `#F472B6` | `#DB2777` | `Primitive/color/pink/400` |
-| `text.pink.quaternary` | `#F9A8D4` | `#BE185D` | `Primitive/color/pink/300` |
-| `text.pink.on-info` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` |
-| `text.breadcrumb.pagename` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` |
-| `text.breadcrumb.current` | `#363B3F` | `#E2E4E6` | `Primitive/color/neutral/800` |
-| `text.content.default` | `#363B3F` | `#E2E4E6` | `Primitive/color/neutral/800` |
-| `text.content.secondary` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` |
-| `text.content.tertiary` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` |
-| `text.content.quaternary` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
-| `text.content.on-content` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
-| `text.input.default` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
-| `text.input.hover` | `#ADB2B7` | `#C9CDD0` | `Primitive/color/neutral/400` |
-| `text.input.typing` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.input.filled` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.input.error` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
-| `text.input.disabled` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
-| `text.input.label` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.input.helper` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
-| `text.input.errorHelper` | `#DC2626` | `#F87171` | `Primitive/color/red/600` |
-| `text.input.require` | `#DC2626` | `#F87171` | `Primitive/color/red/600` |
-| `text.primarySearch.default` | `#ADB2B7` | `#858C92` | `Primitive/color/neutral/400` |
-| `text.primarySearch.hover` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.primarySearch.typing` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.primarySearch.filled` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.secondarySearch.default` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
-| `text.secondarySearch.hover` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.secondarySearch.typing` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.secondarySearch.filled` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.brandPrimaryButton.default` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `text.brandPrimaryButton.secondary` | `#08A768` | `#6AD6A5` | `Brand/primary/600` |
-| `text.brandPrimaryButton.tertiary` | `#54CF97` | `#54CF97` | `Brand/primary/500` |
-| `text.brandPrimaryButton.quaternary` | `#91DFBB` | `#007549` | `Brand/primary/300` |
-| `text.brandPrimaryButton.on-brand` | `#FFFFFF` | `#002318` | `Primitive/color/grey/50` |
-| `text.brandSecondaryButton.default` | `#366233` | `#A7D2A3` | `Brand/secondary/700` |
-| `text.brandSecondaryButton.secondary` | `#427C3D` | `#78B573` | `Brand/secondary/600` |
-| `text.brandSecondaryButton.tertiary` | `#78B573` | `#427C3D` | `Brand/secondary/400` |
-| `text.brandSecondaryButton.quaternary` | `#A7D2A3` | `#366233` | `Brand/secondary/300` |
-| `text.brandSecondaryButton.on-default` | `#FFFFFF` | `#102310` | `Primitive/color/grey/50` |
-| `text.disabledButton.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.disabledButton.secondary` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` |
-| `text.disabledButton.tertiary` | `#ADB2B7` | `#858C92` | `Primitive/color/neutral/400` |
-| `text.disabledButton.quaternary` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` |
-| `text.disabledButton.on-disabled` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
-| `text.dangerButton.default` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` |
-| `text.dangerButton.secondary` | `#DC2626` | `#F87171` | `Primitive/color/red/600` |
-| `text.dangerButton.tertiary` | `#F87171` | `#DC2626` | `Primitive/color/red/400` |
-| `text.dangerButton.quaternary` | `#FCA5A5` | `#B91C1C` | `Primitive/color/red/300` |
-| `text.dangerButton.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` |
-| `text.neutralButton.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.neutralButton.secondary` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` |
-| `text.neutralButton.tertiary` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
-| `text.neutralButton.quaternary` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` |
-| `text.neutralButton.on-neutral` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
-| `text.neutralTag.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.neutralTag.hover` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.neutralTag.selected` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.neutralTag.selected-hover` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.brandTag.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.brandTag.title` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` |
-| `text.brandTag.hover` | `#007549` | `#C9CDD0` | `Brand/primary/700` |
-| `text.brandTag.selected` | `#007549` | `#C9CDD0` | `Brand/primary/700` |
-| `text.brandTag.selected-hover` | `#007549` | `#C9CDD0` | `Brand/primary/700` |
-| `text.statuslBadge.neutral` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.statuslBadge.brand` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `text.statuslBadge.info` | `#1D4ED8` | `#93C5FD` | `Primitive/color/blue/700` |
-| `text.statuslBadge.success` | `#196C65` | `#6CDCCA` | `Primitive/color/teal/700` |
-| `text.statuslBadge.warning` | `#A16207` | `#FDE047` | `Primitive/color/yellow/700` |
-| `text.statuslBadge.in progress` | `#C2410C` | `#FDBA74` | `Primitive/color/orange/700` |
-| `text.statuslBadge.error` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` |
-| `text.colorfulBadge.badge-on` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
-| `text.colorfulBadge.grey` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.colorfulBadge.green` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `text.colorfulBadge.blue` | `#1D4ED8` | `#93C5FD` | `Primitive/color/blue/700` |
-| `text.colorfulBadge.teal` | `#196C65` | `#6CDCCA` | `Primitive/color/teal/700` |
-| `text.colorfulBadge.yellow` | `#A16207` | `#FDE047` | `Primitive/color/yellow/700` |
-| `text.colorfulBadge.orange` | `#C2410C` | `#FDBA74` | `Primitive/color/orange/700` |
-| `text.colorfulBadge.red` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` |
-| `text.colorfulBadge.indigo` | `#4F46E5` | `#C7D2FE` | `Primitive/color/indigo/700` |
-| `text.colorfulBadge.pink` | `#BE185D` | `#F9A8D4` | `Primitive/color/pink/700` |
-| `text.colorfulBadge.megenta` | `#871598` | `#EA78F9` | `Primitive/color/magenta/700` |
-| `text.colorfulBadge.purple` | `#7E22CE` | `#D8B4FE` | `Primitive/color/purple/700` |
-| `text.pagination.default` | `#4D5358` | `#E2E4E6` | `Primitive/color/neutral/700` |
-| `text.pagination.hover` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `text.pagination.selected` | `#007549` | `#FFFFFF` | `Brand/primary/700` |
-| `text.tooltip.tooltip-on` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
-| `text.tabUnderline.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.tabUnderline.hover` | `#08A768` | `#6AD6A5` | `Brand/primary/600` |
-| `text.tabUnderline.selected` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `text.tabUnderline.disabled` | `#C9CDD0` | `#636B72` | `Primitive/color/neutral/300` |
-| `text.tabPill.default` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `text.tabPill.subtext-default` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
-| `text.tabPill.hover` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `text.tabPill.subtext-hover` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
-| `text.tabPill.selected` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `text.tabPill.selected-selected` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
-| `text.tabPill.disabled` | `#54CF97` | `#54CF97` | `Brand/primary/500` |
-| `text.tabPill.selected-disabled` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` |
-| `text.tabCapsule.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.tabCapsule.hover` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `text.tabCapsule.selected` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `text.tabCapsule.disabled` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` |
-| `text.tabCapsule.inProgress` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.tabCapsule.success` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.timeslot.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.timeslot.hover` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `text.timeslot.disabled` | `#E2F3EB` | `#003322` | `Brand/primary/100` |
-| `text.timeslot.selected` | `#08A768` | `#6AD6A5` | `Brand/primary/600` |
-| `text.accordion.collapsed` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.accordion.expanded` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.accordion.disabled` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
-| `text.accordion.content` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` |
-| `text.alert.info` | `#1D4ED8` | `#93C5FD` | `Primitive/color/blue/700` |
-| `text.alert.success` | `#196C65` | `#6CDCCA` | `Primitive/color/teal/700` |
-| `text.alert.warning` | `#C2410C` | `#FDBA74` | `Primitive/color/orange/700` |
-| `text.alert.error` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` |
-| `text.alertDialog.text` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.alertDialog.subtext` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` |
-| `text.calendar.date-default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.calendar.date-current` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `text.calendar.date-hover` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `text.calendar.date-selected` | `#FFFFFF` | `#DADADA` | `Primitive/color/grey/50` |
-| `text.calendar.date-disabled` | `#CBD5E1` | `#334155` | `Primitive/color/slate/300` |
-| `text.calendar.month` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.calendar slot.date-default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.calendar slot.date-current` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
-| `text.calendar slot.date-hover` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `text.calendar slot.date-selected` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` |
-| `text.calendar slot.date-disabled` | `#CBD5E1` | `#334155` | `Primitive/color/slate/300` |
-| `text.calendar slot.month` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.calendar slot.slot-default` | `#54CF97` | `#54CF97` | `Brand/primary/500` |
-| `text.calendar slot.slot-hover` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `text.calendar slot.slot-selected` | `#FFFFFF` | `#DADADA` | `Primitive/color/grey/50` |
-| `text.calendar slot.slot-disabled` | `#CBD5E1` | `#334155` | `Primitive/color/slate/300` |
-| `text.calendar slot.text` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `text.calendar slot.cta-default` | `#08A768` | `#6AD6A5` | `Brand/primary/600` |
-| `text.calendar slot.cta-hover` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `text.calendar slot.cta-disabled` | `#CBD5E1` | `#334155` | `Primitive/color/slate/300` |
-| `text.list.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.list.subtext` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` |
-| `text.list.hover` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `text.list.subtext-hover` | `#54CF97` | `#54CF97` | `Brand/primary/500` |
-| `text.list.selected` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.list.selected-hover` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `text.modal.text` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.modal.subtext` | `#ADB2B7` | `#ADB2B7` | `Primitive/color/neutral/400` |
-| `text.modal.content` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` |
-| `text.sideMenu.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.sideMenu.hover` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `text.sideMenu.disabled` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
-| `text.sideMenu.selected` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `text.sideMenu.selected-hover` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `text.topic.primary-title` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `text.topic.primary-subtext-default` | `#858C92` | `#ADB2B7` | `Primitive/color/neutral/500` |
-| `text.topic.primary-hover` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `text.topic.primary-subtext-hover` | `#858C92` | `#ADB2B7` | `Primitive/color/neutral/500` |
-| `text.topic.primary-disabled` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
-| `text.topic.primary-subtext-disabled` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` |
-| `text.topic.secondary-title` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `text.topic.secondary-subtext` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
-| `text.topic.secondary-subtext-on` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` |
-| `text.topic.tertiary-title` | `#363B3F` | `#E2E4E6` | `Primitive/color/neutral/800` |
-| `text.topic.tertiary-subtext` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
-| `text.topic.tertiary-subtext-on` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` |
-| `text.navigation.title` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `text.navigation.subtext` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` |
-| `text.statusSummaryCard.Info-number` | `#1D4ED8` | `#93C5FD` | `Primitive/color/blue/700` |
-| `text.statusSummaryCard.Indigo-number` | `#4F46E5` | `#C7D2FE` | `Primitive/color/indigo/700` |
-| `text.statusSummaryCard.lavender-number` | `#8A6CD8` | `#D0BEFF` | `Primitive/color/lavender/700` |
-| `text.statusSummaryCard.sakura-number` | `#D687A8` | `#FFCFDF` | `Primitive/color/sakura/700` |
-| `text.statusSummaryCard.Positive-number` | `#196C65` | `#6CDCCA` | `Primitive/color/teal/700` |
-| `text.statusSummaryCard.Lime-number` | `#6B8E26` | `#BDE36A` | `Primitive/color/lime/700` |
-| `text.statusSummaryCard.Inprogress-number` | `#C2410C` | `#FDBA74` | `Primitive/color/orange/700` |
-| `text.statusSummaryCard.Destructive-number` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` |
-| `text.statusSummaryCard.subtext` | `#858C92` | `#ADB2B7` | `Primitive/color/neutral/500` |
-| `text.statusSummaryCard.increase` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` |
-| `text.statusSummaryCard.decrease` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` |
-| `text.categorySummaryCard.A-number` | `#1D4ED8` | `#93C5FD` | `Primitive/color/blue/700` |
-| `text.categorySummaryCard.B-number` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `text.categorySummaryCard.C-number` | `#196C65` | `#6CDCCA` | `Primitive/color/teal/700` |
-| `text.categorySummaryCard.D-number` | `#871598` | `#EA78F9` | `Primitive/color/magenta/700` |
-| `text.categorySummaryCard.E-number` | `#4F46E5` | `#C7D2FE` | `Primitive/color/indigo/700` |
-| `text.categorySummaryCard.F-number` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` |
-| `text.categorySummaryCard.G-number` | `#A16207` | `#FDE047` | `Primitive/color/yellow/700` |
-| `text.categorySummaryCard.H-number` | `#C2410C` | `#FDBA74` | `Primitive/color/orange/700` |
-| `text.categorySummaryCard.Title` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `text.categorySummaryCard.Subtext` | `#858C92` | `#ADB2B7` | `Primitive/color/neutral/500` |
-| `text.categorySummaryCard.Warning` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` |
-| `text.formBuilder.text` | `#007549` | `#54CF97` | `Brand/primary/700` |
-| `text.formBuilder.subtext` | `#858C92` | `#C9CDD0` | `Primitive/color/neutral/500` |
-| `text.formBuilder.error` | `#DC2626` | `#FCA5A5` | `Primitive/color/red/600` |
-| `text.steps.default` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `text.steps.select` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
-| `text.steps.success` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
+| Token | Light | Dark | Alias (Light) | Alias (Dark) |
+|-------|-------|------|----------------|----------------|
+| `text.brandPrimary.default` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `text.brandPrimary.secondary` | `#08A768` | `#6AD6A5` | `Brand/primary/600` | `Brand/primary/400` |
+| `text.brandPrimary.tertiary` | `#6AD6A5` | `#08A768` | `Brand/primary/400` | `Brand/primary/600` |
+| `text.brandPrimary.quaternary` | `#91DFBB` | `#007549` | `Brand/primary/300` | `Brand/primary/700` |
+| `text.brandPrimary.on-brand` | `#FFFFFF` | `#002318` | `Primitive/color/grey/50` | `Primitive/color/emerald/950` |
+| `text.brandSecondary.default` | `#366233` | `#A7D2A3` | `Brand/secondary/700` | `Brand/secondary/300` |
+| `text.brandSecondary.secondary` | `#427C3D` | `#78B573` | `Brand/secondary/600` | `Brand/secondary/400` |
+| `text.brandSecondary.tertiary` | `#78B573` | `#427C3D` | `Brand/secondary/400` | `Brand/secondary/600` |
+| `text.brandSecondary.quaternary` | `#A7D2A3` | `#366233` | `Brand/secondary/300` | `Brand/secondary/700` |
+| `text.brandSecondary.on-default` | `#FFFFFF` | `#102310` | `Primitive/color/grey/50` | `Primitive/color/forest/950` |
+| `text.neutral.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.neutral.secondary` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` | `Primitive/color/neutral/400` |
+| `text.neutral.tertiary` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` | `Primitive/color/neutral/600` |
+| `text.neutral.quaternary` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` | `Primitive/color/neutral/700` |
+| `text.neutral.on-neutral` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
+| `text.disabled.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.disabled.secondary` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` | `Primitive/color/neutral/400` |
+| `text.disabled.tertiary` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` | `Primitive/color/neutral/600` |
+| `text.disabled.quaternary` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` | `Primitive/color/neutral/700` |
+| `text.disabled.on-disabled` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
+| `text.positive.default` | `#196C65` | `#6CDCCA` | `Primitive/color/teal/700` | `Primitive/color/teal/300` |
+| `text.positive.secondary` | `#1B867D` | `#3EC3B2` | `Primitive/color/teal/600` | `Primitive/color/teal/400` |
+| `text.positive.tertiary` | `#3EC3B2` | `#1B867D` | `Primitive/color/teal/400` | `Primitive/color/teal/600` |
+| `text.positive.quaternary` | `#6CDCCA` | `#196C65` | `Primitive/color/teal/300` | `Primitive/color/teal/700` |
+| `text.positive.on-positive` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` | `Primitive/color/slate/950` |
+| `text.warning.default` | `#C2410C` | `#FDBA74` | `Primitive/color/orange/700` | `Primitive/color/orange/300` |
+| `text.warning.secondary` | `#EA580C` | `#FB923C` | `Primitive/color/orange/600` | `Primitive/color/orange/400` |
+| `text.warning.tertiary` | `#FB923C` | `#EA580C` | `Primitive/color/orange/400` | `Primitive/color/orange/600` |
+| `text.warning.quaternary` | `#FDBA74` | `#C2410C` | `Primitive/color/orange/300` | `Primitive/color/orange/700` |
+| `text.warning.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` | `Primitive/color/slate/950` |
+| `text.progress.default` | `#A16207` | `#FDE047` | `Primitive/color/yellow/700` | `Primitive/color/yellow/300` |
+| `text.progress.secondary` | `#CA8A04` | `#FACC15` | `Primitive/color/yellow/600` | `Primitive/color/yellow/400` |
+| `text.progress.tertiary` | `#FACC15` | `#CA8A04` | `Primitive/color/yellow/400` | `Primitive/color/yellow/600` |
+| `text.progress.quaternary` | `#FDE047` | `#A16207` | `Primitive/color/yellow/300` | `Primitive/color/yellow/700` |
+| `text.progress.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` | `Primitive/color/slate/950` |
+| `text.danger.default` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` | `Primitive/color/red/300` |
+| `text.danger.secondary` | `#DC2626` | `#F87171` | `Primitive/color/red/600` | `Primitive/color/red/400` |
+| `text.danger.tertiary` | `#F87171` | `#DC2626` | `Primitive/color/red/400` | `Primitive/color/red/600` |
+| `text.danger.quaternary` | `#FCA5A5` | `#B91C1C` | `Primitive/color/red/300` | `Primitive/color/red/700` |
+| `text.danger.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` | `Primitive/color/slate/950` |
+| `text.info.default` | `#1D4ED8` | `#93C5FD` | `Primitive/color/blue/700` | `Primitive/color/blue/300` |
+| `text.info.secondary` | `#2563EB` | `#60A5FA` | `Primitive/color/blue/600` | `Primitive/color/blue/400` |
+| `text.info.tertiary` | `#60A5FA` | `#2563EB` | `Primitive/color/blue/400` | `Primitive/color/blue/600` |
+| `text.info.quaternary` | `#93C5FD` | `#1D4ED8` | `Primitive/color/blue/300` | `Primitive/color/blue/700` |
+| `text.info.on-info` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` | `Primitive/color/slate/950` |
+| `text.navy.default` | `#4F46E5` | `#C7D2FE` | `Primitive/color/indigo/700` | `Primitive/color/indigo/300` |
+| `text.navy.secondary` | `#6366F1` | `#A5B4FC` | `Primitive/color/indigo/600` | `Primitive/color/indigo/400` |
+| `text.navy.tertiary` | `#A5B4FC` | `#6366F1` | `Primitive/color/indigo/400` | `Primitive/color/indigo/600` |
+| `text.navy.quaternary` | `#C7D2FE` | `#4F46E5` | `Primitive/color/indigo/300` | `Primitive/color/indigo/700` |
+| `text.navy.on-info` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` | `Primitive/color/slate/950` |
+| `text.magenta.default` | `#871598` | `#EA78F9` | `Primitive/color/magenta/700` | `Primitive/color/magenta/300` |
+| `text.magenta.secondary` | `#A81BBD` | `#DC4CF2` | `Primitive/color/magenta/600` | `Primitive/color/magenta/400` |
+| `text.magenta.tertiary` | `#DC4CF2` | `#A81BBD` | `Primitive/color/magenta/400` | `Primitive/color/magenta/600` |
+| `text.magenta.quaternary` | `#EA78F9` | `#871598` | `Primitive/color/magenta/300` | `Primitive/color/magenta/700` |
+| `text.magenta.on-info` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` | `Primitive/color/slate/950` |
+| `text.pink.default` | `#BE185D` | `#F9A8D4` | `Primitive/color/pink/700` | `Primitive/color/pink/300` |
+| `text.pink.secondary` | `#DB2777` | `#F472B6` | `Primitive/color/pink/600` | `Primitive/color/pink/400` |
+| `text.pink.tertiary` | `#F472B6` | `#DB2777` | `Primitive/color/pink/400` | `Primitive/color/pink/600` |
+| `text.pink.quaternary` | `#F9A8D4` | `#BE185D` | `Primitive/color/pink/300` | `Primitive/color/pink/700` |
+| `text.pink.on-info` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` | `Primitive/color/slate/950` |
+| `text.breadcrumb.pagename` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` | `Primitive/color/neutral/500` |
+| `text.breadcrumb.current` | `#363B3F` | `#E2E4E6` | `Primitive/color/neutral/800` | `Primitive/color/neutral/200` |
+| `text.content.default` | `#363B3F` | `#E2E4E6` | `Primitive/color/neutral/800` | `Primitive/color/neutral/200` |
+| `text.content.secondary` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` | `Primitive/color/neutral/400` |
+| `text.content.tertiary` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` | `Primitive/color/neutral/500` |
+| `text.content.quaternary` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` | `Primitive/color/neutral/600` |
+| `text.content.on-content` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
+| `text.input.default` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` | `Primitive/color/neutral/600` |
+| `text.input.hover` | `#ADB2B7` | `#C9CDD0` | `Primitive/color/neutral/400` | `Primitive/color/neutral/300` |
+| `text.input.typing` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.input.filled` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.input.error` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` | `Primitive/color/neutral/600` |
+| `text.input.disabled` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` | `Primitive/color/neutral/600` |
+| `text.input.label` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.input.helper` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` | `Primitive/color/neutral/600` |
+| `text.input.errorHelper` | `#DC2626` | `#F87171` | `Primitive/color/red/600` | `Primitive/color/red/400` |
+| `text.input.require` | `#DC2626` | `#F87171` | `Primitive/color/red/600` | `Primitive/color/red/400` |
+| `text.primarySearch.default` | `#ADB2B7` | `#858C92` | `Primitive/color/neutral/400` | `Primitive/color/neutral/500` |
+| `text.primarySearch.hover` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.primarySearch.typing` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.primarySearch.filled` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.secondarySearch.default` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` | `Primitive/color/neutral/600` |
+| `text.secondarySearch.hover` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.secondarySearch.typing` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.secondarySearch.filled` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.brandPrimaryButton.default` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `text.brandPrimaryButton.secondary` | `#08A768` | `#6AD6A5` | `Brand/primary/600` | `Brand/primary/400` |
+| `text.brandPrimaryButton.tertiary` | `#54CF97` | `#54CF97` | `Brand/primary/500` | `Brand/primary/500` |
+| `text.brandPrimaryButton.quaternary` | `#91DFBB` | `#007549` | `Brand/primary/300` | `Brand/primary/700` |
+| `text.brandPrimaryButton.on-brand` | `#FFFFFF` | `#002318` | `Primitive/color/grey/50` | `Primitive/color/emerald/950` |
+| `text.brandSecondaryButton.default` | `#366233` | `#A7D2A3` | `Brand/secondary/700` | `Brand/secondary/300` |
+| `text.brandSecondaryButton.secondary` | `#427C3D` | `#78B573` | `Brand/secondary/600` | `Brand/secondary/400` |
+| `text.brandSecondaryButton.tertiary` | `#78B573` | `#427C3D` | `Brand/secondary/400` | `Brand/secondary/600` |
+| `text.brandSecondaryButton.quaternary` | `#A7D2A3` | `#366233` | `Brand/secondary/300` | `Brand/secondary/700` |
+| `text.brandSecondaryButton.on-default` | `#FFFFFF` | `#102310` | `Primitive/color/grey/50` | `Primitive/color/forest/950` |
+| `text.disabledButton.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.disabledButton.secondary` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` | `Primitive/color/neutral/400` |
+| `text.disabledButton.tertiary` | `#ADB2B7` | `#858C92` | `Primitive/color/neutral/400` | `Primitive/color/neutral/500` |
+| `text.disabledButton.quaternary` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` | `Primitive/color/neutral/700` |
+| `text.disabledButton.on-disabled` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
+| `text.dangerButton.default` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` | `Primitive/color/red/300` |
+| `text.dangerButton.secondary` | `#DC2626` | `#F87171` | `Primitive/color/red/600` | `Primitive/color/red/400` |
+| `text.dangerButton.tertiary` | `#F87171` | `#DC2626` | `Primitive/color/red/400` | `Primitive/color/red/600` |
+| `text.dangerButton.quaternary` | `#FCA5A5` | `#B91C1C` | `Primitive/color/red/300` | `Primitive/color/red/700` |
+| `text.dangerButton.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` | `Primitive/color/slate/950` |
+| `text.neutralButton.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.neutralButton.secondary` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` | `Primitive/color/neutral/400` |
+| `text.neutralButton.tertiary` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` | `Primitive/color/neutral/600` |
+| `text.neutralButton.quaternary` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` | `Primitive/color/neutral/700` |
+| `text.neutralButton.on-neutral` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
+| `text.neutralTag.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.neutralTag.hover` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.neutralTag.selected` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.neutralTag.selected-hover` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.brandTag.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.brandTag.title` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` | `Primitive/color/neutral/500` |
+| `text.brandTag.hover` | `#007549` | `#C9CDD0` | `Brand/primary/700` | `Primitive/color/neutral/300` |
+| `text.brandTag.selected` | `#007549` | `#C9CDD0` | `Brand/primary/700` | `Primitive/color/neutral/300` |
+| `text.brandTag.selected-hover` | `#007549` | `#C9CDD0` | `Brand/primary/700` | `Primitive/color/neutral/300` |
+| `text.statuslBadge.neutral` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.statuslBadge.brand` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `text.statuslBadge.info` | `#1D4ED8` | `#93C5FD` | `Primitive/color/blue/700` | `Primitive/color/blue/300` |
+| `text.statuslBadge.success` | `#196C65` | `#6CDCCA` | `Primitive/color/teal/700` | `Primitive/color/teal/300` |
+| `text.statuslBadge.warning` | `#A16207` | `#FDE047` | `Primitive/color/yellow/700` | `Primitive/color/yellow/300` |
+| `text.statuslBadge.in progress` | `#C2410C` | `#FDBA74` | `Primitive/color/orange/700` | `Primitive/color/orange/300` |
+| `text.statuslBadge.error` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` | `Primitive/color/red/300` |
+| `text.colorfulBadge.badge-on` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
+| `text.colorfulBadge.grey` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.colorfulBadge.green` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `text.colorfulBadge.blue` | `#1D4ED8` | `#93C5FD` | `Primitive/color/blue/700` | `Primitive/color/blue/300` |
+| `text.colorfulBadge.teal` | `#196C65` | `#6CDCCA` | `Primitive/color/teal/700` | `Primitive/color/teal/300` |
+| `text.colorfulBadge.yellow` | `#A16207` | `#FDE047` | `Primitive/color/yellow/700` | `Primitive/color/yellow/300` |
+| `text.colorfulBadge.orange` | `#C2410C` | `#FDBA74` | `Primitive/color/orange/700` | `Primitive/color/orange/300` |
+| `text.colorfulBadge.red` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` | `Primitive/color/red/300` |
+| `text.colorfulBadge.indigo` | `#4F46E5` | `#C7D2FE` | `Primitive/color/indigo/700` | `Primitive/color/indigo/300` |
+| `text.colorfulBadge.pink` | `#BE185D` | `#F9A8D4` | `Primitive/color/pink/700` | `Primitive/color/pink/300` |
+| `text.colorfulBadge.megenta` | `#871598` | `#EA78F9` | `Primitive/color/magenta/700` | `Primitive/color/magenta/300` |
+| `text.colorfulBadge.purple` | `#7E22CE` | `#D8B4FE` | `Primitive/color/purple/700` | `Primitive/color/purple/300` |
+| `text.pagination.default` | `#4D5358` | `#E2E4E6` | `Primitive/color/neutral/700` | `Primitive/color/neutral/200` |
+| `text.pagination.hover` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `text.pagination.selected` | `#007549` | `#FFFFFF` | `Brand/primary/700` | `Primitive/color/grey/50` |
+| `text.tooltip.tooltip-on` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
+| `text.tabUnderline.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.tabUnderline.hover` | `#08A768` | `#6AD6A5` | `Brand/primary/600` | `Brand/primary/400` |
+| `text.tabUnderline.selected` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `text.tabUnderline.disabled` | `#C9CDD0` | `#636B72` | `Primitive/color/neutral/300` | `Primitive/color/neutral/600` |
+| `text.tabPill.default` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `text.tabPill.subtext-default` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` | `Primitive/color/neutral/600` |
+| `text.tabPill.hover` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `text.tabPill.subtext-hover` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` | `Primitive/color/neutral/600` |
+| `text.tabPill.selected` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `text.tabPill.selected-selected` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` | `Primitive/color/neutral/600` |
+| `text.tabPill.disabled` | `#54CF97` | `#54CF97` | `Brand/primary/500` | `Brand/primary/500` |
+| `text.tabPill.selected-disabled` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` | `Primitive/color/neutral/800` |
+| `text.tabCapsule.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.tabCapsule.hover` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `text.tabCapsule.selected` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `text.tabCapsule.disabled` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` | `Primitive/color/neutral/700` |
+| `text.tabCapsule.inProgress` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.tabCapsule.success` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.timeslot.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.timeslot.hover` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `text.timeslot.disabled` | `#E2F3EB` | `#003322` | `Brand/primary/100` | `Brand/primary/900` |
+| `text.timeslot.selected` | `#08A768` | `#6AD6A5` | `Brand/primary/600` | `Brand/primary/400` |
+| `text.accordion.collapsed` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.accordion.expanded` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.accordion.disabled` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` | `Primitive/color/neutral/600` |
+| `text.accordion.content` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` | `Primitive/color/neutral/400` |
+| `text.alert.info` | `#1D4ED8` | `#93C5FD` | `Primitive/color/blue/700` | `Primitive/color/blue/300` |
+| `text.alert.success` | `#196C65` | `#6CDCCA` | `Primitive/color/teal/700` | `Primitive/color/teal/300` |
+| `text.alert.warning` | `#C2410C` | `#FDBA74` | `Primitive/color/orange/700` | `Primitive/color/orange/300` |
+| `text.alert.error` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` | `Primitive/color/red/300` |
+| `text.alertDialog.text` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.alertDialog.subtext` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` | `Primitive/color/neutral/400` |
+| `text.calendar.date-default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.calendar.date-current` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `text.calendar.date-hover` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `text.calendar.date-selected` | `#FFFFFF` | `#DADADA` | `Primitive/color/grey/50` | `Primitive/color/grey/950` |
+| `text.calendar.date-disabled` | `#CBD5E1` | `#334155` | `Primitive/color/slate/300` | `Primitive/color/slate/700` |
+| `text.calendar.month` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.calendar slot.date-default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.calendar slot.date-current` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
+| `text.calendar slot.date-hover` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `text.calendar slot.date-selected` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` | `Primitive/color/slate/950` |
+| `text.calendar slot.date-disabled` | `#CBD5E1` | `#334155` | `Primitive/color/slate/300` | `Primitive/color/slate/700` |
+| `text.calendar slot.month` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.calendar slot.slot-default` | `#54CF97` | `#54CF97` | `Brand/primary/500` | `Brand/primary/500` |
+| `text.calendar slot.slot-hover` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `text.calendar slot.slot-selected` | `#FFFFFF` | `#DADADA` | `Primitive/color/grey/50` | `Primitive/color/grey/950` |
+| `text.calendar slot.slot-disabled` | `#CBD5E1` | `#334155` | `Primitive/color/slate/300` | `Primitive/color/slate/700` |
+| `text.calendar slot.text` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `text.calendar slot.cta-default` | `#08A768` | `#6AD6A5` | `Brand/primary/600` | `Brand/primary/400` |
+| `text.calendar slot.cta-hover` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `text.calendar slot.cta-disabled` | `#CBD5E1` | `#334155` | `Primitive/color/slate/300` | `Primitive/color/slate/700` |
+| `text.list.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.list.subtext` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` | `Primitive/color/neutral/500` |
+| `text.list.hover` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `text.list.subtext-hover` | `#54CF97` | `#54CF97` | `Brand/primary/500` | `Brand/primary/500` |
+| `text.list.selected` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.list.selected-hover` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `text.modal.text` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.modal.subtext` | `#ADB2B7` | `#ADB2B7` | `Primitive/color/neutral/400` | `Primitive/color/neutral/400` |
+| `text.modal.content` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` | `Primitive/color/neutral/400` |
+| `text.sideMenu.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.sideMenu.hover` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `text.sideMenu.disabled` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` | `Primitive/color/neutral/600` |
+| `text.sideMenu.selected` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `text.sideMenu.selected-hover` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `text.topic.primary-title` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `text.topic.primary-subtext-default` | `#858C92` | `#ADB2B7` | `Primitive/color/neutral/500` | `Primitive/color/neutral/400` |
+| `text.topic.primary-hover` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `text.topic.primary-subtext-hover` | `#858C92` | `#ADB2B7` | `Primitive/color/neutral/500` | `Primitive/color/neutral/400` |
+| `text.topic.primary-disabled` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` | `Primitive/color/neutral/600` |
+| `text.topic.primary-subtext-disabled` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` | `Primitive/color/neutral/700` |
+| `text.topic.secondary-title` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `text.topic.secondary-subtext` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` | `Primitive/color/neutral/600` |
+| `text.topic.secondary-subtext-on` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` | `Primitive/color/neutral/500` |
+| `text.topic.tertiary-title` | `#363B3F` | `#E2E4E6` | `Primitive/color/neutral/800` | `Primitive/color/neutral/200` |
+| `text.topic.tertiary-subtext` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` | `Primitive/color/neutral/600` |
+| `text.topic.tertiary-subtext-on` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` | `Primitive/color/neutral/500` |
+| `text.navigation.title` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `text.navigation.subtext` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` | `Primitive/color/neutral/500` |
+| `text.statusSummaryCard.Info-number` | `#1D4ED8` | `#93C5FD` | `Primitive/color/blue/700` | `Primitive/color/blue/300` |
+| `text.statusSummaryCard.Indigo-number` | `#4F46E5` | `#C7D2FE` | `Primitive/color/indigo/700` | `Primitive/color/indigo/300` |
+| `text.statusSummaryCard.lavender-number` | `#8A6CD8` | `#D0BEFF` | `Primitive/color/lavender/700` | `Primitive/color/lavender/300` |
+| `text.statusSummaryCard.sakura-number` | `#D687A8` | `#FFCFDF` | `Primitive/color/sakura/700` | `Primitive/color/sakura/300` |
+| `text.statusSummaryCard.Positive-number` | `#196C65` | `#6CDCCA` | `Primitive/color/teal/700` | `Primitive/color/teal/300` |
+| `text.statusSummaryCard.Lime-number` | `#6B8E26` | `#BDE36A` | `Primitive/color/lime/700` | `Primitive/color/lime/300` |
+| `text.statusSummaryCard.Inprogress-number` | `#C2410C` | `#FDBA74` | `Primitive/color/orange/700` | `Primitive/color/orange/300` |
+| `text.statusSummaryCard.Destructive-number` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` | `Primitive/color/red/300` |
+| `text.statusSummaryCard.subtext` | `#858C92` | `#ADB2B7` | `Primitive/color/neutral/500` | `Primitive/color/neutral/400` |
+| `text.statusSummaryCard.increase` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` | `Primitive/color/neutral/400` |
+| `text.statusSummaryCard.decrease` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` | `Primitive/color/neutral/400` |
+| `text.categorySummaryCard.A-number` | `#1D4ED8` | `#93C5FD` | `Primitive/color/blue/700` | `Primitive/color/blue/300` |
+| `text.categorySummaryCard.B-number` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `text.categorySummaryCard.C-number` | `#196C65` | `#6CDCCA` | `Primitive/color/teal/700` | `Primitive/color/teal/300` |
+| `text.categorySummaryCard.D-number` | `#871598` | `#EA78F9` | `Primitive/color/magenta/700` | `Primitive/color/magenta/300` |
+| `text.categorySummaryCard.E-number` | `#4F46E5` | `#C7D2FE` | `Primitive/color/indigo/700` | `Primitive/color/indigo/300` |
+| `text.categorySummaryCard.F-number` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` | `Primitive/color/red/300` |
+| `text.categorySummaryCard.G-number` | `#A16207` | `#FDE047` | `Primitive/color/yellow/700` | `Primitive/color/yellow/300` |
+| `text.categorySummaryCard.H-number` | `#C2410C` | `#FDBA74` | `Primitive/color/orange/700` | `Primitive/color/orange/300` |
+| `text.categorySummaryCard.Title` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `text.categorySummaryCard.Subtext` | `#858C92` | `#ADB2B7` | `Primitive/color/neutral/500` | `Primitive/color/neutral/400` |
+| `text.categorySummaryCard.Warning` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` | `Primitive/color/red/300` |
+| `text.formBuilder.text` | `#007549` | `#54CF97` | `Brand/primary/700` | `Brand/primary/500` |
+| `text.formBuilder.subtext` | `#858C92` | `#C9CDD0` | `Primitive/color/neutral/500` | `Primitive/color/neutral/300` |
+| `text.formBuilder.error` | `#DC2626` | `#FCA5A5` | `Primitive/color/red/600` | `Primitive/color/red/300` |
+| `text.steps.default` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `text.steps.select` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
+| `text.steps.success` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
 | `text.steps.title` | `#007549 @ 50%` | `#7DE0B3 @ 50%` | `Brand/primaryText/700` |
-| `text.steps.title-hover` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `text.steps.title-select` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `text.steps.title-success` | `#196C65` | `#6CDCCA` | `Primitive/color/teal/700` |
-| `text.steps.subtitle` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` |
-| `text.table.title` | `#004C31` | `#C5EDDA` | `Brand/primary/800` |
-| `text.table.subtext` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` |
-| `text.table.footer` | `#004C31` | `#C5EDDA` | `Brand/primary/800` |
+| `text.steps.title-hover` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `text.steps.title-select` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `text.steps.title-success` | `#196C65` | `#6CDCCA` | `Primitive/color/teal/700` | `Primitive/color/teal/300` |
+| `text.steps.subtitle` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` | `Primitive/color/neutral/500` |
+| `text.table.title` | `#004C31` | `#C5EDDA` | `Brand/primary/800` | `Brand/primary/200` |
+| `text.table.subtext` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` | `Primitive/color/neutral/500` |
+| `text.table.footer` | `#004C31` | `#C5EDDA` | `Brand/primary/800` | `Brand/primary/200` |
 
 ### 4.3. `border`
 
-| Token | Light | Dark | Alias (Light) |
-|-------|-------|------|----------------|
-| `border.brandPrimary.default` | `#007549` | `#91DFBB` | `Brand/primary/700` |
+| Token | Light | Dark | Alias (Light) | Alias (Dark) |
+|-------|-------|------|----------------|----------------|
+| `border.brandPrimary.default` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
 | `border.brandPrimary.secondary` | `#08A768` | `#08A768` | `Brand/primary/400` · ⚠ โค้ด ≠ Figma (Figma: `#6AD6A5`) |
-| `border.brandPrimary.tertiary` | `#C5EDDA` | `#004C31` | `Brand/primary/200` |
-| `border.brandPrimary.quaternary` | `#E2F3EB` | `#003322` | `Brand/primary/100` |
-| `border.brandSecondary.default` | `#427C3D` | `#78B573` | `Brand/secondary/600` |
-| `border.brandSecondary.secondary` | `#78B573` | `#427C3D` | `Brand/secondary/400` |
-| `border.brandSecondary.tertiary` | `#E1F0E0` | `#2E4F2C` | `Brand/secondary/200` |
-| `border.brandSecondary.quaternary` | `#EFF5EF` | `#274126` | `Brand/secondary/100` |
-| `border.neutral.default` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` |
+| `border.brandPrimary.tertiary` | `#C5EDDA` | `#004C31` | `Brand/primary/200` | `Brand/primary/800` |
+| `border.brandPrimary.quaternary` | `#E2F3EB` | `#003322` | `Brand/primary/100` | `Brand/primary/900` |
+| `border.brandSecondary.default` | `#427C3D` | `#78B573` | `Brand/secondary/600` | `Brand/secondary/400` |
+| `border.brandSecondary.secondary` | `#78B573` | `#427C3D` | `Brand/secondary/400` | `Brand/secondary/600` |
+| `border.brandSecondary.tertiary` | `#E1F0E0` | `#2E4F2C` | `Brand/secondary/200` | `Brand/secondary/800` |
+| `border.brandSecondary.quaternary` | `#EFF5EF` | `#274126` | `Brand/secondary/100` | `Brand/secondary/900` |
+| `border.neutral.default` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` | `Primitive/color/neutral/400` |
 | `border.neutral.secondary` | `#C8CDD1` | `#636B72` | `Primitive/color/neutral/400` · ⚠ โค้ด ≠ Figma (Figma: `#ADB2B7`) |
-| `border.neutral.tertiary` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` |
-| `border.neutral.quaternary` | `#F4F5F5` | `#222629` | `Primitive/color/neutral/100` |
-| `border.disabled.default` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` |
-| `border.disabled.secondary` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
-| `border.disabled.tertiary` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` |
-| `border.disabled.quaternary` | `#F4F5F5` | `#222629` | `Primitive/color/neutral/100` |
-| `border.positive.default` | `#1B867D` | `#3EC3B2` | `Primitive/color/teal/600` |
-| `border.positive.secondary` | `#3EC3B2` | `#1B867D` | `Primitive/color/teal/400` |
-| `border.positive.tertiary` | `#A2EDDE` | `#195652` | `Primitive/color/teal/200` |
-| `border.positive.quaternary` | `#D1F6EE` | `#194845` | `Primitive/color/teal/100` |
+| `border.neutral.tertiary` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` | `Primitive/color/neutral/800` |
+| `border.neutral.quaternary` | `#F4F5F5` | `#222629` | `Primitive/color/neutral/100` | `Primitive/color/neutral/900` |
+| `border.disabled.default` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` | `Primitive/color/neutral/400` |
+| `border.disabled.secondary` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` | `Primitive/color/neutral/600` |
+| `border.disabled.tertiary` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` | `Primitive/color/neutral/800` |
+| `border.disabled.quaternary` | `#F4F5F5` | `#222629` | `Primitive/color/neutral/100` | `Primitive/color/neutral/900` |
+| `border.positive.default` | `#1B867D` | `#3EC3B2` | `Primitive/color/teal/600` | `Primitive/color/teal/400` |
+| `border.positive.secondary` | `#3EC3B2` | `#1B867D` | `Primitive/color/teal/400` | `Primitive/color/teal/600` |
+| `border.positive.tertiary` | `#A2EDDE` | `#195652` | `Primitive/color/teal/200` | `Primitive/color/teal/800` |
+| `border.positive.quaternary` | `#D1F6EE` | `#194845` | `Primitive/color/teal/100` | `Primitive/color/teal/900` |
 | `border.warning.default` | `#FDBA74` | `#FB923C` | `Primitive/color/orange/600` · ⚠ โค้ด ≠ Figma (Figma: `#EA580C`) |
-| `border.warning.secondary` | `#FB923C` | `#EA580C` | `Primitive/color/orange/400` |
-| `border.warning.tertiary` | `#FED7AA` | `#9A3412` | `Primitive/color/orange/200` |
-| `border.warning.quaternary` | `#FFEDD5` | `#7C2D12` | `Primitive/color/orange/100` |
-| `border.progress.default` | `#CA8A04` | `#FACC15` | `Primitive/color/yellow/600` |
-| `border.progress.secondary` | `#FACC15` | `#CA8A04` | `Primitive/color/yellow/400` |
-| `border.progress.tertiary` | `#FEF08A` | `#854D0E` | `Primitive/color/yellow/200` |
-| `border.progress.quaternary` | `#FEF9C3` | `#713F12` | `Primitive/color/yellow/100` |
+| `border.warning.secondary` | `#FB923C` | `#EA580C` | `Primitive/color/orange/400` | `Primitive/color/orange/600` |
+| `border.warning.tertiary` | `#FED7AA` | `#9A3412` | `Primitive/color/orange/200` | `Primitive/color/orange/800` |
+| `border.warning.quaternary` | `#FFEDD5` | `#7C2D12` | `Primitive/color/orange/100` | `Primitive/color/orange/900` |
+| `border.progress.default` | `#CA8A04` | `#FACC15` | `Primitive/color/yellow/600` | `Primitive/color/yellow/400` |
+| `border.progress.secondary` | `#FACC15` | `#CA8A04` | `Primitive/color/yellow/400` | `Primitive/color/yellow/600` |
+| `border.progress.tertiary` | `#FEF08A` | `#854D0E` | `Primitive/color/yellow/200` | `Primitive/color/yellow/800` |
+| `border.progress.quaternary` | `#FEF9C3` | `#713F12` | `Primitive/color/yellow/100` | `Primitive/color/yellow/900` |
 | `border.danger.default` | `#E58585` | `#F87171` | `Primitive/color/red/600` · ⚠ โค้ด ≠ Figma (Figma: `#DC2626`) |
-| `border.danger.secondary` | `#F87171` | `#DC2626` | `Primitive/color/red/400` |
+| `border.danger.secondary` | `#F87171` | `#DC2626` | `Primitive/color/red/400` | `Primitive/color/red/600` |
 | `border.danger.tertiary` | `#F6C9C9` | `#991B1B` | `Primitive/color/red/200` · ⚠ โค้ด ≠ Figma (Figma: `#FECACA`) |
 | `border.danger.quaternary` | `#F7D9D9` | `#7F1D1D` | `Primitive/color/red/100` · ⚠ โค้ด ≠ Figma (Figma: `#FEE2E2`) |
-| `border.info.default` | `#2563EB` | `#60A5FA` | `Primitive/color/blue/600` |
-| `border.info.secondary` | `#60A5FA` | `#2563EB` | `Primitive/color/blue/400` |
-| `border.info.tertiary` | `#BFDBFE` | `#1E40AF` | `Primitive/color/blue/200` |
-| `border.info.quaternary` | `#DBEAFE` | `#1E3A8A` | `Primitive/color/blue/100` |
-| `border.input.default` | `#E2E4E6` | `#4D5358` | `Primitive/color/neutral/200` |
-| `border.input.hover` | `#08A768` | `#6AD6A5` | `Brand/primary/600` |
-| `border.input.typing` | `#08A768` | `#6AD6A5` | `Brand/primary/600` |
-| `border.input.filled` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` |
-| `border.input.error` | `#DC2626` | `#F87171` | `Primitive/color/red/600` |
-| `border.input.disabled` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` |
-| `border.primarySearch.default` | `#08A768` | `#6AD6A5` | `Brand/primary/600` |
-| `border.primarySearch.hover` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `border.primarySearch.typing` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `border.primarySearch.filled` | `#08A768` | `#6AD6A5` | `Brand/primary/600` |
+| `border.info.default` | `#2563EB` | `#60A5FA` | `Primitive/color/blue/600` | `Primitive/color/blue/400` |
+| `border.info.secondary` | `#60A5FA` | `#2563EB` | `Primitive/color/blue/400` | `Primitive/color/blue/600` |
+| `border.info.tertiary` | `#BFDBFE` | `#1E40AF` | `Primitive/color/blue/200` | `Primitive/color/blue/800` |
+| `border.info.quaternary` | `#DBEAFE` | `#1E3A8A` | `Primitive/color/blue/100` | `Primitive/color/blue/900` |
+| `border.input.default` | `#E2E4E6` | `#4D5358` | `Primitive/color/neutral/200` | `Primitive/color/neutral/700` |
+| `border.input.hover` | `#08A768` | `#6AD6A5` | `Brand/primary/600` | `Brand/primary/400` |
+| `border.input.typing` | `#08A768` | `#6AD6A5` | `Brand/primary/600` | `Brand/primary/400` |
+| `border.input.filled` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` | `Primitive/color/neutral/800` |
+| `border.input.error` | `#DC2626` | `#F87171` | `Primitive/color/red/600` | `Primitive/color/red/400` |
+| `border.input.disabled` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` | `Primitive/color/neutral/800` |
+| `border.primarySearch.default` | `#08A768` | `#6AD6A5` | `Brand/primary/600` | `Brand/primary/400` |
+| `border.primarySearch.hover` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `border.primarySearch.typing` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `border.primarySearch.filled` | `#08A768` | `#6AD6A5` | `Brand/primary/600` | `Brand/primary/400` |
 | `border.aiSearch.default` | `#6F82FF` | `#818CF8` | `Primitive/color/indigo/500` · ⚠ โค้ด ≠ Figma (Figma: `#818CF8`) |
 | `border.aiSearch.hover` | `#4338CA` | `#C7D2FE` | `Primitive/color/indigo/700` · ⚠ โค้ด ≠ Figma (Figma: `#4F46E5`) |
 | `border.aiSearch.typing` | `#4338CA` | `#C7D2FE` | `Primitive/color/indigo/700` · ⚠ โค้ด ≠ Figma (Figma: `#4F46E5`) |
 | `border.aiSearch.filled` | `#4F46E5` | `#818CF8` | `Primitive/color/indigo/500` · ⚠ โค้ด ≠ Figma (Figma: `#818CF8`) |
-| `border.secondarySearch.default` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` |
-| `border.secondarySearch.hover` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `border.secondarySearch.typing` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `border.secondarySearch.filled` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` |
-| `border.image.default` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
-| `border.brandPrimaryButton.default` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `border.brandPrimaryButton.default-hover` | `#004C31` | `#C5EDDA` | `Brand/primary/800` |
-| `border.brandPrimaryButton.secondary` | `#6AD6A5` | `#08A768` | `Brand/primary/400` |
-| `border.brandPrimaryButton.secondary-hover` | `#54CF97` | `#54CF97` | `Brand/primary/500` |
-| `border.brandPrimaryButton.tertiary` | `#C5EDDA` | `#004C31` | `Brand/primary/200` |
-| `border.brandPrimaryButton.tertiary-hover` | `#91DFBB` | `#007549` | `Brand/primary/300` |
-| `border.brandPrimaryButton.quaternary` | `#E2F3EB` | `#003322` | `Brand/primary/100` |
-| `border.brandPrimaryButton.quaternary-hover` | `#C5EDDA` | `#004C31` | `Brand/primary/200` |
-| `border.brandSecondaryButton.default` | `#427C3D` | `#78B573` | `Brand/secondary/600` |
-| `border.brandSecondaryButton.default-hover` | `#366233` | `#A7D2A3` | `Brand/secondary/700` |
-| `border.brandSecondaryButton.secondary` | `#78B573` | `#427C3D` | `Brand/secondary/400` |
-| `border.brandSecondaryButton.secondary-hover` | `#53954E` | `#53954E` | `Brand/secondary/500` |
-| `border.brandSecondaryButton.tertiary` | `#E1F0E0` | `#2E4F2C` | `Brand/secondary/200` |
-| `border.brandSecondaryButton.tertiary-hover` | `#A7D2A3` | `#366233` | `Brand/secondary/300` |
-| `border.brandSecondaryButton.quaternary` | `#EFF5EF` | `#274126` | `Brand/secondary/100` |
-| `border.brandSecondaryButton.quaternary-hover` | `#E1F0E0` | `#2E4F2C` | `Brand/secondary/200` |
-| `border.disabledButton.default` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` |
-| `border.disabledButton.secondary` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
-| `border.disabledButton.tertiary` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` |
-| `border.disabledButton.quaternary` | `#F4F5F5` | `#222629` | `Primitive/color/neutral/100` |
-| `border.dangerButton.default` | `#DC2626` | `#FCA5A5` | `Primitive/color/red/600` |
-| `border.dangerButton.default-hover` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` |
-| `border.dangerButton.secondary` | `#F87171` | `#DC2626` | `Primitive/color/red/400` |
-| `border.dangerButton.secondary-hover` | `#EF4444` | `#EF4444` | `Primitive/color/red/500` |
-| `border.dangerButton.tertiary` | `#FECACA` | `#7F1D1D` | `Primitive/color/red/200` |
-| `border.dangerButton.tertiary-hover` | `#FCA5A5` | `#B91C1C` | `Primitive/color/red/300` |
-| `border.dangerButton.quaternary` | `#FEE2E2` | `#7F1D1D` | `Primitive/color/red/100` |
-| `border.dangerButton.quaternary-hover` | `#FECACA` | `#991B1B` | `Primitive/color/red/200` |
+| `border.secondarySearch.default` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` | `Primitive/color/neutral/700` |
+| `border.secondarySearch.hover` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `border.secondarySearch.typing` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `border.secondarySearch.filled` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` | `Primitive/color/neutral/700` |
+| `border.image.default` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
+| `border.brandPrimaryButton.default` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `border.brandPrimaryButton.default-hover` | `#004C31` | `#C5EDDA` | `Brand/primary/800` | `Brand/primary/200` |
+| `border.brandPrimaryButton.secondary` | `#6AD6A5` | `#08A768` | `Brand/primary/400` | `Brand/primary/600` |
+| `border.brandPrimaryButton.secondary-hover` | `#54CF97` | `#54CF97` | `Brand/primary/500` | `Brand/primary/500` |
+| `border.brandPrimaryButton.tertiary` | `#C5EDDA` | `#004C31` | `Brand/primary/200` | `Brand/primary/800` |
+| `border.brandPrimaryButton.tertiary-hover` | `#91DFBB` | `#007549` | `Brand/primary/300` | `Brand/primary/700` |
+| `border.brandPrimaryButton.quaternary` | `#E2F3EB` | `#003322` | `Brand/primary/100` | `Brand/primary/900` |
+| `border.brandPrimaryButton.quaternary-hover` | `#C5EDDA` | `#004C31` | `Brand/primary/200` | `Brand/primary/800` |
+| `border.brandSecondaryButton.default` | `#427C3D` | `#78B573` | `Brand/secondary/600` | `Brand/secondary/400` |
+| `border.brandSecondaryButton.default-hover` | `#366233` | `#A7D2A3` | `Brand/secondary/700` | `Brand/secondary/300` |
+| `border.brandSecondaryButton.secondary` | `#78B573` | `#427C3D` | `Brand/secondary/400` | `Brand/secondary/600` |
+| `border.brandSecondaryButton.secondary-hover` | `#53954E` | `#53954E` | `Brand/secondary/500` | `Brand/secondary/500` |
+| `border.brandSecondaryButton.tertiary` | `#E1F0E0` | `#2E4F2C` | `Brand/secondary/200` | `Brand/secondary/800` |
+| `border.brandSecondaryButton.tertiary-hover` | `#A7D2A3` | `#366233` | `Brand/secondary/300` | `Brand/secondary/700` |
+| `border.brandSecondaryButton.quaternary` | `#EFF5EF` | `#274126` | `Brand/secondary/100` | `Brand/secondary/900` |
+| `border.brandSecondaryButton.quaternary-hover` | `#E1F0E0` | `#2E4F2C` | `Brand/secondary/200` | `Brand/secondary/800` |
+| `border.disabledButton.default` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` | `Primitive/color/neutral/400` |
+| `border.disabledButton.secondary` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` | `Primitive/color/neutral/600` |
+| `border.disabledButton.tertiary` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` | `Primitive/color/neutral/800` |
+| `border.disabledButton.quaternary` | `#F4F5F5` | `#222629` | `Primitive/color/neutral/100` | `Primitive/color/neutral/900` |
+| `border.dangerButton.default` | `#DC2626` | `#FCA5A5` | `Primitive/color/red/600` | `Primitive/color/red/300` |
+| `border.dangerButton.default-hover` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` | `Primitive/color/red/300` |
+| `border.dangerButton.secondary` | `#F87171` | `#DC2626` | `Primitive/color/red/400` | `Primitive/color/red/600` |
+| `border.dangerButton.secondary-hover` | `#EF4444` | `#EF4444` | `Primitive/color/red/500` | `Primitive/color/red/500` |
+| `border.dangerButton.tertiary` | `#FECACA` | `#7F1D1D` | `Primitive/color/red/200` | `Primitive/color/red/900` |
+| `border.dangerButton.tertiary-hover` | `#FCA5A5` | `#B91C1C` | `Primitive/color/red/300` | `Primitive/color/red/700` |
+| `border.dangerButton.quaternary` | `#FEE2E2` | `#7F1D1D` | `Primitive/color/red/100` | `Primitive/color/red/900` |
+| `border.dangerButton.quaternary-hover` | `#FECACA` | `#991B1B` | `Primitive/color/red/200` | `Primitive/color/red/800` |
 | `border.neutralButton.default` | `#4D5358` | `#ADB2B7` | `Primitive/color/neutral/600` · ⚠ โค้ด ≠ Figma (Figma: `#636B72`) |
 | `border.neutralButton.default-hover` | `#363B3F` | `#C9CDD0` | `Primitive/color/neutral/700` · ⚠ โค้ด ≠ Figma (Figma: `#4D5358`) |
-| `border.neutralButton.secondary` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
-| `border.neutralButton.secondary-hover` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` |
-| `border.neutralButton.tertiary` | `#E2E4E6` | `#4D5358` | `Primitive/color/neutral/200` |
-| `border.neutralButton.tertiary-hover` | `#C9CDD0` | `#636B72` | `Primitive/color/neutral/300` |
-| `border.neutralButton.quaternary` | `#F4F5F5` | `#222629` | `Primitive/color/neutral/100` |
-| `border.neutralButton.quaternary-hover` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` |
-| `border.neutralTag.default` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` |
-| `border.neutralTag.default-hover` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` |
-| `border.neutralTag.selected` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` |
-| `border.neutralTag.quaternary` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` |
-| `border.brandTag.default` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` |
-| `border.brandTag.default-hover` | `#C5EDDA` | `#004C31` | `Brand/primary/200` |
-| `border.brandTag.selected` | `#C5EDDA` | `#004C31` | `Brand/primary/200` |
-| `border.brandTag.quaternary` | `#C5EDDA` | `#004C31` | `Brand/primary/200` |
-| `border.modal.default` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `border.modal.secondary` | `#6AD6A5` | `#08A768` | `Brand/primary/400` |
-| `border.modal.tertiary` | `#C5EDDA` | `#004C31` | `Brand/primary/200` |
-| `border.modal.quaternary` | `#E2F3EB` | `#003322` | `Brand/primary/100` |
-| `border.modal.cardBorder` | `#F5F6FA` | `#004C31` | `Primitive/color/slate/50` |
-| `border.navigation.default` | `#F4F5F5` | `#4D5358` | `Primitive/color/neutral/100` |
-| `border.calendar slot.slot-default` | `#E2F3EB` | `#002318` | `Brand/primary/100` |
-| `border.calendar slot.slot-hover` | `#C5EDDA` | `#004C31` | `Brand/primary/200` |
-| `border.calendar slot.slot-selected` | `#24A899` | `#24A899` | `Primitive/color/teal/500` |
-| `border.calendar slot.slot-disabled` | `#F5F7F9` | `#0F172A` | `Primitive/color/slate/100` |
-| `border.statusBadge.brand` | `#C5EDDA` | `#004C31` | `Brand/primary/200` |
-| `border.statusBadge.neutral` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` |
-| `border.statusBadge.info` | `#BFDBFE` | `#1E40AF` | `Primitive/color/blue/200` |
-| `border.statusBadge.success` | `#A2EDDE` | `#195652` | `Primitive/color/teal/200` |
-| `border.statusBadge.warning` | `#FEF08A` | `#854D0E` | `Primitive/color/yellow/200` |
-| `border.statusBadge.warning2` | `#FED7AA` | `#9A3412` | `Primitive/color/orange/200` |
-| `border.statusBadge.error` | `#FECACA` | `#991B1B` | `Primitive/color/red/200` |
-| `border.colorfulBadge.brand` | `#C5EDDA` | `#004C31` | `Brand/primary/200` |
-| `border.colorfulBadge.neutral` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` |
-| `border.colorfulBadge.info` | `#BFDBFE` | `#1E40AF` | `Primitive/color/blue/200` |
-| `border.colorfulBadge.success` | `#A2EDDE` | `#195652` | `Primitive/color/teal/200` |
-| `border.colorfulBadge.warning` | `#FEF08A` | `#854D0E` | `Primitive/color/yellow/200` |
-| `border.colorfulBadge.warning2` | `#FED7AA` | `#9A3412` | `Primitive/color/orange/200` |
-| `border.colorfulBadge.error` | `#FECACA` | `#991B1B` | `Primitive/color/red/200` |
-| `border.popover.grey` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` |
-| `border.tab.hover` | `#08A768` | `#6AD6A5` | `Brand/primary/600` |
-| `border.tab.selected` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `border.tab.selected-hover` | `#004C31` | `#C5EDDA` | `Brand/primary/800` |
-| `border.tab.line` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` |
-| `border.accordion.default` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` |
-| `border.accordion.line` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` |
-| `border.alert.info` | `#DBEAFE` | `#1E3A8A` | `Primitive/color/blue/100` |
-| `border.alert.success` | `#D1F6EE` | `#194845` | `Primitive/color/teal/100` |
-| `border.alert.warning` | `#FFEDD5` | `#7C2D12` | `Primitive/color/orange/100` |
-| `border.alert.error` | `#FEE2E2` | `#7F1D1D` | `Primitive/color/red/100` |
-| `border.alertDialog.default` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` |
-| `border.sideMenu.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `border.sideMenu.hover` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `border.sideMenu.disabled` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
-| `border.sideMenu.selected` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `border.sideMenu.selected-hover` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `border.timeslot.default` | `#E2F3EB` | `#003322` | `Brand/primary/100` |
-| `border.pill.default` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `border.tabCapsule.default` | `#E2E4E6` | `#4D5358` | `Primitive/color/neutral/200` |
-| `border.tabCapsule.hover` | `#C5EDDA` | `#007549` | `Brand/primary/200` |
-| `border.tabCapsule.selected` | `#C5EDDA` | `#007549` | `Brand/primary/200` |
-| `border.tabCapsule.disabled` | `#E2E4E6` | `#4D5358` | `Primitive/color/neutral/200` |
-| `border.tabCapsule.inProgress` | `#E2E4E6` | `#4D5358` | `Primitive/color/neutral/200` |
-| `border.tabCapsule.success` | `#E2E4E6` | `#24A899` | `Primitive/color/neutral/200` |
-| `border.card.default` | `#E2E4E6` | `#4D5358` | `Primitive/color/neutral/200` |
-| `border.card.brand-100` | `#C5EDDA` | `#4D5358` | `Primitive/color/emerald/200` |
-| `border.card.indigo-100` | `#E0E7FF` | `#4F46E5` | `Primitive/color/indigo/200` |
-| `border.card.blue-100` | `#BFDBFE` | `#1D4ED8` | `Primitive/color/blue/200` |
-| `border.card.sakura-100` | `#FFE0EC` | `#D687A8` | `Primitive/color/sakura/200` |
-| `border.switch.default` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` |
-| `border.switch.disabled` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` |
-| `border.formBuilder.default` | `#C5EDDA` | `#004C31` | `Brand/primary/200` |
-| `border.formBuilder.hover` | `#08A768` | `#6AD6A5` | `Brand/primary/600` |
-| `border.formBuilder.filled` | `#E2F3EB` | `#003322` | `Brand/primary/100` |
-| `border.formBuilder.error` | `#DC2626` | `#F87171` | `Primitive/color/red/600` |
-| `border.steps.default` | `#C5EDDA` | `#004C31` | `Brand/primary/200` |
-| `border.table.default` | `#E2F3EB` | `#003322` | `Brand/primary/100` |
-| `border.table.line` | `#F4FBF8` | `#002318` | `Brand/primary/50` |
-| `border.dropdown.default` | `#EBEBEB` | `#F4F4F4` | `Primitive/color/grey/600` |
-| `border.actionList.default` | `#EBEBEB` | `#F4F4F4` | `Primitive/color/grey/600` |
-| `border.slider.primary` | `#54CF97` | `#54CF97` | `Brand/primary/500` |
-| `border.slider.neutral` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` |
-| `border.slider.blue` | `#3B82F6` | `#3B82F6` | `Primitive/color/blue/500` |
-| `border.slider.indigo` | `#818CF8` | `#818CF8` | `Primitive/color/indigo/500` |
-| `border.slider.lavender` | `#C8B6FF` | `#C8B6FF` | `Primitive/color/lavender/500` |
-| `border.slider.teal` | `#24A899` | `#24A899` | `Primitive/color/teal/500` |
-| `border.slider.lime` | `#A5CF4F` | `#A5CF4F` | `Primitive/color/lime/500` |
-| `border.slider.sakura` | `#F5AFCA` | `#F5AFCA` | `Primitive/color/sakura/500` |
-| `border.slider.orange` | `#F97316` | `#F97316` | `Primitive/color/orange/500` |
-| `border.slider.red` | `#EF4444` | `#EF4444` | `Primitive/color/red/500` |
+| `border.neutralButton.secondary` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` | `Primitive/color/neutral/600` |
+| `border.neutralButton.secondary-hover` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` | `Primitive/color/neutral/500` |
+| `border.neutralButton.tertiary` | `#E2E4E6` | `#4D5358` | `Primitive/color/neutral/200` | `Primitive/color/neutral/700` |
+| `border.neutralButton.tertiary-hover` | `#C9CDD0` | `#636B72` | `Primitive/color/neutral/300` | `Primitive/color/neutral/600` |
+| `border.neutralButton.quaternary` | `#F4F5F5` | `#222629` | `Primitive/color/neutral/100` | `Primitive/color/neutral/900` |
+| `border.neutralButton.quaternary-hover` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` | `Primitive/color/neutral/800` |
+| `border.neutralTag.default` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` | `Primitive/color/neutral/800` |
+| `border.neutralTag.default-hover` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` | `Primitive/color/neutral/800` |
+| `border.neutralTag.selected` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` | `Primitive/color/neutral/800` |
+| `border.neutralTag.quaternary` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` | `Primitive/color/neutral/800` |
+| `border.brandTag.default` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` | `Primitive/color/neutral/800` |
+| `border.brandTag.default-hover` | `#C5EDDA` | `#004C31` | `Brand/primary/200` | `Brand/primary/800` |
+| `border.brandTag.selected` | `#C5EDDA` | `#004C31` | `Brand/primary/200` | `Brand/primary/800` |
+| `border.brandTag.quaternary` | `#C5EDDA` | `#004C31` | `Brand/primary/200` | `Brand/primary/800` |
+| `border.modal.default` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `border.modal.secondary` | `#6AD6A5` | `#08A768` | `Brand/primary/400` | `Brand/primary/600` |
+| `border.modal.tertiary` | `#C5EDDA` | `#004C31` | `Brand/primary/200` | `Brand/primary/800` |
+| `border.modal.quaternary` | `#E2F3EB` | `#003322` | `Brand/primary/100` | `Brand/primary/900` |
+| `border.modal.cardBorder` | `#F5F6FA` | `#004C31` | `Primitive/color/slate/50` | `Brand/primary/800` |
+| `border.navigation.default` | `#F4F5F5` | `#4D5358` | `Primitive/color/neutral/100` | `Primitive/color/neutral/700` |
+| `border.calendar slot.slot-default` | `#E2F3EB` | `#002318` | `Brand/primary/100` | `Brand/primary/950` |
+| `border.calendar slot.slot-hover` | `#C5EDDA` | `#004C31` | `Brand/primary/200` | `Brand/primary/800` |
+| `border.calendar slot.slot-selected` | `#24A899` | `#24A899` | `Primitive/color/teal/500` | `Primitive/color/teal/500` |
+| `border.calendar slot.slot-disabled` | `#F5F7F9` | `#0F172A` | `Primitive/color/slate/100` | `Primitive/color/slate/900` |
+| `border.statusBadge.brand` | `#C5EDDA` | `#004C31` | `Brand/primary/200` | `Brand/primary/800` |
+| `border.statusBadge.neutral` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` | `Primitive/color/neutral/800` |
+| `border.statusBadge.info` | `#BFDBFE` | `#1E40AF` | `Primitive/color/blue/200` | `Primitive/color/blue/800` |
+| `border.statusBadge.success` | `#A2EDDE` | `#195652` | `Primitive/color/teal/200` | `Primitive/color/teal/800` |
+| `border.statusBadge.warning` | `#FEF08A` | `#854D0E` | `Primitive/color/yellow/200` | `Primitive/color/yellow/800` |
+| `border.statusBadge.warning2` | `#FED7AA` | `#9A3412` | `Primitive/color/orange/200` | `Primitive/color/orange/800` |
+| `border.statusBadge.error` | `#FECACA` | `#991B1B` | `Primitive/color/red/200` | `Primitive/color/red/800` |
+| `border.colorfulBadge.brand` | `#C5EDDA` | `#004C31` | `Brand/primary/200` | `Brand/primary/800` |
+| `border.colorfulBadge.neutral` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` | `Primitive/color/neutral/800` |
+| `border.colorfulBadge.info` | `#BFDBFE` | `#1E40AF` | `Primitive/color/blue/200` | `Primitive/color/blue/800` |
+| `border.colorfulBadge.success` | `#A2EDDE` | `#195652` | `Primitive/color/teal/200` | `Primitive/color/teal/800` |
+| `border.colorfulBadge.warning` | `#FEF08A` | `#854D0E` | `Primitive/color/yellow/200` | `Primitive/color/yellow/800` |
+| `border.colorfulBadge.warning2` | `#FED7AA` | `#9A3412` | `Primitive/color/orange/200` | `Primitive/color/orange/800` |
+| `border.colorfulBadge.error` | `#FECACA` | `#991B1B` | `Primitive/color/red/200` | `Primitive/color/red/800` |
+| `border.popover.grey` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` | `Primitive/color/neutral/800` |
+| `border.tab.hover` | `#08A768` | `#6AD6A5` | `Brand/primary/600` | `Brand/primary/400` |
+| `border.tab.selected` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `border.tab.selected-hover` | `#004C31` | `#C5EDDA` | `Brand/primary/800` | `Brand/primary/200` |
+| `border.tab.line` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` | `Primitive/color/neutral/700` |
+| `border.accordion.default` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` | `Primitive/color/neutral/700` |
+| `border.accordion.line` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` | `Primitive/color/neutral/800` |
+| `border.alert.info` | `#DBEAFE` | `#1E3A8A` | `Primitive/color/blue/100` | `Primitive/color/blue/900` |
+| `border.alert.success` | `#D1F6EE` | `#194845` | `Primitive/color/teal/100` | `Primitive/color/teal/900` |
+| `border.alert.warning` | `#FFEDD5` | `#7C2D12` | `Primitive/color/orange/100` | `Primitive/color/orange/900` |
+| `border.alert.error` | `#FEE2E2` | `#7F1D1D` | `Primitive/color/red/100` | `Primitive/color/red/900` |
+| `border.alertDialog.default` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` | `Primitive/color/neutral/800` |
+| `border.sideMenu.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `border.sideMenu.hover` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `border.sideMenu.disabled` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` | `Primitive/color/neutral/600` |
+| `border.sideMenu.selected` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `border.sideMenu.selected-hover` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `border.timeslot.default` | `#E2F3EB` | `#003322` | `Brand/primary/100` | `Brand/primary/900` |
+| `border.pill.default` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `border.tabCapsule.default` | `#E2E4E6` | `#4D5358` | `Primitive/color/neutral/200` | `Primitive/color/neutral/700` |
+| `border.tabCapsule.hover` | `#C5EDDA` | `#007549` | `Brand/primary/200` | `Brand/primary/700` |
+| `border.tabCapsule.selected` | `#C5EDDA` | `#007549` | `Brand/primary/200` | `Brand/primary/700` |
+| `border.tabCapsule.disabled` | `#E2E4E6` | `#4D5358` | `Primitive/color/neutral/200` | `Primitive/color/neutral/700` |
+| `border.tabCapsule.inProgress` | `#E2E4E6` | `#4D5358` | `Primitive/color/neutral/200` | `Primitive/color/neutral/700` |
+| `border.tabCapsule.success` | `#E2E4E6` | `#24A899` | `Primitive/color/neutral/200` | `Primitive/color/teal/500` |
+| `border.card.default` | `#E2E4E6` | `#4D5358` | `Primitive/color/neutral/200` | `Primitive/color/neutral/700` |
+| `border.card.brand-100` | `#C5EDDA` | `#4D5358` | `Primitive/color/emerald/200` | `Primitive/color/neutral/700` |
+| `border.card.indigo-100` | `#E0E7FF` | `#4F46E5` | `Primitive/color/indigo/200` | `Primitive/color/indigo/700` |
+| `border.card.blue-100` | `#BFDBFE` | `#1D4ED8` | `Primitive/color/blue/200` | `Primitive/color/blue/700` |
+| `border.card.sakura-100` | `#FFE0EC` | `#D687A8` | `Primitive/color/sakura/200` | `Primitive/color/sakura/700` |
+| `border.switch.default` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` | `Primitive/color/neutral/700` |
+| `border.switch.disabled` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` | `Primitive/color/neutral/800` |
+| `border.formBuilder.default` | `#C5EDDA` | `#004C31` | `Brand/primary/200` | `Brand/primary/800` |
+| `border.formBuilder.hover` | `#08A768` | `#6AD6A5` | `Brand/primary/600` | `Brand/primary/400` |
+| `border.formBuilder.filled` | `#E2F3EB` | `#003322` | `Brand/primary/100` | `Brand/primary/900` |
+| `border.formBuilder.error` | `#DC2626` | `#F87171` | `Primitive/color/red/600` | `Primitive/color/red/400` |
+| `border.steps.default` | `#C5EDDA` | `#004C31` | `Brand/primary/200` | `Brand/primary/800` |
+| `border.table.default` | `#E2F3EB` | `#003322` | `Brand/primary/100` | `Brand/primary/900` |
+| `border.table.line` | `#F4FBF8` | `#002318` | `Brand/primary/50` | `Brand/primary/950` |
+| `border.dropdown.default` | `#EBEBEB` | `#F4F4F4` | `Primitive/color/grey/600` | `Primitive/color/grey/400` |
+| `border.actionList.default` | `#EBEBEB` | `#F4F4F4` | `Primitive/color/grey/600` | `Primitive/color/grey/400` |
+| `border.slider.primary` | `#54CF97` | `#54CF97` | `Brand/primary/500` | `Brand/primary/500` |
+| `border.slider.neutral` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` | `Primitive/color/neutral/500` |
+| `border.slider.blue` | `#3B82F6` | `#3B82F6` | `Primitive/color/blue/500` | `Primitive/color/blue/500` |
+| `border.slider.indigo` | `#818CF8` | `#818CF8` | `Primitive/color/indigo/500` | `Primitive/color/indigo/500` |
+| `border.slider.lavender` | `#C8B6FF` | `#C8B6FF` | `Primitive/color/lavender/500` | `Primitive/color/lavender/500` |
+| `border.slider.teal` | `#24A899` | `#24A899` | `Primitive/color/teal/500` | `Primitive/color/teal/500` |
+| `border.slider.lime` | `#A5CF4F` | `#A5CF4F` | `Primitive/color/lime/500` | `Primitive/color/lime/500` |
+| `border.slider.sakura` | `#F5AFCA` | `#F5AFCA` | `Primitive/color/sakura/500` | `Primitive/color/sakura/500` |
+| `border.slider.orange` | `#F97316` | `#F97316` | `Primitive/color/orange/500` | `Primitive/color/orange/500` |
+| `border.slider.red` | `#EF4444` | `#EF4444` | `Primitive/color/red/500` | `Primitive/color/red/500` |
 
 ### 4.4. `icon`
 
-| Token | Light | Dark | Alias (Light) |
-|-------|-------|------|----------------|
-| `icon.brandPrimary.default` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `icon.brandPrimary.secondary` | `#08A768` | `#6AD6A5` | `Brand/primary/600` |
-| `icon.brandPrimary.tertiary` | `#6AD6A5` | `#08A768` | `Brand/primary/400` |
-| `icon.brandPrimary.quaternary` | `#91DFBB` | `#007549` | `Brand/primary/300` |
-| `icon.brandPrimary.on-brand` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` |
-| `icon.brandSecondary.default` | `#366233` | `#A7D2A3` | `Brand/secondary/700` |
-| `icon.brandSecondary.secondary` | `#427C3D` | `#78B573` | `Brand/secondary/600` |
-| `icon.brandSecondary.tertiary` | `#78B573` | `#427C3D` | `Brand/secondary/400` |
+| Token | Light | Dark | Alias (Light) | Alias (Dark) |
+|-------|-------|------|----------------|----------------|
+| `icon.brandPrimary.default` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `icon.brandPrimary.secondary` | `#08A768` | `#6AD6A5` | `Brand/primary/600` | `Brand/primary/400` |
+| `icon.brandPrimary.tertiary` | `#6AD6A5` | `#08A768` | `Brand/primary/400` | `Brand/primary/600` |
+| `icon.brandPrimary.quaternary` | `#91DFBB` | `#007549` | `Brand/primary/300` | `Brand/primary/700` |
+| `icon.brandPrimary.on-brand` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` | `Primitive/color/slate/950` |
+| `icon.brandSecondary.default` | `#366233` | `#A7D2A3` | `Brand/secondary/700` | `Brand/secondary/300` |
+| `icon.brandSecondary.secondary` | `#427C3D` | `#78B573` | `Brand/secondary/600` | `Brand/secondary/400` |
+| `icon.brandSecondary.tertiary` | `#78B573` | `#427C3D` | `Brand/secondary/400` | `Brand/secondary/600` |
 | `icon.brandSecondary.quaternary` | `#91DFBB` | `#366233` | `Brand/secondary/300` · ⚠ โค้ด ≠ Figma (Figma: `#A7D2A3`) |
-| `icon.brandSecondary.on-default` | `#FFFFFF` | `#102310` | `Primitive/color/grey/50` |
-| `icon.neutral.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `icon.neutral.secondary` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` |
-| `icon.neutral.tertiary` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
+| `icon.brandSecondary.on-default` | `#FFFFFF` | `#102310` | `Primitive/color/grey/50` | `Primitive/color/forest/950` |
+| `icon.neutral.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `icon.neutral.secondary` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` | `Primitive/color/neutral/400` |
+| `icon.neutral.tertiary` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` | `Primitive/color/neutral/600` |
 | `icon.neutral.quaternary` | `#C6CBD0` | `#4D5358` | `Primitive/color/neutral/300` · ⚠ โค้ด ≠ Figma (Figma: `#C9CDD0`) |
-| `icon.neutral.on-neutral` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
-| `icon.disabled.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `icon.disabled.secondary` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` |
-| `icon.disabled.tertiary` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
-| `icon.disabled.quaternary` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` |
-| `icon.disabled.on-disabled` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
-| `icon.positive.default` | `#196C65` | `#6CDCCA` | `Primitive/color/teal/700` |
-| `icon.positive.secondary` | `#1B867D` | `#3EC3B2` | `Primitive/color/teal/600` |
-| `icon.positive.tertiary` | `#3EC3B2` | `#1B867D` | `Primitive/color/teal/400` |
-| `icon.positive.quaternary` | `#6CDCCA` | `#196C65` | `Primitive/color/teal/300` |
-| `icon.positive.on-brand` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` |
-| `icon.positive.success` | `#24A899` | `#24A899` | `Primitive/color/teal/500` |
+| `icon.neutral.on-neutral` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
+| `icon.disabled.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `icon.disabled.secondary` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` | `Primitive/color/neutral/400` |
+| `icon.disabled.tertiary` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` | `Primitive/color/neutral/600` |
+| `icon.disabled.quaternary` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` | `Primitive/color/neutral/700` |
+| `icon.disabled.on-disabled` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
+| `icon.positive.default` | `#196C65` | `#6CDCCA` | `Primitive/color/teal/700` | `Primitive/color/teal/300` |
+| `icon.positive.secondary` | `#1B867D` | `#3EC3B2` | `Primitive/color/teal/600` | `Primitive/color/teal/400` |
+| `icon.positive.tertiary` | `#3EC3B2` | `#1B867D` | `Primitive/color/teal/400` | `Primitive/color/teal/600` |
+| `icon.positive.quaternary` | `#6CDCCA` | `#196C65` | `Primitive/color/teal/300` | `Primitive/color/teal/700` |
+| `icon.positive.on-brand` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` | `Primitive/color/slate/950` |
+| `icon.positive.success` | `#24A899` | `#24A899` | `Primitive/color/teal/500` | `Primitive/color/teal/500` |
 | `icon.warning.default` | `#F59E0B` | `#FDBA74` | `Primitive/color/orange/700` · ⚠ โค้ด ≠ Figma (Figma: `#C2410C`) |
-| `icon.warning.secondary` | `#EA580C` | `#FB923C` | `Primitive/color/orange/600` |
+| `icon.warning.secondary` | `#EA580C` | `#FB923C` | `Primitive/color/orange/600` | `Primitive/color/orange/400` |
 | `icon.warning.tertiary` | `#EA580C` | `#EA580C` | `Primitive/color/orange/400` · ⚠ โค้ด ≠ Figma (Figma: `#FB923C`) |
-| `icon.warning.quaternary` | `#FDBA74` | `#C2410C` | `Primitive/color/orange/300` |
-| `icon.warning.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` |
-| `icon.progress.default` | `#A16207` | `#FDE047` | `Primitive/color/yellow/700` |
-| `icon.progress.secondary` | `#CA8A04` | `#FACC15` | `Primitive/color/yellow/600` |
-| `icon.progress.tertiary` | `#FACC15` | `#CA8A04` | `Primitive/color/yellow/400` |
-| `icon.progress.quaternary` | `#FDE047` | `#A16207` | `Primitive/color/yellow/300` |
-| `icon.progress.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` |
+| `icon.warning.quaternary` | `#FDBA74` | `#C2410C` | `Primitive/color/orange/300` | `Primitive/color/orange/700` |
+| `icon.warning.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` | `Primitive/color/slate/950` |
+| `icon.progress.default` | `#A16207` | `#FDE047` | `Primitive/color/yellow/700` | `Primitive/color/yellow/300` |
+| `icon.progress.secondary` | `#CA8A04` | `#FACC15` | `Primitive/color/yellow/600` | `Primitive/color/yellow/400` |
+| `icon.progress.tertiary` | `#FACC15` | `#CA8A04` | `Primitive/color/yellow/400` | `Primitive/color/yellow/600` |
+| `icon.progress.quaternary` | `#FDE047` | `#A16207` | `Primitive/color/yellow/300` | `Primitive/color/yellow/700` |
+| `icon.progress.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` | `Primitive/color/slate/950` |
 | `icon.danger.default` | `#DC2626` | `#FCA5A5` | `Primitive/color/red/700` · ⚠ โค้ด ≠ Figma (Figma: `#B91C1C`) |
-| `icon.danger.secondary` | `#DC2626` | `#F87171` | `Primitive/color/red/600` |
-| `icon.danger.tertiary` | `#F87171` | `#DC2626` | `Primitive/color/red/400` |
-| `icon.danger.quaternary` | `#FCA5A5` | `#B91C1C` | `Primitive/color/red/300` |
-| `icon.danger.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` |
-| `icon.info.default` | `#1D4ED8` | `#93C5FD` | `Primitive/color/blue/700` |
-| `icon.info.secondary` | `#2563EB` | `#60A5FA` | `Primitive/color/blue/600` |
-| `icon.info.tertiary` | `#60A5FA` | `#2563EB` | `Primitive/color/blue/400` |
-| `icon.info.quaternary` | `#93C5FD` | `#1D4ED8` | `Primitive/color/blue/300` |
-| `icon.info.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` |
-| `icon.indigo.default` | `#4F46E5` | `#C7D2FE` | `Primitive/color/indigo/700` |
-| `icon.indigo.secondary` | `#6366F1` | `#A5B4FC` | `Primitive/color/indigo/600` |
-| `icon.indigo.tertiary` | `#A5B4FC` | `#6366F1` | `Primitive/color/indigo/400` |
-| `icon.indigo.quaternary` | `#C7D2FE` | `#4F46E5` | `Primitive/color/indigo/300` |
-| `icon.indigo.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` |
-| `icon.lavender.default` | `#8A6CD8` | `#D0BEFF` | `Primitive/color/lavender/700` |
-| `icon.lavender.secondary` | `#A98EF0` | `#CBBCFF` | `Primitive/color/lavender/600` |
-| `icon.lavender.tertiary` | `#CBBCFF` | `#A98EF0` | `Primitive/color/lavender/400` |
-| `icon.lavender.quaternary` | `#D0BEFF` | `#8A6CD8` | `Primitive/color/lavender/300` |
-| `icon.lavender.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` |
-| `icon.lime.default` | `#6B8E26` | `#BDE36A` | `Primitive/color/lime/700` |
-| `icon.lime.secondary` | `#88B033` | `#ADD654` | `Primitive/color/lime/600` |
-| `icon.lime.tertiary` | `#ADD654` | `#88B033` | `Primitive/color/lime/400` |
-| `icon.lime.quaternary` | `#BDE36A` | `#6B8E26` | `Primitive/color/lime/300` |
-| `icon.lime.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` |
-| `icon.sakura.default` | `#D687A8` | `#FFCFDF` | `Primitive/color/sakura/700` |
-| `icon.sakura.secondary` | `#E89DBA` | `#FFC0D4` | `Primitive/color/sakura/600` |
-| `icon.sakura.tertiary` | `#FFC0D4` | `#E89DBA` | `Primitive/color/sakura/400` |
-| `icon.sakura.quaternary` | `#FFCFDF` | `#D687A8` | `Primitive/color/sakura/300` |
-| `icon.sakura.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` |
-| `icon.pink.default` | `#BE185D` | `#F9A8D4` | `Primitive/color/pink/700` |
-| `icon.pink.secondary` | `#DB2777` | `#F472B6` | `Primitive/color/pink/600` |
-| `icon.pink.tertiary` | `#F472B6` | `#DB2777` | `Primitive/color/pink/400` |
-| `icon.pink.quaternary` | `#F9A8D4` | `#BE185D` | `Primitive/color/pink/300` |
-| `icon.pink.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` |
-| `icon.navy.default` | `#4F46E5` | `#C7D2FE` | `Primitive/color/indigo/700` |
-| `icon.navy.secondary` | `#6366F1` | `#A5B4FC` | `Primitive/color/indigo/600` |
-| `icon.navy.tertiary` | `#A5B4FC` | `#6366F1` | `Primitive/color/indigo/400` |
-| `icon.navy.quaternary` | `#C7D2FE` | `#4F46E5` | `Primitive/color/indigo/300` |
-| `icon.navy.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` |
-| `icon.magenta.default` | `#871598` | `#EA78F9` | `Primitive/color/magenta/700` |
-| `icon.magenta.secondary` | `#A81BBD` | `#DC4CF2` | `Primitive/color/magenta/600` |
-| `icon.magenta.tertiary` | `#DC4CF2` | `#A81BBD` | `Primitive/color/magenta/400` |
-| `icon.magenta.quaternary` | `#EA78F9` | `#871598` | `Primitive/color/magenta/300` |
-| `icon.magenta.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` |
-| `icon.input.default` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
-| `icon.input.hover` | `#08A768` | `#6AD6A5` | `Brand/primary/600` |
-| `icon.input.typing` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
+| `icon.danger.secondary` | `#DC2626` | `#F87171` | `Primitive/color/red/600` | `Primitive/color/red/400` |
+| `icon.danger.tertiary` | `#F87171` | `#DC2626` | `Primitive/color/red/400` | `Primitive/color/red/600` |
+| `icon.danger.quaternary` | `#FCA5A5` | `#B91C1C` | `Primitive/color/red/300` | `Primitive/color/red/700` |
+| `icon.danger.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` | `Primitive/color/slate/950` |
+| `icon.info.default` | `#1D4ED8` | `#93C5FD` | `Primitive/color/blue/700` | `Primitive/color/blue/300` |
+| `icon.info.secondary` | `#2563EB` | `#60A5FA` | `Primitive/color/blue/600` | `Primitive/color/blue/400` |
+| `icon.info.tertiary` | `#60A5FA` | `#2563EB` | `Primitive/color/blue/400` | `Primitive/color/blue/600` |
+| `icon.info.quaternary` | `#93C5FD` | `#1D4ED8` | `Primitive/color/blue/300` | `Primitive/color/blue/700` |
+| `icon.info.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` | `Primitive/color/slate/950` |
+| `icon.indigo.default` | `#4F46E5` | `#C7D2FE` | `Primitive/color/indigo/700` | `Primitive/color/indigo/300` |
+| `icon.indigo.secondary` | `#6366F1` | `#A5B4FC` | `Primitive/color/indigo/600` | `Primitive/color/indigo/400` |
+| `icon.indigo.tertiary` | `#A5B4FC` | `#6366F1` | `Primitive/color/indigo/400` | `Primitive/color/indigo/600` |
+| `icon.indigo.quaternary` | `#C7D2FE` | `#4F46E5` | `Primitive/color/indigo/300` | `Primitive/color/indigo/700` |
+| `icon.indigo.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` | `Primitive/color/slate/950` |
+| `icon.lavender.default` | `#8A6CD8` | `#D0BEFF` | `Primitive/color/lavender/700` | `Primitive/color/lavender/300` |
+| `icon.lavender.secondary` | `#A98EF0` | `#CBBCFF` | `Primitive/color/lavender/600` | `Primitive/color/lavender/400` |
+| `icon.lavender.tertiary` | `#CBBCFF` | `#A98EF0` | `Primitive/color/lavender/400` | `Primitive/color/lavender/600` |
+| `icon.lavender.quaternary` | `#D0BEFF` | `#8A6CD8` | `Primitive/color/lavender/300` | `Primitive/color/lavender/700` |
+| `icon.lavender.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` | `Primitive/color/slate/950` |
+| `icon.lime.default` | `#6B8E26` | `#BDE36A` | `Primitive/color/lime/700` | `Primitive/color/lime/300` |
+| `icon.lime.secondary` | `#88B033` | `#ADD654` | `Primitive/color/lime/600` | `Primitive/color/lime/400` |
+| `icon.lime.tertiary` | `#ADD654` | `#88B033` | `Primitive/color/lime/400` | `Primitive/color/lime/600` |
+| `icon.lime.quaternary` | `#BDE36A` | `#6B8E26` | `Primitive/color/lime/300` | `Primitive/color/lime/700` |
+| `icon.lime.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` | `Primitive/color/slate/950` |
+| `icon.sakura.default` | `#D687A8` | `#FFCFDF` | `Primitive/color/sakura/700` | `Primitive/color/sakura/300` |
+| `icon.sakura.secondary` | `#E89DBA` | `#FFC0D4` | `Primitive/color/sakura/600` | `Primitive/color/sakura/400` |
+| `icon.sakura.tertiary` | `#FFC0D4` | `#E89DBA` | `Primitive/color/sakura/400` | `Primitive/color/sakura/600` |
+| `icon.sakura.quaternary` | `#FFCFDF` | `#D687A8` | `Primitive/color/sakura/300` | `Primitive/color/sakura/700` |
+| `icon.sakura.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` | `Primitive/color/slate/950` |
+| `icon.pink.default` | `#BE185D` | `#F9A8D4` | `Primitive/color/pink/700` | `Primitive/color/pink/300` |
+| `icon.pink.secondary` | `#DB2777` | `#F472B6` | `Primitive/color/pink/600` | `Primitive/color/pink/400` |
+| `icon.pink.tertiary` | `#F472B6` | `#DB2777` | `Primitive/color/pink/400` | `Primitive/color/pink/600` |
+| `icon.pink.quaternary` | `#F9A8D4` | `#BE185D` | `Primitive/color/pink/300` | `Primitive/color/pink/700` |
+| `icon.pink.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` | `Primitive/color/slate/950` |
+| `icon.navy.default` | `#4F46E5` | `#C7D2FE` | `Primitive/color/indigo/700` | `Primitive/color/indigo/300` |
+| `icon.navy.secondary` | `#6366F1` | `#A5B4FC` | `Primitive/color/indigo/600` | `Primitive/color/indigo/400` |
+| `icon.navy.tertiary` | `#A5B4FC` | `#6366F1` | `Primitive/color/indigo/400` | `Primitive/color/indigo/600` |
+| `icon.navy.quaternary` | `#C7D2FE` | `#4F46E5` | `Primitive/color/indigo/300` | `Primitive/color/indigo/700` |
+| `icon.navy.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` | `Primitive/color/slate/950` |
+| `icon.magenta.default` | `#871598` | `#EA78F9` | `Primitive/color/magenta/700` | `Primitive/color/magenta/300` |
+| `icon.magenta.secondary` | `#A81BBD` | `#DC4CF2` | `Primitive/color/magenta/600` | `Primitive/color/magenta/400` |
+| `icon.magenta.tertiary` | `#DC4CF2` | `#A81BBD` | `Primitive/color/magenta/400` | `Primitive/color/magenta/600` |
+| `icon.magenta.quaternary` | `#EA78F9` | `#871598` | `Primitive/color/magenta/300` | `Primitive/color/magenta/700` |
+| `icon.magenta.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` | `Primitive/color/slate/950` |
+| `icon.input.default` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` | `Primitive/color/neutral/600` |
+| `icon.input.hover` | `#08A768` | `#6AD6A5` | `Brand/primary/600` | `Brand/primary/400` |
+| `icon.input.typing` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
 | `icon.input.filled` | `#4D5358` | `#636B72` | `Primitive/color/neutral/400` · ⚠ โค้ด ≠ Figma (Figma: `#ADB2B7`) |
-| `icon.input.error` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
-| `icon.input.disabled` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
-| `icon.primarySearch.default` | `#08A768` | `#6AD6A5` | `Brand/primary/600` |
-| `icon.primarySearch.hover` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `icon.primarySearch.typing` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `icon.primarySearch.filled` | `#08A768` | `#6AD6A5` | `Brand/primary/600` |
+| `icon.input.error` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` | `Primitive/color/neutral/600` |
+| `icon.input.disabled` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` | `Primitive/color/neutral/600` |
+| `icon.primarySearch.default` | `#08A768` | `#6AD6A5` | `Brand/primary/600` | `Brand/primary/400` |
+| `icon.primarySearch.hover` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `icon.primarySearch.typing` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `icon.primarySearch.filled` | `#08A768` | `#6AD6A5` | `Brand/primary/600` | `Brand/primary/400` |
 | `icon.aiSearch.default` | `#4F46E5` | `#A5B4FC` | `Primitive/color/indigo/600` · ⚠ โค้ด ≠ Figma (Figma: `#6366F1`) |
 | `icon.aiSearch.hover` | `#4338CA` | `#C7D2FE` | `Primitive/color/indigo/700` · ⚠ โค้ด ≠ Figma (Figma: `#4F46E5`) |
 | `icon.aiSearch.typing` | `#4338CA` | `#C7D2FE` | `Primitive/color/indigo/700` · ⚠ โค้ด ≠ Figma (Figma: `#4F46E5`) |
 | `icon.aiSearch.filled` | `#4F46E5` | `#A5B4FC` | `Primitive/color/indigo/600` · ⚠ โค้ด ≠ Figma (Figma: `#6366F1`) |
-| `icon.secondarySearch.default` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
-| `icon.secondarySearch.hover` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `icon.secondarySearch.typing` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `icon.secondarySearch.filled` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `icon.brandPrimaryButton.default` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `icon.brandPrimaryButton.default-hover` | `#004C31` | `#C5EDDA` | `Brand/primary/800` |
-| `icon.brandPrimaryButton.secondary` | `#08A768` | `#6AD6A5` | `Brand/primary/600` |
-| `icon.brandPrimaryButton.secondary-hover` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `icon.brandPrimaryButton.tertiary` | `#6AD6A5` | `#08A768` | `Brand/primary/400` |
-| `icon.brandPrimaryButton.tertiary-hover` | `#54CF97` | `#54CF97` | `Brand/primary/500` |
-| `icon.brandPrimaryButton.quaternary` | `#91DFBB` | `#007549` | `Brand/primary/300` |
-| `icon.brandPrimaryButton.quaternary-hover` | `#6AD6A5` | `#08A768` | `Brand/primary/400` |
-| `icon.brandPrimaryButton.on-brand` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` |
-| `icon.brandSecondaryButton.default` | `#366233` | `#A7D2A3` | `Brand/secondary/700` |
-| `icon.brandSecondaryButton.default-hover` | `#2E4F2C` | `#E1F0E0` | `Brand/secondary/800` |
-| `icon.brandSecondaryButton.secondary` | `#427C3D` | `#78B573` | `Brand/secondary/600` |
-| `icon.brandSecondaryButton.secondary-hover` | `#366233` | `#A7D2A3` | `Brand/secondary/700` |
-| `icon.brandSecondaryButton.tertiary` | `#78B573` | `#427C3D` | `Brand/secondary/400` |
-| `icon.brandSecondaryButton.tertiary-hover` | `#53954E` | `#53954E` | `Brand/secondary/500` |
-| `icon.brandSecondaryButton.quaternary` | `#A7D2A3` | `#366233` | `Brand/secondary/300` |
-| `icon.brandSecondaryButton.quaternary-hover` | `#78B573` | `#427C3D` | `Brand/secondary/400` |
-| `icon.brandSecondaryButton.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` |
-| `icon.disablediconButton.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `icon.disablediconButton.secondary` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` |
-| `icon.disablediconButton.tertiary` | `#ADB2B7` | `#858C92` | `Primitive/color/neutral/400` |
-| `icon.disablediconButton.quaternary` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` |
-| `icon.disablediconButton.on-disabled` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
-| `icon.dangerButton.default` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` |
-| `icon.dangerButton.secondary` | `#DC2626` | `#F87171` | `Primitive/color/red/600` |
-| `icon.dangerButton.tertiary` | `#F87171` | `#DC2626` | `Primitive/color/red/400` |
-| `icon.dangerButton.quaternary` | `#FCA5A5` | `#B91C1C` | `Primitive/color/red/300` |
-| `icon.dangerButton.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` |
-| `icon.neutralButton.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `icon.neutralButton.secondary` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` |
-| `icon.neutralButton.tertiary` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
-| `icon.neutralButton.quaternary` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` |
-| `icon.neutralButton.on-neutral` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
-| `icon.tag.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `icon.tag.tailing` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` |
-| `icon.tag.hover` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `icon.tag.selected` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `icon.tag.selected-hover` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `icon.brandTag.default` | `#007549` | `#08A768` | `Brand/primary/700` |
-| `icon.brandTag.tailing` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` |
-| `icon.brandTag.hover` | `#007549` | `#08A768` | `Brand/primary/700` |
-| `icon.brandTag.selected` | `#007549` | `#08A768` | `Brand/primary/700` |
-| `icon.brandTag.selected-hover` | `#007549` | `#08A768` | `Brand/primary/700` |
-| `icon.colorfulBadge.badge-on` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
-| `icon.colorfulBadge.grey` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `icon.colorfulBadge.green` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `icon.colorfulBadge.blue` | `#1D4ED8` | `#93C5FD` | `Primitive/color/blue/700` |
-| `icon.colorfulBadge.teal` | `#196C65` | `#6CDCCA` | `Primitive/color/teal/700` |
-| `icon.colorfulBadge.yellow` | `#A16207` | `#FDE047` | `Primitive/color/yellow/700` |
-| `icon.colorfulBadge.orange` | `#C2410C` | `#FDBA74` | `Primitive/color/orange/700` |
-| `icon.colorfulBadge.red` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` |
-| `icon.colorfulBadge.indigo` | `#4F46E5` | `#C7D2FE` | `Primitive/color/indigo/700` |
-| `icon.colorfulBadge.pink` | `#BE185D` | `#F9A8D4` | `Primitive/color/pink/700` |
-| `icon.colorfulBadge.megenta` | `#871598` | `#EA78F9` | `Primitive/color/magenta/700` |
-| `icon.colorfulBadge.purple` | `#7E22CE` | `#D8B4FE` | `Primitive/color/purple/700` |
-| `icon.statuslBadge.neutral` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `icon.statuslBadge.brand` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `icon.statuslBadge.info` | `#1D4ED8` | `#93C5FD` | `Primitive/color/blue/700` |
-| `icon.statuslBadge.success` | `#196C65` | `#6CDCCA` | `Primitive/color/teal/700` |
-| `icon.statuslBadge.warning` | `#C2410C` | `#FDBA74` | `Primitive/color/orange/700` |
-| `icon.statuslBadge.error` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` |
-| `icon.tabUnderline.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `icon.tabUnderline.hover` | `#08A768` | `#6AD6A5` | `Brand/primary/600` |
-| `icon.tabUnderline.selected` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `icon.tabUnderline.selected-hover` | `#004C31` | `#C5EDDA` | `Brand/primary/800` |
-| `icon.tabUnderline.disabled` | `#C9CDD0` | `#636B72` | `Primitive/color/neutral/300` |
-| `icon.tabCapsule.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `icon.tabCapsule.hover` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `icon.tabCapsule.selected` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `icon.tabCapsule.disabled` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` |
-| `icon.tabCapsule.inProgress` | `#F97316` | `#F97316` | `Primitive/color/orange/500` |
-| `icon.tabCapsule.success` | `#24A899` | `#24A899` | `Primitive/color/teal/500` |
-| `icon.tabPill.default` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `icon.tabPill.hover` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `icon.tabPill.selected` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `icon.tabPill.disabled` | `#54CF97` | `#54CF97` | `Brand/primary/500` |
-| `icon.accordion.collapsed` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
-| `icon.accordion.expanded` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
-| `icon.accordion.disabled` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
-| `icon.alert.info` | `#1D4ED8` | `#93C5FD` | `Primitive/color/blue/700` |
-| `icon.alert.success` | `#196C65` | `#6CDCCA` | `Primitive/color/teal/700` |
+| `icon.secondarySearch.default` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` | `Primitive/color/neutral/600` |
+| `icon.secondarySearch.hover` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `icon.secondarySearch.typing` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `icon.secondarySearch.filled` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `icon.brandPrimaryButton.default` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `icon.brandPrimaryButton.default-hover` | `#004C31` | `#C5EDDA` | `Brand/primary/800` | `Brand/primary/200` |
+| `icon.brandPrimaryButton.secondary` | `#08A768` | `#6AD6A5` | `Brand/primary/600` | `Brand/primary/400` |
+| `icon.brandPrimaryButton.secondary-hover` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `icon.brandPrimaryButton.tertiary` | `#6AD6A5` | `#08A768` | `Brand/primary/400` | `Brand/primary/600` |
+| `icon.brandPrimaryButton.tertiary-hover` | `#54CF97` | `#54CF97` | `Brand/primary/500` | `Brand/primary/500` |
+| `icon.brandPrimaryButton.quaternary` | `#91DFBB` | `#007549` | `Brand/primary/300` | `Brand/primary/700` |
+| `icon.brandPrimaryButton.quaternary-hover` | `#6AD6A5` | `#08A768` | `Brand/primary/400` | `Brand/primary/600` |
+| `icon.brandPrimaryButton.on-brand` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` | `Primitive/color/slate/950` |
+| `icon.brandSecondaryButton.default` | `#366233` | `#A7D2A3` | `Brand/secondary/700` | `Brand/secondary/300` |
+| `icon.brandSecondaryButton.default-hover` | `#2E4F2C` | `#E1F0E0` | `Brand/secondary/800` | `Brand/secondary/200` |
+| `icon.brandSecondaryButton.secondary` | `#427C3D` | `#78B573` | `Brand/secondary/600` | `Brand/secondary/400` |
+| `icon.brandSecondaryButton.secondary-hover` | `#366233` | `#A7D2A3` | `Brand/secondary/700` | `Brand/secondary/300` |
+| `icon.brandSecondaryButton.tertiary` | `#78B573` | `#427C3D` | `Brand/secondary/400` | `Brand/secondary/600` |
+| `icon.brandSecondaryButton.tertiary-hover` | `#53954E` | `#53954E` | `Brand/secondary/500` | `Brand/secondary/500` |
+| `icon.brandSecondaryButton.quaternary` | `#A7D2A3` | `#366233` | `Brand/secondary/300` | `Brand/secondary/700` |
+| `icon.brandSecondaryButton.quaternary-hover` | `#78B573` | `#427C3D` | `Brand/secondary/400` | `Brand/secondary/600` |
+| `icon.brandSecondaryButton.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` | `Primitive/color/slate/950` |
+| `icon.disablediconButton.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `icon.disablediconButton.secondary` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` | `Primitive/color/neutral/400` |
+| `icon.disablediconButton.tertiary` | `#ADB2B7` | `#858C92` | `Primitive/color/neutral/400` | `Primitive/color/neutral/500` |
+| `icon.disablediconButton.quaternary` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` | `Primitive/color/neutral/700` |
+| `icon.disablediconButton.on-disabled` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
+| `icon.dangerButton.default` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` | `Primitive/color/red/300` |
+| `icon.dangerButton.secondary` | `#DC2626` | `#F87171` | `Primitive/color/red/600` | `Primitive/color/red/400` |
+| `icon.dangerButton.tertiary` | `#F87171` | `#DC2626` | `Primitive/color/red/400` | `Primitive/color/red/600` |
+| `icon.dangerButton.quaternary` | `#FCA5A5` | `#B91C1C` | `Primitive/color/red/300` | `Primitive/color/red/700` |
+| `icon.dangerButton.on-default` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` | `Primitive/color/slate/950` |
+| `icon.neutralButton.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `icon.neutralButton.secondary` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` | `Primitive/color/neutral/400` |
+| `icon.neutralButton.tertiary` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` | `Primitive/color/neutral/600` |
+| `icon.neutralButton.quaternary` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` | `Primitive/color/neutral/700` |
+| `icon.neutralButton.on-neutral` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
+| `icon.tag.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `icon.tag.tailing` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` | `Primitive/color/neutral/700` |
+| `icon.tag.hover` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `icon.tag.selected` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `icon.tag.selected-hover` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `icon.brandTag.default` | `#007549` | `#08A768` | `Brand/primary/700` | `Brand/primary/600` |
+| `icon.brandTag.tailing` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` | `Primitive/color/neutral/700` |
+| `icon.brandTag.hover` | `#007549` | `#08A768` | `Brand/primary/700` | `Brand/primary/600` |
+| `icon.brandTag.selected` | `#007549` | `#08A768` | `Brand/primary/700` | `Brand/primary/600` |
+| `icon.brandTag.selected-hover` | `#007549` | `#08A768` | `Brand/primary/700` | `Brand/primary/600` |
+| `icon.colorfulBadge.badge-on` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
+| `icon.colorfulBadge.grey` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `icon.colorfulBadge.green` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `icon.colorfulBadge.blue` | `#1D4ED8` | `#93C5FD` | `Primitive/color/blue/700` | `Primitive/color/blue/300` |
+| `icon.colorfulBadge.teal` | `#196C65` | `#6CDCCA` | `Primitive/color/teal/700` | `Primitive/color/teal/300` |
+| `icon.colorfulBadge.yellow` | `#A16207` | `#FDE047` | `Primitive/color/yellow/700` | `Primitive/color/yellow/300` |
+| `icon.colorfulBadge.orange` | `#C2410C` | `#FDBA74` | `Primitive/color/orange/700` | `Primitive/color/orange/300` |
+| `icon.colorfulBadge.red` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` | `Primitive/color/red/300` |
+| `icon.colorfulBadge.indigo` | `#4F46E5` | `#C7D2FE` | `Primitive/color/indigo/700` | `Primitive/color/indigo/300` |
+| `icon.colorfulBadge.pink` | `#BE185D` | `#F9A8D4` | `Primitive/color/pink/700` | `Primitive/color/pink/300` |
+| `icon.colorfulBadge.megenta` | `#871598` | `#EA78F9` | `Primitive/color/magenta/700` | `Primitive/color/magenta/300` |
+| `icon.colorfulBadge.purple` | `#7E22CE` | `#D8B4FE` | `Primitive/color/purple/700` | `Primitive/color/purple/300` |
+| `icon.statuslBadge.neutral` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `icon.statuslBadge.brand` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `icon.statuslBadge.info` | `#1D4ED8` | `#93C5FD` | `Primitive/color/blue/700` | `Primitive/color/blue/300` |
+| `icon.statuslBadge.success` | `#196C65` | `#6CDCCA` | `Primitive/color/teal/700` | `Primitive/color/teal/300` |
+| `icon.statuslBadge.warning` | `#C2410C` | `#FDBA74` | `Primitive/color/orange/700` | `Primitive/color/orange/300` |
+| `icon.statuslBadge.error` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` | `Primitive/color/red/300` |
+| `icon.tabUnderline.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `icon.tabUnderline.hover` | `#08A768` | `#6AD6A5` | `Brand/primary/600` | `Brand/primary/400` |
+| `icon.tabUnderline.selected` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `icon.tabUnderline.selected-hover` | `#004C31` | `#C5EDDA` | `Brand/primary/800` | `Brand/primary/200` |
+| `icon.tabUnderline.disabled` | `#C9CDD0` | `#636B72` | `Primitive/color/neutral/300` | `Primitive/color/neutral/600` |
+| `icon.tabCapsule.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `icon.tabCapsule.hover` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `icon.tabCapsule.selected` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `icon.tabCapsule.disabled` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` | `Primitive/color/neutral/700` |
+| `icon.tabCapsule.inProgress` | `#F97316` | `#F97316` | `Primitive/color/orange/500` | `Primitive/color/orange/500` |
+| `icon.tabCapsule.success` | `#24A899` | `#24A899` | `Primitive/color/teal/500` | `Primitive/color/teal/500` |
+| `icon.tabPill.default` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `icon.tabPill.hover` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `icon.tabPill.selected` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `icon.tabPill.disabled` | `#54CF97` | `#54CF97` | `Brand/primary/500` | `Brand/primary/500` |
+| `icon.accordion.collapsed` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` | `Primitive/color/neutral/600` |
+| `icon.accordion.expanded` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` | `Primitive/color/neutral/600` |
+| `icon.accordion.disabled` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` | `Primitive/color/neutral/600` |
+| `icon.alert.info` | `#1D4ED8` | `#93C5FD` | `Primitive/color/blue/700` | `Primitive/color/blue/300` |
+| `icon.alert.success` | `#196C65` | `#6CDCCA` | `Primitive/color/teal/700` | `Primitive/color/teal/300` |
 | `icon.alert.warning` | `#D97706` | `#FDBA74` | `Primitive/color/orange/700` · ⚠ โค้ด ≠ Figma (Figma: `#C2410C`) |
-| `icon.alert.error` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` |
-| `icon.alertDialog.info` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `icon.alertDialog.success` | `#196C65` | `#6CDCCA` | `Primitive/color/teal/700` |
-| `icon.alertDialog.warning` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` |
-| `icon.alertDialog.error` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` |
-| `icon.calendar.selected` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
-| `icon.calendar.hover` | `#08A768` | `#6AD6A5` | `Brand/primary/600` |
-| `icon.calendar slot.selected` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
-| `icon.list.primary-default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `icon.list.primary-hover` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `icon.list.primary-selected` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `icon.list.primary-selected-hover` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `icon.list.secondary-default` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` |
-| `icon.list.secondary-hover` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `icon.list.secondary-selected` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` |
-| `icon.list.secondary-selected-hover` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `icon.sideMenu.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `icon.sideMenu.hover` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `icon.sideMenu.disabled` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
-| `icon.sideMenu.selected` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `icon.sideMenu.selected-hover` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `icon.topic.default` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `icon.topic.hover` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `icon.topic.disabled` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` |
-| `icon.statusSummaryCard.Info` | `#1D4ED8` | `#93C5FD` | `Primitive/color/blue/700` |
-| `icon.statusSummaryCard.Positive` | `#196C65` | `#6CDCCA` | `Primitive/color/teal/700` |
-| `icon.statusSummaryCard.Inprogress` | `#C2410C` | `#FDBA74` | `Primitive/color/orange/700` |
-| `icon.statusSummaryCard.Destructive` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` |
-| `icon.statusSummaryCard.increase` | `#08A768` | `#6AD6A5` | `Brand/primary/600` |
-| `icon.statusSummaryCard.decrease` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` |
-| `icon.formBuilder.default` | `#007549` | `#CBD5E1` | `Brand/primary/700` |
-| `icon.formBuilder.iconBox-default` | `#E2F3EB` | `#003322` | `Brand/primary/100` |
-| `icon.formBuilder.content` | `#007549` | `#08A768` | `Brand/primary/700` |
-| `icon.formBuilder.iconBox-hover` | `#E2F3EB` | `#003322` | `Brand/primary/100` |
-| `icon.formBuilder.error` | `#DC2626` | `#F87171` | `Primitive/color/red/600` |
-| `icon.step.success-on` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
+| `icon.alert.error` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` | `Primitive/color/red/300` |
+| `icon.alertDialog.info` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `icon.alertDialog.success` | `#196C65` | `#6CDCCA` | `Primitive/color/teal/700` | `Primitive/color/teal/300` |
+| `icon.alertDialog.warning` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` | `Primitive/color/red/300` |
+| `icon.alertDialog.error` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` | `Primitive/color/red/300` |
+| `icon.calendar.selected` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` | `Primitive/color/neutral/600` |
+| `icon.calendar.hover` | `#08A768` | `#6AD6A5` | `Brand/primary/600` | `Brand/primary/400` |
+| `icon.calendar slot.selected` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
+| `icon.list.primary-default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `icon.list.primary-hover` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `icon.list.primary-selected` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `icon.list.primary-selected-hover` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `icon.list.secondary-default` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` | `Primitive/color/neutral/500` |
+| `icon.list.secondary-hover` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `icon.list.secondary-selected` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` | `Primitive/color/neutral/500` |
+| `icon.list.secondary-selected-hover` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `icon.sideMenu.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `icon.sideMenu.hover` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `icon.sideMenu.disabled` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` | `Primitive/color/neutral/600` |
+| `icon.sideMenu.selected` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `icon.sideMenu.selected-hover` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `icon.topic.default` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `icon.topic.hover` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `icon.topic.disabled` | `#ADB2B7` | `#636B72` | `Primitive/color/neutral/400` | `Primitive/color/neutral/600` |
+| `icon.statusSummaryCard.Info` | `#1D4ED8` | `#93C5FD` | `Primitive/color/blue/700` | `Primitive/color/blue/300` |
+| `icon.statusSummaryCard.Positive` | `#196C65` | `#6CDCCA` | `Primitive/color/teal/700` | `Primitive/color/teal/300` |
+| `icon.statusSummaryCard.Inprogress` | `#C2410C` | `#FDBA74` | `Primitive/color/orange/700` | `Primitive/color/orange/300` |
+| `icon.statusSummaryCard.Destructive` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` | `Primitive/color/red/300` |
+| `icon.statusSummaryCard.increase` | `#08A768` | `#6AD6A5` | `Brand/primary/600` | `Brand/primary/400` |
+| `icon.statusSummaryCard.decrease` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` | `Primitive/color/red/300` |
+| `icon.formBuilder.default` | `#007549` | `#CBD5E1` | `Brand/primary/700` | `Primitive/color/slate/300` |
+| `icon.formBuilder.iconBox-default` | `#E2F3EB` | `#003322` | `Brand/primary/100` | `Brand/primary/900` |
+| `icon.formBuilder.content` | `#007549` | `#08A768` | `Brand/primary/700` | `Brand/primary/600` |
+| `icon.formBuilder.iconBox-hover` | `#E2F3EB` | `#003322` | `Brand/primary/100` | `Brand/primary/900` |
+| `icon.formBuilder.error` | `#DC2626` | `#F87171` | `Primitive/color/red/600` | `Primitive/color/red/400` |
+| `icon.step.success-on` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
 
 ### 4.5. `surface`
 
-| Token | Light | Dark | Alias (Light) |
-|-------|-------|------|----------------|
-| `surface.brandPrimary.default` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `surface.brandPrimary.default-hover` | `#004C31` | `#C5EDDA` | `Brand/primary/800` |
-| `surface.brandPrimary.secondary` | `#C5EDDA` | `#004C31` | `Brand/primary/200` |
-| `surface.brandPrimary.secondary-hover` | `#91DFBB` | `#007549` | `Brand/primary/300` |
-| `surface.brandPrimary.tertiary` | `#E2F3EB` | `#003322` | `Brand/primary/100` |
-| `surface.brandPrimary.tertiary-hover` | `#C5EDDA` | `#004C31` | `Brand/primary/200` |
-| `surface.brandPrimary.quaternary` | `#F4FBF8` | `#002318` | `Brand/primary/50` |
-| `surface.brandPrimary.quaternary-hover` | `#E2F3EB` | `#003322` | `Brand/primary/100` |
-| `surface.brandSecondary.default` | `#366233` | `#A7D2A3` | `Brand/secondary/700` |
-| `surface.brandSecondary.default-hover` | `#2E4F2C` | `#E1F0E0` | `Brand/secondary/800` |
-| `surface.brandSecondary.secondary` | `#E1F0E0` | `#2E4F2C` | `Brand/secondary/200` |
-| `surface.brandSecondary.secondary-hover` | `#A7D2A3` | `#366233` | `Brand/secondary/300` |
-| `surface.brandSecondary.tertiary` | `#EFF5EF` | `#274126` | `Brand/secondary/100` |
-| `surface.brandSecondary.tertiary-hover` | `#E1F0E0` | `#2E4F2C` | `Brand/secondary/200` |
-| `surface.brandSecondary.quaternary` | `#FAFCFA` | `#102310` | `Brand/secondary/50` |
-| `surface.brandSecondary.quaternary-hover` | `#EFF5EF` | `#274126` | `Brand/secondary/100` |
+| Token | Light | Dark | Alias (Light) | Alias (Dark) |
+|-------|-------|------|----------------|----------------|
+| `surface.brandPrimary.default` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `surface.brandPrimary.default-hover` | `#004C31` | `#C5EDDA` | `Brand/primary/800` | `Brand/primary/200` |
+| `surface.brandPrimary.secondary` | `#C5EDDA` | `#004C31` | `Brand/primary/200` | `Brand/primary/800` |
+| `surface.brandPrimary.secondary-hover` | `#91DFBB` | `#007549` | `Brand/primary/300` | `Brand/primary/700` |
+| `surface.brandPrimary.tertiary` | `#E2F3EB` | `#003322` | `Brand/primary/100` | `Brand/primary/900` |
+| `surface.brandPrimary.tertiary-hover` | `#C5EDDA` | `#004C31` | `Brand/primary/200` | `Brand/primary/800` |
+| `surface.brandPrimary.quaternary` | `#F4FBF8` | `#002318` | `Brand/primary/50` | `Brand/primary/950` |
+| `surface.brandPrimary.quaternary-hover` | `#E2F3EB` | `#003322` | `Brand/primary/100` | `Brand/primary/900` |
+| `surface.brandSecondary.default` | `#366233` | `#A7D2A3` | `Brand/secondary/700` | `Brand/secondary/300` |
+| `surface.brandSecondary.default-hover` | `#2E4F2C` | `#E1F0E0` | `Brand/secondary/800` | `Brand/secondary/200` |
+| `surface.brandSecondary.secondary` | `#E1F0E0` | `#2E4F2C` | `Brand/secondary/200` | `Brand/secondary/800` |
+| `surface.brandSecondary.secondary-hover` | `#A7D2A3` | `#366233` | `Brand/secondary/300` | `Brand/secondary/700` |
+| `surface.brandSecondary.tertiary` | `#EFF5EF` | `#274126` | `Brand/secondary/100` | `Brand/secondary/900` |
+| `surface.brandSecondary.tertiary-hover` | `#E1F0E0` | `#2E4F2C` | `Brand/secondary/200` | `Brand/secondary/800` |
+| `surface.brandSecondary.quaternary` | `#FAFCFA` | `#102310` | `Brand/secondary/50` | `Brand/secondary/950` |
+| `surface.brandSecondary.quaternary-hover` | `#EFF5EF` | `#274126` | `Brand/secondary/100` | `Brand/secondary/900` |
 | `surface.neutral.default` | `#FFFFFF` | `#C9CDD0` | `Primitive/color/neutral/700` · ⚠ โค้ด ≠ Figma (Figma: `#4D5358`) |
-| `surface.neutral.default-hover` | `#363B3F` | `#E2E4E6` | `Primitive/color/neutral/800` |
+| `surface.neutral.default-hover` | `#363B3F` | `#E2E4E6` | `Primitive/color/neutral/800` | `Primitive/color/neutral/200` |
 | `surface.neutral.secondary` | `#1B2227` | `#E2E4E6` | `Primitive/color/neutral/800` · ⚠ โค้ด ≠ Figma (Figma: `#363B3F`) |
-| `surface.neutral.secondary-hover` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` |
-| `surface.neutral.tertiary` | `#F4F5F5` | `#222629` | `Primitive/color/neutral/100` |
-| `surface.neutral.tertiary-hover` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` |
-| `surface.neutral.quaternary` | `#F9FBFB` | `#363B3F` | `Primitive/color/neutral/50` |
-| `surface.neutral.quaternary-hover` | `#F4F5F5` | `#222629` | `Primitive/color/neutral/100` |
-| `surface.disabled.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `surface.disabled.default-hover` | `#363B3F` | `#E2E4E6` | `Primitive/color/neutral/800` |
-| `surface.disabled.secondary` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` |
-| `surface.disabled.secondary-hover` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` |
-| `surface.disabled.tertiary` | `#F4F5F5` | `#222629` | `Primitive/color/neutral/100` |
-| `surface.disabled.tertiary-hover` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` |
-| `surface.disabled.quaternary` | `#F9FBFB` | `#111314` | `Primitive/color/neutral/50` |
-| `surface.disabled.quaternary-hover` | `#F4F5F5` | `#222629` | `Primitive/color/neutral/100` |
-| `surface.positive.default` | `#196C65` | `#6CDCCA` | `Primitive/color/teal/700` |
-| `surface.positive.default-hover` | `#195652` | `#A2EDDE` | `Primitive/color/teal/800` |
-| `surface.positive.secondary` | `#A2EDDE` | `#195652` | `Primitive/color/teal/200` |
-| `surface.positive.secondary-hover` | `#6CDCCA` | `#196C65` | `Primitive/color/teal/300` |
-| `surface.positive.tertiary` | `#D1F6EE` | `#194845` | `Primitive/color/teal/100` |
-| `surface.positive.tertiary-hover` | `#A2EDDE` | `#195652` | `Primitive/color/teal/200` |
+| `surface.neutral.secondary-hover` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` | `Primitive/color/neutral/700` |
+| `surface.neutral.tertiary` | `#F4F5F5` | `#222629` | `Primitive/color/neutral/100` | `Primitive/color/neutral/900` |
+| `surface.neutral.tertiary-hover` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` | `Primitive/color/neutral/800` |
+| `surface.neutral.quaternary` | `#F9FBFB` | `#363B3F` | `Primitive/color/neutral/50` | `Primitive/color/neutral/800` |
+| `surface.neutral.quaternary-hover` | `#F4F5F5` | `#222629` | `Primitive/color/neutral/100` | `Primitive/color/neutral/900` |
+| `surface.disabled.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `surface.disabled.default-hover` | `#363B3F` | `#E2E4E6` | `Primitive/color/neutral/800` | `Primitive/color/neutral/200` |
+| `surface.disabled.secondary` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` | `Primitive/color/neutral/800` |
+| `surface.disabled.secondary-hover` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` | `Primitive/color/neutral/700` |
+| `surface.disabled.tertiary` | `#F4F5F5` | `#222629` | `Primitive/color/neutral/100` | `Primitive/color/neutral/900` |
+| `surface.disabled.tertiary-hover` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` | `Primitive/color/neutral/800` |
+| `surface.disabled.quaternary` | `#F9FBFB` | `#111314` | `Primitive/color/neutral/50` | `Primitive/color/neutral/950` |
+| `surface.disabled.quaternary-hover` | `#F4F5F5` | `#222629` | `Primitive/color/neutral/100` | `Primitive/color/neutral/900` |
+| `surface.positive.default` | `#196C65` | `#6CDCCA` | `Primitive/color/teal/700` | `Primitive/color/teal/300` |
+| `surface.positive.default-hover` | `#195652` | `#A2EDDE` | `Primitive/color/teal/800` | `Primitive/color/teal/200` |
+| `surface.positive.secondary` | `#A2EDDE` | `#195652` | `Primitive/color/teal/200` | `Primitive/color/teal/800` |
+| `surface.positive.secondary-hover` | `#6CDCCA` | `#196C65` | `Primitive/color/teal/300` | `Primitive/color/teal/700` |
+| `surface.positive.tertiary` | `#D1F6EE` | `#194845` | `Primitive/color/teal/100` | `Primitive/color/teal/900` |
+| `surface.positive.tertiary-hover` | `#A2EDDE` | `#195652` | `Primitive/color/teal/200` | `Primitive/color/teal/800` |
 | `surface.positive.quaternary` | `#F4FBF8` | `#082B2A` | `Primitive/color/teal/50` · ⚠ โค้ด ≠ Figma (Figma: `#F4FBFA`) |
-| `surface.positive.quaternary-hover` | `#D1F6EE` | `#194845` | `Primitive/color/teal/100` |
+| `surface.positive.quaternary-hover` | `#D1F6EE` | `#194845` | `Primitive/color/teal/100` | `Primitive/color/teal/900` |
 | `surface.warning.default` | `#EAB308` | `#FDBA74` | `Primitive/color/orange/700` · ⚠ โค้ด ≠ Figma (Figma: `#C2410C`) |
-| `surface.warning.default-hover` | `#9A3412` | `#FED7AA` | `Primitive/color/orange/800` |
+| `surface.warning.default-hover` | `#9A3412` | `#FED7AA` | `Primitive/color/orange/800` | `Primitive/color/orange/200` |
 | `surface.warning.secondary` | `#FDF1E0` | `#9A3412` | `Primitive/color/orange/200` · ⚠ โค้ด ≠ Figma (Figma: `#FED7AA`) |
-| `surface.warning.secondary-hover` | `#FDBA74` | `#C2410C` | `Primitive/color/orange/300` |
+| `surface.warning.secondary-hover` | `#FDBA74` | `#C2410C` | `Primitive/color/orange/300` | `Primitive/color/orange/700` |
 | `surface.warning.tertiary` | `#FEF3C7` | `#7C2D12` | `Primitive/color/orange/100` · ⚠ โค้ด ≠ Figma (Figma: `#FFEDD5`) |
-| `surface.warning.tertiary-hover` | `#FED7AA` | `#9A3412` | `Primitive/color/orange/200` |
-| `surface.warning.quaternary` | `#FFF9F0` | `#431407` | `Primitive/color/orange/50` |
-| `surface.warning.quaternary-hover` | `#FFEDD5` | `#7C2D12` | `Primitive/color/orange/100` |
-| `surface.progress.default` | `#A16207` | `#FDE047` | `Primitive/color/yellow/700` |
-| `surface.progress.default-hover` | `#854D0E` | `#FEF08A` | `Primitive/color/yellow/800` |
-| `surface.progress.secondary` | `#FEF08A` | `#854D0E` | `Primitive/color/yellow/200` |
-| `surface.progress.secondary-hover` | `#FDE047` | `#A16207` | `Primitive/color/yellow/300` |
-| `surface.progress.tertiary` | `#FEF9C3` | `#713F12` | `Primitive/color/yellow/100` |
-| `surface.progress.tertiary-hover` | `#FEF08A` | `#854D0E` | `Primitive/color/yellow/200` |
-| `surface.progress.quaternary` | `#FBFAF4` | `#422006` | `Primitive/color/yellow/50` |
-| `surface.progress.quaternary-hover` | `#FEF9C3` | `#713F12` | `Primitive/color/yellow/100` |
+| `surface.warning.tertiary-hover` | `#FED7AA` | `#9A3412` | `Primitive/color/orange/200` | `Primitive/color/orange/800` |
+| `surface.warning.quaternary` | `#FFF9F0` | `#431407` | `Primitive/color/orange/50` | `Primitive/color/orange/950` |
+| `surface.warning.quaternary-hover` | `#FFEDD5` | `#7C2D12` | `Primitive/color/orange/100` | `Primitive/color/orange/900` |
+| `surface.progress.default` | `#A16207` | `#FDE047` | `Primitive/color/yellow/700` | `Primitive/color/yellow/300` |
+| `surface.progress.default-hover` | `#854D0E` | `#FEF08A` | `Primitive/color/yellow/800` | `Primitive/color/yellow/200` |
+| `surface.progress.secondary` | `#FEF08A` | `#854D0E` | `Primitive/color/yellow/200` | `Primitive/color/yellow/800` |
+| `surface.progress.secondary-hover` | `#FDE047` | `#A16207` | `Primitive/color/yellow/300` | `Primitive/color/yellow/700` |
+| `surface.progress.tertiary` | `#FEF9C3` | `#713F12` | `Primitive/color/yellow/100` | `Primitive/color/yellow/900` |
+| `surface.progress.tertiary-hover` | `#FEF08A` | `#854D0E` | `Primitive/color/yellow/200` | `Primitive/color/yellow/800` |
+| `surface.progress.quaternary` | `#FBFAF4` | `#422006` | `Primitive/color/yellow/50` | `Primitive/color/yellow/950` |
+| `surface.progress.quaternary-hover` | `#FEF9C3` | `#713F12` | `Primitive/color/yellow/100` | `Primitive/color/yellow/900` |
 | `surface.danger.default` | `#DC2626` | `#FCA5A5` | `Primitive/color/red/700` · ⚠ โค้ด ≠ Figma (Figma: `#B91C1C`) |
-| `surface.danger.default-hover` | `#991B1B` | `#FECACA` | `Primitive/color/red/800` |
-| `surface.danger.secondary` | `#FECACA` | `#991B1B` | `Primitive/color/red/200` |
-| `surface.danger.secondary-hover` | `#FCA5A5` | `#B91C1C` | `Primitive/color/red/300` |
-| `surface.danger.tertiary` | `#FEE2E2` | `#7F1D1D` | `Primitive/color/red/100` |
-| `surface.danger.tertiary-hover` | `#FECACA` | `#991B1B` | `Primitive/color/red/200` |
-| `surface.danger.quaternary` | `#FFF0F0` | `#450A0A` | `Primitive/color/red/50` |
-| `surface.danger.quaternary-hover` | `#FEE2E2` | `#7F1D1D` | `Primitive/color/red/100` |
+| `surface.danger.default-hover` | `#991B1B` | `#FECACA` | `Primitive/color/red/800` | `Primitive/color/red/200` |
+| `surface.danger.secondary` | `#FECACA` | `#991B1B` | `Primitive/color/red/200` | `Primitive/color/red/800` |
+| `surface.danger.secondary-hover` | `#FCA5A5` | `#B91C1C` | `Primitive/color/red/300` | `Primitive/color/red/700` |
+| `surface.danger.tertiary` | `#FEE2E2` | `#7F1D1D` | `Primitive/color/red/100` | `Primitive/color/red/900` |
+| `surface.danger.tertiary-hover` | `#FECACA` | `#991B1B` | `Primitive/color/red/200` | `Primitive/color/red/800` |
+| `surface.danger.quaternary` | `#FFF0F0` | `#450A0A` | `Primitive/color/red/50` | `Primitive/color/red/950` |
+| `surface.danger.quaternary-hover` | `#FEE2E2` | `#7F1D1D` | `Primitive/color/red/100` | `Primitive/color/red/900` |
 | `surface.info.default` | `#3B82F6` | `#93C5FD` | `Primitive/color/blue/700` · ⚠ โค้ด ≠ Figma (Figma: `#1D4ED8`) |
-| `surface.info.default-hover` | `#1E40AF` | `#BFDBFE` | `Primitive/color/blue/800` |
-| `surface.info.secondary` | `#BFDBFE` | `#1E40AF` | `Primitive/color/blue/200` |
-| `surface.info.secondary-hover` | `#93C5FD` | `#1D4ED8` | `Primitive/color/blue/300` |
-| `surface.info.tertiary` | `#DBEAFE` | `#1E3A8A` | `Primitive/color/blue/100` |
-| `surface.info.tertiary-hover` | `#BFDBFE` | `#1E40AF` | `Primitive/color/blue/200` |
-| `surface.info.quaternary` | `#F0F6FF` | `#172554` | `Primitive/color/blue/50` |
-| `surface.info.quaternary-hover` | `#DBEAFE` | `#1E3A8A` | `Primitive/color/blue/100` |
-| `surface.navy.default` | `#4F46E5` | `#C7D2FE` | `Primitive/color/indigo/700` |
-| `surface.navy.default-hover` | `#4338CA` | `#E0E7FF` | `Primitive/color/indigo/800` |
-| `surface.navy.secondary` | `#E0E7FF` | `#4338CA` | `Primitive/color/indigo/200` |
-| `surface.navy.secondary-hover` | `#C7D2FE` | `#4F46E5` | `Primitive/color/indigo/300` |
-| `surface.navy.tertiary` | `#EEF2FF` | `#3730A3` | `Primitive/color/indigo/100` |
-| `surface.navy.tertiary-hover` | `#E0E7FF` | `#4338CA` | `Primitive/color/indigo/200` |
-| `surface.navy.quaternary` | `#F3F5FC` | `#1E1B4B` | `Primitive/color/indigo/50` |
-| `surface.navy.quaternary-hover` | `#EEF2FF` | `#3730A3` | `Primitive/color/indigo/100` |
-| `surface.magenta.default` | `#871598` | `#EA78F9` | `Primitive/color/magenta/700` |
-| `surface.magenta.default-hover` | `#6E1379` | `#F3ADFD` | `Primitive/color/magenta/800` |
-| `surface.magenta.secondary` | `#F3ADFD` | `#6E1379` | `Primitive/color/magenta/200` |
-| `surface.magenta.secondary-hover` | `#EA78F9` | `#871598` | `Primitive/color/magenta/300` |
-| `surface.magenta.tertiary` | `#F9D6FE` | `#5A125F` | `Primitive/color/magenta/100` |
-| `surface.magenta.tertiary-hover` | `#F3ADFD` | `#6E1379` | `Primitive/color/magenta/200` |
-| `surface.magenta.quaternary` | `#FAF3FC` | `#380040` | `Primitive/color/magenta/50` |
-| `surface.magenta.quaternary-hover` | `#F9D6FE` | `#5A125F` | `Primitive/color/magenta/100` |
-| `surface.pink.default` | `#BE185D` | `#F9A8D4` | `Primitive/color/pink/700` |
-| `surface.pink.default-hover` | `#9D174D` | `#FBCFE8` | `Primitive/color/pink/800` |
-| `surface.pink.secondary` | `#FBCFE8` | `#9D174D` | `Primitive/color/pink/200` |
-| `surface.pink.secondary-hover` | `#F9A8D4` | `#BE185D` | `Primitive/color/pink/300` |
-| `surface.pink.tertiary` | `#FCE7F3` | `#831843` | `Primitive/color/pink/100` |
-| `surface.pink.tertiary-hover` | `#FBCFE8` | `#9D174D` | `Primitive/color/pink/200` |
-| `surface.pink.quaternary` | `#FBF4F8` | `#500724` | `Primitive/color/pink/50` |
-| `surface.pink.quaternary-hover` | `#FCE7F3` | `#831843` | `Primitive/color/pink/100` |
-| `surface.input.default` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` |
-| `surface.input.disabled` | `#F4F5F5` | `#363B3F` | `Primitive/color/neutral/100` |
-| `surface.search.default` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` |
-| `surface.modal.default` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` |
-| `surface.modal.disabled` | `#E2E4E6` | `#4D5358` | `Primitive/color/neutral/200` |
-| `surface.switch.default` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` |
-| `surface.switch.icon` | `#FFFFFF` | `#FFFFFF` | `Primitive/color/grey/50` |
-| `surface.switch.icon-disabled` | `#F4F5F5` | `#636B72` | `Primitive/color/neutral/100` |
-| `surface.switch.off` | `#E2E4E6` | `#4D5358` | `Primitive/color/neutral/200` |
-| `surface.switch.off-hover` | `#C9CDD0` | `#636B72` | `Primitive/color/neutral/300` |
+| `surface.info.default-hover` | `#1E40AF` | `#BFDBFE` | `Primitive/color/blue/800` | `Primitive/color/blue/200` |
+| `surface.info.secondary` | `#BFDBFE` | `#1E40AF` | `Primitive/color/blue/200` | `Primitive/color/blue/800` |
+| `surface.info.secondary-hover` | `#93C5FD` | `#1D4ED8` | `Primitive/color/blue/300` | `Primitive/color/blue/700` |
+| `surface.info.tertiary` | `#DBEAFE` | `#1E3A8A` | `Primitive/color/blue/100` | `Primitive/color/blue/900` |
+| `surface.info.tertiary-hover` | `#BFDBFE` | `#1E40AF` | `Primitive/color/blue/200` | `Primitive/color/blue/800` |
+| `surface.info.quaternary` | `#F0F6FF` | `#172554` | `Primitive/color/blue/50` | `Primitive/color/blue/950` |
+| `surface.info.quaternary-hover` | `#DBEAFE` | `#1E3A8A` | `Primitive/color/blue/100` | `Primitive/color/blue/900` |
+| `surface.navy.default` | `#4F46E5` | `#C7D2FE` | `Primitive/color/indigo/700` | `Primitive/color/indigo/300` |
+| `surface.navy.default-hover` | `#4338CA` | `#E0E7FF` | `Primitive/color/indigo/800` | `Primitive/color/indigo/200` |
+| `surface.navy.secondary` | `#E0E7FF` | `#4338CA` | `Primitive/color/indigo/200` | `Primitive/color/indigo/800` |
+| `surface.navy.secondary-hover` | `#C7D2FE` | `#4F46E5` | `Primitive/color/indigo/300` | `Primitive/color/indigo/700` |
+| `surface.navy.tertiary` | `#EEF2FF` | `#3730A3` | `Primitive/color/indigo/100` | `Primitive/color/indigo/900` |
+| `surface.navy.tertiary-hover` | `#E0E7FF` | `#4338CA` | `Primitive/color/indigo/200` | `Primitive/color/indigo/800` |
+| `surface.navy.quaternary` | `#F3F5FC` | `#1E1B4B` | `Primitive/color/indigo/50` | `Primitive/color/indigo/950` |
+| `surface.navy.quaternary-hover` | `#EEF2FF` | `#3730A3` | `Primitive/color/indigo/100` | `Primitive/color/indigo/900` |
+| `surface.magenta.default` | `#871598` | `#EA78F9` | `Primitive/color/magenta/700` | `Primitive/color/magenta/300` |
+| `surface.magenta.default-hover` | `#6E1379` | `#F3ADFD` | `Primitive/color/magenta/800` | `Primitive/color/magenta/200` |
+| `surface.magenta.secondary` | `#F3ADFD` | `#6E1379` | `Primitive/color/magenta/200` | `Primitive/color/magenta/800` |
+| `surface.magenta.secondary-hover` | `#EA78F9` | `#871598` | `Primitive/color/magenta/300` | `Primitive/color/magenta/700` |
+| `surface.magenta.tertiary` | `#F9D6FE` | `#5A125F` | `Primitive/color/magenta/100` | `Primitive/color/magenta/900` |
+| `surface.magenta.tertiary-hover` | `#F3ADFD` | `#6E1379` | `Primitive/color/magenta/200` | `Primitive/color/magenta/800` |
+| `surface.magenta.quaternary` | `#FAF3FC` | `#380040` | `Primitive/color/magenta/50` | `Primitive/color/magenta/950` |
+| `surface.magenta.quaternary-hover` | `#F9D6FE` | `#5A125F` | `Primitive/color/magenta/100` | `Primitive/color/magenta/900` |
+| `surface.pink.default` | `#BE185D` | `#F9A8D4` | `Primitive/color/pink/700` | `Primitive/color/pink/300` |
+| `surface.pink.default-hover` | `#9D174D` | `#FBCFE8` | `Primitive/color/pink/800` | `Primitive/color/pink/200` |
+| `surface.pink.secondary` | `#FBCFE8` | `#9D174D` | `Primitive/color/pink/200` | `Primitive/color/pink/800` |
+| `surface.pink.secondary-hover` | `#F9A8D4` | `#BE185D` | `Primitive/color/pink/300` | `Primitive/color/pink/700` |
+| `surface.pink.tertiary` | `#FCE7F3` | `#831843` | `Primitive/color/pink/100` | `Primitive/color/pink/900` |
+| `surface.pink.tertiary-hover` | `#FBCFE8` | `#9D174D` | `Primitive/color/pink/200` | `Primitive/color/pink/800` |
+| `surface.pink.quaternary` | `#FBF4F8` | `#500724` | `Primitive/color/pink/50` | `Primitive/color/pink/950` |
+| `surface.pink.quaternary-hover` | `#FCE7F3` | `#831843` | `Primitive/color/pink/100` | `Primitive/color/pink/900` |
+| `surface.input.default` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` | `Primitive/color/neutral/900` |
+| `surface.input.disabled` | `#F4F5F5` | `#363B3F` | `Primitive/color/neutral/100` | `Primitive/color/neutral/800` |
+| `surface.search.default` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` | `Primitive/color/neutral/900` |
+| `surface.modal.default` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` | `Primitive/color/neutral/900` |
+| `surface.modal.disabled` | `#E2E4E6` | `#4D5358` | `Primitive/color/neutral/200` | `Primitive/color/neutral/700` |
+| `surface.switch.default` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` | `Primitive/color/neutral/900` |
+| `surface.switch.icon` | `#FFFFFF` | `#FFFFFF` | `Primitive/color/grey/50` | `Primitive/color/grey/50` |
+| `surface.switch.icon-disabled` | `#F4F5F5` | `#636B72` | `Primitive/color/neutral/100` | `Primitive/color/neutral/600` |
+| `surface.switch.off` | `#E2E4E6` | `#4D5358` | `Primitive/color/neutral/200` | `Primitive/color/neutral/700` |
+| `surface.switch.off-hover` | `#C9CDD0` | `#636B72` | `Primitive/color/neutral/300` | `Primitive/color/neutral/600` |
 | `surface.switch.on` | `#08A768` | `#3EC3B2` | `Primitive/color/teal/600` · ⚠ โค้ด ≠ Figma (Figma: `#1B867D`) |
-| `surface.switch.hover` | `#3EC3B2` | `#1B867D` | `Primitive/color/teal/400` |
-| `surface.switch.checkbox-dedault-hover` | `#54CF97` | `#54CF97` | `Brand/primary/500` |
-| `surface.switch.on-hover` | `#196C65` | `#6CDCCA` | `Primitive/color/teal/700` |
-| `surface.switch.checkbox` | `#08A768` | `#6AD6A5` | `Brand/primary/600` |
-| `surface.switch.checkbox-hover` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `surface.switch.radio-dedault-hover` | `#54CF97` | `#54CF97` | `Brand/primary/500` |
-| `surface.switch.radio` | `#08A768` | `#6AD6A5` | `Brand/primary/600` |
-| `surface.switch.radio-hover` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `surface.switch.disabled` | `#E2E4E6` | `#4D5358` | `Primitive/color/neutral/200` |
-| `surface.switch.A` | `#BFDBFE` | `#1E40AF` | `Primitive/color/blue/200` |
-| `surface.switch.B` | `#C5EDDA` | `#004C31` | `Brand/primary/200` |
-| `surface.switch.C` | `#A2EDDE` | `#195652` | `Primitive/color/teal/200` |
-| `surface.switch.D` | `#F3ADFD` | `#6E1379` | `Primitive/color/magenta/200` |
-| `surface.switch.E` | `#E0E7FF` | `#4338CA` | `Primitive/color/indigo/200` |
-| `surface.switch.F` | `#FECACA` | `#991B1B` | `Primitive/color/red/200` |
-| `surface.switch.G` | `#FEF08A` | `#854D0E` | `Primitive/color/yellow/200` |
-| `surface.switch.H` | `#FED7AA` | `#9A3412` | `Primitive/color/orange/200` |
-| `surface.tooltip.default` | `#007549` | `#08A768` | `Brand/primary/700` |
-| `surface.tooltip.white` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
-| `surface.notification.default` | `#DB2777` | `#F472B6` | `Primitive/color/pink/600` |
-| `surface.navigation.default` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` |
-| `surface.card.100` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` |
-| `surface.card.200` | `#FDFDFD` | `#363B3F` | `Primitive/color/grey/100` |
-| `surface.card.300` | `#F4F5F5` | `#363B3F` | `Primitive/color/neutral/100` |
-| `surface.card.brand-100` | `#F4FBF8` | `#002318` | `Brand/primary/50` |
-| `surface.card.indigo-100` | `#F3F5FC` | `#1E1B4B` | `Primitive/color/indigo/50` |
-| `surface.card.sakura-200` | `#FFEDF3` | `#A35C7C` | `Primitive/color/sakura/100` |
-| `surface.card.blue-100` | `#F0F6FF` | `#172554` | `Primitive/color/blue/50` |
-| `surface.brandPrimaryButton.default` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `surface.brandPrimaryButton.default-hover` | `#004C31` | `#C5EDDA` | `Brand/primary/800` |
-| `surface.brandPrimaryButton.secondary` | `#C5EDDA` | `#004C31` | `Brand/primary/200` |
-| `surface.brandPrimaryButton.secondary-hover` | `#91DFBB` | `#007549` | `Brand/primary/300` |
-| `surface.brandPrimaryButton.tertiary` | `#E2F3EB` | `#003322` | `Brand/primary/100` |
-| `surface.brandPrimaryButton.tertiary-hover` | `#C5EDDA` | `#004C31` | `Brand/primary/200` |
-| `surface.brandPrimaryButton.quaternary` | `#F4FBF8` | `#002318` | `Brand/primary/50` |
-| `surface.brandPrimaryButton.quaternary-hover` | `#E2F3EB` | `#003322` | `Brand/primary/100` |
-| `surface.brandPrimaryButton.quinary` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` |
-| `surface.brandPrimaryButton.quinary-hover` | `#F4FBF8` | `#002318` | `Brand/primary/50` |
-| `surface.brandSecondarybutton.default` | `#366233` | `#A7D2A3` | `Brand/secondary/700` |
-| `surface.brandSecondarybutton.default-hover` | `#2E4F2C` | `#E1F0E0` | `Brand/secondary/800` |
-| `surface.brandSecondarybutton.secondary` | `#E1F0E0` | `#2E4F2C` | `Brand/secondary/200` |
-| `surface.brandSecondarybutton.secondary-hover` | `#A7D2A3` | `#366233` | `Brand/secondary/300` |
-| `surface.brandSecondarybutton.tertiary` | `#EFF5EF` | `#274126` | `Brand/secondary/100` |
-| `surface.brandSecondarybutton.tertiary-hover` | `#E1F0E0` | `#2E4F2C` | `Brand/secondary/200` |
-| `surface.brandSecondarybutton.quaternary` | `#FAFCFA` | `#102310` | `Brand/secondary/50` |
-| `surface.brandSecondarybutton.quaternary-hover` | `#EFF5EF` | `#274126` | `Brand/secondary/100` |
-| `surface.brandSecondarybutton.quinary` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` |
-| `surface.brandSecondarybutton.quinary-hover` | `#FAFCFA` | `#102310` | `Brand/secondary/50` |
-| `surface.disabledButton.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `surface.disabledButton.default-hover` | `#363B3F` | `#E2E4E6` | `Primitive/color/neutral/800` |
-| `surface.disabledButton.secondary` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` |
-| `surface.disabledButton.secondary-hover` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` |
-| `surface.disabledButton.tertiary` | `#F4F5F5` | `#363B3F` | `Primitive/color/neutral/100` |
-| `surface.disabledButton.tertiary-hover` | `#E2E4E6` | `#4D5358` | `Primitive/color/neutral/200` |
-| `surface.disabledButton.quaternary` | `#F9FBFB` | `#111314` | `Primitive/color/neutral/50` |
-| `surface.disabledButton.quaternary-hover` | `#F4F5F5` | `#222629` | `Primitive/color/neutral/100` |
-| `surface.dangerButton.default` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` |
-| `surface.dangerButton.default-hover` | `#991B1B` | `#FECACA` | `Primitive/color/red/800` |
-| `surface.dangerButton.secondary` | `#FECACA` | `#991B1B` | `Primitive/color/red/200` |
-| `surface.dangerButton.secondary-hover` | `#FCA5A5` | `#B91C1C` | `Primitive/color/red/300` |
-| `surface.dangerButton.tertiary` | `#FEE2E2` | `#7F1D1D` | `Primitive/color/red/100` |
-| `surface.dangerButton.tertiary-hover` | `#FECACA` | `#991B1B` | `Primitive/color/red/200` |
-| `surface.dangerButton.quaternary` | `#FFF0F0` | `#450A0A` | `Primitive/color/red/50` |
-| `surface.dangerButton.quaternary-hover` | `#FEE2E2` | `#7F1D1D` | `Primitive/color/red/100` |
-| `surface.dangerButton.quinary` | `#FFFFFF` | `#DADADA` | `Primitive/color/grey/50` |
-| `surface.dangerButton.quinary-hover` | `#FFF0F0` | `#450A0A` | `Primitive/color/red/50` |
-| `surface.neutralButton.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` |
-| `surface.neutralButton.default-hover` | `#363B3F` | `#E2E4E6` | `Primitive/color/neutral/800` |
-| `surface.neutralButton.secondary` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` |
-| `surface.neutralButton.secondary-hover` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` |
-| `surface.neutralButton.tertiary` | `#F4F5F5` | `#222629` | `Primitive/color/neutral/100` |
-| `surface.neutralButton.tertiary-hover` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` |
-| `surface.neutralButton.quaternary` | `#F9FBFB` | `#111314` | `Primitive/color/neutral/50` |
-| `surface.neutralButton.quaternary-hover` | `#F4F5F5` | `#222629` | `Primitive/color/neutral/100` |
-| `surface.neutralButton.quinary` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
-| `surface.neutralButton.quinary-hover` | `#F9FBFB` | `#111314` | `Primitive/color/neutral/50` |
-| `surface.neutralTag.default` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` |
-| `surface.neutralTag.default-hover` | `#F9FBFB` | `#222629` | `Primitive/color/neutral/50` |
-| `surface.neutralTag.selected` | `#F4F5F5` | `#363B3F` | `Primitive/color/neutral/100` |
-| `surface.neutralTag.selectedy-hover` | `#E2E4E6` | `#4D5358` | `Primitive/color/neutral/200` |
-| `surface.brandTag.default` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` |
-| `surface.brandTag.default-hover` | `#F4FBF8` | `#003322` | `Brand/primary/50` |
-| `surface.brandTag.selected` | `#F4FBF8` | `#003322` | `Brand/primary/50` |
-| `surface.brandTag.selected-hover` | `#E2F3EB` | `#004C31` | `Brand/primary/100` |
-| `surface.statusBadge.brand` | `#E2F3EB` | `#003322` | `Brand/primary/100` |
-| `surface.statusBadge.neutral` | `#F5F7F9` | `#334155` | `Primitive/color/slate/100` |
-| `surface.statusBadge.info` | `#DBEAFE` | `#1E3A8A` | `Primitive/color/blue/100` |
-| `surface.statusBadge.success` | `#D1F6EE` | `#194845` | `Primitive/color/teal/100` |
-| `surface.statusBadge.warning` | `#FFEDD5` | `#7C2D12` | `Primitive/color/orange/100` |
-| `surface.statusBadge.error` | `#FEE2E2` | `#7F1D1D` | `Primitive/color/red/100` |
-| `surface.colorfulBadge.green-bold` | `#54CF97` | `#54CF97` | `Brand/primary/500` |
-| `surface.colorfulBadge.green-medium` | `#91DFBB` | `#007549` | `Brand/primary/300` |
-| `surface.colorfulBadge.green` | `#E2F3EB` | `#003322` | `Brand/primary/100` |
-| `surface.colorfulBadge.grey-bold` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` |
-| `surface.colorfulBadge.grey-medium` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` |
-| `surface.colorfulBadge.grey` | `#F5F7F9` | `#0F172A` | `Primitive/color/slate/100` |
-| `surface.colorfulBadge.blue-bold` | `#3B82F6` | `#3B82F6` | `Primitive/color/blue/500` |
-| `surface.colorfulBadge.blue-medium` | `#93C5FD` | `#1D4ED8` | `Primitive/color/blue/300` |
-| `surface.colorfulBadge.blue` | `#DBEAFE` | `#1E3A8A` | `Primitive/color/blue/100` |
-| `surface.colorfulBadge.teal-bold` | `#24A899` | `#24A899` | `Primitive/color/teal/500` |
-| `surface.colorfulBadge.teal-medium` | `#6CDCCA` | `#196C65` | `Primitive/color/teal/300` |
-| `surface.colorfulBadge.teal` | `#D1F6EE` | `#194845` | `Primitive/color/teal/100` |
-| `surface.colorfulBadge.yellow-bold` | `#EAB308` | `#EAB308` | `Primitive/color/yellow/500` |
-| `surface.colorfulBadge.yellow-medium` | `#FDE047` | `#A16207` | `Primitive/color/yellow/300` |
-| `surface.colorfulBadge.yellow` | `#FEF9C3` | `#713F12` | `Primitive/color/yellow/100` |
-| `surface.colorfulBadge.orange-bold` | `#F97316` | `#F97316` | `Primitive/color/orange/500` |
-| `surface.colorfulBadge.orange-medium` | `#FDBA74` | `#C2410C` | `Primitive/color/orange/300` |
-| `surface.colorfulBadge.orange` | `#FFEDD5` | `#7C2D12` | `Primitive/color/orange/100` |
-| `surface.colorfulBadge.red-bold` | `#EF4444` | `#EF4444` | `Primitive/color/red/500` |
-| `surface.colorfulBadge.red-medium` | `#FCA5A5` | `#B91C1C` | `Primitive/color/red/300` |
-| `surface.colorfulBadge.red` | `#FEE2E2` | `#7F1D1D` | `Primitive/color/red/100` |
-| `surface.colorfulBadge.indigo-bold` | `#818CF8` | `#818CF8` | `Primitive/color/indigo/500` |
-| `surface.colorfulBadge.indigo-medium` | `#C7D2FE` | `#4F46E5` | `Primitive/color/indigo/300` |
-| `surface.colorfulBadge.indigo` | `#EEF2FF` | `#3730A3` | `Primitive/color/indigo/100` |
-| `surface.colorfulBadge.pink-bold` | `#EC4899` | `#EC4899` | `Primitive/color/pink/500` |
-| `surface.colorfulBadge.pink-medium` | `#F9A8D4` | `#BE185D` | `Primitive/color/pink/300` |
-| `surface.colorfulBadge.pink` | `#FCE7F3` | `#831843` | `Primitive/color/pink/100` |
-| `surface.colorfulBadge.megenta-bold` | `#C926E0` | `#C926E0` | `Primitive/color/magenta/500` |
-| `surface.colorfulBadge.megenta-medium` | `#EA78F9` | `#871598` | `Primitive/color/magenta/300` |
-| `surface.colorfulBadge.megenta` | `#F9D6FE` | `#5A125F` | `Primitive/color/magenta/100` |
-| `surface.colorfulBadge.purple-bold` | `#A855F7` | `#A855F7` | `Primitive/color/purple/500` |
-| `surface.colorfulBadge.purple-medium` | `#D8B4FE` | `#7E22CE` | `Primitive/color/purple/300` |
-| `surface.colorfulBadge.purple` | `#F3E8FF` | `#581C87` | `Primitive/color/purple/100` |
-| `surface.pagination.default` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` |
-| `surface.pagination.hover` | `#F4FBF8` | `#002318` | `Brand/primary/50` |
-| `surface.pagination.selected` | `#E2F3EB` | `#007549` | `Brand/primary/100` |
-| `surface.list.default` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` |
-| `surface.list.hover` | `#F4FBF8` | `#002318` | `Brand/primary/50` |
-| `surface.list.selected` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` |
-| `surface.list.selected-hover` | `#F4FBF8` | `#002318` | `Brand/primary/50` |
-| `surface.timeslot.default` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
-| `surface.timeslot.hover` | `#E2F3EB` | `#003322` | `Brand/primary/100` |
+| `surface.switch.hover` | `#3EC3B2` | `#1B867D` | `Primitive/color/teal/400` | `Primitive/color/teal/600` |
+| `surface.switch.checkbox-dedault-hover` | `#54CF97` | `#54CF97` | `Brand/primary/500` | `Brand/primary/500` |
+| `surface.switch.on-hover` | `#196C65` | `#6CDCCA` | `Primitive/color/teal/700` | `Primitive/color/teal/300` |
+| `surface.switch.checkbox` | `#08A768` | `#6AD6A5` | `Brand/primary/600` | `Brand/primary/400` |
+| `surface.switch.checkbox-hover` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `surface.switch.radio-dedault-hover` | `#54CF97` | `#54CF97` | `Brand/primary/500` | `Brand/primary/500` |
+| `surface.switch.radio` | `#08A768` | `#6AD6A5` | `Brand/primary/600` | `Brand/primary/400` |
+| `surface.switch.radio-hover` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `surface.switch.disabled` | `#E2E4E6` | `#4D5358` | `Primitive/color/neutral/200` | `Primitive/color/neutral/700` |
+| `surface.switch.A` | `#BFDBFE` | `#1E40AF` | `Primitive/color/blue/200` | `Primitive/color/blue/800` |
+| `surface.switch.B` | `#C5EDDA` | `#004C31` | `Brand/primary/200` | `Brand/primary/800` |
+| `surface.switch.C` | `#A2EDDE` | `#195652` | `Primitive/color/teal/200` | `Primitive/color/teal/800` |
+| `surface.switch.D` | `#F3ADFD` | `#6E1379` | `Primitive/color/magenta/200` | `Primitive/color/magenta/800` |
+| `surface.switch.E` | `#E0E7FF` | `#4338CA` | `Primitive/color/indigo/200` | `Primitive/color/indigo/800` |
+| `surface.switch.F` | `#FECACA` | `#991B1B` | `Primitive/color/red/200` | `Primitive/color/red/800` |
+| `surface.switch.G` | `#FEF08A` | `#854D0E` | `Primitive/color/yellow/200` | `Primitive/color/yellow/800` |
+| `surface.switch.H` | `#FED7AA` | `#9A3412` | `Primitive/color/orange/200` | `Primitive/color/orange/800` |
+| `surface.tooltip.default` | `#007549` | `#08A768` | `Brand/primary/700` | `Brand/primary/600` |
+| `surface.tooltip.white` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
+| `surface.notification.default` | `#DB2777` | `#F472B6` | `Primitive/color/pink/600` | `Primitive/color/pink/400` |
+| `surface.navigation.default` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` | `Primitive/color/neutral/900` |
+| `surface.card.100` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` | `Primitive/color/neutral/900` |
+| `surface.card.200` | `#FDFDFD` | `#363B3F` | `Primitive/color/grey/100` | `Primitive/color/neutral/800` |
+| `surface.card.300` | `#F4F5F5` | `#363B3F` | `Primitive/color/neutral/100` | `Primitive/color/neutral/800` |
+| `surface.card.brand-100` | `#F4FBF8` | `#002318` | `Brand/primary/50` | `Brand/primary/950` |
+| `surface.card.indigo-100` | `#F3F5FC` | `#1E1B4B` | `Primitive/color/indigo/50` | `Primitive/color/indigo/950` |
+| `surface.card.sakura-200` | `#FFEDF3` | `#A35C7C` | `Primitive/color/sakura/100` | `Primitive/color/sakura/900` |
+| `surface.card.blue-100` | `#F0F6FF` | `#172554` | `Primitive/color/blue/50` | `Primitive/color/blue/950` |
+| `surface.brandPrimaryButton.default` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `surface.brandPrimaryButton.default-hover` | `#004C31` | `#C5EDDA` | `Brand/primary/800` | `Brand/primary/200` |
+| `surface.brandPrimaryButton.secondary` | `#C5EDDA` | `#004C31` | `Brand/primary/200` | `Brand/primary/800` |
+| `surface.brandPrimaryButton.secondary-hover` | `#91DFBB` | `#007549` | `Brand/primary/300` | `Brand/primary/700` |
+| `surface.brandPrimaryButton.tertiary` | `#E2F3EB` | `#003322` | `Brand/primary/100` | `Brand/primary/900` |
+| `surface.brandPrimaryButton.tertiary-hover` | `#C5EDDA` | `#004C31` | `Brand/primary/200` | `Brand/primary/800` |
+| `surface.brandPrimaryButton.quaternary` | `#F4FBF8` | `#002318` | `Brand/primary/50` | `Brand/primary/950` |
+| `surface.brandPrimaryButton.quaternary-hover` | `#E2F3EB` | `#003322` | `Brand/primary/100` | `Brand/primary/900` |
+| `surface.brandPrimaryButton.quinary` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` | `Primitive/color/slate/950` |
+| `surface.brandPrimaryButton.quinary-hover` | `#F4FBF8` | `#002318` | `Brand/primary/50` | `Brand/primary/950` |
+| `surface.brandSecondarybutton.default` | `#366233` | `#A7D2A3` | `Brand/secondary/700` | `Brand/secondary/300` |
+| `surface.brandSecondarybutton.default-hover` | `#2E4F2C` | `#E1F0E0` | `Brand/secondary/800` | `Brand/secondary/200` |
+| `surface.brandSecondarybutton.secondary` | `#E1F0E0` | `#2E4F2C` | `Brand/secondary/200` | `Brand/secondary/800` |
+| `surface.brandSecondarybutton.secondary-hover` | `#A7D2A3` | `#366233` | `Brand/secondary/300` | `Brand/secondary/700` |
+| `surface.brandSecondarybutton.tertiary` | `#EFF5EF` | `#274126` | `Brand/secondary/100` | `Brand/secondary/900` |
+| `surface.brandSecondarybutton.tertiary-hover` | `#E1F0E0` | `#2E4F2C` | `Brand/secondary/200` | `Brand/secondary/800` |
+| `surface.brandSecondarybutton.quaternary` | `#FAFCFA` | `#102310` | `Brand/secondary/50` | `Brand/secondary/950` |
+| `surface.brandSecondarybutton.quaternary-hover` | `#EFF5EF` | `#274126` | `Brand/secondary/100` | `Brand/secondary/900` |
+| `surface.brandSecondarybutton.quinary` | `#FFFFFF` | `#020617` | `Primitive/color/grey/50` | `Primitive/color/slate/950` |
+| `surface.brandSecondarybutton.quinary-hover` | `#FAFCFA` | `#102310` | `Brand/secondary/50` | `Brand/secondary/950` |
+| `surface.disabledButton.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `surface.disabledButton.default-hover` | `#363B3F` | `#E2E4E6` | `Primitive/color/neutral/800` | `Primitive/color/neutral/200` |
+| `surface.disabledButton.secondary` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` | `Primitive/color/neutral/800` |
+| `surface.disabledButton.secondary-hover` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` | `Primitive/color/neutral/700` |
+| `surface.disabledButton.tertiary` | `#F4F5F5` | `#363B3F` | `Primitive/color/neutral/100` | `Primitive/color/neutral/800` |
+| `surface.disabledButton.tertiary-hover` | `#E2E4E6` | `#4D5358` | `Primitive/color/neutral/200` | `Primitive/color/neutral/700` |
+| `surface.disabledButton.quaternary` | `#F9FBFB` | `#111314` | `Primitive/color/neutral/50` | `Primitive/color/neutral/950` |
+| `surface.disabledButton.quaternary-hover` | `#F4F5F5` | `#222629` | `Primitive/color/neutral/100` | `Primitive/color/neutral/900` |
+| `surface.dangerButton.default` | `#B91C1C` | `#FCA5A5` | `Primitive/color/red/700` | `Primitive/color/red/300` |
+| `surface.dangerButton.default-hover` | `#991B1B` | `#FECACA` | `Primitive/color/red/800` | `Primitive/color/red/200` |
+| `surface.dangerButton.secondary` | `#FECACA` | `#991B1B` | `Primitive/color/red/200` | `Primitive/color/red/800` |
+| `surface.dangerButton.secondary-hover` | `#FCA5A5` | `#B91C1C` | `Primitive/color/red/300` | `Primitive/color/red/700` |
+| `surface.dangerButton.tertiary` | `#FEE2E2` | `#7F1D1D` | `Primitive/color/red/100` | `Primitive/color/red/900` |
+| `surface.dangerButton.tertiary-hover` | `#FECACA` | `#991B1B` | `Primitive/color/red/200` | `Primitive/color/red/800` |
+| `surface.dangerButton.quaternary` | `#FFF0F0` | `#450A0A` | `Primitive/color/red/50` | `Primitive/color/red/950` |
+| `surface.dangerButton.quaternary-hover` | `#FEE2E2` | `#7F1D1D` | `Primitive/color/red/100` | `Primitive/color/red/900` |
+| `surface.dangerButton.quinary` | `#FFFFFF` | `#DADADA` | `Primitive/color/grey/50` | `Primitive/color/grey/950` |
+| `surface.dangerButton.quinary-hover` | `#FFF0F0` | `#450A0A` | `Primitive/color/red/50` | `Primitive/color/red/950` |
+| `surface.neutralButton.default` | `#4D5358` | `#C9CDD0` | `Primitive/color/neutral/700` | `Primitive/color/neutral/300` |
+| `surface.neutralButton.default-hover` | `#363B3F` | `#E2E4E6` | `Primitive/color/neutral/800` | `Primitive/color/neutral/200` |
+| `surface.neutralButton.secondary` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` | `Primitive/color/neutral/800` |
+| `surface.neutralButton.secondary-hover` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` | `Primitive/color/neutral/700` |
+| `surface.neutralButton.tertiary` | `#F4F5F5` | `#222629` | `Primitive/color/neutral/100` | `Primitive/color/neutral/900` |
+| `surface.neutralButton.tertiary-hover` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` | `Primitive/color/neutral/800` |
+| `surface.neutralButton.quaternary` | `#F9FBFB` | `#111314` | `Primitive/color/neutral/50` | `Primitive/color/neutral/950` |
+| `surface.neutralButton.quaternary-hover` | `#F4F5F5` | `#222629` | `Primitive/color/neutral/100` | `Primitive/color/neutral/900` |
+| `surface.neutralButton.quinary` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
+| `surface.neutralButton.quinary-hover` | `#F9FBFB` | `#111314` | `Primitive/color/neutral/50` | `Primitive/color/neutral/950` |
+| `surface.neutralTag.default` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` | `Primitive/color/neutral/900` |
+| `surface.neutralTag.default-hover` | `#F9FBFB` | `#222629` | `Primitive/color/neutral/50` | `Primitive/color/neutral/900` |
+| `surface.neutralTag.selected` | `#F4F5F5` | `#363B3F` | `Primitive/color/neutral/100` | `Primitive/color/neutral/800` |
+| `surface.neutralTag.selectedy-hover` | `#E2E4E6` | `#4D5358` | `Primitive/color/neutral/200` | `Primitive/color/neutral/700` |
+| `surface.brandTag.default` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` | `Primitive/color/neutral/900` |
+| `surface.brandTag.default-hover` | `#F4FBF8` | `#003322` | `Brand/primary/50` | `Brand/primary/900` |
+| `surface.brandTag.selected` | `#F4FBF8` | `#003322` | `Brand/primary/50` | `Brand/primary/900` |
+| `surface.brandTag.selected-hover` | `#E2F3EB` | `#004C31` | `Brand/primary/100` | `Brand/primary/800` |
+| `surface.statusBadge.brand` | `#E2F3EB` | `#003322` | `Brand/primary/100` | `Brand/primary/900` |
+| `surface.statusBadge.neutral` | `#F5F7F9` | `#334155` | `Primitive/color/slate/100` | `Primitive/color/slate/700` |
+| `surface.statusBadge.info` | `#DBEAFE` | `#1E3A8A` | `Primitive/color/blue/100` | `Primitive/color/blue/900` |
+| `surface.statusBadge.success` | `#D1F6EE` | `#194845` | `Primitive/color/teal/100` | `Primitive/color/teal/900` |
+| `surface.statusBadge.warning` | `#FFEDD5` | `#7C2D12` | `Primitive/color/orange/100` | `Primitive/color/orange/900` |
+| `surface.statusBadge.error` | `#FEE2E2` | `#7F1D1D` | `Primitive/color/red/100` | `Primitive/color/red/900` |
+| `surface.colorfulBadge.green-bold` | `#54CF97` | `#54CF97` | `Brand/primary/500` | `Brand/primary/500` |
+| `surface.colorfulBadge.green-medium` | `#91DFBB` | `#007549` | `Brand/primary/300` | `Brand/primary/700` |
+| `surface.colorfulBadge.green` | `#E2F3EB` | `#003322` | `Brand/primary/100` | `Brand/primary/900` |
+| `surface.colorfulBadge.grey-bold` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` | `Primitive/color/neutral/500` |
+| `surface.colorfulBadge.grey-medium` | `#C9CDD0` | `#4D5358` | `Primitive/color/neutral/300` | `Primitive/color/neutral/700` |
+| `surface.colorfulBadge.grey` | `#F5F7F9` | `#0F172A` | `Primitive/color/slate/100` | `Primitive/color/slate/900` |
+| `surface.colorfulBadge.blue-bold` | `#3B82F6` | `#3B82F6` | `Primitive/color/blue/500` | `Primitive/color/blue/500` |
+| `surface.colorfulBadge.blue-medium` | `#93C5FD` | `#1D4ED8` | `Primitive/color/blue/300` | `Primitive/color/blue/700` |
+| `surface.colorfulBadge.blue` | `#DBEAFE` | `#1E3A8A` | `Primitive/color/blue/100` | `Primitive/color/blue/900` |
+| `surface.colorfulBadge.teal-bold` | `#24A899` | `#24A899` | `Primitive/color/teal/500` | `Primitive/color/teal/500` |
+| `surface.colorfulBadge.teal-medium` | `#6CDCCA` | `#196C65` | `Primitive/color/teal/300` | `Primitive/color/teal/700` |
+| `surface.colorfulBadge.teal` | `#D1F6EE` | `#194845` | `Primitive/color/teal/100` | `Primitive/color/teal/900` |
+| `surface.colorfulBadge.yellow-bold` | `#EAB308` | `#EAB308` | `Primitive/color/yellow/500` | `Primitive/color/yellow/500` |
+| `surface.colorfulBadge.yellow-medium` | `#FDE047` | `#A16207` | `Primitive/color/yellow/300` | `Primitive/color/yellow/700` |
+| `surface.colorfulBadge.yellow` | `#FEF9C3` | `#713F12` | `Primitive/color/yellow/100` | `Primitive/color/yellow/900` |
+| `surface.colorfulBadge.orange-bold` | `#F97316` | `#F97316` | `Primitive/color/orange/500` | `Primitive/color/orange/500` |
+| `surface.colorfulBadge.orange-medium` | `#FDBA74` | `#C2410C` | `Primitive/color/orange/300` | `Primitive/color/orange/700` |
+| `surface.colorfulBadge.orange` | `#FFEDD5` | `#7C2D12` | `Primitive/color/orange/100` | `Primitive/color/orange/900` |
+| `surface.colorfulBadge.red-bold` | `#EF4444` | `#EF4444` | `Primitive/color/red/500` | `Primitive/color/red/500` |
+| `surface.colorfulBadge.red-medium` | `#FCA5A5` | `#B91C1C` | `Primitive/color/red/300` | `Primitive/color/red/700` |
+| `surface.colorfulBadge.red` | `#FEE2E2` | `#7F1D1D` | `Primitive/color/red/100` | `Primitive/color/red/900` |
+| `surface.colorfulBadge.indigo-bold` | `#818CF8` | `#818CF8` | `Primitive/color/indigo/500` | `Primitive/color/indigo/500` |
+| `surface.colorfulBadge.indigo-medium` | `#C7D2FE` | `#4F46E5` | `Primitive/color/indigo/300` | `Primitive/color/indigo/700` |
+| `surface.colorfulBadge.indigo` | `#EEF2FF` | `#3730A3` | `Primitive/color/indigo/100` | `Primitive/color/indigo/900` |
+| `surface.colorfulBadge.pink-bold` | `#EC4899` | `#EC4899` | `Primitive/color/pink/500` | `Primitive/color/pink/500` |
+| `surface.colorfulBadge.pink-medium` | `#F9A8D4` | `#BE185D` | `Primitive/color/pink/300` | `Primitive/color/pink/700` |
+| `surface.colorfulBadge.pink` | `#FCE7F3` | `#831843` | `Primitive/color/pink/100` | `Primitive/color/pink/900` |
+| `surface.colorfulBadge.megenta-bold` | `#C926E0` | `#C926E0` | `Primitive/color/magenta/500` | `Primitive/color/magenta/500` |
+| `surface.colorfulBadge.megenta-medium` | `#EA78F9` | `#871598` | `Primitive/color/magenta/300` | `Primitive/color/magenta/700` |
+| `surface.colorfulBadge.megenta` | `#F9D6FE` | `#5A125F` | `Primitive/color/magenta/100` | `Primitive/color/magenta/900` |
+| `surface.colorfulBadge.purple-bold` | `#A855F7` | `#A855F7` | `Primitive/color/purple/500` | `Primitive/color/purple/500` |
+| `surface.colorfulBadge.purple-medium` | `#D8B4FE` | `#7E22CE` | `Primitive/color/purple/300` | `Primitive/color/purple/700` |
+| `surface.colorfulBadge.purple` | `#F3E8FF` | `#581C87` | `Primitive/color/purple/100` | `Primitive/color/purple/900` |
+| `surface.pagination.default` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` | `Primitive/color/neutral/900` |
+| `surface.pagination.hover` | `#F4FBF8` | `#002318` | `Brand/primary/50` | `Brand/primary/950` |
+| `surface.pagination.selected` | `#E2F3EB` | `#007549` | `Brand/primary/100` | `Brand/primary/700` |
+| `surface.list.default` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` | `Primitive/color/neutral/900` |
+| `surface.list.hover` | `#F4FBF8` | `#002318` | `Brand/primary/50` | `Brand/primary/950` |
+| `surface.list.selected` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` | `Primitive/color/neutral/900` |
+| `surface.list.selected-hover` | `#F4FBF8` | `#002318` | `Brand/primary/50` | `Brand/primary/950` |
+| `surface.timeslot.default` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
+| `surface.timeslot.hover` | `#E2F3EB` | `#003322` | `Brand/primary/100` | `Brand/primary/900` |
 | `surface.timeslot.selected` | `#FFFFFF` | `#91DFBB` | `Brand/primary/700` · ⚠ โค้ด ≠ Figma (Figma: `#007549`) |
-| `surface.timeslot.disabled` | `#FAFCFA` | `#102310` | `Brand/secondary/50` |
-| `surface.timeslot.box` | `#FAFCFA` | `#102310` | `Brand/secondary/50` |
-| `surface.accordion.collapsed` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` |
-| `surface.accordion.expanded` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` |
-| `surface.accordion.disabled` | `#F4F5F5` | `#363B3F` | `Primitive/color/neutral/100` |
-| `surface.alert.info` | `#F0F6FF` | `#172554` | `Primitive/color/blue/50` |
-| `surface.alert.success` | `#F4FBFA` | `#082B2A` | `Primitive/color/teal/50` |
-| `surface.alert.warning` | `#FFF9F0` | `#431407` | `Primitive/color/orange/50` |
-| `surface.alert.error` | `#FFF0F0` | `#450A0A` | `Primitive/color/red/50` |
-| `surface.smallAlert.success` | `#24A899` | `#24A899` | `Primitive/color/teal/500` |
-| `surface.smallAlert.error` | `#EF4444` | `#EF4444` | `Primitive/color/red/500` |
-| `surface.alertDialog.default` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` |
-| `surface.calendar.date-default` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
-| `surface.calendar.date-current` | `#E2F3EB` | `#003322` | `Brand/primary/100` |
-| `surface.calendar.date-hover` | `#E2F3EB` | `#003322` | `Brand/primary/100` |
-| `surface.calendar.date-selected` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `surface.calendar.date-disabled` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
-| `surface.calendar slot.date-default` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
-| `surface.calendar slot.date-current` | `#08A768` | `#6AD6A5` | `Brand/primary/600` |
-| `surface.calendar slot.date-hover` | `#E2F3EB` | `#003322` | `Brand/primary/100` |
-| `surface.calendar slot.date-selected` | `#007549` | `#08A768` | `Brand/primary/700` |
-| `surface.calendar slot.date-disabled` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
-| `surface.calendar slot.slot-default` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
-| `surface.calendar slot.slot-hover` | `#F4FBF8` | `#002318` | `Brand/primary/50` |
-| `surface.calendar slot.slot-selected` | `#24A899` | `#24A899` | `Primitive/color/teal/500` |
-| `surface.calendar slot.slot-disabled` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
-| `surface.calendar slot.cta-default` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
-| `surface.calendar slot.cta-hover` | `#F4FBF8` | `#002318` | `Brand/primary/50` |
-| `surface.calendar slot.cta-disabled` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
-| `surface.sideMenu.default` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
-| `surface.sideMenu.hover` | `#F4FBF8` | `#002318` | `Brand/primary/50` |
-| `surface.sideMenu.disabled` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
-| `surface.sideMenu.selected` | `#F4FBF8` | `#002318` | `Brand/primary/50` |
-| `surface.sideMenu.selected-hover` | `#E2F3EB` | `#003322` | `Brand/primary/100` |
-| `surface.topic.default` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
-| `surface.topic.hover` | `#F4FBF8` | `#003322` | `Brand/primary/50` |
-| `surface.topic.disabled` | `#F9FBFB` | `#363B3F` | `Primitive/color/neutral/50` |
-| `surface.tabPill.default` | `#FFFFFF` | `#363B3F` | `Primitive/color/grey/50` |
-| `surface.tabPill.hover` | `#C5EDDA` | `#004C31` | `Brand/primary/200` |
-| `surface.tabPill.selected` | `#FFFFFF` | `#363B3F` | `Primitive/color/grey/50` |
-| `surface.tabPill.disabled` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` |
-| `surface.tabPill.background` | `#E2F3EB` | `#003322` | `Primitive/color/emerald/100` |
-| `surface.tabCapsule.default` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
-| `surface.tabCapsule.hover` | `#F4FBF8` | `#002318` | `Brand/primary/50` |
-| `surface.tabCapsule.selected` | `#F4FBF8` | `#002318` | `Brand/primary/50` |
-| `surface.tabCapsule.disabled` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
-| `surface.tabCapsule.success` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
-| `surface.statusSummaryCard.Info` | `#DBEAFE` | `#1E3A8A` | `Primitive/color/blue/100` |
-| `surface.statusSummaryCard.Indigo` | `#EEF2FF` | `#3730A3` | `Primitive/color/indigo/100` |
-| `surface.statusSummaryCard.Sakura` | `#FFEDF3` | `#A35C7C` | `Primitive/color/sakura/100` |
-| `surface.statusSummaryCard.Positive` | `#D1F6EE` | `#194845` | `Primitive/color/teal/100` |
-| `surface.statusSummaryCard.Lime` | `#EAF7CC` | `#3B4E14` | `Primitive/color/lime/100` |
-| `surface.statusSummaryCard.Inprogress` | `#FFEDD5` | `#7C2D12` | `Primitive/color/orange/100` |
-| `surface.statusSummaryCard.Destructive` | `#FEE2E2` | `#7F1D1D` | `Primitive/color/red/100` |
-| `surface.statusSummaryCard.increase` | `#D1F6EE` | `#003322` | `Primitive/color/teal/100` |
-| `surface.statusSummaryCard.decrease` | `#FEE2E2` | `#7F1D1D` | `Primitive/color/red/100` |
-| `surface.categorySummaryCard.A` | `#BFDBFE` | `#1E40AF` | `Primitive/color/blue/200` |
-| `surface.categorySummaryCard.B` | `#C5EDDA` | `#004C31` | `Brand/primary/200` |
-| `surface.categorySummaryCard.C` | `#A2EDDE` | `#195652` | `Primitive/color/teal/200` |
-| `surface.categorySummaryCard.D` | `#F3ADFD` | `#6E1379` | `Primitive/color/magenta/200` |
-| `surface.categorySummaryCard.E` | `#E0E7FF` | `#4338CA` | `Primitive/color/indigo/200` |
-| `surface.categorySummaryCard.F` | `#FECACA` | `#991B1B` | `Primitive/color/red/200` |
-| `surface.categorySummaryCard.G` | `#FEF08A` | `#854D0E` | `Primitive/color/yellow/200` |
-| `surface.categorySummaryCard.H` | `#FED7AA` | `#9A3412` | `Primitive/color/orange/200` |
-| `surface.formBuilder.default` | `#F4FBF8` | `#E8E8E8` | `Brand/primary/50` |
-| `surface.formBuilder.default-on` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
-| `surface.formBuilder.hover` | `#F4FBF8` | `#002318` | `Brand/primary/50` |
-| `surface.formBuilder.filled` | `#F4FBF8` | `#002318` | `Brand/primary/50` |
-| `surface.formBuilder.error` | `#FFF0F0` | `#450A0A` | `Primitive/color/red/50` |
-| `surface.formBuilder.card` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` |
-| `surface.scrollBar.neutral-bar` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` |
-| `surface.scrollBar.neutral-pill` | `#ADB2B7` | `#ADB2B7` | `Primitive/color/neutral/400` |
-| `surface.scrollBar.info-bar` | `#DBEAFE` | `#1E3A8A` | `Primitive/color/blue/100` |
-| `surface.scrollBar.info-pill` | `#93C5FD` | `#1D4ED8` | `Primitive/color/blue/300` |
-| `surface.scrollBar.success-bar` | `#D1F6EE` | `#194845` | `Primitive/color/teal/100` |
-| `surface.scrollBar.success-pill` | `#6CDCCA` | `#196C65` | `Primitive/color/teal/300` |
-| `surface.scrollBar.warning-bar` | `#FFEDD5` | `#7C2D12` | `Primitive/color/orange/100` |
-| `surface.scrollBar.warning-pill` | `#FDBA74` | `#C2410C` | `Primitive/color/orange/300` |
-| `surface.scrollBar.error-bar` | `#FEE2E2` | `#7F1D1D` | `Primitive/color/red/100` |
-| `surface.scrollBar.error-pill` | `#FCA5A5` | `#B91C1C` | `Primitive/color/red/300` |
-| `surface.indicator.grey` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` |
-| `surface.indicator.blue` | `#2563EB` | `#60A5FA` | `Primitive/color/blue/600` |
-| `surface.indicator.indigo` | `#6366F1` | `#A5B4FC` | `Primitive/color/indigo/600` |
-| `surface.indicator.teal` | `#1B867D` | `#3EC3B2` | `Primitive/color/teal/600` |
-| `surface.indicator.green` | `#08A768` | `#6AD6A5` | `Primitive/color/emerald/600` |
-| `surface.indicator.orange` | `#EA580C` | `#FB923C` | `Primitive/color/orange/600` |
-| `surface.indicator.yellow` | `#CA8A04` | `#FACC15` | `Primitive/color/yellow/600` |
-| `surface.indicator.red` | `#DC2626` | `#F87171` | `Primitive/color/red/600` |
-| `surface.indicator.pink` | `#DB2777` | `#F472B6` | `Primitive/color/pink/600` |
-| `surface.indicator.purple` | `#9333EA` | `#C084FC` | `Primitive/color/purple/600` |
-| `surface.indicator.magenta` | `#A81BBD` | `#DC4CF2` | `Primitive/color/magenta/600` |
-| `surface.steps.default` | `#E2F3EB` | `#003322` | `Brand/primary/100` |
-| `surface.steps.hover` | `#C5EDDA` | `#004C31` | `Brand/primary/200` |
-| `surface.steps.selected` | `#007549` | `#91DFBB` | `Brand/primary/700` |
-| `surface.steps.success` | `#24A899` | `#24A899` | `Primitive/color/teal/500` |
-| `surface.steps.success-hover` | `#1B867D` | `#3EC3B2` | `Primitive/color/teal/600` |
-| `surface.table.header` | `#F4FBF8` | `#002318` | `Brand/primary/50` |
-| `surface.table.default` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` |
-| `surface.table.hover` | `#F4FBF8` | `#002318` | `Brand/primary/50` |
-| `surface.table.selected` | `#F4FBF8` | `#002318` | `Brand/primary/50` |
-| `surface.table.selected-hover` | `#E2F3EB` | `#003322` | `Brand/primary/100` |
-| `surface.table.footer` | `#E2F3EB` | `#003322` | `Brand/primary/100` |
-| `surface.dropdown.default` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` |
-| `surface.actionList.default` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` |
-| `surface.progress Bar.neutral-bar` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` |
-| `surface.progress Bar.neutral-pill` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` |
-| `surface.progress Bar.blue-bar` | `#DBEAFE` | `#1E3A8A` | `Primitive/color/blue/100` |
-| `surface.progress Bar.blue-pill` | `#3B82F6` | `#3B82F6` | `Primitive/color/blue/500` |
-| `surface.progress Bar.indigo-bar` | `#EEF2FF` | `#3730A3` | `Primitive/color/indigo/100` |
-| `surface.progress Bar.indigo-pill` | `#818CF8` | `#818CF8` | `Primitive/color/indigo/500` |
-| `surface.progress Bar.lavender-bar` | `#EDE7FF` | `#4E3490` | `Primitive/color/lavender/100` |
-| `surface.progress Bar.lavender-pill` | `#C8B6FF` | `#C8B6FF` | `Primitive/color/lavender/500` |
-| `surface.progress Bar.teal-bar` | `#D1F6EE` | `#194845` | `Primitive/color/teal/100` |
-| `surface.progress Bar.teal-pill` | `#24A899` | `#24A899` | `Primitive/color/teal/500` |
-| `surface.progress Bar.lime-bar` | `#EAF7CC` | `#3B4E14` | `Primitive/color/lime/100` |
-| `surface.progress Bar.lime-pill` | `#A5CF4F` | `#A5CF4F` | `Primitive/color/lime/500` |
-| `surface.progress Bar.sakura-bar` | `#FFEDF3` | `#A35C7C` | `Primitive/color/sakura/100` |
-| `surface.progress Bar.sakura-pill` | `#F5AFCA` | `#F5AFCA` | `Primitive/color/sakura/500` |
-| `surface.progress Bar.orange-bar` | `#FFEDD5` | `#7C2D12` | `Primitive/color/orange/100` |
-| `surface.progress Bar.orange-pill` | `#F97316` | `#F97316` | `Primitive/color/orange/500` |
-| `surface.progress Bar.red-bar` | `#FEE2E2` | `#7F1D1D` | `Primitive/color/red/100` |
-| `surface.progress Bar.red-pill` | `#EF4444` | `#EF4444` | `Primitive/color/red/500` |
-| `surface.slider.primary-bar` | `#C5EDDA` | `#004C31` | `Brand/primary/200` |
-| `surface.slider.primary-pill` | `#54CF97` | `#54CF97` | `Brand/primary/500` |
-| `surface.slider.neutral-bar` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` |
-| `surface.slider.neutral-pill` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` |
-| `surface.slider.blue-bar` | `#DBEAFE` | `#1E3A8A` | `Primitive/color/blue/100` |
-| `surface.slider.blue-pill` | `#3B82F6` | `#3B82F6` | `Primitive/color/blue/500` |
-| `surface.slider.indigo-bar` | `#EEF2FF` | `#3730A3` | `Primitive/color/indigo/100` |
-| `surface.slider.indigo-pill` | `#818CF8` | `#818CF8` | `Primitive/color/indigo/500` |
-| `surface.slider.lavender-bar` | `#EDE7FF` | `#4E3490` | `Primitive/color/lavender/100` |
-| `surface.slider.lavender-pill` | `#C8B6FF` | `#C8B6FF` | `Primitive/color/lavender/500` |
-| `surface.slider.teal-bar` | `#D1F6EE` | `#194845` | `Primitive/color/teal/100` |
-| `surface.slider.teal-pill` | `#24A899` | `#24A899` | `Primitive/color/teal/500` |
-| `surface.slider.lime-bar` | `#EAF7CC` | `#3B4E14` | `Primitive/color/lime/100` |
-| `surface.slider.lime-pill` | `#A5CF4F` | `#A5CF4F` | `Primitive/color/lime/500` |
-| `surface.slider.sakura-bar` | `#FFEDF3` | `#A35C7C` | `Primitive/color/sakura/100` |
-| `surface.slider.sakura-pill` | `#F5AFCA` | `#F5AFCA` | `Primitive/color/sakura/500` |
-| `surface.slider.orange-bar` | `#FFEDD5` | `#7C2D12` | `Primitive/color/orange/100` |
-| `surface.slider.orange-pill` | `#F97316` | `#F97316` | `Primitive/color/orange/500` |
-| `surface.slider.red-bar` | `#FEE2E2` | `#7F1D1D` | `Primitive/color/red/100` |
-| `surface.slider.red-pill` | `#EF4444` | `#EF4444` | `Primitive/color/red/500` |
+| `surface.timeslot.disabled` | `#FAFCFA` | `#102310` | `Brand/secondary/50` | `Brand/secondary/950` |
+| `surface.timeslot.box` | `#FAFCFA` | `#102310` | `Brand/secondary/50` | `Brand/secondary/950` |
+| `surface.accordion.collapsed` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` | `Primitive/color/neutral/900` |
+| `surface.accordion.expanded` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` | `Primitive/color/neutral/900` |
+| `surface.accordion.disabled` | `#F4F5F5` | `#363B3F` | `Primitive/color/neutral/100` | `Primitive/color/neutral/800` |
+| `surface.alert.info` | `#F0F6FF` | `#172554` | `Primitive/color/blue/50` | `Primitive/color/blue/950` |
+| `surface.alert.success` | `#F4FBFA` | `#082B2A` | `Primitive/color/teal/50` | `Primitive/color/teal/950` |
+| `surface.alert.warning` | `#FFF9F0` | `#431407` | `Primitive/color/orange/50` | `Primitive/color/orange/950` |
+| `surface.alert.error` | `#FFF0F0` | `#450A0A` | `Primitive/color/red/50` | `Primitive/color/red/950` |
+| `surface.smallAlert.success` | `#24A899` | `#24A899` | `Primitive/color/teal/500` | `Primitive/color/teal/500` |
+| `surface.smallAlert.error` | `#EF4444` | `#EF4444` | `Primitive/color/red/500` | `Primitive/color/red/500` |
+| `surface.alertDialog.default` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` | `Primitive/color/neutral/900` |
+| `surface.calendar.date-default` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
+| `surface.calendar.date-current` | `#E2F3EB` | `#003322` | `Brand/primary/100` | `Brand/primary/900` |
+| `surface.calendar.date-hover` | `#E2F3EB` | `#003322` | `Brand/primary/100` | `Brand/primary/900` |
+| `surface.calendar.date-selected` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `surface.calendar.date-disabled` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
+| `surface.calendar slot.date-default` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
+| `surface.calendar slot.date-current` | `#08A768` | `#6AD6A5` | `Brand/primary/600` | `Brand/primary/400` |
+| `surface.calendar slot.date-hover` | `#E2F3EB` | `#003322` | `Brand/primary/100` | `Brand/primary/900` |
+| `surface.calendar slot.date-selected` | `#007549` | `#08A768` | `Brand/primary/700` | `Brand/primary/600` |
+| `surface.calendar slot.date-disabled` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
+| `surface.calendar slot.slot-default` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
+| `surface.calendar slot.slot-hover` | `#F4FBF8` | `#002318` | `Brand/primary/50` | `Brand/primary/950` |
+| `surface.calendar slot.slot-selected` | `#24A899` | `#24A899` | `Primitive/color/teal/500` | `Primitive/color/teal/500` |
+| `surface.calendar slot.slot-disabled` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
+| `surface.calendar slot.cta-default` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
+| `surface.calendar slot.cta-hover` | `#F4FBF8` | `#002318` | `Brand/primary/50` | `Brand/primary/950` |
+| `surface.calendar slot.cta-disabled` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
+| `surface.sideMenu.default` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
+| `surface.sideMenu.hover` | `#F4FBF8` | `#002318` | `Brand/primary/50` | `Brand/primary/950` |
+| `surface.sideMenu.disabled` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
+| `surface.sideMenu.selected` | `#F4FBF8` | `#002318` | `Brand/primary/50` | `Brand/primary/950` |
+| `surface.sideMenu.selected-hover` | `#E2F3EB` | `#003322` | `Brand/primary/100` | `Brand/primary/900` |
+| `surface.topic.default` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
+| `surface.topic.hover` | `#F4FBF8` | `#003322` | `Brand/primary/50` | `Brand/primary/900` |
+| `surface.topic.disabled` | `#F9FBFB` | `#363B3F` | `Primitive/color/neutral/50` | `Primitive/color/neutral/800` |
+| `surface.tabPill.default` | `#FFFFFF` | `#363B3F` | `Primitive/color/grey/50` | `Primitive/color/neutral/800` |
+| `surface.tabPill.hover` | `#C5EDDA` | `#004C31` | `Brand/primary/200` | `Brand/primary/800` |
+| `surface.tabPill.selected` | `#FFFFFF` | `#363B3F` | `Primitive/color/grey/50` | `Primitive/color/neutral/800` |
+| `surface.tabPill.disabled` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` | `Primitive/color/neutral/900` |
+| `surface.tabPill.background` | `#E2F3EB` | `#003322` | `Primitive/color/emerald/100` | `Primitive/color/emerald/900` |
+| `surface.tabCapsule.default` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
+| `surface.tabCapsule.hover` | `#F4FBF8` | `#002318` | `Brand/primary/50` | `Brand/primary/950` |
+| `surface.tabCapsule.selected` | `#F4FBF8` | `#002318` | `Brand/primary/50` | `Brand/primary/950` |
+| `surface.tabCapsule.disabled` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
+| `surface.tabCapsule.success` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
+| `surface.statusSummaryCard.Info` | `#DBEAFE` | `#1E3A8A` | `Primitive/color/blue/100` | `Primitive/color/blue/900` |
+| `surface.statusSummaryCard.Indigo` | `#EEF2FF` | `#3730A3` | `Primitive/color/indigo/100` | `Primitive/color/indigo/900` |
+| `surface.statusSummaryCard.Sakura` | `#FFEDF3` | `#A35C7C` | `Primitive/color/sakura/100` | `Primitive/color/sakura/900` |
+| `surface.statusSummaryCard.Positive` | `#D1F6EE` | `#194845` | `Primitive/color/teal/100` | `Primitive/color/teal/900` |
+| `surface.statusSummaryCard.Lime` | `#EAF7CC` | `#3B4E14` | `Primitive/color/lime/100` | `Primitive/color/lime/900` |
+| `surface.statusSummaryCard.Inprogress` | `#FFEDD5` | `#7C2D12` | `Primitive/color/orange/100` | `Primitive/color/orange/900` |
+| `surface.statusSummaryCard.Destructive` | `#FEE2E2` | `#7F1D1D` | `Primitive/color/red/100` | `Primitive/color/red/900` |
+| `surface.statusSummaryCard.increase` | `#D1F6EE` | `#003322` | `Primitive/color/teal/100` | `Primitive/color/emerald/900` |
+| `surface.statusSummaryCard.decrease` | `#FEE2E2` | `#7F1D1D` | `Primitive/color/red/100` | `Primitive/color/red/900` |
+| `surface.categorySummaryCard.A` | `#BFDBFE` | `#1E40AF` | `Primitive/color/blue/200` | `Primitive/color/blue/800` |
+| `surface.categorySummaryCard.B` | `#C5EDDA` | `#004C31` | `Brand/primary/200` | `Brand/primary/800` |
+| `surface.categorySummaryCard.C` | `#A2EDDE` | `#195652` | `Primitive/color/teal/200` | `Primitive/color/teal/800` |
+| `surface.categorySummaryCard.D` | `#F3ADFD` | `#6E1379` | `Primitive/color/magenta/200` | `Primitive/color/magenta/800` |
+| `surface.categorySummaryCard.E` | `#E0E7FF` | `#4338CA` | `Primitive/color/indigo/200` | `Primitive/color/indigo/800` |
+| `surface.categorySummaryCard.F` | `#FECACA` | `#991B1B` | `Primitive/color/red/200` | `Primitive/color/red/800` |
+| `surface.categorySummaryCard.G` | `#FEF08A` | `#854D0E` | `Primitive/color/yellow/200` | `Primitive/color/yellow/800` |
+| `surface.categorySummaryCard.H` | `#FED7AA` | `#9A3412` | `Primitive/color/orange/200` | `Primitive/color/orange/800` |
+| `surface.formBuilder.default` | `#F4FBF8` | `#E8E8E8` | `Brand/primary/50` | `Primitive/color/grey/700` |
+| `surface.formBuilder.default-on` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
+| `surface.formBuilder.hover` | `#F4FBF8` | `#002318` | `Brand/primary/50` | `Brand/primary/950` |
+| `surface.formBuilder.filled` | `#F4FBF8` | `#002318` | `Brand/primary/50` | `Brand/primary/950` |
+| `surface.formBuilder.error` | `#FFF0F0` | `#450A0A` | `Primitive/color/red/50` | `Primitive/color/red/950` |
+| `surface.formBuilder.card` | `#FFFFFF` | `#111314` | `Primitive/color/grey/50` | `Primitive/color/neutral/950` |
+| `surface.scrollBar.neutral-bar` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` | `Primitive/color/neutral/800` |
+| `surface.scrollBar.neutral-pill` | `#ADB2B7` | `#ADB2B7` | `Primitive/color/neutral/400` | `Primitive/color/neutral/400` |
+| `surface.scrollBar.info-bar` | `#DBEAFE` | `#1E3A8A` | `Primitive/color/blue/100` | `Primitive/color/blue/900` |
+| `surface.scrollBar.info-pill` | `#93C5FD` | `#1D4ED8` | `Primitive/color/blue/300` | `Primitive/color/blue/700` |
+| `surface.scrollBar.success-bar` | `#D1F6EE` | `#194845` | `Primitive/color/teal/100` | `Primitive/color/teal/900` |
+| `surface.scrollBar.success-pill` | `#6CDCCA` | `#196C65` | `Primitive/color/teal/300` | `Primitive/color/teal/700` |
+| `surface.scrollBar.warning-bar` | `#FFEDD5` | `#7C2D12` | `Primitive/color/orange/100` | `Primitive/color/orange/900` |
+| `surface.scrollBar.warning-pill` | `#FDBA74` | `#C2410C` | `Primitive/color/orange/300` | `Primitive/color/orange/700` |
+| `surface.scrollBar.error-bar` | `#FEE2E2` | `#7F1D1D` | `Primitive/color/red/100` | `Primitive/color/red/900` |
+| `surface.scrollBar.error-pill` | `#FCA5A5` | `#B91C1C` | `Primitive/color/red/300` | `Primitive/color/red/700` |
+| `surface.indicator.grey` | `#636B72` | `#ADB2B7` | `Primitive/color/neutral/600` | `Primitive/color/neutral/400` |
+| `surface.indicator.blue` | `#2563EB` | `#60A5FA` | `Primitive/color/blue/600` | `Primitive/color/blue/400` |
+| `surface.indicator.indigo` | `#6366F1` | `#A5B4FC` | `Primitive/color/indigo/600` | `Primitive/color/indigo/400` |
+| `surface.indicator.teal` | `#1B867D` | `#3EC3B2` | `Primitive/color/teal/600` | `Primitive/color/teal/400` |
+| `surface.indicator.green` | `#08A768` | `#6AD6A5` | `Primitive/color/emerald/600` | `Brand/primary/400` |
+| `surface.indicator.orange` | `#EA580C` | `#FB923C` | `Primitive/color/orange/600` | `Primitive/color/orange/400` |
+| `surface.indicator.yellow` | `#CA8A04` | `#FACC15` | `Primitive/color/yellow/600` | `Primitive/color/yellow/400` |
+| `surface.indicator.red` | `#DC2626` | `#F87171` | `Primitive/color/red/600` | `Primitive/color/red/400` |
+| `surface.indicator.pink` | `#DB2777` | `#F472B6` | `Primitive/color/pink/600` | `Primitive/color/pink/400` |
+| `surface.indicator.purple` | `#9333EA` | `#C084FC` | `Primitive/color/purple/600` | `Primitive/color/purple/400` |
+| `surface.indicator.magenta` | `#A81BBD` | `#DC4CF2` | `Primitive/color/magenta/600` | `Primitive/color/magenta/400` |
+| `surface.steps.default` | `#E2F3EB` | `#003322` | `Brand/primary/100` | `Brand/primary/900` |
+| `surface.steps.hover` | `#C5EDDA` | `#004C31` | `Brand/primary/200` | `Brand/primary/800` |
+| `surface.steps.selected` | `#007549` | `#91DFBB` | `Brand/primary/700` | `Brand/primary/300` |
+| `surface.steps.success` | `#24A899` | `#24A899` | `Primitive/color/teal/500` | `Primitive/color/teal/500` |
+| `surface.steps.success-hover` | `#1B867D` | `#3EC3B2` | `Primitive/color/teal/600` | `Primitive/color/teal/400` |
+| `surface.table.header` | `#F4FBF8` | `#002318` | `Brand/primary/50` | `Brand/primary/950` |
+| `surface.table.default` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` | `Primitive/color/neutral/900` |
+| `surface.table.hover` | `#F4FBF8` | `#002318` | `Brand/primary/50` | `Brand/primary/950` |
+| `surface.table.selected` | `#F4FBF8` | `#002318` | `Brand/primary/50` | `Brand/primary/950` |
+| `surface.table.selected-hover` | `#E2F3EB` | `#003322` | `Brand/primary/100` | `Brand/primary/900` |
+| `surface.table.footer` | `#E2F3EB` | `#003322` | `Brand/primary/100` | `Brand/primary/900` |
+| `surface.dropdown.default` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` | `Primitive/color/neutral/900` |
+| `surface.actionList.default` | `#FFFFFF` | `#222629` | `Primitive/color/grey/50` | `Primitive/color/neutral/900` |
+| `surface.progress Bar.neutral-bar` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` | `Primitive/color/neutral/800` |
+| `surface.progress Bar.neutral-pill` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` | `Primitive/color/neutral/500` |
+| `surface.progress Bar.blue-bar` | `#DBEAFE` | `#1E3A8A` | `Primitive/color/blue/100` | `Primitive/color/blue/900` |
+| `surface.progress Bar.blue-pill` | `#3B82F6` | `#3B82F6` | `Primitive/color/blue/500` | `Primitive/color/blue/500` |
+| `surface.progress Bar.indigo-bar` | `#EEF2FF` | `#3730A3` | `Primitive/color/indigo/100` | `Primitive/color/indigo/900` |
+| `surface.progress Bar.indigo-pill` | `#818CF8` | `#818CF8` | `Primitive/color/indigo/500` | `Primitive/color/indigo/500` |
+| `surface.progress Bar.lavender-bar` | `#EDE7FF` | `#4E3490` | `Primitive/color/lavender/100` | `Primitive/color/lavender/900` |
+| `surface.progress Bar.lavender-pill` | `#C8B6FF` | `#C8B6FF` | `Primitive/color/lavender/500` | `Primitive/color/lavender/500` |
+| `surface.progress Bar.teal-bar` | `#D1F6EE` | `#194845` | `Primitive/color/teal/100` | `Primitive/color/teal/900` |
+| `surface.progress Bar.teal-pill` | `#24A899` | `#24A899` | `Primitive/color/teal/500` | `Primitive/color/teal/500` |
+| `surface.progress Bar.lime-bar` | `#EAF7CC` | `#3B4E14` | `Primitive/color/lime/100` | `Primitive/color/lime/900` |
+| `surface.progress Bar.lime-pill` | `#A5CF4F` | `#A5CF4F` | `Primitive/color/lime/500` | `Primitive/color/lime/500` |
+| `surface.progress Bar.sakura-bar` | `#FFEDF3` | `#A35C7C` | `Primitive/color/sakura/100` | `Primitive/color/sakura/900` |
+| `surface.progress Bar.sakura-pill` | `#F5AFCA` | `#F5AFCA` | `Primitive/color/sakura/500` | `Primitive/color/sakura/500` |
+| `surface.progress Bar.orange-bar` | `#FFEDD5` | `#7C2D12` | `Primitive/color/orange/100` | `Primitive/color/orange/900` |
+| `surface.progress Bar.orange-pill` | `#F97316` | `#F97316` | `Primitive/color/orange/500` | `Primitive/color/orange/500` |
+| `surface.progress Bar.red-bar` | `#FEE2E2` | `#7F1D1D` | `Primitive/color/red/100` | `Primitive/color/red/900` |
+| `surface.progress Bar.red-pill` | `#EF4444` | `#EF4444` | `Primitive/color/red/500` | `Primitive/color/red/500` |
+| `surface.slider.primary-bar` | `#C5EDDA` | `#004C31` | `Brand/primary/200` | `Brand/primary/800` |
+| `surface.slider.primary-pill` | `#54CF97` | `#54CF97` | `Brand/primary/500` | `Brand/primary/500` |
+| `surface.slider.neutral-bar` | `#E2E4E6` | `#363B3F` | `Primitive/color/neutral/200` | `Primitive/color/neutral/800` |
+| `surface.slider.neutral-pill` | `#858C92` | `#858C92` | `Primitive/color/neutral/500` | `Primitive/color/neutral/500` |
+| `surface.slider.blue-bar` | `#DBEAFE` | `#1E3A8A` | `Primitive/color/blue/100` | `Primitive/color/blue/900` |
+| `surface.slider.blue-pill` | `#3B82F6` | `#3B82F6` | `Primitive/color/blue/500` | `Primitive/color/blue/500` |
+| `surface.slider.indigo-bar` | `#EEF2FF` | `#3730A3` | `Primitive/color/indigo/100` | `Primitive/color/indigo/900` |
+| `surface.slider.indigo-pill` | `#818CF8` | `#818CF8` | `Primitive/color/indigo/500` | `Primitive/color/indigo/500` |
+| `surface.slider.lavender-bar` | `#EDE7FF` | `#4E3490` | `Primitive/color/lavender/100` | `Primitive/color/lavender/900` |
+| `surface.slider.lavender-pill` | `#C8B6FF` | `#C8B6FF` | `Primitive/color/lavender/500` | `Primitive/color/lavender/500` |
+| `surface.slider.teal-bar` | `#D1F6EE` | `#194845` | `Primitive/color/teal/100` | `Primitive/color/teal/900` |
+| `surface.slider.teal-pill` | `#24A899` | `#24A899` | `Primitive/color/teal/500` | `Primitive/color/teal/500` |
+| `surface.slider.lime-bar` | `#EAF7CC` | `#3B4E14` | `Primitive/color/lime/100` | `Primitive/color/lime/900` |
+| `surface.slider.lime-pill` | `#A5CF4F` | `#A5CF4F` | `Primitive/color/lime/500` | `Primitive/color/lime/500` |
+| `surface.slider.sakura-bar` | `#FFEDF3` | `#A35C7C` | `Primitive/color/sakura/100` | `Primitive/color/sakura/900` |
+| `surface.slider.sakura-pill` | `#F5AFCA` | `#F5AFCA` | `Primitive/color/sakura/500` | `Primitive/color/sakura/500` |
+| `surface.slider.orange-bar` | `#FFEDD5` | `#7C2D12` | `Primitive/color/orange/100` | `Primitive/color/orange/900` |
+| `surface.slider.orange-pill` | `#F97316` | `#F97316` | `Primitive/color/orange/500` | `Primitive/color/orange/500` |
+| `surface.slider.red-bar` | `#FEE2E2` | `#7F1D1D` | `Primitive/color/red/100` | `Primitive/color/red/900` |
+| `surface.slider.red-pill` | `#EF4444` | `#EF4444` | `Primitive/color/red/500` | `Primitive/color/red/500` |
 
 ### 4.6. `typography`
 
