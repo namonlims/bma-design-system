@@ -15,7 +15,7 @@ The mobile system is intentionally lean: ~7 primitives that compose every screen
 <!-- tokens:start (npm run design:tokens — ห้ามแก้มือ) -->
 ### 7.0. Token reference — ทุก token ที่แอปใช้ (สร้างอัตโนมัติ)
 
-> สำหรับ dev ที่ขึ้นแอปจริง: ใช้ได้เฉพาะ token ในตารางนี้ · 594 ตัว = `src/styles/tokens.css` (foundation เฉพาะที่แอปใช้ · mih-design `mobile-foundation.css`) + `src/styles/mobile-tokens.css` (`--mobile-*` + ค่าที่ Mobile ทับ)
+> สำหรับ dev ที่ขึ้นแอปจริง: ใช้ได้เฉพาะ token ในตารางนี้ · 597 ตัว = `src/styles/tokens.css` (foundation เฉพาะที่แอปใช้ · mih-design `mobile-foundation.css`) + `src/styles/mobile-tokens.css` (`--mobile-*` + ค่าที่ Mobile ทับ)
 > **สว่าง** = ค่าที่แอปแสดงจริง (`<html data-app="mobile">`) · **มืด** = `<html data-mode="dark">` (ว่าง = เหมือนสว่าง) · **อ้างถึง** = ค่าที่เขียนในไฟล์ (ใช้ชื่อนี้ใน Figma variable)
 > ใช้ในโค้ด: `var(--token, <ค่าสว่าง>)` — fallback ต้องเท่าค่าสว่าง · ค่าที่ไม่มีในตาราง = เพิ่มที่ mih-design ก่อน (`mobile.css`) แล้ว `npm run tokens:pull` · ตารางนี้สร้างใหม่ด้วย `npm run design:tokens`
 
@@ -261,11 +261,11 @@ The mobile system is intentionally lean: ~7 primitives that compose every screen
 | `--surface-danger-tertiary` | `#FEE2E2` | `#7F1D1D` |  |
 | `--surface-dangerButton-quaternary` | `#FFF0F0` | `#450A0A` |  |
 | `--surface-disabled-secondary-hover` | `#C9CDD0` | `#4D5358` |  |
-| `--surface-disabled-tertiary` | `#F4F5F5` | `#363B3F` | `var(--surface-input-disabled)` |
+| `--surface-disabled-tertiary` | `#F4F5F5` | `#222629` | `var(--surface-input-disabled)` |
 | `--surface-disabledButton-tertiary` | `#F4F5F5` | `#4D5358` |  |
 | `--surface-info-default` | `#3B82F6` |  |  |
 | `--surface-input-default` | `#FFFFFF` | `#363B3F` |  |
-| `--surface-input-disabled` | `#F4F5F5` | `#363B3F` |  |
+| `--surface-input-disabled` | `#F4F5F5` | `#222629` |  |
 | `--surface-list-default` | `#FFFFFF` | `#363B3F` |  |
 | `--surface-list-hover` | `#F4FBF8` | `#363B3F` | `var(--brand-p50)` |
 | `--surface-navigation-default` | `#FFFFFF` | `#222629` |  |
@@ -466,7 +466,7 @@ The mobile system is intentionally lean: ~7 primitives that compose every screen
 | `--icon-brandPrimary-default` | `#007549` | `#6AD6A5` | `var(--brand-p700)` |
 | `--icon-content-tertiary` | `#7A7F83` |  |  |
 | `--icon-input-default` | `#ADB2B7` | `#636B72` |  |
-| `--icon-input-disabled` | `#ADB2B7` | `#636B72` |  |
+| `--icon-input-disabled` | `#ADB2B7` | `#858C92` |  |
 | `--icon-input-error` | `#ADB2B7` | `#636B72` |  |
 | `--icon-input-filled` | `#4D5358` | `#636B72` |  |
 | `--icon-input-hover` | `#08A768` | `#6AD6A5` | `var(--brand-p600)` |
@@ -483,7 +483,7 @@ The mobile system is intentionally lean: ~7 primitives that compose every screen
 | `--icon-step-accent` | `#FD879F` |  |  |
 | `--icon-switch-checkbox-tick` | `#FFFFFF` | `#111314` |  |
 
-#### Mobile — platform (`--mobile-*`) (177)
+#### Mobile — platform (`--mobile-*`) (180)
 
 | Token | สว่าง | มืด | อ้างถึง |
 |---|---|---|---|
@@ -567,6 +567,7 @@ The mobile system is intentionally lean: ~7 primitives that compose every screen
 | `--mobile-icon-neutralButton-quaternary` | `#C9CDD0` | `#4D5358` |  |
 | `--mobile-icon-neutralButton-secondary` | `#636B72` | `#ADB2B7` |  |
 | `--mobile-icon-neutralButton-tertiary` | `#ADB2B7` | `#636B72` |  |
+| `--mobile-icon-qr-module` | `#363B3F` |  |  |
 | `--mobile-input-height` | `48px` |  |  |
 | `--mobile-input-padding-x` | `16px` |  | `var(--dim-space-400, 16px)` |
 | `--mobile-input-radius` | `12px` |  | `var(--dim-radius-400, 12px)` |
@@ -621,6 +622,7 @@ The mobile system is intentionally lean: ~7 primitives that compose every screen
 | `--mobile-surface-neutralButton-secondary-hover` | `#C9CDD0` | `#4D5358` |  |
 | `--mobile-surface-neutralButton-tertiary` | `#F4F5F5` | `#222629` |  |
 | `--mobile-surface-neutralButton-tertiary-hover` | `#E2E4E6` | `#363B3F` |  |
+| `--mobile-surface-qr-default` | `#FFFFFF` |  |  |
 | `--mobile-text-brandPrimaryButton-default` | `#007549` | `#91DFBB` | `var(--brand-p700)` |
 | `--mobile-text-brandPrimaryButton-on-brand` | `#FFFFFF` | `#002318` |  |
 | `--mobile-text-brandPrimaryButton-quaternary` | `#91DFBB` | `#007549` | `var(--brand-p300)` |
@@ -646,6 +648,7 @@ The mobile system is intentionally lean: ~7 primitives that compose every screen
 | `--mobile-text-neutralButton-quaternary` | `#C9CDD0` | `#4D5358` |  |
 | `--mobile-text-neutralButton-secondary` | `#636B72` | `#ADB2B7` |  |
 | `--mobile-text-neutralButton-tertiary` | `#ADB2B7` | `#636B72` |  |
+| `--mobile-text-successCard-value` | `#004C31` | `#91DFBB` | `var(--brand-p800)` |
 | `--mobile-theme-accent-green` | `#50A622` |  |  |
 | `--mobile-theme-accent-pink` | `#EC3FAA` |  |  |
 | `--mobile-theme-border-card` | `#C5EDDA` | `#363B3F` | `var(--brand-p200)` |
