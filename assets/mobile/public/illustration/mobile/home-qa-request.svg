@@ -1,0 +1,14 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Shower">
+<circle id="Icon Background" cx="32" cy="32" r="32" fill="url(#paint0_linear_request)"/>
+<g id="Send">
+<path id="icon" d="M41.6699 21.0557C42.0324 20.929 42.4355 21.0214 42.707 21.293C42.9786 21.5645 43.071 21.9676 42.9443 22.3301L35.9443 42.3301C35.8089 42.717 35.4506 42.9822 35.041 42.999C34.6313 43.0157 34.2525 42.7809 34.0859 42.4062L30.2422 33.7578L21.5937 29.9141C21.2191 29.7475 20.9843 29.3687 21.001 28.959C21.0178 28.5494 21.283 28.1911 21.6699 28.0557L41.6699 21.0557ZM32.1924 33.2207L34.8887 39.2871L39.6074 25.8057L32.1924 33.2207ZM24.7119 29.1104L30.7783 31.8066L38.1934 24.3916L24.7119 29.1104Z" fill="var(--fill-0, #871598)"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_request" x1="9.125" y1="11" x2="53.125" y2="58.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F7E1FF"/>
+<stop offset="1" stop-color="#E9B0FA"/>
+</linearGradient>
+</defs>
+</svg>

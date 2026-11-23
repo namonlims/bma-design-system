@@ -1,0 +1,9 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="101.25" height="95.625" viewBox="0 0 101.25 95.625" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M75 9.375H26.25V3.75C26.25 1.67893 24.5711 0 22.5 0C20.4289 0 18.75 1.67893 18.75 3.75V9.375H11.25C5.03679 9.375 0 14.4118 0 20.625V84.375C0 90.5882 5.03679 95.625 11.25 95.625H52.5454C51.7014 93.237 51.1185 90.7254 50.8311 88.125H11.25C9.17893 88.125 7.5 86.4461 7.5 84.375V37.5H93.75V51.9441C96.3983 52.7083 98.9128 53.7881 101.25 55.1402V20.625C101.25 14.4118 96.2132 9.375 90 9.375H82.5V3.75C82.5 1.67893 80.8211 0 78.75 0C76.6789 0 75 1.67893 75 3.75V9.375ZM7.5 30H93.75V20.625C93.75 18.5539 92.0711 16.875 90 16.875H11.25C9.17893 16.875 7.5 18.5539 7.5 20.625V30Z" fill="url(#paint0_linear_0_227)"/>
+<defs>
+<linearGradient id="paint0_linear_0_227" x1="14.0625" y1="-1.03998e-06" x2="86.25" y2="93.75" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FD879F"/>
+<stop offset="0.901" stop-color="#82AFFD"/>
+</linearGradient>
+</defs>
+</svg>

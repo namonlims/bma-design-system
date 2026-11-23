@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+<svg x="3.640" y="3.640" width="72.720" height="72.720" viewBox="0 0 72.7273 72.7273" preserveAspectRatio="none">
+<path id="f0_Vector" d="M36.3636 72.7273C56.4467 72.7273 72.7273 56.4467 72.7273 36.3636C72.7273 16.2806 56.4467 0 36.3636 0C16.2806 0 0 16.2806 0 36.3636C0 56.4467 16.2806 72.7273 36.3636 72.7273Z" fill="var(--fill-0, #DEF7FF)"/>
+</svg>
+<svg x="25.816" y="21.088" width="38.184" height="45.456" viewBox="0 0 38.1818 45.4545" preserveAspectRatio="none">
+<path id="f1_Vector" d="M5.77785 0.585786C6.15292 0.210714 6.66163 0 7.19206 0H36.1818C37.2864 0 38.1818 0.89543 38.1818 2V43.4545C38.1818 44.5591 37.2864 45.4545 36.1818 45.4545H2C0.895434 45.4545 0 44.5591 0 43.4545V7.19206C0 6.66163 0.210714 6.15292 0.585786 5.77785L5.77785 0.585786Z" fill="url(#f1_paint0_linear_0_415)"/>
+<defs>
+<linearGradient id="f1_paint0_linear_0_415" x1="4.36364" y1="2.18182" x2="38.1818" y2="45.8182" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+</defs>
+</svg>
+<svg x="25.816" y="21.088" width="6.368" height="6.368" viewBox="0 0 6.36364 6.36364" preserveAspectRatio="none">
+<path id="f2_Vector" d="M0 6.36364H6.36364V0L0 6.36364Z" fill="var(--fill-0, #007F9E)"/>
+</svg>
+<svg x="20.360" y="16.544" width="38.184" height="45.456" viewBox="0 0 38.1818 45.4545" preserveAspectRatio="none">
+<path id="f3_Vector" d="M5.77785 0.585786C6.15292 0.210714 6.66163 0 7.19206 0H36.1818C37.2864 0 38.1818 0.89543 38.1818 2V4.54545H12.6466C12.1162 4.54545 11.6075 4.75617 11.2324 5.13124L6.04033 10.3233C5.66526 10.6984 5.45455 11.2071 5.45455 11.7375V45.4545H2C0.895431 45.4545 0 44.5591 0 43.4545V7.19206C0 6.66163 0.210714 6.15292 0.585787 5.77785L5.77785 0.585786Z" fill="url(#f3_paint0_linear_0_417)"/>
+<defs>
+<linearGradient id="f3_paint0_linear_0_417" x1="19.0909" y1="0" x2="19.0909" y2="45.4545" gradientUnits="userSpaceOnUse">
+<stop stop-color="#00D1DB"/>
+<stop offset="1" stop-color="#00BCC5"/>
+</linearGradient>
+</defs>
+</svg>
+<svg x="20.360" y="16.544" width="6.368" height="6.368" viewBox="0 0 6.36364 6.36364" preserveAspectRatio="none">
+<path id="f4_Vector" d="M0 6.36364H6.36364V0L0 6.36364Z" fill="var(--fill-0, #007F9E)"/>
+</svg>
+<svg x="14.912" y="12.000" width="38.176" height="45.456" viewBox="0 0 38.1818 45.4545" preserveAspectRatio="none">
+<path id="f5_Vector" d="M5.77785 0.585786C6.15292 0.210714 6.66163 0 7.19206 0H36.1818C37.2864 0 38.1818 0.89543 38.1818 2V4.54545H12.6466C12.1162 4.54545 11.6075 4.75617 11.2324 5.13124L6.04033 10.3233C5.66526 10.6984 5.45455 11.2071 5.45455 11.7375V45.4545H2C0.895431 45.4545 0 44.5591 0 43.4545V7.19206C0 6.66163 0.210714 6.15292 0.585787 5.77785L5.77785 0.585786Z" fill="var(--fill-0, #0093B7)"/>
+</svg>
+<svg x="14.912" y="12.000" width="6.360" height="6.360" viewBox="0 0 6.36364 6.36364" preserveAspectRatio="none">
+<path id="f6_Vector" d="M0 6.36364H6.36364V0L0 6.36364Z" fill="var(--fill-0, #007F9E)"/>
+</svg>
+<svg x="46.728" y="28.360" width="12.728" height="14.552" viewBox="0 0 12.7273 14.5455" preserveAspectRatio="none">
+<path id="f7_Vector" d="M10.7273 0H2C0.895431 0 0 0.895432 0 2V14.5455H12.7273V2C12.7273 0.895431 11.8318 0 10.7273 0Z" fill="var(--fill-0, #007F9E)"/>
+</svg>
+<svg x="50.360" y="32.000" width="5.456" height="5.456" viewBox="0 0 5.45455 5.45455" preserveAspectRatio="none">
+<path id="f8_Vector" d="M2.72727 5.45455C4.2335 5.45455 5.45455 4.2335 5.45455 2.72727C5.45455 1.22104 4.2335 0 2.72727 0C1.22104 0 0 1.22104 0 2.72727C0 4.2335 1.22104 5.45455 2.72727 5.45455Z" fill="url(#f8_paint0_linear_0_367)"/>
+<defs>
+<linearGradient id="f8_paint0_linear_0_367" x1="2.72727" y1="0" x2="2.72727" y2="5.45455" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFEC83"/>
+<stop offset="1" stop-color="#FFBD66"/>
+</linearGradient>
+</defs>
+</svg>
+<svg x="46.800" y="37.456" width="12.584" height="5.456" viewBox="0 0 12.5818 5.45455" preserveAspectRatio="none">
+<path id="f9_Vector" d="M12.5818 5.45455H0C0.436364 2.36364 3.08182 0 6.29091 0C9.5 0 12.1455 2.36364 12.5818 5.45455Z" fill="url(#f9_paint0_linear_0_443)"/>
+<defs>
+<linearGradient id="f9_paint0_linear_0_443" x1="6.29091" y1="0" x2="6.29091" y2="5.45455" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFC383"/>
+<stop offset="1" stop-color="#FFB866"/>
+</linearGradient>
+</defs>
+</svg>
+<svg x="30.360" y="30.184" width="11.824" height="11.816" viewBox="0 0 11.8182 11.8182" preserveAspectRatio="none">
+<path id="f10_Vector" d="M11.8182 3.63636H8.18182V0H3.63636V3.63636H0V8.18182H3.63636V11.8182H8.18182V8.18182H11.8182V3.63636Z" fill="url(#f10_paint0_linear_0_349)"/>
+<defs>
+<linearGradient id="f10_paint0_linear_0_349" x1="5.90909" y1="0" x2="5.90909" y2="11.8182" gradientUnits="userSpaceOnUse">
+<stop stop-color="#00D1DB"/>
+<stop offset="1" stop-color="#00BCC5"/>
+</linearGradient>
+</defs>
+</svg>
+<svg x="35.816" y="46.544" width="21.824" height="1.816" viewBox="0 0 21.8182 1.81818" preserveAspectRatio="none">
+<path id="f11_Vector" d="M20.9091 0H0.909091C0.407014 0 0 0.407014 0 0.909091C0 1.41117 0.407013 1.81818 0.90909 1.81818H20.9091C21.4112 1.81818 21.8182 1.41117 21.8182 0.909091C21.8182 0.407014 21.4112 0 20.9091 0Z" fill="var(--fill-0, #007F9E)"/>
+</svg>
+<svg x="32.184" y="50.184" width="25.456" height="1.816" viewBox="0 0 25.4545 1.81818" preserveAspectRatio="none">
+<path id="f12_Vector" d="M24.5455 0H0.909091C0.407014 0 0 0.407014 0 0.909091C0 1.41117 0.407014 1.81818 0.909091 1.81818H24.5455C25.0475 1.81818 25.4545 1.41117 25.4545 0.909091C25.4545 0.407014 25.0475 0 24.5455 0Z" fill="var(--fill-0, #007F9E)"/>
+</svg>
+<svg x="32.184" y="53.816" width="25.456" height="1.824" viewBox="0 0 25.4545 1.81818" preserveAspectRatio="none">
+<path id="f13_Vector" d="M24.5455 0H0.909091C0.407014 0 0 0.407014 0 0.909091C0 1.41117 0.407014 1.81818 0.909091 1.81818H24.5455C25.0475 1.81818 25.4545 1.41117 25.4545 0.909091C25.4545 0.407014 25.0475 0 24.5455 0Z" fill="var(--fill-0, #007F9E)"/>
+</svg>
+<svg x="30.360" y="61.088" width="10.912" height="1.824" viewBox="0 0 10.9091 1.81818" preserveAspectRatio="none">
+<path id="f14_Vector" d="M10 0H0.909091C0.407014 0 0 0.407014 0 0.909091C0 1.41117 0.407015 1.81818 0.909091 1.81818H10C10.5021 1.81818 10.9091 1.41117 10.9091 0.909091C10.9091 0.407014 10.5021 0 10 0Z" fill="var(--fill-0, #007F9E)"/>
+</svg>
+<svg x="48.544" y="61.088" width="10.912" height="1.824" viewBox="0 0 10.9091 1.81818" preserveAspectRatio="none">
+<path id="f15_Vector" d="M10 0H0.909091C0.407014 0 0 0.407014 0 0.909091C0 1.41117 0.407015 1.81818 0.909091 1.81818H10C10.5021 1.81818 10.9091 1.41117 10.9091 0.909091C10.9091 0.407014 10.5021 0 10 0Z" fill="var(--fill-0, #007F9E)"/>
+</svg>
+<svg x="58.544" y="23.816" width="1.816" height="1.824" viewBox="0 0 1.81818 1.81818" preserveAspectRatio="none">
+<path id="f16_Vector" d="M1.81818 0H0V1.81818H1.81818V0Z" fill="var(--fill-0, #007F9E)"/>
+</svg>
+<svg x="54.912" y="23.816" width="1.816" height="1.824" viewBox="0 0 1.81818 1.81818" preserveAspectRatio="none">
+<path id="f17_Vector" d="M1.81818 0H0V1.81818H1.81818V0Z" fill="var(--fill-0, #007F9E)"/>
+</svg>
+<svg x="51.272" y="23.816" width="1.816" height="1.824" viewBox="0 0 1.81818 1.81818" preserveAspectRatio="none">
+<path id="f18_Vector" d="M1.81818 0H0V1.81818H1.81818V0Z" fill="var(--fill-0, #007F9E)"/>
+</svg>
+</svg>

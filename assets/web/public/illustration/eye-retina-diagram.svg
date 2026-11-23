@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1444" height="1076" viewBox="0 0 1444 1076" fill="none">
+  <g stroke="#C8C7CC" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke-width="10">
+      <path d="M200 248C310 70 594 70 704 248C594 426 310 426 200 248Z"/>
+      <circle cx="452" cy="248" r="128"/>
+      <circle cx="452" cy="248" r="48" fill="#C8C7CC" stroke="none"/>
+      <path d="M804 248C914 70 1198 70 1308 248C1198 426 914 426 804 248Z"/>
+      <circle cx="1056" cy="248" r="128"/>
+      <circle cx="1056" cy="248" r="48" fill="#C8C7CC" stroke="none"/>
+    </g>
+    <g stroke-width="7">
+      <circle cx="452" cy="812" r="200"/>
+      <circle cx="512" cy="812" r="28"/>
+      <path d="M372 716C450 748 478 778 486 798"/>
+      <path d="M486 826C470 870 430 920 392 948"/>
+      <path d="M592 712C548 748 542 778 540 798"/>
+      <path d="M540 826C548 860 578 898 608 916"/>
+      <path d="M616 918L648 926"/>
+      <circle cx="1056" cy="812" r="200"/>
+      <circle cx="996" cy="812" r="28"/>
+      <path d="M1136 716C1058 748 1030 778 1022 798"/>
+      <path d="M1022 826C1038 870 1078 920 1116 948"/>
+      <path d="M916 712C960 748 966 778 968 798"/>
+      <path d="M968 826C960 860 930 898 900 916"/>
+      <path d="M892 918L860 926"/>
+    </g>
+  </g>
+</svg>
