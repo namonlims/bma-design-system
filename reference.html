@@ -1154,27 +1154,27 @@ function classifyToken(name, resolved){
      design-kiosk.json (ถ้ามี) แทนรายการนี้ได้ แบบเดียวกับ Mobile */
   const CATALOG_KIOSK = [
     { group: 'Kiosk · Button', items: [
-      { slug: 'kiosk-primary-button',          name: 'PrimaryButton', anchor: '83-components-bmakiosk-srcdesign-system' },
-      { slug: 'kiosk-outline-button',          name: 'OutlineButton', anchor: '83-components-bmakiosk-srcdesign-system' },
-      { slug: 'kiosk-outline-subdued-button',  name: 'OutlineSubduedButton', anchor: '83-components-bmakiosk-srcdesign-system' },
+      { slug: 'kiosk-primary-button',          name: 'PrimaryButton', anchor: '83-components-bmakiosk-srcdesign-system', section: '8.6.1.' },
+      { slug: 'kiosk-outline-button',          name: 'OutlineButton', anchor: '83-components-bmakiosk-srcdesign-system', section: '8.6.2.' },
+      { slug: 'kiosk-outline-subdued-button',  name: 'OutlineSubduedButton', anchor: '83-components-bmakiosk-srcdesign-system', section: '8.6.3.' },
     ]},
     { group: 'Kiosk · Input · Surface', items: [
-      { slug: 'kiosk-keypad',      name: 'Keypad', anchor: '83-components-bmakiosk-srcdesign-system' },
-      { slug: 'kiosk-number-key',  name: 'NumberKey', anchor: '83-components-bmakiosk-srcdesign-system' },
-      { slug: 'kiosk-card',        name: 'Card', anchor: '83-components-bmakiosk-srcdesign-system' },
+      { slug: 'kiosk-keypad',      name: 'Keypad', anchor: '83-components-bmakiosk-srcdesign-system', section: '8.6.5.' },
+      { slug: 'kiosk-number-key',  name: 'NumberKey', anchor: '83-components-bmakiosk-srcdesign-system', section: '8.6.5.' },
+      { slug: 'kiosk-card',        name: 'Card', anchor: '83-components-bmakiosk-srcdesign-system', section: '8.6.4.' },
     ]},
     { group: 'Kiosk · Shell', items: [
-      { slug: null, name: 'KioskShell', anchor: '83-components-bmakiosk-srcdesign-system' },
-      { slug: null, name: 'Header', anchor: '83-components-bmakiosk-srcdesign-system' },
-      { slug: null, name: 'IdNumberDisplay', anchor: '83-components-bmakiosk-srcdesign-system' },
-      { slug: null, name: 'PrintingScreen', anchor: '83-components-bmakiosk-srcdesign-system' },
-      { slug: null, name: 'LottieAsset', anchor: '83-components-bmakiosk-srcdesign-system' },
+      { slug: null, name: 'KioskShell', anchor: '83-components-bmakiosk-srcdesign-system', section: '8.3.1.' },
+      { slug: null, name: 'Header', anchor: '83-components-bmakiosk-srcdesign-system', section: '8.3.2.' },
+      { slug: null, name: 'IdNumberDisplay', anchor: '83-components-bmakiosk-srcdesign-system', section: '8.3.3.' },
+      { slug: null, name: 'PrintingScreen', anchor: '83-components-bmakiosk-srcdesign-system', section: '8.3.4.' },
+      { slug: null, name: 'LottieAsset', anchor: '83-components-bmakiosk-srcdesign-system', section: '8.3.5.' },
     ]},
     { group: 'Kiosk · Reference', items: [
-      { slug: null, name: 'Layering rules',  anchor: '81-layering-rules' },
-      { slug: null, name: 'Platform tokens', anchor: '82-platform-tokens---kiosk-' },
-      { slug: null, name: 'Components',      anchor: '83-components-bmakiosk-srcdesign-system' },
-      { slug: null, name: 'Figma reference', anchor: '84-figma-reference' },
+      { slug: null, name: 'Layering rules',  anchor: '81-layering-rules', section: '8.1.' },
+      { slug: null, name: 'Platform tokens', anchor: '82-platform-tokens---kiosk-', section: '8.2.' },
+      { slug: null, name: 'Components',      anchor: '83-components-bmakiosk-srcdesign-system', section: '8.3.' },
+      { slug: null, name: 'Figma reference', anchor: '84-figma-reference', section: '8.4.' },
     ]},
   ];
   let KIOSK_PREVIEW = 'https://bma-kiosk.mih.co.th/Kiosk/design-system';
@@ -1396,6 +1396,7 @@ function classifyToken(name, resolved){
             name: it.name,
             slug: it.slug,
             anchor,
+            section: it.section || null,
           });
         }
       }
@@ -1583,6 +1584,27 @@ function classifyToken(name, resolved){
     }
   }
 
+  /* Kiosk spec: show only the section of the selected item (section = "8.6.1." etc.).
+     Top-level children of #content are kept from the matching heading until the next
+     heading of the same or higher level; everything else is hidden. */
+  function applyKioskSection(prefix) {
+    const kids = [...content.children];
+    const idx = kids.findIndex((el) => /^H[1-6]$/.test(el.tagName) && el.textContent.trim().startsWith(prefix));
+    if (idx < 0) { clearSectionFilter(); return; }
+    const lvl = parseInt(kids[idx].tagName[1], 10);
+    let end = kids.length;
+    for (let j = idx + 1; j < kids.length; j++) {
+      const t = kids[j].tagName;
+      if (/^H[1-6]$/.test(t) && parseInt(t[1], 10) <= lvl) { end = j; break; }
+    }
+    kids.forEach((el, j) => { el.style.display = j >= idx && j < end ? '' : 'none'; });
+    content.scrollTop = 0;
+    if (typeof window !== 'undefined') window.scrollTo(0, 0);
+  }
+  function clearSectionFilter() {
+    [...content.children].forEach((el) => { el.style.display = ''; });
+  }
+
   function selectEntry(e) {
     activeEntry = e;
     nameEl.textContent = e.name;
@@ -1640,8 +1662,11 @@ function classifyToken(name, resolved){
       livePane.appendChild(ph);
     }
 
-    /* Scroll spec pane to the section */
-    if (e.anchor) {
+    /* Scroll spec pane to the section (kiosk: show only the selected section) */
+    if (e.platform === 'kiosk' && e.section) {
+      applyKioskSection(e.section);
+    } else if (e.anchor) {
+      clearSectionFilter();
       scrollToAnchor(e.anchor);
     } else if (e.kind === 'component' && currentTab === 'spec') {
       /* Component without a design.md anchor — switch to live tab */
