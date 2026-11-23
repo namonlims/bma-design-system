@@ -76,7 +76,7 @@
     flex-shrink: 0;
   }
   aside .dot {
-    width: 28px; height: 28px;
+    min-width: 28px; height: 28px; padding: 0 6px; box-sizing: border-box;
     border-radius: 8px;
     background: var(--brand);
     color: #fff;
@@ -382,6 +382,27 @@
     border: none;
     background: var(--surface);
   }
+  /* Kiosk preview: the screen is 1080×1920, so the iframe is laid out at full size and
+     scaled down (default 50%). The frame is sized to the scaled box so the stage scrolls. */
+  .kiosk-scale {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+    padding: 8px 16px; border-bottom: 1px solid var(--border);
+    background: var(--surface); font-size: 13px; color: var(--ink-3);
+  }
+  .kiosk-scale-label { font-weight: 600; color: var(--ink); }
+  .kiosk-scale-btn {
+    min-width: 44px; min-height: 44px; border: 1px solid var(--border); border-radius: 8px;
+    background: var(--surface); color: var(--ink); font-size: 18px; cursor: pointer;
+  }
+  .kiosk-scale-btn:hover:not(:disabled) { background: var(--brand-100); color: var(--brand-700); }
+  .kiosk-scale-btn:disabled { opacity: .4; cursor: not-allowed; }
+  .kiosk-scale-value { min-width: 56px; text-align: center; font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .kiosk-scale-hint { margin-left: auto; font-size: 12px; }
+  .kiosk-stage { flex: 1; min-height: 0; overflow: auto; background: var(--surface); }
+  .kiosk-frame { position: relative; overflow: hidden; margin: 16px; flex: 0 0 auto; }
+  .kiosk-frame iframe.preview {
+    position: absolute; top: 0; left: 0; flex: none; transform-origin: 0 0;
+  }
   .no-live, .no-spec {
     flex: 1;
     display: flex;
@@ -601,7 +622,7 @@
     font-family:'Sarabun','Inter','Noto Sans Thai',system-ui,sans-serif;color:var(--ink,#14312A)}
   header.ds-top .ds-brandmark{display:flex;align-items:center;gap:.6rem;font-weight:700;letter-spacing:-.01em;font-size:1rem}
   header.ds-top .ds-brandrow{display:flex;align-items:center;gap:10px;flex-shrink:0}
-  header.ds-top .ds-brandrow .dot{width:2rem;height:2rem;border-radius:8px;background:var(--brand);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:14px}
+  header.ds-top .ds-brandrow .dot{width:auto;min-width:2rem;height:2rem;padding:0 .5rem;box-sizing:border-box;border-radius:8px;background:var(--brand);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:14px}
   header.ds-top .ds-brandrow .title-wrap{line-height:1.3}
   header.ds-top .ds-brandrow .title{font-weight:700;font-size:1rem;letter-spacing:-.01em;color:var(--ink)}
   header.ds-top .ds-brandrow .subtitle{font-size:12px;color:var(--ink-3)}
@@ -666,9 +687,9 @@
 <body class="ds-has-top">
 <header class="ds-top">
   <div class="brand-row ds-brandrow">
-      <span class="dot">M</span>
+      <span class="dot">bma</span>
       <div class="title-wrap">
-        <div class="title">MIH Design System</div>
+        <div class="title">bma Design System</div>
         <div class="subtitle" id="brand-subtitle">Foundations · 158 components</div>
       </div>
     </div>
@@ -1523,6 +1544,46 @@ function classifyToken(name, resolved){
     if (iframe.src !== next) iframe.src = next;
   });
 
+  /* Kiosk screen = 1080×1920 (bma.kiosk). Default 50% so the whole screen fits; the
+     reviewer steps 25–100% with − / +. Kept while the page is open (not persisted). */
+  const KIOSK_W = 1080, KIOSK_H = 1920;
+  const KIOSK_SCALE_MIN = 25, KIOSK_SCALE_MAX = 100, KIOSK_SCALE_STEP = 10;
+  let kioskScale = 50; /* percent */
+  function kioskScaleBar() {
+    const bar = document.createElement('div');
+    bar.className = 'kiosk-scale';
+    bar.innerHTML = `
+      <span class="kiosk-scale-label">Scale</span>
+      <button type="button" class="kiosk-scale-btn" data-step="-1" aria-label="ย่อ">−</button>
+      <output class="kiosk-scale-value" id="kiosk-scale-value" aria-live="polite"></output>
+      <button type="button" class="kiosk-scale-btn" data-step="1" aria-label="ขยาย">+</button>
+      <span class="kiosk-scale-hint">ค่าเริ่มต้น 50% · หน้าจอ Kiosk ${KIOSK_W}×${KIOSK_H}</span>`;
+    bar.addEventListener('click', (ev) => {
+      const btn = ev.target.closest('.kiosk-scale-btn');
+      if (!btn) return;
+      kioskScale = Math.min(KIOSK_SCALE_MAX, Math.max(KIOSK_SCALE_MIN, kioskScale + Number(btn.dataset.step) * KIOSK_SCALE_STEP));
+      applyKioskScale();
+    });
+    return bar;
+  }
+  function applyKioskScale() {
+    const s = kioskScale / 100;
+    const frame = document.querySelector('.kiosk-frame');
+    const iframe = document.getElementById('live-iframe');
+    const out = document.getElementById('kiosk-scale-value');
+    if (out) out.textContent = `${kioskScale}%`;
+    document.querySelectorAll('.kiosk-scale-btn').forEach((b) => {
+      const next = kioskScale + Number(b.dataset.step) * KIOSK_SCALE_STEP;
+      b.disabled = next < KIOSK_SCALE_MIN || next > KIOSK_SCALE_MAX;
+    });
+    if (frame) { frame.style.width = `${KIOSK_W * s}px`; frame.style.height = `${KIOSK_H * s}px`; }
+    if (iframe) {
+      iframe.style.width = `${KIOSK_W}px`;
+      iframe.style.height = `${KIOSK_H}px`;
+      iframe.style.transform = `scale(${s})`;
+    }
+  }
+
   function selectEntry(e) {
     activeEntry = e;
     nameEl.textContent = e.name;
@@ -1557,7 +1618,19 @@ function classifyToken(name, resolved){
       iframe.src = liveUrl;
       iframe.loading = 'lazy';
       iframe.id = 'live-iframe';
-      livePane.appendChild(iframe);
+      if (e.platform === 'kiosk') {
+        livePane.appendChild(kioskScaleBar());
+        const stage = document.createElement('div');
+        stage.className = 'kiosk-stage';
+        const frame = document.createElement('div');
+        frame.className = 'kiosk-frame';
+        frame.appendChild(iframe);
+        stage.appendChild(frame);
+        livePane.appendChild(stage);
+        applyKioskScale();
+      } else {
+        livePane.appendChild(iframe);
+      }
     } else {
       const ph = document.createElement('div');
       ph.className = 'no-live';
