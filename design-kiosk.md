@@ -73,3 +73,107 @@ Shell: `KioskShell` · `Header` · `IdNumberDisplay` · `PrintingScreen` · `Lot
 Node ที่โค้ดอ้าง: outline Subdued `268:14108` · Card `237:9258` · `51:14038` / `51:14039` · `249:13756` · ไฟล์ Figma ของ kiosk: `AGes4Mc8odyTEYARFeFqcj` (https://www.figma.com/design/AGes4Mc8odyTEYARFeFqcj/Kiosk) · PHCIS|KIOSK เดิมในไฟล์เว็บ `4002:928` (`--dim-radius-450`)
 
 ---
+
+### 8.0. กติกาการทำงาน (บังคับทุกงาน Kiosk UI)
+
+- ทุกค่าสี · ขนาดตัวอักษร · รัศมี · เงา ต้องอ้าง `--kiosk-*` (หรือ `--dim-*` ของ foundation) ผ่าน class ของ Tailwind เท่านั้น
+- ค่าที่ยังเขียนดิบอยู่ในโค้ดปัจจุบันถือเป็น **drift** ดู §8.9 — งานใหม่ห้ามเพิ่ม · งานที่แตะต้องแก้ตาม §8.9 ในงานเดียวกัน
+- Kiosk ไม่มีเมาส์ · ไม่มีคีย์บอร์ดจริง · ไม่มี hover สำหรับการสัมผัส — สถานะกดใช้ `:active` เสมอ
+- ก่อนปิดงาน UI ของ Kiosk: เปิดหน้า `/Kiosk/design-system` ดูจริงที่ความกว้าง 1080 (หน้าจอจริง) และเช็กว่าไม่มีส่วนล้นกรอบ
+
+### 8.5. Canvas และ layout
+
+- ผืนผ้าใบเดียว **1080 × 1920 แนวตั้ง** (ไม่มี breakpoint อื่น — ไม่ต้องทำ responsive ตามความกว้างเบราว์เซอร์)
+- คอลัมน์เนื้อหาหลักกว้างสูงสุด **1560px** (อ้างจาก `Keypad.tsx` — คีย์บอร์ด 10 ปุ่มต้องพอดีในคอลัมน์นี้)
+- ระยะซ้าย-ขวาของแถวการ์ด `px-[76px]` (อ้างจาก `Card.tsx` ตัวอย่าง Service Selection Grid)
+- ระยะระหว่างปุ่ม/คีย์ ใช้ `gap-[24px]` (ตัวเลข) · `gap-[16px]` / `gap-[12px]` (ตัวอักษร) — ยังไม่ได้เป็น token
+- พื้นหลังหน้าปกติไล่สีจาก `--kiosk-mint-50 → 100 → 200` · หน้าผิดพลาดไล่สีจาก `--kiosk-pink-50 → 100 → 200`
+
+### 8.6. Component specs
+
+ทุกชิ้นอยู่ใน `src/design-system/` และ export ผ่าน `index.ts` เท่านั้น — ห้าม deep-import จากหน้า
+
+#### 8.6.1. PrimaryButton — ปุ่ม CTA หลัก (Figma 166:39216)
+
+| หัวข้อ | ค่า |
+|---|---|
+| ใช้ทำอะไร | การกระทำหลักของหน้าเดียว เช่น「ยืนยัน」「ถ่ายภาพ」 — **หนึ่งปุ่ม Fill ต่อหน้า** |
+| ขนาด | สูง `160px` · ความกว้างกำหนดโดยผู้เรียก (Figma: 400px · 480px หรือกว้างตามข้อความ) |
+| รูป | radius `24px` · ตัวอักษร `64px` medium สีขาว · กึ่งกลาง |
+| สถานะ | Default `bg-kiosk-blue` + `shadow-kiosk-card` · Pressed `:active` → `bg-kiosk-blue-pressed` · Disabled `bg-kiosk-disabled` ไม่มีเงา |
+| ไฟล์ | `PrimaryButton.tsx` · class พื้นฐานใน `kioskButtonStyles.ts` |
+
+#### 8.6.2. OutlineButton — ปุ่มรอง (Figma 181:43393)
+
+| หัวข้อ | ค่า |
+|---|---|
+| ใช้ทำอะไร | ทางเลือกรองที่ไม่ใช่การยืนยัน เช่น「ถ่ายใหม่」 |
+| ขนาด | สูง `160px` · เส้นขอบ `4px` · radius `24px` · ตัวอักษร `64px` medium |
+| สถานะ | Default ขอบ/ตัวอักษร `--kiosk-blue` · Pressed → พื้นและขอบ `--kiosk-blue-subdued` ตัวอักษรขาว · Disabled ขอบและตัวอักษร `--kiosk-disabled` |
+| ไฟล์ | `OutlineButton.tsx` · class พื้นฐานใน `kioskButtonStyles.ts` |
+
+#### 8.6.3. OutlineSubduedButton — ปุ่มยกเลิก (Figma 268:14108)
+
+- ใช้กับ**ทุกปุ่มยกเลิก** (「ยกเลิก」) ตามคอมเมนต์ในโค้ด
+- ขอบ `--kiosk-blue-subdued` (50%) · ตัวอักษร `--kiosk-blue` · Pressed เติมพื้น `--kiosk-blue-subdued` + ตัวอักษรขาว · Disabled เหมือน OutlineButton
+- ไฟล์ `OutlineSubduedButton.tsx`
+
+> หมายเหตุ: โค้ดระบุ node Figma ของ Outline Subdued สองค่า (`268:14108` ใน comment ของ OutlineSubduedButton · `181:43393` ใน kioskButtonStyles สำหรับ Outline ทั่วไป) ต้องยืนยันกับ Figma ก่อนอ้างอิง
+
+#### 8.6.4. Card — การ์ดเลือกตัวเลือก (Figma 151:36499)
+
+| หัวข้อ | ค่า |
+|---|---|
+| ใช้ทำอะไร | ตัวเลือกหลักที่แตะได้ทั้งการ์ด เช่น เลือกบริการ · เลือกวิธีชำระ |
+| โครง | ไอคอน (กล่อง 96 × 112) → หัวข้อ `58px` semibold `--kiosk-blue` → คำอธิบาย (ถ้ามี) `36px` |
+| ขนาด | ค่าเริ่มต้น **กว้าง 768px** · `fluid` = ยืดเต็มแถว (`flex-1`) |
+| รูป | padding `32px × 56px` · radius `24px` · เงา `--kiosk-shadow-card` |
+| สถานะ | Default · `:hover` / `:active` / `:focus-visible` เงาเข้มขึ้น (`--kiosk-shadow-card-hover`) · `:focus-visible` มี outline `2px` สี `--kiosk-blue` |
+| ไฟล์ | `Card.tsx` |
+
+#### 8.6.5. NumberKey · NumericKeypad · AlphanumericKeyboard — คีย์บอร์ดบนจอ (Figma 172:42119)
+
+| ชิ้น | ขนาดปุ่ม | ใช้ทำอะไร |
+|---|---|---|
+| `NumberKey` size `default` | 240 × 160 · ตัวอักษร `56px` bold | คีย์ตัวเลขเลขบัตรประชาชน 13 หลัก |
+| `NumberKey` size `compact` | 140 × 124 · ตัวอักษร `44px` | คีย์ของ AlphanumericKeyboard (เลขหนังสือเดินทาง) |
+| `NumericKeypad` | 3 แถว 1–9 + แถวล่าง [ว่าง] · 0 · ลบ | กรอกเลขบัตร — แถวห่าง `24px` |
+| `AlphanumericKeyboard` | 4 แถว: 1234567890 · QWERTYUIOP · ASDFGHJKL · ZXCVBNM + ปุ่มลบกว้าง `292px` ท้ายแถวสุดท้าย | กรอกหนังสือเดินทาง — แถวห่าง `16px` |
+
+- สถานะกด = `:active` เปลี่ยนเงาเข้มขึ้น (ไม่มี hover)
+- ทุกปุ่มมี `aria-label` (ตัวอักษรหรือ「ลบ / Delete」)
+- ไฟล์ `NumberKey.tsx` · `Keypad.tsx` · ไอคอนลบ `components/icons/DeleteIcon`
+
+### 8.7. การสัมผัสและการเข้าถึง
+
+- เป้าสัมผัสขั้นต่ำที่โค้ดใช้จริง: ปุ่มและคีย์สูง **124px ขึ้นไป** (ปุ่มเต็ม 160px) — ใหญ่กว่า 44px ของเว็บมาก
+- ไม่มี hover เป็นตัวบอกสถานะ — ทุกสถานะที่ผู้ใช้ต้องเห็นต้องมีจากการกด (`:active`) หรือการเปลี่ยนค่า
+- ข้อความบนปุ่มและการ์ดต้องอ่านจากระยะยืนได้ (ตัวอักษรขั้นต่ำ `14px` ใช้เฉพาะใบพิมพ์ — §8.2)
+- ยังไม่ได้วัด contrast ของคู่สีทั้งหมดในระบบนี้ — ต้องตรวจก่อนอ้างว่าผ่าน WCAG
+
+### 8.8. ไอคอนและภาพ
+
+- ไอคอนใช้ **Figma ก่อน** (เช่น `insert-id-card/delete.svg` สำหรับปุ่มลบ) แล้วค่อย Lucide ตามกติกาไอคอนของ Mih — ไม่วาง SVG ดิบซ้ำในคอมโพเนนต์
+- Lottie และภาพจาก `@mih/assets` เท่านั้น (ดู `LottieAsset`)
+- ไม่ใช้ไอคอนผสมหลายตระกูลในหน้าเดียว
+
+### 8.9. Drift ที่ต้องแก้ (ค่าดิบในโค้ดปัจจุบัน)
+
+| ไฟล์ | ค่าดิบ | ควรเป็น |
+|---|---|---|
+| `kioskButtonStyles.ts` | `h-[160px]` `rounded-[24px]` `text-[64px]` `border-4` | ตั้ง token ขนาดสำหรับ CTA ใน mih-design แล้วอ้างผ่าน class |
+| `kioskButtonStyles.ts` (numberKeyBase) | `shadow-[0px_12px_20px_rgba(5,150,105,0.08)]` · `border-[rgba(188,202,192,0.1)]` · `rounded-[16px]` | เงาและขอบของคีย์ควรเป็น token ของ kiosk (ยังไม่มี) |
+| `NumberKey.tsx` | `text-[44px]` · `h-[124px] w-[140px]` | token type-size และขนาดคีย์ compact |
+| `Card.tsx` | `text-[#457499]` · `w-[768px]` · `px-[32px] py-[56px]` | สีคำอธิบายเป็น token (`--kiosk-blue-muted` ใกล้เคียงแต่ไม่เท่ากัน) · ที่เหลือเป็น token ขนาด |
+| `Keypad.tsx` | `gap-[24px]` `gap-[16px]` `gap-[12px]` `w-[292px]` | token ระยะห่างสำหรับ kiosk |
+
+ข้อ drift เหล่านี้ไม่ได้ทำให้หน้าเพี้ยนในตอนนี้ แต่ทำให้เปลี่ยนค่าจาก Figma ทีหลังยาก
+
+### 8.10. ส่วนที่ยังไม่มีเทียบกับ design.md ของเว็บ
+
+- ยังไม่มี **states matrix** ครบทุกคอมโพเนนต์ (เช่น loading · error · empty ของการ์ด/คีย์)
+- ยังไม่มี **สีแบบ error / warning** ที่ใช้จริงบนหน้าจอ (มีแค่พื้นหลังไล่สีชมพู)
+- ยังไม่มี **Figma node** ของ `Header` · `KioskShell` · `IdNumberDisplay` · `PrintingScreen` ในเอกสาร
+- ยังไม่มี **สเปกใบพิมพ์** (ใบคิว · ใบเสร็จ) นอกจากชื่อ token ขนาด 14–20px
+- ยังไม่มี **การเข้าถึง** ที่วัดแล้ว (contrast · ลำดับโฟกัส · ตัวอ่านหน้าจอ) — §8.7 เป็นสิ่งที่โค้ดทำอยู่ ไม่ใช่ผลการตรวจ
+- ยังไม่มี **แบบฟอร์มและการเลือก** (ช่องกรอก · checkbox · radio) เพราะยังไม่มีในชุดคอมโพเนนต์ของ kiosk
