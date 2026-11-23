@@ -68,6 +68,44 @@
 `PrimaryButton` · `OutlineButton` · `OutlineSubduedButton` · `Card` · `Keypad` / `NumberKey` · ปุ่มรวม `kioskButtonStyles.ts` · หน้าดูรวม `/Kiosk/design-system`
 Shell: `KioskShell` · `Header` · `IdNumberDisplay` · `PrintingScreen` · `LottieAsset` (ไฟล์ Lottie/ภาพจาก `@mih/assets`)
 
+#### 8.3.1. KioskShell — กรอบหน้าจอของทุกหน้า
+
+- หน้าจอคือผืน **1080×1920** แนวตั้ง (เครื่องจริง) ไม่มีกรอบตู้ (ถอดออกแล้ว ดู PR #20)
+- พื้นหลังไล่สี `--kiosk-mint-50 → mint-100 → mint-200` (ค่าเริ่มต้น) หรือขาวเมื่อ `background="white"`
+- เรียก `useIdleReset(true)` เพื่อกลับหน้าแรกเมื่อไม่มีการใช้งาน
+- ไฟล์ `src/components/KioskShell.tsx`
+
+#### 8.3.2. Header — แถบหัวหน้าจอ
+
+- กล่องสูงอย่างน้อย `180px` ระยะซ้าย-ขวา `px-[80px]` จัดกลางแนวตั้ง
+- ฝั่งซ้าย: โลโก้ 120px · ชื่อหน่วยงาน (Noto Sans Thai Bold 48) "สำนักอนามัย" · ชื่อศูนย์ (Prompt SemiBold 36) "ศูนย์ 4 ดินแดง"
+- ฝั่งขวา: เวลา (Prompt Bold 40) เหนือวันที่ (Prompt 36) · ปุ่มภาษา EN/TH กว้าง 160px ขอบ 4px รัศมี 24px เงา `--kiosk-shadow-card`
+- กลุ่มเวลา/วันที่ไม่ตั้ง `shrink-0` เพื่อให้วันที่ตัดบรรทัดได้ และชื่อหน่วยงานไม่ทับวันที่
+- ไฟล์ `src/components/Header.tsx`
+
+#### 8.3.3. IdNumberDisplay — ช่องกรอกเลขบัตร/หนังสือเดินทาง
+
+- การ์ดสีขาว สูง `160px` เต็มความกว้าง รัศมี 24px เงา `--kiosk-shadow-card` ไม่มีขอบ
+- ค่าที่กรอก: Prompt Bold 64 สี `--kiosk-blue` ระยะตัวอักษร 6.4px · ข้อความใบ้: Prompt 64 สีน้ำเงินจาง 30%
+- เลขบัตรประชาชน 13 หลัก จัดกลุ่ม 1-4-5-3 ขั้นด้วยขีด เช่น `3-4444-11765-088` (`formatNationalId`)
+- หนังสือเดินทาง 6–12 ตัวอักษร ความกว้างยืดหยุ่น (`PASSPORT_MIN_LENGTH` / `PASSPORT_MAX_LENGTH`)
+- ไฟล์ `src/components/IdNumberDisplay.tsx`
+
+#### 8.3.4. PrintingScreen — หน้า "กำลังพิมพ์"
+
+- ใช้ซ้ำโดยใบคิวและใบเสร็จ ประกอบด้วย KioskShell + Header + ภาพเครื่องพิมพ์ (Lottie 447×447) + หัวข้อ (Prompt SemiBold 100) + คำอธิบาย (Prompt 56) + ช่อง `action`
+- ระยะ: ระหว่างองค์ประกอบ `56px` · padding บน `163px` ล่าง `183px` ข้าง `120px`
+- `action` เป็นปุ่ม "ถัดไป" ชั่วคราวแทนเครื่องพิมพ์จริงในเดโม
+- หมายเหตุ: โค้ดยังใช้ `min-h-[2700px]` ซึ่งเป็นค่าดิบ (อยู่ในรายการ drift §8.9 เพิ่มเติม)
+- ไฟล์ `src/components/PrintingScreen.tsx`
+
+#### 8.3.5. LottieAsset — ตัวห่อแอนิเมชัน Lottie
+
+- ห่อ `lottie-react` ให้เล่นวนอัตโนมัติ (`loop`, `autoplay`) รับ `animationData` และ `className`
+- โคลนข้อมูล JSON ก่อนเล่นทุกครั้ง เพราะ lottie-web แก้ไขข้อมูลในที่เดิม
+- รีเมาต์เมื่อชื่อ เฟรม ขนาด หรือ asset เปลี่ยน (ช่วย HMR)
+- ไฟล์ `src/components/LottieAsset.tsx`
+
 ### 8.4. Figma reference
 
 Node ที่โค้ดอ้าง: outline Subdued `268:14108` · Card `237:9258` · `51:14038` / `51:14039` · `249:13756` · ไฟล์ Figma ของ kiosk: `AGes4Mc8odyTEYARFeFqcj` (https://www.figma.com/design/AGes4Mc8odyTEYARFeFqcj/Kiosk) · PHCIS|KIOSK เดิมในไฟล์เว็บ `4002:928` (`--dim-radius-450`)
