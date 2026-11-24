@@ -4,7 +4,6 @@
 > **Total:** web 33 ชื่อ (+ search) · Material 252 ชื่อ  
 > **Rule:** แสดงเฉพาะ icon ที่ใช้ได้บนเว็บ — ชื่อที่โค้ดไม่ได้ implement ถูกลบออก · icon ใหม่ → เพิ่มใน `Icon.jsx` หรือเรียกชื่อ Material Symbols จริง แล้วอัปเดตตารางนี้
 > **Usage:** ใช้ `currentColor` ให้สีตาม text  
-> **ดาวน์โหลด:** [↓ icons.json](./icons.json) — รายการ icon ของเว็บ (ชื่อ · SVG · ที่มา) จัดกลุ่มตามชุด
 
 ---
 
@@ -12,7 +11,6 @@
 
 ชุดแรกคือ `Icon.jsx` (ใช้กับ `<Icon name="…" />`) ชุดที่สองคือ Material Symbols Outlined (24 px, FILL 0) ที่เรียกเป็น literal ใน `src/` ผ่าน `<Sym>` / `<MaterialSymbol>` / `<Icon>`
 
-<a href="./icons.json" download="icons.json" style="display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 16px;border:1px solid var(--brand-p600, #007549);border-radius:8px;background:var(--brand-p600, #007549);color:#FFFFFF;font-weight:600;font-size:14px;text-decoration:none">↓ ดาวน์โหลด icons.json</a>
 
 <div style="overflow-x:auto;max-width:100%">
 <table class="icon-ref-table">
