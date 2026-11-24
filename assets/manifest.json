@@ -42,15 +42,6 @@
   {
    "repo": "kiosk",
    "kind": "lottie",
-   "path": "src/assets/illustrations/insert-credit-card.json",
-   "folder": "src/assets/illustrations",
-   "kb": 15,
-   "usedIn": [],
-   "usedCount": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "lottie",
    "path": "src/assets/illustrations/insert-id-card.json",
    "folder": "src/assets/illustrations",
    "kb": 32,
@@ -316,15 +307,6 @@
   {
    "repo": "kiosk",
    "kind": "icon",
-   "path": "src/components/icons/Question.svg",
-   "folder": "src/components/icons",
-   "kb": 7,
-   "usedIn": [],
-   "usedCount": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
    "path": "src/components/icons/QueueSlipCalendar.svg",
    "folder": "src/components/icons",
    "kb": 2,
@@ -354,24 +336,6 @@
     "kiosk/src/pages/QueueSlipPrint.tsx"
    ],
    "usedCount": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/components/icons/ScanCheck.svg",
-   "folder": "src/components/icons",
-   "kb": 2,
-   "usedIn": [],
-   "usedCount": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/components/icons/ScanDot.svg",
-   "folder": "src/components/icons",
-   "kb": 1,
-   "usedIn": [],
-   "usedCount": 0
   },
   {
    "repo": "kiosk",
@@ -444,51 +408,6 @@
   },
   {
    "repo": "mobile",
-   "kind": "lottie",
-   "path": "Medicine.json",
-   "folder": ".",
-   "kb": 40,
-   "usedIn": [],
-   "usedCount": 0
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "Paper plane.json",
-   "folder": ".",
-   "kb": 21,
-   "usedIn": [],
-   "usedCount": 0
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/Ambulance (1).json",
-   "folder": "public/illustration/mobile",
-   "kb": 29,
-   "usedIn": [],
-   "usedCount": 0
-  },
-  {
-   "repo": "mobile",
-   "kind": "icon",
-   "path": "public/illustration/mobile/apt-icons/calendar-purple.svg",
-   "folder": "public/illustration/mobile/apt-icons",
-   "kb": 1,
-   "usedIn": [],
-   "usedCount": 0
-  },
-  {
-   "repo": "mobile",
-   "kind": "icon",
-   "path": "public/illustration/mobile/apt-icons/clock.svg",
-   "folder": "public/illustration/mobile/apt-icons",
-   "kb": 1,
-   "usedIn": [],
-   "usedCount": 0
-  },
-  {
-   "repo": "mobile",
    "kind": "icon",
    "path": "public/illustration/mobile/apt-icons/map-pin.svg",
    "folder": "public/illustration/mobile/apt-icons",
@@ -497,24 +416,6 @@
     "mobile/src/features/pharmacy/components/MedPickupDetails.jsx"
    ],
    "usedCount": 1
-  },
-  {
-   "repo": "mobile",
-   "kind": "icon",
-   "path": "public/illustration/mobile/apt-icons/video-btn.svg",
-   "folder": "public/illustration/mobile/apt-icons",
-   "kb": 1,
-   "usedIn": [],
-   "usedCount": 0
-  },
-  {
-   "repo": "mobile",
-   "kind": "icon",
-   "path": "public/illustration/mobile/apt-icons/video.svg",
-   "folder": "public/illustration/mobile/apt-icons",
-   "kb": 1,
-   "usedIn": [],
-   "usedCount": 0
   },
   {
    "repo": "mobile",
@@ -579,15 +480,6 @@
   {
    "repo": "mobile",
    "kind": "lottie",
-   "path": "public/illustration/mobile/Calendar.json",
-   "folder": "public/illustration/mobile",
-   "kb": 19,
-   "usedIn": [],
-   "usedCount": 0
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
    "path": "public/illustration/mobile/cash-money-recolored.json",
    "folder": "public/illustration/mobile",
    "kb": 115,
@@ -596,15 +488,6 @@
     "mobile/src/features/payment/components/OutstandingSummaryCard.jsx"
    ],
    "usedCount": 2
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/Clinic.json",
-   "folder": "public/illustration/mobile",
-   "kb": 12,
-   "usedIn": [],
-   "usedCount": 0
   },
   {
    "repo": "mobile",
@@ -761,15 +644,6 @@
   {
    "repo": "mobile",
    "kind": "lottie",
-   "path": "public/illustration/mobile/home-payment-health-insurance.json",
-   "folder": "public/illustration/mobile",
-   "kb": 148,
-   "usedIn": [],
-   "usedCount": 0
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
    "path": "public/illustration/mobile/ilus/face-match-recolored.json",
    "folder": "public/illustration/mobile/ilus",
    "kb": 66,
@@ -875,24 +749,6 @@
   {
    "repo": "mobile",
    "kind": "lottie",
-   "path": "public/illustration/mobile/Medical Report (1).json",
-   "folder": "public/illustration/mobile",
-   "kb": 96,
-   "usedIn": [],
-   "usedCount": 0
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/medical-appointment-white.json",
-   "folder": "public/illustration/mobile",
-   "kb": 11,
-   "usedIn": [],
-   "usedCount": 0
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
    "path": "public/illustration/mobile/medical-folder-recolored.json",
    "folder": "public/illustration/mobile",
    "kb": 79,
@@ -901,15 +757,6 @@
     "mobile/src/features/pharmacy/pages/MobilePharmacyPreparingPage.jsx"
    ],
    "usedCount": 2
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/Medicine.json",
-   "folder": "public/illustration/mobile",
-   "kb": 40,
-   "usedIn": [],
-   "usedCount": 0
   },
   {
    "repo": "mobile",
@@ -1026,15 +873,6 @@
   {
    "repo": "mobile",
    "kind": "lottie",
-   "path": "public/illustration/mobile/Paper plane.json",
-   "folder": "public/illustration/mobile",
-   "kb": 21,
-   "usedIn": [],
-   "usedCount": 0
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
    "path": "public/illustration/mobile/Password-security-with-REC.json",
    "folder": "public/illustration/mobile",
    "kb": 109,
@@ -1098,15 +936,6 @@
    ],
    "usedCount": 1,
    "onDark": true
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/Pill.json",
-   "folder": "public/illustration/mobile",
-   "kb": 5,
-   "usedIn": [],
-   "usedCount": 0
   },
   {
    "repo": "mobile",
@@ -1269,15 +1098,6 @@
    "onDark": true
   },
   {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "src/Pill.json",
-   "folder": "src",
-   "kb": 5,
-   "usedIn": [],
-   "usedCount": 0
-  },
-  {
    "repo": "web",
    "kind": "lottie",
    "path": "Fingerprint Scanning.json",
@@ -1294,8 +1114,11 @@
    "path": "public/icons/body-diagram/hand.svg",
    "folder": "public/icons/body-diagram",
    "kb": 3,
-   "usedIn": [],
-   "usedCount": 0
+   "usedIn": [
+    "web/scripts/assets/collect-ds-assets.mjs",
+    "web/src/components/examination/BodyDrawingCanvas.jsx"
+   ],
+   "usedCount": 2
   },
   {
    "repo": "web",
@@ -1303,8 +1126,11 @@
    "path": "public/icons/body-diagram/zoom-in.svg",
    "folder": "public/icons/body-diagram",
    "kb": 1,
-   "usedIn": [],
-   "usedCount": 0
+   "usedIn": [
+    "web/scripts/assets/collect-ds-assets.mjs",
+    "web/src/components/examination/BodyDrawingCanvas.jsx"
+   ],
+   "usedCount": 2
   },
   {
    "repo": "web",
@@ -1312,8 +1138,11 @@
    "path": "public/icons/body-diagram/zoom-out.svg",
    "folder": "public/icons/body-diagram",
    "kb": 1,
-   "usedIn": [],
-   "usedCount": 0
+   "usedIn": [
+    "web/scripts/assets/collect-ds-assets.mjs",
+    "web/src/components/examination/BodyDrawingCanvas.jsx"
+   ],
+   "usedCount": 2
   },
   {
    "repo": "web",
@@ -1391,15 +1220,6 @@
     "web/src/components/forms/RegistrationSteps.jsx"
    ],
    "usedCount": 1
-  },
-  {
-   "repo": "web",
-   "kind": "icon",
-   "path": "public/icons/registration/upload-image.svg",
-   "folder": "public/icons/registration",
-   "kb": 1,
-   "usedIn": [],
-   "usedCount": 0
   },
   {
    "repo": "web",
@@ -1494,6 +1314,17 @@
   },
   {
    "repo": "web",
+   "kind": "illustration",
+   "path": "public/illustration/dental-tooth-chart-fdi.svg",
+   "folder": "public/illustration",
+   "kb": 24,
+   "usedIn": [
+    "web/src/data/checkupStore.js"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
    "kind": "lottie",
    "path": "public/illustration/Disease History.json",
    "folder": "public/illustration",
@@ -1528,6 +1359,39 @@
     "web/src/components/centerWarehouse/CenterWarehouseReceivePopup.jsx"
    ],
    "usedCount": 5
+  },
+  {
+   "repo": "web",
+   "kind": "illustration",
+   "path": "public/illustration/eye-retina-diagram.svg",
+   "folder": "public/illustration",
+   "kb": 1,
+   "usedIn": [
+    "web/src/data/checkupStore.js"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "illustration",
+   "path": "public/illustration/foot-dorsum.svg",
+   "folder": "public/illustration",
+   "kb": 5,
+   "usedIn": [
+    "web/src/data/checkupStore.js"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "illustration",
+   "path": "public/illustration/foot-sole.svg",
+   "folder": "public/illustration",
+   "kb": 5,
+   "usedIn": [
+    "web/src/data/checkupStore.js"
+   ],
+   "usedCount": 1
   },
   {
    "repo": "web",
@@ -1746,15 +1610,6 @@
   {
    "repo": "web",
    "kind": "lottie",
-   "path": "src/assets/illustrations/blood-pressure-monitor.json",
-   "folder": "src/assets/illustrations",
-   "kb": 10,
-   "usedIn": [],
-   "usedCount": 0
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
    "path": "src/assets/illustrations/Firstaid Kit.json",
    "folder": "src/assets/illustrations",
    "kb": 69,
@@ -1831,15 +1686,6 @@
     "web/src/components/popup/ReMedicinePopup.jsx"
    ],
    "usedCount": 1
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "src/Best Employee award.json",
-   "folder": "src",
-   "kb": 217,
-   "usedIn": [],
-   "usedCount": 0
   }
  ]
 }
