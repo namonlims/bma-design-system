@@ -1,66 +1,12 @@
 {
-  "generated": "2026-11-24T16:20:23.520Z",
+  "generated": "2026-11-24T16:21:13.254Z",
   "source": "src/components/icons/Icon.jsx (repo on GitHub) + design.md Appendix B (Material)",
   "format": "vector — elements[] = SVG primitives (path d · polyline points · circle cx/cy/r …); svg = ready-to-use markup",
-  "count": 291,
+  "count": 286,
   "groups": [
     {
       "group": "Web · Icon.jsx",
       "items": [
-        {
-          "name": [
-            "apps"
-          ],
-          "source": "src/components/icons/Icon.jsx",
-          "viewBox": "0 0 24 24",
-          "attributes": {
-            "viewBox": "0 0 24 24",
-            "fill": "none",
-            "stroke": "currentColor",
-            "stroke-width": "2",
-            "stroke-linecap": "round",
-            "stroke-linejoin": "round"
-          },
-          "elements": [
-            {
-              "tag": "rect",
-              "attrs": {
-                "x": "3",
-                "y": "3",
-                "width": "7",
-                "height": "7"
-              }
-            },
-            {
-              "tag": "rect",
-              "attrs": {
-                "x": "14",
-                "y": "3",
-                "width": "7",
-                "height": "7"
-              }
-            },
-            {
-              "tag": "rect",
-              "attrs": {
-                "x": "14",
-                "y": "14",
-                "width": "7",
-                "height": "7"
-              }
-            },
-            {
-              "tag": "rect",
-              "attrs": {
-                "x": "3",
-                "y": "14",
-                "width": "7",
-                "height": "7"
-              }
-            }
-          ],
-          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"3\" width=\"7\" height=\"7\"/><rect x=\"14\" y=\"3\" width=\"7\" height=\"7\"/><rect x=\"14\" y=\"14\" width=\"7\" height=\"7\"/><rect x=\"3\" y=\"14\" width=\"7\" height=\"7\"/></svg>"
-        },
         {
           "name": [
             "home"
@@ -300,54 +246,6 @@
         },
         {
           "name": [
-            "face"
-          ],
-          "source": "src/components/icons/Icon.jsx",
-          "viewBox": "0 0 24 24",
-          "attributes": {
-            "viewBox": "0 0 24 24",
-            "fill": "none",
-            "stroke": "currentColor",
-            "stroke-width": "2",
-            "stroke-linecap": "round",
-            "stroke-linejoin": "round"
-          },
-          "elements": [
-            {
-              "tag": "circle",
-              "attrs": {
-                "cx": "12",
-                "cy": "12",
-                "r": "9"
-              }
-            },
-            {
-              "tag": "circle",
-              "attrs": {
-                "cx": "9",
-                "cy": "10",
-                "r": "1"
-              }
-            },
-            {
-              "tag": "circle",
-              "attrs": {
-                "cx": "15",
-                "cy": "10",
-                "r": "1"
-              }
-            },
-            {
-              "tag": "path",
-              "attrs": {
-                "d": "M8 15c1 1 2.5 1.5 4 1.5s3-.5 4-1.5"
-              }
-            }
-          ],
-          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><circle cx=\"9\" cy=\"10\" r=\"1\"/><circle cx=\"15\" cy=\"10\" r=\"1\"/><path d=\"M8 15c1 1 2.5 1.5 4 1.5s3-.5 4-1.5\"/></svg>"
-        },
-        {
-          "name": [
             "stethoscope"
           ],
           "source": "src/components/icons/Icon.jsx",
@@ -383,84 +281,6 @@
             }
           ],
           "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 3v6a4 4 0 0 0 8 0V3\"/><circle cx=\"17\" cy=\"14\" r=\"2\"/><path d=\"M9 13v2a4 4 0 0 0 8 0v-1\"/></svg>"
-        },
-        {
-          "name": [
-            "sick"
-          ],
-          "source": "src/components/icons/Icon.jsx",
-          "viewBox": "0 0 24 24",
-          "attributes": {
-            "viewBox": "0 0 24 24",
-            "fill": "none",
-            "stroke": "currentColor",
-            "stroke-width": "2",
-            "stroke-linecap": "round",
-            "stroke-linejoin": "round"
-          },
-          "elements": [
-            {
-              "tag": "path",
-              "attrs": {
-                "d": "M12 4a4 4 0 0 1 4 4v1h1a3 3 0 0 1 3 3v4a3 3 0 0 1-3 3h-1v1a4 4 0 0 1-8 0v-1H7a3 3 0 0 1-3-3v-4a3 3 0 0 1 3-3h1V8a4 4 0 0 1 4-4z"
-              }
-            },
-            {
-              "tag": "path",
-              "attrs": {
-                "d": "M12 8v4"
-              }
-            },
-            {
-              "tag": "path",
-              "attrs": {
-                "d": "M10 14h4"
-              }
-            }
-          ],
-          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 4a4 4 0 0 1 4 4v1h1a3 3 0 0 1 3 3v4a3 3 0 0 1-3 3h-1v1a4 4 0 0 1-8 0v-1H7a3 3 0 0 1-3-3v-4a3 3 0 0 1 3-3h1V8a4 4 0 0 1 4-4z\"/><path d=\"M12 8v4\"/><path d=\"M10 14h4\"/></svg>"
-        },
-        {
-          "name": [
-            "balance"
-          ],
-          "source": "src/components/icons/Icon.jsx",
-          "viewBox": "0 0 24 24",
-          "attributes": {
-            "viewBox": "0 0 24 24",
-            "fill": "none",
-            "stroke": "currentColor",
-            "stroke-width": "2",
-            "stroke-linecap": "round",
-            "stroke-linejoin": "round"
-          },
-          "elements": [
-            {
-              "tag": "path",
-              "attrs": {
-                "d": "M12 3v18"
-              }
-            },
-            {
-              "tag": "path",
-              "attrs": {
-                "d": "M5 7h14"
-              }
-            },
-            {
-              "tag": "path",
-              "attrs": {
-                "d": "M8 7L4 13h4l-2 4"
-              }
-            },
-            {
-              "tag": "path",
-              "attrs": {
-                "d": "M16 7l4 6h-4l2 4"
-              }
-            }
-          ],
-          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 3v18\"/><path d=\"M5 7h14\"/><path d=\"M8 7L4 13h4l-2 4\"/><path d=\"M16 7l4 6h-4l2 4\"/></svg>"
         },
         {
           "name": [
@@ -661,50 +481,6 @@
         },
         {
           "name": [
-            "users"
-          ],
-          "source": "src/components/icons/Icon.jsx",
-          "viewBox": "0 0 24 24",
-          "attributes": {
-            "viewBox": "0 0 24 24",
-            "fill": "none",
-            "stroke": "currentColor",
-            "stroke-width": "2",
-            "stroke-linecap": "round",
-            "stroke-linejoin": "round"
-          },
-          "elements": [
-            {
-              "tag": "path",
-              "attrs": {
-                "d": "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"
-              }
-            },
-            {
-              "tag": "circle",
-              "attrs": {
-                "cx": "9",
-                "cy": "7",
-                "r": "4"
-              }
-            },
-            {
-              "tag": "path",
-              "attrs": {
-                "d": "M22 21v-2a4 4 0 0 0-3-3.87"
-              }
-            },
-            {
-              "tag": "path",
-              "attrs": {
-                "d": "M16 3.13a4 4 0 0 1 0 7.75"
-              }
-            }
-          ],
-          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2\"/><circle cx=\"9\" cy=\"7\" r=\"4\"/><path d=\"M22 21v-2a4 4 0 0 0-3-3.87\"/><path d=\"M16 3.13a4 4 0 0 1 0 7.75\"/></svg>"
-        },
-        {
-          "name": [
             "bell"
           ],
           "source": "src/components/icons/Icon.jsx",
@@ -766,41 +542,6 @@
             }
           ],
           "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"8\" y=\"4\" width=\"8\" height=\"3\" rx=\"1\"/><path d=\"M16 6h2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h2\"/></svg>"
-        },
-        {
-          "name": [
-            "copy"
-          ],
-          "source": "src/components/icons/Icon.jsx",
-          "viewBox": "0 0 24 24",
-          "attributes": {
-            "viewBox": "0 0 24 24",
-            "fill": "none",
-            "stroke": "currentColor",
-            "stroke-width": "2",
-            "stroke-linecap": "round",
-            "stroke-linejoin": "round"
-          },
-          "elements": [
-            {
-              "tag": "rect",
-              "attrs": {
-                "x": "8",
-                "y": "8",
-                "width": "13",
-                "height": "13",
-                "rx": "2",
-                "ry": "2"
-              }
-            },
-            {
-              "tag": "path",
-              "attrs": {
-                "d": "M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
-              }
-            }
-          ],
-          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"8\" y=\"8\" width=\"13\" height=\"13\" rx=\"2\" ry=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg>"
         },
         {
           "name": [
@@ -915,51 +656,6 @@
         },
         {
           "name": [
-            "menu"
-          ],
-          "source": "src/components/icons/Icon.jsx",
-          "viewBox": "0 0 24 24",
-          "attributes": {
-            "viewBox": "0 0 24 24",
-            "fill": "none",
-            "stroke": "currentColor",
-            "stroke-width": "2",
-            "stroke-linecap": "round",
-            "stroke-linejoin": "round"
-          },
-          "elements": [
-            {
-              "tag": "line",
-              "attrs": {
-                "x1": "3",
-                "y1": "6",
-                "x2": "21",
-                "y2": "6"
-              }
-            },
-            {
-              "tag": "line",
-              "attrs": {
-                "x1": "3",
-                "y1": "12",
-                "x2": "21",
-                "y2": "12"
-              }
-            },
-            {
-              "tag": "line",
-              "attrs": {
-                "x1": "3",
-                "y1": "18",
-                "x2": "21",
-                "y2": "18"
-              }
-            }
-          ],
-          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"3\" y1=\"6\" x2=\"21\" y2=\"6\"/><line x1=\"3\" y1=\"12\" x2=\"21\" y2=\"12\"/><line x1=\"3\" y1=\"18\" x2=\"21\" y2=\"18\"/></svg>"
-        },
-        {
-          "name": [
             "kebab-vertical"
           ],
           "source": "src/components/icons/Icon.jsx",
@@ -1002,153 +698,6 @@
             }
           ],
           "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"6.5\" r=\"1.25\" fill=\"currentColor\"/><circle cx=\"12\" cy=\"12\" r=\"1.25\" fill=\"currentColor\"/><circle cx=\"12\" cy=\"17.5\" r=\"1.25\" fill=\"currentColor\"/></svg>"
-        },
-        {
-          "name": [
-            "smile"
-          ],
-          "source": "src/components/icons/Icon.jsx",
-          "viewBox": "0 0 24 24",
-          "attributes": {
-            "viewBox": "0 0 24 24",
-            "fill": "none",
-            "stroke": "currentColor",
-            "stroke-width": "2",
-            "stroke-linecap": "round",
-            "stroke-linejoin": "round"
-          },
-          "elements": [
-            {
-              "tag": "circle",
-              "attrs": {
-                "cx": "12",
-                "cy": "12",
-                "r": "10"
-              }
-            },
-            {
-              "tag": "circle",
-              "attrs": {
-                "cx": "9",
-                "cy": "10",
-                "r": "1"
-              }
-            },
-            {
-              "tag": "circle",
-              "attrs": {
-                "cx": "15",
-                "cy": "10",
-                "r": "1"
-              }
-            },
-            {
-              "tag": "path",
-              "attrs": {
-                "d": "M8 14.5c1 1.2 2.5 2 4 2s3-.8 4-2"
-              }
-            }
-          ],
-          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><circle cx=\"9\" cy=\"10\" r=\"1\"/><circle cx=\"15\" cy=\"10\" r=\"1\"/><path d=\"M8 14.5c1 1.2 2.5 2 4 2s3-.8 4-2\"/></svg>"
-        },
-        {
-          "name": [
-            "meh"
-          ],
-          "source": "src/components/icons/Icon.jsx",
-          "viewBox": "0 0 24 24",
-          "attributes": {
-            "viewBox": "0 0 24 24",
-            "fill": "none",
-            "stroke": "currentColor",
-            "stroke-width": "2",
-            "stroke-linecap": "round",
-            "stroke-linejoin": "round"
-          },
-          "elements": [
-            {
-              "tag": "circle",
-              "attrs": {
-                "cx": "12",
-                "cy": "12",
-                "r": "10"
-              }
-            },
-            {
-              "tag": "circle",
-              "attrs": {
-                "cx": "9",
-                "cy": "10",
-                "r": "1"
-              }
-            },
-            {
-              "tag": "circle",
-              "attrs": {
-                "cx": "15",
-                "cy": "10",
-                "r": "1"
-              }
-            },
-            {
-              "tag": "line",
-              "attrs": {
-                "x1": "8",
-                "y1": "15",
-                "x2": "16",
-                "y2": "15"
-              }
-            }
-          ],
-          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><circle cx=\"9\" cy=\"10\" r=\"1\"/><circle cx=\"15\" cy=\"10\" r=\"1\"/><line x1=\"8\" y1=\"15\" x2=\"16\" y2=\"15\"/></svg>"
-        },
-        {
-          "name": [
-            "frown"
-          ],
-          "source": "src/components/icons/Icon.jsx",
-          "viewBox": "0 0 24 24",
-          "attributes": {
-            "viewBox": "0 0 24 24",
-            "fill": "none",
-            "stroke": "currentColor",
-            "stroke-width": "2",
-            "stroke-linecap": "round",
-            "stroke-linejoin": "round"
-          },
-          "elements": [
-            {
-              "tag": "circle",
-              "attrs": {
-                "cx": "12",
-                "cy": "12",
-                "r": "10"
-              }
-            },
-            {
-              "tag": "circle",
-              "attrs": {
-                "cx": "9",
-                "cy": "10",
-                "r": "1"
-              }
-            },
-            {
-              "tag": "circle",
-              "attrs": {
-                "cx": "15",
-                "cy": "10",
-                "r": "1"
-              }
-            },
-            {
-              "tag": "path",
-              "attrs": {
-                "d": "M8 16.5c1-1.2 2.5-2 4-2s3 .8 4 2"
-              }
-            }
-          ],
-          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><circle cx=\"9\" cy=\"10\" r=\"1\"/><circle cx=\"15\" cy=\"10\" r=\"1\"/><path d=\"M8 16.5c1-1.2 2.5-2 4-2s3 .8 4 2\"/></svg>"
         },
         {
           "name": [
@@ -1336,36 +885,6 @@
         },
         {
           "name": [
-            "file"
-          ],
-          "source": "src/components/icons/Icon.jsx",
-          "viewBox": "0 0 24 24",
-          "attributes": {
-            "viewBox": "0 0 24 24",
-            "fill": "none",
-            "stroke": "currentColor",
-            "stroke-width": "2",
-            "stroke-linecap": "round",
-            "stroke-linejoin": "round"
-          },
-          "elements": [
-            {
-              "tag": "path",
-              "attrs": {
-                "d": "M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
-              }
-            },
-            {
-              "tag": "polyline",
-              "attrs": {
-                "points": "14 2 14 8 20 8"
-              }
-            }
-          ],
-          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\"/><polyline points=\"14 2 14 8 20 8\"/></svg>"
-        },
-        {
-          "name": [
             "trash"
           ],
           "source": "src/components/icons/Icon.jsx",
@@ -1469,38 +988,6 @@
         },
         {
           "name": [
-            "eye"
-          ],
-          "source": "src/components/icons/Icon.jsx",
-          "viewBox": "0 0 24 24",
-          "attributes": {
-            "viewBox": "0 0 24 24",
-            "fill": "none",
-            "stroke": "currentColor",
-            "stroke-width": "2",
-            "stroke-linecap": "round",
-            "stroke-linejoin": "round"
-          },
-          "elements": [
-            {
-              "tag": "path",
-              "attrs": {
-                "d": "M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"
-              }
-            },
-            {
-              "tag": "circle",
-              "attrs": {
-                "cx": "12",
-                "cy": "12",
-                "r": "3"
-              }
-            }
-          ],
-          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z\"/><circle cx=\"12\" cy=\"12\" r=\"3\"/></svg>"
-        },
-        {
-          "name": [
             "x"
           ],
           "source": "src/components/icons/Icon.jsx",
@@ -1573,42 +1060,6 @@
             }
           ],
           "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"6 9 6 2 18 2 18 9\"/><path d=\"M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2\"/><rect x=\"6\" y=\"14\" width=\"12\" height=\"8\"/></svg>"
-        },
-        {
-          "name": [
-            "save"
-          ],
-          "source": "src/components/icons/Icon.jsx",
-          "viewBox": "0 0 24 24",
-          "attributes": {
-            "viewBox": "0 0 24 24",
-            "fill": "none",
-            "stroke": "currentColor",
-            "stroke-width": "2",
-            "stroke-linecap": "round",
-            "stroke-linejoin": "round"
-          },
-          "elements": [
-            {
-              "tag": "path",
-              "attrs": {
-                "d": "M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"
-              }
-            },
-            {
-              "tag": "polyline",
-              "attrs": {
-                "points": "17 21 17 13 7 13 7 21"
-              }
-            },
-            {
-              "tag": "polyline",
-              "attrs": {
-                "points": "7 3 7 8 15 8"
-              }
-            }
-          ],
-          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z\"/><polyline points=\"17 21 17 13 7 13 7 21\"/><polyline points=\"7 3 7 8 15 8\"/></svg>"
         },
         {
           "name": [
@@ -6743,6 +6194,110 @@
             }
           ],
           "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 -960 960 960\" fill=\"currentColor\"><path d=\"M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Zm-40-60v-80h-80v-80h80v-80h80v80h80v80h-80v80h-80Z\"/></svg>"
+        },
+        {
+          "name": [
+            "material:apps"
+          ],
+          "source": "material:apps",
+          "viewBox": "0 -960 960 960",
+          "attributes": {
+            "viewBox": "0 -960 960 960",
+            "fill": "currentColor"
+          },
+          "elements": [],
+          "svg": "<span class=\"material-symbols-outlined\" style=\"font-size:24px;line-height:1\" aria-hidden=\"true\">apps</span>"
+        },
+        {
+          "name": [
+            "material:face"
+          ],
+          "source": "material:face",
+          "viewBox": "0 -960 960 960",
+          "attributes": {
+            "viewBox": "0 -960 960 960",
+            "fill": "currentColor"
+          },
+          "elements": [],
+          "svg": "<span class=\"material-symbols-outlined\" style=\"font-size:24px;line-height:1\" aria-hidden=\"true\">face</span>"
+        },
+        {
+          "name": [
+            "material:sick"
+          ],
+          "source": "material:sick",
+          "viewBox": "0 -960 960 960",
+          "attributes": {
+            "viewBox": "0 -960 960 960",
+            "fill": "currentColor"
+          },
+          "elements": [],
+          "svg": "<span class=\"material-symbols-outlined\" style=\"font-size:24px;line-height:1\" aria-hidden=\"true\">sick</span>"
+        },
+        {
+          "name": [
+            "material:balance"
+          ],
+          "source": "material:balance",
+          "viewBox": "0 -960 960 960",
+          "attributes": {
+            "viewBox": "0 -960 960 960",
+            "fill": "currentColor"
+          },
+          "elements": [],
+          "svg": "<span class=\"material-symbols-outlined\" style=\"font-size:24px;line-height:1\" aria-hidden=\"true\">balance</span>"
+        },
+        {
+          "name": [
+            "material:menu"
+          ],
+          "source": "material:menu",
+          "viewBox": "0 -960 960 960",
+          "attributes": {
+            "viewBox": "0 -960 960 960",
+            "fill": "currentColor"
+          },
+          "elements": [],
+          "svg": "<span class=\"material-symbols-outlined\" style=\"font-size:24px;line-height:1\" aria-hidden=\"true\">menu</span>"
+        },
+        {
+          "name": [
+            "material:save"
+          ],
+          "source": "material:save",
+          "viewBox": "0 -960 960 960",
+          "attributes": {
+            "viewBox": "0 -960 960 960",
+            "fill": "currentColor"
+          },
+          "elements": [],
+          "svg": "<span class=\"material-symbols-outlined\" style=\"font-size:24px;line-height:1\" aria-hidden=\"true\">save</span>"
+        },
+        {
+          "name": [
+            "material:sentiment_satisfied"
+          ],
+          "source": "material:sentiment_satisfied",
+          "viewBox": "0 -960 960 960",
+          "attributes": {
+            "viewBox": "0 -960 960 960",
+            "fill": "currentColor"
+          },
+          "elements": [],
+          "svg": "<span class=\"material-symbols-outlined\" style=\"font-size:24px;line-height:1\" aria-hidden=\"true\">sentiment_satisfied</span>"
+        },
+        {
+          "name": [
+            "material:sentiment_neutral"
+          ],
+          "source": "material:sentiment_neutral",
+          "viewBox": "0 -960 960 960",
+          "attributes": {
+            "viewBox": "0 -960 960 960",
+            "fill": "currentColor"
+          },
+          "elements": [],
+          "svg": "<span class=\"material-symbols-outlined\" style=\"font-size:24px;line-height:1\" aria-hidden=\"true\">sentiment_neutral</span>"
         }
       ]
     }
