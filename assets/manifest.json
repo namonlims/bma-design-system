@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23",
+ "generated": "2026-11-24",
  "items": [
   {
    "repo": "web",
@@ -116,13 +116,6 @@
   {
    "repo": "web",
    "kind": "illustration",
-   "path": "public/illustration/auth/loginbg.svg",
-   "folder": "public/illustration/auth",
-   "kb": 1
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
    "path": "public/illustration/consent/check-circle.svg",
    "folder": "public/illustration/consent",
    "kb": 2
@@ -140,20 +133,6 @@
    "path": "public/illustration/consent/clock.svg",
    "folder": "public/illustration/consent",
    "kb": 1
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/consent/form-cover-01.svg",
-   "folder": "public/illustration/consent",
-   "kb": 18
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/consent/form-template.svg",
-   "folder": "public/illustration/consent",
-   "kb": 7
   },
   {
    "repo": "web",
@@ -178,13 +157,6 @@
   },
   {
    "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/consent/wait.svg",
-   "folder": "public/illustration/consent",
-   "kb": 2
-  },
-  {
-   "repo": "web",
    "kind": "lottie",
    "path": "public/illustration/consent-success.json",
    "folder": "public/illustration",
@@ -193,23 +165,9 @@
   {
    "repo": "web",
    "kind": "illustration",
-   "path": "public/illustration/dental-tooth-chart-fdi.svg",
-   "folder": "public/illustration",
-   "kb": 24
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
    "path": "public/illustration/empty-list.svg",
    "folder": "public/illustration",
    "kb": 4
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/eye-retina-diagram.svg",
-   "folder": "public/illustration",
-   "kb": 1
   },
   {
    "repo": "web",
@@ -620,13 +578,6 @@
   {
    "repo": "web",
    "kind": "illustration",
-   "path": "public/illustration/mobile/request-map-pin.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 2
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
    "path": "public/illustration/mobile/request-sanitizer.svg",
    "folder": "public/illustration/mobile",
    "kb": 2
@@ -672,20 +623,6 @@
    "path": "public/illustration/registration/face-photo-guide.svg",
    "folder": "public/illustration/registration",
    "kb": 22
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/registration/face-scan-check.svg",
-   "folder": "public/illustration/registration",
-   "kb": 1
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/registration/face-scan-dot.svg",
-   "folder": "public/illustration/registration",
-   "kb": 0
   },
   {
    "repo": "web",
@@ -1123,62 +1060,6 @@
   },
   {
    "repo": "mobile",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/home-qa-book-pressed.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 2
-  },
-  {
-   "repo": "mobile",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/home-qa-book.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 2
-  },
-  {
-   "repo": "mobile",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/home-qa-clinics-pressed.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 2
-  },
-  {
-   "repo": "mobile",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/home-qa-clinics.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 2
-  },
-  {
-   "repo": "mobile",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/home-qa-meds-pressed.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 2
-  },
-  {
-   "repo": "mobile",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/home-qa-meds.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 2
-  },
-  {
-   "repo": "mobile",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/home-qa-request-pressed.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 1
-  },
-  {
-   "repo": "mobile",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/home-qa-request.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 1
-  },
-  {
-   "repo": "mobile",
    "kind": "lottie",
    "path": "public/illustration/mobile/ilus/face-match-recolored.json",
    "folder": "public/illustration/mobile/ilus",
@@ -1372,27 +1253,6 @@
    "path": "public/illustration/mobile/register-otp-lock.svg",
    "folder": "public/illustration/mobile",
    "kb": 3
-  },
-  {
-   "repo": "mobile",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/request-diaper.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 1
-  },
-  {
-   "repo": "mobile",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/request-map-pin.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 2
-  },
-  {
-   "repo": "mobile",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/request-sanitizer.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 2
   },
   {
    "repo": "mobile",
@@ -2436,13 +2296,6 @@
    "path": "src/assets/illustrations/insert-credit-card.json",
    "folder": "src/assets/illustrations",
    "kb": 15
-  },
-  {
-   "repo": "kiosk",
-   "kind": "illustration",
-   "path": "src/assets/illustrations/insert-id-card-hand.svg",
-   "folder": "src/assets/illustrations",
-   "kb": 3
   },
   {
    "repo": "kiosk",
