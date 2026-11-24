@@ -30,17 +30,18 @@
   .chip[aria-pressed="true"] span { color: var(--nd-text-success, #0F7A52); }
   .summary { color:var(--muted); margin:8px 0 12px; }
   .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap:14px; }
-  .card { background:var(--card); border: var(--nd-stroke-100, 1px) solid var(--line); border-radius: var(--nd-radius-300, 10px); box-shadow: var(--nd-shadow-card, 0 1px 4px rgb(63 91 250 / 0.10), 0 1px 8px rgb(63 91 250 / 0.14)); overflow:hidden; display:flex; flex-direction:column; min-width:0; }
-  .thumb { width:64px; height:64px; margin: var(--nd-space-300, 12px) auto 0; flex:0 0 auto; display:flex; align-items:center; justify-content:center; overflow:hidden; }
+  .card { background:var(--card); border: var(--nd-stroke-100, 1px) solid var(--line); border-radius: var(--nd-radius-300, 10px); box-shadow: var(--nd-shadow-card, 0 1px 4px rgb(63 91 250 / 0.10), 0 1px 8px rgb(63 91 250 / 0.14)); overflow:hidden; display:flex; flex-direction:column; min-width:0; padding: var(--nd-space-600, 24px) 0; }
+  .card[hidden] { display:none; }
+  .thumb { width:64px; height:64px; margin: 0 auto; flex:0 0 auto; display:flex; align-items:center; justify-content:center; overflow:hidden; }
   .thumb img { width:64px; height:64px; object-fit:contain; }
   .thumb.lottie svg { width:64px; height:64px; }
-  .meta { padding:10px; display:flex; flex-direction:column; gap:4px; min-width:0; }
+  .meta { padding:10px 10px 0; display:flex; flex-direction:column; gap:4px; min-width:0; }
   .name { font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
   .sub, .folder { color:var(--muted); font-size:12px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
   .dl-row { display:flex; flex-wrap:wrap; gap: var(--nd-space-150, 6px); margin-top: var(--nd-space-150, 6px); }
   .dl-row .dl { flex:1 1 0; min-width:0; margin-top:0; padding: 0 var(--nd-space-200, 8px); }
-  .dl { margin-top: var(--nd-space-150, 6px); min-height: var(--nd-control-h, 44px); border:var(--nd-stroke-100, 1px) solid var(--nd-border-input, #8A9197); border-radius: var(--nd-radius-200, 8px); background: transparent; color: var(--nd-text-brand, #3F5BFA); font: inherit; font-size: var(--nd-type-size-sm, 14px); font-weight: var(--nd-type-weight-medium, 500); cursor:pointer; }
-  .dl:hover { background: var(--nd-surface-brand-quiet, #EEF1FF); border-color: var(--nd-border-input-hover, #5470FB); }
+  .dl { margin-top: var(--nd-space-150, 6px); min-height: var(--nd-control-h, 44px); border:var(--nd-stroke-100, 1px) solid var(--nd-border-info, #DCE2FF); border-radius: var(--nd-radius-200, 8px); background: var(--nd-surface-brand-quiet, #EEF1FF); color: var(--nd-text-brand, #3F5BFA); font: inherit; font-size: var(--nd-type-size-sm, 14px); font-weight: var(--nd-type-weight-medium, 500); cursor:pointer; }
+  .dl:hover { background: var(--nd-blue-100, #DCE2FF); border-color: var(--nd-blue-400, #7B8FFC); }
   .dl:focus-visible { outline: var(--nd-stroke-200, 2px) solid var(--nd-border-brand, #3F5BFA); outline-offset: 2px; }
   .empty { color:var(--muted); padding:32px 0; display:none; }
   .stamp { color:var(--muted); font-size:12px; margin-top:24px; }
@@ -66,7 +67,7 @@
   <p class="summary"><span id="shown">338</span> จาก 338 รายการ</p>
   <section class="grid" id="grid"></section>
   <p class="empty" id="empty">ไม่พบรายการที่ตรงกับตัวกรอง</p>
-  <p class="stamp">build a6c2f528</p>
+  <p class="stamp">build cc76842c</p>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" defer></script>
 <script>
@@ -101,6 +102,14 @@
     });
     document.getElementById('shown').textContent = shown;
     document.getElementById('empty').style.display = shown ? 'none' : 'block';
+    /* ตัวเลขบน chip = จำนวนที่จะเหลือถ้ากด chip นั้น (นับตามคำค้นหา + ตัวกรองของอีกกลุ่ม) */
+    chips.forEach(function (b) {
+      var g = b.dataset.g, v = b.dataset.v, other = g === 'repo' ? 'kind' : 'repo', n = 0;
+      cards.forEach(function (c) {
+        if (c.dataset[g] === v && (!state[other] || c.dataset[other] === state[other]) && (!state.q || c.dataset.q.indexOf(state.q) !== -1)) n++;
+      });
+      b.querySelector('span').textContent = n;
+    });
   }
   var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
   chips.forEach(function (b) {
