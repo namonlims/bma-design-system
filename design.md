@@ -3,7 +3,8 @@
 > **Source:** ของจริงในเว็บ — `src/components/icons/Icon.jsx` · ชื่อ Material Symbols ที่เรียกจริงใน `src/` (ตรวจกับชุด Material Symbols Outlined แล้ว) · ไม่รวม mobile / kiosk  
 > **Total:** web 55 ชื่อ (+ search) · Material 238 ชื่อ  
 > **Rule:** แสดงเฉพาะ icon ที่ใช้ได้บนเว็บ — ชื่อที่โค้ดไม่ได้ implement ถูกลบออก · icon ใหม่ → เพิ่มใน `Icon.jsx` หรือเรียกชื่อ Material Symbols จริง แล้วอัปเดตตารางนี้
-> **Usage:** ใช้ `currentColor` ให้สีตาม text
+> **Usage:** ใช้ `currentColor` ให้สีตาม text  
+> **ดาวน์โหลด:** [↓ icons.json](./icons.json) — รายการ icon ของเว็บ (ชื่อ · SVG · ที่มา) จัดกลุ่มตามชุด
 
 ---
 
