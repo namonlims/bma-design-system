@@ -2,14 +2,14 @@
 <html lang="th"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MIH Design System — Assets</title>
-<link rel="stylesheet" href="./tokens.css">
+<link rel="stylesheet" href="./namon-tokens.css">
 <style>
-  :root { --bg:#F6F7F8; --fg:#1D2127; --muted:#6B7280; --line:#E2E5E9; --card:#FFFFFF; --accent:#007549; --accent-soft:#E2F3EB; }
-  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#15181C; --fg:#E8EAED; --muted:#9AA3AD; --line:#2A2F36; --card:#1D2227; --accent:#3FBF86; --accent-soft:#1D3A2E; } }
+  /* ธีม = Namon Playground design system (namon-tokens.css · --nd-*) — ไม่ใช้ tokens.css ของ bma ในหน้านี้ */
+  :root { --bg: var(--nd-surface-page, #FDFDFD); --fg: var(--nd-text-default, #363B3F); --muted: var(--nd-text-tertiary, #6A727A); --line: var(--nd-gray-200, #E2E4E6); --card: var(--nd-surface-card, #FFFFFF); --accent: var(--nd-text-brand, #3F5BFA); --accent-soft: var(--nd-surface-brand-quiet, #EEF1FF); }
   * { box-sizing: border-box; }
-  body { margin:0; background:var(--bg); color:var(--fg); font-family: system-ui, -apple-system, "Sarabun", sans-serif; font-size:14px; }
-  header.top { display:flex; flex-wrap:wrap; align-items:center; gap:12px; padding:12px 16px; border-bottom:1px solid var(--line); background:var(--card); }
-  header.top h1 { font-size:16px; margin:0; }
+  body { margin:0; background:var(--bg); color:var(--fg); font-family: var(--nd-type-family-body, 'Sarabun', system-ui, sans-serif); font-size: var(--nd-type-size-sm, 14px); }
+  header.top { display:flex; flex-wrap:wrap; align-items:center; gap: var(--nd-space-300, 12px); padding: var(--nd-space-300, 12px) var(--nd-space-400, 16px); border-bottom: var(--nd-stroke-100, 1px) solid var(--line); background:var(--card); }
+  header.top h1 { font-family: var(--nd-type-family-heading, 'Poppins', 'Sarabun', sans-serif); font-size: var(--nd-type-size-lg, 18px); font-weight: var(--nd-type-weight-bold, 700); margin:0; }
   nav.tabs { display:flex; gap:4px; margin-left:auto; flex-wrap:wrap; }
   nav.tabs a { min-height:44px; display:inline-flex; align-items:center; padding:0 12px; border-radius:8px; text-decoration:none; color:var(--muted); font-weight:600; }
   nav.tabs a:hover { background:var(--accent-soft); color:var(--accent); }
@@ -17,21 +17,29 @@
   .wrap { max-width:1280px; margin:0 auto; padding:16px; }
   .lead { color:var(--muted); margin:0 0 12px; }
   .bar { position:sticky; top:0; background:var(--bg); padding:8px 0 12px; z-index:2; }
-  .search { width:100%; min-height:44px; padding:10px 12px; border:1px solid var(--line); border-radius:10px; background:var(--card); color:var(--fg); font:inherit; }
-  .chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
-  .chip { min-height:44px; padding:6px 12px; border:1px solid var(--line); border-radius:999px; background:var(--card); color:var(--fg); font:inherit; cursor:pointer; }
-  .chip span { color:var(--muted); }
-  .chip[aria-pressed="true"] { border-color:var(--accent); color:var(--accent); }
+  .search { width:100%; min-height: var(--nd-control-h, 44px); padding: 0 var(--nd-space-400, 16px); border:var(--nd-stroke-100, 1px) solid var(--nd-border-input, #8A9197); border-radius: var(--nd-radius-300, 10px); background: var(--nd-surface-input, #FFFFFF); color: var(--nd-text-input, #4D5358); font: inherit; font-size: var(--nd-type-size-sm, 14px); }
+  .search::placeholder { color: var(--nd-text-placeholder, #8A9197); opacity: 1; }
+  .search:hover { border-color: var(--nd-border-input-hover, #5470FB); }
+  .search:focus { outline: none; border-color: var(--nd-border-brand, #3F5BFA); box-shadow: var(--nd-ring-focus, 0 0 0 4px rgb(47 123 224 / 0.18)); }
+  .chips { display:flex; flex-wrap:wrap; gap: var(--nd-space-200, 8px); margin-top: var(--nd-space-300, 12px); }
+  .chip { display:inline-flex; align-items:center; gap: var(--nd-space-100, 4px); min-height: var(--nd-control-h, 44px); padding: 0 var(--nd-space-300, 12px); border:var(--nd-stroke-100, 1px) solid var(--nd-border-input, #8A9197); border-radius: var(--nd-radius-full, 9999px); background: var(--nd-surface-card, #FFFFFF); color: var(--nd-text-default, #363B3F); font: inherit; font-size: var(--nd-type-size-sm, 14px); cursor:pointer; }
+  .chip:hover { border-color: var(--nd-border-input-hover, #5470FB); }
+  .chip:focus-visible { outline: var(--nd-stroke-200, 2px) solid var(--nd-border-brand, #3F5BFA); outline-offset: 2px; }
+  .chip span { color: var(--nd-text-tertiary, #6A727A); }
+  .chip[aria-pressed="true"] { border-color: var(--nd-text-success, #0F7A52); background: var(--nd-surface-success, #EEFAF4); color: var(--nd-text-success, #0F7A52); }
+  .chip[aria-pressed="true"] span { color: var(--nd-text-success, #0F7A52); }
   .summary { color:var(--muted); margin:8px 0 12px; }
   .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap:14px; }
   .card { background:var(--card); border:1px solid var(--line); border-radius:10px; overflow:hidden; display:flex; flex-direction:column; min-width:0; }
-  .thumb { height:120px; display:flex; align-items:center; justify-content:center; padding:10px; }
-  .thumb img { max-width:100%; max-height:100%; object-fit:contain; }
+  .thumb { aspect-ratio: 1 / 1; width:100%; display:flex; align-items:center; justify-content:center; padding: var(--nd-space-300, 12px); }
+  .thumb img { width:100%; height:100%; object-fit:contain; }
   .thumb.lottie svg { width:100%; height:100%; }
   .meta { padding:10px; display:flex; flex-direction:column; gap:4px; min-width:0; }
   .name { font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
   .sub, .folder { color:var(--muted); font-size:12px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-  .copy { margin-top:6px; min-height:44px; border:1px solid var(--line); border-radius:8px; background:transparent; color:var(--fg); font:inherit; cursor:pointer; }
+  .dl { margin-top: var(--nd-space-150, 6px); min-height: var(--nd-control-h, 44px); border:var(--nd-stroke-100, 1px) solid var(--nd-border-input, #8A9197); border-radius: var(--nd-radius-200, 8px); background: transparent; color: var(--nd-text-brand, #3F5BFA); font: inherit; font-size: var(--nd-type-size-sm, 14px); font-weight: var(--nd-type-weight-medium, 500); cursor:pointer; }
+  .dl:hover { background: var(--nd-surface-brand-quiet, #EEF1FF); border-color: var(--nd-border-input-hover, #5470FB); }
+  .dl:focus-visible { outline: var(--nd-stroke-200, 2px) solid var(--nd-border-brand, #3F5BFA); outline-offset: 2px; }
   .empty { color:var(--muted); padding:32px 0; display:none; }
   .stamp { color:var(--muted); font-size:12px; margin-top:24px; }
   @media (max-width: 767px) { .grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
@@ -56,7 +64,7 @@
   <p class="summary"><span id="shown">361</span> จาก 361 รายการ</p>
   <section class="grid" id="grid"></section>
   <p class="empty" id="empty">ไม่พบรายการที่ตรงกับตัวกรอง</p>
-  <p class="stamp">build 48f1071c</p>
+  <p class="stamp">build 90d96965</p>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" defer></script>
 <script>
@@ -78,7 +86,8 @@
       '<div class="meta"><div class="name" title="' + esc(it.name) + '">' + esc(it.name) + '</div>' +
       '<div class="sub">' + esc(it.repo) + ' · ' + esc(KIND[it.kind] || it.kind) + ' · ' + it.kb + ' KB</div>' +
       '<div class="folder" title="' + esc(it.folder) + '">' + esc(it.folder) + '</div>' +
-      '<button class="copy" type="button" data-path="' + esc(it.repo + ':' + it.folder + '/' + it.name) + '">คัดลอก path</button></div>';
+      '<button class="dl" type="button">Download JSON</button></div>';
+    art.dataset.index = String(ITEMS.indexOf(it));
     grid.appendChild(art);
   });
   var cards = Array.prototype.slice.call(grid.querySelectorAll('.card'));
@@ -102,9 +111,15 @@
   });
   document.querySelector('.search').addEventListener('input', function (e) { state.q = e.target.value.trim().toLowerCase(); apply(); });
   grid.addEventListener('click', function (e) {
-    var btn = e.target.closest('.copy'); if (!btn) return;
-    if (navigator.clipboard) navigator.clipboard.writeText(btn.dataset.path).catch(function () {});
-    btn.textContent = 'คัดลอกแล้ว'; setTimeout(function () { btn.textContent = 'คัดลอก path'; }, 1200);
+    var btn = e.target.closest('.dl'); if (!btn) return;
+    var it = ITEMS[Number(btn.closest('.card').dataset.index)];
+    var meta = { name: it.name, repo: it.repo, kind: it.kind, folder: it.folder, path: it.src, kb: it.kb };
+    var blob = new Blob([JSON.stringify(meta, null, 2)], { type: 'application/json' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = it.name.replace(/\.[^.]+$/, '') + '.json';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
   });
   var lotties = Array.prototype.slice.call(grid.querySelectorAll('.thumb.lottie'));
   function play(el) {

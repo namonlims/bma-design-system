@@ -76,10 +76,11 @@ footer{color:var(--muted);font-size:.75rem;text-align:center;padding:2rem 1rem}
 .ds-sel-btn:focus-visible{outline:none;border-color:var(--border-input-typing,#08A768);
   box-shadow:inset 0 0 0 1px var(--border-input-typing,#08A768),0 0 0 4px var(--primaryBorder-600,rgba(8,167,104,.15))}
 .ds-sel-btn .lbl{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ds-sel-list .opt,.ds-sel-list [role="option"]{white-space:nowrap}
 .ds-sel-btn .pre{color:var(--text-input-default,#ADB2B7)}
 .ds-sel-btn .chev{flex:none;width:16px;height:16px;color:var(--icon-input-filled,#4D5358);transition:transform .15s}
 .ds-sel.open .ds-sel-btn .chev{transform:rotate(180deg)}
-.ds-sel-list{position:absolute;top:calc(100% + var(--dim-space-100,4px));left:0;min-width:100%;z-index:60;display:none;
+.ds-sel-list{position:absolute;top:calc(100% + var(--dim-space-100,4px));left:0;min-width:100%;width:max-content;max-width:min(320px,calc(100vw - 32px));z-index:60;display:none;
   background:var(--surface-dropdown-default,#FFFFFF);border:var(--dim-stroke-100,1px) solid var(--border-dropdown-default,#EBEBEB);
   border-radius:var(--dim-radius-400,16px);padding:var(--dim-space-100,4px);
   box-shadow:var(--shadow-dropdown,0 4px 4px rgba(100,116,139,.1),0 16px 32px rgba(100,116,139,.15));
@@ -131,7 +132,7 @@ main.tight{padding-top:.75rem}
     <span class="fname">tokens.css</span>
     <input id="q" type="search" placeholder="กรองบรรทัด… เช่น surface-card, radius-200, #007549" aria-label="กรองบรรทัด">
     <span class="count" id="count"></span>
-    <span class="count">1785 declarations · 145.2 KB · 48f1071c</span>
+    <span class="count">1785 declarations · 145.2 KB · 90d96965</span>
     <button class="ghost" id="copyAll" type="button">คัดลอกทั้งไฟล์</button>
     <a class="ghost" href="./tokens.css" download="tokens.css">ดาวน์โหลด</a>
     <a class="ghost" href="./tokens.css" target="_blank" rel="noopener">เปิดไฟล์ดิบ ↗</a>
@@ -140,7 +141,7 @@ main.tight{padding-top:.75rem}
 </div>
 </main>
 <div class="toast" id="toast"></div>
-<footer>Generated from <code>src/styles/tokens.css</code> · <span id="sha">48f1071c</span> &middot; bma-design-system.mih.co.th</footer>
+<footer>Generated from <code>src/styles/tokens.css</code> · <span id="sha">90d96965</span> &middot; bma-design-system.mih.co.th</footer>
 <script>
 (function () {
   var CHEV = '<svg class="chev" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';

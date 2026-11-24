@@ -1,0 +1,190 @@
+/* Namon Playground design tokens — ของโปรเจกต์ Namon Playground เอง (ไม่ผูกกับ bma/PHCIS · ผู้ใช้ 19 พ.ย. 69)
+   ธีม: ฟ้า · เขียว · ชมพู (ผู้ใช้ 20 พ.ย. 69) — ฟ้า = แบรนด์/ปุ่มหลัก · เขียว = สำเร็จ/เลือกแล้ว · ชมพู = เน้น/ป้ายพิเศษ
+   Source of truth = ไฟล์นี้ · สำเนาใน bma-docs/namon-tokens.css และ ticket-studio/public/namon-tokens.css (npm run sync)
+   ทุกค่าที่หน้า Namon Playground ใช้ต้องอ้างตัวแปร --nd-* พร้อม fallback เท่าค่าจริง (npm run fallbacks) · ข้อยกเว้น: gradient · สีลายตกแต่ง (SVG) */
+:root {
+  /* ── Primitive: ฟ้า (แบรนด์) ── */
+  --nd-blue-50:  #EEF1FF;
+  --nd-blue-100: #DCE2FF;
+  --nd-blue-400: #7B8FFC;
+  --nd-blue-600: #5470FB;
+  --nd-blue-700: #3F5BFA;
+  --nd-blue-800: #2438C9;
+  /* ── Primitive: เขียว ── */
+  --nd-green-50:  #EEFAF4;
+  --nd-green-100: #D5F2E3;
+  --nd-green-500: #34C38F;
+  --nd-green-700: #0F7A52;
+  /* ── Primitive: ชมพู ── */
+  --nd-pink-50:  #FFF1F6;
+  --nd-pink-100: #FFDCE9;
+  --nd-pink-500: #F06FA3;
+  --nd-pink-700: #BE2F6B;
+  /* ── Primitive: accent จากโลโก้/ลายตกแต่ง ── */
+  --nd-mint-500:     #90D0C0;
+  --nd-lavender-500: #B090E0;
+  --nd-peach-500:    #F4B9A0;
+  --nd-sun-500:      #F2D06B;
+  --nd-sky-500:      #9FB4E6;
+  --nd-lime-500:     #D7E77A;
+  --nd-navy-700:     #203050;   /* ตัวอักษรโลโก้ */
+  /* ── Primitive: neutral ── */
+  --nd-gray-0:   #FFFFFF;
+  --nd-gray-50:  #FDFDFD;
+  --nd-gray-100: #F4F5F5;
+  --nd-gray-200: #E2E4E6;
+  --nd-gray-300: #C8CDD1;
+  --nd-gray-400: #8A9197;
+  --nd-gray-500: #8A9197;
+  --nd-gray-600: #6A727A;
+  --nd-gray-700: #4D5358;
+  --nd-gray-900: #363B3F;
+  /* ── Primitive: status ── */
+  --nd-warning-50:  #FFF9F0;
+  --nd-warning-200: #F6DFA8;
+  --nd-warning-700: #C2410C;
+  --nd-danger-600:  #C81E1E;
+
+  /* ── Semantic: surface ── */
+  --nd-surface-page:        var(--nd-gray-50);
+  --nd-surface-card:        var(--nd-gray-0);
+  --nd-surface-neutral:     var(--nd-gray-100);
+  --nd-surface-brand:       var(--nd-blue-700);
+  --nd-surface-brand-hover: var(--nd-blue-800);
+  --nd-surface-brand-quiet: var(--nd-blue-50);
+  --nd-surface-input:       var(--nd-gray-0);
+  --nd-surface-success:     var(--nd-green-50);
+  --nd-surface-accent:      var(--nd-pink-50);
+  --nd-surface-info:        var(--nd-blue-50);
+  --nd-surface-warning:     var(--nd-warning-50);
+  --nd-surface-danger:      #FEF2F2;
+  /* ── Semantic: text ── */
+  --nd-text-default:     var(--nd-gray-900);
+  --nd-text-secondary:   #636B72;
+  --nd-text-tertiary:    var(--nd-gray-600);
+  --nd-text-brand:       var(--nd-blue-700);
+  --nd-text-on-brand:    var(--nd-gray-0);
+  --nd-text-input:       var(--nd-gray-700);
+  --nd-text-placeholder: var(--nd-gray-400);
+  --nd-text-success:     var(--nd-green-700);
+  --nd-text-accent:      var(--nd-pink-700);
+  --nd-text-info:        var(--nd-blue-700);
+  --nd-text-warning:     var(--nd-warning-700);
+  --nd-text-danger:      var(--nd-danger-600);
+  /* ── Semantic: border ── */
+  --nd-border-quiet:       var(--nd-gray-100);
+  --nd-border-input:       #8A9197;   /* ≥3:1 บนพื้นขาว (WCAG 1.4.11 ขอบช่องกรอก) */
+  --nd-border-input-hover: var(--nd-blue-600);
+  --nd-border-brand:       var(--nd-blue-700);
+  --nd-border-success:     var(--nd-green-100);
+  --nd-border-accent:      var(--nd-pink-100);
+  --nd-border-info:        var(--nd-blue-100);
+  --nd-border-warning:     var(--nd-warning-200);
+  --nd-border-danger:      var(--nd-danger-600);
+
+  /* ── Space · radius · stroke · size ── */
+  --nd-space-100: 4px;   --nd-space-150: 6px;   --nd-space-200: 8px;   --nd-space-300: 12px;  --nd-space-400: 16px;
+  --nd-space-500: 20px;  --nd-space-600: 24px;  --nd-space-800: 32px;  --nd-space-1200: 48px;
+  --nd-radius-100: 4px;  --nd-radius-200: 8px;  --nd-radius-300: 10px; --nd-radius-full: 9999px;
+  --nd-stroke-100: 1px;  --nd-stroke-200: 2px;
+  --nd-size-800: 40px;   /* control สูง (จอใหญ่) */
+  --nd-size-900: 44px;   /* control สูง (แท็บเล็ต/มือถือ · touch target) */
+  /* ── Type ── */
+  --nd-type-family-heading: 'Poppins', 'Sarabun', system-ui, sans-serif;
+  --nd-type-family-body:    'Sarabun', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --nd-type-size-xs: 12px; --nd-type-size-sm: 14px; --nd-type-size-base: 16px; --nd-type-size-lg: 18px; --nd-type-size-xl: 24px;
+  --nd-type-weight-regular: 400; --nd-type-weight-medium: 500; --nd-type-weight-bold: 700;
+  /* ── Effect ── */
+  --nd-shadow-card: 0 1px 4px rgb(63 91 250 / 0.10), 0 1px 8px rgb(63 91 250 / 0.14);   /* brand drop shadow (น้ำเงิน #3F5BFA · ผู้ใช้ 21 พ.ย. 69) */
+  --nd-ring-focus:  0 0 0 4px rgb(47 123 224 / 0.18);                                     /* input hover/focus */
+  --nd-ring-danger: 0 0 0 3px rgb(200 30 30 / 0.12);
+  --nd-gradient-accent: linear-gradient(90deg, #5B9DF0 0%, #34C38F 50%, #F06FA3 100%);   /* แถบธีม ฟ้า→เขียว→ชมพู */
+}
+
+/* ── Control height (responsive · touch ≥44px ที่ ≤1023px) ── */
+:root { --nd-control-h: var(--nd-size-800); }
+@media (max-width: 1023px) { :root { --nd-control-h: var(--nd-size-900); } }
+:root { --nd-motion-fast: 150ms; }
+
+/* ── Dark theme (ทุกคู่ข้อความ/พื้นต้องผ่านเกณฑ์ → npm run check) ──
+   เปิดด้วย <html data-theme="dark"> หรือตามระบบ (prefers-color-scheme) เมื่อไม่ได้บังคับ data-theme="light" */
+:root[data-theme="dark"] {
+  --nd-surface-page:        #0D121A;
+  --nd-surface-card:        #151C26;
+  --nd-surface-neutral:     #1E2733;
+  --nd-surface-brand:       #7B8FFC;
+  --nd-surface-brand-hover: #9AA9FD;
+  --nd-surface-brand-quiet: #171E4A;
+  --nd-surface-input:       #0F151D;
+  --nd-surface-success:     #0F2D24;
+  --nd-surface-accent:      #34182A;
+  --nd-surface-info:        #152A47;
+  --nd-surface-warning:     #2B2112;
+  --nd-surface-danger:      #2D1517;
+  --nd-text-default:        #E8ECEF;
+  --nd-text-secondary:      #A9B4BF;
+  --nd-text-tertiary:       #8E9AA6;
+  --nd-text-brand:          #A9B6FF;
+  --nd-text-on-brand:       #0A0F2E;
+  --nd-text-input:          #D5DCE3;
+  --nd-text-placeholder:    #7C8896;
+  --nd-text-success:        #5FD6A8;
+  --nd-text-accent:         #FF9CC4;
+  --nd-text-info:           #8DBBFA;
+  --nd-text-warning:        #FFB27A;
+  --nd-text-danger:         #F87171;
+  --nd-border-quiet:        #243040;
+  --nd-border-input:        #6B7B8F;
+  --nd-border-input-hover:  #7DB3F5;
+  --nd-border-brand:        #8E9FFD;
+  --nd-border-success:      #1D4A3F;
+  --nd-border-accent:       #5A2A45;
+  --nd-border-info:         #23415F;
+  --nd-border-warning:      #5A4520;
+  --nd-border-danger:       #F87171;
+  --nd-shadow-card: 0 1px 4px rgb(91 157 240 / 0.20), 0 1px 8px rgb(91 157 240 / 0.20);
+  --nd-ring-focus:  0 0 0 4px rgb(125 179 245 / 0.24);
+  --nd-ring-danger: 0 0 0 3px rgb(248 113 113 / 0.22);
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --nd-surface-page:        #0D121A;
+    --nd-surface-card:        #151C26;
+    --nd-surface-neutral:     #1E2733;
+    --nd-surface-brand:       #7B8FFC;
+    --nd-surface-brand-hover: #9AA9FD;
+    --nd-surface-brand-quiet: #171E4A;
+    --nd-surface-input:       #0F151D;
+    --nd-surface-success:     #0F2D24;
+    --nd-surface-accent:      #34182A;
+    --nd-surface-info:        #152A47;
+    --nd-surface-warning:     #2B2112;
+    --nd-surface-danger:      #2D1517;
+    --nd-text-default:        #E8ECEF;
+    --nd-text-secondary:      #A9B4BF;
+    --nd-text-tertiary:       #8E9AA6;
+    --nd-text-brand:          #A9B6FF;
+    --nd-text-on-brand:       #0A0F2E;
+    --nd-text-input:          #D5DCE3;
+    --nd-text-placeholder:    #7C8896;
+    --nd-text-success:        #5FD6A8;
+    --nd-text-accent:         #FF9CC4;
+    --nd-text-info:           #8DBBFA;
+    --nd-text-warning:        #FFB27A;
+    --nd-text-danger:         #F87171;
+    --nd-border-quiet:        #243040;
+    --nd-border-input:        #6B7B8F;
+    --nd-border-input-hover:  #7DB3F5;
+    --nd-border-brand:        #8E9FFD;
+    --nd-border-success:      #1D4A3F;
+    --nd-border-accent:       #5A2A45;
+    --nd-border-info:         #23415F;
+    --nd-border-warning:      #5A4520;
+    --nd-border-danger:       #F87171;
+    --nd-shadow-card: 0 1px 4px rgb(91 157 240 / 0.20), 0 1px 8px rgb(91 157 240 / 0.20);
+    --nd-ring-focus:  0 0 0 4px rgb(125 179 245 / 0.24);
+    --nd-ring-danger: 0 0 0 3px rgb(248 113 113 / 0.22);
+    color-scheme: dark;
+  }
+}
