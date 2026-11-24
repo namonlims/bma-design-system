@@ -12,6 +12,7 @@
 
 ชุดแรกคือ `Icon.jsx` (ใช้กับ `<Icon name="…" />`) ชุดที่สองคือ Material Symbols Outlined (24 px, FILL 0) ที่เรียกเป็น literal ใน `src/` ผ่าน `<Sym>` / `<MaterialSymbol>` / `<Icon>`
 
+<div style="overflow-x:auto;max-width:100%">
 <table class="icon-ref-table">
 <colgroup><col style="width:36%"><col style="width:16%"><col style="width:48%"></colgroup>
 <thead><tr><th>Name</th><th style="text-align:center">Preview</th><th>Source</th></tr></thead><tbody>
@@ -312,6 +313,7 @@
 <tr><td><code>wrong_location</code></td><td style="text-align:center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 -960 960 960" fill="currentColor"><path d="M480-80Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q10 0 19.5.5T520-877v81q-10-2-20-3t-20-1q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186q122-112 181-203.5T720-552q0-2-.5-4t-.5-4h80q0 2 .5 4t.5 4q0 100-79.5 217.5T480-80Zm0-450Zm195-108 84-84 84 84 56-56-84-84 84-84-56-56-84 84-84-84-56 56 84 84-84 84 56 56ZM536.5-503.5Q560-527 560-560t-23.5-56.5Q513-640 480-640t-56.5 23.5Q400-593 400-560t23.5 56.5Q447-480 480-480t56.5-23.5Z"/></svg></td><td><code>material:wrong_location</code></td></tr>
 <tr><td><code>zoom_in</code></td><td style="text-align:center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 -960 960 960" fill="currentColor"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Zm-40-60v-80h-80v-80h80v-80h80v80h80v80h-80v80h-80Z"/></svg></td><td><code>material:zoom_in</code></td></tr>
 </tbody></table>
+</div>
 
 
 ---

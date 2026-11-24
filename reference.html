@@ -654,6 +654,33 @@
   .ds-history.open ul{display:flex}
   .ds-history li{display:flex;gap:8px;align-items:baseline}
   .ds-history li .d{font:500 11px/1.6 ui-monospace,monospace;color:#5C6B68}
+  /* Responsive (responsive-web skill): the page used to clip at 768 and 390
+     because the injected header and the Brand select had fixed widths and
+     body is overflow:hidden, so nothing scrolled and the right edge was cut.
+     Below xl the sidebar is a drawer (same as the source page under 767),
+     header parts shrink/wrap, and touch targets reach 44px. */
+  header.ds-top,header.ds-top *{min-width:0;max-width:100%}
+  header.ds-top label select{width:auto;max-width:100%}
+  @media (max-width:1023px){
+    .layout{grid-template-columns:minmax(0,1fr)}
+    aside{position:fixed;top:0;bottom:0;left:0;z-index:30;width:min(320px,88vw);transform:translateX(-100%);transition:transform 200ms ease;box-shadow:var(--shadow)}
+    body.nav-open aside{transform:none}
+    body.nav-open .nav-scrim{display:block;position:fixed;inset:0;z-index:29;background:rgba(15,23,42,.35)}
+    .menu-btn{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 12px;border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--ink-2);font:inherit;font-size:13px;font-weight:600;cursor:pointer}
+    .topbar{flex-wrap:wrap;row-gap:8px;padding:10px 16px}
+    .topbar .heading{flex:1 1 auto;min-width:0;overflow-wrap:anywhere}
+    .topbar .tabs{margin-left:0;max-width:100%;overflow-x:auto}
+    .topbar .actions{margin-left:0;width:100%;flex-wrap:wrap}
+    .topbar .actions a,.topbar .actions button,.tab-btn,aside .item{min-height:44px}
+    header.ds-top{padding:.6rem .9rem;gap:.6rem}
+    header.ds-top nav.ds-tabs{margin-left:0;width:100%;flex-wrap:wrap}
+    header.ds-top nav.ds-tabs a,header.ds-top button.ds-ghost,header.ds-top select{min-height:44px;display:inline-flex;align-items:center}
+  }
+  @media (max-width:767px){
+    header.ds-top .ds-brandrow .subtitle{display:none}
+    header.ds-top label{flex:1 1 100%}
+    header.ds-top label select{flex:1 1 auto;width:100%}
+  }
 
 .ds-sel{position:relative;display:inline-block;min-width:150px;font-family:'Sarabun','Inter','Noto Sans Thai',system-ui,sans-serif}
 .ds-sel-btn{display:flex;align-items:center;gap:var(--dim-space-150,6px);width:100%;height:var(--dim-size-700,36px);
