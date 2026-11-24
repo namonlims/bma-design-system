@@ -10,7 +10,7 @@
 *,*::before,*::after{box-sizing:border-box}
 body{margin:0;font-family:'Sarabun','Inter','Noto Sans Thai',system-ui,sans-serif;
   background:var(--page-bg);color:var(--page-fg);-webkit-font-smoothing:antialiased}
-:root{--page-bg:#F7F9F9;--page-fg:#14312A;--panel:#FFFFFF;--line:#E3E9E8;--muted:#5C6B68;
+:root{--page-bg:#FFFFFF;--page-fg:#14312A;--panel:#FFFFFF;--line:#E3E9E8;--muted:#5C6B68;
   --accent:var(--brand-p700,#007549);--accent-soft:var(--brand-p100,#E2F3EB)}
 body[data-mode="dark"]{--page-bg:#0C1512;--page-fg:#E8F1EE;--panel:#141F1B;--line:#243530;--muted:#93A6A1;
   --accent:var(--brand-p400,#6AD6A5);--accent-soft:#182A24}
@@ -22,6 +22,7 @@ header.top{position:sticky;top:0;z-index:20;background:var(--panel);border-botto
 .brandrow{display:flex;align-items:center;gap:10px;line-height:1.3}
 .brandrow .dot{width:auto;min-width:2rem;height:2rem;padding:0 .5rem;border-radius:8px;background:var(--accent);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:14px}
 .brandrow .title{font-weight:700;letter-spacing:-.01em}
+.brandrow img.dot{background:none;padding:0;min-width:0;width:2rem;object-fit:contain}
 .brandrow .subtitle{font-size:12px;color:var(--muted)}
 .pill{font:600 .7rem/1 ui-monospace,monospace;padding:.35rem .55rem;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
 nav.tabs{display:flex;gap:.25rem;margin-left:auto;flex-wrap:wrap}
@@ -132,7 +133,7 @@ main.tight{padding-top:.75rem}
     <span class="fname">tokens.css</span>
     <input id="q" type="search" placeholder="กรองบรรทัด… เช่น surface-card, radius-200, #007549" aria-label="กรองบรรทัด">
     <span class="count" id="count"></span>
-    <span class="count">1785 declarations · 145.2 KB · cc369b68</span>
+    <span class="count">1785 declarations · 145.2 KB · 1a5e1b46</span>
     <button class="ghost" id="copyAll" type="button">คัดลอกทั้งไฟล์</button>
     <a class="ghost" href="./tokens.css" download="tokens.css">ดาวน์โหลด</a>
     <a class="ghost" href="./tokens.css" target="_blank" rel="noopener">เปิดไฟล์ดิบ ↗</a>
@@ -141,7 +142,7 @@ main.tight{padding-top:.75rem}
 </div>
 </main>
 <div class="toast" id="toast"></div>
-<footer>Generated from <code>src/styles/tokens.css</code> · <span id="sha">cc369b68</span> &middot; bma-design-system.mih.co.th</footer>
+<footer>Generated from <code>src/styles/tokens.css</code> · <span id="sha">1a5e1b46</span> &middot; bma-design-system.mih.co.th</footer>
 <script>
 (function () {
   var CHEV = '<svg class="chev" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
