@@ -1686,6 +1686,5831 @@
     "web/src/components/popup/ReMedicinePopup.jsx"
    ],
    "usedCount": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "ac_unit",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "accessibility_new",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 18
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "accessible",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 20
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "accessible_forward",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "account_balance",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 8
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "account_balance_wallet",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 7
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "account_circle",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "account_tree",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 10
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "add",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 404
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "add_a_photo",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 6
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "add_box",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "add_card",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "add_chart",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "add_circle",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 13
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "add_comment",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "add_home",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "add_home_work",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "add_notes",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "add_photo_alternate",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 5
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "add_task",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "admin_panel_settings",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 8
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "air",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 7
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "airline_seat_flat",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "airport_shuttle",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "airwave",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "alarm",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "all_inclusive",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "allergies",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "allergy",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "alt_route",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 8
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "analytics",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 8
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "apartment",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 27
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "approval",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 9
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "apps",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 7
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "archive",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "arrow_back",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 76
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "arrow_back_ios_new",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 5
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "arrow_downward",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 18
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "arrow_drop_down",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "arrow_drop_down_circle",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "arrow_drop_up",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "arrow_forward",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 99
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "arrow_selector_tool",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "arrow_upward",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 16
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "article",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "assessment",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 5
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "assignment",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 95
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "assignment_add",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 11
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "assignment_ind",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 20
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "assignment_late",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 19
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "assignment_return",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 6
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "assignment_turned_in",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 22
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "assist_walker",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "attach_file",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 47
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "auto_awesome",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 15
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "auto_fix_high",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "auto_stories",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "autoplay",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "autorenew",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "baby_changing_station",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "back_hand",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "backspace",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 13
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "badge",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 101
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "balance",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "bar_chart",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 24
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "bar_chart_4_bars",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 11
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "barcode",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 9
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "barcode_scanner",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 13
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "battery_full",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "beach_access",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "bed",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 13
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "bedtime",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "biotech",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 87
+  },
+  {
+   "kind": "glyph",
+   "repo": "kiosk,mobile,web",
+   "path": "block",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 191
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "blood_pressure",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 7
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "bloodtype",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 8
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "bluetooth_connected",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "bluetooth_disabled",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "blur_on",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "body_system",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "bolt",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 11
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "book",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "bookmark",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 5
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "bookmark_add",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 5
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "breastfeeding",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "bug_report",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "build",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 6
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "business_center",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "cable",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "calculate",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 17
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "calendar_add_on",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 6
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "calendar_clock",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 12
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "calendar_month",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 49
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "calendar_today",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 38
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "calendar_view_week",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "call",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 34
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "call_end",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 15
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "call_made",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "call_received",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 5
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "call_split",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "cameraswitch",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "campaign",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 17
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "cancel",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 67
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "cancel_presentation",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "cardiology",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "category",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 14
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "celebration",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "chair",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "chat",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 12
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "chat_add_on",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "check",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 205
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "check_box",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 7
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "check_box_outline_blank",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 6
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "check_circle",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 401
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "check_small",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "checklist",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 43
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "checkroom",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "chevron_left",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 75
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "chevron_right",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 164
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "child_care",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 60
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "child_friendly",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "circle",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "cleaning_services",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 5
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "clinical_notes",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 60
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "close",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 187
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "close_fullscreen",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 5
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "cloud_done",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 6
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "cloud_off",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 7
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "cloud_sync",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "cloud_upload",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "code",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "code_off",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "cognition",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "colorize",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 11
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "communities",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "compare",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "compare_arrows",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 7
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "computer",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "confirmation_number",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 12
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "contact_emergency",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "contact_mail",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "contact_page",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 29
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "contacts",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "content_copy",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 52
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "content_cut",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "contract",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 16
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "contract_edit",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "coronavirus",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 22
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "corporate_fare",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 9
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "credit_card",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 39
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "credit_card_off",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "crisis_alert",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 9
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "crop_square",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "dangerous",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 6
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "dark_mode",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "dashboard",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 11
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "dashboard_customize",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 5
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "data_usage",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "database",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "dataset",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "date_range",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 8
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "delete",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 307
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "delete_forever",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "delete_outline",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "delete_sweep",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 12
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "dentistry",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 52
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "dermatology",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "description",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 117
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "desktop_windows",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "device_thermostat",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "device_unknown",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "devices",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "diagnosis",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 8
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "difference",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile",
+   "path": "directions",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "directions_car",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 7
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "directions_run",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 18
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "directions_walk",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 43
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "diversity_1",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "diversity_3",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 43
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "do_not_disturb_on",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 14
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "document_scanner",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "domain",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 17
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "domain_add",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "domain_disabled",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "done",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "done_all",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 15
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "donut_large",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "donut_small",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "door_open",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "download",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 74
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "download_done",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "draft",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "drafts",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "drag_indicator",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 10
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "draw",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 31
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "dynamic_form",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "e911_emergency",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 20
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "ecg_heart",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 8
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "edit",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 358
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "edit_calendar",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 18
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "edit_document",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 12
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "edit_location",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "edit_note",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 99
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "edit_off",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "edit_square",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "elderly",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 15
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "email",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "emergency",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 28
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "emergency_home",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "engineering",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "enhanced_encryption",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "error",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 243
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "event",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 29
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "event_available",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 100
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "event_busy",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 104
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "event_note",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 22
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "event_repeat",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 58
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "event_seat",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "event_upcoming",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 26
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "expand_less",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 103
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "expand_more",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 141
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "face",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 21
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "face_6",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "fact_check",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 127
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "family_restroom",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 34
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "fast_forward",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 19
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "favorite",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 19
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "female",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 16
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "fiber_manual_record",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "file_save",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 23
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "filter_alt",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 22
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "filter_alt_off",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 32
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "filter_list",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 10
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "fingerprint",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 16
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "fit_screen",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "fitness_center",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "flag",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 33
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "flashlight_off",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "flashlight_on",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "flight",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "flights_and_hotels",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile",
+   "path": "flip_camera_ios",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "folder_off",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 12
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "folder_open",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 18
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "folder_shared",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 7
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "folder_special",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "folder_zip",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "follow_the_signs",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 6
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "footprint",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "format_bold",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "format_italic",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "format_list_bulleted",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 6
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "format_paint",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile",
+   "path": "format_size",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "format_underlined",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "forum",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 19
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "forward",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 8
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "forward_to_inbox",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 19
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "front_hand",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "fullscreen",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "fullscreen_exit",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "gavel",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 9
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "genetics",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 16
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "glucose",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 7
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "gpp_bad",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "gpp_maybe",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 6
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "graphic_eq",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 9
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "grid_on",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "grid_view",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 5
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "grocery",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "group",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 93
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "group_add",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 7
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "group_off",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "groups",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 154
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "gynecology",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "headphones",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 5
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "healing",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 13
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "health_and_safety",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 62
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "health_metrics",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 6
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "hearing",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 6
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "hearing_disabled",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "heart_broken",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "height",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 7
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "help",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 31
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "help_outline",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "history",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 209
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "history_edu",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 16
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "history_toggle_off",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "holiday_village",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "home",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 47
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "home_health",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 54
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "home_work",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "horizontal_rule",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "hotel",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "hourglass_bottom",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "hourglass_empty",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 7
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "hourglass_top",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 48
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "how_to_reg",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 54
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "hub",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 22
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "humerus",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "id_card",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "image",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 53
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "image_not_supported",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "imagesearch_roller",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "imagesmode",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "inbox",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 25
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "indeterminate_check_box",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "info",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 289
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "info_i",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "ink_eraser",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "insights",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 11
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "inventory",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 9
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "inventory_2",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 68
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "ios_share",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 83
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "join_inner",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "keep_off",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "key",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 5
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "keyboard",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "keyboard_arrow_down",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 8
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "keyboard_arrow_up",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile",
+   "path": "keyboard_return",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "lab_panel",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "lab_profile",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 21
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "lab_research",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "label",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 5
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "labs",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 21
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "lan",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "language",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 10
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "layers",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "library_add",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "library_books",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "light_mode",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 6
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "lightbulb",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 6
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "link",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 28
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "link_off",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 9
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "liquor",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "list",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 14
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "list_alt",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 14
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile",
+   "path": "local_bar",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "local_fire_department",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "local_hospital",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 41
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "local_pharmacy",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 7
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "local_police",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "local_shipping",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 24
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "location_city",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 13
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "location_off",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "location_on",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 76
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "location_searching",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "lock",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 179
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "lock_clock",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "lock_open",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 28
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "lock_person",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 15
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "lock_reset",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "login",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 6
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "logout",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 22
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "looks_one",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "looks_two",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "low_priority",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "mail",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 19
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "male",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 8
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "man",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "manage_accounts",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "manage_history",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "manage_search",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "map",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 25
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "mark_email_read",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 6
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "mark_email_unread",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "masks",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "medical_information",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 18
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "medical_services",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 80
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "medication",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 113
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "medication_liquid",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 5
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "meeting_room",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 21
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "menu",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "menu_book",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 22
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "mic",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 19
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "mic_off",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 12
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "mobile_friendly",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "mobile_off",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "monitor_heart",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 69
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "monitor_weight",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 40
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "monitoring",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 110
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "mood",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "more_horiz",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 11
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "more_vert",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 12
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "motion_photos_on",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "move_down",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 14
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "move_location",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "move_to_inbox",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 19
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "move_up",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 11
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "movie",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "moving",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "my_location",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 7
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "near_me",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 6
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "nephrology",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "network_check",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "neurology",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 7
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "new_releases",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "night_shelter",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 7
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "no_drinks",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "no_meals",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "no_photography",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 5
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "north_east",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "note",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "note_add",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 9
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "notes",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 5
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "notification_important",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 12
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "notifications",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 33
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "notifications_active",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 22
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "notifications_off",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 5
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "numbers",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "nutrition",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 15
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "open_in_full",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 9
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "open_in_new",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 49
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "ophthalmology",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "other_houses",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "outbound",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 9
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "outbox",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 9
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "outgoing_mail",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 11
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "output",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "palette",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 5
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "password",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "pause",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 5
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "pause_circle",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 5
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "payments",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 61
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "pending",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 23
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "pending_actions",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 46
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "percent",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "person",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 94
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "person_add",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 94
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "person_alert",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 8
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "person_book",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "person_cancel",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "person_check",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "person_edit",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "person_off",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 31
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "person_pin",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "person_pin_circle",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "person_remove",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 9
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "person_search",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 36
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "personal_injury",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 8
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "pest_control",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 5
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "pets",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "phone",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "phone_iphone",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 6
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "phone_missed",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "phonelink_lock",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "photo_camera",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 35
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "photo_library",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "physical_therapy",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 7
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "picture_as_pdf",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 23
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "picture_in_picture_alt",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "pie_chart",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "pill",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 111
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "pill_off",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "pin",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 10
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "place",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "play_arrow",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 18
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "play_circle",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "playlist_add",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 14
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "playlist_add_check",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "podcasts",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "point_of_sale",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 5
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "policy",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "post_add",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "power_settings_new",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "pregnant_woman",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 38
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "prescriptions",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 12
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "present_to_all",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "preview",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "price_change",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "print",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 213
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "priority_high",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 35
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "privacy",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "privacy_tip",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "production_quantity_limits",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "progress_activity",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 12
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "psychology",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 66
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "psychology_alt",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 11
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "public",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 6
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "publish",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "pulmonology",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 28
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "push_pin",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "qr_code_2",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 12
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "qr_code_scanner",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 20
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "query_stats",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "queue",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "quiz",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "radar",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "radio_button_checked",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 12
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "radio_button_unchecked",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 21
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "radiology",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 76
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "rate_review",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "receipt_long",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 39
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "record_voice_over",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 6
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "redo",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "refresh",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 32
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "release_alert",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "remove",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 13
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "remove_circle",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "remove_done",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "repeat",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "replay",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 14
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "reply",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "report",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 40
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "report_problem",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "request_quote",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 18
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "respiratory_rate",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "restart_alt",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 91
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "restaurant",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 12
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "restore",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 8
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "route",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "rule",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 18
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "running_with_errors",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 16
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "sanitizer",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 5
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "save",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 127
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "savings",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "scale",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "schedule",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 179
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "school",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 22
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "science",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 49
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "screen_share",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 7
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "sd_card_alert",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "search",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 67
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "search_off",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 65
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "self_care",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "self_improvement",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "sell",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "send",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 141
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "sensor_occupied",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "sensors",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 6
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "sentiment_calm",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "sentiment_content",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "sentiment_dissatisfied",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 14
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "sentiment_excited",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "sentiment_extremely_dissatisfied",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "sentiment_frustrated",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "sentiment_neutral",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 6
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "sentiment_sad",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "sentiment_satisfied",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 10
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "sentiment_stressed",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 5
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "sentiment_very_satisfied",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "sentiment_worried",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "settings",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 14
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "settings_ethernet",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "settings_remote",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "share",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 7
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "share_location",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "shelves",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "shield",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 11
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "shield_lock",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "shield_person",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 15
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "shield_question",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 10
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile",
+   "path": "shift",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "shopping_cart",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 6
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "show_chart",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 26
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "sick",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 12
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "signal_cellular_alt",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "signal_disconnected",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "signature",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "skeleton",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "skip_next",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 5
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "smart_display",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "smartphone",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 18
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "smoke_free",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 8
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "smoking_rooms",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 9
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "sms",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 11
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "south",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "south_west",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "spa",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "speed",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 6
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "spo2",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "square",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "square_foot",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "stacked_bar_chart",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "stacks",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "stairs",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "star",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 24
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "step",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "stethoscope",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 129
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "sticky_note_2",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "stop",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "stop_circle",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "stop_screen_share",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "store",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 7
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "storefront",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "straighten",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 9
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "style",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "stylus_note",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "subdirectory_arrow_right",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "summarize",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 32
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "support_agent",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 9
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "swap_horiz",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 62
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "swap_vert",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 5
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "switch_account",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "symptoms",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "sync",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 19
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "sync_alt",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 14
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "sync_problem",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 13
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "syringe",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "table_chart",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 7
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "table_rows",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 27
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "table_view",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 17
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "tablet_mac",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "tag",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "task_alt",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 106
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "text_fields",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "text_snippet",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "thermometer",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 9
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "thermostat",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 6
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile",
+   "path": "thumb_up",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "timelapse",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "timeline",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 5
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "timer",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 22
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "timer_off",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "tips_and_updates",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 6
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "title",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "today",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 6
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "toggle_off",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "toggle_on",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 7
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "touch_app",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 15
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "toys",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "translate",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 10
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "travel_explore",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 12
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "trending_down",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 21
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "trending_flat",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "trending_up",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 36
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "trip_origin",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "tune",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 28
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "tv",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 8
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "u_turn_left",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "undo",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 57
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "unfold_less",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "unfold_more",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "unpublished",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "update",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "upload",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 11
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "upload_file",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 29
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "vaccines",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 61
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "vaping_rooms",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "verified",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 74
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "verified_off",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "verified_user",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 45
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "vertical_align_top",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "video_call",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 15
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "video_camera_front",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 5
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "video_library",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "videocam",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 54
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "videocam_off",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 16
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "view_agenda",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "view_headline",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "view_in_ar",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "view_list",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 5
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "visibility",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 205
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "visibility_off",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 10
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "vital_signs",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "volume_off",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "volume_up",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 17
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "volunteer_activism",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 54
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "warehouse",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 16
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "warning",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 239
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "water_drop",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 23
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "water_full",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "wb_twilight",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "wc",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile",
+   "path": "web",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "weekend",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "wheelchair_pickup",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 6
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "where_to_vote",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "widgets",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "wifi",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 2
+  },
+  {
+   "kind": "glyph",
+   "repo": "mobile,web",
+   "path": "wifi_off",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 7
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "wine_bar",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "work",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "work_history",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 1
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "workspace_premium",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 6
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "wrong_location",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 4
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "zoom_in",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 7
+  },
+  {
+   "kind": "glyph",
+   "repo": "web",
+   "path": "zoom_out",
+   "folder": "Material Symbols Outlined",
+   "kb": 0,
+   "uses": 3
+  },
+  {
+   "kind": "icon",
+   "repo": "web",
+   "path": "src/icons-code/home.svg",
+   "folder": "src/icons-code (วาดในโค้ด)",
+   "kb": 1,
+   "usedIn": [
+    "src/components/icons/Icon.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "kind": "icon",
+   "repo": "web",
+   "path": "src/icons-code/chevron-down.svg",
+   "folder": "src/icons-code (วาดในโค้ด)",
+   "kb": 1,
+   "usedIn": [
+    "src/components/icons/Icon.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "kind": "icon",
+   "repo": "web",
+   "path": "src/icons-code/chevron-left.svg",
+   "folder": "src/icons-code (วาดในโค้ด)",
+   "kb": 1,
+   "usedIn": [
+    "src/components/icons/Icon.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "kind": "icon",
+   "repo": "web",
+   "path": "src/icons-code/chevron-right.svg",
+   "folder": "src/icons-code (วาดในโค้ด)",
+   "kb": 1,
+   "usedIn": [
+    "src/components/icons/Icon.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "kind": "icon",
+   "repo": "web",
+   "path": "src/icons-code/calendar.svg",
+   "folder": "src/icons-code (วาดในโค้ด)",
+   "kb": 1,
+   "usedIn": [
+    "src/components/icons/Icon.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "kind": "icon",
+   "repo": "web",
+   "path": "src/icons-code/book.svg",
+   "folder": "src/icons-code (วาดในโค้ด)",
+   "kb": 1,
+   "usedIn": [
+    "src/components/icons/Icon.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "kind": "icon",
+   "repo": "web",
+   "path": "src/icons-code/bed.svg",
+   "folder": "src/icons-code (วาดในโค้ด)",
+   "kb": 1,
+   "usedIn": [
+    "src/components/icons/Icon.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "kind": "icon",
+   "repo": "web",
+   "path": "src/icons-code/biotech.svg",
+   "folder": "src/icons-code (วาดในโค้ด)",
+   "kb": 1,
+   "usedIn": [
+    "src/components/icons/Icon.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "kind": "icon",
+   "repo": "web",
+   "path": "src/icons-code/history.svg",
+   "folder": "src/icons-code (วาดในโค้ด)",
+   "kb": 1,
+   "usedIn": [
+    "src/components/icons/Icon.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "kind": "icon",
+   "repo": "web",
+   "path": "src/icons-code/bell.svg",
+   "folder": "src/icons-code (วาดในโค้ด)",
+   "kb": 1,
+   "usedIn": [
+    "src/components/icons/Icon.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "kind": "icon",
+   "repo": "web",
+   "path": "src/icons-code/clipboard.svg",
+   "folder": "src/icons-code (วาดในโค้ด)",
+   "kb": 1,
+   "usedIn": [
+    "src/components/icons/Icon.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "kind": "icon",
+   "repo": "web",
+   "path": "src/icons-code/minus.svg",
+   "folder": "src/icons-code (วาดในโค้ด)",
+   "kb": 1,
+   "usedIn": [
+    "src/components/icons/Icon.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "kind": "icon",
+   "repo": "web",
+   "path": "src/icons-code/activity.svg",
+   "folder": "src/icons-code (วาดในโค้ด)",
+   "kb": 1,
+   "usedIn": [
+    "src/components/icons/Icon.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "kind": "icon",
+   "repo": "web",
+   "path": "src/icons-code/check.svg",
+   "folder": "src/icons-code (วาดในโค้ด)",
+   "kb": 1,
+   "usedIn": [
+    "src/components/icons/Icon.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "kind": "icon",
+   "repo": "web",
+   "path": "src/icons-code/clipboard-list.svg",
+   "folder": "src/icons-code (วาดในโค้ด)",
+   "kb": 1,
+   "usedIn": [
+    "src/components/icons/Icon.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "kind": "icon",
+   "repo": "web",
+   "path": "src/icons-code/kiosk.svg",
+   "folder": "src/icons-code (วาดในโค้ด)",
+   "kb": 1,
+   "usedIn": [
+    "src/components/icons/Icon.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "kind": "icon",
+   "repo": "web",
+   "path": "src/icons-code/file-text.svg",
+   "folder": "src/icons-code (วาดในโค้ด)",
+   "kb": 1,
+   "usedIn": [
+    "src/components/icons/Icon.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "kind": "icon",
+   "repo": "web",
+   "path": "src/icons-code/trash.svg",
+   "folder": "src/icons-code (วาดในโค้ด)",
+   "kb": 1,
+   "usedIn": [
+    "src/components/icons/Icon.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "kind": "icon",
+   "repo": "web",
+   "path": "src/icons-code/edit.svg",
+   "folder": "src/icons-code (วาดในโค้ด)",
+   "kb": 1,
+   "usedIn": [
+    "src/components/icons/Icon.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "kind": "icon",
+   "repo": "web",
+   "path": "src/icons-code/x.svg",
+   "folder": "src/icons-code (วาดในโค้ด)",
+   "kb": 1,
+   "usedIn": [
+    "src/components/icons/Icon.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "kind": "icon",
+   "repo": "web",
+   "path": "src/icons-code/printer.svg",
+   "folder": "src/icons-code (วาดในโค้ด)",
+   "kb": 1,
+   "usedIn": [
+    "src/components/icons/Icon.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "kind": "icon",
+   "repo": "web",
+   "path": "src/icons-code/language.svg",
+   "folder": "src/icons-code (วาดในโค้ด)",
+   "kb": 1,
+   "usedIn": [
+    "src/components/icons/Icon.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "kind": "icon",
+   "repo": "web",
+   "path": "src/icons-code/check-circle.svg",
+   "folder": "src/icons-code (วาดในโค้ด)",
+   "kb": 1,
+   "usedIn": [
+    "src/components/icons/Icon.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "kind": "icon",
+   "repo": "web",
+   "path": "src/icons-code/baht.svg",
+   "folder": "src/icons-code (วาดในโค้ด)",
+   "kb": 1,
+   "usedIn": [
+    "src/components/icons/Icon.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "kind": "icon",
+   "repo": "web",
+   "path": "src/icons-code/stethoscope.svg",
+   "folder": "src/icons-code (วาดในโค้ด)",
+   "kb": 1,
+   "usedIn": [
+    "src/components/icons/Icon.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "kind": "icon",
+   "repo": "web",
+   "path": "src/icons-code/pill.svg",
+   "folder": "src/icons-code (วาดในโค้ด)",
+   "kb": 1,
+   "usedIn": [
+    "src/components/icons/Icon.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "kind": "icon",
+   "repo": "web",
+   "path": "src/icons-code/radiology.svg",
+   "folder": "src/icons-code (วาดในโค้ด)",
+   "kb": 1,
+   "usedIn": [
+    "src/components/icons/Icon.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "kind": "icon",
+   "repo": "web",
+   "path": "src/icons-code/clock.svg",
+   "folder": "src/icons-code (วาดในโค้ด)",
+   "kb": 1,
+   "usedIn": [
+    "src/components/icons/Icon.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "kind": "icon",
+   "repo": "web",
+   "path": "src/icons-code/plus.svg",
+   "folder": "src/icons-code (วาดในโค้ด)",
+   "kb": 1,
+   "usedIn": [
+    "src/components/icons/Icon.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "kind": "icon",
+   "repo": "mobile",
+   "path": "src/icons-code/calendar.svg",
+   "folder": "src/icons-code (วาดในโค้ด)",
+   "kb": 1,
+   "usedIn": [
+    "src/shared/ui/figmaIcons.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "kind": "icon",
+   "repo": "mobile",
+   "path": "src/icons-code/clock.svg",
+   "folder": "src/icons-code (วาดในโค้ด)",
+   "kb": 1,
+   "usedIn": [
+    "src/shared/ui/figmaIcons.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "kind": "icon",
+   "repo": "mobile",
+   "path": "src/icons-code/map-pin.svg",
+   "folder": "src/icons-code (วาดในโค้ด)",
+   "kb": 2,
+   "usedIn": [
+    "src/shared/ui/figmaIcons.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "kind": "icon",
+   "repo": "mobile",
+   "path": "src/icons-code/video.svg",
+   "folder": "src/icons-code (วาดในโค้ด)",
+   "kb": 1,
+   "usedIn": [
+    "src/shared/ui/figmaIcons.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "kind": "icon",
+   "repo": "mobile",
+   "path": "src/icons-code/chevron-right.svg",
+   "folder": "src/icons-code (วาดในโค้ด)",
+   "kb": 1,
+   "usedIn": [
+    "src/shared/ui/figmaIcons.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "kind": "icon",
+   "repo": "mobile",
+   "path": "src/icons-code/file-text.svg",
+   "folder": "src/icons-code (วาดในโค้ด)",
+   "kb": 1,
+   "usedIn": [
+    "src/shared/ui/figmaIcons.jsx"
+   ],
+   "usedCount": 1
   }
  ]
 }
