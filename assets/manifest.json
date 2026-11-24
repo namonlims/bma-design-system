@@ -214,20 +214,6 @@
   {
    "repo": "web",
    "kind": "illustration",
-   "path": "public/illustration/foot-dorsum.svg",
-   "folder": "public/illustration",
-   "kb": 5
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/foot-sole.svg",
-   "folder": "public/illustration",
-   "kb": 5
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
    "path": "public/illustration/form-cover01.svg",
    "folder": "public/illustration",
    "kb": 16
