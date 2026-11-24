@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-24T16:38:54.890Z",
+  "generated": "2026-11-24T16:58:56.783Z",
   "source": "src/components/icons/Icon.jsx (repo on GitHub) + design.md Appendix B (Material)",
   "format": "vector — elements[] = SVG primitives (path d · polyline points · circle cx/cy/r …); svg = ready-to-use markup",
   "count": 282,

@@ -2,2370 +2,1844 @@
  "generated": "2026-11-24",
  "items": [
   {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "Fingerprint Scanning.json",
-   "folder": ".",
-   "kb": 46
-  },
-  {
-   "repo": "web",
-   "kind": "icon",
-   "path": "public/icons/body-diagram/hand.svg",
-   "folder": "public/icons/body-diagram",
-   "kb": 3
-  },
-  {
-   "repo": "web",
-   "kind": "icon",
-   "path": "public/icons/body-diagram/zoom-in.svg",
-   "folder": "public/icons/body-diagram",
-   "kb": 1
-  },
-  {
-   "repo": "web",
-   "kind": "icon",
-   "path": "public/icons/body-diagram/zoom-out.svg",
-   "folder": "public/icons/body-diagram",
-   "kb": 1
-  },
-  {
-   "repo": "web",
-   "kind": "icon",
-   "path": "public/icons/cert-type/balance.svg",
-   "folder": "public/icons/cert-type",
-   "kb": 3
-  },
-  {
-   "repo": "web",
-   "kind": "icon",
-   "path": "public/icons/cert-type/flights-and-hotels.svg",
-   "folder": "public/icons/cert-type",
-   "kb": 2
-  },
-  {
-   "repo": "web",
-   "kind": "icon",
-   "path": "public/icons/cert-type/sick.svg",
-   "folder": "public/icons/cert-type",
-   "kb": 5
-  },
-  {
-   "repo": "web",
-   "kind": "icon",
-   "path": "public/icons/cert-type/stethoscope.svg",
-   "folder": "public/icons/cert-type",
-   "kb": 3
-  },
-  {
-   "repo": "web",
-   "kind": "icon",
-   "path": "public/icons/registration/alert-triangle.svg",
-   "folder": "public/icons/registration",
-   "kb": 2
-  },
-  {
-   "repo": "web",
-   "kind": "icon",
-   "path": "public/icons/registration/camera.svg",
-   "folder": "public/icons/registration",
-   "kb": 2
-  },
-  {
-   "repo": "web",
-   "kind": "icon",
-   "path": "public/icons/registration/phone.svg",
-   "folder": "public/icons/registration",
-   "kb": 3
-  },
-  {
-   "repo": "web",
-   "kind": "icon",
-   "path": "public/icons/registration/upload-image.svg",
-   "folder": "public/icons/registration",
-   "kb": 1
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "public/illustration/Disease History.json",
-   "folder": "public/illustration",
-   "kb": 117
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "public/illustration/Doctor Prescription.json",
-   "folder": "public/illustration",
-   "kb": 73
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "public/illustration/Medicine.json",
-   "folder": "public/illustration",
-   "kb": 64
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "public/illustration/ambulance.json",
-   "folder": "public/illustration",
-   "kb": 43
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/consent/check-circle.svg",
-   "folder": "public/illustration/consent",
-   "kb": 2
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/consent/clipboard-list.svg",
-   "folder": "public/illustration/consent",
-   "kb": 2
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/consent/clock.svg",
-   "folder": "public/illustration/consent",
-   "kb": 1
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/consent/hourglass-disabled.svg",
-   "folder": "public/illustration/consent",
-   "kb": 2
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/consent/inbox-text-dontshare.svg",
-   "folder": "public/illustration/consent",
-   "kb": 3
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/consent/trending-up.svg",
-   "folder": "public/illustration/consent",
-   "kb": 1
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "public/illustration/consent-success.json",
-   "folder": "public/illustration",
-   "kb": 22
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/empty-list.svg",
-   "folder": "public/illustration",
-   "kb": 4
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/form-cover01.svg",
-   "folder": "public/illustration",
-   "kb": 16
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/form-cover02.svg",
-   "folder": "public/illustration",
-   "kb": 27
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/form-cover03.svg",
-   "folder": "public/illustration",
-   "kb": 27
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/form-cover04.svg",
-   "folder": "public/illustration",
-   "kb": 21
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/form-cover05.svg",
-   "folder": "public/illustration",
-   "kb": 14
-  },
-  {
-   "repo": "web",
-   "kind": "icon",
-   "path": "public/illustration/hub/icon-admin.svg",
-   "folder": "public/illustration/hub",
-   "kb": 13
-  },
-  {
-   "repo": "web",
-   "kind": "icon",
-   "path": "public/illustration/hub/icon-audit.svg",
-   "folder": "public/illustration/hub",
-   "kb": 10
-  },
-  {
-   "repo": "web",
-   "kind": "icon",
-   "path": "public/illustration/hub/icon-community-health.svg",
-   "folder": "public/illustration/hub",
-   "kb": 9
-  },
-  {
-   "repo": "web",
-   "kind": "icon",
-   "path": "public/illustration/hub/icon-consent.svg",
-   "folder": "public/illustration/hub",
-   "kb": 7
-  },
-  {
-   "repo": "web",
-   "kind": "icon",
-   "path": "public/illustration/hub/icon-doc-template.svg",
-   "folder": "public/illustration/hub",
-   "kb": 6
-  },
-  {
-   "repo": "web",
-   "kind": "icon",
-   "path": "public/illustration/hub/icon-inventory.svg",
-   "folder": "public/illustration/hub",
-   "kb": 8
-  },
-  {
-   "repo": "web",
-   "kind": "icon",
-   "path": "public/illustration/hub/icon-phcis.svg",
-   "folder": "public/illustration/hub",
-   "kb": 10
-  },
-  {
-   "repo": "web",
-   "kind": "icon",
-   "path": "public/illustration/hub/icon-schedule.svg",
-   "folder": "public/illustration/hub",
-   "kb": 12
-  },
-  {
-   "repo": "web",
-   "kind": "icon",
-   "path": "public/illustration/hub/icon-school-health.svg",
-   "folder": "public/illustration/hub",
-   "kb": 5
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/Location.json",
-   "folder": "public/illustration/mobile",
-   "kb": 11
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/Medical Report (1).json",
-   "folder": "public/illustration/mobile",
-   "kb": 96
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/Microphone.json",
-   "folder": "public/illustration/mobile",
-   "kb": 36
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/Password-security-with-REC.json",
-   "folder": "public/illustration/mobile",
-   "kb": 109
-  },
-  {
-   "repo": "web",
-   "kind": "icon",
-   "path": "public/illustration/mobile/apt-icons/calendar-purple.svg",
-   "folder": "public/illustration/mobile/apt-icons",
-   "kb": 1
-  },
-  {
-   "repo": "web",
-   "kind": "icon",
-   "path": "public/illustration/mobile/apt-icons/calendar.svg",
-   "folder": "public/illustration/mobile/apt-icons",
-   "kb": 1
-  },
-  {
-   "repo": "web",
-   "kind": "icon",
-   "path": "public/illustration/mobile/apt-icons/clock.svg",
-   "folder": "public/illustration/mobile/apt-icons",
-   "kb": 1
-  },
-  {
-   "repo": "web",
-   "kind": "icon",
-   "path": "public/illustration/mobile/apt-icons/map-pin.svg",
-   "folder": "public/illustration/mobile/apt-icons",
-   "kb": 2
-  },
-  {
-   "repo": "web",
-   "kind": "icon",
-   "path": "public/illustration/mobile/apt-icons/video-btn.svg",
-   "folder": "public/illustration/mobile/apt-icons",
-   "kb": 1
-  },
-  {
-   "repo": "web",
-   "kind": "icon",
-   "path": "public/illustration/mobile/apt-icons/video.svg",
-   "folder": "public/illustration/mobile/apt-icons",
-   "kb": 1
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/booking-svc-clinic.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 2
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/booking-svc-telemed.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 1
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/doctor-appointment-recolored.json",
-   "folder": "public/illustration/mobile",
-   "kb": 119
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/face-match-recolored.json",
-   "folder": "public/illustration/mobile",
-   "kb": 66
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/face-scan-guide.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 22
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/forgot-otp-lock.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 3
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/health-insurance.json",
-   "folder": "public/illustration/mobile",
-   "kb": 149
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/home-payment-health-insurance.json",
-   "folder": "public/illustration/mobile",
-   "kb": 148
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/home-qa-book-pressed.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 2
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/home-qa-book.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 2
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/home-qa-clinics-pressed.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 2
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/home-qa-clinics.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 2
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/home-qa-meds-pressed.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 2
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/home-qa-meds.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 2
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/home-qa-request-pressed.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 1
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/home-qa-request.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 1
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/ilus/face-match-recolored.json",
-   "folder": "public/illustration/mobile/ilus",
-   "kb": 66
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/insurance-recolored.json",
-   "folder": "public/illustration/mobile",
-   "kb": 53
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/man-visiting-hospital.json",
-   "folder": "public/illustration/mobile",
-   "kb": 118
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/medical-folder-recolored.json",
-   "folder": "public/illustration/mobile",
-   "kb": 80
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/mobile-security-recolored.json",
-   "folder": "public/illustration/mobile",
-   "kb": 109
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/online-health-checkup.json",
-   "folder": "public/illustration/mobile",
-   "kb": 118
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/pharmacy-delivery.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 2
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/pharmacy-map-pin.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 2
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/pharmacy-pickup-clinic.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 2
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/pharmacy-truck.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 1
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/register-cid-user.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 2
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/register-intro-face.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 3
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/register-intro-idcard.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 2
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/register-intro-otp.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 3
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/register-intro-shield.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 2
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/register-intro-user.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 2
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/register-otp-lock.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 3
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/request-diaper.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 1
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/request-sanitizer.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 2
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/search-history-empty.json",
-   "folder": "public/illustration/mobile",
-   "kb": 80
-  },
-  {
-   "repo": "web",
-   "kind": "icon",
-   "path": "public/illustration/mobile/search-icon.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 1
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/pdf-file.svg",
-   "folder": "public/illustration",
-   "kb": 2
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/registration/compare-photos.svg",
-   "folder": "public/illustration/registration",
-   "kb": 1
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/registration/face-photo-guide-active.svg",
-   "folder": "public/illustration/registration",
-   "kb": 22
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/registration/face-photo-guide.svg",
-   "folder": "public/illustration/registration",
-   "kb": 22
-  },
-  {
-   "repo": "web",
-   "kind": "illustration",
-   "path": "public/illustration/schedule-day-off.svg",
-   "folder": "public/illustration",
-   "kb": 21
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "public/illustration/success.json",
-   "folder": "public/illustration",
-   "kb": 21
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "src/Best Employee award.json",
-   "folder": "src",
-   "kb": 217
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "src/assets/illustrations/Aijson.json",
-   "folder": "src/assets/illustrations",
-   "kb": 13
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "src/assets/illustrations/Firstaid Kit.json",
-   "folder": "src/assets/illustrations",
-   "kb": 69
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "src/assets/illustrations/Girl finding health insurance online.json",
-   "folder": "src/assets/illustrations",
-   "kb": 328
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "src/assets/illustrations/Health and medicine.json",
-   "folder": "src/assets/illustrations",
-   "kb": 21
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "src/assets/illustrations/Hospital Patient admitted.json",
-   "folder": "src/assets/illustrations",
-   "kb": 173
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "src/assets/illustrations/Medical checkup.json",
-   "folder": "src/assets/illustrations",
-   "kb": 183
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "src/assets/illustrations/blood-pressure-monitor.json",
-   "folder": "src/assets/illustrations",
-   "kb": 10
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "src/assets/illustrations/consent-success.json",
-   "folder": "src/assets/illustrations",
-   "kb": 22
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "src/assets/illustrations/disease-history.json",
-   "folder": "src/assets/illustrations",
-   "kb": 117
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "src/assets/illustrations/doctor-prescription.json",
-   "folder": "src/assets/illustrations",
-   "kb": 73
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "src/assets/illustrations/fingerprint-scanning.json",
-   "folder": "src/assets/illustrations",
-   "kb": 46
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "src/assets/illustrations/heart-care.json",
-   "folder": "src/assets/illustrations",
-   "kb": 11
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "src/assets/illustrations/insert-card.json",
-   "folder": "src/assets/illustrations",
-   "kb": 32
-  },
-  {
-   "repo": "web",
-   "kind": "lottie",
-   "path": "src/assets/illustrations/medical-folder.json",
-   "folder": "src/assets/illustrations",
-   "kb": 19
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "Medical History File Out.json",
-   "folder": ".",
-   "kb": 9
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "Medical Prescription.json",
-   "folder": ".",
-   "kb": 26
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "Medicine.json",
-   "folder": ".",
-   "kb": 40
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "Paper plane.json",
-   "folder": ".",
-   "kb": 21
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/Ambulance (1).json",
-   "folder": "public/illustration/mobile",
-   "kb": 29
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/Calendar.json",
-   "folder": "public/illustration/mobile",
-   "kb": 19
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/Clinic.json",
-   "folder": "public/illustration/mobile",
-   "kb": 12
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/Diaper.json",
-   "folder": "public/illustration/mobile",
-   "kb": 17
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/Document.json",
-   "folder": "public/illustration/mobile",
-   "kb": 12
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/Liquid Soup.json",
-   "folder": "public/illustration/mobile",
-   "kb": 32
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/Location.json",
-   "folder": "public/illustration/mobile",
-   "kb": 11
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/Medical History File Out.json",
-   "folder": "public/illustration/mobile",
-   "kb": 9
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/Medical Prescription.json",
-   "folder": "public/illustration/mobile",
-   "kb": 26
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/Medical Report (1).json",
-   "folder": "public/illustration/mobile",
-   "kb": 96
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/Medicine.json",
-   "folder": "public/illustration/mobile",
-   "kb": 40
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/Microphone.json",
-   "folder": "public/illustration/mobile",
-   "kb": 36
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/Paper plane.json",
-   "folder": "public/illustration/mobile",
-   "kb": 21
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/Password-security-with-REC.json",
-   "folder": "public/illustration/mobile",
-   "kb": 109
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/Patient Bed.json",
-   "folder": "public/illustration/mobile",
-   "kb": 22
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/Pill.json",
-   "folder": "public/illustration/mobile",
-   "kb": 5
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/Transfer Data.json",
-   "folder": "public/illustration/mobile",
-   "kb": 10
-  },
-  {
-   "repo": "mobile",
-   "kind": "icon",
-   "path": "public/illustration/mobile/apt-icons/calendar-purple.svg",
-   "folder": "public/illustration/mobile/apt-icons",
-   "kb": 1
-  },
-  {
-   "repo": "mobile",
-   "kind": "icon",
-   "path": "public/illustration/mobile/apt-icons/calendar.svg",
-   "folder": "public/illustration/mobile/apt-icons",
-   "kb": 1
-  },
-  {
-   "repo": "mobile",
-   "kind": "icon",
-   "path": "public/illustration/mobile/apt-icons/clock.svg",
-   "folder": "public/illustration/mobile/apt-icons",
-   "kb": 1
-  },
-  {
-   "repo": "mobile",
-   "kind": "icon",
-   "path": "public/illustration/mobile/apt-icons/map-pin.svg",
-   "folder": "public/illustration/mobile/apt-icons",
-   "kb": 2
-  },
-  {
-   "repo": "mobile",
-   "kind": "icon",
-   "path": "public/illustration/mobile/apt-icons/video-btn.svg",
-   "folder": "public/illustration/mobile/apt-icons",
-   "kb": 1
-  },
-  {
-   "repo": "mobile",
-   "kind": "icon",
-   "path": "public/illustration/mobile/apt-icons/video.svg",
-   "folder": "public/illustration/mobile/apt-icons",
-   "kb": 1
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/best-employee-award.json",
-   "folder": "public/illustration/mobile",
-   "kb": 217
-  },
-  {
-   "repo": "mobile",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/booking-svc-clinic.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 2
-  },
-  {
-   "repo": "mobile",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/booking-svc-telemed.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 1
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/breast-white.json",
-   "folder": "public/illustration/mobile",
-   "kb": 13
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/calendar-white.json",
-   "folder": "public/illustration/mobile",
-   "kb": 10
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/cash-money-recolored.json",
-   "folder": "public/illustration/mobile",
-   "kb": 115
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/credit-card-white.json",
-   "folder": "public/illustration/mobile",
-   "kb": 5
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/doctor-appointment-recolored.json",
-   "folder": "public/illustration/mobile",
-   "kb": 118
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/document-white.json",
-   "folder": "public/illustration/mobile",
-   "kb": 13
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/emergency-siren.json",
-   "folder": "public/illustration/mobile",
-   "kb": 56
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/face-match-recolored.json",
-   "folder": "public/illustration/mobile",
-   "kb": 65
-  },
-  {
-   "repo": "mobile",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/face-scan-guide.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 22
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/feedback-rating-recolored.json",
-   "folder": "public/illustration/mobile",
-   "kb": 185
-  },
-  {
-   "repo": "mobile",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/forgot-otp-lock.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 3
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/health-insurance.json",
-   "folder": "public/illustration/mobile",
-   "kb": 148
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/heart-rate-white.json",
-   "folder": "public/illustration/mobile",
-   "kb": 3
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/history-white.json",
-   "folder": "public/illustration/mobile",
-   "kb": 5
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/home-payment-health-insurance.json",
-   "folder": "public/illustration/mobile",
-   "kb": 148
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/ilus/face-match-recolored.json",
-   "folder": "public/illustration/mobile/ilus",
-   "kb": 66
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/insurance-recolored.json",
-   "folder": "public/illustration/mobile",
-   "kb": 52
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/location-white.json",
-   "folder": "public/illustration/mobile",
-   "kb": 2
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/lungs-white.json",
-   "folder": "public/illustration/mobile",
-   "kb": 7
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/man-visiting-hospital.json",
-   "folder": "public/illustration/mobile",
-   "kb": 116
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/medical-appointment-white.json",
-   "folder": "public/illustration/mobile",
-   "kb": 11
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/medical-folder-recolored.json",
-   "folder": "public/illustration/mobile",
-   "kb": 79
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/mobile-security-recolored.json",
-   "folder": "public/illustration/mobile",
-   "kb": 107
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/nav-appointment.json",
-   "folder": "public/illustration/mobile",
-   "kb": 11
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/nav-history.json",
-   "folder": "public/illustration/mobile",
-   "kb": 8
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/nav-home.json",
-   "folder": "public/illustration/mobile",
-   "kb": 4
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/nav-profile.json",
-   "folder": "public/illustration/mobile",
-   "kb": 5
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/nav-send.json",
-   "folder": "public/illustration/mobile",
-   "kb": 3
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/notification-bell-white.json",
-   "folder": "public/illustration/mobile",
-   "kb": 4
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/notification-bell.json",
-   "folder": "public/illustration/mobile",
-   "kb": 4
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/online-health-checkup.json",
-   "folder": "public/illustration/mobile",
-   "kb": 118
-  },
-  {
-   "repo": "mobile",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/pharmacy-delivery.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 2
-  },
-  {
-   "repo": "mobile",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/pharmacy-map-pin.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 2
-  },
-  {
-   "repo": "mobile",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/pharmacy-pickup-clinic.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 2
-  },
-  {
-   "repo": "mobile",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/pharmacy-truck.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 1
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/pill-white.json",
-   "folder": "public/illustration/mobile",
-   "kb": 3
-  },
-  {
-   "repo": "mobile",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/register-cid-user.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 2
-  },
-  {
-   "repo": "mobile",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/register-intro-face.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 3
-  },
-  {
-   "repo": "mobile",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/register-intro-idcard.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 2
-  },
-  {
-   "repo": "mobile",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/register-intro-otp.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 3
-  },
-  {
-   "repo": "mobile",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/register-intro-shield.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 2
-  },
-  {
-   "repo": "mobile",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/register-intro-user.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 2
-  },
-  {
-   "repo": "mobile",
-   "kind": "illustration",
-   "path": "public/illustration/mobile/register-otp-lock.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 3
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/scan-white.json",
-   "folder": "public/illustration/mobile",
-   "kb": 7
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/search-history-empty.json",
-   "folder": "public/illustration/mobile",
-   "kb": 80
-  },
-  {
-   "repo": "mobile",
-   "kind": "icon",
-   "path": "public/illustration/mobile/search-icon.svg",
-   "folder": "public/illustration/mobile",
-   "kb": 1
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/sent-white.json",
-   "folder": "public/illustration/mobile",
-   "kb": 4
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/setting-white.json",
-   "folder": "public/illustration/mobile",
-   "kb": 4
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/ticket-white.json",
-   "folder": "public/illustration/mobile",
-   "kb": 9
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "public/illustration/mobile/video-white.json",
-   "folder": "public/illustration/mobile",
-   "kb": 7
-  },
-  {
-   "repo": "mobile",
-   "kind": "lottie",
-   "path": "src/Pill.json",
-   "folder": "src",
-   "kb": 5
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "public/favicon.svg",
-   "folder": "public",
-   "kb": 9
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "public/icons.svg",
-   "folder": "public",
-   "kb": 5
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/06-face-recognition/check.svg",
-   "folder": "src/assets/icons/06-face-recognition",
-   "kb": 2
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/06-face-recognition/dot.svg",
-   "folder": "src/assets/icons/06-face-recognition",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/07-confirm-appointment/calendar-no-1.svg",
-   "folder": "src/assets/icons/07-confirm-appointment",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/07-confirm-appointment/calendar-no-2.svg",
-   "folder": "src/assets/icons/07-confirm-appointment",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/07-confirm-appointment/calendar-no-3.svg",
-   "folder": "src/assets/icons/07-confirm-appointment",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/07-confirm-appointment/calendar-yes-1.svg",
-   "folder": "src/assets/icons/07-confirm-appointment",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/07-confirm-appointment/calendar-yes-2.svg",
-   "folder": "src/assets/icons/07-confirm-appointment",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/07-confirm-appointment/calendar-yes-3.svg",
-   "folder": "src/assets/icons/07-confirm-appointment",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/07-confirm-appointment/door-1.svg",
-   "folder": "src/assets/icons/07-confirm-appointment",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/07-confirm-appointment/door-2.svg",
-   "folder": "src/assets/icons/07-confirm-appointment",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/07-confirm-appointment/stethoscope.svg",
-   "folder": "src/assets/icons/07-confirm-appointment",
-   "kb": 3
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/07-confirm-appointment/time-1.svg",
-   "folder": "src/assets/icons/07-confirm-appointment",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/07-confirm-appointment/time-2.svg",
-   "folder": "src/assets/icons/07-confirm-appointment",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/design-system-card/calendar-1.svg",
-   "folder": "src/assets/icons/design-system-card",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/design-system-card/calendar-2.svg",
-   "folder": "src/assets/icons/design-system-card",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/design-system-card/calendar-3.svg",
-   "folder": "src/assets/icons/design-system-card",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/design-system-card/calendar-4.svg",
-   "folder": "src/assets/icons/design-system-card",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/entitlement/check-1.svg",
-   "folder": "src/assets/icons/entitlement",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/entitlement/check-2.svg",
-   "folder": "src/assets/icons/entitlement",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/insert-id-card/delete.svg",
-   "folder": "src/assets/icons/insert-id-card",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/insert-id-card-after-payment/insert-1.svg",
-   "folder": "src/assets/icons/insert-id-card-after-payment",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/insert-id-card-after-payment/insert-10.svg",
-   "folder": "src/assets/icons/insert-id-card-after-payment",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/insert-id-card-after-payment/insert-2.svg",
-   "folder": "src/assets/icons/insert-id-card-after-payment",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/insert-id-card-after-payment/insert-3.svg",
-   "folder": "src/assets/icons/insert-id-card-after-payment",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/insert-id-card-after-payment/insert-4.svg",
-   "folder": "src/assets/icons/insert-id-card-after-payment",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/insert-id-card-after-payment/insert-5.svg",
-   "folder": "src/assets/icons/insert-id-card-after-payment",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/insert-id-card-after-payment/insert-6.svg",
-   "folder": "src/assets/icons/insert-id-card-after-payment",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/insert-id-card-after-payment/insert-7.svg",
-   "folder": "src/assets/icons/insert-id-card-after-payment",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/insert-id-card-after-payment/insert-8.svg",
-   "folder": "src/assets/icons/insert-id-card-after-payment",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/insert-id-card-after-payment/insert-9.svg",
-   "folder": "src/assets/icons/insert-id-card-after-payment",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/payment-credit-card/question-1.svg",
-   "folder": "src/assets/icons/payment-credit-card",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/payment-credit-card/question-2.svg",
-   "folder": "src/assets/icons/payment-credit-card",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/payment-credit-card/question-3.svg",
-   "folder": "src/assets/icons/payment-credit-card",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/payment-credit-card/question-4.svg",
-   "folder": "src/assets/icons/payment-credit-card",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/payment-credit-card/question-5.svg",
-   "folder": "src/assets/icons/payment-credit-card",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/payment-credit-card/question-6.svg",
-   "folder": "src/assets/icons/payment-credit-card",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/prepare-face-scan/man-v1.svg",
-   "folder": "src/assets/icons/prepare-face-scan",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/prepare-face-scan/man-v10.svg",
-   "folder": "src/assets/icons/prepare-face-scan",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/prepare-face-scan/man-v11.svg",
-   "folder": "src/assets/icons/prepare-face-scan",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/prepare-face-scan/man-v12.svg",
-   "folder": "src/assets/icons/prepare-face-scan",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/prepare-face-scan/man-v13.svg",
-   "folder": "src/assets/icons/prepare-face-scan",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/prepare-face-scan/man-v14.svg",
-   "folder": "src/assets/icons/prepare-face-scan",
-   "kb": 3
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/prepare-face-scan/man-v15.svg",
-   "folder": "src/assets/icons/prepare-face-scan",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/prepare-face-scan/man-v2.svg",
-   "folder": "src/assets/icons/prepare-face-scan",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/prepare-face-scan/man-v3.svg",
-   "folder": "src/assets/icons/prepare-face-scan",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/prepare-face-scan/man-v4.svg",
-   "folder": "src/assets/icons/prepare-face-scan",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/prepare-face-scan/man-v5.svg",
-   "folder": "src/assets/icons/prepare-face-scan",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/prepare-face-scan/man-v6.svg",
-   "folder": "src/assets/icons/prepare-face-scan",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/prepare-face-scan/man-v7.svg",
-   "folder": "src/assets/icons/prepare-face-scan",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/prepare-face-scan/man-v8.svg",
-   "folder": "src/assets/icons/prepare-face-scan",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/prepare-face-scan/man-v9.svg",
-   "folder": "src/assets/icons/prepare-face-scan",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/prepare-face-scan/nohat-base.svg",
-   "folder": "src/assets/icons/prepare-face-scan",
-   "kb": 5
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/prepare-face-scan/nohat-v1.svg",
-   "folder": "src/assets/icons/prepare-face-scan",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/prepare-face-scan/nohat-v2.svg",
-   "folder": "src/assets/icons/prepare-face-scan",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/prepare-face-scan/nohat-v3.svg",
-   "folder": "src/assets/icons/prepare-face-scan",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/prepare-face-scan/nohat-v4.svg",
-   "folder": "src/assets/icons/prepare-face-scan",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/prepare-face-scan/nohat-v5.svg",
-   "folder": "src/assets/icons/prepare-face-scan",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/prepare-face-scan/nohat-v6.svg",
-   "folder": "src/assets/icons/prepare-face-scan",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/prepare-face-scan/nohat-v7.svg",
-   "folder": "src/assets/icons/prepare-face-scan",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/prepare-face-scan/nohat-v8.svg",
-   "folder": "src/assets/icons/prepare-face-scan",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/queue-slip/calendar-1.svg",
-   "folder": "src/assets/icons/queue-slip",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/queue-slip/calendar-2.svg",
-   "folder": "src/assets/icons/queue-slip",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/queue-slip/calendar-3.svg",
-   "folder": "src/assets/icons/queue-slip",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/queue-slip/calendar-4.svg",
-   "folder": "src/assets/icons/queue-slip",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/queue-slip/divider-2.svg",
-   "folder": "src/assets/icons/queue-slip",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/queue-slip/divider.svg",
-   "folder": "src/assets/icons/queue-slip",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/queue-slip/qr-1.svg",
-   "folder": "src/assets/icons/queue-slip",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/queue-slip/qr-10.svg",
-   "folder": "src/assets/icons/queue-slip",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/queue-slip/qr-2.svg",
-   "folder": "src/assets/icons/queue-slip",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/queue-slip/qr-3.svg",
-   "folder": "src/assets/icons/queue-slip",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/queue-slip/qr-4.svg",
-   "folder": "src/assets/icons/queue-slip",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/queue-slip/qr-5.svg",
-   "folder": "src/assets/icons/queue-slip",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/queue-slip/qr-6.svg",
-   "folder": "src/assets/icons/queue-slip",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/queue-slip/qr-7.svg",
-   "folder": "src/assets/icons/queue-slip",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/queue-slip/qr-8.svg",
-   "folder": "src/assets/icons/queue-slip",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/queue-slip/qr-9.svg",
-   "folder": "src/assets/icons/queue-slip",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/queue-slip/user-1.svg",
-   "folder": "src/assets/icons/queue-slip",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/queue-slip/user-2.svg",
-   "folder": "src/assets/icons/queue-slip",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-payment-method/creditcard-1.svg",
-   "folder": "src/assets/icons/select-payment-method",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-payment-method/creditcard-10.svg",
-   "folder": "src/assets/icons/select-payment-method",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-payment-method/creditcard-11.svg",
-   "folder": "src/assets/icons/select-payment-method",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-payment-method/creditcard-12.svg",
-   "folder": "src/assets/icons/select-payment-method",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-payment-method/creditcard-13.svg",
-   "folder": "src/assets/icons/select-payment-method",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-payment-method/creditcard-14.svg",
-   "folder": "src/assets/icons/select-payment-method",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-payment-method/creditcard-2.svg",
-   "folder": "src/assets/icons/select-payment-method",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-payment-method/creditcard-3.svg",
-   "folder": "src/assets/icons/select-payment-method",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-payment-method/creditcard-4.svg",
-   "folder": "src/assets/icons/select-payment-method",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-payment-method/creditcard-5.svg",
-   "folder": "src/assets/icons/select-payment-method",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-payment-method/creditcard-6.svg",
-   "folder": "src/assets/icons/select-payment-method",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-payment-method/creditcard-7.svg",
-   "folder": "src/assets/icons/select-payment-method",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-payment-method/creditcard-8.svg",
-   "folder": "src/assets/icons/select-payment-method",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-payment-method/creditcard-9.svg",
-   "folder": "src/assets/icons/select-payment-method",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-payment-method/qrcode-1.svg",
-   "folder": "src/assets/icons/select-payment-method",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-payment-method/qrcode-2.svg",
-   "folder": "src/assets/icons/select-payment-method",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-payment-method/qrcode-3.svg",
-   "folder": "src/assets/icons/select-payment-method",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-payment-method/qrcode-4.svg",
-   "folder": "src/assets/icons/select-payment-method",
-   "kb": 2
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-payment-method/qrcode-5.svg",
-   "folder": "src/assets/icons/select-payment-method",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-payment-method/qrcode-6.svg",
-   "folder": "src/assets/icons/select-payment-method",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-payment-method/qrcode-7.svg",
-   "folder": "src/assets/icons/select-payment-method",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/calendar-1.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/calendar-2.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/calendar-3.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/calendar-4.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/calendar-5.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 2
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/calendar-6.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/calendar-7.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 3
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/calendar-8.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 4
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/paper-1.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/paper-2.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/paper-3.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/paper-4.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 2
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/paper-5.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 2
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/payment-1.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/payment-10.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/payment-11.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 2
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/payment-12.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/payment-2.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/payment-3.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/payment-4.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/payment-5.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/payment-6.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/payment-7.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/payment-8.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 2
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/payment-9.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/shield-1.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/shield-2.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/shield-3.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/shield-4.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/shield-5.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/shield-6.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/user-1.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/user-2.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/user-3.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 0
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/user-4.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 1
-  },
-  {
-   "repo": "kiosk",
-   "kind": "icon",
-   "path": "src/assets/icons/select-service/user-5.svg",
-   "folder": "src/assets/icons/select-service",
-   "kb": 3
-  },
-  {
    "repo": "kiosk",
    "kind": "lottie",
    "path": "src/assets/illustrations/error-crying-girl.json",
    "folder": "src/assets/illustrations",
-   "kb": 27
+   "kb": 27,
+   "usedIn": [
+    "kiosk/src/pages/Error-FaceScanFailed.tsx",
+    "kiosk/src/pages/Error-IdCardNotFound.tsx",
+    "kiosk/src/pages/Error-IdentityVerificationFailed.tsx"
+   ],
+   "usedCount": 4
   },
   {
    "repo": "kiosk",
    "kind": "illustration",
    "path": "src/assets/illustrations/face-photo-guide-active.svg",
    "folder": "src/assets/illustrations",
-   "kb": 22
+   "kb": 22,
+   "usedIn": [
+    "kiosk/src/pages/06-FaceRecognition.tsx",
+    "web/src/components/popup/FaceScanVerifyPopup.jsx"
+   ],
+   "usedCount": 2
   },
   {
    "repo": "kiosk",
    "kind": "illustration",
    "path": "src/assets/illustrations/face-photo-guide.svg",
    "folder": "src/assets/illustrations",
-   "kb": 22
+   "kb": 22,
+   "usedIn": [
+    "kiosk/src/pages/06-FaceRecognition.tsx",
+    "web/src/components/popup/CameraCapturePopup.jsx",
+    "web/src/components/popup/FaceScanVerifyPopup.jsx"
+   ],
+   "usedCount": 3
   },
   {
    "repo": "kiosk",
    "kind": "lottie",
    "path": "src/assets/illustrations/insert-credit-card.json",
    "folder": "src/assets/illustrations",
-   "kb": 15
+   "kb": 15,
+   "usedIn": [],
+   "usedCount": 0
   },
   {
    "repo": "kiosk",
    "kind": "lottie",
    "path": "src/assets/illustrations/insert-id-card.json",
    "folder": "src/assets/illustrations",
-   "kb": 32
+   "kb": 32,
+   "usedIn": [
+    "kiosk/src/pages/02-InsertIdCard.tsx",
+    "kiosk/src/pages/02b-InsertIdCardDetected.tsx",
+    "kiosk/src/pages/11b-PaymentCreditCard.tsx"
+   ],
+   "usedCount": 8
   },
   {
    "repo": "kiosk",
    "kind": "lottie",
    "path": "src/assets/illustrations/loading-printing-queue-slip-printer.json",
    "folder": "src/assets/illustrations",
-   "kb": 53
+   "kb": 53,
+   "usedIn": [
+    "kiosk/src/components/PrintingScreen.tsx"
+   ],
+   "usedCount": 1
   },
   {
    "repo": "kiosk",
    "kind": "lottie",
    "path": "src/assets/illustrations/loading-verifying-ambulance.json",
    "folder": "src/assets/illustrations",
-   "kb": 33
+   "kb": 33,
+   "usedIn": [
+    "kiosk/src/pages/03-LoadingVerifyingIdentity.tsx",
+    "kiosk/src/pages/11c-LoadingVerifyingPayment.tsx"
+   ],
+   "usedCount": 2
   },
   {
    "repo": "kiosk",
    "kind": "lottie",
    "path": "src/assets/illustrations/patient-guardian.json",
    "folder": "src/assets/illustrations",
-   "kb": 67
+   "kb": 67,
+   "usedIn": [
+    "kiosk/src/pages/04-SelectPatientRelation.tsx"
+   ],
+   "usedCount": 1
   },
   {
    "repo": "kiosk",
    "kind": "lottie",
    "path": "src/assets/illustrations/patient-self.json",
    "folder": "src/assets/illustrations",
-   "kb": 21
+   "kb": 21,
+   "usedIn": [
+    "kiosk/src/pages/04-SelectPatientRelation.tsx"
+   ],
+   "usedCount": 1
   },
   {
    "repo": "kiosk",
    "kind": "lottie",
    "path": "src/assets/illustrations/payment-qr-scan-phone.json",
    "folder": "src/assets/illustrations",
-   "kb": 29
+   "kb": 29,
+   "usedIn": [
+    "kiosk/src/pages/02d-ThaIdQr.tsx",
+    "kiosk/src/pages/11-PaymentQrPromptPay.tsx",
+    "kiosk/src/pages/13-QueueResult.tsx"
+   ],
+   "usedCount": 3
   },
   {
    "repo": "kiosk",
    "kind": "lottie",
    "path": "src/assets/illustrations/payment-success-card.json",
    "folder": "src/assets/illustrations",
-   "kb": 29
+   "kb": 29,
+   "usedIn": [
+    "kiosk/src/pages/14-PaymentSuccess.tsx"
+   ],
+   "usedCount": 1
   },
   {
    "repo": "kiosk",
    "kind": "lottie",
    "path": "src/assets/illustrations/prepare-face-scan-face-recognition.json",
    "folder": "src/assets/illustrations",
-   "kb": 130
+   "kb": 130,
+   "usedIn": [
+    "kiosk/src/pages/04b-PrepareFaceScan.tsx"
+   ],
+   "usedCount": 1
   },
   {
    "repo": "kiosk",
    "kind": "lottie",
    "path": "src/assets/illustrations/register-new-patient-reception-desk.json",
    "folder": "src/assets/illustrations",
-   "kb": 23
+   "kb": 23,
+   "usedIn": [
+    "kiosk/src/pages/02c-EnterIdOrPassport.tsx",
+    "kiosk/src/pages/03b-RegisterNewPatient.tsx"
+   ],
+   "usedCount": 2
   },
   {
    "repo": "kiosk",
    "kind": "lottie",
    "path": "src/assets/illustrations/thank-you-nurse.json",
    "folder": "src/assets/illustrations",
-   "kb": 23
+   "kb": 23,
+   "usedIn": [
+    "kiosk/src/pages/15-ThankYou.tsx",
+    "kiosk/src/pages/15b-ThankYouNoMedicine.tsx",
+    "kiosk/src/pages/15c-ThankYouWithMedicine.tsx"
+   ],
+   "usedCount": 8
+  },
+  {
+   "repo": "kiosk",
+   "kind": "icon",
+   "path": "src/components/icons/Calendar.svg",
+   "folder": "src/components/icons",
+   "kb": 17,
+   "usedIn": [
+    "kiosk/src/components/icons/QueueSlipCalendarIcon.tsx",
+    "kiosk/src/pages/01-SelectService.tsx",
+    "kiosk/src/pages/QueueSlipPrint.tsx"
+   ],
+   "usedCount": 3
+  },
+  {
+   "repo": "kiosk",
+   "kind": "icon",
+   "path": "src/components/icons/CalendarNo.svg",
+   "folder": "src/components/icons",
+   "kb": 4,
+   "usedIn": [
+    "kiosk/src/pages/07b-ConfirmPatientInfoNoAppointment.tsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "kiosk",
+   "kind": "icon",
+   "path": "src/components/icons/CalendarOutline.svg",
+   "folder": "src/components/icons",
+   "kb": 3,
+   "usedIn": [
+    "kiosk/src/design-system/DesignSystemPage.tsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "kiosk",
+   "kind": "icon",
+   "path": "src/components/icons/CalendarYes.svg",
+   "folder": "src/components/icons",
+   "kb": 4,
+   "usedIn": [
+    "kiosk/src/pages/07-ConfirmPatientInfoHasAppointment.tsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "kiosk",
+   "kind": "icon",
+   "path": "src/components/icons/CheckCircle.svg",
+   "folder": "src/components/icons",
+   "kb": 2,
+   "usedIn": [
+    "kiosk/src/pages/08-EntitlementDetailsSelf.tsx",
+    "kiosk/src/pages/08b-EntitlementDetailsDependent.tsx",
+    "kiosk/src/pages/16-CloseRightsConfirm.tsx"
+   ],
+   "usedCount": 3
+  },
+  {
+   "repo": "kiosk",
+   "kind": "icon",
+   "path": "src/components/icons/CreditCard.svg",
+   "folder": "src/components/icons",
+   "kb": 11,
+   "usedIn": [
+    "kiosk/src/pages/10-SelectPaymentMethod.tsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "kiosk",
+   "kind": "icon",
+   "path": "src/components/icons/Delete.svg",
+   "folder": "src/components/icons",
+   "kb": 2,
+   "usedIn": [
+    "kiosk/src/design-system/Keypad.tsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "kiosk",
+   "kind": "icon",
+   "path": "src/components/icons/Door.svg",
+   "folder": "src/components/icons",
+   "kb": 3,
+   "usedIn": [
+    "kiosk/src/pages/07-ConfirmPatientInfoHasAppointment.tsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "kiosk",
+   "kind": "icon",
+   "path": "src/components/icons/ManLook.svg",
+   "folder": "src/components/icons",
+   "kb": 13,
+   "usedIn": [
+    "kiosk/src/pages/04b-PrepareFaceScan.tsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "kiosk",
+   "kind": "icon",
+   "path": "src/components/icons/NoHat.svg",
+   "folder": "src/components/icons",
+   "kb": 15,
+   "usedIn": [
+    "kiosk/src/pages/04b-PrepareFaceScan.tsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "kiosk",
+   "kind": "icon",
+   "path": "src/components/icons/Paper.svg",
+   "folder": "src/components/icons",
+   "kb": 7,
+   "usedIn": [
+    "kiosk/src/pages/01-SelectService.tsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "kiosk",
+   "kind": "icon",
+   "path": "src/components/icons/Payment.svg",
+   "folder": "src/components/icons",
+   "kb": 13,
+   "usedIn": [
+    "kiosk/src/pages/01-SelectService.tsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "kiosk",
+   "kind": "icon",
+   "path": "src/components/icons/QrCode.svg",
+   "folder": "src/components/icons",
+   "kb": 10,
+   "usedIn": [
+    "kiosk/src/pages/10-SelectPaymentMethod.tsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "kiosk",
+   "kind": "icon",
+   "path": "src/components/icons/Question.svg",
+   "folder": "src/components/icons",
+   "kb": 7,
+   "usedIn": [],
+   "usedCount": 0
+  },
+  {
+   "repo": "kiosk",
+   "kind": "icon",
+   "path": "src/components/icons/QueueSlipCalendar.svg",
+   "folder": "src/components/icons",
+   "kb": 2,
+   "usedIn": [
+    "kiosk/src/pages/QueueSlipPrint.tsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "kiosk",
+   "kind": "icon",
+   "path": "src/components/icons/QueueSlipQr.svg",
+   "folder": "src/components/icons",
+   "kb": 7,
+   "usedIn": [
+    "kiosk/src/pages/QueueSlipPrint.tsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "kiosk",
+   "kind": "icon",
+   "path": "src/components/icons/QueueSlipUser.svg",
+   "folder": "src/components/icons",
+   "kb": 2,
+   "usedIn": [
+    "kiosk/src/pages/QueueSlipPrint.tsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "kiosk",
+   "kind": "icon",
+   "path": "src/components/icons/ScanCheck.svg",
+   "folder": "src/components/icons",
+   "kb": 2,
+   "usedIn": [],
+   "usedCount": 0
+  },
+  {
+   "repo": "kiosk",
+   "kind": "icon",
+   "path": "src/components/icons/ScanDot.svg",
+   "folder": "src/components/icons",
+   "kb": 1,
+   "usedIn": [],
+   "usedCount": 0
+  },
+  {
+   "repo": "kiosk",
+   "kind": "icon",
+   "path": "src/components/icons/Shield.svg",
+   "folder": "src/components/icons",
+   "kb": 8,
+   "usedIn": [
+    "kiosk/src/design-system/DesignSystemPage.tsx",
+    "kiosk/src/pages/01-SelectService.tsx"
+   ],
+   "usedCount": 2
+  },
+  {
+   "repo": "kiosk",
+   "kind": "icon",
+   "path": "src/components/icons/Stethoscope.svg",
+   "folder": "src/components/icons",
+   "kb": 4,
+   "usedIn": [
+    "kiosk/src/pages/07-ConfirmPatientInfoHasAppointment.tsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "kiosk",
+   "kind": "icon",
+   "path": "src/components/icons/Time.svg",
+   "folder": "src/components/icons",
+   "kb": 2,
+   "usedIn": [
+    "kiosk/src/pages/07-ConfirmPatientInfoHasAppointment.tsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "kiosk",
+   "kind": "icon",
+   "path": "src/components/icons/User.svg",
+   "folder": "src/components/icons",
+   "kb": 6,
+   "usedIn": [
+    "kiosk/src/components/icons/QueueSlipUserIcon.tsx",
+    "kiosk/src/design-system/DesignSystemPage.tsx",
+    "kiosk/src/pages/01-SelectService.tsx"
+   ],
+   "usedCount": 4
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "Medical History File Out.json",
+   "folder": ".",
+   "kb": 9,
+   "usedIn": [
+    "mobile/src/api/mock/hcis/mobileMock.js"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "Medical Prescription.json",
+   "folder": ".",
+   "kb": 26,
+   "usedIn": [
+    "mobile/src/api/mock/hcis/mobileMock.js"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "Medicine.json",
+   "folder": ".",
+   "kb": 40,
+   "usedIn": [],
+   "usedCount": 0
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "Paper plane.json",
+   "folder": ".",
+   "kb": 21,
+   "usedIn": [],
+   "usedCount": 0
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/Ambulance (1).json",
+   "folder": "public/illustration/mobile",
+   "kb": 29,
+   "usedIn": [],
+   "usedCount": 0
+  },
+  {
+   "repo": "mobile",
+   "kind": "icon",
+   "path": "public/illustration/mobile/apt-icons/calendar-purple.svg",
+   "folder": "public/illustration/mobile/apt-icons",
+   "kb": 1,
+   "usedIn": [],
+   "usedCount": 0
+  },
+  {
+   "repo": "mobile",
+   "kind": "icon",
+   "path": "public/illustration/mobile/apt-icons/clock.svg",
+   "folder": "public/illustration/mobile/apt-icons",
+   "kb": 1,
+   "usedIn": [],
+   "usedCount": 0
+  },
+  {
+   "repo": "mobile",
+   "kind": "icon",
+   "path": "public/illustration/mobile/apt-icons/map-pin.svg",
+   "folder": "public/illustration/mobile/apt-icons",
+   "kb": 2,
+   "usedIn": [
+    "mobile/src/features/pharmacy/components/MedPickupDetails.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "mobile",
+   "kind": "icon",
+   "path": "public/illustration/mobile/apt-icons/video-btn.svg",
+   "folder": "public/illustration/mobile/apt-icons",
+   "kb": 1,
+   "usedIn": [],
+   "usedCount": 0
+  },
+  {
+   "repo": "mobile",
+   "kind": "icon",
+   "path": "public/illustration/mobile/apt-icons/video.svg",
+   "folder": "public/illustration/mobile/apt-icons",
+   "kb": 1,
+   "usedIn": [],
+   "usedCount": 0
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/best-employee-award.json",
+   "folder": "public/illustration/mobile",
+   "kb": 217,
+   "usedIn": [
+    "mobile/src/features/appointments/pages/MobileAppointmentDetailPage.jsx",
+    "mobile/src/features/consent/pages/MobileConsentPage.jsx",
+    "mobile/src/shared/ui/SuccessCard.jsx"
+   ],
+   "usedCount": 3
+  },
+  {
+   "repo": "mobile",
+   "kind": "icon",
+   "path": "public/illustration/mobile/booking-svc-clinic.svg",
+   "folder": "public/illustration/mobile",
+   "kb": 2,
+   "usedIn": [
+    "mobile/src/features/appointments/pages/MobileBookPage.jsx",
+    "mobile/src/features/pharmacy/components/MedPickupDetails.jsx"
+   ],
+   "usedCount": 2
+  },
+  {
+   "repo": "mobile",
+   "kind": "icon",
+   "path": "public/illustration/mobile/booking-svc-telemed.svg",
+   "folder": "public/illustration/mobile",
+   "kb": 1,
+   "usedIn": [
+    "mobile/src/features/appointments/pages/MobileBookPage.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/breast-white.json",
+   "folder": "public/illustration/mobile",
+   "kb": 13,
+   "usedIn": [
+    "mobile/src/features/home/pages/MobileHomePage.jsx"
+   ],
+   "usedCount": 1,
+   "onDark": true
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/calendar-white.json",
+   "folder": "public/illustration/mobile",
+   "kb": 10,
+   "usedIn": [
+    "mobile/src/features/home/pages/MobileHomePage.jsx"
+   ],
+   "usedCount": 1,
+   "onDark": true
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/Calendar.json",
+   "folder": "public/illustration/mobile",
+   "kb": 19,
+   "usedIn": [],
+   "usedCount": 0
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/cash-money-recolored.json",
+   "folder": "public/illustration/mobile",
+   "kb": 115,
+   "usedIn": [
+    "mobile/src/features/appointments/components/UnpaidBookingBlockSheet.jsx",
+    "mobile/src/features/payment/components/OutstandingSummaryCard.jsx"
+   ],
+   "usedCount": 2
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/Clinic.json",
+   "folder": "public/illustration/mobile",
+   "kb": 12,
+   "usedIn": [],
+   "usedCount": 0
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/credit-card-white.json",
+   "folder": "public/illustration/mobile",
+   "kb": 5,
+   "usedIn": [
+    "mobile/src/features/home/pages/MobileHomePage.jsx"
+   ],
+   "usedCount": 1,
+   "onDark": true
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/Diaper.json",
+   "folder": "public/illustration/mobile",
+   "kb": 17,
+   "usedIn": [
+    "mobile/src/api/mock/hcis/mobileMock.js"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/doctor-appointment-recolored.json",
+   "folder": "public/illustration/mobile",
+   "kb": 118,
+   "usedIn": [
+    "mobile/src/features/auth/pages/MobileRegisterPage.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/document-white.json",
+   "folder": "public/illustration/mobile",
+   "kb": 13,
+   "usedIn": [
+    "mobile/src/features/home/pages/MobileHomePage.jsx"
+   ],
+   "usedCount": 1,
+   "onDark": true
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/Document.json",
+   "folder": "public/illustration/mobile",
+   "kb": 12,
+   "usedIn": [
+    "mobile/src/features/consent/pages/MobileConsentPage.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/emergency-siren.json",
+   "folder": "public/illustration/mobile",
+   "kb": 56,
+   "usedIn": [
+    "mobile/src/features/clinics/pages/MobileEmergencyPage.jsx",
+    "mobile/src/features/home/pages/MobileHomePage.jsx",
+    "mobile/src/features/requests/pages/MobileRequestsPage.jsx"
+   ],
+   "usedCount": 3
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/face-match-recolored.json",
+   "folder": "public/illustration/mobile",
+   "kb": 65,
+   "usedIn": [
+    "mobile/src/features/auth/pages/MobileRegisterPage.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "mobile",
+   "kind": "illustration",
+   "path": "public/illustration/mobile/face-scan-guide.svg",
+   "folder": "public/illustration/mobile",
+   "kb": 22,
+   "usedIn": [
+    "mobile/src/features/auth/components/FaceFrameCapture.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/feedback-rating-recolored.json",
+   "folder": "public/illustration/mobile",
+   "kb": 185,
+   "usedIn": [
+    "mobile/src/features/rating/components/RatingSheet.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "mobile",
+   "kind": "icon",
+   "path": "public/illustration/mobile/forgot-otp-lock.svg",
+   "folder": "public/illustration/mobile",
+   "kb": 3,
+   "usedIn": [
+    "mobile/src/features/auth/pages/MobileResetPage.jsx",
+    "mobile/src/features/auth/pages/MobileRegisterPage.jsx",
+    "mobile/src/features/profile/pages/MobileProfilePage.jsx"
+   ],
+   "usedCount": 3
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/health-insurance.json",
+   "folder": "public/illustration/mobile",
+   "kb": 148,
+   "usedIn": [
+    "mobile/src/features/auth/pages/MobileRegisterPage.jsx",
+    "mobile/src/shared/ui/tablet/TabletLayout.jsx"
+   ],
+   "usedCount": 2
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/heart-rate-white.json",
+   "folder": "public/illustration/mobile",
+   "kb": 3,
+   "usedIn": [
+    "mobile/src/features/home/pages/MobileHomePage.jsx"
+   ],
+   "usedCount": 1,
+   "onDark": true
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/history-white.json",
+   "folder": "public/illustration/mobile",
+   "kb": 5,
+   "usedIn": [
+    "mobile/src/features/home/pages/MobileHomePage.jsx"
+   ],
+   "usedCount": 1,
+   "onDark": true
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/home-payment-health-insurance.json",
+   "folder": "public/illustration/mobile",
+   "kb": 148,
+   "usedIn": [],
+   "usedCount": 0
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/ilus/face-match-recolored.json",
+   "folder": "public/illustration/mobile/ilus",
+   "kb": 66,
+   "usedIn": [
+    "mobile/src/features/auth/pages/MobileRegisterPage.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/insurance-recolored.json",
+   "folder": "public/illustration/mobile",
+   "kb": 52,
+   "usedIn": [
+    "mobile/src/features/auth/pages/MobileRegisterPage.jsx",
+    "mobile/src/features/pharmacy/pages/MobilePharmacyPaymentPage.jsx"
+   ],
+   "usedCount": 2
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/Liquid Soup.json",
+   "folder": "public/illustration/mobile",
+   "kb": 32,
+   "usedIn": [
+    "mobile/src/api/mock/hcis/mobileMock.js"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/location-white.json",
+   "folder": "public/illustration/mobile",
+   "kb": 2,
+   "usedIn": [
+    "mobile/src/features/home/pages/MobileHomePage.jsx"
+   ],
+   "usedCount": 1,
+   "onDark": true
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/Location.json",
+   "folder": "public/illustration/mobile",
+   "kb": 11,
+   "usedIn": [
+    "mobile/src/features/home/pages/MobileHomePage.jsx",
+    "mobile/src/features/requests/pages/MobileHomeVisitRequestPage.jsx",
+    "mobile/src/features/requests/pages/MobileRequestsPage.jsx"
+   ],
+   "usedCount": 4
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/lungs-white.json",
+   "folder": "public/illustration/mobile",
+   "kb": 7,
+   "usedIn": [
+    "mobile/src/features/home/pages/MobileHomePage.jsx"
+   ],
+   "usedCount": 1,
+   "onDark": true
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/man-visiting-hospital.json",
+   "folder": "public/illustration/mobile",
+   "kb": 116,
+   "usedIn": [
+    "mobile/src/features/auth/pages/MobileLoginPage.jsx",
+    "mobile/src/features/pharmacy/components/MedPickupDetails.jsx"
+   ],
+   "usedCount": 2
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/Medical History File Out.json",
+   "folder": "public/illustration/mobile",
+   "kb": 9,
+   "usedIn": [
+    "mobile/src/api/mock/hcis/mobileMock.js"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/Medical Prescription.json",
+   "folder": "public/illustration/mobile",
+   "kb": 26,
+   "usedIn": [
+    "mobile/src/api/mock/hcis/mobileMock.js"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/Medical Report (1).json",
+   "folder": "public/illustration/mobile",
+   "kb": 96,
+   "usedIn": [],
+   "usedCount": 0
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/medical-appointment-white.json",
+   "folder": "public/illustration/mobile",
+   "kb": 11,
+   "usedIn": [],
+   "usedCount": 0
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/medical-folder-recolored.json",
+   "folder": "public/illustration/mobile",
+   "kb": 79,
+   "usedIn": [
+    "mobile/src/features/auth/pages/MobileRegisterPage.jsx",
+    "mobile/src/features/pharmacy/pages/MobilePharmacyPreparingPage.jsx"
+   ],
+   "usedCount": 2
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/Medicine.json",
+   "folder": "public/illustration/mobile",
+   "kb": 40,
+   "usedIn": [],
+   "usedCount": 0
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/Microphone.json",
+   "folder": "public/illustration/mobile",
+   "kb": 36,
+   "usedIn": [
+    "mobile/src/features/telemed/pages/MobileTelemedPage.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/mobile-security-recolored.json",
+   "folder": "public/illustration/mobile",
+   "kb": 107,
+   "usedIn": [
+    "mobile/src/features/auth/pages/MobileRegisterPage.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/nav-appointment.json",
+   "folder": "public/illustration/mobile",
+   "kb": 11,
+   "usedIn": [
+    "mobile/src/shared/ui/MobileShell.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/nav-history.json",
+   "folder": "public/illustration/mobile",
+   "kb": 8,
+   "usedIn": [
+    "mobile/src/shared/ui/MobileShell.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/nav-home.json",
+   "folder": "public/illustration/mobile",
+   "kb": 4,
+   "usedIn": [
+    "mobile/src/shared/ui/MobileShell.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/nav-profile.json",
+   "folder": "public/illustration/mobile",
+   "kb": 5,
+   "usedIn": [
+    "mobile/src/shared/ui/MobileShell.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/nav-send.json",
+   "folder": "public/illustration/mobile",
+   "kb": 3,
+   "usedIn": [
+    "mobile/src/shared/ui/MobileShell.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/notification-bell-white.json",
+   "folder": "public/illustration/mobile",
+   "kb": 4,
+   "usedIn": [
+    "mobile/src/shared/ui/NotificationBellIcon.jsx"
+   ],
+   "usedCount": 1,
+   "onDark": true
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/notification-bell.json",
+   "folder": "public/illustration/mobile",
+   "kb": 4,
+   "usedIn": [
+    "mobile/src/shared/ui/NotificationBellIcon.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/online-health-checkup.json",
+   "folder": "public/illustration/mobile",
+   "kb": 118,
+   "usedIn": [
+    "mobile/src/features/appointments/pages/MobileBookPage.jsx",
+    "mobile/src/features/records/components/HealthInfoSheet.jsx"
+   ],
+   "usedCount": 2
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/Paper plane.json",
+   "folder": "public/illustration/mobile",
+   "kb": 21,
+   "usedIn": [],
+   "usedCount": 0
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/Password-security-with-REC.json",
+   "folder": "public/illustration/mobile",
+   "kb": 109,
+   "usedIn": [
+    "mobile/src/features/telemed/pages/MobileTelemedPage.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/Patient Bed.json",
+   "folder": "public/illustration/mobile",
+   "kb": 22,
+   "usedIn": [
+    "mobile/src/api/mock/hcis/mobileMock.js"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "mobile",
+   "kind": "icon",
+   "path": "public/illustration/mobile/pharmacy-delivery.svg",
+   "folder": "public/illustration/mobile",
+   "kb": 2,
+   "usedIn": [
+    "mobile/src/features/pharmacy/components/MedPickupDetails.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "mobile",
+   "kind": "icon",
+   "path": "public/illustration/mobile/pharmacy-map-pin.svg",
+   "folder": "public/illustration/mobile",
+   "kb": 2,
+   "usedIn": [
+    "mobile/src/features/pharmacy/components/MedPickupDetails.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "mobile",
+   "kind": "icon",
+   "path": "public/illustration/mobile/pharmacy-truck.svg",
+   "folder": "public/illustration/mobile",
+   "kb": 1,
+   "usedIn": [
+    "mobile/src/features/pharmacy/components/MedPickupDetails.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/pill-white.json",
+   "folder": "public/illustration/mobile",
+   "kb": 3,
+   "usedIn": [
+    "mobile/src/features/home/pages/MobileHomePage.jsx"
+   ],
+   "usedCount": 1,
+   "onDark": true
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/Pill.json",
+   "folder": "public/illustration/mobile",
+   "kb": 5,
+   "usedIn": [],
+   "usedCount": 0
+  },
+  {
+   "repo": "mobile",
+   "kind": "icon",
+   "path": "public/illustration/mobile/register-cid-user.svg",
+   "folder": "public/illustration/mobile",
+   "kb": 2,
+   "usedIn": [
+    "mobile/src/features/auth/pages/MobileRegisterPage.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "mobile",
+   "kind": "icon",
+   "path": "public/illustration/mobile/register-intro-face.svg",
+   "folder": "public/illustration/mobile",
+   "kb": 3,
+   "usedIn": [
+    "mobile/src/features/auth/pages/MobileRegisterPage.jsx",
+    "mobile/src/features/telemed/pages/MobileTelemedPage.jsx"
+   ],
+   "usedCount": 2
+  },
+  {
+   "repo": "mobile",
+   "kind": "icon",
+   "path": "public/illustration/mobile/register-intro-idcard.svg",
+   "folder": "public/illustration/mobile",
+   "kb": 2,
+   "usedIn": [
+    "mobile/src/features/auth/pages/MobileRegisterPage.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "mobile",
+   "kind": "icon",
+   "path": "public/illustration/mobile/register-intro-otp.svg",
+   "folder": "public/illustration/mobile",
+   "kb": 3,
+   "usedIn": [
+    "mobile/src/features/auth/pages/MobileRegisterPage.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "mobile",
+   "kind": "icon",
+   "path": "public/illustration/mobile/register-intro-shield.svg",
+   "folder": "public/illustration/mobile",
+   "kb": 2,
+   "usedIn": [
+    "mobile/src/features/auth/pages/MobileRegisterPage.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "mobile",
+   "kind": "icon",
+   "path": "public/illustration/mobile/register-intro-user.svg",
+   "folder": "public/illustration/mobile",
+   "kb": 2,
+   "usedIn": [
+    "mobile/src/features/auth/pages/MobileRegisterPage.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/scan-white.json",
+   "folder": "public/illustration/mobile",
+   "kb": 7,
+   "usedIn": [
+    "mobile/src/features/home/pages/MobileHomePage.jsx"
+   ],
+   "usedCount": 1,
+   "onDark": true
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/search-history-empty.json",
+   "folder": "public/illustration/mobile",
+   "kb": 80,
+   "usedIn": [
+    "mobile/src/features/appointments/pages/MobileBookPage.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "mobile",
+   "kind": "icon",
+   "path": "public/illustration/mobile/search-icon.svg",
+   "folder": "public/illustration/mobile",
+   "kb": 1,
+   "usedIn": [
+    "mobile/src/shared/ui/icons/Icon.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/sent-white.json",
+   "folder": "public/illustration/mobile",
+   "kb": 4,
+   "usedIn": [
+    "mobile/src/features/home/pages/MobileHomePage.jsx"
+   ],
+   "usedCount": 1,
+   "onDark": true
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/setting-white.json",
+   "folder": "public/illustration/mobile",
+   "kb": 4,
+   "usedIn": [
+    "mobile/src/features/home/pages/MobileHomePage.jsx"
+   ],
+   "usedCount": 1,
+   "onDark": true
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/ticket-white.json",
+   "folder": "public/illustration/mobile",
+   "kb": 9,
+   "usedIn": [
+    "mobile/src/features/home/pages/MobileHomePage.jsx"
+   ],
+   "usedCount": 1,
+   "onDark": true
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/Transfer Data.json",
+   "folder": "public/illustration/mobile",
+   "kb": 10,
+   "usedIn": [
+    "mobile/src/api/mock/hcis/mobileMock.js"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "public/illustration/mobile/video-white.json",
+   "folder": "public/illustration/mobile",
+   "kb": 7,
+   "usedIn": [
+    "mobile/src/features/home/pages/MobileHomePage.jsx"
+   ],
+   "usedCount": 1,
+   "onDark": true
+  },
+  {
+   "repo": "mobile",
+   "kind": "lottie",
+   "path": "src/Pill.json",
+   "folder": "src",
+   "kb": 5,
+   "usedIn": [],
+   "usedCount": 0
+  },
+  {
+   "repo": "web",
+   "kind": "lottie",
+   "path": "Fingerprint Scanning.json",
+   "folder": ".",
+   "kb": 46,
+   "usedIn": [
+    "web/src/components/consent/ConsentFingerprintScanStep.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "icon",
+   "path": "public/icons/body-diagram/hand.svg",
+   "folder": "public/icons/body-diagram",
+   "kb": 3,
+   "usedIn": [],
+   "usedCount": 0
+  },
+  {
+   "repo": "web",
+   "kind": "icon",
+   "path": "public/icons/body-diagram/zoom-in.svg",
+   "folder": "public/icons/body-diagram",
+   "kb": 1,
+   "usedIn": [],
+   "usedCount": 0
+  },
+  {
+   "repo": "web",
+   "kind": "icon",
+   "path": "public/icons/body-diagram/zoom-out.svg",
+   "folder": "public/icons/body-diagram",
+   "kb": 1,
+   "usedIn": [],
+   "usedCount": 0
+  },
+  {
+   "repo": "web",
+   "kind": "icon",
+   "path": "public/icons/cert-type/balance.svg",
+   "folder": "public/icons/cert-type",
+   "kb": 3,
+   "usedIn": [
+    "web/src/components/forms/TreatmentSteps.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "icon",
+   "path": "public/icons/cert-type/flights-and-hotels.svg",
+   "folder": "public/icons/cert-type",
+   "kb": 2,
+   "usedIn": [
+    "web/src/components/forms/TreatmentSteps.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "icon",
+   "path": "public/icons/cert-type/sick.svg",
+   "folder": "public/icons/cert-type",
+   "kb": 5,
+   "usedIn": [
+    "web/src/components/forms/TreatmentSteps.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "icon",
+   "path": "public/icons/cert-type/stethoscope.svg",
+   "folder": "public/icons/cert-type",
+   "kb": 3,
+   "usedIn": [
+    "web/src/components/forms/TreatmentSteps.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "icon",
+   "path": "public/icons/registration/alert-triangle.svg",
+   "folder": "public/icons/registration",
+   "kb": 2,
+   "usedIn": [
+    "web/src/components/forms/RegistrationSteps.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "icon",
+   "path": "public/icons/registration/camera.svg",
+   "folder": "public/icons/registration",
+   "kb": 2,
+   "usedIn": [
+    "web/src/components/forms/RegistrationSteps.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "icon",
+   "path": "public/icons/registration/phone.svg",
+   "folder": "public/icons/registration",
+   "kb": 3,
+   "usedIn": [
+    "web/src/components/forms/RegistrationSteps.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "icon",
+   "path": "public/icons/registration/upload-image.svg",
+   "folder": "public/icons/registration",
+   "kb": 1,
+   "usedIn": [],
+   "usedCount": 0
+  },
+  {
+   "repo": "web",
+   "kind": "lottie",
+   "path": "public/illustration/ambulance.json",
+   "folder": "public/illustration",
+   "kb": 43,
+   "usedIn": [
+    "web/src/pages/assess/AccessControlPage.jsx",
+    "web/src/pages/assess/ActivityPage.jsx",
+    "web/src/pages/assess/AssessUserPage.jsx"
+   ],
+   "usedCount": 6
+  },
+  {
+   "repo": "web",
+   "kind": "lottie",
+   "path": "public/illustration/consent-success.json",
+   "folder": "public/illustration",
+   "kb": 22,
+   "usedIn": [
+    "web/src/components/consent/ConsentIdentitySuccessStep.jsx",
+    "web/src/pages/components/ComponentsLibraryPage.jsx"
+   ],
+   "usedCount": 2
+  },
+  {
+   "repo": "web",
+   "kind": "icon",
+   "path": "public/illustration/consent/check-circle.svg",
+   "folder": "public/illustration/consent",
+   "kb": 2,
+   "usedIn": [
+    "web/src/data/consentRecords.js"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "icon",
+   "path": "public/illustration/consent/clipboard-list.svg",
+   "folder": "public/illustration/consent",
+   "kb": 2,
+   "usedIn": [
+    "web/src/data/consentRecords.js"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "icon",
+   "path": "public/illustration/consent/clock.svg",
+   "folder": "public/illustration/consent",
+   "kb": 1,
+   "usedIn": [
+    "web/src/data/consentRecords.js"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "icon",
+   "path": "public/illustration/consent/hourglass-disabled.svg",
+   "folder": "public/illustration/consent",
+   "kb": 2,
+   "usedIn": [
+    "web/src/data/consentRecords.js"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "icon",
+   "path": "public/illustration/consent/inbox-text-dontshare.svg",
+   "folder": "public/illustration/consent",
+   "kb": 3,
+   "usedIn": [
+    "web/src/data/consentRecords.js"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "icon",
+   "path": "public/illustration/consent/trending-up.svg",
+   "folder": "public/illustration/consent",
+   "kb": 1,
+   "usedIn": [
+    "web/src/data/consentRecords.js"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "lottie",
+   "path": "public/illustration/Disease History.json",
+   "folder": "public/illustration",
+   "kb": 117,
+   "usedIn": [
+    "web/src/components/forms/HistoryListForm.jsx",
+    "web/src/components/timeline/HistoryTimeline.jsx",
+    "web/src/pages/consent/ConsentHistoryPage.jsx"
+   ],
+   "usedCount": 3
+  },
+  {
+   "repo": "web",
+   "kind": "lottie",
+   "path": "public/illustration/Doctor Prescription.json",
+   "folder": "public/illustration",
+   "kb": 73,
+   "usedIn": [
+    "web/src/components/forms/DiseaseForm.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "illustration",
+   "path": "public/illustration/empty-list.svg",
+   "folder": "public/illustration",
+   "kb": 4,
+   "usedIn": [
+    "web/src/components/centerWarehouse/CenterWarehouseIssueFormPopup.jsx",
+    "web/src/components/centerWarehouse/CenterWarehouseItemLinesTable.jsx",
+    "web/src/components/centerWarehouse/CenterWarehouseReceivePopup.jsx"
+   ],
+   "usedCount": 5
+  },
+  {
+   "repo": "web",
+   "kind": "illustration",
+   "path": "public/illustration/form-cover01.svg",
+   "folder": "public/illustration",
+   "kb": 16,
+   "usedIn": [
+    "web/src/components/forms/FormsLibrary.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "illustration",
+   "path": "public/illustration/form-cover02.svg",
+   "folder": "public/illustration",
+   "kb": 27,
+   "usedIn": [
+    "web/src/components/forms/FormsLibrary.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "illustration",
+   "path": "public/illustration/form-cover04.svg",
+   "folder": "public/illustration",
+   "kb": 21,
+   "usedIn": [
+    "web/src/components/forms/FormsLibrary.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "illustration",
+   "path": "public/illustration/form-cover05.svg",
+   "folder": "public/illustration",
+   "kb": 14,
+   "usedIn": [
+    "web/src/components/forms/FormsLibrary.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "illustration",
+   "path": "public/illustration/hub/icon-admin.svg",
+   "folder": "public/illustration/hub",
+   "kb": 13,
+   "usedIn": [
+    "web/src/data/systemCatalog.js"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "illustration",
+   "path": "public/illustration/hub/icon-audit.svg",
+   "folder": "public/illustration/hub",
+   "kb": 10,
+   "usedIn": [
+    "web/src/data/systemCatalog.js"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "illustration",
+   "path": "public/illustration/hub/icon-community-health.svg",
+   "folder": "public/illustration/hub",
+   "kb": 9,
+   "usedIn": [
+    "web/src/data/systemCatalog.js"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "illustration",
+   "path": "public/illustration/hub/icon-consent.svg",
+   "folder": "public/illustration/hub",
+   "kb": 7,
+   "usedIn": [
+    "web/src/data/systemCatalog.js"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "illustration",
+   "path": "public/illustration/hub/icon-doc-template.svg",
+   "folder": "public/illustration/hub",
+   "kb": 6,
+   "usedIn": [
+    "web/src/data/systemCatalog.js"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "illustration",
+   "path": "public/illustration/hub/icon-inventory.svg",
+   "folder": "public/illustration/hub",
+   "kb": 8,
+   "usedIn": [
+    "web/src/data/systemCatalog.js"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "illustration",
+   "path": "public/illustration/hub/icon-phcis.svg",
+   "folder": "public/illustration/hub",
+   "kb": 10,
+   "usedIn": [
+    "web/src/data/systemCatalog.js"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "illustration",
+   "path": "public/illustration/hub/icon-schedule.svg",
+   "folder": "public/illustration/hub",
+   "kb": 12,
+   "usedIn": [
+    "web/src/data/systemCatalog.js"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "illustration",
+   "path": "public/illustration/hub/icon-school-health.svg",
+   "folder": "public/illustration/hub",
+   "kb": 5,
+   "usedIn": [
+    "web/src/data/systemCatalog.js"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "lottie",
+   "path": "public/illustration/Medicine.json",
+   "folder": "public/illustration",
+   "kb": 64,
+   "usedIn": [
+    "web/src/components/forms/AllergyForm.jsx",
+    "web/src/components/forms/HistoryListForm.jsx"
+   ],
+   "usedCount": 2
+  },
+  {
+   "repo": "web",
+   "kind": "icon",
+   "path": "public/illustration/pdf-file.svg",
+   "folder": "public/illustration",
+   "kb": 2,
+   "usedIn": [
+    "web/src/pages/consent/AccessManagementPage.jsx",
+    "web/src/pages/consent/accessPopups.jsx"
+   ],
+   "usedCount": 2
+  },
+  {
+   "repo": "web",
+   "kind": "icon",
+   "path": "public/illustration/registration/compare-photos.svg",
+   "folder": "public/illustration/registration",
+   "kb": 1,
+   "usedIn": [
+    "web/src/components/forms/RegistrationSteps.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "illustration",
+   "path": "public/illustration/schedule-day-off.svg",
+   "folder": "public/illustration",
+   "kb": 21,
+   "usedIn": [
+    "web/src/pages/clinic/daycare/DaycareMonitoringPage.jsx",
+    "web/src/pages/schedule/ScheduleEditorPage.jsx"
+   ],
+   "usedCount": 2
+  },
+  {
+   "repo": "web",
+   "kind": "lottie",
+   "path": "public/illustration/success.json",
+   "folder": "public/illustration",
+   "kb": 21,
+   "usedIn": [
+    "web/src/components/consent/ConsentIdentitySuccessStep.jsx",
+    "web/src/components/layout/SuccessScreen.jsx",
+    "web/src/components/popup/SuccessPopup.jsx"
+   ],
+   "usedCount": 4
+  },
+  {
+   "repo": "web",
+   "kind": "lottie",
+   "path": "src/assets/illustrations/Aijson.json",
+   "folder": "src/assets/illustrations",
+   "kb": 13,
+   "usedIn": [
+    "web/src/components/search/DoctorAiIcdPanel.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "lottie",
+   "path": "src/assets/illustrations/blood-pressure-monitor.json",
+   "folder": "src/assets/illustrations",
+   "kb": 10,
+   "usedIn": [],
+   "usedCount": 0
+  },
+  {
+   "repo": "web",
+   "kind": "lottie",
+   "path": "src/assets/illustrations/Firstaid Kit.json",
+   "folder": "src/assets/illustrations",
+   "kb": 69,
+   "usedIn": [
+    "web/src/components/clinic/ClinicOrdersPanel.jsx",
+    "web/src/components/forms/TreatmentSteps.jsx"
+   ],
+   "usedCount": 2
+  },
+  {
+   "repo": "web",
+   "kind": "lottie",
+   "path": "src/assets/illustrations/Girl finding health insurance online.json",
+   "folder": "src/assets/illustrations",
+   "kb": 328,
+   "usedIn": [
+    "web/src/components/forms/RightsLookupPanel.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "lottie",
+   "path": "src/assets/illustrations/Health and medicine.json",
+   "folder": "src/assets/illustrations",
+   "kb": 21,
+   "usedIn": [
+    "web/src/components/telemed/TelemedConnectingPopup.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "lottie",
+   "path": "src/assets/illustrations/heart-care.json",
+   "folder": "src/assets/illustrations",
+   "kb": 11,
+   "usedIn": [
+    "web/src/components/feedback/FullPageLoader.jsx",
+    "web/src/pages/finance/FinancePaymentPage.jsx"
+   ],
+   "usedCount": 2
+  },
+  {
+   "repo": "web",
+   "kind": "lottie",
+   "path": "src/assets/illustrations/Hospital Patient admitted.json",
+   "folder": "src/assets/illustrations",
+   "kb": 173,
+   "usedIn": [
+    "web/src/pages/observation/ObservationQueuePage.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "lottie",
+   "path": "src/assets/illustrations/Medical checkup.json",
+   "folder": "src/assets/illustrations",
+   "kb": 183,
+   "usedIn": [
+    "web/src/components/forms/TreatmentSteps.jsx",
+    "web/src/pages/appointment/AppointmentHistoryReadOnlyLayout.jsx"
+   ],
+   "usedCount": 2
+  },
+  {
+   "repo": "web",
+   "kind": "lottie",
+   "path": "src/assets/illustrations/medical-folder.json",
+   "folder": "src/assets/illustrations",
+   "kb": 19,
+   "usedIn": [
+    "web/src/components/popup/ReMedicinePopup.jsx"
+   ],
+   "usedCount": 1
+  },
+  {
+   "repo": "web",
+   "kind": "lottie",
+   "path": "src/Best Employee award.json",
+   "folder": "src",
+   "kb": 217,
+   "usedIn": [],
+   "usedCount": 0
   }
  ]
 }
