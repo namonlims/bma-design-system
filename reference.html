@@ -676,6 +676,13 @@
     header.ds-top nav.ds-tabs{margin-left:0;width:100%;flex-wrap:wrap}
     header.ds-top nav.ds-tabs a,header.ds-top button.ds-ghost,header.ds-top select{min-height:44px;display:inline-flex;align-items:center}
   }
+  /* Touch targets (responsive-web skill): inline links in the spec text are
+     ~19 px tall. Below lg keep the look and widen only the hit area to 44 px
+     with an invisible ::after, so no line height or layout moves. */
+  @media (max-width:1023px){
+    .content a{position:relative}
+    .content a::after{content:"";position:absolute;left:-6px;right:-6px;top:-13px;bottom:-13px}
+  }
   @media (max-width:767px){
     header.ds-top .ds-brandrow .subtitle{display:none}
     header.ds-top label{flex:1 1 100%}
