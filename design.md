@@ -15831,6 +15831,18 @@ Props: ไม่มี (ผู้เรียกตัดสินว่าจ�
 
 **ScreeningStep5** — ขั้นสุดท้าย "ตรวจสอบข้อมูล" ของคัดกรองกลาง: การ์ด `ReviewSection` ต่อขั้น (ครบแล้ว · ขาด N รายการ · ปุ่มแก้ไขกระโดดกลับขั้นนั้น) · ไฟล์ `src/components/screening/ScreeningStep5.jsx` (ย้ายจาก `src/pages/opd/ScreeningStep5.jsx` ซึ่งเหลือเป็นตัวส่งต่อชื่อเดิม · ผู้ใช้ 13 พ.ย. 69 ข้อ 62ก) · export: default `ScreeningStep5` · `ReviewSection` · `Pairs` · `missingFrom` · `sectionTitleStyle` · `Pairs` ป้าย 240px · ค่า (จอ ≥1280 = 2 คู่ต่อแถว · จอ <640 = ป้าย:ค่า 2:3 · กฎใน index.css `.mih-review-pairs`) · ใช้ที่ คัดกรอง OPD (`ScreeningPage` การ์ดสรุปผู้ป่วยเก่า) · `CheckupReviewStep` (ตรวจสุขภาพ) ถูกลบ 13 พ.ย. 69 เพราะไม่มีหน้าใช้ (ผู้ใช้ 71ก)
 
+### 6.224 StackCell — เซลล์ตาราง 2 บรรทัด (ลงทะเบียน 24 พ.ย. 69)
+
+**StackCell** — เซลล์ในตาราง: บรรทัดบนเป็นข้อความ (sm default) บรรทัดล่างเป็นข้อความรอง (xs tertiary) ถ้ามี · ตัดคำด้วย `truncate` · ไฟล์ `src/components/table/StackCell.jsx` · props `top` · `bottom` (ไม่ใส่ = บรรทัดเดียว) · ใช้แทนสำเนาในหน้า consent และ homevisit ที่แต่ละหน้าเขียนเอง · ตัวอย่างใน `/components/stack-cell`.
+
+### 6.225 InfoField — ช่องรายละเอียด label บน / value ล่าง (ลงทะเบียน 24 พ.ย. 69)
+
+**InfoField** — ข้อมูลอ่านอย่างเดียว 1 ช่อง: label xs tertiary อยู่บน value sm default อยู่ล่าง · ค่าว่างแสดง "—" · ยืดได้ (`flex: 1 1 160px`) เรียงในแถวได้ · ไฟล์ `src/components/list/InfoField.jsx` · props `label` · `value` · ใช้ในหน้าสร้าง/ดูผู้ใช้ประเมิน · InfoField ของหน้านับสต็อกมี `hint`/`boxed` จึงยังเป็นของหน้านั้น · ตัวอย่างใน `/components/info-field`.
+
+### 6.226 StatusBadge — preset ของแต่ละโดเมน (ลงทะเบียน 24 พ.ย. 69)
+
+**StatusBadge** ตัวกลางอยู่ที่ `src/components/badge/StatusBadge.jsx` (รูป pill ตามสถานะ) · หน้าที่มีตัวชื่อ StatusBadge ของตัวเอง (เช่น หน้า homevisit, checkup, chronic, school-health, schedule) เป็น **preset ของโดเมนนั้น**: แปลงค่าสถานะของโดเมน (เช่น `done`, `record`) เป็น style และข้อความ แล้วเรียกตัวกลาง/ColorfulBadge · ไม่รวมเป็น prop เพราะแต่ละโดเมนมี mapping และข้อมูลประกอบต่างกันมาก · เมื่อเพิ่มสถานะใหม่ให้แก้ preset ของโดเมนนั้น ไม่แก้ตัวกลาง.
+
 ### 6.214 EmptyHint — ข้อความว่าง 1 บรรทัด (ลงทะเบียน 14 พ.ย. 69)
 
 **EmptyHint** — ข้อความว่างกลางรายการ/การ์ด ไม่มีหัวข้อ/กรอบ: ไอคอน 32 เทา + ข้อความ sm tertiary (กว้างไม่เกิน 520) + ปุ่ม (ถ้ามี) · ไฟล์ `src/components/feedback/EmptyHint.jsx` · props `icon` (ค่าเริ่มต้น `search_off`) · `children` · `action` · `compact` (ระยะบนล่าง 32 แทน 48 · ในตาราง/การ์ดเล็ก) · ต้องการหัวข้อ + คำอธิบาย หรือกรอบประ → `EmptyState` (§6.116) · รวมจาก 4 สำเนา: เยี่ยมบ้าน (`homevisitShared`) · บำบัดสารเสพติด + วางแผนครอบครัว (`addictionShared`) · ติดตามสุขภาพจิต (compact) · สังคมสงเคราะห์ + กายภาพ + โภชนาการ (`SwEmptyHint` = compact) — ไฟล์ *Shared re-export (ผู้ใช้ 14 พ.ย. 69 ข้อ 72ก)
